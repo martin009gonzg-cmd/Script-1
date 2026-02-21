@@ -1,1 +1,8321 @@
-eval(function(p,a,c,k,e,d){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a)>35?String.fromCharCode(c+29):c.toString(36))};if(!''.replace(/^/,String)){while(c--){d[e(c)]=k[c]||e(c)}k=[function(e){return d[e]}];e=function(){return'\\w+'};c=1};while(c--){if(k[c]){p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c])}}return p}('S 1jQ="1jP 1jO 6.1"S 1C={5n="1C",2z={},6F=cO.O{6E.O(0.8D,1h.1l(117,164,cP)),6E.O(0.50,1h.1l(123,8E,8E)),6E.O(1.8D,1h.1l(fq,138,175))}}S 6n=3s:3V("6n")S 1e=3s:3V("1e")S 6b=3s:3V("6b")S 5B=3s:3V("5B")S lc=3s:3V("1jN")S 3h=3s:3V("3h")S 5H=3h.5w S aS=mQ.fa S 83=3s:3V("83")S 4m S bX="1jM.j/c6-b3"if 5B:1jL()V 4m=1v J--1jK To 1jJ b3 n9 1jI 1Y 8X n9 4l dY 1jH.S dV={8X=1N,4l={["1jG"]="D://H.F.j/u/?id=1jF";["1jE"]="D://H.F.j/u/?id=1jD";["1jC"]="D://H.F.j/u/?id=1jB";["1jA"]="D://H.F.j/u/?id=1jz";["m5"]="D://H.F.j/u/?id=1jy";["3m"]="D://H.F.j/u/?id=1jx";["1jw"]="D://H.F.j/u/?id=1jv";["1ju"]="D://H.F.j/u/?id=1jt";["1js"]="D://H.F.j/u/?id=1jr";["1jq"]="D://H.F.j/u/?id=1jp";["1jo"]="D://H.F.j/u/?id=1jn";["1jm"]="D://H.F.j/u/?id=1jl";["1jk"]="D://H.F.j/u/?id=1jj";["1ji"]="D://H.F.j/u/?id=1jh";["1jg"]="D://H.F.j/u/?id=1jf";["gn"]="D://H.F.j/u/?id=1je";["1jd"]="D://H.F.j/u/?id=1jc";["1jb"]="D://H.F.j/u/?id=1ja";["1j9"]="D://H.F.j/u/?id=1j8";["1j7"]="D://H.F.j/u/?id=1j6";["1j5"]="D://H.F.j/u/?id=1j4";["1j3"]="D://H.F.j/u/?id=1j2";["1j1"]="D://H.F.j/u/?id=1j0";["1iZ"]="D://H.F.j/u/?id=1iY";["1iX"]="D://H.F.j/u/?id=1iW";["1iV"]="D://H.F.j/u/?id=1iU";["1iT"]="D://H.F.j/u/?id=1iS";["1iR"]="D://H.F.j/u/?id=1iQ";["1iP"]="D://H.F.j/u/?id=1iO";["1iN"]="D://H.F.j/u/?id=1iM";["1iL"]="D://H.F.j/u/?id=1iK";["1iJ"]="D://H.F.j/u/?id=1iI";["1iH"]="D://H.F.j/u/?id=1iG";["1iF"]="D://H.F.j/u/?id=1iE";["1iD"]="D://H.F.j/u/?id=1iC";["1iB"]="D://H.F.j/u/?id=1iA";["1iz"]="D://H.F.j/u/?id=1iy";["1ix"]="D://H.F.j/u/?id=1iw";["1iv"]="D://H.F.j/u/?id=1iu";["1it"]="D://H.F.j/u/?id=1is";["1ir"]="D://H.F.j/u/?id=1iq";["1ip"]="D://H.F.j/u/?id=1io";["1in"]="D://H.F.j/u/?id=1im";["1il"]="D://H.F.j/u/?id=1ik";["1ij"]="D://H.F.j/u/?id=1ii";["1ih"]="D://H.F.j/u/?id=1ig";["1if"]="D://H.F.j/u/?id=1ie";["aY"]="D://H.F.j/u/?id=1id";["1ic"]="D://H.F.j/u/?id=1ib";["1ia"]="D://H.F.j/u/?id=1i9";["1i8"]="D://H.F.j/u/?id=1i7";["1i6"]="D://H.F.j/u/?id=1i5";["1i4"]="D://H.F.j/u/?id=1i3";["1i2"]="D://H.F.j/u/?id=1i1";["1i0"]="D://H.F.j/u/?id=1hZ";["1hY"]="D://H.F.j/u/?id=1hX";["1hW"]="D://H.F.j/u/?id=1hV";["1hU"]="D://H.F.j/u/?id=1hT";["1hS"]="D://H.F.j/u/?id=1hR";["1hQ"]="D://H.F.j/u/?id=1hP";["1hO"]="D://H.F.j/u/?id=1hN";["1hM"]="D://H.F.j/u/?id=1hL";["1hK"]="D://H.F.j/u/?id=1hJ";["1hI"]="D://H.F.j/u/?id=1hH";["1hG"]="D://H.F.j/u/?id=1hF";["1hE"]="D://H.F.j/u/?id=1hD";["1hC"]="D://H.F.j/u/?id=1hB";["1hA"]="D://H.F.j/u/?id=1hz";["1hy"]="D://H.F.j/u/?id=1hx";["1hw"]="D://H.F.j/u/?id=1hv";["1hu"]="D://H.F.j/u/?id=1ht";["1hs"]="D://H.F.j/u/?id=1hr";["1hq"]="D://H.F.j/u/?id=1hp";["1ho"]="D://H.F.j/u/?id=1hn";["1hm"]="D://H.F.j/u/?id=1hl";["1hk"]="D://H.F.j/u/?id=1hj";["1hi"]="D://H.F.j/u/?id=1hh";["1hg"]="D://H.F.j/u/?id=1hf";["1he"]="D://H.F.j/u/?id=1hd";["9o"]="D://H.F.j/u/?id=1hc";["1hb"]="D://H.F.j/u/?id=1ha";["1h9"]="D://H.F.j/u/?id=1h8";["1h7"]="D://H.F.j/u/?id=1h6";["1h5"]="D://H.F.j/u/?id=1h4";["1h3"]="D://H.F.j/u/?id=1h2";["1h1"]="D://H.F.j/u/?id=1h0";["1gZ"]="D://H.F.j/u/?id=1gY";["1gX"]="D://H.F.j/u/?id=1gW";["1gV"]="D://H.F.j/u/?id=1gU";["1gT"]="D://H.F.j/u/?id=1gS";["1gR"]="D://H.F.j/u/?id=1gQ";["1gP"]="D://H.F.j/u/?id=1gO";["1gN"]="D://H.F.j/u/?id=1gM";["1gL"]="D://H.F.j/u/?id=1gK";["1gJ"]="D://H.F.j/u/?id=1gI";["1gH"]="D://H.F.j/u/?id=1gG";["1gF"]="D://H.F.j/u/?id=1gE";["1gD"]="D://H.F.j/u/?id=1gC";["1gB"]="D://H.F.j/u/?id=1gA";["1gz"]="D://H.F.j/u/?id=1gy";["1gx"]="D://H.F.j/u/?id=1gw";["1gv"]="D://H.F.j/u/?id=1gu";["1gt"]="D://H.F.j/u/?id=1gs";["1gr"]="D://H.F.j/u/?id=1gq";["1gp"]="D://H.F.j/u/?id=1go";["1gn"]="D://H.F.j/u/?id=1gm";["1gl"]="D://H.F.j/u/?id=1gk";["m4"]="D://H.F.j/u/?id=1gj";["bi"]="D://H.F.j/u/?id=1gi";["1gh"]="D://H.F.j/u/?id=1gg";["1gf"]="D://H.F.j/u/?id=1ge";["fL"]="D://H.F.j/u/?id=1gd";["1gc"]="D://H.F.j/u/?id=1gb";["1ga"]="D://H.F.j/u/?id=1g9";["1g8"]="D://H.F.j/u/?id=1g7";["1g6"]="D://H.F.j/u/?id=1g5";["1g4"]="D://H.F.j/u/?id=1g3";["1g2"]="D://H.F.j/u/?id=1g1";["1g0"]="D://H.F.j/u/?id=1fZ";["1fY"]="D://H.F.j/u/?id=1fX";["1fW"]="D://H.F.j/u/?id=1fV";["1fU"]="D://H.F.j/u/?id=1fT";["1fS"]="D://H.F.j/u/?id=1fR";["1fQ"]="D://H.F.j/u/?id=1fP";["1fO"]="D://H.F.j/u/?id=1fN";["1fM"]="D://H.F.j/u/?id=1fL";["1fK"]="D://H.F.j/u/?id=1fJ";["1fI"]="D://H.F.j/u/?id=1fH";["1fG"]="D://H.F.j/u/?id=1fF";["1fE"]="D://H.F.j/u/?id=1fD";["1fC"]="D://H.F.j/u/?id=1fB";["1fA"]="D://H.F.j/u/?id=1fz";["1fy"]="D://H.F.j/u/?id=1fx";["1fw"]="D://H.F.j/u/?id=1fv";["1fu"]="D://H.F.j/u/?id=1ft";["1fs"]="D://H.F.j/u/?id=1fr";["1fq"]="D://H.F.j/u/?id=1fp";["1fo"]="D://H.F.j/u/?id=1fn";["1fm"]="D://H.F.j/u/?id=1fl";["1fk"]="D://H.F.j/u/?id=1fj";["1fi"]="D://H.F.j/u/?id=1fh";["1fg"]="D://H.F.j/u/?id=1ff";["1fe"]="D://H.F.j/u/?id=1fd";["1fc"]="D://H.F.j/u/?id=1fb";["1fa"]="D://H.F.j/u/?id=1f9";["1f8"]="D://H.F.j/u/?id=1f7";["1f6"]="D://H.F.j/u/?id=1f5";["1f4"]="D://H.F.j/u/?id=1f3";["1f2"]="D://H.F.j/u/?id=1f1";["1f0"]="D://H.F.j/u/?id=1eZ";["1eY"]="D://H.F.j/u/?id=1eX";["1eW"]="5J://1eV";["1eU"]="D://H.F.j/u/?id=1eT";["1eS"]="D://H.F.j/u/?id=1eR";["1eQ"]="D://H.F.j/u/?id=1eP";["1eO"]="D://H.F.j/u/?id=1eN";["1eM"]="D://H.F.j/u/?id=1eL";["1eK"]="D://H.F.j/u/?id=1eJ";["1eI"]="D://H.F.j/u/?id=1eH";["1eG"]="D://H.F.j/u/?id=1eF";["1eE"]="D://H.F.j/u/?id=1eD";["1eC"]="D://H.F.j/u/?id=1eB";["1eA"]="D://H.F.j/u/?id=1ez";["mB"]="D://H.F.j/u/?id=1ey";["1ex"]="D://H.F.j/u/?id=1ew";["1ev"]="D://H.F.j/u/?id=1eu";["1et"]="D://H.F.j/u/?id=1es";["1er"]="D://H.F.j/u/?id=1eq";["1ep"]="D://H.F.j/u/?id=1eo";["1en"]="D://H.F.j/u/?id=1em";["1el"]="D://H.F.j/u/?id=1ek";["1ej"]="D://H.F.j/u/?id=1ei";["1eh"]="D://H.F.j/u/?id=1eg";["1ef"]="D://H.F.j/u/?id=1ee";["1ed"]="D://H.F.j/u/?id=1ec";["1eb"]="D://H.F.j/u/?id=1ea";["1e9"]="D://H.F.j/u/?id=1e8";["1e7"]="D://H.F.j/u/?id=1e6";["1e5"]="D://H.F.j/u/?id=1e4";["1e3"]="D://H.F.j/u/?id=1e2";["1e1"]="D://H.F.j/u/?id=1e0";["1dZ"]="D://H.F.j/u/?id=1dY";["1dX"]="D://H.F.j/u/?id=1dW";["1dV"]="D://H.F.j/u/?id=1dU";["1dT"]="D://H.F.j/u/?id=1dS";["1dR"]="D://H.F.j/u/?id=1dQ";["1dP"]="D://H.F.j/u/?id=1dO";["1dN"]="D://H.F.j/u/?id=1dM";["1dL"]="D://H.F.j/u/?id=1dK";["1dJ"]="D://H.F.j/u/?id=1dI";["1dH"]="D://H.F.j/u/?id=1dG";["1dF"]="D://H.F.j/u/?id=1dE";["1dD"]="D://H.F.j/u/?id=1dC";["1dB"]="D://H.F.j/u/?id=1dA";["1dz"]="D://H.F.j/u/?id=1dy";["1dx"]="D://H.F.j/u/?id=1dw";["1dv"]="D://H.F.j/u/?id=1du";["1dt"]="D://H.F.j/u/?id=1ds";["1dr"]="D://H.F.j/u/?id=1dq";["1dp"]="D://H.F.j/u/?id=1do";["1dn"]="D://H.F.j/u/?id=1dm";["1dl"]="D://H.F.j/u/?id=1dk";["1dj"]="D://H.F.j/u/?id=1di";["1dh"]="D://H.F.j/u/?id=1dg";["1df"]="D://H.F.j/u/?id=1de";["1dd"]="D://H.F.j/u/?id=1dc";["1db"]="D://H.F.j/u/?id=1da";["1d9"]="D://H.F.j/u/?id=1d8";["1d7"]="D://H.F.j/u/?id=1d6";["1d5"]="D://H.F.j/u/?id=1d4";["1d3"]="D://H.F.j/u/?id=1d2";["3e"]="D://H.F.j/u/?id=1d1";["1d0"]="D://H.F.j/u/?id=1cZ";["1cY"]="D://H.F.j/u/?id=1cX";["1cW"]="D://H.F.j/u/?id=1cV";["1cU"]="D://H.F.j/u/?id=1cT";["1cS"]="D://H.F.j/u/?id=1cR";["1cQ"]="D://H.F.j/u/?id=1cP";["1cO"]="D://H.F.j/u/?id=1cN";["1cM"]="D://H.F.j/u/?id=1cL";["1cK"]="D://H.F.j/u/?id=1cJ";["1cI"]="D://H.F.j/u/?id=1cH";["1cG"]="D://H.F.j/u/?id=1cF";["1cE"]="D://H.F.j/u/?id=1cD";["1cC"]="D://H.F.j/u/?id=1cB";["1cA"]="D://H.F.j/u/?id=1cz";["1cy"]="D://H.F.j/u/?id=1cx";["1cw"]="D://H.F.j/u/?id=1cv";["1cu"]="D://H.F.j/u/?id=1ct";["1cs"]="D://H.F.j/u/?id=1cr";["1cq"]="D://H.F.j/u/?id=1cp";["1co"]="D://H.F.j/u/?id=1cn";["1cm"]="D://H.F.j/u/?id=1cl";["1ck"]="D://H.F.j/u/?id=1cj";["1ci"]="D://H.F.j/u/?id=1ch";["1cg"]="D://H.F.j/u/?id=1cf";["1ce"]="D://H.F.j/u/?id=1cd";["1cc"]="D://H.F.j/u/?id=1cb";["1ca"]="D://H.F.j/u/?id=1c9";["1c8"]="D://H.F.j/u/?id=1c7";["1c6"]="D://H.F.j/u/?id=1c5";["1c4"]="D://H.F.j/u/?id=1c3";["1c2"]="D://H.F.j/u/?id=1c1";["1c0"]="D://H.F.j/u/?id=1bZ";["1bY"]="D://H.F.j/u/?id=1bX";["1bW"]="D://H.F.j/u/?id=1bV";["1bU"]="D://H.F.j/u/?id=1bT";["1bS"]="D://H.F.j/u/?id=1bR";["1bQ"]="D://H.F.j/u/?id=1bP";["1bO"]="D://H.F.j/u/?id=1bN";["1bM"]="D://H.F.j/u/?id=1bL";["1bK"]="D://H.F.j/u/?id=1bJ";["1bI"]="D://H.F.j/u/?id=1bH";["1bG"]="D://H.F.j/u/?id=1bF";["1bE"]="D://H.F.j/u/?id=1bD";["1bC"]="D://H.F.j/u/?id=1bB";["1bA"]="D://H.F.j/u/?id=1bz";["1by"]="D://H.F.j/u/?id=1bx";["1bw"]="D://H.F.j/u/?id=1bv";["1bu"]="D://H.F.j/u/?id=1bt";["1bs"]="D://H.F.j/u/?id=1br";["1bq"]="D://H.F.j/u/?id=1bp";["1bo"]="D://H.F.j/u/?id=1bn";["1bm"]="D://H.F.j/u/?id=1bl";["1bk"]="D://H.F.j/u/?id=1bj";["1bi"]="D://H.F.j/u/?id=1bh";["1bg"]="D://H.F.j/u/?id=1bf";["1be"]="D://H.F.j/u/?id=1bd";["1bc"]="D://H.F.j/u/?id=1bb";["1ba"]="D://H.F.j/u/?id=1b9";["1b8"]="D://H.F.j/u/?id=1b7";["1b6"]="D://H.F.j/u/?id=1b5";["1b4"]="D://H.F.j/u/?id=1b3";["1b2"]="D://H.F.j/u/?id=1b1";["1b0"]="D://H.F.j/u/?id=1aZ";["1aY"]="D://H.F.j/u/?id=1aX";["1aW"]="D://H.F.j/u/?id=1aV";["1aU"]="D://H.F.j/u/?id=1aT";["1aS"]="D://H.F.j/u/?id=1aR";["1aQ"]="D://H.F.j/u/?id=1aP";["1aO"]="D://H.F.j/u/?id=1aN";["1aM"]="D://H.F.j/u/?id=1aL";["1aK"]="D://H.F.j/u/?id=1aJ";["1aI"]="D://H.F.j/u/?id=1aH";["1aG"]="D://H.F.j/u/?id=1aF";["1aE"]="D://H.F.j/u/?id=1aD";["1aC"]="D://H.F.j/u/?id=1aB";["1aA"]="D://H.F.j/u/?id=1az";["1ay"]="D://H.F.j/u/?id=1ax";["1aw"]="D://H.F.j/u/?id=1av";["1au"]="D://H.F.j/u/?id=1at";["1as"]="D://H.F.j/u/?id=1ar";["1aq"]="D://H.F.j/u/?id=1ap";["1ao"]="D://H.F.j/u/?id=1an";["1am"]="D://H.F.j/u/?id=1al";["1ak"]="D://H.F.j/u/?id=1aj";["1ai"]="D://H.F.j/u/?id=1ah";["1ag"]="D://H.F.j/u/?id=1af";["1ae"]="D://H.F.j/u/?id=1ad";["1ac"]="D://H.F.j/u/?id=1ab";["1aa"]="D://H.F.j/u/?id=1a9";["1a8"]="D://H.F.j/u/?id=1a7";["1a6"]="D://H.F.j/u/?id=1a5";["1a4"]="D://H.F.j/u/?id=1a3";["1a2"]="D://H.F.j/u/?id=1a1";["1a0"]="D://H.F.j/u/?id=19Z";["5a"]="D://H.F.j/u/?id=19Y";["19X"]="D://H.F.j/u/?id=19W";["19V"]="D://H.F.j/u/?id=19U";["19T"]="D://H.F.j/u/?id=19S";["19R"]="D://H.F.j/u/?id=19Q";["5D"]="D://H.F.j/u/?id=19P";["19O"]="D://H.F.j/u/?id=19N";["19M"]="D://H.F.j/u/?id=19L";["fg"]="D://H.F.j/u/?id=19K";["19J"]="D://H.F.j/u/?id=19I";["19H"]="D://H.F.j/u/?id=19G";["19F"]="D://H.F.j/u/?id=19E";["19D"]="D://H.F.j/u/?id=19C";["19B"]="D://H.F.j/u/?id=19A";["19z"]="D://H.F.j/u/?id=19y";["19x"]="D://H.F.j/u/?id=19w";["19v"]="D://H.F.j/u/?id=19u";["19t"]="D://H.F.j/u/?id=19s";["19r"]="D://H.F.j/u/?id=19q";["19p"]="D://H.F.j/u/?id=19o";["19n"]="D://H.F.j/u/?id=19m";["19l"]="D://H.F.j/u/?id=19k";["19j"]="D://H.F.j/u/?id=19i";["39"]="D://H.F.j/u/?id=19h";["19g"]="D://H.F.j/u/?id=19f";["19e"]="D://H.F.j/u/?id=19d";["19c"]="D://H.F.j/u/?id=19b";["hA"]="D://H.F.j/u/?id=19a";["197"]="D://H.F.j/u/?id=196";["194"]="D://H.F.j/u/?id=193";["192"]="D://H.F.j/u/?id=lL";["190"]="D://H.F.j/u/?id=18Z";["18Y"]="D://H.F.j/u/?id=18X";["18W"]="D://H.F.j/u/?id=18V";["18U"]="D://H.F.j/u/?id=18T";["18S"]="D://H.F.j/u/?id=18R";["18Q"]="D://H.F.j/u/?id=18P";["18O"]="D://H.F.j/u/?id=18N";["18M"]="D://H.F.j/u/?id=18L";["18K"]="D://H.F.j/u/?id=18J";["18I"]="D://H.F.j/u/?id=18H";["18G"]="D://H.F.j/u/?id=18F";["18E"]="D://H.F.j/u/?id=18D";["18C"]="D://H.F.j/u/?id=18B";["18A"]="D://H.F.j/u/?id=18z";["18y"]="D://H.F.j/u/?id=18x";["18w"]="D://H.F.j/u/?id=18v";["18u"]="D://H.F.j/u/?id=18t";["18s"]="D://H.F.j/u/?id=18r";["18q"]="D://H.F.j/u/?id=18p";["18o"]="D://H.F.j/u/?id=18n";["18m"]="D://H.F.j/u/?id=18l";["18k"]="D://H.F.j/u/?id=18j";["18i"]="D://H.F.j/u/?id=18h";["18g"]="D://H.F.j/u/?id=18f";["18e"]="D://H.F.j/u/?id=18d";["18c"]="D://H.F.j/u/?id=18b";["18a"]="D://H.F.j/u/?id=189";["187"]="D://H.F.j/u/?id=183";["182"]="D://H.F.j/u/?id=17Z";["17Y"]="D://H.F.j/u/?id=17X";["17W"]="D://H.F.j/u/?id=17V";["17U"]="D://H.F.j/u/?id=17T";["17S"]="D://H.F.j/u/?id=17R";["17Q"]="D://H.F.j/u/?id=17P";["17O"]="D://H.F.j/u/?id=17N";["17M"]="D://H.F.j/u/?id=17L";["17K"]="D://H.F.j/u/?id=17J";["17I"]="D://H.F.j/u/?id=17H";["17G"]="D://H.F.j/u/?id=17F";["17E"]="D://H.F.j/u/?id=17D";["17C"]="D://H.F.j/u/?id=17B";["17A"]="D://H.F.j/u/?id=17z";["17y"]="D://H.F.j/u/?id=17x";["17w"]="D://H.F.j/u/?id=17v";["17u"]="D://H.F.j/u/?id=mf";["17t"]="D://H.F.j/u/?id=17s";["17r"]="D://H.F.j/u/?id=17q";["17p"]="D://H.F.j/u/?id=cH";["17o"]="D://H.F.j/u/?id=17n";["17m"]="D://H.F.j/u/?id=17l";["17k"]="D://H.F.j/u/?id=17j";["17i"]="D://H.F.j/u/?id=17h";["17g"]="D://H.F.j/u/?id=17f";["17e"]="D://H.F.j/u/?id=17d";["17c"]="D://H.F.j/u/?id=17b";["17a"]="D://H.F.j/u/?id=178";["177"]="D://H.F.j/u/?id=176";["173"]="D://H.F.j/u/?id=172";["16Z"]="D://H.F.j/u/?id=16Y";["16X"]="D://H.F.j/u/?id=16W";["16V"]="D://H.F.j/u/?id=16U";["16T"]="D://H.F.j/u/?id=16S";["16R"]="D://H.F.j/u/?id=16Q";["fA"]="D://H.F.j/u/?id=16P";["16O"]="D://H.F.j/u/?id=16N";["16M"]="D://H.F.j/u/?id=16L";["16K"]="D://H.F.j/u/?id=16J";["16I"]="D://H.F.j/u/?id=16H";["16G"]="D://H.F.j/u/?id=16F";["16E"]="D://H.F.j/u/?id=16D";["16C"]="D://H.F.j/u/?id=16B";["16A"]="D://H.F.j/u/?id=16z";["16y"]="D://H.F.j/u/?id=16x";["16w"]="D://H.F.j/u/?id=16v";["16u"]="D://H.F.j/u/?id=16t";["wc"]="D://H.F.j/u/?id=16s";["16r"]="D://H.F.j/u/?id=16q";["16p"]="D://H.F.j/u/?id=16o";["16n"]="D://H.F.j/u/?id=16m";["16l"]="D://H.F.j/u/?id=16k";["16j"]="D://H.F.j/u/?id=16i";["16h"]="D://H.F.j/u/?id=16g";["16f"]="D://H.F.j/u/?id=16e";["16d"]="D://H.F.j/u/?id=16c";["16b"]="D://H.F.j/u/?id=16a";["169"]="D://H.F.j/u/?id=166";["162"]="D://H.F.j/u/?id=161";["15Z"]="D://H.F.j/u/?id=15Y";["15X"]="D://H.F.j/u/?id=15W";["15V"]="D://H.F.j/u/?id=15U";["15T"]="D://H.F.j/u/?id=15S";["15R"]="D://H.F.j/u/?id=15Q";["15P"]="D://H.F.j/u/?id=15O";["15N"]="D://H.F.j/u/?id=15M";["15L"]="D://H.F.j/u/?id=15K";["15J"]="D://H.F.j/u/?id=15I";["15H"]="D://H.F.j/u/?id=15G";["15F"]="D://H.F.j/u/?id=15E";["15D"]="D://H.F.j/u/?id=15C";["15B"]="D://H.F.j/u/?id=15A";["15z"]="D://H.F.j/u/?id=15y";["15x"]="D://H.F.j/u/?id=15w";["15v"]="D://H.F.j/u/?id=15u";["15t"]="D://H.F.j/u/?id=15s";["15r"]="D://H.F.j/u/?id=15q";["15p"]="D://H.F.j/u/?id=15o";["15n"]="D://H.F.j/u/?id=15m";["15l"]="D://H.F.j/u/?id=15k";["15j"]="D://H.F.j/u/?id=15i";["15h"]="D://H.F.j/u/?id=15g";["15f"]="D://H.F.j/u/?id=15e";["15d"]="D://H.F.j/u/?id=15c";["15b"]="D://H.F.j/u/?id=15a";["159"]="D://H.F.j/u/?id=154";["153"]="D://H.F.j/u/?id=152";["151"]="D://H.F.j/u/?id=14Z";["14Y"]="D://H.F.j/u/?id=14X";["14W"]="D://H.F.j/u/?id=14V";["14U"]="D://H.F.j/u/?id=14T";["14S"]="D://H.F.j/u/?id=14R";["14Q"]="D://H.F.j/u/?id=14P";["14O"]="D://H.F.j/u/?id=14N";["14M"]="D://H.F.j/u/?id=14L";["14K"]="D://H.F.j/u/?id=14J";["14I"]="D://H.F.j/u/?id=14H";["14G"]="D://H.F.j/u/?id=14F";["14E"]="D://H.F.j/u/?id=14D";["14C"]="D://H.F.j/u/?id=14B";["14A"]="D://H.F.j/u/?id=14z";["14y"]="D://H.F.j/u/?id=14x";["14w"]="D://H.F.j/u/?id=14v";["14u"]="D://H.F.j/u/?id=14t";["14s"]="D://H.F.j/u/?id=14r";["14q"]="D://H.F.j/u/?id=14p";["14o"]="D://H.F.j/u/?id=14n";["14m"]="D://H.F.j/u/?id=14l";["tv"]="D://H.F.j/u/?id=14k";["14j"]="D://H.F.j/u/?id=14i";["14h"]="D://H.F.j/u/?id=14g";["14f"]="D://H.F.j/u/?id=14e";["14d"]="D://H.F.j/u/?id=14c";["14b"]="D://H.F.j/u/?id=14a";["146"]="D://H.F.j/u/?id=145";["144"]="D://H.F.j/u/?id=142";["141"]="D://H.F.j/u/?id=13Z";["13Y"]="D://H.F.j/u/?id=13X";["13W"]="D://H.F.j/u/?id=13V";["13U"]="D://H.F.j/u/?id=13T";["13S"]="D://H.F.j/u/?id=13R";["13Q"]="D://H.F.j/u/?id=13P";["13O"]="D://H.F.j/u/?id=13N";["13M"]="D://H.F.j/u/?id=13L";["13K"]="D://H.F.j/u/?id=13J";["13I"]="D://H.F.j/u/?id=13H";["13G"]="D://H.F.j/u/?id=13F";["13E"]="D://H.F.j/u/?id=13D";["13C"]="D://H.F.j/u/?id=13B";["13A"]="D://H.F.j/u/?id=13z";["13y"]="D://H.F.j/u/?id=13x";["13w"]="D://H.F.j/u/?id=13v";["13u"]="D://H.F.j/u/?id=13t";["7p"]="D://H.F.j/u/?id=13s";["13r"]="D://H.F.j/u/?id=13q";["13p"]="D://H.F.j/u/?id=13o";["13n"]="D://H.F.j/u/?id=13m";["13l"]="D://H.F.j/u/?id=13k";["13j"]="D://H.F.j/u/?id=13i";["7C"]="D://H.F.j/u/?id=13h";["13g"]="D://H.F.j/u/?id=13f";["13e"]="D://H.F.j/u/?id=13d";["13c"]="D://H.F.j/u/?id=13b";["13a"]="D://H.F.j/u/?id=139";["137"]="D://H.F.j/u/?id=135";["134"]="D://H.F.j/u/?id=133";["132"]="D://H.F.j/u/?id=12Z";["12Y"]="D://H.F.j/u/?id=12X";["12W"]="D://H.F.j/u/?id=12V";["12U"]="D://H.F.j/u/?id=12T";["12S"]="D://H.F.j/u/?id=12R";["12Q"]="D://H.F.j/u/?id=12P";["12O"]="D://H.F.j/u/?id=12N";["12M"]="D://H.F.j/u/?id=12L";["12K"]="D://H.F.j/u/?id=12J";["12I"]="D://H.F.j/u/?id=12H";["12G"]="D://H.F.j/u/?id=12F";["12E"]="D://H.F.j/u/?id=12D";["12C"]="D://H.F.j/u/?id=12B";["12A"]="D://H.F.j/u/?id=12z";["12y"]="D://H.F.j/u/?id=12x";["12w"]="D://H.F.j/u/?id=12v";["12u"]="D://H.F.j/u/?id=12t";["12s"]="D://H.F.j/u/?id=12r";["12q"]="D://H.F.j/u/?id=12p";["12o"]="D://H.F.j/u/?id=12n";["12m"]="D://H.F.j/u/?id=12l";["12k"]="D://H.F.j/u/?id=12j";["12i"]="D://H.F.j/u/?id=12h";["12g"]="D://H.F.j/u/?id=12f";["12e"]="D://H.F.j/u/?id=12d";["12c"]="D://H.F.j/u/?id=12b";["12a"]="D://H.F.j/u/?id=124";["122"]="D://H.F.j/u/?id=121";["11Z"]="D://H.F.j/u/?id=11Y";["11X"]="D://H.F.j/u/?id=11W";["11V"]="D://H.F.j/u/?id=11U";["11T"]="D://H.F.j/u/?id=11S";["11R"]="D://H.F.j/u/?id=11Q";["11P"]="D://H.F.j/u/?id=11O";["11N"]="D://H.F.j/u/?id=11M";["11L"]="D://H.F.j/u/?id=11K";["11J"]="D://H.F.j/u/?id=11I";["11H"]="D://H.F.j/u/?id=11G";["11F"]="D://H.F.j/u/?id=11E";["11D"]="D://H.F.j/u/?id=11C";["11B"]="D://H.F.j/u/?id=11A";["11z"]="D://H.F.j/u/?id=11y";["11x"]="D://H.F.j/u/?id=11w";["11v"]="D://H.F.j/u/?id=11u";["11t"]="D://H.F.j/u/?id=11s";["11r"]="D://H.F.j/u/?id=11q";["11p"]="D://H.F.j/u/?id=11o";["11n"]="D://H.F.j/u/?id=11m";["11l"]="D://H.F.j/u/?id=11k";["11j"]="D://H.F.j/u/?id=11i";["11h"]="D://H.F.j/u/?id=11g";["11f"]="D://H.F.j/u/?id=11e";["11d"]="D://H.F.j/u/?id=11c";["11b"]="D://H.F.j/u/?id=11a";["119"]="D://H.F.j/u/?id=118";["116"]="D://H.F.j/u/?id=115";["114"]="D://H.F.j/u/?id=113";["112"]="D://H.F.j/u/?id=111";["10Z"]="D://H.F.j/u/?id=10Y";["10X"]="D://H.F.j/u/?id=10W";["10V"]="D://H.F.j/u/?id=10U";["10T"]="D://H.F.j/u/?id=10S";["10R"]="D://H.F.j/u/?id=10Q";["10P"]="D://H.F.j/u/?id=10O";["10N"]="D://H.F.j/u/?id=10M";["10L"]="D://H.F.j/u/?id=10K";["10J"]="D://H.F.j/u/?id=10I";["10H"]="D://H.F.j/u/?id=10G";["10F"]="D://H.F.j/u/?id=10E";["10D"]="D://H.F.j/u/?id=10C";["10B"]="D://H.F.j/u/?id=10A";["10z"]="D://H.F.j/u/?id=10y";["10x"]="D://H.F.j/u/?id=10w";["10v"]="D://H.F.j/u/?id=10u";["10t"]="D://H.F.j/u/?id=10s";["10r"]="D://H.F.j/u/?id=10q";["10p"]="D://H.F.j/u/?id=10o";["10n"]="D://H.F.j/u/?id=10m";["10l"]="D://H.F.j/u/?id=10j";["10i"]="D://H.F.j/u/?id=10h";["10g"]="D://H.F.j/u/?id=10f";["10e"]="D://H.F.j/u/?id=10d";["10c"]="D://H.F.j/u/?id=10b";["10a"]="D://H.F.j/u/?id=109";["108"]="D://H.F.j/u/?id=107";["106"]="D://H.F.j/u/?id=105";["103"]="D://H.F.j/u/?id=102";["101"]="D://H.F.j/u/?id=ZZ";["ZY"]="D://H.F.j/u/?id=ZX";["ZW"]="D://H.F.j/u/?id=ZV";["ZU"]="D://H.F.j/u/?id=ZT";["ZS"]="D://H.F.j/u/?id=ZR";["ZQ"]="D://H.F.j/u/?id=ZP";["ZO"]="D://H.F.j/u/?id=ZN";["ZM"]="D://H.F.j/u/?id=ZL";["ZK"]="D://H.F.j/u/?id=ZJ";["ZI"]="D://H.F.j/u/?id=ZH";["ZG"]="D://H.F.j/u/?id=ZF";["ZE"]="D://H.F.j/u/?id=ZD";["ZC"]="D://H.F.j/u/?id=ZB";["ZA"]="D://H.F.j/u/?id=Zz";["Zy"]="D://H.F.j/u/?id=Zx";["Zw"]="D://H.F.j/u/?id=Zv";["Zu"]="D://H.F.j/u/?id=Zt";["Zs"]="D://H.F.j/u/?id=Zr";["Zq"]="D://H.F.j/u/?id=Zp";["Zo"]="D://H.F.j/u/?id=Zn";["Zm"]="D://H.F.j/u/?id=Zl";["Zk"]="D://H.F.j/u/?id=Zj";["Zi"]="D://H.F.j/u/?id=Zh";["Zg"]="D://H.F.j/u/?id=Zf";["Ze"]="D://H.F.j/u/?id=Zd";["Zc"]="D://H.F.j/u/?id=Zb";["Za"]="D://H.F.j/u/?id=Z9";["Z8"]="D://H.F.j/u/?id=Z7";["Z6"]="D://H.F.j/u/?id=Z5";["Z4"]="D://H.F.j/u/?id=Z3";["Z2"]="D://H.F.j/u/?id=Z1";["Z0"]="D://H.F.j/u/?id=YZ";["YY"]="D://H.F.j/u/?id=YX";["YW"]="D://H.F.j/u/?id=YV";["YU"]="D://H.F.j/u/?id=YT";["YS"]="D://H.F.j/u/?id=YR";["YQ"]="D://H.F.j/u/?id=YP";["YO"]="D://H.F.j/u/?id=YN";["YM"]="D://H.F.j/u/?id=YL";["YK"]="D://H.F.j/u/?id=YJ";["YI"]="D://H.F.j/u/?id=YH";["YG"]="D://H.F.j/u/?id=YF";["YE"]="D://H.F.j/u/?id=YD";["YC"]="D://H.F.j/u/?id=YB";["YA"]="D://H.F.j/u/?id=Yz";["Yy"]="D://H.F.j/u/?id=Yx";["Yw"]="D://H.F.j/u/?id=Yv";["Yu"]="D://H.F.j/u/?id=Yt";["Ys"]="D://H.F.j/u/?id=Yr";["Yq"]="D://H.F.j/u/?id=Yp";["Yo"]="D://H.F.j/u/?id=Yn";["Ym"]="D://H.F.j/u/?id=Yl";["Yk"]="D://H.F.j/u/?id=Yj";["Yi"]="D://H.F.j/u/?id=Yh";["Yg"]="D://H.F.j/u/?id=Yf";["Ye"]="D://H.F.j/u/?id=Yd";["iR"]="D://H.F.j/u/?id=Yc";["Yb"]="D://H.F.j/u/?id=Ya";["Y9"]="D://H.F.j/u/?id=Y8";["Y7"]="D://H.F.j/u/?id=Y6";["Y5"]="D://H.F.j/u/?id=Y4";["Y3"]="D://H.F.j/u/?id=Y2";["Y1"]="D://H.F.j/u/?id=Y0";["XZ"]="D://H.F.j/u/?id=XY";["XX"]="D://H.F.j/u/?id=XW";["XV"]="D://H.F.j/u/?id=XU";["XT"]="D://H.F.j/u/?id=XS";["XR"]="D://H.F.j/u/?id=XQ";["XP"]="D://H.F.j/u/?id=XO";["XN"]="D://H.F.j/u/?id=XM";["XL"]="D://H.F.j/u/?id=XK";["XJ"]="D://H.F.j/u/?id=XI";["XH"]="D://H.F.j/u/?id=XG";["XF"]="D://H.F.j/u/?id=XE";["XD"]="D://H.F.j/u/?id=XC";["XB"]="D://H.F.j/u/?id=XA";["Xz"]="D://H.F.j/u/?id=Xy";["Xx"]="D://H.F.j/u/?id=Xw";["Xv"]="D://H.F.j/u/?id=Xu";["Xt"]="D://H.F.j/u/?id=Xs";["Xr"]="D://H.F.j/u/?id=Xq";["Xp"]="D://H.F.j/u/?id=Xo";["Xn"]="D://H.F.j/u/?id=Xm";["Xl"]="D://H.F.j/u/?id=Xk";["Xj"]="D://H.F.j/u/?id=Xi";["Xh"]="D://H.F.j/u/?id=Xg";["Xf"]="D://H.F.j/u/?id=Xe";["Xd"]="D://H.F.j/u/?id=Xc";["Xb"]="D://H.F.j/u/?id=Xa";["h2"]="D://H.F.j/u/?id=X9";["X8"]="D://H.F.j/u/?id=X7";["X6"]="D://H.F.j/u/?id=X5";["X4"]="D://H.F.j/u/?id=X3";["X2"]="D://H.F.j/u/?id=X1";["X0"]="D://H.F.j/u/?id=WZ";["WY"]="D://H.F.j/u/?id=WX";["WW"]="D://H.F.j/u/?id=WV";["WU"]="D://H.F.j/u/?id=WT";["WR"]="D://H.F.j/u/?id=WQ";["WP"]="D://H.F.j/u/?id=WO";["WN"]="D://H.F.j/u/?id=WM";["WL"]="D://H.F.j/u/?id=WK";["WJ"]="D://H.F.j/u/?id=WI";["WH"]="D://H.F.j/u/?id=WG";["WF"]="D://H.F.j/u/?id=WE";["WD"]="D://H.F.j/u/?id=WC";["WB"]="D://H.F.j/u/?id=WA";["Wz"]="D://H.F.j/u/?id=Wy";["Wx"]="D://H.F.j/u/?id=Ww";["Wv"]="D://H.F.j/u/?id=Wu";["Wt"]="D://H.F.j/u/?id=Ws";["Wr"]="D://H.F.j/u/?id=Wq";["Wp"]="D://H.F.j/u/?id=Wo";["Wn"]="D://H.F.j/u/?id=Wm";["Wl"]="D://H.F.j/u/?id=Wk";["Wj"]="D://H.F.j/u/?id=Wi";["Wh"]="D://H.F.j/u/?id=Wg";["Wf"]="D://H.F.j/u/?id=We";["Wd"]="D://H.F.j/u/?id=Wc";["Wb"]="D://H.F.j/u/?id=Wa";["W9"]="D://H.F.j/u/?id=W8";["W7"]="D://H.F.j/u/?id=W6";["W5"]="D://H.F.j/u/?id=W4";["W3"]="D://H.F.j/u/?id=W2";["W1"]="D://H.F.j/u/?id=W0";["VZ"]="D://H.F.j/u/?id=VY";["VX"]="D://H.F.j/u/?id=VW";["VV"]="D://H.F.j/u/?id=VU";["VT"]="D://H.F.j/u/?id=VS";["VR"]="D://H.F.j/u/?id=VQ";["VP"]="D://H.F.j/u/?id=VO";["VN"]="D://H.F.j/u/?id=VM";["VL"]="D://H.F.j/u/?id=VK";["VJ"]="D://H.F.j/u/?id=VI";["VH"]="D://H.F.j/u/?id=VG";["VF"]="D://H.F.j/u/?id=VE";["VD"]="D://H.F.j/u/?id=VC";["VB"]="D://H.F.j/u/?id=VA";["Vz"]="D://H.F.j/u/?id=Vy";["Vx"]="D://H.F.j/u/?id=Vw";["Vv"]="D://H.F.j/u/?id=Vu";["Vt"]="D://H.F.j/u/?id=Vs";["Vr"]="D://H.F.j/u/?id=Vq";["Vp"]="D://H.F.j/u/?id=Vo";["Vn"]="D://H.F.j/u/?id=Vm";["Vl"]="D://H.F.j/u/?id=Vk";["Vj"]="D://H.F.j/u/?id=Vi";["Vh"]="D://H.F.j/u/?id=Vg";["Vf"]="D://H.F.j/u/?id=Ve";["Vd"]="D://H.F.j/u/?id=Vc";["Vb"]="D://H.F.j/u/?id=Va";["V9"]="D://H.F.j/u/?id=V8";["V7"]="D://H.F.j/u/?id=V6";["V5"]="D://H.F.j/u/?id=V3";["V2"]="D://H.F.j/u/?id=V1";["V0"]="D://H.F.j/u/?id=UZ";["UY"]="D://H.F.j/u/?id=UX";["UW"]="D://H.F.j/u/?id=UV";["UU"]="D://H.F.j/u/?id=UT";["US"]="D://H.F.j/u/?id=UR";["UQ"]="D://H.F.j/u/?id=UP";["UO"]="D://H.F.j/u/?id=UN";["UM"]="D://H.F.j/u/?id=UL";["UK"]="D://H.F.j/u/?id=UJ";["UH"]="D://H.F.j/u/?id=UG";["UF"]="D://H.F.j/u/?id=UE";["UD"]="D://H.F.j/u/?id=UC";["UB"]="D://H.F.j/u/?id=UA";["Uz"]="D://H.F.j/u/?id=Uy";["Ux"]="D://H.F.j/u/?id=Uw";["Uv"]="D://H.F.j/u/?id=Uu";["Us"]="D://H.F.j/u/?id=Ur";["Uq"]="D://H.F.j/u/?id=Up";["Uo"]="D://H.F.j/u/?id=Un";["Um"]="D://H.F.j/u/?id=Ul";["Uk"]="D://H.F.j/u/?id=Uj";["Ui"]="D://H.F.j/u/?id=Uh";["Ug"]="D://H.F.j/u/?id=Uf";["Ue"]="D://H.F.j/u/?id=Ud";["Uc"]="D://H.F.j/u/?id=Ub";["Ua"]="D://H.F.j/u/?id=U9";["U8"]="D://H.F.j/u/?id=U7";["U6"]="D://H.F.j/u/?id=U5";["U4"]="D://H.F.j/u/?id=U3";["U2"]="D://H.F.j/u/?id=U1";["U0"]="D://H.F.j/u/?id=TZ";["TY"]="D://H.F.j/u/?id=TX";["TV"]="D://H.F.j/u/?id=TU";["TT"]="D://H.F.j/u/?id=TS";["TR"]="D://H.F.j/u/?id=TQ";["TP"]="D://H.F.j/u/?id=TN";["TM"]="D://H.F.j/u/?id=TL";["TK"]="D://H.F.j/u/?id=TJ";["TI"]="D://H.F.j/u/?id=TH";["TG"]="D://H.F.j/u/?id=TF";["TE"]="D://H.F.j/u/?id=TD";["TC"]="D://H.F.j/u/?id=TB";["TA"]="D://H.F.j/u/?id=Tz";["Ty"]="D://H.F.j/u/?id=Tx";["Tw"]="D://H.F.j/u/?id=Tv";["Tu"]="D://H.F.j/u/?id=Tt";["Ts"]="D://H.F.j/u/?id=Tr";["Tq"]="D://H.F.j/u/?id=Tp";["Tn"]="D://H.F.j/u/?id=Tm";["Tl"]="D://H.F.j/u/?id=Tk";["Tj"]="D://H.F.j/u/?id=Ti";["Th"]="D://H.F.j/u/?id=Tg";["Tf"]="D://H.F.j/u/?id=Te";["Td"]="D://H.F.j/u/?id=Tc";["Tb"]="D://H.F.j/u/?id=Ta";["T9"]="D://H.F.j/u/?id=T8";["T7"]="D://H.F.j/u/?id=T6";["T5"]="D://H.F.j/u/?id=T4";["T3"]="D://H.F.j/u/?id=T2";["T1"]="D://H.F.j/u/?id=T0";["SZ"]="D://H.F.j/u/?id=SY";["SX"]="D://H.F.j/u/?id=SW";["SU"]="D://H.F.j/u/?id=SS";["SR"]="D://H.F.j/u/?id=SQ";["SP"]="D://H.F.j/u/?id=SO";["SN"]="D://H.F.j/u/?id=SM";["SL"]="D://H.F.j/u/?id=SK";["SJ"]="D://H.F.j/u/?id=SI";["SH"]="D://H.F.j/u/?id=SG";["SF"]="D://H.F.j/u/?id=SE";["SD"]="D://H.F.j/u/?id=SC";["SB"]="D://H.F.j/u/?id=SA";["Sz"]="D://H.F.j/u/?id=Sy";["Sx"]="D://H.F.j/u/?id=Sw";["6k"]="D://H.F.j/u/?id=Sv";["Su"]="D://H.F.j/u/?id=St";["Ss"]="D://H.F.j/u/?id=Sr";["Sq"]="D://H.F.j/u/?id=Sp";["Sn"]="D://H.F.j/u/?id=Sm";["Sl"]="D://H.F.j/u/?id=Sk";["Sj"]="D://H.F.j/u/?id=Sh";["Sg"]="D://H.F.j/u/?id=Sf";["7k"]="D://H.F.j/u/?id=Sd";["Sc"]="D://H.F.j/u/?id=Sb";["Sa"]="D://H.F.j/u/?id=S9";["8k"]="D://H.F.j/u/?id=S8";["hd"]="D://H.F.j/u/?id=S7";["S6"]="D://H.F.j/u/?id=S5";["S4"]="D://H.F.j/u/?id=S3";["S2"]="D://H.F.j/u/?id=S1";["S0"]="D://H.F.j/u/?id=RZ";["RY"]="D://H.F.j/u/?id=RX";["RW"]="D://H.F.j/u/?id=RV";["RU"]="D://H.F.j/u/?id=RT";["RR"]="D://H.F.j/u/?id=RQ";["RP"]="D://H.F.j/u/?id=RO";["ll"]="D://H.F.j/u/?id=RN";["2k"]="D://H.F.j/u/?id=RM";["RL"]="D://H.F.j/u/?id=RK";["RJ"]="D://H.F.j/u/?id=RI";["RH"]="D://H.F.j/u/?id=RG";["RF"]="D://H.F.j/u/?id=RD";["RC"]="D://H.F.j/u/?id=RB";["RA"]="D://H.F.j/u/?id=Rz";["Ry"]="D://H.F.j/u/?id=Rx";["Rw"]="D://H.F.j/u/?id=Rv";["Ru"]="D://H.F.j/u/?id=Rt";["sd"]="D://H.F.j/u/?id=Rs";["Rr"]="D://H.F.j/u/?id=Rq";["Rp"]="D://H.F.j/u/?id=Ro";["Rn"]="D://H.F.j/u/?id=Rm";["Rl"]="D://H.F.j/u/?id=Rk";["Rj"]="D://H.F.j/u/?id=Ri";["Rh"]="D://H.F.j/u/?id=Rg";["Rf"]="D://H.F.j/u/?id=Re";["Rd"]="D://H.F.j/u/?id=Rc";["Rb"]="D://H.F.j/u/?id=Ra";["R9"]="D://H.F.j/u/?id=R8";["R7"]="D://H.F.j/u/?id=R6";["R5"]="D://H.F.j/u/?id=R4";["3k"]="D://H.F.j/u/?id=R3";["4k"]="D://H.F.j/u/?id=R2";["R1"]="D://H.F.j/u/?id=R0";["QZ"]="D://H.F.j/u/?id=QY";["QX"]="D://H.F.j/u/?id=QW";["QV"]="D://H.F.j/u/?id=QU";["QT"]="D://H.F.j/u/?id=QS";["QR"]="D://H.F.j/u/?id=QQ";["5k"]="D://H.F.j/u/?id=QP";["QO"]="D://H.F.j/u/?id=QN";["QM"]="D://H.F.j/u/?id=QL";["fO"]="D://H.F.j/u/?id=QK";["QJ"]="D://H.F.j/u/?id=QI";["5g"]="D://H.F.j/u/?id=QH";["QG"]="D://H.F.j/u/?id=QF";["fX"]="D://H.F.j/u/?id=QE";["QD"]="D://H.F.j/u/?id=QC";["QB"]="D://H.F.j/u/?id=QA";["Qz"]="D://H.F.j/u/?id=Qy";["Qx"]="D://H.F.j/u/?id=Qw";["Qv"]="D://H.F.j/u/?id=Qu";["Qt"]="D://H.F.j/u/?id=Qs";["Qr"]="D://H.F.j/u/?id=Qq";["Qp"]="D://H.F.j/u/?id=Qo";["Qn"]="D://H.F.j/u/?id=Qm";["9k"]="D://H.F.j/u/?id=Ql";["Qk"]="D://H.F.j/u/?id=Qj";["Qi"]="D://H.F.j/u/?id=Qh";["Qg"]="D://H.F.j/u/?id=Qf";["1k"]="D://H.F.j/u/?id=Qe";["Qd"]="D://H.F.j/u/?id=Qc";["Qb"]="D://H.F.j/u/?id=Qa";["Q9"]="D://H.F.j/u/?id=Q8";["Q7"]="D://H.F.j/u/?id=Q6";["Q5"]="D://H.F.j/u/?id=Q4";["10k"]="D://H.F.j/u/?id=Q3";["Q2"]="D://H.F.j/u/?id=Q1";["Q0"]="D://H.F.j/u/?id=PZ";["PY"]="D://H.F.j/u/?id=PX";["PW"]="D://H.F.j/u/?id=PV";["PU"]="D://H.F.j/u/?id=PT";["PS"]="D://H.F.j/u/?id=PR";["PQ"]="D://H.F.j/u/?id=PP";["PO"]="D://H.F.j/u/?id=PN";["PM"]="D://H.F.j/u/?id=PL";["PK"]="D://H.F.j/u/?id=PJ";["PI"]="D://H.F.j/u/?id=PH";["PG"]="D://H.F.j/u/?id=PF";["PE"]="D://H.F.j/u/?id=PD";["PB"]="D://H.F.j/u/?id=PA";["Pz"]="D://H.F.j/u/?id=Py";["Px"]="D://H.F.j/u/?id=Pw";["Pv"]="D://H.F.j/u/?id=Pu";["Pt"]="D://H.F.j/u/?id=Ps";["Pr"]="D://H.F.j/u/?id=Pq";["Pp"]="D://H.F.j/u/?id=Po";["Pn"]="D://H.F.j/u/?id=Pm";["Pl"]="D://H.F.j/u/?id=Pk";["Pj"]="D://H.F.j/u/?id=Pi";["iw"]="D://H.F.j/u/?id=Ph";["Pg"]="D://H.F.j/u/?id=Pf";["Pe"]="D://H.F.j/u/?id=Pd";["Pc"]="D://H.F.j/u/?id=Pb";["Pa"]="D://H.F.j/u/?id=P9";["P8"]="D://H.F.j/u/?id=P7";["P6"]="D://H.F.j/u/?id=P5";["P4"]="D://H.F.j/u/?id=P3";["P2"]="D://H.F.j/u/?id=P1";["P0"]="D://H.F.j/u/?id=OZ";["OY"]="D://H.F.j/u/?id=OX";["OW"]="D://H.F.j/u/?id=OV";["OU"]="D://H.F.j/u/?id=OT";["OS"]="D://H.F.j/u/?id=OR";["OQ"]="D://H.F.j/u/?id=OP";["OO"]="D://H.F.j/u/?id=OM";["OL"]="D://H.F.j/u/?id=OK";["OJ"]="D://H.F.j/u/?id=OI";["OH"]="D://H.F.j/u/?id=OG";["OF"]="D://H.F.j/u/?id=OE";["OD"]="D://H.F.j/u/?id=OC";["OB"]="D://H.F.j/u/?id=OA";["Oz"]="D://H.F.j/u/?id=Oy";["Ox"]="D://H.F.j/u/?id=Ow";["Ov"]="D://H.F.j/u/?id=Ou";["Ot"]="D://H.F.j/u/?id=Os";["Or"]="D://H.F.j/u/?id=Oq";["Op"]="D://H.F.j/u/?id=Oo";["On"]="D://H.F.j/u/?id=Om";["Ol"]="D://H.F.j/u/?id=Ok";["Oj"]="D://H.F.j/u/?id=Oi";["Oh"]="D://H.F.j/u/?id=Og";["Of"]="D://H.F.j/u/?id=Oe";["Od"]="D://H.F.j/u/?id=Oc";["Ob"]="D://H.F.j/u/?id=Oa";["O9"]="D://H.F.j/u/?id=O8";["O7"]="D://H.F.j/u/?id=O6";["O5"]="D://H.F.j/u/?id=O4";["O3"]="D://H.F.j/u/?id=O2";["O1"]="D://H.F.j/u/?id=O0";["NZ"]="D://H.F.j/u/?id=NY";["NX"]="D://H.F.j/u/?id=NW";["NV"]="D://H.F.j/u/?id=NU";["NT"]="D://H.F.j/u/?id=NS";["NR"]="D://H.F.j/u/?id=NQ";["NP"]="D://H.F.j/u/?id=NN";["NM"]="D://H.F.j/u/?id=NL";["NK"]="D://H.F.j/u/?id=NJ";["NI"]="D://H.F.j/u/?id=NH";["NG"]="D://H.F.j/u/?id=NF";["NE"]="D://H.F.j/u/?id=ND";["NC"]="D://H.F.j/u/?id=NB";["NA"]="D://H.F.j/u/?id=Nz";["Ny"]="D://H.F.j/u/?id=Nx";["Nw"]="D://H.F.j/u/?id=Nv";["Nu"]="D://H.F.j/u/?id=Nt";["Ns"]="D://H.F.j/u/?id=Nr";["Nq"]="D://H.F.j/u/?id=Np";["Nn"]="D://H.F.j/u/?id=Nm";["mp"]="D://H.F.j/u/?id=Nl";["Nk"]="D://H.F.j/u/?id=Nj";["Ni"]="D://H.F.j/u/?id=Nh";["Ng"]="D://H.F.j/u/?id=Nf";["Ne"]="D://H.F.j/u/?id=Nd";["Nc"]="D://H.F.j/u/?id=Nb";["Na"]="D://H.F.j/u/?id=N9";["N8"]="D://H.F.j/u/?id=N7";["N6"]="D://H.F.j/u/?id=N5";["N4"]="D://H.F.j/u/?id=N3";["N2"]="D://H.F.j/u/?id=N1";["N0"]="D://H.F.j/u/?id=MZ";["MY"]="D://H.F.j/u/?id=MX";["MW"]="D://H.F.j/u/?id=MV";["7q"]="D://H.F.j/u/?id=MU";["MT"]="D://H.F.j/u/?id=MS";["MR"]="D://H.F.j/u/?id=MQ";["MP"]="D://H.F.j/u/?id=MO";["MN"]="D://H.F.j/u/?id=MM";["ML"]="D://H.F.j/u/?id=MK";["MJ"]="D://H.F.j/u/?id=MI";["MH"]="D://H.F.j/u/?id=MG";["MF"]="D://H.F.j/u/?id=ME";["MD"]="D://H.F.j/u/?id=MC";["MB"]="D://H.F.j/u/?id=MA";["Mz"]="D://H.F.j/u/?id=My";["Mx"]="D://H.F.j/u/?id=Mw";["Mv"]="D://H.F.j/u/?id=Mu";["Mt"]="D://H.F.j/u/?id=Ms";["Mr"]="D://H.F.j/u/?id=Mq";["Mp"]="D://H.F.j/u/?id=Mo";["Mn"]="D://H.F.j/u/?id=Mm";["Ml"]="D://H.F.j/u/?id=Mk";["Mj"]="D://H.F.j/u/?id=Mi";["Mh"]="D://H.F.j/u/?id=Mg";["Mf"]="D://H.F.j/u/?id=Me";["Md"]="D://H.F.j/u/?id=Mc";["Mb"]="D://H.F.j/u/?id=Ma";["M9"]="D://H.F.j/u/?id=M8";["M7"]="D://H.F.j/u/?id=M6";["M5"]="D://H.F.j/u/?id=M4";["M3"]="D://H.F.j/u/?id=M2";["M1"]="D://H.F.j/u/?id=M0";["LZ"]="D://H.F.j/u/?id=LY";["LX"]="D://H.F.j/u/?id=LW";["LV"]="D://H.F.j/u/?id=LU";["LT"]="D://H.F.j/u/?id=LS";["LR"]="D://H.F.j/u/?id=LQ";["LO"]="D://H.F.j/u/?id=LN";["LM"]="D://H.F.j/u/?id=LL";["LK"]="D://H.F.j/u/?id=LJ";["LI"]="D://H.F.j/u/?id=LH";["LG"]="D://H.F.j/u/?id=LF";["LE"]="D://H.F.j/u/?id=LD";["LC"]="D://H.F.j/u/?id=LB";["Lz"]="D://H.F.j/u/?id=Ly";["Lx"]="D://H.F.j/u/?id=Lw";["Lv"]="D://H.F.j/u/?id=Lu";["Lt"]="D://H.F.j/u/?id=Ls";["Lr"]="D://H.F.j/u/?id=Lq";["Lp"]="D://H.F.j/u/?id=Lo";["Ln"]="D://H.F.j/u/?id=Lm";["Ll"]="D://H.F.j/u/?id=Lk";["Lj"]="D://H.F.j/u/?id=Li";["Lh"]="D://H.F.j/u/?id=Lg";["Lf"]="D://H.F.j/u/?id=Le";["Ld"]="D://H.F.j/u/?id=Lc";["Lb"]="D://H.F.j/u/?id=La";["L9"]="D://H.F.j/u/?id=L8";["L7"]="D://H.F.j/u/?id=L6";["L5"]="D://H.F.j/u/?id=L4";["L3"]="D://H.F.j/u/?id=L2";["L1"]="D://H.F.j/u/?id=L0";["KZ"]="D://H.F.j/u/?id=KY";["KX"]="D://H.F.j/u/?id=KW";["KV"]="D://H.F.j/u/?id=KU";["KT"]="D://H.F.j/u/?id=KS";["KR"]="D://H.F.j/u/?id=KQ";["KP"]="D://H.F.j/u/?id=KO";["KN"]="D://H.F.j/u/?id=KM";["KL"]="D://H.F.j/u/?id=KK";["KJ"]="D://H.F.j/u/?id=KI";["KH"]="D://H.F.j/u/?id=KG";["KF"]="D://H.F.j/u/?id=KE";["KD"]="D://H.F.j/u/?id=KC";["KB"]="D://H.F.j/u/?id=KA";["Kz"]="D://H.F.j/u/?id=Ky";["Kx"]="D://H.F.j/u/?id=Kw";["Kv"]="D://H.F.j/u/?id=Ku";["Kt"]="D://H.F.j/u/?id=Ks";["Kr"]="D://H.F.j/u/?id=Kq";["Kp"]="D://H.F.j/u/?id=Ko";["Kn"]="D://H.F.j/u/?id=Km";["Kl"]="D://H.F.j/u/?id=Kk";["h9"]="D://H.F.j/u/?id=Kj";["Ki"]="D://H.F.j/u/?id=Kh";["Kg"]="D://H.F.j/u/?id=Kf";["Ke"]="D://H.F.j/u/?id=Kd";["Kc"]="D://H.F.j/u/?id=Kb";["Ka"]="D://H.F.j/u/?id=K9";["K8"]="D://H.F.j/u/?id=K7";["K6"]="D://H.F.j/u/?id=K5";["K4"]="D://H.F.j/u/?id=K3";["K2"]="D://H.F.j/u/?id=K1";["K0"]="D://H.F.j/u/?id=JZ";["JY"]="D://H.F.j/u/?id=JX";["JW"]="D://H.F.j/u/?id=JV";["JU"]="D://H.F.j/u/?id=JT";["JS"]="D://H.F.j/u/?id=JR";["JQ"]="D://H.F.j/u/?id=JP";["JO"]="D://H.F.j/u/?id=JN";["JM"]="D://H.F.j/u/?id=JL";["JK"]="D://H.F.j/u/?id=JJ";["JI"]="D://H.F.j/u/?id=JH";["JG"]="D://H.F.j/u/?id=JF";["JE"]="D://H.F.j/u/?id=JD";["JC"]="D://H.F.j/u/?id=JB";["JA"]="D://H.F.j/u/?id=Jz";["Jy"]="D://H.F.j/u/?id=Jx";["Jw"]="D://H.F.j/u/?id=Jv";["Ju"]="D://H.F.j/u/?id=Jt";["Js"]="D://H.F.j/u/?id=Jr";["Jq"]="D://H.F.j/u/?id=Jp";["Jo"]="D://H.F.j/u/?id=Jn";["Jm"]="D://H.F.j/u/?id=Jl";["Jk"]="D://H.F.j/u/?id=Jj";["Ji"]="D://H.F.j/u/?id=Jh";["Jg"]="D://H.F.j/u/?id=Jf";["Je"]="D://H.F.j/u/?id=Jd";["Jc"]="D://H.F.j/u/?id=Jb";["Ja"]="D://H.F.j/u/?id=J9";["J8"]="D://H.F.j/u/?id=J7";["J6"]="D://H.F.j/u/?id=J5";["J4"]="D://H.F.j/u/?id=J3";["J2"]="D://H.F.j/u/?id=J1";["J0"]="D://H.F.j/u/?id=IZ";["IY"]="D://H.F.j/u/?id=IX";["IW"]="D://H.F.j/u/?id=IV";["IU"]="D://H.F.j/u/?id=IT";["IR"]="D://H.F.j/u/?id=IQ";["IP"]="D://H.F.j/u/?id=IO";["IN"]="D://H.F.j/u/?id=IL";["IK"]="D://H.F.j/u/?id=IJ";["II"]="D://H.F.j/u/?id=IH";["IG"]="D://H.F.j/u/?id=IE";["IC"]="D://H.F.j/u/?id=IB";["IA"]="D://H.F.j/u/?id=Iz";["Iy"]="D://H.F.j/u/?id=Ix";["Iw"]="D://H.F.j/u/?id=Iv";["Iu"]="D://H.F.j/u/?id=It";["Ir"]="D://H.F.j/u/?id=Iq";["Ip"]="D://H.F.j/u/?id=Io";["Im"]="D://H.F.j/u/?id=Il";["Ik"]="D://H.F.j/u/?id=Ij";["Ii"]="D://H.F.j/u/?id=Ih";["Ig"]="D://H.F.j/u/?id=If";["Ie"]="D://H.F.j/u/?id=Id";["Ic"]="D://H.F.j/u/?id=Ib";["Ia"]="D://H.F.j/u/?id=I9";["I8"]="D://H.F.j/u/?id=I7";["I6"]="D://H.F.j/u/?id=I5";["I4"]="D://H.F.j/u/?id=I3";["I2"]="D://H.F.j/u/?id=I1";["I0"]="D://H.F.j/u/?id=HZ";["HY"]="D://H.F.j/u/?id=HX";["HW"]="D://H.F.j/u/?id=HV";["HU"]="D://H.F.j/u/?id=HT";["HS"]="D://H.F.j/u/?id=HR";["HQ"]="D://H.F.j/u/?id=HO";["HN"]="D://H.F.j/u/?id=HM";["HL"]="D://H.F.j/u/?id=HK";["HJ"]="D://H.F.j/u/?id=HI";["HH"]="D://H.F.j/u/?id=HG";["HF"]="D://H.F.j/u/?id=HE";["HD"]="D://H.F.j/u/?id=HC";["HB"]="D://H.F.j/u/?id=HA";["Hz"]="D://H.F.j/u/?id=Hy";["Hx"]="D://H.F.j/u/?id=Hw";["Hv"]="D://H.F.j/u/?id=Hu";["Ht"]="D://H.F.j/u/?id=Hs";["Hr"]="D://H.F.j/u/?id=Hq";["Hp"]="D://H.F.j/u/?id=Ho";["Hn"]="D://H.F.j/u/?id=Hm";["Hl"]="D://H.F.j/u/?id=Hk";["Hj"]="D://H.F.j/u/?id=Hi";["Hh"]="D://H.F.j/u/?id=Hg";["Hf"]="D://H.F.j/u/?id=He";["Hd"]="D://H.F.j/u/?id=Hc";["Hb"]="D://H.F.j/u/?id=Ha";["H9"]="D://H.F.j/u/?id=H8";["H7"]="D://H.F.j/u/?id=H6";["H5"]="D://H.F.j/u/?id=H4";["H3"]="D://H.F.j/u/?id=H2";["H1"]="D://H.F.j/u/?id=H0";["GZ"]="D://H.F.j/u/?id=GY";["GX"]="D://H.F.j/u/?id=GW";["GV"]="D://H.F.j/u/?id=GU";["GT"]="D://H.F.j/u/?id=GS";["GR"]="D://H.F.j/u/?id=GQ";["GP"]="D://H.F.j/u/?id=GO";["GN"]="D://H.F.j/u/?id=GM";["GL"]="D://H.F.j/u/?id=GK";["GJ"]="D://H.F.j/u/?id=GI";["GH"]="D://H.F.j/u/?id=GG";["GF"]="D://H.F.j/u/?id=GE";["GD"]="D://H.F.j/u/?id=GC";["GB"]="D://H.F.j/u/?id=GA";["Gz"]="D://H.F.j/u/?id=Gy";["Gx"]="D://H.F.j/u/?id=Gw";["Gv"]="D://H.F.j/u/?id=Gu";["Gt"]="D://H.F.j/u/?id=Gs";["Gr"]="D://H.F.j/u/?id=Gq";["Gp"]="D://H.F.j/u/?id=Go";["Gn"]="D://H.F.j/u/?id=Gm";["Gl"]="D://H.F.j/u/?id=Gk";["Gj"]="D://H.F.j/u/?id=Gi";["Gh"]="D://H.F.j/u/?id=Gg";["Gf"]="D://H.F.j/u/?id=Ge";["Gd"]="D://H.F.j/u/?id=Gc";["Gb"]="D://H.F.j/u/?id=Ga";["G9"]="D://H.F.j/u/?id=G8";["G7"]="D://H.F.j/u/?id=G6";["G5"]="D://H.F.j/u/?id=G4";["G3"]="D://H.F.j/u/?id=G2";["G1"]="D://H.F.j/u/?id=G0";["FZ"]="D://H.F.j/u/?id=FY";["FX"]="D://H.F.j/u/?id=FW";["FV"]="D://H.F.j/u/?id=FU";["FT"]="D://H.F.j/u/?id=FS";["FR"]="D://H.F.j/u/?id=FQ";["FP"]="D://H.F.j/u/?id=FO";["FN"]="D://H.F.j/u/?id=FM";["FL"]="D://H.F.j/u/?id=FK";["FJ"]="D://H.F.j/u/?id=FI";["FH"]="D://H.F.j/u/?id=FG";["FF"]="D://H.F.j/u/?id=FE";["FD"]="D://H.F.j/u/?id=FC";["FB"]="D://H.F.j/u/?id=FA";["Fz"]="D://H.F.j/u/?id=Fy";["Fx"]="D://H.F.j/u/?id=Fw";["Fv"]="D://H.F.j/u/?id=Fu";["Ft"]="D://H.F.j/u/?id=Fs";["Fr"]="D://H.F.j/u/?id=Fq";["Fp"]="D://H.F.j/u/?id=Fo";["Fn"]="D://H.F.j/u/?id=Fm";["Fl"]="D://H.F.j/u/?id=Fk";["Fj"]="D://H.F.j/u/?id=Fi";["Fh"]="D://H.F.j/u/?id=Fg";["Ff"]="D://H.F.j/u/?id=Fe";["Fd"]="D://H.F.j/u/?id=Fc";["Fb"]="D://H.F.j/u/?id=Fa";["F9"]="D://H.F.j/u/?id=F8";["F7"]="D://H.F.j/u/?id=F6";["F5"]="D://H.F.j/u/?id=F4";["F3"]="D://H.F.j/u/?id=F2";["F1"]="D://H.F.j/u/?id=F0";["EZ"]="D://H.F.j/u/?id=EY";["EX"]="D://H.F.j/u/?id=EW";["EV"]="D://H.F.j/u/?id=EU";["ET"]="D://H.F.j/u/?id=ES";["ER"]="D://H.F.j/u/?id=EQ";["EP"]="D://H.F.j/u/?id=EO";["EM"]="D://H.F.j/u/?id=EL";["EK"]="D://H.F.j/u/?id=EJ";["EI"]="D://H.F.j/u/?id=EH";["EG"]="D://H.F.j/u/?id=EF";["EE"]="D://H.F.j/u/?id=ED";["EC"]="D://H.F.j/u/?id=EB";["EA"]="D://H.F.j/u/?id=Ez";["Ey"]="D://H.F.j/u/?id=Ex";["Ew"]="D://H.F.j/u/?id=Ev";["Eu"]="D://H.F.j/u/?id=Et";["Es"]="D://H.F.j/u/?id=Er";["Eq"]="D://H.F.j/u/?id=Ep";["Eo"]="D://H.F.j/u/?id=En";["Em"]="D://H.F.j/u/?id=El";["Ek"]="D://H.F.j/u/?id=Ej";["Ei"]="D://H.F.j/u/?id=Eh";["Eg"]="D://H.F.j/u/?id=Ef";["Ee"]="D://H.F.j/u/?id=Ed";["Ec"]="D://H.F.j/u/?id=Eb";["Ea"]="D://H.F.j/u/?id=E9";["E8"]="D://H.F.j/u/?id=E7";["E6"]="D://H.F.j/u/?id=E5";["E4"]="D://H.F.j/u/?id=E3";["E2"]="D://H.F.j/u/?id=E1";["E0"]="D://H.F.j/u/?id=DZ";["DY"]="D://H.F.j/u/?id=DX";["DW"]="D://H.F.j/u/?id=DV";["DU"]="D://H.F.j/u/?id=DT";["DS"]="D://H.F.j/u/?id=DR";["DQ"]="D://H.F.j/u/?id=DP";["DN"]="D://H.F.j/u/?id=DM";["DL"]="D://H.F.j/u/?id=DK";["DJ"]="D://H.F.j/u/?id=DI";["DH"]="D://H.F.j/u/?id=DG";["DF"]="D://H.F.j/u/?id=DD";["DC"]="D://H.F.j/u/?id=DB";["DA"]="D://H.F.j/u/?id=Dz";["Dy"]="D://H.F.j/u/?id=Dx";["Dw"]="D://H.F.j/u/?id=Dv";["Du"]="D://H.F.j/u/?id=Dt";["Ds"]="D://H.F.j/u/?id=Dr";["Dq"]="D://H.F.j/u/?id=Dp";["Dn"]="D://H.F.j/u/?id=Dm";["Dl"]="D://H.F.j/u/?id=Dk";["Dj"]="D://H.F.j/u/?id=Di";["lm"]="D://H.F.j/u/?id=Dh";["Dg"]="D://H.F.j/u/?id=Df";["De"]="D://H.F.j/u/?id=Dd";["Dc"]="D://H.F.j/u/?id=Db";["Da"]="D://H.F.j/u/?id=D9";["D8"]="D://H.F.j/u/?id=D7";["D6"]="D://H.F.j/u/?id=D5";["D4"]="D://H.F.j/u/?id=D3";["D2"]="D://H.F.j/u/?id=D1";["D0"]="D://H.F.j/u/?id=CZ";["CY"]="D://H.F.j/u/?id=CX";["CW"]="D://H.F.j/u/?id=CV";["CU"]="D://H.F.j/u/?id=CT";["CS"]="D://H.F.j/u/?id=CR";["CQ"]="D://H.F.j/u/?id=CP";["CO"]="D://H.F.j/u/?id=CN";["CM"]="D://H.F.j/u/?id=CL";["CK"]="D://H.F.j/u/?id=CJ";["CI"]="D://H.F.j/u/?id=CH";["CG"]="D://H.F.j/u/?id=CF";["CE"]="D://H.F.j/u/?id=CD";["CC"]="D://H.F.j/u/?id=CB";["CA"]="D://H.F.j/u/?id=Cz";["Cy"]="D://H.F.j/u/?id=Cx";["Cw"]="D://H.F.j/u/?id=Cv";["Cu"]="D://H.F.j/u/?id=Ct";["Cs"]="D://H.F.j/u/?id=Cr";["Cq"]="D://H.F.j/u/?id=Cp";["Co"]="D://H.F.j/u/?id=Cn";["Cm"]="D://H.F.j/u/?id=Cl";["Ck"]="D://H.F.j/u/?id=Cj";["Ci"]="D://H.F.j/u/?id=Ch";["Cg"]="D://H.F.j/u/?id=Cf";["Ce"]="D://H.F.j/u/?id=Cd";["Cc"]="D://H.F.j/u/?id=Cb";["Ca"]="D://H.F.j/u/?id=C9";["C8"]="D://H.F.j/u/?id=C7";["C6"]="D://H.F.j/u/?id=C5";["C4"]="D://H.F.j/u/?id=C3";["C2"]="D://H.F.j/u/?id=C1";["C0"]="D://H.F.j/u/?id=BZ";["BY"]="D://H.F.j/u/?id=BX";["BW"]="D://H.F.j/u/?id=BV";["BU"]="D://H.F.j/u/?id=BT";["BS"]="D://H.F.j/u/?id=BR";["BQ"]="D://H.F.j/u/?id=BP";["BO"]="D://H.F.j/u/?id=BN";["BM"]="D://H.F.j/u/?id=BL";["BK"]="D://H.F.j/u/?id=BJ";["BI"]="D://H.F.j/u/?id=BH";["BG"]="D://H.F.j/u/?id=BF";["BE"]="D://H.F.j/u/?id=BD";["BC"]="D://H.F.j/u/?id=BB";["BA"]="D://H.F.j/u/?id=Bz";["Bx"]="D://H.F.j/u/?id=Bw";["Bv"]="D://H.F.j/u/?id=Bu";["Bt"]="D://H.F.j/u/?id=Bs";["Br"]="D://H.F.j/u/?id=Bq";["Bp"]="D://H.F.j/u/?id=Bo";["Bn"]="D://H.F.j/u/?id=Bm";["Bl"]="D://H.F.j/u/?id=Bk";["Bj"]="D://H.F.j/u/?id=Bi";["Bh"]="D://H.F.j/u/?id=Bg";["Bf"]="D://H.F.j/u/?id=Be";["Bd"]="D://H.F.j/u/?id=Bc";["Bb"]="D://H.F.j/u/?id=Ba";["6t"]="D://H.F.j/u/?id=B9";["B8"]="D://H.F.j/u/?id=B7";["B6"]="D://H.F.j/u/?id=B5";["B4"]="D://H.F.j/u/?id=B3";["B2"]="D://H.F.j/u/?id=B1";["B0"]="D://H.F.j/u/?id=AZ";["9D"]="D://H.F.j/u/?id=AY";["AX"]="D://H.F.j/u/?id=AW";["6C"]="D://H.F.j/u/?id=AV";["6p"]="D://H.F.j/u/?id=AU";["AT"]="D://H.F.j/u/?id=AS";["AR"]="D://H.F.j/u/?id=AQ";["AP"]="D://H.F.j/u/?id=AO";["8P"]="D://H.F.j/u/?id=AN";["AM"]="D://H.F.j/u/?id=AL";["AK"]="D://H.F.j/u/?id=AJ";["AI"]="D://H.F.j/u/?id=AH";["AG"]="D://H.F.j/u/?id=AF";["AE"]="D://H.F.j/u/?id=AD";["AC"]="D://H.F.j/u/?id=AB";["AA"]="D://H.F.j/u/?id=Az";["Ay"]="D://H.F.j/u/?id=Ax";["Aw"]="D://H.F.j/u/?id=Av";["Au"]="D://H.F.j/u/?id=At";["As"]="D://H.F.j/u/?id=Ar";["Aq"]="D://H.F.j/u/?id=Ap";["Ao"]="D://H.F.j/u/?id=An";["Am"]="D://H.F.j/u/?id=Al";["Ak"]="D://H.F.j/u/?id=Aj";["iG"]="D://H.F.j/u/?id=Ai";["Ah"]="D://H.F.j/u/?id=Ag";["Af"]="D://H.F.j/u/?id=Ae";["Ad"]="D://H.F.j/u/?id=Ac";["Ab"]="D://H.F.j/u/?id=Aa";["A9"]="D://H.F.j/u/?id=A8";["A7"]="D://H.F.j/u/?id=A6";["A5"]="D://H.F.j/u/?id=A4";["A3"]="D://H.F.j/u/?id=A2";["A1"]="D://H.F.j/u/?id=A0";["zZ"]="D://H.F.j/u/?id=zY";["zX"]="D://H.F.j/u/?id=zW";["zV"]="D://H.F.j/u/?id=zU";["zT"]="D://H.F.j/u/?id=zS";["zR"]="D://H.F.j/u/?id=zQ";["zP"]="D://H.F.j/u/?id=zO";["zN"]="D://H.F.j/u/?id=zM";["zL"]="D://H.F.j/u/?id=zK";["zJ"]="D://H.F.j/u/?id=zI";["zH"]="D://H.F.j/u/?id=zG";["zF"]="D://H.F.j/u/?id=zE";["zD"]="D://H.F.j/u/?id=zC";["zB"]="D://H.F.j/u/?id=zA";["zz"]="D://H.F.j/u/?id=zy";["zx"]="D://H.F.j/u/?id=zw";["zv"]="D://H.F.j/u/?id=zu";["zt"]="D://H.F.j/u/?id=zs";["zr"]="D://H.F.j/u/?id=zq";["zp"]="D://H.F.j/u/?id=zo";["zn"]="D://H.F.j/u/?id=zm";["zl"]="D://H.F.j/u/?id=zk";["zj"]="D://H.F.j/u/?id=zh";["zg"]="D://H.F.j/u/?id=zf";["ze"]="D://H.F.j/u/?id=zd";["zc"]="D://H.F.j/u/?id=zb";["z9"]="D://H.F.j/u/?id=z8";["z7"]="D://H.F.j/u/?id=z6";["z5"]="D://H.F.j/u/?id=z4";["z3"]="D://H.F.j/u/?id=z2";["z1"]="D://H.F.j/u/?id=z0";["yZ"]="D://H.F.j/u/?id=yY";["yX"]="D://H.F.j/u/?id=yW";["yV"]="D://H.F.j/u/?id=yU";["yT"]="D://H.F.j/u/?id=yS";["yR"]="D://H.F.j/u/?id=yQ";["yP"]="D://H.F.j/u/?id=yO";["yN"]="D://H.F.j/u/?id=yM";["yL"]="D://H.F.j/u/?id=yK";["yJ"]="D://H.F.j/u/?id=yI";["yH"]="D://H.F.j/u/?id=yG";["yF"]="D://H.F.j/u/?id=yE";["yD"]="D://H.F.j/u/?id=yC";["yB"]="D://H.F.j/u/?id=yA";["yz"]="D://H.F.j/u/?id=yy";["yx"]="D://H.F.j/u/?id=yw";["yv"]="D://H.F.j/u/?id=yu";["yt"]="D://H.F.j/u/?id=ys";["yr"]="D://H.F.j/u/?id=yq";["yp"]="D://H.F.j/u/?id=yo";["yn"]="D://H.F.j/u/?id=ym";["yl"]="D://H.F.j/u/?id=yk";["yj"]="D://H.F.j/u/?id=yi";["yh"]="D://H.F.j/u/?id=yg";["yf"]="D://H.F.j/u/?id=ye";["yd"]="D://H.F.j/u/?id=yc";["yb"]="D://H.F.j/u/?id=y9";["y8"]="D://H.F.j/u/?id=y7";["y6"]="D://H.F.j/u/?id=y5";["y4"]="D://H.F.j/u/?id=y3";["y0"]="D://H.F.j/u/?id=xZ";["xY"]="D://H.F.j/u/?id=xX";["xW"]="D://H.F.j/u/?id=xV";["xU"]="D://H.F.j/u/?id=xT";["xS"]="D://H.F.j/u/?id=xR";["xQ"]="D://H.F.j/u/?id=xP";["xO"]="D://H.F.j/u/?id=xN";["xM"]="D://H.F.j/u/?id=xL";["xK"]="D://H.F.j/u/?id=xJ";["xI"]="D://H.F.j/u/?id=xH";["xG"]="D://H.F.j/u/?id=xF";["xE"]="D://H.F.j/u/?id=xD";["xC"]="D://H.F.j/u/?id=xB";["xA"]="D://H.F.j/u/?id=xz";["xy"]="D://H.F.j/u/?id=xx";["xw"]="D://H.F.j/u/?id=xv";["xu"]="D://H.F.j/u/?id=xt";["xs"]="D://H.F.j/u/?id=xr";["xq"]="D://H.F.j/u/?id=xp";["xo"]="D://H.F.j/u/?id=xn";["c7"]="D://H.F.j/u/?id=xm"}}--xl xk S gE=(bQ 1t bQ.gE)or(D 1t D.gE)or xj or 1N S mS=1f.O(0.3,1a.1g.1i,1a.3E.3R)S jj={["n8 (xi)"]={1h.1l(147,1z,n7),1h.1l(8E,xh,n4),1h.1l(1z,167,6r)},["n8 (xg)"]={1h.1l(117,164,cP),1h.1l(123,8E,8E),1h.1l(fq,138,175)},xf={1h.1l(147,1z,n7),1h.1l(181,cP,xe),1h.1l(xd,158,gD)},xc={1h.1l(n6,157,76),1h.1l(3d,179,81),1h.1l(n5,8E,86)},xb={1h.1l(199,130,n6),1h.1l(9F,130,n5),1h.1l(gD,129,n4)},xa={1h.1l(170,1z,127),1h.1l(163,7h,138),1h.1l(155,185,149)},x9={1h.1l(0,191,143),1h.1l(0,126,94),1h.1l(0,61,46)},x8={1h.1l(148,54,54),1h.1l(168,67,70),1h.1l(188,80,86)},x7={1h.1l(51,156,1z),1h.1l(89,171,x6),1h.1l(127,186,n3)},x5={1h.1l(1z,165,gD),1h.1l(x4,129,x3),1h.1l(170,92,n3)},}S W dq(5c,aY)if aY=="cG"V 1L"5J://"..5c 3l aY=="8X"V--x0 wZ to n2 wY:)S n1=1F 4m 1t 3s:iV("fg://j1.j0.j/n2-wX/wW-F/iZ/iY/wV/wU/dY.wT")S n0=4m 1t dV.8X or wS(n1)()if 1F 4m V 5c=2M.7T(2M.bF(5c),"^%s*(.*)%s*$")::2M S mZ=n0[\'wR\']S r=mZ[5c]if 1F r V 7u("8X dY: j9 to 9w 5c by 2K 2X of \\""..5c.."\\.",2)J S dX=r[2]S dW=r[3]if 3v(r[1])~="hv"or 3v(dX)~="2U"or 3v(dW)~="2U"V 7u("8X dY: wQ 7u: jc fu-wP u wO")J S mY=3f.O(dX[1],dX[2])S mX=3f.O(dW[1],dW[2])S u={id=r[1],wN=mY,wM=mX,}1L u 1V 1L"5J://wL"J 1V if 5c~=1N 1t dV[aY]V S mW=dV[aY]1L mW[5c]1V 1L 1N J J J S W fy(gC,3y)1Y i,v in 2J(gC)do if 27(v)==27(3y)V 2U.8P(gC,i)J J J S W 2P(mV,dU)1Y i,v in 2J(mV)do if dU[i]==1N V dU[i]=v J J 1L dU J S W mr(1M)1L{R=1M.R*1z,G=1M.G*1z,B=1M.B*1z}J S W mv(1M)1L 1h.1l(1M.R,1M.G,1M.B)J W 1E(mU,mR,cu,mT)S 1E=1e:1d(mU,mT or mS,mR)1E.wK:1D(cu or W()J)1E:1c()J S W ga(2x)S 5B=3s:3V(\'5B\')S 7q=mQ.fa S mM="wJ"S gx={}S gv=2a.O(\'5n\',7q)gv.1j=\'wI\'S mP=wH S mO=1R.f5(1,mP)S aX=2a.O(\'wG\',3s:3V(\'wF\'))aX.wE=0 aX.wD=51.6 aX.wC=50 aX.wB=6 aX.1j="wA"..mO S 5x=2a.O(\'2x\')5x.2c=2x 5x.1B=1u.O(0.95,0,0.95,0)5x.1X=1u.O(0.5,0,0.5,0)5x.ci=3f.O(0.5,0.5)5x.1n=1 S gw;do--wz wy wx 1Y bg ww S id=0 W gw()id=id+1 1L\'wv::\'..27(id)J J do S W gB(x)1L x==x J S 5N=gB(7q:aV(0,0).aU.x)bh 1F 5N do 5B.bg:2l()5N=gB(7q:aV(0,0).aU.x)J J S gu;do S bT,b0,pi,cE=1R.bT,1R.b0,1R.pi,1R.cE S sz=0.22 S W gy(v1,v2,v3,p0,p1)--I wu wt ws aF W S s1=(v1-v2).8Y S s2=(v2-v3).8Y S s3=(v3-v1).8Y S dT=b0(s1,s2,s3)S A,B,C if s1==dT V A,B,C=v1,v2,v3 3l s2==dT V A,B,C=v2,v3,v1 3l s3==dT V A,B,C=v3,v1,v2 J S 5M=((B-A).x*(C-A).x+(B-A).y*(C-A).y+(B-A).z*(C-A).z)/(A-B).8Y S bS=cE((C-A).8Y^2-5M*5M)S dR=(A-B).8Y-5M S st=5A.O(B,A)S za=5A.bU(pi/2,0,0)S 7O=st S dS=(7O*za).bV S mN=A+5A.O(A,B).bV*5M S aW=5A.O(mN,C).bV S bu=dS.x*aW.x+dS.y*aW.y+dS.z*aW.z S ac=5A.bU(0,0,bT(bu))7O=7O*ac if((7O*za).bV-aW).8Y>0.dp V 7O=7O*5A.bU(0,0,-2*bT(bu))J 7O=7O*5A.O(0,bS/2,-(dR+5M/2))S 9P=st*ac*5A.bU(0,pi,0)if((9P*za).bV-aW).8Y>0.dp V 9P=9P*5A.bU(0,0,2*bT(bu))J 9P=9P*5A.O(0,bS/2,dR/2)if 1F p0 V p0=2a.O(\'wr\')p0.wq=\'cG\'p0.wo=0 p0.wn=0 p0.wm=1v p0.wl=1p p0.wk=1p p0.4l=mM p0.1B=6y.O(sz,sz,sz)S gA=2a.O(\'wj\',p0)gA.wi=2 gA.1j=\'gz\'J p0.gz.4y=6y.O(0,bS/sz,5M/sz)p0.5A=7O if 1F p1 V p1=p0:wh()J p1.gz.4y=6y.O(0,bS/sz,dR/sz)p1.5A=9P 1L p0,p1 J W gu(v1,v2,v3,v4,68)68[1],68[2]=gy(v1,v2,v3,68[1],68[2])68[3],68[4]=gy(v3,v2,v4,68[3],68[4])J J if gx[5x]V 1L gx[5x].68 J S mF=gw()S 68={}S f=2a.O(\'5n\',gv)f.1j=5x.1j S dP={}do S W 9D(dQ)if dQ:7c\'wg\'V dP[#dP+1]=dQ 9D(dQ.2c)J J 9D(5x)J S W gt(mJ)S mI={1O=0.98;mL=mL.O(\'wf we\')}S bR=1-0.6A*5x.3w S tl,br=5x.3n,5x.3n+5x.2I S tr,bl=3f.O(br.x,tl.y),3f.O(tl.x,br.y)do S 9O=0;1Y 2R,v in 4p(dP)do 9O=9O+v.aA J if 9O~=0 1t 9O%180~=0 V S 4t=tl:iL(br,0.5)S s,c=1R.f6(1R.mK(9O)),1R.iF(1R.mK(9O))S wd=tl tl=3f.O(c*(tl.x-4t.x)-s*(tl.y-4t.y),s*(tl.x-4t.x)+c*(tl.y-4t.y))+4t tr=3f.O(c*(tr.x-4t.x)-s*(tr.y-4t.y),s*(tr.x-4t.x)+c*(tr.y-4t.y))+4t bl=3f.O(c*(bl.x-4t.x)-s*(bl.y-4t.y),s*(bl.x-4t.x)+c*(bl.y-4t.y))+4t br=3f.O(c*(br.x-4t.x)-s*(br.y-4t.y),s*(br.x-4t.x)+c*(br.y-4t.y))+4t J J gu(7q:aV(tl.x,tl.y,bR).aU,7q:aV(tr.x,tr.y,bR).aU,7q:aV(bl.x,bl.y,bR).aU,7q:aV(br.x,br.y,bR).aU,68)if mJ V 1Y 2R,pt in 2J(68)do pt.2c=f J 1Y mH,mG in 2J(mI)do 1Y 2R,pt in 2J(68)do pt[mH]=mG J J J J gt(1v)5B:wb(mF,ed,gt)J S W 9B(mE:2U)S 6g=""S i=0 1Y 2R,v in 2J(mE)do if i<3 V 6g=6g..v..", "i+=1 1V 6g="wa"8r J J 1L 6g J--2w w9 S 2N if 4m V 2N=gb.2c:w8("1C UI")1V S ok,gs=2e(W()1L 3s:cb("5J://w7")[1]J)if ok 1t gs V 2N=gs 1V 7u("[9e] 2s al w6 1C UI. w5 cj tu w4 w3 3s:cb.")J J S gd=1N S W gq(2i,91,mD)gd=2i.1B 91=2M.cZ(27(91),"1a.3Q.")91=91[2]if mD V 1C:4b({1o="2w w2",4L="3S mC jm w1 w0, fr vZ vY 2K mC by vX 2K UI 1m In 2Q ("..27(91)..")",3o="mB"})J--mj al cy 2e(W()S 6Q=2a.O("mh")6Q.mg="D://H.F.j/u/?id=cH"6Q.me=0.6 6Q.2c=3s:3V("md")6Q:1c()3s:3V("mc"):mb(6Q,3)J)1E(2i,{1n=1})1E(2i.2f,{1n=1})1E(2i.4n,{1n=1})1E(2i.1o.1o,{1Z=1})S gr=2i.1o:59("9J")or 1q:59("9J")if gr V gr.1I=1p J 1E(2i.1o.dC,{1Z=1})1E(2i.6o,{3U=1})1E(2i.37.4n,{1n=1})1Y 2R,4z in 4p(2i.4r:3P())do if 4z.5l=="2x"V 1E(4z,{1n=1})1E(4z.1A,{1O=1})1E(4z.3r,{3U=1})4z.1I=1p J J 1Y 2R,5G in 4p(2i.37.31:3P())do if 5G.5l=="2x"1t 5G.1j~="9G 2t"V 1e:1d(5G,1f.O(0.3,1a.1g.1i),{1n=1}):1c()1e:1d(5G.3r,1f.O(0.3,1a.1g.1i),{3U=1}):1c()1e:1d(5G.m9.m8,1f.O(0.3,1a.1g.1i),{3U=1}):1c()1e:1d(5G.1A,1f.O(0.3,1a.1g.1i),{1O=1}):1c()J J 3u.2l(0.28)2i.1B=1u.O(0,0,0,0)2i.2c.7L.1I=1p 3u.2l()2i.2f.2c.1I=1p 2i.1I=1p J if aR V 2N.2c=aR()3l bQ 1t bQ.mA V bQ.mA(2N)2N.2c=83 3l 1F 4m 1t 83:59("mz")V 2N.2c=83:59("mz")3l 1F 4m V 2N.2c=83 J if aR V 1Y 2R,2w in 4p(aR():3P())do if 2w.1j==2N.1j 1t 2w~=2N V gq(2w.bN)2w.4d=1p 2w.1j="1C-mw"J J 3l 1F 4m V 1Y 2R,2w in 4p(83:3P())do if 2w.1j==2N.1j 1t 2w~=2N V gq(2w.bN)2w.4d=1p 2w.1j="1C-mw"J J J 2N.4d=1p 2N.bN.1I=1p 2N.7r.2t.1I=1p 2N.eP=fU S 1q:2x=2N.bN S fW=1q.ad S 5m=2N.ad S fV=5m 1t 5m.4q or 1N S bO=5m 1t 5m.ad or 1N S 2f=1q.2f.vW S 3L=1q.3L S 37=1q.37 S 31=37.31 S 7r=2N.7r S 9q:2x=1q.9q--S W gl(9N,4s)--S 7K=6b:ea(9N)--S 8O--S dO=1p-- --vV ln 9A UI vU\'vT--1Y gp,2b in 2J(1C.5p)do--S bP=7K[gp]--if bP V--3u.bd(W()--if 2b.aZ=="1T"V--8O=1v--2b:2q(mv(bP))--1V--if(2b.1Q or 2b.vS or 2b.1K or 2b.1M)~=bP V--8O=1v--2b:2q(bP)--J--J--J)--1V--dO=1v--1C:4b({1o="4A 2s",4L="1C c5 m7 to am or 9w \'"..gp.."\'\' in 2K 9A gb. 9h "..bX.." 1Y vR.",3o="6C"})--J--J--if 4s 1t dO==1p V--1C:4b({--1o="4A vQ",--4L="3S 9N c3 mu vP cT. mt bZ 9T bY 1C 9U",--3o="5C-gn-2",--4a="8X"--})--3l dO==1p V--1C:4b({--1o="4A cT",--4L="3S 9N c3 mu cT. mt bZ 9T bY 1C 9U",--3o="5C-gn-2",--4a="8X"--})--J--1L 8O--J--S W vO(9N,43,6R)--S 7K={}--1Y i,v in 2J(1C.5p)do--if v.aZ=="1T"V--7K[i]=mr(v.1M)--1V--7K[i]=v.1Q or v.3i or v.1K or v.1M--J--J--if 6R V--7d(4Y.."/"..6R.."/"..43.."/"..9N..dN,27(6b:ce(7K)))--1V--7d(4Y.."/".."/"..43..9N..dN,27(6b:ce(7K)))--J--J--S W vN(gm,43,6R)--if 6R V--7d(4Y.."/"..6R.."/"..43.."/".."4s.5L",27(gm)..dN)--1V--7d(4Y.."/".."/"..43.."4s.5L",27(gm)..dN)--J--J--S W m1(43,6R)--S 4s=7S(4Y.."/".."/"..43.."4s.5L")--if 6R V--4s=7S(4Y.."/"..6R.."/"..43.."/".."4s.5L")--J--if 4s V--if 6R V--gl(7U(4Y.."/"..6R.."/"..43.."/"..7U(4Y.."/"..6R.."/"..43.."/".."4s.5L")),1v)--1V--gl(7U(4Y.."/"..43.."/"..7U(4Y.."/"..43.."/".."4s.5L")),1v)--J--J--J S W 9I(gj,2i,dM,vM)2e(W()S aT,gi,gh,7N S W gk()if 5m 1t dM V 5m.3Y:1D(W()if 1F aT V 1e:1d(bO,1f.O(0.25,1a.1g.7I,1a.3E.3R),{1n=0.5,1B=1u.O(0,120,0,4)}):1c()J J)5m.3X:1D(W()if 1F aT V 1e:1d(bO,1f.O(0.25,1a.1g.7I,1a.3E.3R),{1n=0.7,1B=1u.O(0,100,0,4)}):1c()J J)J J gk()gj.7f:1D(W(1w)if 1w.2r==1a.2r.6u or 1w.2r==1a.2r.5h V aT=1v gh=1w.1X 7N=2i.1X if dM V 1e:1d(bO,1f.O(0.35,1a.1g.7I,1a.3E.3R),{1B=1u.O(0,110,0,4),1n=0}):1c()J 1w.bJ:1D(W()if 1w.9E==1a.9E.lK V aT=1p gk()if dM V 1e:1d(bO,1f.O(0.35,1a.1g.7I,1a.3E.3R),{1B=1u.O(0,100,0,4),1n=0.7}):1c()J J J)J J)gj.a9:1D(W(1w)if 1w.2r==1a.2r.ct or 1w.2r==1a.2r.5h V gi=1w J J)6n.a9:1D(W(1w)if 1w==gi 1t aT V S 9m=1w.1X-gh S mq=1u.O(7N.X.4y,7N.X.3O+9m.X,7N.Y.4y,7N.Y.3O+9m.Y)1e:1d(2i,1f.O(0.35,1a.1g.1i,1a.3E.3R),{1X=mq}):1c()if 5m V S mo=1u.O(7N.X.4y,7N.X.3O+9m.X,7N.Y.4y,7N.Y.3O+9m.Y+3d)5m.1X=mo J J J)J)J W 1C:4b(2C)--vL e.g vK vJ 3u.bd(W()2C=2P({1o="mn 1o",4L="mn or d0 4L",3o="fL",4a="4l"},2C or{})--4b vI vH S 2W=7r.2t:2O()2W.1j=2C.1o 2W.2c=7r 2W.7V=#7r:3P()2W.1I=1p ga(2W)--2q 7K 2W.1o.1b=2C.1o 2W.1y.1b=2C.4L 2W.3o.4c=dq(2C.3o,2C.4a)--2q mm b5 ml 2W.1n=1 2W.1o.1Z=1 2W.1y.1Z=1 2W.1A.1O=1 2W.ge.3U=1 2W.3o.3U=1 2W.3o.1n=1 3u.2l()--vG vF 1t vE mm ml 2W.1B=1u.O(1,0,0,-7r:59("bo").cw.3O)2W.3o.1B=1u.O(0,28,0,28)2W.3o.1X=1u.O(0,16,0.5,-1)2W.1I=1v 2W.1y.1B=1u.O(1,-65,0,1R.8y)S gf=2W.1y.4i.Y+55 2W.1y.1B=1u.O(1,-65,0,gf-35)2W.1B=1u.O(1,0,0,-7r:59("bo").cw.3O)1e:1d(2W,1f.O(0.6,1a.1g.1i),{1B=1u.O(1,0,0,gf)}):1c()3u.2l(0.15)1e:1d(2W,1f.O(0.4,1a.1g.1i),{1n=0.45}):1c()1e:1d(2W.1o,1f.O(0.3,1a.1g.1i),{1Z=0}):1c()3u.2l(0.6A)1e:1d(2W.3o,1f.O(0.3,1a.1g.1i),{3U=0}):1c()3u.2l(0.6A)1e:1d(2W.1y,1f.O(0.3,1a.1g.1i),{1Z=0.35}):1c()1e:1d(2W.1A,1f.O(0.4,1a.1g.1i),{1O=0.95}):1c()1e:1d(2W.ge,1f.O(0.3,1a.1g.1i),{3U=0.82}):1c()S mk=1R.vD(1R.b0((#2W.1y.1b*0.1)+2.5,3),10)3u.2l(2C.vC or mk)2W.3o.1I=1p 1e:1d(2W,1f.O(0.4,1a.1g.1i),{1n=1}):1c()1e:1d(2W.1A,1f.O(0.4,1a.1g.1i),{1O=1}):1c()1e:1d(2W.ge,1f.O(0.3,1a.1g.1i),{3U=1}):1c()1e:1d(2W.1o,1f.O(0.3,1a.1g.1i),{1Z=1}):1c()1e:1d(2W.1y,1f.O(0.3,1a.1g.1i),{1Z=1}):1c()1e:1d(2W,1f.O(1,1a.1g.1i),{1B=1u.O(1,-90,0,0)}):1c()3u.2l(1)1e:1d(2W,1f.O(1,1a.1g.1i),{1B=1u.O(1,-90,0,-7r:59("bo").cw.3O)}):1c()2W.1I=1p 2W:2A()J)J S W fh(2i,ma)--mj al i7 2e(W()S 6Q=2a.O("mh")6Q.mg="D://H.F.j/u/?id=mf"6Q.me=0.6 6Q.2c=3s:3V("md")6Q:1c()3s:3V("mc"):mb(6Q,3)J)2i.1B=gd 2i.2f.1I=1v 2i.1I=1v 3u.2l()1E(2i,{1n=0.2})1E(2i.2f,{1n=0.vB})1E(2i.4n,{1n=0})1E(2i.1o.1o,{1Z=0})S gc=2i.1o:59("9J")or 1q:59("9J")if gc V gc.1I=1v J 1E(2i.1o.dC,{1Z=0})1E(2i.6o,{3U=0})1E(2i.37.4n,{1n=0})1Y 2R,4z in 4p(2i.4r:3P())do if 4z.5l=="2x"1t 4z.1j~="9s"V 4z.1I=1v 1E(4z,{1n=0.25})1E(4z.1A,{1O=0.5})1E(4z.3r,{3U=0.25})J J 1Y 2R,5G in 4p(2i.37.31:3P())do if 5G.5l=="2x"1t 5G.1j~="9G 2t"V if 5G.1j==ma V 1e:1d(5G,1f.O(0.3,1a.1g.1i),{1n=0}):1c()1e:1d(5G.1A,1f.O(0.3,1a.1g.1i),{1O=0.41}):1c()J 1e:1d(5G.3r,1f.O(0.3,1a.1g.1i),{3U=0}):1c()1e:1d(5G.m9.m8,1f.O(0.3,1a.1g.1i),{3U=1}):1c()J J J S 9K S dL if aS.8c.X>vA 1t aS.8c.Y>vz V 9K=1u.4f(vy,vx)dL=1u.4f(ib,42)1V 9K=1u.4f(aS.8c.X-100,aS.8c.Y-100)dL=1u.4f(aS.8c.X-vw,42)J S W j3(2i)2i.4r.9u.3r.4c="5J://g7"1E(2i,{1B=9K})2i.2f.1I=1v 2i.37.1I=1v J S W j4(2i)2i.4r.9u.3r.4c="5J://lP"2i.2f.1I=1p 2i.37.1I=1p 1E(2i,{1B=dL})--vv se hL al g5(no se vu)J W 1C:e3(2y)2y=2P({1j="1C UI vt 2i",3W="",ff="cH",c8=1v,fe="1C 2w 3j",fd="by c6 b3",4h={},9q=1p,3z={}},2y or{})2y.4h=2P({6D=1N,43="vs lU"},2y.4h or{})2y.3z=2P({1o=2y.1j,3W="3C cJ",5P="No vr",m0=1p,--vq dK 6p 2K 5d in 8f 6D(vo vn lB vm vl vk e4 vj)fc=1v,--3S ls\'s 5d dK be jr,vi if fr vh 2K 5d,lA dK be m7 to m6 8f gb 3C={""},--3J of bz 71 dK be vg by 2K 6s,vf m6 a 6s c0 ve or vd 71 vc 5d fz fw on 8f vb lk va a v9 2M is v8 v7 to v6 8A={}},2y.3z or{})2y.3z.8A=2P({4d=1p,aZ="79",--g2/79 ak=""--1Y dB,9D 2K fT 6t c0 m5 m4.1Y 6t,3v 2K 6t of ur 5d v5},2y.3z.8A)S 8m=1p S 2i={1m=1a.3Q.K,bA=1N,8B=1v,1B=1p,2Q=1N}1q.1o.1o.1b=2y.1j 1q.1o.dC.1b=2y.3W--v0 m3"9e"9b 8q de uZ 9b e7 if 2y.1j=="9e"V 1q.1o.1o.1Z=1--uY 9J m2 4M m3 4M tíia--Se uX en 1q g4 5M lY bo de 1q.1o S 77=2a.O("3r",1q)77.1j="9J"77.1B=1u.O(0,130,0,28)--1q.1o uW la uV i6;uU m2 4M uT(~uS eh uR,uQ uP en~uO de uN)77.1X=1u.O(0,88,0,11)77.ci=3f.O(0,0)77.1n=1 77.4c="5J://uM"77.ch=1a.ch.uL 77.3U=0 77.3w=20 77.1I=1v J 1q.6o.4c="5J://"..2y.ff 1q.1I=1v 1q.1n=1 1q.1B=9K 1q.1B=1u.4f(1q.1B.X.3O-70,1q.1B.Y.3O-55)1q.2c.7L.1B=1q.1B 3L.2x.2x.1o.1Z=1 3L.2x.2x.3W.1Z=1 3L.dD.1Z=1 3L.2x.3r.3U=1 1E(2f.2c,{1n=1})2f.2c.1I=1p 3L.2x.2x.1o.1b=2y.fe 3L.2x.2x.3W.1b=2y.fd 3L.dD.1b=""37.5H.5c.3r.4c=3h:lx(3h.5w.fP,1a.lw.lv,1a.lu.uK)37.5H.uJ.1b=3h.5w.lt 37.5H.4g.1b=3h.5w.1j 1Y i,v in 2J(1q.4r:3P())do v.1I=1p J 1q.2c.7L.1I=1p 1q.2c.7L.1I=1p 1q:5b("1X"):1D(W()1q.2c.7L.1X=1q.1X J)1q:5b("1B"):1D(W()1q.2c.7L.1B=1q.1B J)3L.1I=1v--2e(W()--if 1F 9d(4Y)V--9c(4Y)--J--if 2y.4h.6D V--if 1F 9d(4Y..2y.4h.6D)V--9c(4Y..2y.4h.6D)--if 1F 9d(4Y..2y.4h.6D..2y.4h.43)V--9c(4Y..2y.4h.6D..2y.4h.43)--J--J--1V--if 1F 9d(4Y..2y.4h.43)V--9c(4Y..2y.4h.43)--J--J--m1(2y.4h.43,2y.4h.6D)--J)--2N hx se e5 uIés de lZ la 5d if 1F 2y.9q V 2N.4d=1v J ga(1q)if 2y.9q V S 3z=2y.3z--1C UI uH uG uF cj la 5d uE válV 1q.1I=1p 3L.1I=1p 2N.4d=1p 2e(W()2N.bN.1I=1p S sh=2N:59("7L")if sh V sh.1I=1p sh.1n=1 1Y 2R,c in 4p(sh:uD())do if c:7c("3r")or c:7c("2x")V 2e(W()c.1I=1p J)J J J J)9I(fW,1q)9I(2N.9r,2N.9r)if 5m V 9I(fV,1q,1v,1z)J if 1F 2y.3z V 8m=1v 1L J 2y.3z.9p="5d"if uC(2y.3z.3C)=="2M"V 2y.3z.3C={2y.3z.3C}J S 8U=2y.3z.m0 1t"1C/fv/"..2y.4h.6D.."/"..2y.4h.43.."/3C cJ/"or"1C/fv/"..2y.4h.43.."/3C cJ/"if 7S 1t 7S(8U..2y.3z.9p..".8e")V S lX=7U(8U..2y.3z.9p..".8e")S g9=1p--uB lZ si uA bz iX uz(lY lW si uy de ux)if#2y.3z.3C>0 V 1Y i,3C in 4p(2y.3z.3C)do if lX==3C V g9=1v 8m=1v 8r J J--3C cf ya no ij en iW→lW y uw de lF if 1F g9 V 2e(7d,8U..2y.3z.9p..".8e","")2e(jo,8U..2y.3z.9p..".8e")J 1V--lT uvón:uu us 9b la 5d cf 8m=1v J J--Si la 5d ya uq cf y válV,up la UI g4 if 8m V 2N.4d=1v 1q.1I=1v 1q.1n=1 3L.1I=1v 3L.1n=0 2e(W()1q.2c.1I=1v J)2e(W()1q.2c.7L.1I=1v J)J if 1F 8m V--UI uo lS lR lU S 5X=2a.O("ii")5X.1j="un"5X.ig=1p 5X.eP=um 5X.ie=1v if aR V 5X.2c=aR()1V 2e(W()5X.2c=3s:3V("83")J)if 1F 5X.2c or 1F 5X.2c:7c("2a")V 5X.2c=3h.5w.bc J J--lT ul--3B uk lS lR S 3B=2a.O("2x",5X)3B.1B=1u.O(0,g8,0,lQ)3B.1X=1u.O(0.5,0,0.5,0)3B.ci=3f.O(0.5,0.5)3B.eb=1v 3B.1W=1h.1l(22,20,36)3B.1n=0 3B.3N=0 3B.3w=2 2a.O("4x",3B).4w=4e.O(0,14)S dJ=2a.O("1A",3B)dJ.1M=1h.1l(60,55,100)dJ.7m=1 dJ.1O=0.4--74:6o+uj+ui S 74=2a.O("2x",3B)74.1B=1u.O(1,0,0,60)74.1X=1u.O(0,0,0,0)74.1n=1 74.3w=3 S 6o=2a.O("3r",74)6o.1B=1u.O(0,36,0,36)6o.1X=1u.O(0,14,0.5,-18)6o.1n=1 6o.4c="5J://iS"6o.3w=3 2a.O("4x",6o).4w=4e.O(0,8)S 1o=2a.O("4g",74)1o.1B=1u.O(1,-110,0,20)1o.1X=1u.O(0,58,0,12)1o.1n=1 1o.1b=2y.3z.1o 1o.2S=1h.1l(1z,1z,1z)1o.3g=1a.3g.6f 1o.4O=15 1o.5i=1a.5i.bm 1o.3w=3 S 3W=2a.O("4g",74)3W.1B=1u.O(1,-110,0,16)3W.1X=1u.O(0,58,0,34)3W.1n=1 3W.1b=2y.3z.3W 3W.2S=1h.1l(130,120,170)3W.3g=1a.3g.bn 3W.4O=11 3W.5i=1a.5i.bm 3W.3w=3--7Xón g5(8q 1C UI)S 8W=2a.O("2x",3B)8W.1B=1u.O(0,28,0,28)8W.1X=1u.O(1,-72,0,14)8W.1W=1h.1l(40,36,60)8W.3N=0 8W.3w=6 2a.O("4x",8W).4w=4e.O(0,7)S 66=2a.O("lM",8W)66.1B=1u.O(0,16,0,16)66.1X=1u.O(0.5,-8,0.5,-8)66.1n=1 66.4c="D://H.F.j/u/?id=g7"66.3I=1h.1l(195,195,195)66.3w=7 S dI=1p S lN=1u.O(0,g8,0,lQ)S lO=1u.O(0,g8,0,58)S 7M={}66.3Y:1D(W()1e:1d(66,1f.O(0.15),{3I=1h.O(1,1,1)}):1c()J)66.3X:1D(W()1e:1d(66,1f.O(0.15),{3I=1h.1l(195,195,195)}):1c()J)66.3G:1D(W()dI=1F dI if dI V 66.4c="D://H.F.j/u/?id=lP"1e:1d(3B,1f.O(0.3,1a.1g.1i),{1B=lO}):1c()3u.2l(0.15)1Y 2R,c in 4p(7M)do c.1I=1p J 1V 66.4c="D://H.F.j/u/?id=g7"1Y 2R,c in 4p(7M)do c.1I=1v J 1e:1d(3B,1f.O(0.3,1a.1g.7I,1a.3E.3R),{1B=lN}):1c()J J)--7Xón cy(8q 1C UI)S 8V=2a.O("2x",3B)8V.1B=1u.O(0,28,0,28)8V.1X=1u.O(1,-38,0,14)8V.1W=1h.1l(40,36,60)8V.3N=0 8V.3w=6 2a.O("4x",8V).4w=4e.O(0,7)S 6P=2a.O("lM",8V)6P.1B=1u.O(0,16,0,16)6P.1X=1u.O(0.5,-8,0.5,-8)6P.1n=1 6P.4c="D://H.F.j/u/?id=lL"6P.3I=1h.1l(195,195,195)6P.3w=7 S lJ=6P 6P.3Y:1D(W()1e:1d(6P,1f.O(0.15),{3I=1h.O(1,1,1)}):1c()J)6P.3X:1D(W()1e:1d(6P,1f.O(0.15),{3I=1h.1l(195,195,195)}):1c()J)--uh S 9L=2a.O("2x",3B)9L.1B=1u.O(1,-28,0,1)9L.1X=1u.O(0,14,0,62)9L.1W=1h.1l(50,45,80)9L.3N=0 9L.3w=3--1w S 2j=2a.O("2x",3B)2j.1B=1u.O(1,-28,0,38)2j.1X=1u.O(0,14,0,76)2j.1W=1h.1l(15,13,26)2j.3N=0 2j.3w=3 2a.O("4x",2j).4w=4e.O(0,8)S dH=2a.O("1A",2j)dH.1M=1h.1l(60,55,100)dH.7m=1 dH.1O=0.4 S 9M=2a.O("4g",2j)9M.1B=1u.O(0,28,1,0)9M.1X=1u.O(0,8,0,0)9M.1n=1 9M.1b="🔑"9M.4O=14 9M.3w=4 S 1U=2a.O("ug",2j)1U.1B=1u.O(1,-44,1,0)1U.1X=1u.O(0,38,0,0)1U.1n=1 1U.3b="7P 3C l6..."1U.uf=1h.1l(90,80,125)1U.1b=""1U.2S=1h.1l(7h,ue,1z)1U.3g=1a.3g.bn 1U.4O=13 1U.ud=1p 1U.5i=1a.5i.bm 1U.3w=4--uc g3 3C/g1 3C S 63=2a.O("8s",3B)63.1B=1u.O(0.48,-7,0,36)63.1X=1u.O(0,14,0,126)63.1W=1h.1l(28,25,45)63.1b="🔗  g3 3C"63.2S=1h.1l(3t,195,g6)63.3g=1a.3g.6f 63.4O=13 63.3N=0 63.3w=3 2a.O("4x",63).4w=4e.O(0,8)S dG=2a.O("1A",63)dG.1M=1h.1l(70,60,110)dG.7m=1 dG.1O=0.4 S 5Y=2a.O("8s",3B)5Y.1B=1u.O(0.48,-7,0,36)5Y.1X=1u.O(0.52,-7,0,126)5Y.1W=1h.1l(28,25,45)5Y.1b="✔  g1 3C"5Y.2S=1h.1l(3t,195,g6)5Y.3g=1a.3g.6f 5Y.4O=13 5Y.3N=0 5Y.3w=3 2a.O("4x",5Y).4w=4e.O(0,8)S dF=2a.O("1A",5Y)dF.1M=1h.1l(70,60,110)dF.7m=1 dF.1O=0.4--ub S 5P=2a.O("4g",3B)5P.1B=1u.O(1,-28,0,16)5P.1X=1u.O(0,14,0,174)5P.1n=1 5P.1b=2y.3z.5P 5P.2S=1h.1l(100,90,140)5P.3g=1a.3g.bn 5P.4O=11 5P.5i=1a.5i.eM 5P.3w=3--7Xón 79 S 5Z=2a.O("8s",3B)5Z.1B=1u.O(1,-28,0,36)5Z.1X=1u.O(0,14,0,198)5Z.1W=1h.1l(22,19,38)5Z.1b="👑  ua u9 79"5Z.2S=1h.1l(3t,195,g6)5Z.3g=1a.3g.6f 5Z.4O=13 5Z.3N=0 5Z.3w=3 2a.O("4x",5Z).4w=4e.O(0,8)S dE=2a.O("1A",5Z)dE.1M=1h.1l(70,60,110)dE.7m=1 dE.1O=0.4--u8 bi S 4Q=2a.O("4g",3B)4Q.1B=1u.O(1,-28,0,16)4Q.1X=1u.O(0,14,0,u7)4Q.1n=1 4Q.1b=""4Q.3g=1a.3g.6f 4Q.4O=11 4Q.5i=1a.5i.eM 4Q.3w=3--u6 iK de hy a hc al g5 2U.5j(7M,9L)2U.5j(7M,2j)2U.5j(7M,63)2U.5j(7M,5Y)2U.5j(7M,5P)2U.5j(7M,5Z)2U.5j(7M,4Q)--ad(u5 74 g4,f6 u4 u3)S 8v=1p S ah,7l 74.7f:1D(W(39)if 39.2r==1a.2r.6u or 39.2r==1a.2r.5h V 8v=1v ah=39.1X 7l=3B.1X 39.bJ:1D(W()if 39.9E==1a.9E.lK V 8v=1p J J)J J)3s:3V("6n").a9:1D(W(39)if 8v 1t(39.2r==1a.2r.ct or 39.2r==1a.2r.5h)V S ag=39.1X-ah 3B.1X=1u.O(7l.X.4y,7l.X.3O+ag.X,7l.Y.4y,7l.Y.3O+ag.Y)J J)--7Xón cy lJ.3G:1D(W()5X:2A()1C:2A()J)--g3 3C 63.3G:1D(W()S 6t=3z.8A.ak~=""1t 3z.8A.ak or"dB.gg/cK"2e(lI,6t)4Q.2S=1h.1l(100,3t,1z)4Q.1b="✔ g2 lH al lG!"J)5Z.3G:1D(W()S 6t=3z.8A.ak~=""1t 3z.8A.ak or"dB.gg/cK"2e(lI,6t)4Q.2S=1h.1l(100,3t,1z)4Q.1b="✔ g2 lH al lG!"J)--g1 3C 5Y.3G:1D(W()S g0=1U.1b if g0==""V 1L J S fZ=1p S fY=""1Y 2R,3C in 4p(2y.3z.3C)do if g0==3C V fZ=1v fY=3C 8r J J if fZ V 4Q.2S=1h.1l(100,1z,150)4Q.1b="✔ 3C u2! u1..."3u.2l(0.4)if 2y.3z.fc 1t 7d V 2e(W()if 1F 9d(8U)V 9c(8U)J 7d(8U..2y.3z.9p..".8e",fY)J)J 5X:2A()8m=1v 2N.4d=1v 1q.1I=1v 1q.1n=1 3L.1I=1v 3L.1n=0 2e(W()1q.2c.1I=1v J)2e(W()1q.2c.7L.1I=1v J)1V 4Q.2S=1h.1l(1z,80,80)4Q.1b="✖ 3C u0. tZ de lF."3u.2l(2)4Q.1b=""J J)fX 3u.2l(0.6A)lE 8m or 1F 5X.2c J J if 2y.9q V fX 3u.2l()lE 8m J if 2y.c8 V 3u.2l(0.3)1e:1d(3L.2x.2x.1o,1f.O(0.7,1a.1g.1i),{1Z=0}):1c()1e:1d(3L.2x.3r,1f.O(0.3,1a.1g.1i),{3U=0}):1c()3u.2l(0.6A)1e:1d(3L.2x.2x.3W,1f.O(0.7,1a.1g.1i),{1Z=0}):1c()1e:1d(3L.dD,1f.O(0.7,1a.1g.1i),{1Z=0}):1c()3u.2l(0.29)1e:1d(3L.2x.3r,1f.O(1.7,1a.1g.7I,1a.3E.3R,2,1p,0.2),{aA=tY}):1c()3u.2l(3.32)1e:1d(3L.2x.2x.1o,1f.O(0.7,1a.1g.1i),{1Z=1}):1c()1e:1d(3L.2x.3r,1f.O(0.3,1a.1g.1i),{3U=1}):1c()3u.2l(0.6A)1e:1d(3L.2x.2x.3W,1f.O(0.7,1a.1g.1i),{1Z=1}):1c()1e:1d(3L.dD,1f.O(0.7,1a.1g.1i),{1Z=1}):1c()2l(0.3)1e:1d(3L,1f.O(0.5,1a.1g.1i,1a.3E.3R),{1n=1}):1c()J 1e:1d(1q,1f.O(0.5,1a.1g.1i,1a.3E.3R),{1n=0.2,1B=9K}):1c()1e:1d(1q.2c.7L,1f.O(0.5,1a.1g.1i,1a.3E.3R),{1B=9K}):1c()if 1F 1q.1o:59("9J")V 1e:1d(1q.1o.1o,1f.O(0.35,1a.1g.1i,1a.3E.3R),{1Z=0}):1c()J 1e:1d(1q.1o.dC,1f.O(0.35,1a.1g.1i,1a.3E.3R),{1Z=0}):1c()1e:1d(1q.6o,1f.O(0.35,1a.1g.1i,1a.3E.3R),{3U=0}):1c()1e:1d(37.5H.5c.3r,1f.O(0.35,1a.1g.1i,1a.3E.3R),{3U=0}):1c()1e:1d(37.5H.5c.1A,1f.O(0.35,1a.1g.1i,1a.3E.3R),{1O=0}):1c()1e:1d(1q.4n,1f.O(0.35,1a.1g.1i,1a.3E.3R),{1n=0}):1c()2l(0.4)3L.1I=1p 9I(fW,1q)9I(2N.9r,2N.9r)if 5m V 9I(fV,1q,1v,1z)J 2f.2t.7V=fU 2f.2t.1I=1p 37.31["9G 2t"].7V=fU 37.31["9G 2t"].1I=1p S dn=1v W 2i:iQ(bM)bM=2P({3o=1,lr={"tX X","9m","tW","tV"},--lD tU lC tT!!I DO lz tS lD,tR lC tQ h4 tP tO tN TO tM.I lB NO tL tK tJ RE tI(lA tH tG)h3 IM lz tF IF U tE tD tC tB tA tz e4 ty iP="iO"--3S tx fT 6t.Do 1F tw 2K 6t so 1Y tt if my fT c5 dB.gg/ly I ts tq ly},bM or{})S dA={}S 8T=37.31.cI 8T.1I=1v if bM.3o==2 V 8T.3r.4c=dq("5a","4l")J S 4K=2f.cI 4K.1I=1v W dA:9t()1E(8T.3r,{3I=1h.1l(1z,1z,1z)})1E(8T,{1n=0})1E(8T.1A,{1O=0.41})2f.l5:l4(4K)3u.2l(0.6A)1Y 2R,5V in 4p(37.31:3P())do if 5V.1j~="9G 2t"1t 5V.5l=="2x"1t 5V~=8T V 1E(5V.3r,{3I=1h.1l(9F,9F,9F)})1E(5V,{1n=1})1E(5V.1A,{1O=1})J J 2i.bA="cI"J dA:9t()dn=1p 8T.4q.3G:1D(W()dA:9t()J)4K.5c.3r.4c=3h:lx(3h.5w.fP,1a.lw.lv,1a.lu.tn)4K.a6.1b.1b="tm, "..3h.5w.lt 4K.a6.ls.1b=3h.5w.1j.." - "..2y.1j 4K.5W.5a.dz.1o.1b=(4m 1t"lq (tk)"or fS())or"fR fQ tj tg tf fS."1Y i,v in 2J(bM.lr)do if 4m V 4K.5W.5a.dz.3W.1b="1C 2w 3j - lq te"8r J if v==fS()V 4K.5W.5a.dz.3W.1b="fR fQ td b4 lp."8r 1V 4K.5W.5a.dz.3W.1b="fR fQ tc\'t tb ta By b4 lp."8r J J--l9 9j l8 l7 t9 t8 4K.5W.5a.79.4q.3G:1D(W()--79 t7 J)S dr=0 S W lg()1L 1R.5f(3s:3V("t6").t5.t4["7K a2"]:t3(),10,t0)J S W lb()if dr==0 V dr=25 S fN={}S dw=0 S dv=0 S dt=0 S 3m=3h:sZ(5H.fP)bh 1v do--fO ln jt 2K lm 1Y 2R,2C in 3m:sY()do dw+=1 2U.5j(fN,7K)J if 3m.sX V--ll 2K fO lk aF is 2K sW lj 8r 1V--go to 2K cN lj 3m:sV()J J 1Y i,v in 2J(5H:sU())do dv+=1 J 1Y i,v in 2J(fN)do if 3h:59(v.sT)V dt=dt+1 J J 4K.5W.5a.du.sS.2g.1b=27(dw).." ds"4K.5W.5a.du.sR.2g.1b=27(dw-dv).." ds"4K.5W.5a.du.sQ.2g.1b=27(dv).." ds"4K.5W.5a.du.sP.2g.1b=27(dt).." ds"1V dr-=1 J J S W 3Z(li)1L 2M.3Z("%sO",li)J S W le(aQ)S 9H=(aQ-aQ%60)/60 aQ=aQ-9H*60 S fM=(9H-9H%60)/60 9H=9H-fM*60 1L 3Z(fM)..":"..3Z(9H)..":"..3Z(aQ)J sN.sM(W()bh 3u.2l()do--3h 4K.5W.5a.bL.3h.2g.1b=#3h:eS().." sL"4K.5W.5a.bL.lh.2g.1b=3h.lh.." sK sJ sI aF sH"--a2 4K.5W.5a.bL.sG.2g.1b=4m 1t 27(1R.sF((3h.5w:iI()*2)/0.dp)).."ms"or 27(1R.2p(lg()).."ms")--lf 4K.5W.5a.bL.lf.2g.1b=le(fx())--ld 4K.5W.5a.bL.ld.2g.1b=lc:sE(3h.5w)lb()J J)()--l9 9j l8 l7 sD l6 J W 2i:99(6O)S 2Z={}6O=2P({1j="2Z",9n=1v,3o="fL",4a="4l"},6O or{})S 73=37.31["9G 2t"]:2O()73.1j=6O.1j 73.4g.1b=6O.1j 73.2c=37.31 73.3r.4c=dq(6O.3o,6O.4a)73.1I=1v S 2L=2f.2t:2O()2L.1j=6O.1j 2L.1o.1I=6O.9n 2L.1o.1b=6O.1j 2L.1I=1v 2Z.sC=2L if 6O.9n==1p V 2L.sB.sA=4e.O(0,10)J 2L.7V=#2f:3P()-3 1Y 2R,bK in 4p(2L:3P())do if bK.5l=="2x"or bK.5l=="4g"1t bK.1j~="1o"V bK:2A()J J 2L.2c=2f W 2Z:9t()1E(73.3r,{3I=1h.1l(1z,1z,1z)})1E(73,{1n=0})1E(73.1A,{1O=0.41})2f.l5:l4(2L)3u.2l(0.6A)1Y 2R,5V in 4p(37.31:3P())do if 5V.1j~="9G 2t"1t 5V.5l=="2x"1t 5V~=73 V 1E(5V.3r,{3I=1h.1l(9F,9F,9F)})1E(5V,{1n=1})1E(5V.1A,{1O=1})J J 2i.bA=6O.1j J if dn V 2Z:9t()J 3u.2l(0.dp)73.4q.3G:1D(W()2Z:9t()J)dn=1p--4X W 2Z:6S(2X:2M)S 4X={}if 2X==1N V 2X="4X"J 4X.1j=2X S 8l=2f.2t.4X:2O()8l.1b=2X 8l.1I=1v 8l.2c=2L S 2L=8l.2x 8l.1Z=1 1E(8l,{1Z=0})W 4X:2q(l3)8l.1b=l3 J W 4X:2A()8l:2A()J--dm W 4X:l1()2L.1X=1u.O(0,0,0,28)S b=2f.2t.dm:2O()b.2c=2L b.1B=1u.O(1,0,0,18)b.4n.1n=1 1E(b.4n,{1n=0})J--2d W 4X:53(2B)2L.1X=1u.O(0,0,0,28)2B=2P({1j="2d",1y=1N,1x=W()J,},2B or{})S 5v={8S=1p,2Q=2B}S 2d if 2B.1y==1N 1t 2B.1y~=""V 2d=2f.2t.2d:2O()1V 2d=2f.2t.l0:2O()J 2d.1j=2B.1j 2d.1o.1b=2B.1j if 2B.1y~=1N 1t 2B.1y~=""V 2d.2E.1b=2B.1y J 2d.1I=1v 2d.2c=2L 2d.1A.1O=1 2d.1o.1Z=1 if 2B.1y~=1N 1t 2B.1y~=""V 2d.2E.1Z=1 J 1e:1d(2d,1f.O(0.7,1a.1g.1i),{1n=0.5}):1c()1e:1d(2d.1A,1f.O(0.7,1a.1g.1i),{1O=0.5}):1c()1e:1d(2d.1o,1f.O(0.7,1a.1g.1i),{1Z=0}):1c()if 2B.1y~=1N 1t 2B.1y~=""V 1e:1d(2d.2E,1f.O(0.7,1a.1g.1i),{1Z=0}):1c()J 2d.4q["3G"]:1D(W()S 2m,2u=2e(2B.1x)if 1F 2m V 1e:1d(2d,1f.O(0.7,1a.1g.1i),{1n=0}):1c()1e:1d(2d,1f.O(0.7,1a.1g.1i),{1W=1h.1l(85,0,0)}):1c()1e:1d(2d.1A,1f.O(0.7,1a.1g.1i),{1O=1}):1c()2d.1o.1b="1x 2s"3e("1C 2w 3j | "..2B.1j.." 1x 2s "..27(2u))2l(0.5)2d.1o.1b=2B.1j 1e:1d(2d,1f.O(0.7,1a.1g.1i),{1n=0.5}):1c()1e:1d(2d,1f.O(0.7,1a.1g.1i),{1W=1h.1l(32,30,38)}):1c()1e:1d(2d.1A,1f.O(0.7,1a.1g.1i),{1O=0.5}):1c()1V 1E(2d.1A,{1M=1h.1l(136,131,163)})2l(0.2)if 5v.8S V 1E(2d.1A,{1M=1h.1l(87,84,104)})1V 1E(2d.1A,{1M=1h.1l(64,61,76)})J J J)2d["3Y"]:1D(W()5v.8S=1v 1E(2d.1A,{1M=1h.1l(87,84,104)})J)2d["3X"]:1D(W()5v.8S=1p 1E(2d.1A,{1M=1h.1l(64,61,76)})J)W 5v:2q(7J)7J=2P({1j=2B.1j,1y=2B.1y,1x=2B.1x},7J or{})2B=7J 5v.2Q=7J 2d.1j=2B.1j 2d.1o.1b=2B.1j if 2B.1y~=1N 1t 2B.1y~=""1t 2d.2E~=1N V 2d.2E.1b=2B.1y J J W 5v:2A()2d.1I=1p 2d:2A()J 1L 5v J--2Y W 4X:9W(4j)2L.1X=1u.O(0,0,0,28)S 6N={}4j=2P({1b="2Y",6a=1},4j or{})6N.2Q=4j S 2Y if 4j.6a==1 V 2Y=2f.2t.2Y:2O()3l 4j.6a==2 V 2Y=2f.2t.8o:2O()3l 4j.6a==3 V 2Y=2f.2t.kZ:2O()J 2Y.1b.1b=4j.1b 2Y.1I=1v 2Y.2c=2L 2Y.1n=1 2Y.1A.1O=1 2Y.1b.1Z=1 if 4j.6a~=1 V 1e:1d(2Y,1f.O(0.7,1a.1g.1i),{1n=0.8}):1c()1V 1e:1d(2Y,1f.O(0.7,1a.1g.1i),{1n=1}):1c()J 1e:1d(2Y.1A,1f.O(0.7,1a.1g.1i),{1O=0.5}):1c()1e:1d(2Y.1b,1f.O(0.7,1a.1g.1i),{1Z=0}):1c()W 6N:2q(aP)4j.1b=aP 6N.2Q=4j 2Y.1b.1b=aP J W 6N:2A()2Y.1I=1p 2Y:2A()J 1L 6N J--2v W 4X:9V(5u)2L.1X=1u.O(0,0,0,28)5u=2P({1o="2v",1b="kY dd kX aN aM, aO kW kV. aK kU kT dk kS d6. kR da kQ kP, in df dl dj d4. kO kN aO ex, eu d8 dg d5 kM. kL a aI aN aM dl db aO aN aM et aJ. d7 kK dc kJ. kI dk dh di, ut dj di. aK kH kG ac kF kE, aL dh dg df. kD kC kB, kA aL kz aL, ky eu kx. kw kv ku kt ks kr. kq kp dd, dc ko kn km, kl kk aI. Ut mi kj, ki kh aJ d3, db da d9. aK kg aJ d9, a kf aI d8 ac. d7 d6 d5 ke, kd kc kb. ka in k9 in k8 k7 k6 d4 d3 k5."},5u or{})S 5t={2Q=5u}S 2v=2f.2t.2v:2O()2v.1o.1b=5u.1o 2v.1b.1b=5u.1b 2v.1I=1v 2v.2c=2L 2v.1n=1 2v.1A.1O=1 2v.1o.1Z=1 2v.1b.1Z=1 1e:1d(2v,1f.O(0.7,1a.1g.1i),{1n=1}):1c()1e:1d(2v.1A,1f.O(0.7,1a.1g.1i),{1O=0.5}):1c()1e:1d(2v.1o,1f.O(0.7,1a.1g.1i),{1Z=0}):1c()1e:1d(2v.1b,1f.O(0.7,1a.1g.1i),{1Z=0}):1c()W 5t:aH()2v.1b.1B=1u.O(2v.1b.1B.X.4y,2v.1b.1B.X.3O,0,1R.8y)2v.1b.1B=1u.O(2v.1b.1B.X.4y,2v.1b.1B.X.3O,0,2v.1b.4i.Y)1E(2v,{1B=1u.O(2v.1B.X.4y,2v.1B.X.3O,0,2v.1b.4i.Y+40)})J W 5t:2q(6M)6M=2P({1o=5u.1o,1b=5u.1b},6M or{})5t.2Q=6M 2v.1o.1b=6M.1o 2v.1b.1b=6M.1b 5t:aH()J W 5t:2A()2v.1I=1p 2v:2A()J 5t:aH()1L 5t J--1r W 4X:7Q(1S,2b)2L.1X=1u.O(0,0,0,28)S 4J={6Z=1p,5Q="1r",2Q=1S}1S=2P({1j="1r",2T={0,3t},5e=1,1Q=100,1x=W(2g)J,},1S or{})S 8R=1p S 1r=2f.2t.1r:2O()1r.1j=1S.1j.." - 1r"1r.1o.1b=1S.1j 1r.1I=1v 1r.2c=2L 1r.1n=1 1r.1A.1O=1 1r.1o.1Z=1 1e:1d(1r,1f.O(0.7,1a.1g.1i),{1n=0.5}):1c()1e:1d(1r.1A,1f.O(0.7,1a.1g.1i),{1O=0.5}):1c()1e:1d(1r.1o,1f.O(0.7,1a.1g.1i),{1Z=0}):1c()1r.1q.6L.1B=1u.O(0,1r.1q.2I.X*((1S.1Q+1S.2T[1])/(1S.2T[2]-1S.2T[1]))>5 1t 1r.1q.2I.X*(1S.1Q/(1S.2T[2]-1S.2T[1]))or 5,1,0)1r.2g.1b=27(1S.1Q)4J.1Q=1r.2g.1b 1S.1x(1S.1Q)1r["3Y"]:1D(W()1E(1r.1A,{1M=1h.1l(87,84,104)})J)1r["3X"]:1D(W()1E(1r.1A,{1M=1h.1l(64,61,76)})J)1r.4q.7f:1D(W(1w)if 1w.2r==1a.2r.6u or 1w.2r==1a.2r.5h V 8R=1v J J)1r.4q.a8:1D(W(1w)if 1w.2r==1a.2r.6u or 1w.2r==1a.2r.5h V 8R=1p J J)1r.4q.6H:1D(W()S 49=1r.1q.6L.3n.X+1r.1q.6L.2I.X S 5I=49 S 3q S 5F;5F=5B.bI:1D(W()if 8R V 3q=6n:k4().X 49=49+0.k3*(3q-5I)if 3q<1r.1q.3n.X V 3q=1r.1q.3n.X 3l 3q>1r.1q.3n.X+1r.1q.2I.X V 3q=1r.1q.3n.X+1r.1q.2I.X J if 49<1r.1q.3n.X+5 V 49=1r.1q.3n.X+5 3l 49>1r.1q.3n.X+1r.1q.2I.X V 49=1r.1q.3n.X+1r.1q.2I.X J if 49<=3q 1t(3q-5I)<0 V 5I=3q 3l 49>=3q 1t(3q-5I)>0 V 5I=3q J 1r.1q.6L.1B=1u.O(0,3q-1r.1q.3n.X,1,0)S 5U=1S.2T[1]+(3q-1r.1q.3n.X)/1r.1q.2I.X*(1S.2T[2]-1S.2T[1])5U=1R.2p(5U/1S.5e+0.5)*(1S.5e*d2)/d2 1r.2g.1b=27(5U)if 1S.1Q~=5U V S 2m,2u=2e(W()1S.1x(5U)J)if 1F 2m V 1e:1d(1r,1f.O(0.7,1a.1g.1i),{1n=0}):1c()1e:1d(1r,1f.O(0.7,1a.1g.1i),{1W=1h.1l(85,0,0)}):1c()1e:1d(1r.1A,1f.O(0.7,1a.1g.1i),{1O=1}):1c()1r.1o.1b="1x 2s"3e("1C 2w 3j | "..1S.1j.." 1x 2s "..27(2u))2l(0.5)1r.1o.1b=1S.1j 1e:1d(1r,1f.O(0.7,1a.1g.1i),{1n=0.5}):1c()1e:1d(1r,1f.O(0.7,1a.1g.1i),{1W=1h.1l(32,30,38)}):1c()1e:1d(1r.1A,1f.O(0.7,1a.1g.1i),{1O=0.5}):1c()J 1S.1Q=5U 4J.1Q=1S.1Q--1C.5p[1S.2b]=1S J 1V 1e:1d(1r.1q.6L,1f.O(0.1,1a.1g.7I,1a.3E.In,0,1p),{1B=1u.O(0,3q-1r.1q.3n.X>5 1t 3q-1r.1q.3n.X or 5,1,0)}):1c()5F:7Y()J J)J)S W 2q(5r,2V)5r=5r or 1S.1Q 1e:1d(1r.1q.6L,1f.O(0.3,1a.1g.7I,1a.3E.k2),{1B=1u.O(0,1r.1q.2I.X*((5r+1S.2T[1])/(1S.2T[2]-1S.2T[1]))>5 1t 1r.1q.2I.X*(5r/(1S.2T[2]-1S.2T[1]))or 5,1,0)}):1c()if 1F 2V V 1r.2g.1b=27(5r)J S 2m,2u=2e(W()1S.1x(5r)J)if 1F 2m V 1e:1d(1r,1f.O(0.7,1a.1g.1i),{1n=0}):1c()1e:1d(1r,1f.O(0.7,1a.1g.1i),{1W=1h.1l(85,0,0)}):1c()1e:1d(1r.1A,1f.O(0.7,1a.1g.1i),{1O=1}):1c()1r.1o.1b="1x 2s"3e("1C 2w 3j | "..1S.1j.." 1x 2s "..27(2u))2l(0.5)1r.1o.1b=1S.1j 1e:1d(1r,1f.O(0.7,1a.1g.1i),{1n=0.5}):1c()1e:1d(1r,1f.O(0.7,1a.1g.1i),{1W=1h.1l(30,33,40)}):1c()1e:1d(1r.1A,1f.O(0.7,1a.1g.1i),{1O=0.5}):1c()J 1S.1Q=5r 4J.1Q=1S.1Q--1C.5p[1S.2b]=1S J W 4J:k1(2g)2q(47(2g))J 1r.2g:5b("1b"):1D(W()S 3D=1r.2g.1b if 1F 47(3D)1t 3D~="."V 1r.2g.1b=3D:7T("[0-9.]*")or""J if 1S.2T[2]<(47(1r.2g.1b)or 0)V 1r.2g.1b=1S.2T[2]J 1r.2g.1B=1u.4f(1r.2g.4i.X,23)2q(47(1r.2g.1b),1v)J)W 4J:2q(7H)7H=2P({1j=1S.1j,2T=1S.2T,5e=1S.5e,1Q=1S.1Q,1x=1S.1x},7H or{})1S=7H 4J.2Q=7H 1r.1j=1S.1j.." - 1r"1r.1o.1b=1S.1j 2q()--1C.5p[1S.2b]=1S J W 4J:2A()1r.1I=1p 1r:2A()J if 2b V 1C.2z[2b]=4J J 2N.7t:5b("2g"):1D(W()1r.1q.1P.1M=1C.6F 1r.1q.1A.1P.1M=1C.6F J)1L 4J J--1G W 4X:69(21,2b)2L.1X=1u.O(0,0,0,28)S 4W={6Z=1p,5Q="1G"}21=2P({1j="1G",1y=1N,1Q=1p,1x=W(2g)J,},21 or{})S 1G if 21.1y~=1N 1t 21.1y~=""V 1G=2f.2t.k0:2O()1V 1G=2f.2t.1G:2O()J 1G.1I=1v 1G.2c=2L 1G.1j=21.1j.." - 1G"1G.1o.1b=21.1j if 21.1y~=1N 1t 21.1y~=""V 1G.2E.1b=21.1y J 1G.1A.1O=1 1G.1o.1Z=1 if 21.1y~=1N 1t 21.1y~=""V 1G.2E.1Z=1 J 1e:1d(1G,1f.O(0.7,1a.1g.1i),{1n=0.5}):1c()if 21.1y~=1N 1t 21.1y~=""V 1e:1d(1G.2E,1f.O(0.7,1a.1g.1i),{1Z=0}):1c()J 1e:1d(1G.1A,1f.O(0.7,1a.1g.1i),{1O=0.5}):1c()1e:1d(1G.1o,1f.O(0.7,1a.1g.1i),{1Z=0}):1c()S W 2q(aG)if aG V 1G.3x.1P.4d=1v 1E(1G.3x,{1n=0})1G.3x.1A.1P.4d=1v 1E(1G.3x.1A,{1M=1h.O(1z,1z,1z)})1E(1G.3x.6g,{1W=1h.1l(1z,1z,1z),1X=1u.O(1,-23,0.5,0),1n=0.45})1V 1G.3x.1P.4d=1p 1G.3x.1A.1P.4d=1p 1G.3x.1A.1M=1h.1l(97,97,97)1E(1G.3x,{1n=1})1E(1G.3x.6g,{1W=1h.1l(97,97,97),1X=1u.O(0,5,0.5,0),1n=0})J 4W.1Q=aG J 1G.4q.3G:1D(W()21.1Q=1F 21.1Q 2q(21.1Q)S 2m,2u=2e(W()21.1x(21.1Q)J)if 1F 2m V 1e:1d(1G,1f.O(0.7,1a.1g.1i),{1n=0}):1c()1e:1d(1G,1f.O(0.7,1a.1g.1i),{1W=1h.1l(85,0,0)}):1c()1e:1d(1G.1A,1f.O(0.7,1a.1g.1i),{1O=1}):1c()1G.1o.1b="1x 2s"3e("1C 2w 3j | "..21.1j.." 1x 2s "..27(2u))2l(0.5)1G.1o.1b=21.1j 1e:1d(1G,1f.O(0.7,1a.1g.1i),{1n=0.5}):1c()1e:1d(1G,1f.O(0.7,1a.1g.1i),{1W=1h.1l(32,30,38)}):1c()1e:1d(1G.1A,1f.O(0.7,1a.1g.1i),{1O=0.5}):1c()J J)1G["3Y"]:1D(W()1E(1G.1A,{1M=1h.1l(87,84,104)})J)1G["3X"]:1D(W()1E(1G.1A,{1M=1h.1l(64,61,76)})J)if 21.1Q V 2q(21.1Q)S 2m,2u=2e(W()21.1x(21.1Q)J)if 1F 2m V 1e:1d(1G,1f.O(0.7,1a.1g.1i),{1n=0}):1c()1e:1d(1G,1f.O(0.7,1a.1g.1i),{1W=1h.1l(85,0,0)}):1c()1e:1d(1G.1A,1f.O(0.7,1a.1g.1i),{1O=1}):1c()1G.1o.1b="1x 2s"3e("1C 2w 3j | "..21.1j.." 1x 2s "..27(2u))2l(0.5)1G.1o.1b=21.1j 1e:1d(1G,1f.O(0.7,1a.1g.1i),{1n=0.5}):1c()1e:1d(1G,1f.O(0.7,1a.1g.1i),{1W=1h.1l(32,30,38)}):1c()1e:1d(1G.1A,1f.O(0.7,1a.1g.1i),{1O=0.5}):1c()J J W 4W:jZ(8B)21.1Q=8B 2q(21.1Q)J W 4W:2q(7G)7G=2P({1j=21.1j,1y=21.1y,1Q=21.1Q,1x=21.1x},7G or{})4W.2Q=7G 21=7G 1G.1j=21.1j.." - 1G"1G.1o.1b=21.1j if 21.1y~=1N 1t 21.1y~=""1t 1G.2E~=1N V 1G.2E.1b=21.1y J 2q(21.1Q)4W.1Q=21.1Q S 2m,2u=2e(W()21.1x(21.1Q)J)if 1F 2m V 1e:1d(1G,1f.O(0.7,1a.1g.1i),{1n=0}):1c()1e:1d(1G,1f.O(0.7,1a.1g.1i),{1W=1h.1l(85,0,0)}):1c()1e:1d(1G.1A,1f.O(0.7,1a.1g.1i),{1O=0}):1c()1G.1o.1b="1x 2s"3e("1C 2w 3j | "..21.1j.." 1x 2s "..27(2u))2l(0.5)1G.1o.1b=21.1j 1e:1d(1G,1f.O(0.7,1a.1g.1i),{1n=0.5}):1c()1e:1d(1G,1f.O(0.7,1a.1g.1i),{1W=1h.1l(32,30,38)}):1c()1e:1d(1G.1A,1f.O(0.7,1a.1g.1i),{1O=0.5}):1c()J J W 4W:2A()1G.1I=1p 1G:2A()J 2N.7t:5b("2g"):1D(W()1G.3x.1P.1M=1C.6F 1G.3x.1A.1P.1M=1C.6F J)if 2b V 1C.2z[2b]=4W J 1L 4W J--1m W 4X:dZ(1H,2b)2L.1X=1u.O(0,0,0,28)S 3F={5Q="jY",6Z=1p,2Q=1H,6i=1p}1H=2P({1j="1m",1y=1N,3i="Q",4Z=1p,--cR aF fK 2K 1m in 3x fJ 1x=W(1m)--3S W 71 8h 7C 9C 2K 1m is fI--3S 8g(1m)is a fH 1Y aE 2K 1m is b2 fG or 1F(4Z fF to be 1v)or aE 2K 1m is bG fE J,d1=W(1m)--3S W 71 8h 7C 9C 2K jX 5d jW--3S 8g(1m)is a 1a.3Q 1Y 2K O jV 3C J,},1H or{})S 6K=1p S 1m if 1H.1y~=1N 1t 1H.1y~=""V 1m=2f.2t.fD:2O()1V 1m=2f.2t.1m:2O()J 1m.1I=1v 1m.2c=2L 1m.1j=1H.1j 1m.1o.1b=1H.1j if 1H.1y~=1N 1t 1H.1y~=""V 1m.2E.1b=1H.1y J 1m.1o.1Z=1 if 1H.1y~=1N 1t 1H.1y~=""V 1m.2E.1Z=1 J 1m.2o.1n=1 1m.2o.1A.1O=1 1m.2o.2H.1Z=1 1e:1d(1m,1f.O(0.3,1a.1g.1i),{1n=0.5}):1c()1e:1d(1m.1o,1f.O(0.3,1a.1g.1i),{1Z=0}):1c()if 1H.1y~=1N 1t 1H.1y~=""V 1e:1d(1m.2E,1f.O(0.3,1a.1g.1i),{1Z=0}):1c()J 1e:1d(1m.2o,1f.O(0.3,1a.1g.1i),{1n=0.9}):1c()1e:1d(1m.2o.1A,1f.O(0.3,1a.1g.1i),{1O=0.3}):1c()1e:1d(1m.2o.2H,1f.O(0.3,1a.1g.1i),{1Z=0}):1c()1m.2o.2H.1b=1H.3i 1m.2o.2H.1B=1u.O(0,1m.2o.2H.4i.X+20,0,42)1m.2o.2H.fC:1D(W()6K=1v 1m.2o.2H.1b=""J)1m.2o.2H.6q:1D(W()6K=1p if 1m.2o.2H.1b==(1N or"")V 1m.2o.2H.1b=1H.3i J J)1m["3Y"]:1D(W()1E(1m.1A,{1M=1h.1l(87,84,104)})J)1m["3X"]:1D(W()1E(1m.1A,{1M=1h.1l(64,61,76)})J)6n.7f:1D(W(39,aC)if 6K V if 39.3Q~=1a.3Q.d0 1t 39.3Q~=2i.1m V S aD=2M.cZ(27(39.3Q),".")S 8j=aD[3]1m.2o.2H.1b=27(8j)1H.3i=27(8j)S 2m,2u=2e(W()1H.d1(1H.3i)J)if 1F 2m V 1e:1d(1m,1f.O(0.7,1a.1g.1i),{1n=0}):1c()1e:1d(1m,1f.O(0.7,1a.1g.1i),{1W=1h.1l(85,0,0)}):1c()1e:1d(1m.1A,1f.O(0.7,1a.1g.1i),{1O=1}):1c()1m.1o.1b="1x 2s"3e("1C 2w 3j | "..1H.1j.." 1x 2s "..27(2u))2l(0.5)1m.1o.1b=1H.1j 1e:1d(1m,1f.O(0.7,1a.1g.1i),{1n=0.5}):1c()1e:1d(1m,1f.O(0.7,1a.1g.1i),{1W=1h.1l(32,30,38)}):1c()1e:1d(1m.1A,1f.O(0.7,1a.1g.1i),{1O=0.5}):1c()J 1m.2o.2H:bH()J 3l 1H.3i~=1N 1t(39.3Q==1a.3Q[1H.3i]1t 1F aC)V--fB S 6J=1v S 8i 8i=39.bJ:1D(W(aB)if aB=="9E"V 8i:7Y()6J=1p J J)if 1F 1H.4Z V 3F.6i=1F 3F.6i S 2m,2u=2e(W()1H.1x(3F.6i)J)if 1F 2m V 1e:1d(1m,1f.O(0.7,1a.1g.1i),{1n=0}):1c()1e:1d(1m,1f.O(0.7,1a.1g.1i),{1W=1h.1l(85,0,0)}):1c()1e:1d(1m.1A,1f.O(0.7,1a.1g.1i),{1O=1}):1c()1m.1o.1b="1x 2s"3e("1C 2w 3j | "..1H.1j.." 1x 2s "..27(2u))2l(0.5)1m.1o.1b=1H.1j 1e:1d(1m,1f.O(0.7,1a.1g.1i),{1n=0.5}):1c()1e:1d(1m,1f.O(0.7,1a.1g.1i),{1W=1h.1l(32,30,38)}):1c()1e:1d(1m.1A,1f.O(0.7,1a.1g.1i),{1O=0.5}):1c()J 1V 2l(0.1)if 6J V S 5F;5F=5B.bI:1D(W()if 1F 6J V S 2m,2u=2e(W()1H.1x(1p)J)if 1F 2m V 1e:1d(1m,1f.O(0.7,1a.1g.1i),{1n=0}):1c()1e:1d(1m,1f.O(0.7,1a.1g.1i),{1W=1h.1l(85,0,0)}):1c()1e:1d(1m.1A,1f.O(0.7,1a.1g.1i),{1O=1}):1c()1m.1o.1b="1x 2s"3e("1C 2w 3j | "..1H.1j.." 1x 2s "..27(2u))2l(0.5)1m.1o.1b=1H.1j 1e:1d(1m,1f.O(0.7,1a.1g.1i),{1n=0.5}):1c()1e:1d(1m,1f.O(0.7,1a.1g.1i),{1W=1h.1l(32,30,38)}):1c()1e:1d(1m.1A,1f.O(0.7,1a.1g.1i),{1O=0.5}):1c()J 5F:7Y()1V S 2m,2u=2e(W()1H.1x(1v)J)if 1F 2m V 1e:1d(1m,1f.O(0.7,1a.1g.1i),{1n=0}):1c()1e:1d(1m,1f.O(0.7,1a.1g.1i),{1W=1h.1l(85,0,0)}):1c()1e:1d(1m.1A,1f.O(0.7,1a.1g.1i),{1O=1}):1c()1m.1o.1b="1x 2s"3e("1C 2w 3j | "..1H.1j.." 1x 2s "..27(2u))2l(0.5)1m.1o.1b=1H.1j 1e:1d(1m,1f.O(0.7,1a.1g.1i),{1n=0.5}):1c()1e:1d(1m,1f.O(0.7,1a.1g.1i),{1W=1h.1l(32,30,38)}):1c()1e:1d(1m.1A,1f.O(0.7,1a.1g.1i),{1O=0.5}):1c()J J J)J J J J)1m.2o.2H:5b("1b"):1D(W()1e:1d(1m.2o,1f.O(0.55,1a.1g.1i,1a.3E.3R),{1B=1u.O(0,1m.2o.2H.4i.X+20,0,30)}):1c()J)W 3F:2q(5E)5E=2P({1j=1H.1j,1y=1H.1y,3i=1H.3i,4Z=1H.4Z,1x=1H.1x},5E or{})3F.2Q=5E 1H=5E 1m.1j=1H.1j 1m.1o.1b=1H.1j if 1H.1y~=1N 1t 1H.1y~=""1t 1m.2E~=1N V 1m.2E.1b=1H.1y J 1m.2o.2H.1b=1H.3i 1m.2o.1B=1u.O(0,1m.2o.2H.4i.X+20,0,42)3F.3i=1H.3i J W 3F:2A()1m.1I=1p 1m:2A()J if 2b V 1C.2z[2b]=3F J--1C.5p[1H.2b]=1H 1L 3F J--cY 1w W 4X:9R(2n,2b)2L.1X=1u.O(0,0,0,28)S 4I={6Z=1p,5Q="1w",2Q=2n}2n=2P({1j="cY 1w",1y=1N,1Q="",3b="1w jU",cX=1p,9S=1p,7P=1p,78=1N,1x=W(1b)J,--52},2n or{})4I.1Q=2n.1Q S 3T if 2n.1y~=1N 1t 2n.1y~=""V 3T=1v J S 1w if 3T V 1w=2f.2t.jT:2O()1V 1w=2f.2t.1w:2O()J 1w.1j=2n.1j 1w.1o.1b=2n.1j if 3T V 1w.2E.1b=2n.1y J 1w.1I=1v 1w.2c=2L 1w.1n=1 1w.1A.1O=1 1w.1o.1Z=1 if 3T V 1w.2E.1Z=1 J 1w.2j.1n=1 1w.2j.1A.1O=1 1w.2j.1U.1Z=1 1e:1d(1w,1f.O(0.3,1a.1g.1i),{1n=0.5}):1c()1e:1d(1w.1A,1f.O(0.3,1a.1g.1i),{1O=0.5}):1c()1e:1d(1w.1o,1f.O(0.3,1a.1g.1i),{1Z=0}):1c()if 3T V 1e:1d(1w.2E,1f.O(0.3,1a.1g.1i),{1Z=0}):1c()J 1e:1d(1w.2j,1f.O(0.3,1a.1g.1i),{1n=0.9}):1c()1e:1d(1w.2j.1A,1f.O(0.3,1a.1g.1i),{1O=0.3}):1c()1e:1d(1w.2j.1U,1f.O(0.3,1a.1g.1i),{1Z=0}):1c()1w.2j.1U.3b=2n.3b 1w.2j.1B=1u.O(0,1w.2j.1U.4i.X+52,0,30)1w.2j.1U.6q:1D(W(2V)if 2n.7P V if 2V V S 2m,2u=2e(W()2n.1x(1w.2j.1U.1b)4I.1Q=1w.2j.1U.1b J)if 1F 2m V 1e:1d(1w,1f.O(0.7,1a.1g.1i),{1n=0}):1c()1e:1d(1w,1f.O(0.7,1a.1g.1i),{1W=1h.1l(85,0,0)}):1c()1e:1d(1w.1A,1f.O(0.7,1a.1g.1i),{1O=1}):1c()1w.1o.1b="1x 2s"3e("1C 2w 3j | "..2n.1j.." 1x 2s "..27(2u))2l(0.5)1w.1o.1b=2n.1j 1e:1d(1w,1f.O(0.7,1a.1g.1i),{1n=0.5}):1c()1e:1d(1w,1f.O(0.7,1a.1g.1i),{1W=1h.1l(32,30,38)}):1c()1e:1d(1w.1A,1f.O(0.7,1a.1g.1i),{1O=0.5}):1c()J J J if 2n.cX V 1w.2j.1U.1b=""J J)if 2n.9S V 1w.2j.1U:5b("1b"):1D(W()S 3D=1w.2j.1U.1b if 1F 47(3D)1t 3D~="."V 1w.2j.1U.1b=3D:7T("[0-9.]*")or""J J)J 1w.2j.1U:5b("1b"):1D(W()if 47(2n.78)V if(#1w.2j.1U.1b-1)==2n.78 V 1w.2j.1U.1b=1w.2j.1U.1b:8d(1,2n.78)J J 1e:1d(1w.2j,1f.O(0.55,1a.1g.1i,1a.3E.3R),{1B=1u.O(0,1w.2j.1U.4i.X+52,0,30)}):1c()if 1F 2n.7P V S 2m,2u=2e(W()2n.1x(1w.2j.1U.1b)J)if 1F 2m V 1e:1d(1w,1f.O(0.7,1a.1g.1i),{1n=0}):1c()1e:1d(1w,1f.O(0.7,1a.1g.1i),{1W=1h.1l(85,0,0)}):1c()1e:1d(1w.1A,1f.O(0.7,1a.1g.1i),{1O=1}):1c()1w.1o.1b="1x 2s"3e("1C 2w 3j | "..2n.1j.." 1x 2s "..27(2u))2l(0.5)1w.1o.1b=2n.1j 1e:1d(1w,1f.O(0.7,1a.1g.1i),{1n=0.5}):1c()1e:1d(1w,1f.O(0.7,1a.1g.1i),{1W=1h.1l(32,30,38)}):1c()1e:1d(1w.1A,1f.O(0.7,1a.1g.1i),{1O=0.5}):1c()J J 4I.1Q=1w.2j.1U.1b J)1w["3Y"]:1D(W()1E(1w.1A,{1M=1h.1l(87,84,104)})J)1w["3X"]:1D(W()1E(1w.1A,{1M=1h.1l(64,61,76)})J)W 4I:2q(7F)7F=2P(2n,7F or{})4I.2Q=7F 2n=7F 1w.1j=2n.1j 1w.1o.1b=2n.1j if 2n.1y~=1N 1t 2n.1y~=""1t 1w.2E~=1N V 1w.2E.1b=2n.1y J 1w.2j.1U:jS()1w.2j.1U.1b=27(2n.1Q)1w.2j.1U:bH()1w.2j.1B=1u.O(0,1w.2j.1U.4i.X+52,0,42)4I.1Q=2n.1Q J W 4I:2A()1w.1I=1p 1w:2A()J if 2b V 1C.2z[2b]=4I J 1L 4I J--1J W 4X:8Z(1s,2b)2L.1X=1u.O(0,0,0,28)S 4H={6Z=1p,5Q="1J",2Q=1s}1s=2P({1j="1J",1y=1N,2z={"2G 1","2G 2"},1K={"2G 1"},4R=1p,8n=1N,--bG jR a6,jQ 9D fA jP 1x=W(2z)--3S W 71 8h 7C 9C 2K az 4B is 8O--3S 8g(2z)is a 2U of fz 1Y 2K 9A az fk or a 2M if jO is 1p J,},1s or{})4H.1K=1s.1K S 3T=1p if 1s.1y~=1N 1t 1s.1y~=""V 3T=1v J S 5S S 6I if 3T V 5S=48 6I=170 3l 1F 3T V 5S=38 6I=160 J S 4G=1p S 1J if 3T V 1J=2f.2t.jN:2O()1V 1J=2f.2t.1J:2O()J 1J.1j=1s.1j 1J.1o.1b=1s.1j if 3T V 1J.2E.1b=1s.1y J 1J.2c=2L 1J.1I=1v S W 1G()4G=1F 4G if 4G V 1E(1J.5c,{aA=180})1E(1J,{1B=1u.O(1,-25,0,6I)})1V 1E(1J.5c,{aA=0})1E(1J,{1B=1u.O(1,-25,0,5S)})J J S W 3K(8N,c2)S 2m,2u=2e(W()1s.1x(8N)J)if 1F 2m V 1e:1d(1J,1f.O(0.7,1a.1g.1i),{1n=0}):1c()1e:1d(1J,1f.O(0.7,1a.1g.1i),{1W=1h.1l(85,0,0)}):1c()1e:1d(1J.1A,1f.O(0.7,1a.1g.1i),{1O=1}):1c()1J.1o.1b="1x 2s"3e("1C 2w 3j | "..1s.1j.." 1x 2s "..27(2u))2l(0.5)1J.1o.1b=1s.1j 1e:1d(1J,1f.O(0.7,1a.1g.1i),{1n=0.5}):1c()1e:1d(1J,1f.O(0.7,1a.1g.1i),{1W=1h.1l(32,30,38)}):1c()1e:1d(1J.1A,1f.O(0.7,1a.1g.1i),{1O=0.5}):1c()J if 2m 1t c2 V c2()J J--jM by jL 1J.3a:5b("1b"):1D(W()S 3D=1J.3a.1b:bF()1Y 2R,7E in 4p(1J.3J:3P())do if 7E:7c("4g")1t 7E.1j~="2t"V 7E.1I=3D==""or 2M.9w(7E.1j:bF(),3D,1,1v)~=1N J J J)S W cW()1Y 2R,4B in 4p(1J.3J:3P())do if 4B.5l=="4g"1t 4B.1j~="2t"V 4B:2A()J J J S W cV(2X)1Y 2R,2G in 2J(1J.3J:3P())do if 2G.5l=="4g"1t 2G.1j~="2t"V 1E(2G,{1n=0.98})J J 1G()1E(1J.3J[2X],{1n=0.95,2S=1h.1l(3d,3d,3d)})J S W 8G()cW()1Y i,v in 2J(1s.2z)do S 2G=1J.3J.2t:2O()S 8Q=1p 2G.1b=v if v=="2t"V v="2t (1j)"J 2G.1j=v 2G.4q.3G:1D(W()S 2V if 1s.4R V if 2U.9w(1s.1K,v)V fy(1s.1K,v)4H.1K=1s.1K if 1F 8Q V 1E(2G,{2S=1h.1l(3t,3t,3t)})J 1E(2G,{1n=0.98})1V 2U.5j(1s.1K,v)4H.1K=1s.1K 1E(2G,{2S=1h.1l(3d,3d,3d),1n=0.95})J 2V=1s.1K 1V 1s.1K={v}2V=v 4H.1K=2V cV(v)J 3K(2V,W()if 1s.4R V if 1s.1K 1t 3v(1s.1K)=="2U"V if#1s.1K==1 V 1J.3a.3b=1s.1K[1]3l#1s.1K==0 V 1J.3a.3b="4D"1V 1J.3a.3b=9B(1s.1K)J 1V 1s.1K={}1J.3a.3b="4D"J J if 1F 1s.4R V 1J.3a.3b=1s.1K[1]or"4D"J 1J.3a.1b=""J)J)2G.1I=1v 2G.2c=1J.3J 2G.3Y:1D(W()8Q=1v if 2G.1n==0.95 V 1L 1V 1E(2G,{2S=1h.1l(3d,3d,3d)})J J)2G.3X:1D(W()8Q=1p if 2G.1n==0.95 V 1L 1V 1E(2G,{2S=1h.1l(3t,3t,3t)})J J)J J S W 5T()1Y i,v in 2J(1s.2z)do 2U.8P(1s.2z,i)J 1Y i,v in 2J(3h:3P())do 2U.5j(1s.2z,v.1j)J J 1J.4q.3G:1D(W()1G()J)1J["3Y"]:1D(W()1E(1J.1A,{1M=1h.1l(87,84,104)})J)1J["3X"]:1D(W()1E(1J.1A,{1M=1h.1l(64,61,76)})J)if 1s.8n=="5H"V 1Y i,v in 2J(1s.2z)do 2U.8P(1s.2z,i)J 5T()1s.1K=1s.2z[1]3h.bb:1D(W()5T()J)3h.ba:1D(W()5T()J)J 8G()if 1s.1K V if 3v(1s.1K)=="2M"V 1s.1K={1s.1K}J if 1F 1s.4R 1t 3v(1s.1K)=="2U"V 1s.1K={1s.1K[1]}J 1V 1s.1K={}J S 2V,5q=1N,0 1Y i,v in 2J(1s.1K)do 5q=5q+1 J if 5q==1 V 2V=1s.1K[1]1V 2V=1s.1K J 3K(2V)if 3v(2V)=="2M"V 1E(1J.3J[2V],{2S=1h.1l(3d,3d,3d),1n=0.95})1V 1Y i,v in 2J(2V)do 1E(1J.3J[v],{2S=1h.1l(3d,3d,3d),1n=0.95})J J if 1s.4R V if 1s.1K 1t 3v(1s.1K)=="2U"V if#1s.1K==1 V 1J.3a.3b=1s.1K[1]3l#1s.1K==0 V 1J.3a.3b="4D"1V 1J.3a.3b=9B(1s.1K)J 1V 1s.1K={}1J.3a.3b="4D"J 1Y 2R,2X in 2J(1s.1K)do 1E(1J.3J[2X],{2S=1h.1l(6r,6r,6r),1n=0.95})J 1V 1J.3a.3b=1s.1K[1]or"4D"J 1J.3a.1b=""W 4H:2q(7D)7D=2P(1s,7D or{})4H.2Q=7D 1s=7D 1J.1j=1s.1j 1J.1o.1b=1s.1j if 1s.1y~=1N 1t 1s.1y~=""1t 1J.2E~=1N V 1J.2E.1b=1s.1y J if 1s.8n=="5H"V 1Y i,v in 2J(1s.2z)do 2U.8P(1s.2z,i)J 5T()1s.1K=1s.2z[1]3h.bb:1D(W()5T()J)3h.ba:1D(W()5T()J)J 8G()if 1s.1K V if 3v(1s.1K)=="2M"V 1s.1K={1s.1K}J if 1F 1s.4R 1t 3v(1s.1K)=="2U"V 1s.1K={1s.1K[1]}J 1V 1s.1K={}J S 2V,5q=1N,0 1Y i,v in 2J(1s.1K)do 5q=5q+1 J if 5q==1 V 2V=1s.1K[1]1V 2V=1s.1K J 3K(2V)1Y 2R,2G in 2J(1J.3J:3P())do if 2G.5l=="4g"V 1E(2G,{2S=1h.1l(3t,3t,3t),1n=0.98})J J 1E(1J.3J[2V],{2S=1h.1l(3d,3d,3d),1n=0.95})if 1s.4R V if 1s.1K 1t 3v(1s.1K)=="2U"V if#1s.1K==1 V 1J.3a.3b=1s.1K[1]3l#1s.1K==0 V 1J.3a.3b="4D"1V 1J.3a.3b=9B(1s.1K)J 1V 1s.1K={}1J.3a.3b="4D"J 1Y 2R,2X in 2J(1s.1K)do 1E(1J.3J[2X],{2S=1h.1l(6r,6r,6r),1n=0.95})J 1V 1J.3a.3b=1s.1K[1]or"4D"J 1J.3a.1b=""--1C.5p[1s.2b]=1s J W 4H:2A()1J.1I=1p 1J:2A()J if 2b V 1C.2z[2b]=4H J--1C.5p[1s.2b]=1s 1L 4H J--1M cU W 4X:93(2F,2b)--by jK/jJ 2L.1X=1u.O(0,0,0,28)S 4E={jI=1p,5Q="cQ",2Q=2F}2F=2P({1j="1M cU",1M=1h.1l(1z,1z,1z),1x=W(2g)--3S W 71 8h 7C fs fx 2K 1P jH is jG/8O--3S 8g(2g)is a jF 3y fw on jE 1P is az J},2F or{})S W aq(1P)1L 2M.3Z("#%3c%3c%3c",1R.2p(1P.R*1z),1R.2p(1P.G*1z),1R.2p(1P.B*1z))J 4E.1M=aq(2F.1M)S 5S=1u.O(0,75,0,22)S 6I=1u.O(0,jD,0,129)S 1T=2f.2t.1T:2O()S 4u=1T.jC S 5o=4u.5o S 1q=4u.jB S 1r=1T.jA 1T.1j=2F.1j 1T.1o.1b=2F.1j 1T.1I=1v 1T.2c=2L 1T.1B=1u.O(1.ay,-25,0,38)4u.1B=5S 5o.1n=0 1T["3Y"]:1D(W()1E(1T.1A,{1M=1h.1l(87,84,104)})J)1T["3X"]:1D(W()1E(1T.1A,{1M=1h.1l(64,61,76)})J)S W 3K(8N,c2)S 2m,2u=2e(W()2F.1x(8N)J)if 1F 2m V 1e:1d(1T,1f.O(0.7,1a.1g.1i),{1n=0}):1c()1e:1d(1T,1f.O(0.7,1a.1g.1i),{1W=1h.1l(85,0,0)}):1c()1e:1d(1T.1A,1f.O(0.7,1a.1g.1i),{1O=1}):1c()1T.1o.1b="1x 2s"3e("1C 2w 3j | "..2F.1j.." 1x 2s "..27(2u))2l(0.5)1T.1o.1b=2F.1j 1e:1d(1T,1f.O(0.7,1a.1g.1i),{1n=0.5}):1c()1e:1d(1T,1f.O(0.7,1a.1g.1i),{1W=1h.1l(32,30,38)}):1c()1e:1d(1T.1A,1f.O(0.7,1a.1g.1i),{1O=0.5}):1c()J if 2m 1t c2 V c2()J J S 4G=1p S 7p=3s.3h.5w:jz()1q.4c="D://H.F.j/u/?id=jw"S 7B=1p S 7A=1p 1T.4q.6H:1D(W()if 1F 4G V 4G=1v 1E(1T,{1B=1u.O(1.ay,-25,0,165)},1N,1f.O(0.6,1a.1g.1i))1E(4u,{1B=6I})1E(5o,{1n=1})1V 4G=1p 1E(1T,{1B=1u.O(1.ay,-25,0,38)},1N,1f.O(0.6,1a.1g.1i))1E(4u,{1B=5S})1E(5o,{1n=0})J J)6n.a8:1D(W(39,jv)if 39.2r==1a.2r.6u or 39.2r==1a.2r.5h V 7B=1p 7A=1p J J)1q.6H:1D(W()if 4G V 7B=1v J J)1q.4F.6H:1D(W()if 4G V 7B=1v J J)1r.6H:1D(W()7A=1v J)1r.5R.6H:1D(W()7A=1v J)S h,s,v=2F.1M:8H()S 1P=1h.3p(h,s,v)S r,g,b=1R.2p((h*1z)+0.5),1R.2p((s*1z)+0.5),1R.2p((v*1z)+0.5)S 4C=2M.3Z("#%3c%3c%3c",1P.R*3A,1P.G*3A,1P.B*3A)1T.4V.1U.1b=4C S W 7v(hp,sp,vp)--1q 1q.4F.1X=1u.O(s,-1q.4F.2I.X/2,1-v,-1q.4F.2I.Y/2)1q.4F.3I=1h.3p(hp,sp,vp)4u.1W=1h.3p(hp,1,1)5o.1W=1h.3p(hp,sp,vp)--1r S x=hp*1r.2I.X 1r.5R.1X=1u.O(0,x-1r.5R.2I.X/2,0.5,0)1r.5R.3I=1h.3p(hp,1,1)S 1P=1h.3p(hp,sp,vp)S r,g,b=1R.2p((1P.R*1z)+0.5),1R.2p((1P.G*1z)+0.5),1R.2p((1P.B*1z)+0.5)1T.7z.1U.1b=27(r)1T.7y.1U.1b=27(g)1T.7x.1U.1b=27(b)4C=2M.3Z("#%3c%3c%3c",1P.R*3A,1P.G*3A,1P.B*3A)1T.4V.1U.1b=4C J 7v(h,s,v)1T.4V.1U.6q:1D(W()if 1F 2e(W()S r,g,b=2M.7T(1T.4V.1U.1b,"^#?(%w%w)(%w%w)(%w%w)$")S ax=1h.1l(47(r,16),47(g,16),47(b,16))h,s,v=ax:8H()4C=1T.4V.1U.1b 7v()2F.1M=ax J)V 1T.4V.1U.1b=4C J S r,g,b=1R.2p((h*1z)+0.5),1R.2p((s*1z)+0.5),1R.2p((v*1z)+0.5)2F.1M=1h.1l(r,g,b)3K(1h.1l(r,g,b))J)--ju S W 8J(5O,aw)S 3y=47(5O.1b)S 1P=1h.3p(h,s,v)S 8M,8L,8K=1R.2p((1P.R*1z)+0.5),1R.2p((1P.G*1z)+0.5),1R.2p((1P.B*1z)+0.5)S 6p if aw=="R"V 6p=8M;8M=3y 3l aw=="G"V 6p=8L;8L=3y 1V 6p=8K;8K=3y J if 3y V 3y=1R.5f(3y,0,1z)h,s,v=1h.1l(8M,8L,8K):8H()7v()1V 5O.1b=27(6p)J S r,g,b=1R.2p((1P.R*1z)+0.5),1R.2p((1P.G*1z)+0.5),1R.2p((1P.B*1z)+0.5)2F.1M=1h.1l(r,g,b)J 1T.7z.1U.6q:8I(W()8J(1T.7z.1U,"R")3K(1h.1l(r,g,b))J)1T.7y.1U.6q:8I(W()8J(1T.7y.1U,"G")3K(1h.1l(r,g,b))J)1T.7x.1U.6q:8I(W()8J(1T.7x.1U,"B")3K(1h.1l(r,g,b))J)5B.bg:8I(W()if 7B V S 6G=1R.5f(7p.X-1q.3n.X,0,1q.2I.X)S av=1R.5f(7p.Y-1q.3n.Y,0,1q.2I.Y)1q.4F.1X=1u.O(0,6G-1q.4F.2I.X/2,0,av-1q.4F.2I.Y/2)s=6G/1q.2I.X v=1-(av/1q.2I.Y)5o.1W=1h.3p(h,s,v)1q.4F.3I=1h.3p(h,s,v)4u.1W=1h.3p(h,1,1)S 1P=1h.3p(h,s,v)S r,g,b=1R.2p((1P.R*1z)+0.5),1R.2p((1P.G*1z)+0.5),1R.2p((1P.B*1z)+0.5)1T.7z.1U.1b=27(r)1T.7y.1U.1b=27(g)1T.7x.1U.1b=27(b)1T.4V.1U.1b=2M.3Z("#%3c%3c%3c",1P.R*3A,1P.G*3A,1P.B*3A)3K(1h.1l(r,g,b))2F.1M=1h.1l(r,g,b)4E.1M=2F.1M J if 7A V S 6G=1R.5f(7p.X-1r.3n.X,0,1r.2I.X)h=6G/1r.2I.X 5o.1W=1h.3p(h,s,v)1r.5R.1X=1u.O(0,6G-1r.5R.2I.X/2,0.5,0)1r.5R.3I=1h.3p(h,1,1)4u.1W=1h.3p(h,1,1)1q.4F.3I=1h.3p(h,s,v)S 1P=1h.3p(h,s,v)S r,g,b=1R.2p((1P.R*1z)+0.5),1R.2p((1P.G*1z)+0.5),1R.2p((1P.B*1z)+0.5)1T.7z.1U.1b=27(r)1T.7y.1U.1b=27(g)1T.7x.1U.1b=27(b)1T.4V.1U.1b=2M.3Z("#%3c%3c%3c",1P.R*3A,1P.G*3A,1P.B*3A)3K(1h.1l(r,g,b))2F.1M=1h.1l(r,g,b)4E.1M=2F.1M J J)W 4E:2q(7w)7w=2P(2F,7w or{})4E.2Q=7w 2F=7w 1T.1j=2F.1j 1T.1o.1b=2F.1j 1T.1I=1v S h,s,v=2F.1M:8H()S 1P=1h.3p(h,s,v)S r,g,b=1R.2p((1P.R*1z)+0.5),1R.2p((1P.G*1z)+0.5),1R.2p((1P.B*1z)+0.5)S 4C=2M.3Z("#%3c%3c%3c",1P.R*3A,1P.G*3A,1P.B*3A)1T.4V.1U.1b=4C 7v(h,s,v)3K(1h.1l(r,g,b))4E.1M=2F.1M J W 4E:2A()1T:2A()J if 2b V 1C.2z[2b]=4E J 3K(2F.1M)1L 4E J 1L 4X J--dm W 2Z:l1()S b=2f.2t.dm:2O()b.2c=2L b.4n.1n=1 1E(b.4n,{1n=0})J--2d W 2Z:53(2B)2B=2P({1j="2d",1y=1N,1x=W()J,},2B or{})S 5v={8S=1p,2Q=2B}S 2d if 2B.1y==1N 1t 2B.1y~=""V 2d=2f.2t.2d:2O()1V 2d=2f.2t.l0:2O()J 2d.1j=2B.1j 2d.1o.1b=2B.1j if 2B.1y~=1N 1t 2B.1y~=""V 2d.2E.1b=2B.1y J 2d.1I=1v 2d.2c=2L 2d.1A.1O=1 2d.1o.1Z=1 if 2B.1y~=1N 1t 2B.1y~=""V 2d.2E.1Z=1 J 1e:1d(2d,1f.O(0.7,1a.1g.1i),{1n=0.5}):1c()1e:1d(2d.1A,1f.O(0.7,1a.1g.1i),{1O=0.5}):1c()1e:1d(2d.1o,1f.O(0.7,1a.1g.1i),{1Z=0}):1c()if 2B.1y~=1N 1t 2B.1y~=""V 1e:1d(2d.2E,1f.O(0.7,1a.1g.1i),{1Z=0}):1c()J 2d.4q["3G"]:1D(W()S 2m,2u=2e(2B.1x)if 1F 2m V 1e:1d(2d,1f.O(0.7,1a.1g.1i),{1n=0}):1c()1e:1d(2d,1f.O(0.7,1a.1g.1i),{1W=1h.1l(85,0,0)}):1c()1e:1d(2d.1A,1f.O(0.7,1a.1g.1i),{1O=1}):1c()2d.1o.1b="1x 2s"3e("1C 2w 3j | "..2B.1j.." 1x 2s "..27(2u))2l(0.5)2d.1o.1b=2B.1j 1e:1d(2d,1f.O(0.7,1a.1g.1i),{1n=0.5}):1c()1e:1d(2d,1f.O(0.7,1a.1g.1i),{1W=1h.1l(32,30,38)}):1c()1e:1d(2d.1A,1f.O(0.7,1a.1g.1i),{1O=0.5}):1c()1V 1E(2d.1A,{1M=1h.1l(136,131,163)})2l(0.2)if 5v.8S V 1E(2d.1A,{1M=1h.1l(87,84,104)})1V 1E(2d.1A,{1M=1h.1l(64,61,76)})J J J)2d["3Y"]:1D(W()5v.8S=1v 1E(2d.1A,{1M=1h.1l(87,84,104)})J)2d["3X"]:1D(W()5v.8S=1p 1E(2d.1A,{1M=1h.1l(64,61,76)})J)W 5v:2q(7J)7J=2P({1j=2B.1j,1y=2B.1y,1x=2B.1x},7J or{})2B=7J 5v.2Q=7J 2d.1j=2B.1j 2d.1o.1b=2B.1j if 2B.1y~=1N 1t 2B.1y~=""1t 2d.2E~=1N V 2d.2E.1b=2B.1y J J W 5v:2A()2d.1I=1p 2d:2A()J 1L 5v J--2Y W 2Z:9W(4j)S 6N={}4j=2P({1b="2Y",6a=1},4j or{})6N.2Q=4j S 2Y if 4j.6a==1 V 2Y=2f.2t.2Y:2O()3l 4j.6a==2 V 2Y=2f.2t.8o:2O()3l 4j.6a==3 V 2Y=2f.2t.kZ:2O()J 2Y.1b.1b=4j.1b 2Y.1I=1v 2Y.2c=2L 2Y.1n=1 2Y.1A.1O=1 2Y.1b.1Z=1 if 4j.6a~=1 V 1e:1d(2Y,1f.O(0.7,1a.1g.1i),{1n=0.8}):1c()1V 1e:1d(2Y,1f.O(0.7,1a.1g.1i),{1n=1}):1c()J 1e:1d(2Y.1A,1f.O(0.7,1a.1g.1i),{1O=0.5}):1c()1e:1d(2Y.1b,1f.O(0.7,1a.1g.1i),{1Z=0}):1c()W 6N:2q(aP)4j.1b=aP 6N.2Q=4j 2Y.1b.1b=aP J W 6N:2A()2Y.1I=1p 2Y:2A()J 1L 6N J--2v W 2Z:9V(5u)5u=2P({1o="2v",1b="kY dd kX aN aM, aO kW kV. aK kU kT dk kS d6. kR da kQ kP, in df dl dj d4. kO kN aO ex, eu d8 dg d5 kM. kL a aI aN aM dl db aO aN aM et aJ. d7 kK dc kJ. kI dk dh di, ut dj di. aK kH kG ac kF kE, aL dh dg df. kD kC kB, kA aL kz aL, ky eu kx. kw kv ku kt ks kr. kq kp dd, dc ko kn km, kl kk aI. Ut mi kj, ki kh aJ d3, db da d9. aK kg aJ d9, a kf aI d8 ac. d7 d6 d5 ke, kd kc kb. ka in k9 in k8 k7 k6 d4 d3 k5."},5u or{})S 5t={2Q=5u}S 2v=2f.2t.2v:2O()2v.1o.1b=5u.1o 2v.1b.1b=5u.1b 2v.1I=1v 2v.2c=2L 2v.1n=1 2v.1A.1O=1 2v.1o.1Z=1 2v.1b.1Z=1 1e:1d(2v,1f.O(0.7,1a.1g.1i),{1n=1}):1c()1e:1d(2v.1A,1f.O(0.7,1a.1g.1i),{1O=0.5}):1c()1e:1d(2v.1o,1f.O(0.7,1a.1g.1i),{1Z=0}):1c()1e:1d(2v.1b,1f.O(0.7,1a.1g.1i),{1Z=0}):1c()W 5t:aH()2v.1b.1B=1u.O(2v.1b.1B.X.4y,2v.1b.1B.X.3O,0,1R.8y)2v.1b.1B=1u.O(2v.1b.1B.X.4y,2v.1b.1B.X.3O,0,2v.1b.4i.Y)1E(2v,{1B=1u.O(2v.1B.X.4y,2v.1B.X.3O,0,2v.1b.4i.Y+40)})J W 5t:2q(6M)6M=2P({1o=5u.1o,1b=5u.1b},6M or{})5t.2Q=6M 2v.1o.1b=6M.1o 2v.1b.1b=6M.1b 5t:aH()J W 5t:2A()2v.1I=1p 2v:2A()J 5t:aH()1L 5t J--1r W 2Z:7Q(1S,2b)S 4J={6Z=1p,5Q="1r",2Q=1S}1S=2P({1j="1r",2T={0,3t},5e=1,1Q=100,1x=W(2g)J,},1S or{})S 8R=1p S 1r=2f.2t.1r:2O()1r.1j=1S.1j.." - 1r"1r.1o.1b=1S.1j 1r.1I=1v 1r.2c=2L 1r.1n=1 1r.1A.1O=1 1r.1o.1Z=1 1e:1d(1r,1f.O(0.7,1a.1g.1i),{1n=0.5}):1c()1e:1d(1r.1A,1f.O(0.7,1a.1g.1i),{1O=0.5}):1c()1e:1d(1r.1o,1f.O(0.7,1a.1g.1i),{1Z=0}):1c()1r.1q.6L.1B=1u.O(0,1r.1q.2I.X*((1S.1Q+1S.2T[1])/(1S.2T[2]-1S.2T[1]))>5 1t 1r.1q.2I.X*(1S.1Q/(1S.2T[2]-1S.2T[1]))or 5,1,0)1r.2g.1b=27(1S.1Q)4J.1Q=1r.2g.1b 1S.1x(1S.1Q)1r["3Y"]:1D(W()1E(1r.1A,{1M=1h.1l(87,84,104)})J)1r["3X"]:1D(W()1E(1r.1A,{1M=1h.1l(64,61,76)})J)1r.4q.7f:1D(W(1w)if 1w.2r==1a.2r.6u or 1w.2r==1a.2r.5h V 8R=1v J J)1r.4q.a8:1D(W(1w)if 1w.2r==1a.2r.6u or 1w.2r==1a.2r.5h V 8R=1p J J)1r.4q.6H:1D(W()S 49=1r.1q.6L.3n.X+1r.1q.6L.2I.X S 5I=49 S 3q S 5F;5F=5B.bI:1D(W()if 8R V 3q=6n:k4().X 49=49+0.k3*(3q-5I)if 3q<1r.1q.3n.X V 3q=1r.1q.3n.X 3l 3q>1r.1q.3n.X+1r.1q.2I.X V 3q=1r.1q.3n.X+1r.1q.2I.X J if 49<1r.1q.3n.X+5 V 49=1r.1q.3n.X+5 3l 49>1r.1q.3n.X+1r.1q.2I.X V 49=1r.1q.3n.X+1r.1q.2I.X J if 49<=3q 1t(3q-5I)<0 V 5I=3q 3l 49>=3q 1t(3q-5I)>0 V 5I=3q J 1r.1q.6L.1B=1u.O(0,3q-1r.1q.3n.X,1,0)S 5U=1S.2T[1]+(3q-1r.1q.3n.X)/1r.1q.2I.X*(1S.2T[2]-1S.2T[1])5U=1R.2p(5U/1S.5e+0.5)*(1S.5e*d2)/d2 1r.2g.1b=27(5U)if 1S.1Q~=5U V S 2m,2u=2e(W()1S.1x(5U)J)if 1F 2m V 1e:1d(1r,1f.O(0.7,1a.1g.1i),{1n=0}):1c()1e:1d(1r,1f.O(0.7,1a.1g.1i),{1W=1h.1l(85,0,0)}):1c()1e:1d(1r.1A,1f.O(0.7,1a.1g.1i),{1O=1}):1c()1r.1o.1b="1x 2s"3e("1C 2w 3j | "..1S.1j.." 1x 2s "..27(2u))2l(0.5)1r.1o.1b=1S.1j 1e:1d(1r,1f.O(0.7,1a.1g.1i),{1n=0.5}):1c()1e:1d(1r,1f.O(0.7,1a.1g.1i),{1W=1h.1l(32,30,38)}):1c()1e:1d(1r.1A,1f.O(0.7,1a.1g.1i),{1O=0.5}):1c()J 1S.1Q=5U 4J.1Q=1S.1Q--1C.5p[1S.2b]=1S J 1V 1e:1d(1r.1q.6L,1f.O(0.1,1a.1g.7I,1a.3E.In,0,1p),{1B=1u.O(0,3q-1r.1q.3n.X>5 1t 3q-1r.1q.3n.X or 5,1,0)}):1c()5F:7Y()J J)J)S W 2q(5r,2V)5r=5r or 1S.1Q 1e:1d(1r.1q.6L,1f.O(0.3,1a.1g.7I,1a.3E.k2),{1B=1u.O(0,1r.1q.2I.X*((5r+1S.2T[1])/(1S.2T[2]-1S.2T[1]))>5 1t 1r.1q.2I.X*(5r/(1S.2T[2]-1S.2T[1]))or 5,1,0)}):1c()if 1F 2V V 1r.2g.1b=27(5r)J S 2m,2u=2e(W()1S.1x(5r)J)if 1F 2m V 1e:1d(1r,1f.O(0.7,1a.1g.1i),{1n=0}):1c()1e:1d(1r,1f.O(0.7,1a.1g.1i),{1W=1h.1l(85,0,0)}):1c()1e:1d(1r.1A,1f.O(0.7,1a.1g.1i),{1O=1}):1c()1r.1o.1b="1x 2s"3e("1C 2w 3j | "..1S.1j.." 1x 2s "..27(2u))2l(0.5)1r.1o.1b=1S.1j 1e:1d(1r,1f.O(0.7,1a.1g.1i),{1n=0.5}):1c()1e:1d(1r,1f.O(0.7,1a.1g.1i),{1W=1h.1l(30,33,40)}):1c()1e:1d(1r.1A,1f.O(0.7,1a.1g.1i),{1O=0.5}):1c()J 1S.1Q=5r 4J.1Q=1S.1Q--1C.5p[1S.2b]=1S J W 4J:k1(2g)2q(47(2g))J 1r.2g:5b("1b"):1D(W()S 3D=1r.2g.1b if 1F 47(3D)1t 3D~="."V 1r.2g.1b=3D:7T("[0-9.]*")or""J if 1S.2T[2]<(47(1r.2g.1b)or 0)V 1r.2g.1b=1S.2T[2]J 1r.2g.1B=1u.4f(1r.2g.4i.X,23)2q(47(1r.2g.1b),1v)J)W 4J:2q(7H)7H=2P({1j=1S.1j,2T=1S.2T,5e=1S.5e,1Q=1S.1Q,1x=1S.1x},7H or{})1S=7H 4J.2Q=7H 1r.1j=1S.1j.." - 1r"1r.1o.1b=1S.1j 2q()--1C.5p[1S.2b]=1S J W 4J:2A()1r.1I=1p 1r:2A()J if 2b V 1C.2z[2b]=4J J 2N.7t:5b("2g"):1D(W()1r.1q.1P.1M=1C.6F 1r.1q.1A.1P.1M=1C.6F J)1L 4J J--1G W 2Z:69(21,2b)S 4W={6Z=1p,5Q="1G"}21=2P({1j="1G",1y=1N,1Q=1p,1x=W(2g)J,},21 or{})S 1G if 21.1y~=1N 1t 21.1y~=""V 1G=2f.2t.k0:2O()1V 1G=2f.2t.1G:2O()J 1G.1I=1v 1G.2c=2L 1G.1j=21.1j.." - 1G"1G.1o.1b=21.1j if 21.1y~=1N 1t 21.1y~=""V 1G.2E.1b=21.1y J 1G.1A.1O=1 1G.1o.1Z=1 if 21.1y~=1N 1t 21.1y~=""V 1G.2E.1Z=1 J 1e:1d(1G,1f.O(0.7,1a.1g.1i),{1n=0.5}):1c()if 21.1y~=1N 1t 21.1y~=""V 1e:1d(1G.2E,1f.O(0.7,1a.1g.1i),{1Z=0}):1c()J 1e:1d(1G.1A,1f.O(0.7,1a.1g.1i),{1O=0.5}):1c()1e:1d(1G.1o,1f.O(0.7,1a.1g.1i),{1Z=0}):1c()S W 2q(aG)if aG V 1G.3x.1P.4d=1v 1E(1G.3x,{1n=0})1G.3x.1A.1P.4d=1v 1E(1G.3x.1A,{1M=1h.O(1z,1z,1z)})1E(1G.3x.6g,{1W=1h.1l(1z,1z,1z),1X=1u.O(1,-23,0.5,0),1n=0.45})1V 1G.3x.1P.4d=1p 1G.3x.1A.1P.4d=1p 1G.3x.1A.1M=1h.1l(97,97,97)1E(1G.3x,{1n=1})1E(1G.3x.6g,{1W=1h.1l(97,97,97),1X=1u.O(0,5,0.5,0),1n=0})J 4W.1Q=aG J 1G.4q.3G:1D(W()21.1Q=1F 21.1Q 2q(21.1Q)S 2m,2u=2e(W()21.1x(21.1Q)J)if 1F 2m V 1e:1d(1G,1f.O(0.7,1a.1g.1i),{1n=0}):1c()1e:1d(1G,1f.O(0.7,1a.1g.1i),{1W=1h.1l(85,0,0)}):1c()1e:1d(1G.1A,1f.O(0.7,1a.1g.1i),{1O=1}):1c()1G.1o.1b="1x 2s"3e("1C 2w 3j | "..21.1j.." 1x 2s "..27(2u))2l(0.5)1G.1o.1b=21.1j 1e:1d(1G,1f.O(0.7,1a.1g.1i),{1n=0.5}):1c()1e:1d(1G,1f.O(0.7,1a.1g.1i),{1W=1h.1l(32,30,38)}):1c()1e:1d(1G.1A,1f.O(0.7,1a.1g.1i),{1O=0.5}):1c()J J)1G["3Y"]:1D(W()1E(1G.1A,{1M=1h.1l(87,84,104)})J)1G["3X"]:1D(W()1E(1G.1A,{1M=1h.1l(64,61,76)})J)if 21.1Q V 2q(21.1Q)S 2m,2u=2e(W()21.1x(21.1Q)J)if 1F 2m V 1e:1d(1G,1f.O(0.7,1a.1g.1i),{1n=0}):1c()1e:1d(1G,1f.O(0.7,1a.1g.1i),{1W=1h.1l(85,0,0)}):1c()1e:1d(1G.1A,1f.O(0.7,1a.1g.1i),{1O=1}):1c()1G.1o.1b="1x 2s"3e("1C 2w 3j | "..21.1j.." 1x 2s "..27(2u))2l(0.5)1G.1o.1b=21.1j 1e:1d(1G,1f.O(0.7,1a.1g.1i),{1n=0.5}):1c()1e:1d(1G,1f.O(0.7,1a.1g.1i),{1W=1h.1l(32,30,38)}):1c()1e:1d(1G.1A,1f.O(0.7,1a.1g.1i),{1O=0.5}):1c()J J W 4W:jZ(8B)21.1Q=8B 2q(21.1Q)J W 4W:2q(7G)7G=2P({1j=21.1j,1y=21.1y,1Q=21.1Q,1x=21.1x},7G or{})4W.2Q=7G 21=7G 1G.1j=21.1j.." - 1G"1G.1o.1b=21.1j if 21.1y~=1N 1t 21.1y~=""1t 1G.2E~=1N V 1G.2E.1b=21.1y J 2q(21.1Q)4W.1Q=21.1Q S 2m,2u=2e(W()21.1x(21.1Q)J)if 1F 2m V 1e:1d(1G,1f.O(0.7,1a.1g.1i),{1n=0}):1c()1e:1d(1G,1f.O(0.7,1a.1g.1i),{1W=1h.1l(85,0,0)}):1c()1e:1d(1G.1A,1f.O(0.7,1a.1g.1i),{1O=0}):1c()1G.1o.1b="1x 2s"3e("1C 2w 3j | "..21.1j.." 1x 2s "..27(2u))2l(0.5)1G.1o.1b=21.1j 1e:1d(1G,1f.O(0.7,1a.1g.1i),{1n=0.5}):1c()1e:1d(1G,1f.O(0.7,1a.1g.1i),{1W=1h.1l(32,30,38)}):1c()1e:1d(1G.1A,1f.O(0.7,1a.1g.1i),{1O=0.5}):1c()J J W 4W:2A()1G.1I=1p 1G:2A()J 2N.7t:5b("2g"):1D(W()1G.3x.1P.1M=1C.6F 1G.3x.1A.1P.1M=1C.6F J)if 2b V 1C.2z[2b]=4W J 1L 4W J--1m W 2Z:dZ(1H,2b)S 3F={5Q="jY",6Z=1p,2Q=1H,6i=1p}1H=2P({1j="1m",1y=1N,3i="Q",4Z=1p,--cR aF fK 2K 1m in 3x fJ 1x=W(1m)--3S W 71 8h 7C 9C 2K 1m is fI--3S 8g(1m)is a fH 1Y aE 2K 1m is b2 fG or 1F(4Z fF to be 1v)or aE 2K 1m is bG fE J,d1=W(1m)--3S W 71 8h 7C 9C 2K jX 5d jW--3S 8g(1m)is a 1a.3Q 1Y 2K O jV 3C J,},1H or{})S 6K=1p S 1m if 1H.1y~=1N 1t 1H.1y~=""V 1m=2f.2t.fD:2O()1V 1m=2f.2t.1m:2O()J 1m.1I=1v 1m.2c=2L 1m.1j=1H.1j 1m.1o.1b=1H.1j if 1H.1y~=1N 1t 1H.1y~=""V 1m.2E.1b=1H.1y J 1m.1o.1Z=1 if 1H.1y~=1N 1t 1H.1y~=""V 1m.2E.1Z=1 J 1m.2o.1n=1 1m.2o.1A.1O=1 1m.2o.2H.1Z=1 1e:1d(1m,1f.O(0.3,1a.1g.1i),{1n=0.5}):1c()1e:1d(1m.1o,1f.O(0.3,1a.1g.1i),{1Z=0}):1c()if 1H.1y~=1N 1t 1H.1y~=""V 1e:1d(1m.2E,1f.O(0.3,1a.1g.1i),{1Z=0}):1c()J 1e:1d(1m.2o,1f.O(0.3,1a.1g.1i),{1n=0.9}):1c()1e:1d(1m.2o.1A,1f.O(0.3,1a.1g.1i),{1O=0.3}):1c()1e:1d(1m.2o.2H,1f.O(0.3,1a.1g.1i),{1Z=0}):1c()1m.2o.2H.1b=1H.3i 1m.2o.2H.1B=1u.O(0,1m.2o.2H.4i.X+20,0,42)1m.2o.2H.fC:1D(W()6K=1v 1m.2o.2H.1b=""J)1m.2o.2H.6q:1D(W()6K=1p if 1m.2o.2H.1b==(1N or"")V 1m.2o.2H.1b=1H.3i J J)1m["3Y"]:1D(W()1E(1m.1A,{1M=1h.1l(87,84,104)})J)1m["3X"]:1D(W()1E(1m.1A,{1M=1h.1l(64,61,76)})J)6n.7f:1D(W(39,aC)if 6K V if 39.3Q~=1a.3Q.d0 1t 39.3Q~=2i.1m V S aD=2M.cZ(27(39.3Q),".")S 8j=aD[3]1m.2o.2H.1b=27(8j)1H.3i=27(8j)S 2m,2u=2e(W()1H.d1(1H.3i)J)if 1F 2m V 1e:1d(1m,1f.O(0.7,1a.1g.1i),{1n=0}):1c()1e:1d(1m,1f.O(0.7,1a.1g.1i),{1W=1h.1l(85,0,0)}):1c()1e:1d(1m.1A,1f.O(0.7,1a.1g.1i),{1O=1}):1c()1m.1o.1b="1x 2s"3e("1C 2w 3j | "..1H.1j.." 1x 2s "..27(2u))2l(0.5)1m.1o.1b=1H.1j 1e:1d(1m,1f.O(0.7,1a.1g.1i),{1n=0.5}):1c()1e:1d(1m,1f.O(0.7,1a.1g.1i),{1W=1h.1l(32,30,38)}):1c()1e:1d(1m.1A,1f.O(0.7,1a.1g.1i),{1O=0.5}):1c()J 1m.2o.2H:bH()J 3l 1H.3i~=1N 1t(39.3Q==1a.3Q[1H.3i]1t 1F aC)V--fB S 6J=1v S 8i 8i=39.bJ:1D(W(aB)if aB=="9E"V 8i:7Y()6J=1p J J)if 1F 1H.4Z V 3F.6i=1F 3F.6i S 2m,2u=2e(W()1H.1x(3F.6i)J)if 1F 2m V 1e:1d(1m,1f.O(0.7,1a.1g.1i),{1n=0}):1c()1e:1d(1m,1f.O(0.7,1a.1g.1i),{1W=1h.1l(85,0,0)}):1c()1e:1d(1m.1A,1f.O(0.7,1a.1g.1i),{1O=1}):1c()1m.1o.1b="1x 2s"3e("1C 2w 3j | "..1H.1j.." 1x 2s "..27(2u))2l(0.5)1m.1o.1b=1H.1j 1e:1d(1m,1f.O(0.7,1a.1g.1i),{1n=0.5}):1c()1e:1d(1m,1f.O(0.7,1a.1g.1i),{1W=1h.1l(32,30,38)}):1c()1e:1d(1m.1A,1f.O(0.7,1a.1g.1i),{1O=0.5}):1c()J 1V 2l(0.1)if 6J V S 5F;5F=5B.bI:1D(W()if 1F 6J V S 2m,2u=2e(W()1H.1x(1p)J)if 1F 2m V 1e:1d(1m,1f.O(0.7,1a.1g.1i),{1n=0}):1c()1e:1d(1m,1f.O(0.7,1a.1g.1i),{1W=1h.1l(85,0,0)}):1c()1e:1d(1m.1A,1f.O(0.7,1a.1g.1i),{1O=1}):1c()1m.1o.1b="1x 2s"3e("1C 2w 3j | "..1H.1j.." 1x 2s "..27(2u))2l(0.5)1m.1o.1b=1H.1j 1e:1d(1m,1f.O(0.7,1a.1g.1i),{1n=0.5}):1c()1e:1d(1m,1f.O(0.7,1a.1g.1i),{1W=1h.1l(32,30,38)}):1c()1e:1d(1m.1A,1f.O(0.7,1a.1g.1i),{1O=0.5}):1c()J 5F:7Y()1V S 2m,2u=2e(W()1H.1x(1v)J)if 1F 2m V 1e:1d(1m,1f.O(0.7,1a.1g.1i),{1n=0}):1c()1e:1d(1m,1f.O(0.7,1a.1g.1i),{1W=1h.1l(85,0,0)}):1c()1e:1d(1m.1A,1f.O(0.7,1a.1g.1i),{1O=1}):1c()1m.1o.1b="1x 2s"3e("1C 2w 3j | "..1H.1j.." 1x 2s "..27(2u))2l(0.5)1m.1o.1b=1H.1j 1e:1d(1m,1f.O(0.7,1a.1g.1i),{1n=0.5}):1c()1e:1d(1m,1f.O(0.7,1a.1g.1i),{1W=1h.1l(32,30,38)}):1c()1e:1d(1m.1A,1f.O(0.7,1a.1g.1i),{1O=0.5}):1c()J J J)J J J J)1m.2o.2H:5b("1b"):1D(W()1e:1d(1m.2o,1f.O(0.55,1a.1g.1i,1a.3E.3R),{1B=1u.O(0,1m.2o.2H.4i.X+20,0,30)}):1c()J)W 3F:2q(5E)5E=2P({1j=1H.1j,1y=1H.1y,3i=1H.3i,4Z=1H.4Z,1x=1H.1x},5E or{})3F.2Q=5E 1H=5E 1m.1j=1H.1j 1m.1o.1b=1H.1j if 1H.1y~=1N 1t 1H.1y~=""1t 1m.2E~=1N V 1m.2E.1b=1H.1y J 1m.2o.2H.1b=1H.3i 1m.2o.1B=1u.O(0,1m.2o.2H.4i.X+20,0,42)3F.3i=1H.3i J W 3F:2A()1m.1I=1p 1m:2A()J if 2b V 1C.2z[2b]=3F J--1C.5p[1H.2b]=1H 1L 3F J W 2Z:gJ(1H)1H=2P({1j="1m",1y=1N,3i="Q",4Z=1p,--cR aF fK 2K 1m in 3x fJ 1x=W(1m)--3S W 71 8h 7C 9C 2K 1m is fI--3S 8g(1m)is a fH 1Y aE 2K 1m is b2 fG or 1F(4Z fF to be 1v)or aE 2K 1m is bG fE J},1H or{})S 3F={2Q=1H,6i=1p}S 6K=1p S 1m if 1H.1y~=1N 1t 1H.1y~=""V 1m=2f.2t.fD:2O()1V 1m=2f.2t.1m:2O()J 1m.1I=1v 1m.2c=2L 1m.1j=1H.1j 1m.1o.1b=1H.1j if 1H.1y~=1N 1t 1H.1y~=""V 1m.2E.1b=1H.1y J 1m.1o.1Z=1 if 1H.1y~=1N 1t 1H.1y~=""V 1m.2E.1Z=1 J 1m.2o.1n=1 1m.2o.1A.1O=1 1m.2o.2H.1Z=1 1e:1d(1m,1f.O(0.3,1a.1g.1i),{1n=0.5}):1c()1e:1d(1m.1o,1f.O(0.3,1a.1g.1i),{1Z=0}):1c()if 1H.1y~=1N 1t 1H.1y~=""V 1e:1d(1m.2E,1f.O(0.3,1a.1g.1i),{1Z=0}):1c()J 1e:1d(1m.2o,1f.O(0.3,1a.1g.1i),{1n=0.9}):1c()1e:1d(1m.2o.1A,1f.O(0.3,1a.1g.1i),{1O=0.3}):1c()1e:1d(1m.2o.2H,1f.O(0.3,1a.1g.1i),{1Z=0}):1c()1m.2o.2H.1b=1H.3i 1m.2o.2H.1B=1u.O(0,1m.2o.2H.4i.X+16,0,42)1m.2o.2H.fC:1D(W()6K=1v 1m.2o.2H.1b=""J)1m.2o.2H.6q:1D(W()6K=1p if 1m.2o.2H.1b==(1N or"")V 1m.2o.2H.1b=1H.3i J J)1m["3Y"]:1D(W()1E(1m.1A,{1M=1h.1l(87,84,104)})J)1m["3X"]:1D(W()1E(1m.1A,{1M=1h.1l(64,61,76)})J)6n.7f:1D(W(39,aC)if 6K V if 39.3Q~=1a.3Q.d0 1t 39.3Q~=1a.3Q.K V S aD=2M.cZ(27(39.3Q),".")S 8j=aD[3]1m.2o.2H.1b=27(8j)1H.3i=27(8j)1m.2o.2H:bH()J 3l 1H.3i~=1N 1t(39.3Q==1a.3Q[1H.3i]1t 1F aC)V--fB S 6J=1v S 8i 8i=39.bJ:1D(W(aB)if aB=="9E"V 8i:7Y()6J=1p J J)if 1F 1H.4Z V 3F.6i=1F 3F.6i S 2m,2u=2e(W()1H.1x(3F.6i)J)if 1F 2m V 1e:1d(1m,1f.O(0.7,1a.1g.1i),{1n=0}):1c()1e:1d(1m,1f.O(0.7,1a.1g.1i),{1W=1h.1l(85,0,0)}):1c()1e:1d(1m.1A,1f.O(0.7,1a.1g.1i),{1O=1}):1c()1m.1o.1b="1x 2s"3e("1C 2w 3j | "..1H.1j.." 1x 2s "..27(2u))2l(0.5)1m.1o.1b=1H.1j 1e:1d(1m,1f.O(0.7,1a.1g.1i),{1n=0.5}):1c()1e:1d(1m,1f.O(0.7,1a.1g.1i),{1W=1h.1l(32,30,38)}):1c()1e:1d(1m.1A,1f.O(0.7,1a.1g.1i),{1O=0.5}):1c()J 1V 2l(0.1)if 6J V S 5F;5F=5B.bI:1D(W()if 1F 6J V S 2m,2u=2e(W()1H.1x(1p)J)if 1F 2m V 1e:1d(1m,1f.O(0.7,1a.1g.1i),{1n=0}):1c()1e:1d(1m,1f.O(0.7,1a.1g.1i),{1W=1h.1l(85,0,0)}):1c()1e:1d(1m.1A,1f.O(0.7,1a.1g.1i),{1O=1}):1c()1m.1o.1b="1x 2s"3e("1C 2w 3j | "..1H.1j.." 1x 2s "..27(2u))2l(0.5)1m.1o.1b=1H.1j 1e:1d(1m,1f.O(0.7,1a.1g.1i),{1n=0.5}):1c()1e:1d(1m,1f.O(0.7,1a.1g.1i),{1W=1h.1l(32,30,38)}):1c()1e:1d(1m.1A,1f.O(0.7,1a.1g.1i),{1O=0.5}):1c()J 5F:7Y()1V S 2m,2u=2e(W()1H.1x(1v)J)if 1F 2m V 1e:1d(1m,1f.O(0.7,1a.1g.1i),{1n=0}):1c()1e:1d(1m,1f.O(0.7,1a.1g.1i),{1W=1h.1l(85,0,0)}):1c()1e:1d(1m.1A,1f.O(0.7,1a.1g.1i),{1O=1}):1c()1m.1o.1b="1x 2s"3e("1C 2w 3j | "..1H.1j.." 1x 2s "..27(2u))2l(0.5)1m.1o.1b=1H.1j 1e:1d(1m,1f.O(0.7,1a.1g.1i),{1n=0.5}):1c()1e:1d(1m,1f.O(0.7,1a.1g.1i),{1W=1h.1l(32,30,38)}):1c()1e:1d(1m.1A,1f.O(0.7,1a.1g.1i),{1O=0.5}):1c()J J J)J J J J)1m.2o.2H:5b("1b"):1D(W()1e:1d(1m.2o,1f.O(0.55,1a.1g.1i,1a.3E.3R),{1B=1u.O(0,1m.2o.2H.4i.X+16,0,30)}):1c()J)W 3F:2q(5E)5E=2P({1j=1H.1j,1y=1H.1y,3i=1H.3i,4Z=1H.4Z,1x=1H.1x},5E or{})3F.2Q=5E 1H=5E 1m.1j=1H.1j 1m.1o.1b=1H.1j if 1H.1y~=1N 1t 1H.1y~=""1t 1m.2E~=1N V 1m.2E.1b=1H.1y J 1m.2o.2H.1b=1H.3i 1m.2o.2H.1B=1u.O(0,1m.2o.2H.4i.X+16,0,42)--1C.5p[1H.2b]=1H J W 3F:2A()1m.1I=1p 1m:2A()J--1C.5p[1H.2b]=1H 1L 3F J--cY 1w W 2Z:9R(2n,2b)S 4I={6Z=1p,5Q="1w",2Q=2n}2n=2P({1j="cY 1w",1y=1N,1Q="",3b="1w jU",cX=1p,9S=1p,7P=1p,78=1N,1x=W(1b)J,--52},2n or{})4I.1Q=2n.1Q S 3T if 2n.1y~=1N 1t 2n.1y~=""V 3T=1v J S 1w if 3T V 1w=2f.2t.jT:2O()1V 1w=2f.2t.1w:2O()J 1w.1j=2n.1j 1w.1o.1b=2n.1j if 3T V 1w.2E.1b=2n.1y J 1w.1I=1v 1w.2c=2L 1w.1n=1 1w.1A.1O=1 1w.1o.1Z=1 if 3T V 1w.2E.1Z=1 J 1w.2j.1n=1 1w.2j.1A.1O=1 1w.2j.1U.1Z=1 1e:1d(1w,1f.O(0.3,1a.1g.1i),{1n=0.5}):1c()1e:1d(1w.1A,1f.O(0.3,1a.1g.1i),{1O=0.5}):1c()1e:1d(1w.1o,1f.O(0.3,1a.1g.1i),{1Z=0}):1c()if 3T V 1e:1d(1w.2E,1f.O(0.3,1a.1g.1i),{1Z=0}):1c()J 1e:1d(1w.2j,1f.O(0.3,1a.1g.1i),{1n=0.9}):1c()1e:1d(1w.2j.1A,1f.O(0.3,1a.1g.1i),{1O=0.3}):1c()1e:1d(1w.2j.1U,1f.O(0.3,1a.1g.1i),{1Z=0}):1c()1w.2j.1U.3b=2n.3b 1w.2j.1B=1u.O(0,1w.2j.1U.4i.X+52,0,30)1w.2j.1U.6q:1D(W(2V)if 2n.7P V if 2V V S 2m,2u=2e(W()2n.1x(1w.2j.1U.1b)4I.1Q=1w.2j.1U.1b J)if 1F 2m V 1e:1d(1w,1f.O(0.7,1a.1g.1i),{1n=0}):1c()1e:1d(1w,1f.O(0.7,1a.1g.1i),{1W=1h.1l(85,0,0)}):1c()1e:1d(1w.1A,1f.O(0.7,1a.1g.1i),{1O=1}):1c()1w.1o.1b="1x 2s"3e("1C 2w 3j | "..2n.1j.." 1x 2s "..27(2u))2l(0.5)1w.1o.1b=2n.1j 1e:1d(1w,1f.O(0.7,1a.1g.1i),{1n=0.5}):1c()1e:1d(1w,1f.O(0.7,1a.1g.1i),{1W=1h.1l(32,30,38)}):1c()1e:1d(1w.1A,1f.O(0.7,1a.1g.1i),{1O=0.5}):1c()J J J if 2n.cX V 1w.2j.1U.1b=""J J)if 2n.9S V 1w.2j.1U:5b("1b"):1D(W()S 3D=1w.2j.1U.1b if 1F 47(3D)1t 3D~="."V 1w.2j.1U.1b=3D:7T("[0-9.]*")or""J J)J 1w.2j.1U:5b("1b"):1D(W()if 47(2n.78)V if(#1w.2j.1U.1b-1)==2n.78 V 1w.2j.1U.1b=1w.2j.1U.1b:8d(1,2n.78)J J 1e:1d(1w.2j,1f.O(0.55,1a.1g.1i,1a.3E.3R),{1B=1u.O(0,1w.2j.1U.4i.X+52,0,30)}):1c()if 1F 2n.7P V S 2m,2u=2e(W()2n.1x(1w.2j.1U.1b)J)if 1F 2m V 1e:1d(1w,1f.O(0.7,1a.1g.1i),{1n=0}):1c()1e:1d(1w,1f.O(0.7,1a.1g.1i),{1W=1h.1l(85,0,0)}):1c()1e:1d(1w.1A,1f.O(0.7,1a.1g.1i),{1O=1}):1c()1w.1o.1b="1x 2s"3e("1C 2w 3j | "..2n.1j.." 1x 2s "..27(2u))2l(0.5)1w.1o.1b=2n.1j 1e:1d(1w,1f.O(0.7,1a.1g.1i),{1n=0.5}):1c()1e:1d(1w,1f.O(0.7,1a.1g.1i),{1W=1h.1l(32,30,38)}):1c()1e:1d(1w.1A,1f.O(0.7,1a.1g.1i),{1O=0.5}):1c()J J 4I.1Q=1w.2j.1U.1b J)1w["3Y"]:1D(W()1E(1w.1A,{1M=1h.1l(87,84,104)})J)1w["3X"]:1D(W()1E(1w.1A,{1M=1h.1l(64,61,76)})J)W 4I:2q(7F)7F=2P(2n,7F or{})4I.2Q=7F 2n=7F 1w.1j=2n.1j 1w.1o.1b=2n.1j if 2n.1y~=1N 1t 2n.1y~=""1t 1w.2E~=1N V 1w.2E.1b=2n.1y J 1w.2j.1U:jS()1w.2j.1U.1b=27(2n.1Q)1w.2j.1U:bH()1w.2j.1B=1u.O(0,1w.2j.1U.4i.X+52,0,42)4I.1Q=2n.1Q J W 4I:2A()1w.1I=1p 1w:2A()J if 2b V 1C.2z[2b]=4I J 1L 4I J--1J W 2Z:8Z(1s,2b)S 4H={6Z=1p,5Q="1J",2Q=1s}1s=2P({1j="1J",1y=1N,2z={"2G 1","2G 2"},1K={"2G 1"},4R=1p,8n=1N,--bG jR a6,jQ 9D fA jP 1x=W(2z)--3S W 71 8h 7C 9C 2K az 4B is 8O--3S 8g(2z)is a 2U of fz 1Y 2K 9A az fk or a 2M if jO is 1p J,},1s or{})4H.1K=1s.1K S 3T=1p if 1s.1y~=1N 1t 1s.1y~=""V 3T=1v J S 5S S 6I if 3T V 5S=48 6I=170 3l 1F 3T V 5S=38 6I=160 J S 4G=1p S 1J if 3T V 1J=2f.2t.jN:2O()1V 1J=2f.2t.1J:2O()J 1J.1j=1s.1j 1J.1o.1b=1s.1j if 3T V 1J.2E.1b=1s.1y J 1J.2c=2L 1J.1I=1v S W 1G()4G=1F 4G if 4G V 1E(1J.5c,{aA=180})1E(1J,{1B=1u.O(1,-25,0,6I)})1V 1E(1J.5c,{aA=0})1E(1J,{1B=1u.O(1,-25,0,5S)})J J S W 3K(8N,c2)S 2m,2u=2e(W()1s.1x(8N)J)if 1F 2m V 1e:1d(1J,1f.O(0.7,1a.1g.1i),{1n=0}):1c()1e:1d(1J,1f.O(0.7,1a.1g.1i),{1W=1h.1l(85,0,0)}):1c()1e:1d(1J.1A,1f.O(0.7,1a.1g.1i),{1O=1}):1c()1J.1o.1b="1x 2s"3e("1C 2w 3j | "..1s.1j.." 1x 2s "..27(2u))2l(0.5)1J.1o.1b=1s.1j 1e:1d(1J,1f.O(0.7,1a.1g.1i),{1n=0.5}):1c()1e:1d(1J,1f.O(0.7,1a.1g.1i),{1W=1h.1l(32,30,38)}):1c()1e:1d(1J.1A,1f.O(0.7,1a.1g.1i),{1O=0.5}):1c()J if 2m 1t c2 V c2()J J--jM by jL 1J.3a:5b("1b"):1D(W()S 3D=1J.3a.1b:bF()1Y 2R,7E in 4p(1J.3J:3P())do if 7E:7c("4g")1t 7E.1j~="2t"V 7E.1I=3D==""or 2M.9w(7E.1j:bF(),3D,1,1v)~=1N J J J)S W cW()1Y 2R,4B in 4p(1J.3J:3P())do if 4B.5l=="4g"1t 4B.1j~="2t"V 4B:2A()J J J S W cV(2X)1Y 2R,2G in 2J(1J.3J:3P())do if 2G.5l=="4g"1t 2G.1j~="2t"V 1E(2G,{1n=0.98})J J 1G()1E(1J.3J[2X],{1n=0.95,2S=1h.1l(3d,3d,3d)})J S W 8G()cW()1Y i,v in 2J(1s.2z)do S 2G=1J.3J.2t:2O()S 8Q=1p 2G.1b=v if v=="2t"V v="2t (1j)"J 2G.1j=v 2G.4q.3G:1D(W()S 2V if 1s.4R V if 2U.9w(1s.1K,v)V fy(1s.1K,v)4H.1K=1s.1K if 1F 8Q V 1E(2G,{2S=1h.1l(3t,3t,3t)})J 1E(2G,{1n=0.98})1V 2U.5j(1s.1K,v)4H.1K=1s.1K 1E(2G,{2S=1h.1l(3d,3d,3d),1n=0.95})J 2V=1s.1K 1V 1s.1K={v}2V=v 4H.1K=2V cV(v)J 3K(2V,W()if 1s.4R V if 1s.1K 1t 3v(1s.1K)=="2U"V if#1s.1K==1 V 1J.3a.3b=1s.1K[1]3l#1s.1K==0 V 1J.3a.3b="4D"1V 1J.3a.3b=9B(1s.1K)J 1V 1s.1K={}1J.3a.3b="4D"J J if 1F 1s.4R V 1J.3a.3b=1s.1K[1]or"4D"J 1J.3a.1b=""J)J)2G.1I=1v 2G.2c=1J.3J 2G.3Y:1D(W()8Q=1v if 2G.1n==0.95 V 1L 1V 1E(2G,{2S=1h.1l(3d,3d,3d)})J J)2G.3X:1D(W()8Q=1p if 2G.1n==0.95 V 1L 1V 1E(2G,{2S=1h.1l(3t,3t,3t)})J J)J J S W 5T()1Y i,v in 2J(1s.2z)do 2U.8P(1s.2z,i)J 1Y i,v in 2J(3h:3P())do 2U.5j(1s.2z,v.1j)J J 1J.4q.3G:1D(W()1G()J)1J["3Y"]:1D(W()1E(1J.1A,{1M=1h.1l(87,84,104)})J)1J["3X"]:1D(W()1E(1J.1A,{1M=1h.1l(64,61,76)})J)if 1s.8n=="5H"V 1Y i,v in 2J(1s.2z)do 2U.8P(1s.2z,i)J 5T()1s.1K=1s.2z[1]3h.bb:1D(W()5T()J)3h.ba:1D(W()5T()J)J 8G()if 1s.1K V if 3v(1s.1K)=="2M"V 1s.1K={1s.1K}J if 1F 1s.4R 1t 3v(1s.1K)=="2U"V 1s.1K={1s.1K[1]}J 1V 1s.1K={}J S 2V,5q=1N,0 1Y i,v in 2J(1s.1K)do 5q=5q+1 J if 5q==1 V 2V=1s.1K[1]1V 2V=1s.1K J 3K(2V)if 3v(2V)=="2M"V 1E(1J.3J[2V],{2S=1h.1l(3d,3d,3d),1n=0.95})1V 1Y i,v in 2J(2V)do 1E(1J.3J[v],{2S=1h.1l(3d,3d,3d),1n=0.95})J J if 1s.4R V if 1s.1K 1t 3v(1s.1K)=="2U"V if#1s.1K==1 V 1J.3a.3b=1s.1K[1]3l#1s.1K==0 V 1J.3a.3b="4D"1V 1J.3a.3b=9B(1s.1K)J 1V 1s.1K={}1J.3a.3b="4D"J 1Y 2R,2X in 2J(1s.1K)do 1E(1J.3J[2X],{2S=1h.1l(6r,6r,6r),1n=0.95})J 1V 1J.3a.3b=1s.1K[1]or"4D"J 1J.3a.1b=""W 4H:2q(7D)7D=2P(1s,7D or{})4H.2Q=7D 1s=7D 1J.1j=1s.1j 1J.1o.1b=1s.1j if 1s.1y~=1N 1t 1s.1y~=""1t 1J.2E~=1N V 1J.2E.1b=1s.1y J if 1s.8n=="5H"V 1Y i,v in 2J(1s.2z)do 2U.8P(1s.2z,i)J 5T()1s.1K=1s.2z[1]3h.bb:1D(W()5T()J)3h.ba:1D(W()5T()J)J 8G()if 1s.1K V if 3v(1s.1K)=="2M"V 1s.1K={1s.1K}J if 1F 1s.4R 1t 3v(1s.1K)=="2U"V 1s.1K={1s.1K[1]}J 1V 1s.1K={}J S 2V,5q=1N,0 1Y i,v in 2J(1s.1K)do 5q=5q+1 J if 5q==1 V 2V=1s.1K[1]1V 2V=1s.1K J 3K(2V)1Y 2R,2G in 2J(1J.3J:3P())do if 2G.5l=="4g"V 1E(2G,{2S=1h.1l(3t,3t,3t),1n=0.98})J J 1E(1J.3J[2V],{2S=1h.1l(3d,3d,3d),1n=0.95})if 1s.4R V if 1s.1K 1t 3v(1s.1K)=="2U"V if#1s.1K==1 V 1J.3a.3b=1s.1K[1]3l#1s.1K==0 V 1J.3a.3b="4D"1V 1J.3a.3b=9B(1s.1K)J 1V 1s.1K={}1J.3a.3b="4D"J 1Y 2R,2X in 2J(1s.1K)do 1E(1J.3J[2X],{2S=1h.1l(6r,6r,6r),1n=0.95})J 1V 1J.3a.3b=1s.1K[1]or"4D"J 1J.3a.1b=""--1C.5p[1s.2b]=1s J W 4H:2A()1J.1I=1p 1J:2A()J if 2b V 1C.2z[2b]=4H J--1C.5p[1s.2b]=1s 1L 4H J--1M cU W 2Z:93(2F,2b)--by jK/jJ S 4E={jI=1p,5Q="cQ",2Q=2F}2F=2P({1j="1M cU",1M=1h.1l(1z,1z,1z),1x=W(2g)--3S W 71 8h 7C fs fx 2K 1P jH is jG/8O--3S 8g(2g)is a jF 3y fw on jE 1P is az J},2F or{})S W aq(1P)1L 2M.3Z("#%3c%3c%3c",1R.2p(1P.R*1z),1R.2p(1P.G*1z),1R.2p(1P.B*1z))J 4E.1M=aq(2F.1M)S 5S=1u.O(0,75,0,22)S 6I=1u.O(0,jD,0,129)S 1T=2f.2t.1T:2O()S 4u=1T.jC S 5o=4u.5o S 1q=4u.jB S 1r=1T.jA 1T.1j=2F.1j 1T.1o.1b=2F.1j 1T.1I=1v 1T.2c=2L 1T.1B=1u.O(1.ay,-25,0,38)4u.1B=5S 5o.1n=0 1T["3Y"]:1D(W()1E(1T.1A,{1M=1h.1l(87,84,104)})J)1T["3X"]:1D(W()1E(1T.1A,{1M=1h.1l(64,61,76)})J)S W 3K(8N,c2)S 2m,2u=2e(W()2F.1x(8N)J)if 1F 2m V 1e:1d(1T,1f.O(0.7,1a.1g.1i),{1n=0}):1c()1e:1d(1T,1f.O(0.7,1a.1g.1i),{1W=1h.1l(85,0,0)}):1c()1e:1d(1T.1A,1f.O(0.7,1a.1g.1i),{1O=1}):1c()1T.1o.1b="1x 2s"3e("1C 2w 3j | "..2F.1j.." 1x 2s "..27(2u))2l(0.5)1T.1o.1b=2F.1j 1e:1d(1T,1f.O(0.7,1a.1g.1i),{1n=0.5}):1c()1e:1d(1T,1f.O(0.7,1a.1g.1i),{1W=1h.1l(32,30,38)}):1c()1e:1d(1T.1A,1f.O(0.7,1a.1g.1i),{1O=0.5}):1c()J if 2m 1t c2 V c2()J J S 4G=1p S 7p=3s.3h.5w:jz()1q.4c="D://H.F.j/u/?id=jw"S 7B=1p S 7A=1p 1T.4q.6H:1D(W()if 1F 4G V 4G=1v 1E(1T,{1B=1u.O(1.ay,-25,0,165)},1N,1f.O(0.6,1a.1g.1i))1E(4u,{1B=6I})1E(5o,{1n=1})1V 4G=1p 1E(1T,{1B=1u.O(1.ay,-25,0,38)},1N,1f.O(0.6,1a.1g.1i))1E(4u,{1B=5S})1E(5o,{1n=0})J J)6n.a8:1D(W(39,jv)if 39.2r==1a.2r.6u or 39.2r==1a.2r.5h V 7B=1p 7A=1p J J)1q.6H:1D(W()if 4G V 7B=1v J J)1q.4F.6H:1D(W()if 4G V 7B=1v J J)1r.6H:1D(W()7A=1v J)1r.5R.6H:1D(W()7A=1v J)S h,s,v=2F.1M:8H()S 1P=1h.3p(h,s,v)S r,g,b=1R.2p((h*1z)+0.5),1R.2p((s*1z)+0.5),1R.2p((v*1z)+0.5)S 4C=2M.3Z("#%3c%3c%3c",1P.R*3A,1P.G*3A,1P.B*3A)1T.4V.1U.1b=4C S W 7v(hp,sp,vp)--1q 1q.4F.1X=1u.O(s,-1q.4F.2I.X/2,1-v,-1q.4F.2I.Y/2)1q.4F.3I=1h.3p(hp,sp,vp)4u.1W=1h.3p(hp,1,1)5o.1W=1h.3p(hp,sp,vp)--1r S x=hp*1r.2I.X 1r.5R.1X=1u.O(0,x-1r.5R.2I.X/2,0.5,0)1r.5R.3I=1h.3p(hp,1,1)S 1P=1h.3p(hp,sp,vp)S r,g,b=1R.2p((1P.R*1z)+0.5),1R.2p((1P.G*1z)+0.5),1R.2p((1P.B*1z)+0.5)1T.7z.1U.1b=27(r)1T.7y.1U.1b=27(g)1T.7x.1U.1b=27(b)4C=2M.3Z("#%3c%3c%3c",1P.R*3A,1P.G*3A,1P.B*3A)1T.4V.1U.1b=4C J 7v(h,s,v)1T.4V.1U.6q:1D(W()if 1F 2e(W()S r,g,b=2M.7T(1T.4V.1U.1b,"^#?(%w%w)(%w%w)(%w%w)$")S ax=1h.1l(47(r,16),47(g,16),47(b,16))h,s,v=ax:8H()4C=1T.4V.1U.1b 7v()2F.1M=ax J)V 1T.4V.1U.1b=4C J S r,g,b=1R.2p((h*1z)+0.5),1R.2p((s*1z)+0.5),1R.2p((v*1z)+0.5)2F.1M=1h.1l(r,g,b)3K(1h.1l(r,g,b))J)--ju S W 8J(5O,aw)S 3y=47(5O.1b)S 1P=1h.3p(h,s,v)S 8M,8L,8K=1R.2p((1P.R*1z)+0.5),1R.2p((1P.G*1z)+0.5),1R.2p((1P.B*1z)+0.5)S 6p if aw=="R"V 6p=8M;8M=3y 3l aw=="G"V 6p=8L;8L=3y 1V 6p=8K;8K=3y J if 3y V 3y=1R.5f(3y,0,1z)h,s,v=1h.1l(8M,8L,8K):8H()7v()1V 5O.1b=27(6p)J S r,g,b=1R.2p((1P.R*1z)+0.5),1R.2p((1P.G*1z)+0.5),1R.2p((1P.B*1z)+0.5)2F.1M=1h.1l(r,g,b)J 1T.7z.1U.6q:8I(W()8J(1T.7z.1U,"R")3K(1h.1l(r,g,b))J)1T.7y.1U.6q:8I(W()8J(1T.7y.1U,"G")3K(1h.1l(r,g,b))J)1T.7x.1U.6q:8I(W()8J(1T.7x.1U,"B")3K(1h.1l(r,g,b))J)5B.bg:8I(W()if 7B V S 6G=1R.5f(7p.X-1q.3n.X,0,1q.2I.X)S av=1R.5f(7p.Y-1q.3n.Y,0,1q.2I.Y)1q.4F.1X=1u.O(0,6G-1q.4F.2I.X/2,0,av-1q.4F.2I.Y/2)s=6G/1q.2I.X v=1-(av/1q.2I.Y)5o.1W=1h.3p(h,s,v)1q.4F.3I=1h.3p(h,s,v)4u.1W=1h.3p(h,1,1)S 1P=1h.3p(h,s,v)S r,g,b=1R.2p((1P.R*1z)+0.5),1R.2p((1P.G*1z)+0.5),1R.2p((1P.B*1z)+0.5)1T.7z.1U.1b=27(r)1T.7y.1U.1b=27(g)1T.7x.1U.1b=27(b)1T.4V.1U.1b=2M.3Z("#%3c%3c%3c",1P.R*3A,1P.G*3A,1P.B*3A)3K(1h.1l(r,g,b))2F.1M=1h.1l(r,g,b)4E.1M=2F.1M J if 7A V S 6G=1R.5f(7p.X-1r.3n.X,0,1r.2I.X)h=6G/1r.2I.X 5o.1W=1h.3p(h,s,v)1r.5R.1X=1u.O(0,6G-1r.5R.2I.X/2,0.5,0)1r.5R.3I=1h.3p(h,1,1)4u.1W=1h.3p(h,1,1)1q.4F.3I=1h.3p(h,s,v)S 1P=1h.3p(h,s,v)S r,g,b=1R.2p((1P.R*1z)+0.5),1R.2p((1P.G*1z)+0.5),1R.2p((1P.B*1z)+0.5)1T.7z.1U.1b=27(r)1T.7y.1U.1b=27(g)1T.7x.1U.1b=27(b)1T.4V.1U.1b=2M.3Z("#%3c%3c%3c",1P.R*3A,1P.G*3A,1P.B*3A)3K(1h.1l(r,g,b))2F.1M=1h.1l(r,g,b)4E.1M=2F.1M J J)W 4E:2q(7w)7w=2P(2F,7w or{})4E.2Q=7w 2F=7w 1T.1j=2F.1j 1T.1o.1b=2F.1j 1T.1I=1v S h,s,v=2F.1M:8H()S 1P=1h.3p(h,s,v)S r,g,b=1R.2p((1P.R*1z)+0.5),1R.2p((1P.G*1z)+0.5),1R.2p((1P.B*1z)+0.5)S 4C=2M.3Z("#%3c%3c%3c",1P.R*3A,1P.G*3A,1P.B*3A)1T.4V.1U.1b=4C 7v(h,s,v)3K(1h.1l(r,g,b))4E.1M=2F.1M J W 4E:2A()1T:2A()J if 2b V 1C.2z[2b]=4E J 3K(2F.1M)1L 4E J W 2Z:sy()if 4m V 2Z:9W({1b="4A 6s 8C. (sx 4m)",6a=3})1L"4A 6s 8C."J S au=1N S 8F=1N S 1o=2f.2t.1o:2O()1o.1b="fv"1o.1I=1v 1o.2c=2L 1o.1Z=1 1e:1d(1o,1f.O(0.4,1a.1g.1i,1a.3E.3R),{1Z=0}):1c()2Z:6S("4A sw")2Z:9R({1j="4A 1j",1y="sv a 2X 1Y 8f to be su 4P.",3b="1j",1Q="",9S=1p,78=1N,7P=1p,1x=W(39)au=39 J,})S cS 2Z:53({1j="1d 4A",1y="1d a 4P ss jt of 8f 9A 5D.",1x=W()if 1F au or 2M.sr(au," ","")==""V 1C:4b({1o="2w",3o="j2",4a="4l",4L="4A 2X sq be sn."})1L J S 6B,ar=1C:fn(au)if 1F 6B V 1C:4b({1o="2w",3o="7u",4a="4l",4L="bD to 6p 4P, 1L 7u: "..ar})J 1C:4b({1o="2w",3o="9o",4a="4l",4L=2M.3Z("e0 4P %q",au),})cS:2q({2z=1C:cM()})J})2Z:6S("4A 7s/2Q")cS=2Z:8Z({1j="js 4A",1y="js a 4P to am 8f 5D on.",2z=1C:cM(),1K={},4R=1p,8n=1N,1x=W(2g)8F=2g J,})2Z:53({1j="7s 4A",1y="7s 8f jr 4P 5D.",1x=W()S 6B,ar=1C:fl(8F)if 1F 6B V 1C:4b({1o="2w",3o="7u",4a="4l",4L="bD to am 4P, 1L 7u: "..ar})1L J 1C:4b({1o="2w",3o="9o",4a="4l",4L=2M.3Z("cT 4P %q",8F),})J})2Z:53({1j="jq 4A",1y="jq 8f 9A 4P 5D.",1x=W()S 6B,ar=1C:fn(8F)if 1F 6B V 1C:4b({1o="2w",3o="7u",4a="4l",4L="bD to sm 4P, 1L 7u: "..ar})1L J 1C:4b({1o="2w",3o="9o",4a="4l",4L=2M.3Z("sl 4P %q",8F),})J})2Z:53({1j="8G 4A 3J",1y="8G 2K 9A 4P 3m.",1x=W()cS:2q({2z=1C:cM()})J,})S bE 2Z:53({1j="2q as 4s",1y="2q a 4P to fu am cR in 8f cN sk.",1x=W()S 2X=8F 7d(1C.5n.."/5D/4s.5L",2X)bE:2q({1b="49 4s 4P: "..2X})1C:4b({1o="2w",3o="9o",4a="4l",4L=2M.3Z("2q %q to fu am",2X),})J,})bE=2Z:9V({1o="49 j7 7s",1b="4D"})2Z:53({1j="jp ft",1y="jp 3S ft sj",1x=W()S 2X=8F jo(1C.5n.."/5D/4s.5L")bE:2q({1b="4D"})1C:4b({1o="2w",3o="9o",4a="4l",4L="sf ft",})J,})if 7S(1C.5n.."/5D/4s.5L")V S 2X=7U(1C.5n.."/5D/4s.5L")bE:2q({1b="49 4s 4P: "..2X})J J S bC={["1G"]={ap=W(2b,2C)1L{3v="1G",6C=2b,7i=2C.1Q or 1p}J,7s=W(2b,2C)if 1C.2z[2b]V 1C.2z[2b]:2q({1Q=2C.7i})J J},["1r"]={ap=W(2b,2C)1L{3v="1r",6C=2b,3y=(2C.1Q 1t 27(2C.1Q)),}J,7s=W(2b,2C)if 1C.2z[2b]1t 2C.3y V 1C.2z[2b]:2q({1Q=2C.3y})J J},["1w"]={ap=W(2b,2C)1L{3v="1w",6C=2b,3D=2C.1Q}J,7s=W(2b,2C)if 1C.2z[2b]1t 2C.3D 1t 3v(2C.3D)=="2M"V 1C.2z[2b]:2q({1Q=2C.3D})J J},["1J"]={ap=W(2b,2C)1L{3v="1J",6C=2b,3y=2C.1K}J,7s=W(2b,2C)if 1C.2z[2b]1t 2C.3y V 1C.2z[2b]:2q({1K=2C.3y})J J},--sc as sb sa["cQ"]={ap=W(2b,2C)S W aq(1P)1L 2M.3Z("#%3c%3c%3c",1R.2p(1P.R*1z),1R.2p(1P.G*1z),1R.2p(1P.B*1z))J 1L{3v="cQ",6C=2b,1P=aq(2C.1M)or 1N,s9=2C.s8}J,7s=W(2b,2C)S W jn(4C)S r=47(4C:8d(2,3),16)/1z S g=47(4C:8d(4,5),16)/1z S b=47(4C:8d(6,7),16)/1z 1L 1h.O(r,g,b)J if 1C.2z[2b]1t 2C.1P V 1C.2z[2b]:2q({1M=jn(2C.1P)})J J}}W 2Z:s7()S 1o=2f.2t.1o:2O()1o.1b="s6"1o.1I=1v 1o.2c=2L 1o.1Z=1 1e:1d(1o,1f.O(0.4,1a.1g.1i,1a.3E.3R),{1Z=0}):1c()2Z:6S("cG s5")S 9z=2Z:93({1j="1M 1",1M=1h.1l(117,164,cP),},"s4")--A 6C is 2K s0 1Y 2K jl 5C,rZ rY fs rX jm a rW 6C if fr\'re rV jl rU to rT no rS S 9y=2Z:93({1j="1M 2",1M=1h.1l(123,8E,8E),},"rR")S 9x=2Z:93({1j="1M 3",1M=1h.1l(fq,138,184),},"rQ")3u.2l(1)9z:2q({1x=W(2g)if 9y 1t 9x V 1C.6F=cO.O{6E.O(0.8D,2g or 1h.1l(1z,1z,1z)),6E.O(0.50,9y.1M or 1h.1l(1z,1z,1z)),6E.O(1.8D,9x.1M or 1h.1l(1z,1z,1z))}2N.7t.2g=1F 2N.7t.2g J J})9y:2q({1x=W(2g)if 9z 1t 9x V 1C.6F=cO.O{6E.O(0.8D,9z.1M or 1h.1l(1z,1z,1z)),6E.O(0.50,2g or 1h.1l(1z,1z,1z)),6E.O(1.8D,9x.1M or 1h.1l(1z,1z,1z))}2N.7t.2g=1F 2N.7t.2g J J})9x:2q({1x=W(jk)if 9y 1t 9z V 1C.6F=cO.O{6E.O(0.8D,9z.1M or 1h.1l(1z,1z,1z)),6E.O(0.50,9y.1M or 1h.1l(1z,1z,1z)),6E.O(1.8D,jk or 1h.1l(1z,1z,1z))}2N.7t.2g=1F 2N.7t.2g J J})2Z:6S("rP rO")1Y i,v in 2J(jj)do 2Z:53({1j=27(i),1x=W()9z:2q({1M=v[1]})9y:2q({1M=v[2]})9x:2q({1M=v[3]})J,})J J S W ji()if 4m V 1L"4A 6s 8C."J S fp={1C.5n,1C.5n.."/5D"}1Y i=1,#fp do S fo=fp[i]if 1F 9d(fo)V 9c(fo)J J J S W jh()if 4m V 1L"4A 6s 8C."J if 2y.4h.6D~=1N 1t 2y.4h.6D~=""V 1C.5n=2y.4h.6D.."/"..2y.4h.43 1V 1C.5n=2y.4h.43 J ji()J jh()W 1C:fn(ao)if 4m V 1L"4A 6s 8C."J if(1F ao)V 1L 1p,"je jd a 4P 5C."J S jg=1C.5n.."/5D/"..ao..".8e"S 2C={fm={}}1Y 6C,4B in cN,1C.2z do if 1F bC[4B.5Q]V 5N J if 4B.6Z V 5N J 2U.5j(2C.fm,bC[4B.5Q].ap(6C,4B))J S 6B,jf=2e(6b.ce,6b,2C)if 1F 6B V 1L 1p,"bD to rN rM jb 2C"J 7d(jg,jf)1L 1v J W 1C:fl(ao)if 4m V 1L"4A 6s 8C."J if(1F ao)V 1L 1p,"je jd a 4P 5C."J S 5C=1C.5n.."/5D/"..ao..".8e"if 1F 7S(5C)V 1L 1p,"jc 5C"J S 6B,ja=2e(6b.ea,6b,7U(5C))if 1F 6B V 1L 1p,"bD to rL jb 2C."J 1Y 2R,4B in cN,ja.fm do if bC[4B.3v]V 3u.bd(W()bC[4B.3v].7s(4B.6C,4B)J)J J 1L 1v J W 1C:rK()if 7S(1C.5n.."/5D/4s.5L")V if 4m V 1L"4A 6s 8C."J S 2X=7U(1C.5n.."/5D/4s.5L")S 6B,j8=1C:fl(2X)if 1F 6B V 1L 1C:4b({1o="2w",3o="c7",4a="4l",4L="j9 to am 4s 4P: "..j8,})J 1C:4b({1o="2w",3o="c7",4a="4l",4L=2M.3Z("j7 rJ 4P %q",2X),})J J W 1C:cM()if 4m V 1L"4A 6s 8C."J S 3m=rI(1C.5n.."/5D")S fj={}1Y i=1,#3m do S 5C=3m[i]if 5C:8d(-5)==".8e"V S 6m=5C:9w(".8e",1,1v)S j6=6m S 9v=5C:8d(6m,6m)bh 9v~="/"1t 9v~="\\\\"1t 9v~=""do 6m=6m-1 9v=5C:8d(6m,6m)J if 9v=="/"or 9v=="\\\\"V S 2X=5C:8d(6m+1,j6-1)if 2X~="fk"V 2U.5j(fj,2X)J J J J 1L fj J 1L 2Z J 2f.2c.1I=1v 1E(2f.2c,{1n=0.1})37.1I=1v 1E(37.4n,{1n=0})1Y 2R,4z in 4p(1q.4r:3P())do if 4z.5l=="2x"1t 4z.1j~="9s"V 4z.1I=1v 1E(4z,{1n=0.25})1E(4z.1A,{1O=0.5})1E(4z.3r,{3U=0.25})J J 1q.4r.bB.3r.3G:1D(W()--rH rG la iM y rF el hw 5M rE rD 1C:2A()if cL V cL().rC=1N J J)1q.4r.bB["3Y"]:1D(W()1E(1q.4r.bB.3r,{3I=1h.O(1,1,1)})J)1q.4r.bB["3X"]:1D(W()1E(1q.4r.bB.3r,{3I=1h.1l(195,195,195)})J)6n.7f:1D(W(39,j5)if j5 V 1L J if 2i.8B V 1L J if 39.3Q==2i.1m V fh(1q,2i.bA)2N.9r.1I=1p 5m.1I=1v 2i.8B=1v J J)1q.6o.3G:1D(W()if 37.1B.X.3O==fi V 1E(2f.2c,{1B=1u.O(1,-55,2f.2c.1B.Y.4y,2f.2c.1B.Y.3O)})1E(37,{1B=1u.O(37.1B.X.4y,55,37.1B.Y.4y,37.1B.Y.3O)})1V 1E(2f.2c,{1B=1u.O(1,-fi,2f.2c.1B.Y.4y,2f.2c.1B.Y.3O)})1E(37,{1B=1u.O(37.1B.X.4y,fi,37.1B.Y.4y,37.1B.Y.3O)})J J)1q.4r.9u.3r.3G:1D(W()2i.1B=1F 2i.1B if 2i.1B V j4(1q)5m.1I=1p 1V j3(1q)5m.1I=1v J J)1q.4r.9u["3Y"]:1D(W()1E(1q.4r.9u.3r,{3I=1h.O(1,1,1)})J)1q.4r.9u["3X"]:1D(W()1E(1q.4r.9u.3r,{3I=1h.1l(195,195,195)})J)1q.4r.9s.3r.3G:1D(W()if 2i.2Q V 2i.2Q:9t()2f.2Q.rB=3f.O(0,rA)J J)1q.4r.9s["3Y"]:1D(W()1E(1q.4r.9s.3r,{3I=1h.O(1,1,1)})J)1q.4r.9s["3X"]:1D(W()1E(1q.4r.9s.3r,{3I=1h.1l(195,195,195)})J)2N.9r.4q.3G:1D(W()fh(1q,2i.bA)5m.1I=1v 2i.8B=1v 2N.9r.1I=1p J)1L 2i J W 1C:2A()1q.1I=1p 1Y 2R,4b in 4p(7r:3P())do if 4b.5l=="2x"V 4b.1I=1p 4b:2A()J J 2N:2A()J--rz ry j2 to rx rw rv UI is ru if cL V cL().rt=1v J;(W()--=============================================--iN rs rr--=============================================S iU="fg://j1.j0.j/rq-rp/cK-bz/iZ/iY/ro/cK-bz.5L"--e8 bz iX eh iW S fb={}S ok,2C=2e(3s.iV,3s,iU)if ok 1t 2C V 1Y iT in 2C:rn("[^\\r\\n]+")do S k=iT:7T("^%s*(.-)%s*$")if k~=""V 2U.5j(fb,k)J J J S 2i=1C:e3({1j="9e",3W="",ff="iS",c8=1v,fe="9e",fd="",9q=1v,3z={1o="9e | 3C cJ",3W="rm tu 5d 5M rl",5P="rkén tu 5d en rj 79",9p="ri",fc=1v,3C=fb,8A={4d=1p,aZ="79",ak=""}}})S 31={rh=2i:99({1j="cI",3o="5a",4a="4l",9n=1v}),4o=2i:99({1j="4o",3o="iR",4a="4l",9n=1v}),5K=2i:99({1j="5K",3o="cH",4a="cG",9n=1v}),8o=2i:99({1j="8o",3o="9o",4a="4l",9n=1v})}2i:iQ({iP="iO"})--============================================================--iN|iH MÓrg V4+ik 7a--rf en iM móa3:4N ew rd,--rc ON/eL,a0 co,hZ de a1,rbón X--Méra:cD+7q iL(f3 en móa3)--============================================================S SV=3s:3V("3h")S RS=3s:3V("5B")S bk=3s:3V("6n")S WS=3s:3V("r9")S TW=3s:3V("1e")S LP=SV.5w S 6x=WS.fa--──r8────────────────────────────────────────────────S 2h={4d=1p,eC=1v,eA=1v,eB=1p,--hQ eG 9b<5 HP 6T=r7,9Z=10,9Y=0.13,ev=1v,7e=1v,b9=0.4,ck=hK,eq="cl",es=1v,iy=1.5,iz=5.0,--6c cm=1p,em=1v,ek=1v,ej=1v,ei=1v,ef=1p,9X=1h.1l(1z,60,60),ec=hE,}--──r6────────────────────────────────────────────────S ST={cp=1p,bj={},--iK r5 de eG r4 57=1,--ír3 4M a1 r2 4v=1N,eZ=0,f0=0,a2=0.6A,a5=1N,6h=1N,6z=1N,6l=1N,6d={},bw=0,r1=0,f8=0,}--╔══════════════════════════════════════════════════════╗--r0--╚══════════════════════════════════════════════════════╝S W bt(p)1L p 1t p.bW J S W eU(p)S c=bt(p or LP)1L c 1t c:59("er")J S W qZ(p)S c=bt(p or LP)1L c 1t c:eV("b1")J S W eR(pl)if 1F 2h.eC V 1L 1p J 1L pl.bf~=1N 1t pl.bf==LP.bf J S W f1(f9,5y)if 1F 2h.eA V 1L 1v J S cF=5y.1X-f9 if cF.bs>2h.ck V 1L 1p J S p=qY.O()p.qX=1a.qW.qV p.qU={LP.bW or{}}S r=WS:qT(f9,cF.qS*(cF.bs+2),p)1L r 1t r.2a:qR(5y.2c)J S W f7(6m)S sp,7n=6x:bp(6m)if 1F 7n V 1L 1R.8y,3f.iJ,3f.iJ J S c=6x.8c/2 S d=3f.O(sp.X-c.X,sp.Y-c.Y)1L d.bs,d,3f.O(sp.X,sp.Y)J S W f2(6m)1L(f7(6m))<=2h.6T J S W iA()S n=os.qQ()if n-ST.f8<1 V 1L J ST.f8=n 2e(W()ST.a2=LP:iI()J)J--╔══════════════════════════════════════════════════════╗--iH qP(cD=qO,qN móa3)--╚══════════════════════════════════════════════════════╝S W cr()S 3m={}S 7o=eU(LP)1Y 2R,pl in 2J(SV:eS())do if pl==LP V 5N J S c=bt(pl)if 1F c V 5N J S h=c:eV("b1")S pt=c:59(2h.eq)or c:59("cl")if 1F(h 1t h.cA>0 1t pt)V 5N J if eR(pl)V 5N J if 2h.eB 1t h.cA<5 V 5N J if 7o 1t(pt.1X-7o.1X).bs>2h.ck V 5N J if 1F f2(pt.1X)V 5N J if 1F f1(6x.5A.1X,pt)V 5N J S d=f7(pt.1X)2U.5j(3m,{5y=pt,6j=d,a6=pl})J 2U.iG(3m,W(a,b)1L a.6j<b.6j J)1L 3m J S W ix()S 3m=cr()ST.bj=3m if#3m==0 V 1L 1N J ST.57=1R.5f(ST.57,1,#3m)1L 3m[ST.57].5y J S W iE(5y)if 1F 5y V 1L 1N J S f=2h.9Y+(2h.ev 1t ST.a2*0.6 or 0)S v=5y.qM 1L 5y.1X+6y.O(v.X*f,v.Y*f*0.45,v.Z*f)J S W 7e()if 1F 2h.7e V 1L 0,0 J ST.bw=ST.bw+0.qL S a=2h.b9 1L 1R.f6(ST.bw*1.8+0.4)*a*(0.6+1R.f5()*0.7),1R.iF(ST.bw*1.1+1.3)*a*(0.5+1R.f5()*0.8)J--qK el 7p(qJ):f3 en PC y en qI móqH S W cC(5y)if 1F 5y or 1F 5y.2c V ST.4v=1N 1L J S iD=iE(5y)S sp,7n=6x:bp(iD)if 1F 7n V 1L J S 8z=6x.8c/2 S dx,dy=sp.X-8z.X,sp.Y-8z.Y S iC=1R.cE(dx*dx+dy*dy)S f4=2h.9Z*1R.5f(iC/(2h.6T*0.4+1),0.1,4)S jx,jy=7e()S mx=dx/f4+jx S my=dy/f4+jy if 1R.iB(mx)>0.6A or 1R.iB(my)>0.6A V--cD f3 en hf he qG(qF,9m,qE,qD.)2e(cD,mx,my)J J S W hU()iA()if 1F 2h.4d V ST.4v=1N 1L J if 1F ST.cp V ST.4v=1N 1L J S bv=qC()if ST.4v 1t ST.4v.2c V if bv-ST.eZ>2h.iz V ST.4v=1N 3l f2(ST.4v.1X)1t f1(6x.5A.1X,ST.4v)V cC(ST.4v)1L 3l 2h.es 1t(bv-ST.f0)<2h.iy V cC(ST.4v)1L 1V ST.4v=1N J J S t=ix()if t V ST.4v=t ST.f0=bv ST.eZ=bv cC(t)J J--╔══════════════════════════════════════════════════════╗--qB(a0 iw+a1 bu)--╚══════════════════════════════════════════════════════╝S W eY(th,ns,r,8b,al,6Y,zi)S c=cB.O("qA")c.7m=th c.qz=ns c.eJ=r c.1M=8b c.1O=al c.iq=6Y c.3w=zi c.1I=1p 1L c J S W aj(th,8b,al,zi)S l=cB.O("4n")l.7m=th l.1M=8b l.1O=al l.3w=zi l.1I=1p 1L l J S W eW(sz,8b,zi)S t=cB.O("1b")t.1B=sz t.1M=8b t.qy=1v t.3w=zi t.1I=1p 1L t J S W hW()if ST.6h V ST.6h:8x()J if ST.6z V ST.6z:8x()J if ST.6l V ST.6l:8x()J ST.6h=eY(1.8,128,2h.6T,1h.1l(1z,1z,1z),0.45,1p,5)ST.6z=eY(1,32,5,1h.1l(1z,60,60),0.6A,1v,7)ST.6l=aj(1.2,1h.1l(1z,60,60),0.25,6)J S W hS()if ST.6h V ST.6h:8x()ST.6h=1N J if ST.6z V ST.6z:8x()ST.6z=1N J if ST.6l V ST.6l:8x()ST.6l=1N J J S W hV()if 1F ST.6h V 1L J S 8z=6x.8c/2 ST.6h.1X=3f.O(8z.X,8z.Y)ST.6h.eJ=2h.6T ST.6h.1I=2h.4d S iv=ST.4v 1t ST.4v.2c if iv V S sp,7n=6x:bp(ST.4v.1X)if 7n V S tp=3f.O(sp.X,sp.Y)ST.6z.1X=tp ST.6z.1I=1v ST.6l.9j=3f.O(8z.X,8z.Y)ST.6l.To=tp ST.6l.1I=1v 1V ST.6z.1I=1p ST.6l.1I=1p J 1V if ST.6z V ST.6z.1I=1p J if ST.6l V ST.6l.1I=1p J J J--╔══════════════════════════════════════════════════════╗--6c--╚══════════════════════════════════════════════════════╝S iu={6y.O(0,2.6,0),6y.O(0,1.3,0),6y.O(0,0,0),6y.O(0,-1.3,0),6y.O(-1.5,1.2,0),6y.O(1.5,1.2,0),6y.O(-0.6,-2.2,0),6y.O(0.6,-2.2,0),}S W ip(7o)S x1,y1,x2,y2=1R.8y,1R.8y,-1R.8y,-1R.8y S eX=1p 1Y 2R,ir in 2J(iu)do S wp=7o.5A:qx(ir)S sp,7n=6x:bp(wp)if 7n V eX=1v if sp.X<x1 V x1=sp.X J if sp.Y<y1 V y1=sp.Y J if sp.X>x2 V x2=sp.X J if sp.Y>y2 V y2=sp.Y J J J if 1F eX V 1L 1N J 1L x1-3,y1-3,x2+3,y2+3 J S W ez(pl)S o={}o.5O={}1Y i=1,4 do o.5O[i]=aj(1.2,2h.9X,0,8)J o.6Y=cB.O("qw")o.6Y.iq=1v o.6Y.1M=2h.9X o.6Y.1O=0.88 o.6Y.7m=0 o.6Y.1I=1p o.6Y.3w=7 o.2X=eW(13,1h.1l(1z,1z,1z),9)o.9l=aj(4,1h.1l(0,0,0),0,8)o.8w=aj(3,1h.1l(80,7h,80),0,9)o.6j=eW(11,1h.1l(3t,3t,3t),9)o.8a=aj(1,2h.9X,0.2,6)ST.6d[pl]=o J S W 9g(o)if 1F o V 1L J 1Y 2R,l in 2J(o.5O)do l.1I=1p J o.6Y.1I=1p o.2X.1I=1p o.9l.1I=1p o.8w.1I=1p o.6j.1I=1p o.8a.1I=1p J S W ey(pl)S o=ST.6d[pl]if 1F o V 1L J 1Y 2R,l in 2J(o.5O)do 2e(W()l:8x()J)J 1Y 2R,k in 2J({"6Y","2X","9l","8w","6j","8a"})do 2e(W()o[k]:8x()J)J ST.6d[pl]=1N J S W il(pl,o)S c=bt(pl)S 7o=c 1t c:59("er")S bq=c 1t c:eV("b1")if 1F(7o 1t bq 1t bq.cA>0)V 9g(o)1L J S eT=eU(LP)S 6j=eT 1t 1R.2p((7o.1X-eT.1X).bs)or 0 if 6j>2h.ec V 9g(o)1L J S x1,y1,x2,y2=ip(7o)if 1F x1 V 9g(o)1L J S 8b=2h.9X--hH S io={{3f.O(x1,y1),3f.O(x2,y1)},{3f.O(x1,y2),3f.O(x2,y2)},{3f.O(x1,y1),3f.O(x1,y2)},{3f.O(x2,y1),3f.O(x2,y2)}}1Y i,s in 2J(io)do o.5O[i].9j=s[1]o.5O[i].To=s[2]o.5O[i].1M=8b o.5O[i].1I=2h.em J--1j if 2h.ek V o.2X.1b=pl.1j o.2X.1X=3f.O((x1+x2)/2-#pl.1j*3.5,y1-16)o.2X.1I=1v 1V o.2X.1I=1p J--HP if 2h.ej V S hp=1R.5f(bq.cA/bq.qv,0,1)S bx=x1-7 o.9l.9j=3f.O(bx,y1)o.9l.To=3f.O(bx,y2)o.9l.1I=1v S im=1h.1l(1R.2p(1z*(1-hp)),1R.2p(7h*hp),30)o.8w.9j=3f.O(bx,y2)o.8w.To=3f.O(bx,y2-(y2-y1)*hp)o.8w.1M=im o.8w.1I=1v 1V o.9l.1I=1p o.8w.1I=1p J--qu if 2h.ei V o.6j.1b=6j.."m"o.6j.1X=3f.O((x1+x2)/2-12,y2+3)o.6j.1I=1v 1V o.6j.1I=1p J--qt if 2h.ef V S sp,7n=6x:bp(7o.1X)if 7n V S vp=6x.8c o.8a.9j=3f.O(vp.X/2,vp.Y)o.8a.To=3f.O(sp.X,sp.Y)o.8a.1M=8b o.8a.1I=1v 1V o.8a.1I=1p J 1V o.8a.1I=1p J J S W hT()if 1F 2h.cm V 1Y pl,2R in 2J(ST.6d)do 9g(ST.6d[pl])J 1L J 1Y 2R,pl in 2J(SV:eS())do if pl==LP or eR(pl)V if ST.6d[pl]V 9g(ST.6d[pl])J 5N J if 1F ST.6d[pl]V ez(pl)J il(pl,ST.6d[pl])J 1Y pl,2R in 2J(ST.6d)do if 1F pl.2c V ey(pl)J J J--╔══════════════════════════════════════════════════════╗--ik 7a—3B ew qs--qr:"4o i8"de la 8q de qq--╚══════════════════════════════════════════════════════╝S W hM()--qp 7a qo si ij 2e(W()S eQ=LP.bc:59("ih")if eQ V eQ:2A()J J)S sg=2a.O("ii")sg.1j="ih"sg.ig=1p sg.eP=qn sg.ie=1v sg.ic=1a.ic.qm 2e(W()sg.2c=LP.bc J)2e(W()if 1F sg.2c V sg.2c=3s:3V("83")J J)--3B hC S 4N=2a.O("2x",sg)4N.1j="3B"4N.1B=1u.4f(ql,qk)4N.1X=1u.4f(ib,180)4N.1W=1h.1l(28,28,35)4N.3N=0 4N.6i=1v 4N.eb=1v S eO=2a.O("4x",4N)eO.4w=4e.O(0,12)--qj qi S cz=2a.O("1A",4N)cz.1M=1h.1l(1z,1z,1z)cz.7m=1.5 cz.1O=0.6--Tíia 4M 4N(qh)S 6X=2a.O("2x",4N)6X.1B=1u.O(1,0,0,44)6X.1W=1h.1l(18,18,24)6X.3N=0 6X.3w=2 S i9=2a.O("4x",6X)i9.4w=4e.O(0,12)--qg eO qf 4M qe S ai=2a.O("2x",6X)ai.1B=1u.O(1,0,0,12)ai.1X=1u.O(0,0,1,-12)ai.1W=1h.1l(18,18,24)ai.3N=0 ai.3w=2 S 7Z=2a.O("4g",6X)7Z.1B=1u.O(1,-44,1,0)7Z.1X=1u.O(0,0,0,0)7Z.1n=1 7Z.1b="4o i8"7Z.2S=1h.1l(1z,1z,1z)7Z.3g=1a.3g.6f 7Z.4O=17 7Z.3w=3--7Xón X cy S 6w=2a.O("8s",6X)6w.1B=1u.4f(30,30)6w.1X=1u.O(1,-36,0.5,-15)6w.1W=1h.1l(3t,40,40)6w.1b="X"6w.2S=1h.1l(1z,1z,1z)6w.3g=1a.3g.6f 6w.4O=14 6w.3N=0 6w.3w=4 2a.O("4x",6w).4w=4e.O(0,8)6w.3G:1D(W()4N.1I=1p J)--7Xón 5M re-i7(qd i6 hY 4M qc)S 6v=2a.O("8s",sg)6v.1B=1u.4f(44,44)6v.1X=1u.O(1,-54,0,10)6v.1W=1h.1l(28,28,35)6v.1b="🎯"6v.4O=22 6v.3g=1a.3g.6f 6v.3N=0 6v.3w=10 2a.O("4x",6v).4w=4e.O(0,10)S cx=2a.O("1A",6v)cx.1M=1h.1l(1z,1z,1z)cx.7m=1.2 cx.1O=0.5 6v.3G:1D(W()4N.1I=1v J)--──ad───────────────────────────────────────────S 8v,ah,7l=1p,1N,1N 6X.7f:1D(W(3H)if 3H.2r==1a.2r.6u or 3H.2r==1a.2r.5h V 8v=1v ah=3H.1X 7l=4N.1X J J)S W eN(3H)if 1F 8v V 1L J S ag=3H.1X-ah 4N.1X=1u.4f(7l.X.3O+ag.X,7l.Y.3O+ag.Y)J 6X.a9:1D(eN)bk.a9:1D(W(3H)if 3H.2r==1a.2r.ct or 3H.2r==1a.2r.5h V eN(3H)J J)bk.a8:1D(W(3H)if 3H.2r==1a.2r.6u or 3H.2r==1a.2r.5h V 8v=1p J J)--──qb──────────────────────────────────────S 7W=2a.O("2x",4N)7W.1B=1u.O(1,0,1,-44)7W.1X=1u.O(0,0,0,44)7W.1n=1 S cv=2a.O("bo",7W)cv.cw=4e.O(0,0)cv.i5=1a.i5.7V cv.i4=1a.i4.eM--eH:i0 de 3x S W a4(i3,af,cu,a7)S 3M=2a.O("2x",7W)3M.1B=1u.O(1,0,0,46)3M.1n=1 3M.7V=a7--qa S 5z=2a.O("2x",3M)5z.1B=1u.O(0.85,0,0,1)5z.1X=1u.O(0.eF,0,0,0)5z.1W=1h.1l(60,60,75)5z.3N=0 S 4U=2a.O("4g",3M)4U.1B=1u.O(0.62,0,1,-2)4U.1X=1u.O(0.eE,0,0,1)4U.1n=1 4U.1b=i3 4U.2S=1h.1l(7h,7h,i2)4U.3g=1a.3g.bn 4U.4O=15 4U.5i=1a.5i.bm--1G 8t S 8u=2a.O("2x",3M)8u.1B=1u.4f(52,26)8u.1X=1u.O(0.72,0,0.5,-13)8u.1W=af 1t 1h.1l(50,3t,80)or 1h.1l(80,80,95)8u.3N=0 2a.O("4x",8u).4w=4e.O(1,0)S 8t=2a.O("2x",8u)8t.1B=1u.4f(20,20)8t.1X=af 1t 1u.4f(29,3)or 1u.4f(3,3)8t.1W=1h.1l(1z,1z,1z)8t.3N=0 2a.O("4x",8t).4w=4e.O(1,0)--q9 ON bi S 7j=2a.O("4g",3M)7j.1B=1u.4f(40,20)7j.1X=1u.O(1,-46,0.5,-10)7j.1n=1 7j.1b=af 1t"ON"or"eL"7j.2S=af 1t 1h.1l(50,7h,80)or 1h.1l(160,160,180)7j.3g=1a.3g.6f 7j.4O=13 S 7i=af S 96=2a.O("8s",3M)96.1B=1u.O(1,0,1,0)96.1n=1 96.1b=""96.3w=5 96.3G:1D(W()7i=1F 7i S ti=1f.O(0.18,1a.1g.q8)TW:1d(8u,ti,{1W=7i 1t 1h.1l(50,3t,80)or 1h.1l(80,80,95)}):1c()TW:1d(8t,ti,{1X=7i 1t 1u.4f(29,3)or 1u.4f(3,3)}):1c()7j.1b=7i 1t"ON"or"eL"7j.2S=7i 1t 1h.1l(50,7h,80)or 1h.1l(160,160,180)cu(7i)J)1L 3M J--eH:co de a0 S W hR(a7)S 3M=2a.O("2x",7W)3M.1B=1u.O(1,0,0,56)3M.1n=1 3M.7V=a7 S 5z=2a.O("2x",3M)5z.1B=1u.O(0.85,0,0,1)5z.1X=1u.O(0.eF,0,0,0)5z.1W=1h.1l(60,60,75)5z.3N=0 S ae=2a.O("2x",3M)ae.1B=1u.O(1,0,0,22)ae.1X=1u.O(0,0,0,6)ae.1n=1 S 4U=2a.O("4g",ae)4U.1B=1u.O(0.55,0,1,0)4U.1X=1u.O(0.eE,0,0,0)4U.1n=1 4U.1b="a0:"4U.2S=1h.1l(7h,7h,i2)4U.3g=1a.3g.bn 4U.4O=15 4U.5i=1a.5i.bm S 7g=2a.O("4g",ae)7g.1B=1u.O(0.4,0,1,0)7g.1X=1u.O(0.55,0,0,0)7g.1n=1 7g.1b=27(2h.6T)7g.2S=1h.1l(1z,1z,1z)7g.3g=1a.3g.6f 7g.4O=15 7g.5i=1a.5i.q7--q6 S 6W=2a.O("2x",3M)6W.1B=1u.O(0.86,0,0,6)6W.1X=1u.O(0.q5,0,0,34)6W.1W=1h.1l(60,60,80)6W.3N=0 2a.O("4x",6W).4w=4e.O(1,0)S ab=2a.O("2x",6W)S eK=(2h.6T-50)/(i1-50)ab.1B=1u.O(eK,0,1,0)ab.1W=1h.1l(1z,1z,1z)ab.3N=0 2a.O("4x",ab).4w=4e.O(1,0)S 9i=2a.O("2x",6W)9i.1B=1u.4f(16,16)9i.1X=1u.O(eK,0,0.5,-8)9i.1W=1h.1l(1z,1z,1z)9i.3N=0 2a.O("4x",9i).4w=4e.O(1,0)--ad co S cs=1p S W eI(3H)S aa=(3H.1X.X-6W.3n.X)/6W.2I.X aa=1R.5f(aa,0,1)S 6g=1R.2p(50+aa*(i1-50))2h.6T=6g 7g.1b=27(6g)ab.1B=1u.O(aa,0,1,0)9i.1X=1u.O(aa,0,0.5,-8)if ST.6h V ST.6h.eJ=6g J J 6W.7f:1D(W(3H)if 3H.2r==1a.2r.6u or 3H.2r==1a.2r.5h V cs=1v eI(3H)J J)bk.a9:1D(W(3H)if 1F cs V 1L J if 3H.2r==1a.2r.ct or 3H.2r==1a.2r.5h V eI(3H)J J)bk.a8:1D(W(3H)if 3H.2r==1a.2r.6u or 3H.2r==1a.2r.5h V cs=1p J J)J--eH:i0 de q4ón de eG(hZ)S W hN(a7)S 3M=2a.O("2x",7W)3M.1B=1u.O(1,0,0,52)3M.1n=1 3M.7V=a7 S 5z=2a.O("2x",3M)5z.1B=1u.O(0.85,0,0,1)5z.1X=1u.O(0.eF,0,0,0)5z.1W=1h.1l(60,60,75)5z.3N=0--7Xón q3 S 6V=2a.O("8s",3M)6V.1B=1u.4f(42,34)6V.1X=1u.O(0.eE,0,0.5,-17)6V.1W=1h.1l(50,50,65)6V.1b="◀"6V.2S=1h.1l(1z,1z,1z)6V.3g=1a.3g.6f 6V.4O=18 6V.3N=0 2a.O("4x",6V).4w=4e.O(0,8)--hG 4M a1 S 6e=2a.O("4g",3M)6e.1j="q2"6e.1B=1u.O(0.52,0,0,34)6e.1X=1u.O(0.24,0,0.5,-17)6e.1W=1h.1l(40,40,55)6e.3N=0 6e.1b="—"6e.2S=1h.1l(1z,180,50)6e.3g=1a.3g.6f 6e.4O=13 2a.O("4x",6e).4w=4e.O(0,6)--7Xón hY S 6U=2a.O("8s",3M)6U.1B=1u.4f(42,34)6U.1X=1u.O(0.82,0,0.5,-17)6U.1W=1h.1l(50,50,65)6U.1b="▶"6U.2S=1h.1l(1z,1z,1z)6U.3g=1a.3g.6f 6U.4O=18 6U.3N=0 2a.O("4x",6U).4w=4e.O(0,8)--hX bi de a1 S W cq()S 3m=ST.bj if#3m==0 V 6e.1b="—"1L J S eD=1R.5f(ST.57,1,#3m)S pl=3m[eD]1t 3m[eD].a6 6e.1b=pl 1t pl.1j or"—"J 6V.3G:1D(W()S 3m=cr()ST.bj=3m if#3m==0 V 1L J ST.57=ST.57-1 if ST.57<1 V ST.57=#3m J ST.4v=3m[ST.57]1t 3m[ST.57].5y cq()J)6U.3G:1D(W()S 3m=cr()ST.bj=3m if#3m==0 V 1L J ST.57=ST.57+1 if ST.57>#3m V ST.57=1 J ST.4v=3m[ST.57]1t 3m[ST.57].5y cq()J)--hX bi q1 0.5s 3u.bd(W()bh sg 1t sg.2c do 3u.2l(0.5)cq()J J)J--──q0 pZ─────────────────────────────────--9f 1:hD 4o a4("pY 4o:",1p,W(v)2h.4d=v if v V hW()ST.cp=1v--en móa3 pX pW if 1F ST.a5 V ST.a5=RS.bg:1D(W()hV()hU()hT()J)J 1V 2h.4d=1p ST.cp=1p ST.4v=1N hS()if ST.a5 V ST.a5:7Y()ST.a5=1N J J J,1)--9f 2:a0 co hR(2)--9f 3:bf 9h a4("bf 9h:",1v,W(v)2h.eC=v J,3)--9f 4:hP 9h(hQ pV HP)a4("hP 9h:",1p,W(v)2h.eB=v J,4)--9f 5:hO 9h a4("hO 9h:",1v,W(v)2h.eA=v J,5)--9f 6:6c a4("6c (hI):",1p,W(v)2h.cm=v if 1F v V 1Y pl,2R in 2J(ST.6d)do 9g(ST.6d[pl])J J J,6)--9f 7:4v pU hN(7)--──7Xón pT al c9─────────────────────────S cn=2a.O("2x",7W)cn.1B=1u.O(1,0,0,10)--pS cn.1n=1 cn.7V=8 J--pR la 7a móa3--pQ a cj el bc hgépP 3u.bd(W()S ok=1p 1Y 2R=1,20 do 2e(W()if LP.bc V ok=1v J J)if ok V 8r J 3u.2l(0.5)J hM()J)--pO de pN 5M 6c SV.bb:1D(W(p)3u.2l(1)if 2h.cm 1t p~=LP V ez(p)J J)SV.ba:1D(W(p)ey(p)J)--╔══════════════════════════════════════════════════════╗--pM pL(hL pK 9b el 7a 1C)--╚══════════════════════════════════════════════════════╝31.4o:6S("🎯 4o — pJón pI")31.4o:9V({1o="📱 7a Móa3 pH",1b="pG el 4N ew en hF 5M pF rápE.\\pDí pC pB pA pz."})31.4o:7Q({1j="py (px)",1y="1=pwápv | 50=pu ps",2T={1,50},5e=1,1Q=10,1x=W(v)2h.9Z=v J})31.4o:7Q({1j="pr de pqón",1y="pp el po 4M pn",2T={5,35},5e=1,1Q=13,1x=W(v)2h.9Y=v/100 J})31.4o:69({1j="pm a2",1y="pk pjón 9b ph ht",1Q=1v,1x=W(v)2h.ev=v J})31.4o:69({1j="pg-7e pf",1y="pe pd hJ-epón",1Q=1v,1x=W(v)2h.7e=v J})31.4o:7Q({1j="pc 7e",1y="Pípb de paón",2T={0,20},5e=1,1Q=4,1x=W(v)2h.b9=v/10 J})31.4o:69({1j="p9 p8",1y="p7 el a1 p6 hB 4M a0",1Q=1v,1x=W(v)2h.es=v J})31.4o:8Z({1j="p5 p4",1y="p3 4M eg",2z={"cl","p2","er","oZ"},1K={"cl"},1x=W(v)2h.eq=v[1]or v J})31.4o:7Q({1j="ee Máeo (oY)",1y="oX de epón",2T={100,ed},5e=50,1Q=hK,1x=W(v)2h.ck=v J})31.4o:6S("⚙️ oW RáoV")31.4o:53({1j="🥷 oU",1y="oT oS, hJ-epón máeo",1x=W()2h.9Z=22 2h.9Y=0.10 2h.7e=1v 2h.b9=0.7 2h.6T=100 J})31.4o:53({1j="⚡ oR",1y="Máeo oQ",1x=W()2h.9Z=3 2h.9Y=0.22 2h.7e=1p 2h.6T=oP J})31.4o:53({1j="⚖️ oO",1y="oN oM oL",1x=W()2h.9Z=10 2h.9Y=0.13 2h.7e=1v 2h.b9=0.4 2h.6T=3t J})31.5K:6S("🔴 6c — hI")31.5K:69({1j="6c hH",1y="oK 2D oJ 4M eg",1Q=1v,1x=W(v)2h.em=v J})31.5K:69({1j="6c oI",1y="hG 4M oH oG la oF",1Q=1v,1x=W(v)2h.ek=v J})31.5K:69({1j="6c oE de oD",1y="HP oC oB",1Q=1v,1x=W(v)2h.ej=v J})31.5K:69({1j="6c ee",1y="oA de oz",1Q=1v,1x=W(v)2h.ei=v J})31.5K:69({1j="6c oy",1y="Líox eh tu hF al eg",1Q=1p,1x=W(v)2h.ef=v J})31.5K:93({1j="1M 6c",1M=1h.1l(1z,60,60),1x=W(v)2h.9X=v J})31.5K:7Q({1j="ee Máx. 6c",2T={100,ed},5e=50,1Q=hE,1x=W(v)2h.ec=v J})31.5K:6S("🎨 7a 2Q")--=============================================--ow DE ov ou(ot)--=============================================--hD oq en el 5x hC 5M cj la 8q no se hB 1q.eb=1v--op de c9 oo 4M 7a(no hA)S 4S=2a.O("3r")4S.1j="om"4S.1B=1u.O(1,0,1,0)4S.1X=1u.O(0,0,0,0)4S.ci=3f.O(0,0)4S.1n=1 4S.3U=0 4S.ch=1a.ch.ol 4S.3w=1--hz 4M 7a,ojás 4M oi 4S.1I=1p 4S.2c=1q.2f.2c--hz 4M oh de hy--=============================================--og DE oeÓN--=============================================S 6b=3s:3V("6b")S e9="od"S cg="9e"S b7=cg.."/oc.5L"if 1F 9d(cg)V 2e(W()9c(cg)J)J--ob en oa S 7R=e9 S 9a=0 S 8p=1p--se e5 hx si el o9 lo hwó--e8 hjón cf S W hi()if 1F 7S(b7)V 1L J S ok,2C=2e(W()1L 6b:ea(7U(b7))J)if ok 1t 3v(2C)=="2U"V 7R=(3v(2C.cd)=="2M"1t 2C.cd~="")1t 2C.cd or e9 9a=3v(2C.b5)=="hv"1t 1R.5f(2C.b5,0,1)or 0 8p=2C.hu~=1p--hh 1v J J S W b6()2e(W()7d(b7,6b:ce({cd=7R,b5=9a,hu=8p,}))J)J--o8 8q 9b o7ón(o6 o5 y o4 o3)S W h8(id)if 1F id or id==""V 1L J S b8=27(id):7T("%d+")if 1F b8 V 1L J--o2 o1 la e7 ht 4M e6 S cc="5J://"..b8 2e(W()S 4T=3s:cb("5J://"..b8)[1]if 4T 1t 4T:7c("e6")1t 4T.7b~=""V cc=4T.7b 3l 4T 1t 4T:7c("7b")1t 4T.7b~=""V cc=4T.7b J J)7R=b8 4S.4c=cc 4S.1I=8p b6()J S W ha(3y)9a=1R.5f(3y,0,1)4S.3U=9a b6()J--o0 nZ nY nX de nW nV S hr=1q.1n S hq=1q.2f.1n S ho=1q.37.1n S hm=2e(W()1L 1q.4n.1n J)1t 1q.4n.1n or 0 S hl=2e(W()1L 1q.37.4n.1n J)1t 1q.37.4n.1n or 0 S hn=1q.2f.2c.1n S W hk(hs)S t=1f.O(0.3,1a.1g.1i)if hs V 1e:1d(1q,t,{1n=1}):1c()1e:1d(1q.2f,t,{1n=1}):1c()1e:1d(1q.37,t,{1n=1}):1c()1e:1d(1q.2f.2c,t,{1n=1}):1c()2e(W()1e:1d(1q.4n,t,{1n=1}):1c()J)2e(W()1e:1d(1q.37.4n,t,{1n=1}):1c()J)1V 1e:1d(1q,t,{1n=hr}):1c()1e:1d(1q.2f,t,{1n=hq}):1c()1e:1d(1q.37,t,{1n=ho}):1c()1e:1d(1q.2f.2c,t,{1n=hn}):1c()2e(W()1e:1d(1q.4n,t,{1n=hm}):1c()J)2e(W()1e:1d(1q.37.4n,t,{1n=hl}):1c()J)J J S W hb(3y)8p=3y 4S.1I=3y 1t 7R~=""hk(3y)b6()J--e8 y nU hjón nT hi()--Si no nSía nR,nQ el ID hh nP if 1F 7S(b7)V b6()J--nO e7 4M nN al nM S ca="5J://"..7R 2e(W()S 4T=3s:cb("5J://"..7R)[1]if 4T 1t 4T:7c("e6")1t 4T.7b~=""V ca=4T.7b 3l 4T 1t 4T:7c("7b")1t 4T.7b~=""V ca=4T.7b J J)4S.4c=ca 4S.3U=9a 4S.1I=8p--Si la 8q hgáe5,nL el c9 de hf he nK if 8p V 1q.1n=1 2e(W()1q.2f.1n=1 J)2e(W()1q.2f.2c.1n=1 J)2e(W()1q.37.1n=1 J)2e(W()1q.4n.1n=1 J)2e(W()1q.37.4n.1n=1 J)J--=============================================--nJ EN LA nI--=============================================31.5K:69({1j="nH 4u 4c",1y="nG/hc 8q de c9",1Q=8p,1x=W(2g)hb(2g)J})31.5K:7Q({1j="4c 1O",1y="2q b5 of 2K 4c",2T={0,100},5e=5,1Q=1R.2p(9a*100),1x=W(2g)ha(2g/100)J})31.5K:9R({1j="4u 4c ID",1y="nF 7a nE h9",3b="5J://"..7R,nD=7R,nC=1p,gH=1p,1x=W(2g)if 2g 1t 2g~=""V h8(2g)J J})--2Z de 8o 31.8o:6S("nB nA")31.8o:53({1j="79",1x=W()--h7 h6íel 6t de tu 79 J})31.8o:53({1j="h5",1x=W()--h7 h6íel 6t de tu h5 J})J)()--e4 IS h4 nz ny,nx nw nv nu nt nr h3 nq--[[if 4m V e2=1C:e3({c8=1p})t1=e2:99()t2=e2:99({1j="2Z 2",3o="h2"})1C:4b({1o="e1 to 1C",3o="c7",4a="4l",4L="e1 to 2K 1C 2w 3j. b4 Is an c1 h1 h0 UI 9U 9T gZ gY gX By c6 b3. 1C c5 e0 in gW of gV 2K c4 of UI 9U gU by b2 2K gT c4 1Y it. 1C c3 c1 gS c0 a 5d 6s, gR 1t gQ in gP 1t gO. So, gN gM bZ gL 9T? 5I bY 1C gK at "..bX})t1:6S()S 96=t1:53({1x="",1y="b4 Is A 1y"})S l=t1:9W({6a=2})S l2=t1:9W({1b="np 2Y"})t2:53({1x=W()l:2A()l2:2q("nn 1b")J})t2:9W({6a=3})t1:9V({1b="nm nl"})t1:9V({1b="e1 to 2K 1C 2w 3j. b4 Is an c1 h1 h0 UI 9U 9T gZ gY gX By c6 b3. 1C c5 e0 in gW of gV 2K c4 of UI 9U gU by b2 2K gT c4 1Y it. 1C c3 c1 gS c0 a 5d 6s, gR 1t gQ in gP 1t gO. So, gN gM bZ gL 9T? 5I bY 1C gK at "..bX})s=t2:7Q({1x=W(v)3e(v)J})t1:53({1x=W()s:2q({1j="O 2X",1x=""})2l(5)s:2A()J})t1:93()S 3x=t1:69({1j="9Q",1y="9Q",1Q=1v,1x=""},"nk")t1:69({1x=W(2g)3x:2A()3e(2g)J})S 91=t2:dZ({1j="9Q",1y="9Q",3i="E",4Z=1p,1x=""})t2:gJ({4Z=1v,1x=W(v)if v V 3h.5w.bW.b1.gI=100 1V 3h.5w.bW.b1.gI=16 J J,})S 39=t2:9R({1j="9Q",gH=1p,1y="nj ni, 8 b0 nh 1t ng nf.",78=8,9S=1v,7P=1v,1x=""})t2:9R({1x=W(3D)3e(3D)J})S d=t1:8Z({1j="9Q",2z={"gG","ne","nd","gF"},1y="nc",4R=1v,1x=W(t)3e(t)J,1K={"gG","gF"}})t1:8Z({1x=W(t)3e(nb(t))J})t1:8Z({1y="na aZ - 5H",1x="",8n="5H"})J]]--1L 1C',62,5075,'|||||||||||||||||||com|||||||||||asset|||||||||http||roblox||www||end|||||new||||local|||then|function||||||||||||||Enum|Text|Play|Create|TweenService|TweenInfo|EasingStyle|Color3|Exponential|Name||fromRGB|Bind|BackgroundTransparency|Title|false|Main|Slider|DropdownSettings|and|UDim2|true|Input|Callback|Description|255|UIStroke|Size|Luna|Connect|tween|not|Toggle|BindSettings|Visible|Dropdown|CurrentOption|return|Color|nil|Transparency|color|CurrentValue|math|SliderSettings|ColorPicker|InputBox|else|BackgroundColor3|Position|for|TextTransparency||ToggleSettings||||||tostring|||Instance|Flag|Parent|Button|pcall|Elements|Value|CFG|Window|InputFrame||wait|Success|InputSettings|BindFrame|floor|Set|UserInputType|Error|Template|Response|Paragraph|Interface|Frame|WindowSettings|Options|Destroy|ButtonSettings|data||Desc|ColorPickerSettings|Option|BindBox|AbsoluteSize|pairs|the|TabPage|string|LunaUI|Clone|Kwargify|Settings|_|TextColor3|Range|table|bleh|newNotification|name|Label|Tab||Tabs||||||Navigation||input|Selected|PlaceholderText|02X|240|print|Vector2|Font|Players|CurrentBind|Suite||elseif|list|AbsolutePosition|Icon|fromHSV|Location|ImageLabel|game|200|task|type|ZIndex|toggle|value|KeySettings|0xFF|Panel|Key|text|EasingDirection|BindV|MouseButton1Click|inp|ImageColor3|List|SafeCallback|LoadingFrame|row|BorderSizePixel|Offset|GetChildren|KeyCode|Out|The|descriptionbool|ImageTransparency|GetService|Subtitle|MouseLeave|MouseEnter|format||||ConfigFolder||||tonumber||Current|ImageSource|Notification|Image|Enabled|UDim|fromOffset|TextLabel|ConfigSettings|TextBounds|LabelSettings||Material|isStudio|Line|Aimbot|ipairs|Interact|Controls|autoload|mid|Background|Target|CornerRadius|UICorner|Scale|TopbarButton|Config|option|hex|None|ColorPickerV|MainPoint|opened|DropdownV|InputV|SliderV|HomeTabPage|Content|del|panel|TextSize|config|StatusLabel|MultipleOptions|bgImageLabel|obj|lbl|HexInput|ToggleV|Section|ConfigurationFolder|HoldToInteract||||CreateButton||||TargetIdx||FindFirstChild|dashboard|GetPropertyChangedSignal|icon|key|Increment|clamp||Touch|TextXAlignment|insert||ClassName|dragBar|Folder|Display|Flags|ind|NewVal||ParagraphV|ParagraphSettings|ButtonV|LocalPlayer|frame|part|sep|CFrame|RunService|file|settings|NewBindSettings|Loop|tabbtn|Player|Start|rbxassetid|Scripts|txt|para|continue|box|Note|Class|SliderPoint|closedsize|PlayerTableRefresh|NewValue|OtherTabButton|detailsholder|KGui|VerifyBtn|DiscordBtn||||GetKeyBtn|||MinImg||parts|CreateToggle|Style|HttpService|ESP|ESPObjs|tname|GothamBold|val|FOVCircle|Active|dist||TargetLine|pos|UserInputService|Logo|save|FocusLost|227|system|link|MouseButton1|reopenBtn|closeBtn|CAM|Vector3|TargetDot|05|success|flag|RootFolder|ColorSequenceKeypoint|ThemeGradient|localX|MouseButton1Down|openedsize|Held|CheckingForKey|Progress|NewParagraphSettings|LabelV|TabSettings|CloseImg|snd|hasRoot|CreateSection|FOVRadius|btnR|btnL|trackBg|titleBar|fill|IgnoreConfig||that||TabButton|Header|||TitleImg|MaxCharacters|Discord|GUI|Texture|IsA|writefile|Jitter|InputBegan|valLbl|220|state|valLabel||startPos|Thickness|vis|hrp|mouse|camera|Notifications|Load|ThemeRemote|error|setDisplay|NewColorPickerSettings|BInput|GInput|RInput|sliderDragging|mainDragging|place|NewDropdownSettings|Item|NewInputSettings|NewToggleSettings|NewSliderSettings|Back|ButtonSettings2|Data|ShadowHolder|hideOnMin|FramePos|cf0|Enter|CreateSlider|currentID|isfile|match|readfile|LayoutOrder|content|Bot|Disconnect|titleLabel||||CoreGui|||||||tracer|col|ViewportSize|sub|luna|your|variable|takes|Connection|NewKeyNoEnum||Sectiont|Passthrough|SpecialType|Info|currentEnabled|imagen|break|TextButton|pill|pillBg|dragging|hpBar|Remove|huge|center|SecondAction|State|unavailable|00|201|selectedConfig|Refresh|ToHSV|connect|rgbBoxes|oldB|oldG|oldR|param|changed|remove|optionhover|SLDragging|Hover|HomeTabButton|direc|CloseBtnFrame|MinBtnFrame|Lucide|magnitude|CreateDropdown||bind||CreateColorPicker|||btn|||CreateTab|currentTransparency|con|makefolder|isfolder|BladeX|Fila|HideESP|Check|thumb|From||hpBg|Delta|ShowTitle|info|FileName|KeySystem|MobileSupport|Theme|Activate|ToggleSize|char|find|c3cp|c2cp|c1cp|current|unpackt|when|add|UserInputState|221|InActive|Minutes|Draggable|TitleImage|MainSize|Sep|KeyIcon|Configuration|rot|cf1|test|CreateInput|Numeric|For|Library|CreateParagraph|CreateLabel|ESPColor|PredictFactor|SmoothFactor|FOV|target|Ping|vil|MakeRow|Conn|player|order|InputEnded|InputChanged|rel|trackFill||Drag|topRow|initVal|delta|dragStart|titleFix|MkLine|Parameter||load||Path|Save|Color3ToHex|returned|||inputPath|localY|toChange|rgbColor|042|selected|Rotation|prop|processed|SplitMessage|whether|this|bool|Update|nisi|nunc|Vivamus|nec|amet|sit|consectetur|NewLabel|Seconds|gethui|Camera|Dragging|Origin|ScreenPointToRay|Needed_Look|DepthOfField|source|Type|max|Humanoid|being|Softworks|This|transparency|saveSettings|saveFile|numericID|JitterAmt|PlayerRemoving|PlayerAdded|PlayerGui|spawn||Team|RenderStepped|while|label|Targets|UIS||Left|Gotham|UIListLayout|WorldToViewportPoint|hum||Magnitude|GetChar|dot|now|JitterT|||keys|CurrentTab|Close|ClassParser|Unable|loadlabel|lower|currently|ReleaseFocus|Stepped|Changed|TemplateElement|Server|HomeTabSettings|SmartWindow|dragBarCosmetic|FlagValue|syn|zIndex|perp|acos|Angles|lookVector|Character|website|Using|You|like|Amazing||Has|standard|was|Nebula|sparkle|LoadingEnabled|fondo|initImage|GetObjects|finalImage|imageID|JSONEncode|guardada|saveFolder|ScaleType|AnchorPoint|que|MaxDist|Head|ESPEnabled|apagadoRow|slider|IsAiming|RefreshLabel|BuildTargetList|slideDrag|MouseMovement|callback|layout|Padding|rStroke|cerrar|stroke|Health|Drawing|MoveToTarget|mousemoverel|sqrt|dir|Custom|6031097225|Home|System|bladex|getgenv|RefreshConfigList|next|ColorSequence|206|Colorpicker|setting|configSelection|Loaded|Picker|ActivateColorSingle|Clear|RemoveTextAfterFocusLost|Dynamic|split|Unknown|OnChangedCallback|10000000|vitae|vel|placerat|eleifend|Integer|pretium|dui|interdum|facilisis|ornare|ipsum||tempor|sem|ultricies|metus|egestas|sed|augue|Divider|FirstTab||01|GetIcon|friendsCooldown|friends|friendsInGame|Friends|onlineFriends|friendsInTotal|||Client|HomeTab|discord|subtitle|Version|DStroke|VStroke|GStroke|IStroke|minimized|PStroke|will|MinSize|enableTaptic|ConfigurationExtension|notified|parents|child|dif_para|Top_Look|smax|passed|IconModule|riro|rirs|Icons|CreateBind|Created|Welcome|window|CreateWindow|THIS|activa|Decal|textura|Cargar|DEFAULT_ID|JSONDecode|ClipsDescendants|ESPMaxDist|2000|Distancia|ESPTracers|enemigo|desde|ESPDist|ESPHealth|ESPName||ESPBox||xima|detecci|TargetPart|HumanoidRootPart|StickyAim|||PingComp|flotante||RemoveESP|MakeESP|WallCheck|KillCheck|TeamCheck|idx|06|075|targets|Helper|Slide|Radius|pct|OFF|Center|onMove|corner|DisplayOrder|old|IsTeam|GetPlayers|myH|GetHRP|FindFirstChildOfClass|MkText|any|MkCircle|LockStart|LastLock|CanSee|InFOV|funciona|smooth|random|sin|ScreenDist|_pingT|origin|CurrentCamera|remoteKeys|SaveKey|LoadingSubtitle|LoadingTitle|LogoID|https|Unhide|205|out|options|LoadConfig|objects|SaveConfig|str|paths|224|you|every|Autoload|auto|Configurations|based|time|RemoveTable|strings|more|Test|Focused|BindDesc|active|needs|held|boolean|pressed|mode|makes|view_in_ar|Hours|playersFriends|loop|UserId|Executor|Your|identifyexecutor|invite|1000000000|dragInteract|Dragger|repeat|FoundKey|KeyFound|entered|Verify|Link|Get|directamente|minimizar|245|10137941941|400|savedValid|BlurModule|script|_ti2|SizeBleh|Shadow|bounds||MousePos|DragInput|Bar|connectFunctions|LoadConfiguration|ConfigName|code||FlagName|Hide|_ti|result|UpdateOrientation|DrawQuad|root|GenUid|binds|DrawTriangle|WedgeMesh|mesh|IsNotNaN|tablre|243|request|Elixir|Apples|ClearTextAfterFocusLost|WalkSpeed|CreateKeybind|Today|Waiting|Are|What|design|aesthetics|perfection|notification|Features|golden|designs|improving|hopes|Made|Exploiting|Roblox|Freemium|Quality|location_searching|AND|THE|TikTok|aqu|Pon|applyImage|image|applyTransparency|applyEnabled|ocultar||los|todos|est|default|loadSettings|configuraci|setBgTransparent|origNavLine|origLine|origElementsParent|origNav||origElements|origMain|transparent|real|enabled|number|guard|solo|elementos|Dentro|fullscreen|salga|principal|Activar|1000|pantalla|Nombre|Box|Hologramas|anti|1500|mantiene|CreateMobileGUI|MakeTargetRow|Wall|Kill|ignorar|MakeFOVSlider|RemoveFOVDrawings|ESPLoop|AimLoop|UpdateFOVDrawings|CreateFOVDrawings|Actualizar|derecha|flechas|fila|600|235|labelText|HorizontalAlignment|SortOrder|superior|abrir|Mobile|tcorner|tulo|500|ZIndexBehavior||IgnoreGuiInset||ResetOnSpawn|BladeXMobile|ScreenGui|existe|MOBILE|DrawESP|hcol||segs|GetBBox|Filled|off|||BONE_OFF|hasTgt|circle|GetTarget|StickyTime|MaxLockTime|UpdatePing|abs|rawDist|predicted|Predict|cos|sort|AIMBOT|GetNetworkPing|zero|lista|lerp|interfaz|BLADEX|noinvitelink|DiscordInvite|CreateHomeTab|gps_fixed|113679886240651|line|KEY_URL|HttpGet|GitHub|remotas|heads|refs|githubusercontent|raw|warning|Maximise|Minimize|gpe|start|Auto|err|Failed|decoded|JSON|Invalid|select|Please|encoded|fullPath|SetFolder|BuildFolderTree|PresetGradients|Valuex|configuration|has|HexToColor3|delfile|Delete|Overwrite|saved|Select|all|RGB|gameProcessed|11415645739|||GetMouse|ColorSlider|MainCP|CPBackground|219|which|Color3fromRGB|moved|picker|IgnoreClass|Throit|Rayfield|justhey|fixed|DropdownDesc|multioptions|soon|might|onl|CaptureFocus|InputDesc|Placeholder|Binded|changes|binded|Keybind|UpdateState|ToggleDesc|UpdateValue|InOut|025|GetMouseLocation|quam|suscipit|scelerisque|ligula|justo|Cras|tellus|malesuada|maximus|nibh|dapibus|ullamcorper|eget|feugiat|tortor|elementum|tincidunt|aliquam|purus|pharetra|eros|Donec|ultrices|imperdiet|efficitur|massa|sodales|Duis|velit|congue|pulvinar|faucibus|lorem|leo|Quisque|vulputate|sapien|erat|auctor|Pellentesque|cursus|fermentum|Vestibulum|non|tristique|Praesent|felis|bibendum|Mauris|tempus|lacus|venenatis|elit|adipiscing|dolor|Lorem|Warn|ButtonDesc|CreateDivider||NewSection|JumpTo|UIPageLayout|here|Stuff|Sirius|Stolen||checkFriends|Localization|Region|convertToHMS|Time|getPing|MaxPlayers|Int|page|since|stop|pages|through||Script|Debugging|SupportedExecutors|user|DisplayName|ThumbnailSize|HeadShot|ThumbnailType|GetUserThumbnailAsync|nebula|NOT|they|HAVE|ARE|THESE|until|nuevo|portapapeles|copiado|setclipboard|CloseBtn|End|6031094678|ImageButton|panelFullSize|panelMinSize|11036884234|265|Ronix|estilo|Sin|Hub|lida|borrar|savedKey|evitar|validar|SaveInRoot|LoadAutoLoad|encima|texto|tab|home|use|unable|DropShadow|DropShadowHolder|currentTab|AddItem|Debris|SoundService|Volume|6031097229|SoundId|Sound||Sonido|waitDuration|values|initial|Missing|newDragBarPosition||newMainPosition|PackColor||Thank|Been|UnpackColor|Old|||RobloxGui|protect_gui|visibility_off|interface|notif|array|uid|propValue|propName|properties|fetchProps|rad|BrickColor|MTREL|Mid_Point|gToken|gTokenMH|workspace|goal|tweeninfo|tweenin|object|defaults|sourceicon|iro|irs|sizedicons|icons|iconData|latte|218|233|238|242|239|Nightlight|And|Special|unpack|MultiOptions|Strawberries|Bananas|required|enter|characters|only|Numbers|toggle2|String|Single|New||Another|CODE|ELEMENTS||NEW|TESTING|WHEN|USED|ONLY|DEMO|DEBUG|Sociales|Redes|NumbersOnly|DefaultText|background|Change|Mostrar|Enable|INTERFAZ|CONTROLES|frames|quitar|inicio|decal|Resolver|ahora|guardar|archivo|exist|inicial|aplicar|nada|modificar|ANTES|originales|valores|Guardar|obtener|Intentar|directas|texturas|Decals|soporta|validaci|Aplicar|usuario|memoria|Valores|bgSettings|6368108640|CONFIGURACI||PERSISTENCIA|contenedor|contenido|detr||Crop|BackgroundImage||dentro|Imagen|recorte|||MEJORADO|IMAGE|BACKGROUND|SISTEMA|neas|Tracers|distancia|Studs|lateral|bar|Vida|Barra|caja|sobre|jugador|Nombres|alrededor|Caja|recomendado|general|Uso|Balanceado|320|velocidad|Agresivo|humano|Muy|Sigiloso|pidos|Presets|Rango|studs|LowerTorso|||UpperTorso|Hitbox|Objetivo|Parte|aunque|Mantiene|Aim|Sticky|variaci|xeles|Intensidad|natural|Temblor|Humano|Micro|latencia||predicci|Ajusta||Compensar|objetivo|movimiento|Anticipa|Predicci|Factor|suave||muy|neo|instant|Smooth|Suavizado|avanzadas|opciones|ajustar|puedes|nAqu|pido|control|Usa|Activa|Avanzada|Configuraci|compatibilidad|TABS|LUNA|jugadores|Eventos|listo|Esperar|Lanzar|spacer|APAGAR|navigator|bajos|activo|siempre|Ativar|filas|Construir|cada|TargetName|izquierda|navegaci|07|Track|Right|Quad|Estado|separador|Contenido|juego|esquina|titlebar|bottom|fix|draggable|brillante|Borde|310|260|Sibling|999|anterior|Limpiar|referencia|Estilo|arrastrable|Tracer|Dist|MaxHealth|Square|PointToWorldSpace|Outline|NumSides|Circle|DRAWINGS|tick|etc|Codex|Fluxus|executores|viles|ejecutores|sistema|Mueve|09|Velocity|incluye|universal|CORE|clock|IsDescendantOf|Unit|Raycast|FilterDescendantsInstances|Exclude|RaycastFilterType|FilterType|RaycastParams|GetHum|UTILIDADES|RainT|seleccionado|ndice|visibles|ordenada|ESTADO|293|CONFIG|Workspace|todo|bot|toggles|drag||Inspirado|VIL|Extra|bladex_key|nuestro|Obt|continuar|Ingresa|gmatch|main|cmd|martin009gonzg|SYSTEM|KEY|ConfirmLuna|initialized|before|errors|avoid|deprecated|Suppress|698|CanvasPosition|BladeXLoaded|reejecutar|poder|resetear|toda|Destruir|listfiles|loaded|LoadAutoloadConfig|decode|into|encode|Gradients|Preset|LunaInterfaceSuitePrebuiltCPC3|LunaInterfaceSuitePrebuiltCPC2|overlaps|ensure|saving|using|different|element|sure|make|identifier||||LunaInterfaceSuitePrebuiltCPC1|Editor|Theming|BuildThemeSection|Alpha|alpha|stil|hell|buggy|||Deleted||||File|session|Overwrote|overwrite|empty|||cannot|gsub|with||created|Insert|Creator|Environment|BuildConfigSection||PaddingTop|UIPadding|Page|ends|GetCountryRegionForPlayerAsync|round|Latency|server|join|can|players|playing|wrap|coroutine|02i|InGame|Online|Offline|All|Username|GetFriendsOnline|AdvanceToNextPageAsync|last|IsFinished|GetCurrentPage|GetFriendsAsync|700|||GetValue|ServerStatsItem|Network|Stats|desactivado|Here|Begins|Supported|Officialy|Isn|Supports|Mode|Support|Not|||Does|Studio||Hello|Size420x420|||put||would|example|||include|disvord|LIST|SEEING|AFTER|INSTALLING|FROM|VIRUSES|GET|RESPONSIBLE|are|prob|RATS|THEYA|WHETHER|IDEA|MIND|CAME|THAT|FIRST|JUS|THEY|ADVERTISE|PLACEHOLDERS|DEFAULTS|Xeno|Nihon|Vega|450|Intenta|incorrecta|Cargando|correcta|invisible|dragZone|usando|Llenar|248|Status|our|Join|Nota|Botones|ClearTextOnFocus|215|PlaceholderColor3|TextBox|Separador|Cerrar|Titulo|compacto|overlay|999999999|BladeXKeyUI|custom|reactivar|estaba||pasar||dejar|conexi|pedir|red|fallo|cargadas|hay|Solo|typeof|GetDescendants|sea|hasta|desactivada|permanece|despu|Namez|Size48x48|Fit|12187371840|alto|25px|verticalmente|centrado|izq|50px|logo|posicionamos|barra|ocupa|pone|Crear|letras|Reemplazar|||||sys|bypass|easy|very|simple|putting|HWID|provide|Luarmor|Pelican|please|accepted|change|but|OPTION|ENABLING|BEFORE|ONE|MUST|YOU||Enabling|Instructions|Big|Example|apaga|Blur|275|424|675|503|774|08|Duration|min|set|textbounds|Calculate|Creation|Object|messages|open|action|tapticOffset|SetAutoload|SaveConfiguration|Automatically|Autoloaded|help|CurrentKeybind|flags|elements|Iterate|Interactions|Pressing|reopen|may|hidden|been|Hidden|soporte|executor|Verifica|cargar|86467455075715|WaitForChild|Management|Various|BindToRenderStep||vec|white|Institutional|GuiObject|clone|MeshType|SpecialMesh|CastShadow|CanCollide|Anchored|BottomSurface|TopSurface||FormFactor|Part|wrote|Stravant|think|neon|bindings|names|unique|Generate|DPT_|NearIntensity|InFocusRadius|FocusDistance|FarIntensity|Lighting|DepthOfFieldEffect|99999999|LunaBlur|Glass|Completed|10723434557|imageRectOffset|imageRectSize|entry|generated|Internal|48px|loadstring|luau|lib|master|lucide|soft|softworks|credit|full|||231|213|Blossom|237|Daylight|Cherry|Vine|Lime|Sparkle|Solar|214|241|Starlight|Neo|211|Classic|http_request|Variables|Other|4483362748|6035121913|fire_extinguisher|6035107930|baby_changing_station|6035121907|fitness_center|6035107921|airport_shuttle|6035161563|water_damage|6035153645|soap|6035145423|golf_course|6035145362|kitchen|6035121914|countertops|6035145359|grass|6035121923|fence|6035107936|casino|6035153664|no_photography|6035161541|tty|6035153662|rice_bowl|6035153636|smoking_rooms|6035161536|wheelchair_pickup|6035121930|escalator_warning|6035145390|no_drinks|6035107939|bathtub|||6035153655|pool|6035153647|smoke_free|6035107922|apartment|6035153638||sports_bar|6035161550|umbrella|6035153656|roofing|6035153661|no_stroller|6035107955|carpenter|6035153637|stairs|6035107928|backpack|6035145372|no_food|6035161534|storefront|6035145368|no_backpack|6035107924|bento|6035107920|all_inclusive|6035107925|charging_station|6035121909|dry|6035145382|hot_tub|6035107931|checkroom|6035121942|child_friendly|6035145378|night_shelter|6035107927|child_care|6035145364|house|6035145363|free_breakfast|6035121910|do_not_step|6035153642|room_preferences|6035121912|elevator|6035121918|foundation|6035121921|food_bank|6035145393|house_siding|6035121939|escalator|6035161540|wash|6035145361|meeting_room|6035145367|microwave||6035161533|tapas|6035153648|room_service|6035145376|no_cell|6035145424||no_flash|6035153639|spa|6035107933|business_center|6035107929|ac_unit|6035121915|do_not_touch|6035153649|no_meeting_room|6035121908|corporate_fare|6035121916|family_restroom|6035161535|stroller|6035107923|beach_access|6035078895|tag|6035047387|block|6035047391|add_circle_outline|6035067837|remove_circle|6035053278|content_copy|6035047374|add_link|6035067831|inbox|6035067835|next_week|6035078897|stream|6035053304|create|6035067832|send|6035053294|filter_list|6035047382|amp_stories|6035056477|mail|6035053289|dynamic_feed|6035067834|select_all|6035078898|waves|6035078889|shield|6035053275|font_download|6035056491|low_priority|6035053285|content_paste|6035078888|6035047397|backspace|6035056512|policy|6035078892|stacked_bar_chart|6035047380|add_circle|6035056486|outlined_flag|6035078918|square_foot|6035053295|how_to_vote|6035067824|reply_all|6035053298|forward|6035056484|link_off|6035053287|gesture|6035053301|delete_sweep|6035056476|markunread|6035067826|report|6035047384|calculate|6035067836|6035047386|ballot|6035053280|content_cut|6035078890|text_format|6035067857|6035053279|6035067839|insights|6035047377|6035047379|archive|6035078896|undo|6035067844|reply|6035056481|push_pin|6035053297|drafts|6035056475|6035056483|redo|6035047409|clear|6035067830|report_off|6035047385|biotech|6035078913|where_to_vote|6035078894|weekend|6035067842|save_alt|6035067838|move_to_inbox|6035067843|remove_circle_outline|6035047381|bolt|6035053293|file_copy|6035047378|block_flipped||6035078921|unarchive|6035053288|how_to_reg|6035047375|add_box|6035056487|inventory|6034275725|construction|6034230647|sports|6034275800|connect_without_contact|6034230641|school|6034227064|sports_hockey|6034227067|sports_football|6034287524|recommend|6034287538|public_off|6034308946|notifications|6034230634|self_improvement|6034287586|sanitizer|6034281911|follow_the_signs|6034275731|emoji_emotions|6034304896|notifications_paused|6034287528|people_outline|6034230660|sports_cricket|6034230652|sports_baseball|6034268008|person_outline|6034227072|sports_mma|6034281898|facebook|6034227068|sports_tennis|6034227076|thumb_up_alt|6034281901|group|6034281896|emoji_nature|6034281910|fireplace|6034304891|no_luggage|6034230637|sentiment_dissatisfied|6034227060|sports_golf|6034304889|location_city|6034227061|sports_esports|6034227071|sports_motorsports|6034295708|luggage|6034295710|masks|6034230659|sentiment_very_dissatisfied|6034304900|outdoor_grill|6034281894|emoji_transportation|6034287525|whatshot|6034304894|notifications_off|6034287518|people_alt|6034287519|person_add_alt_1|6034227074|sports_handball|6034227073|sports_rugby|6034287522|public|6034295704|mood|6034230651|single_bed|6034267996|person_remove|6034287521|party_mode|6034268012|plus_one|6034230668|sentiment_satisfied|6034304892|6034230640|science|6034295699|add_moderator|6034268013|reduce_capacity||6034304881|nights_stay|6034230650|sentiment_very_satisfied|6034227069|thumb_down_alt|6034281904|emoji_people|6034308947|notifications_none|6034304883|emoji_food_beverage|6034281908|engineering|6034295702||cake|6034227141|sports_kabaddi|6034295711|military_tech|6034230648|share|6034281934|history_edu||6034281941|ios_share|6034281900|emoji_objects|6034275722|domain|6034227139|sports_volleyball|6034267994|person_add_alt|6034287516|psychology|6034304898|emoji_flags|6034275729|clean_hands|6034295698|elderly|6034287594|person|6034287513|people|6034275724|coronavirus|6034267998|remove_moderator|6034227138|switch_account|6034281899|emoji_symbols|6034230649|sports_basketball|6034281909|group_add|6034295703|deck|6034275730|architecture|6034281948|king_bed|6034287515|person_remove_alt_1|6034295706|mood_bad|6034287514|person_add|6034227075|sports_soccer|6034281935|groups|6034275726|emoji_events|6034267991|poll|6034230642|sick|6034230636|sentiment_neutral|6034304908|notifications_active||6031302994|drive_file_rename_outline|6031302922|drive_file_move|6031302932|folder|6031302927|cloud_done|6031302933|create_new_folder|6031302993|cloud_off|6031302950|grid_view|6031302934|folder_open|6031302918|cloud|6031302916|cloud_queue|6031302961|workspaces_filled|6031302996|file_upload|6031302917|cloud_download|6031302945|folder_shared|6031302919|cloud_circle|6031302992|cloud_upload|6031302924|drive_file_move_outline|6031302926|file_download_done|6031302921|attachment|6031302959|upload_file|6031302976|topic|6031302935|attach_email|6031302940|rule_folder|6031302929|drive_folder_upload|6031302928|approval|6031302941|request_quote|6031302931|file_download|6031302952|workspaces_outline|6031302947|snippet_folder|6031302995|text_snippet|6035202031|mark_chat_read|6035173850|call_missed|6035173837|cancel_presentation|6035202037|swap_calls|6035202065|wifi_calling|6035202036|more_time|6035181860|duo|6035202014|read_more|6035202043|hourglass_bottom|6035202027|mark_email_unread|6035202032|ring_volume|6035202017|phone|6035173844|call_received|6035173858|call_made|6035202089|phone_enabled|6035173852|cell_wifi|6035173861|call_split|6035173870|app_registration|6035181867|domain_verification|6035202010|rtt|6035202018|speaker_phone|6035202012|qr_code|6035202002|forum|6035181870|clear_all|6035190886|hourglass_top|6035202038|mark_email_read|6035202041|print_disabled|6035173838|chat|6035202016|rss_feed|6035190854|import_contacts|6035181863|desktop_access_disabled|6035202064|phonelink_lock|6035202013|person_search|6035202049|location_off|6035202091|portable_wifi_off|6035190841|mark_chat_unread|6035202044|unsubscribe|6035202082|nat|6035181892|dialpad|6035173839|add_ic_call|6035202040|import_export|6035202011|stay_current_landscape|6035173847|call_missed_outgoing|6035190842|invert_colors_off|6035202015|pause_presentation|6035173859|call|6035190838|list_alt|6035202030|no_sim|6035181865|dialer_sip|6035181869|chat_bubble_outline|6035190846|location_on|6035202042|stop_screen_share|6035181858|chat_bubble|6035190836|live_help|6035202021|mobile_screen_share|6035181866|email|6035202028|phone_disabled|6035173865|alternate_email|6035202026|stay_primary_landscape|6035202007|person_add_disabled|6035181862|domain_disabled|6035202066|phonelink_ring|6035181864|contacts|6035190840||forward_to_inbox|6035202034|vpn_key|6035190844|mail_outline|6035173853|business|6035202019|voicemail|6035202004|stay_current_portrait|6035202069|sentiment_satisfied_alt|6035202033|message|6035202009|stay_primary_portrait|6035202020|present_to_all|6035202008|screen_share|6035181861|contact_phone|6035181868|contact_mail|6035202085|phonelink_erase|6035173843|call_merge|6035202025|phonelink_setup|6035202022|qr_code_scanner||6035173845|call_end|6035181871|comment||6035202006|textsms|6031600819|filter_hdr|6034316010|wb_incandescent|6034328967|dirty_lens|6031572317|brightness_3||6031597514||filter|6031328146|9mp|6031371053|auto_awesome_mosaic|6031600833||filter_frames|6034412763|panorama_photosphere|6031625131|control_point||6031630200|dehaze|6034412759|looks_6|6034323671|mic_external_on|6031328141|11mp|6031754553|texture|6031371075|add_to_photos|6031471484|add_photo_alternate|6034323687|movie_filter|6031471479|brightness_5|6031597532|filter_8|6031360370|auto_awesome_motion|6031734907|wb_cloudy|6034407076|image_not_supported|6031734877|tune|6031763434|portrait|6031734880|timer_10|6031328168|16mp|6031597515|filter_7|6031625161|colorize|6031572320|brush|6031734891|tonality|6031471491|brightness_7|6031471488|brightness_1|6034323696|navigate_before|6034412770|loupe|6031754564|timer|6034315956|navigate_next|6034323679|music_off|6034323673|music_note|6034407106|iso|6034333271|flash_on|6034315965|panorama_horizontal_select|6031339055|17mp|6034407096|looks|6031625150|animation|6031339052|assistant_photo|6031763423|photo_size_select_large|6031328144|5mp|6034333287|flash_auto|6034323678|monochrome_photos|6031360355|auto_fix_high|6031371054|bedtime|6031488945|blur_circular|6031625144|center_focus_weak|6034407078|6031600814|filter_tilt_shift|6031597511|filter_1|6031763456|rotate_90_degrees_ccw|6034323669|motion_photos_on|6031360365|auto_awesome|6034407084|image_search|6031600816|flare|6031734873|transform|6031770995|panorama_wide_angle|6031572314|camera_roll|6031328133|8mp|6034328960|crop_5_4|6031597513|filter_3|6031339049|add_a_photo|6031328152|4mp|6031763426|remove_red_eye|6031328131|6mp|6031597534|filter_9|6031360352|24mp|6031328136|3mp|6031328138|2mp|6031770997|photo_camera|6034323675|motion_photos_paused|6031770989|photo_album|6034333266|hdr_off|6034333270|flash_off|6034412761|looks_one|6034333275|flip|6034412764|looks_5|6031630222|crop_square|6031488938|brightness_2|6031734905|vignette|6034328964|crop|6031600812|filter_9_plus|6034412758|wb_sunny|6031328139|7mp|6031339064|18mp|6031625147|center_focus_strong|6031600813|filter_drama||6034412757|looks_two|6034315961|panorama_vertical_select|6034315963|panorama_vertical|6031734876|view_comfy|6034333272|hdr_strong|6031572318|camera_front|6034329000|exposure_zero||6031754538|style|6031630197|crop_7_5|6031734878|view_compact|6031763429|rotate_right|6034323670|motion_photos_off|6034407088|looks_3|6031771007|photo_camera_back|6034328959|control_point_duplicate|6031630203|crop_rotate|6031763425|picture_as_pdf|6031754541|timelapse|6031754545|straighten|6034328965|collections_bookmark|6034407080|leak_remove|6031771012|photo_size_select_actual|6034315975|panorama_photosphere_select|6031630204|crop_original|6031630212|crop_free|6034323672|mic_external_off|6034328973|exposure_neg_2|6031630208|crop_din|6034407081|lens|6031625148|color_lens|6034315955|panorama|6034315969|panorama_fish_eye|6034407082|linked_camera|6031597524|filter_6|6034323668|motion_photos_pause|6034333276|grid_on|6031328137|13mp|6031630202|crop_landscape|6031600824|filter_b_and_w|6034407073|image_aspect_ratio|6031572312|6031339065|21mp|6031754560|tag_faces|6034333279|hdr_on|6031488930|blur_linear|6031763457|photo_size_select_small|6031600811|filter_vintage|6031754550|switch_camera|6031734875|wb_auto|6031360381|auto_fix_off|6031371074|auto_fix_normal|6034328956|crop_3_2|6031597521|filter_2|6034407089|looks_4|6034323674|6031770998|photo_library||6031600817|filter_center_focus|6031328158|15mp|6034328963|euro|6031339045|23mp|6031754536|switch_video|6031763443|shutter_speed|6034315972|wb_iridescent|6031763427|rotate_left|6031360360|auto_stories|6031734881|timer_off|6031360353|22mp|6031328140|12mp|6034328961||exposure_plus_2|6031754540|timer_3|6031572324|cases|6031625151|compare|6034315974|wb_shade|6034328962|exposure|6034328957|exposure_neg_1|6034407071|healing|6034328955|edit|6031770992|photo_filter|6031763428|receipt_long|6034333288|grain|6031339054|19mp|6031572309|brightness_6|6034323695|nature|6031572306|burst_mode|6031339048|adjust|6034333281|hdr_enhanced_select|6031625145|collections|6034407083|hdr_weak|6031572316|camera_rear|6034315966|panorama_horizontal|6034328968|details|6031471483|brightness_4|6031371068|blur_on|6031630205|crop_16_9|6031371055|blur_off|6031600815|filter_none|6031471489|audiotrack|6031572307|camera_alt|6031754546||slideshow|6034328970|exposure_plus_1|6034407069|landscape|6034407074|leak_add|6034333286|grid_off|6031770993|photo|6031770990|panorama_wide_angle_select|6031597512|filter_4|6034333261|gradient|6031328161|14mp|6034323711|nature_people|6034316009|palette|6034333274|face_retouching_natural|6031360356|assistant|6031771000|photo_camera_front|6031625146|6034333267|flip_camera_ios|6034333280|flip_camera_android|6031471480|broken_image|6031597518|filter_5|6031630198|crop_portrait|6034323681|movie_creation|6034412760|wb_twighlight|6031488940|20mp|6031328149|10mp|6026663698|radio||6026681585|9k_plus|6026647934|av_timer|6026643012|7k_plus|6026647898|call_to_action|6026660078|mic|6026671206|volume_down|6026660074|games|6026681588|2k_plus|6026681580|1k_plus|6026666994|repeat_on|6026666999|replay|6026643019|6k_plus|6026643028|5k_plus|6026643035|6026667010|replay_30|6026647910|featured_video|6026671203|subtitles|6026647896|closed_caption|6026647909|fiber_manual_record|6026643002|6026663705|play_circle_filled|6026643003|8k_plus|6026671204|video_label|6026643013|6026647929|airplay|6026663725|queue_music|6026660060|hearing|6026647943|closed_caption_off|6026663724|queue|6026660066|mic_none|6026671234|web|6026660067|forward_5|6026663700|queue_play_next|6026666998|6026660083|library_add_check|6026643007|6026667002|replay_circle_filled|6026660087|6026671208|video_library|6026667007|replay_10|6026681575|6026647942|fast_rewind|6026663702|play_disabled|6026647902|fast_forward|6026663771|remove_from_queue|6026663723|playlist_play|6026671214|volume_mute|6026643017|6026681574|6026647908|art_track|6026681578|speed|6026647911|branding_watermark|6026667005|skip_next|6026671207|subscriptions|6026647900|closed_caption_disabled|6026667006|snooze|6026663699|play_arrow|6026666996|shuffle_on|6026660059|high_quality|6026666993|replay_5|6026671215|volume_up|6026681582|6026647905|album|6026663730|new_releases|6026663719|pause|6026681577|stop_circle|6026660063|library_add|6026667009||sort_by_alpha|6026671213|videocam|6026663743|not_interested|6026663727|playlist_add_check|6026643032|6026681576|6026647906|equalizer|6026681590|repeat_one||6026643005|4k_plus|6026660062|forward_10|6026660068|hearing_disabled|6026647912|fiber_dvr|6026647930|fiber_new|6026663773|recent_actors|6026666992|repeat_one_on|6026660065|6026643014|6026660080|fiber_smart_record|6026663728|playlist_add|6026681584||6026681583|slow_motion_video|6026663701||pause_circle_outline|6026647932|featured_play_list|6026660076|mic_off||6026671224|volume_off|6026663726|play_circle_outline|6026671239|web_asset|6026681579|6026647903|add_to_queue|6026660081|movie|6026671211|video_settings|6026663718|pause_circle_filled|6026667011|skip_previous|6026660064|fiber_pin|6026681598|3k_plus|6026647913|explicit|6026647916|control_camera|6026671212|videocam_off|6026663704|music_video|6026660088||forward_30||6026671209|surround_sound|6026660075|library_music|6026660085|library_books|6026667003|shuffle|6026663734|note|6034934040|text_fields|6034898094|border_bottom|6034973088|money_off|6034900732|format_bold|6034973081|table_chart|6034934034|superscript|6034941708|mode_edit|6034934035|short_text|6034973115|monetization_on||6034900743|format_color_reset|6034973074|insert_link|6034973079|insert_emoticon|6034925614|functions|6034941697|insert_drive_file|6034973084|notes|6034910902|format_clear|6034900721|format_align_justify|6034934059|subscript|6034934023|vertical_align_bottom|6034925606|insert_chart_outlined|6034934032|show_chart|6034925619||format_textdirection_l_to_r|6034900718|format_align_center|6034898105|border_horizontal|6034910906|format_list_numbered_rtl||6034973091|insert_invitation|6034973118|wrap_text|6034898102|attach_file|6034925622|format_list_numbered|6034910912|format_italic|6034925620|format_list_bulleted|6034898099|border_left|6034934030|strikethrough_s|6034910904|format_strikethrough|6034898128|add_comment|6034925613|height|6034925629|format_quote|6034910910|format_color_text|6034934051|vertical_align_center|6034973080|vertical_align_top|6034925609|insert_comment||6034898097|border_style|6034898101|border_all|6034925610|horizontal_rule|6034973077|pie_chart_outlined|6034900723|format_align_right|6034910907|drag_handle|6034898098|attach_money||6034941700|mode_comment|6034898104|border_outer|6034934037|space_bar|6034898093|add_chart|6034898120|border_right|6034934041|score|6034900725|border_vertical|6034973078|padding|6034900726|border_top|6034925628|insert_chart|6034898131||border_inner|6034898100|border_color|6034898135|border_clear|6034934039|stacked_line_chart|6034934025|table_rows|6034941701|margin|6034900733|format_indent_decrease|6034973085|publish|6034925612|bubble_chart|6034941705|merge_type|6034900724|format_indent_increase|6034898096|bar_chart|6034925617|highlight|6034934042|title|6034910909|format_shapes|6034925627|format_underlined|6034925618|format_paint|6034910903|format_color_fill|6034910908|format_size|6034925623|format_textdirection_r_to_l|6034973083|post_add|6034973094|scatter_plot|6034941703|insert_photo|6034941707|linear_scale|6034900727|format_align_left|6034910905|format_line_spacing|6034973076|pie_chart|6034941721|multiline_chart|6031068428|star_outline|6031068427|star_half|6031068425|star_border|6031068423|star|6031068433|radio_button_unchecked|6031068421|check_box|6031068430|toggle_on|6031068426|radio_button_checked|6031068445|indeterminate_check_box|6031068429|toggle_off|6031068420|check_box_outline_blank|6031071050|_error_outline|6031071053|_warning|6031071067|_add_alert|6031071056|_notification_important|6031071057|_error|6031071068|_auto_delete|6034989568|data_usage|6034996706|screen_lock_portrait|6034983858|add_to_home_screen|6034989553|bluetooth_searching|6035030081|settings_system_daydream|6035030102|wallpaper|6034996696|reset_tv|6034983864|airplanemode_active|6035030080|usb|6034989543|brightness_medium|6034983850|add_alarm||6034989548|gps_off|6035229858|signal_cellular_connected_no_internet_4|6035030084|signal_cellular_off|6034983843|battery_alert|6034983844|access_alarm|6034989547|gps_not_fixed|6035039428|wifi_lock|6034989545|brightness_auto|6034996695|6034996697|send_to_mobile|6035030083|storage|6035030072|signal_cellular_0_bar|6034996699|mobile_friendly|6034983849|battery_charging_full|6034983880|bluetooth|6035039429|widgets|6035030074|signal_wifi_off|6034989544|device_thermostat|6034996701|screen_rotation|6034989540|devices|6035030078|signal_cellular_no_sim|6034996719|sd_storage|6034996709|network_cell|6034989549|developer_mode|6034989562|bluetooth_disabled|6035030075|signal_cellular_null|6034983842|battery_unknown|6034996702|mobile_off|6034983856|access_time|6035030077|signal_wifi_4_bar|6034996694|location_disabled|6034996698|nfc|6034983853|access_alarms|6034996712|network_wifi|6034996711|screen_search_desktop|6034989561|dvr|6035039430|wifi_tethering|6034983855|bluetooth_connected|6035030079|signal_cellular_alt|6034983845|ad_units|6034989541|brightness_high|6034989550|6034983854|battery_full|6035030067|signal_wifi_0_bar|6034983848|airplanemode_inactive|6035030076|signal_cellular_4_bar|6034996710|screen_lock_rotation|6034989551|graphic_eq|6034996700|screen_lock_landscape|6034989542|brightness_low|6034684927|local_taxi|6034687953|local_atm|6034684936|local_movies|6034684937|location_pin|6034503369|park|6034687963|local_dining|6034744036|hardware|6034513893|local_parking|6034687977|hotel|6034684934|local_mall|6034744030|flight|6034767608|360|6034767623|compass_calibration|6034767617|car_repair|6034684928|lunch_dining|6034687960|hvac|6034470805|streetview|6034754439|edit_location|6034467806|tram|6034467804|trip_origin|6034470811|store_mall_directory|6034754459|directions_bike|6034509994|menu_book|6034684956|local_hospital|6034687955|local_activity|6034684931|local_library|6034744034|fastfood|6034509996|near_me|6034509984|navigation|6034687967|icecream|6034767615|departure_board|6034467797|traffic|6034684933|local_grocery_store|6034513885|local_pizza|6034470803|pest_control_rodent|6034687976|local_car_wash|6034503368|set_meal|6034684943|local_laundry_service|6034767611|brunch_dining|6034510026|multiple_stop|6034767641|car_rental|6034684930|map|6034513897|local_printshop|6034744035|edit_road|6034503377|ramen_dining|6034744041|electric_scooter|6034503380|not_listed_location|6034754440||directions_subway|6034503366|restaurant||6034467801|wrong_location|6034754442|directions_boat|6034684926|local_shipping|6034744031|festival|6034510025|no_meals_ouline|6034684939|local_hotel|6034684940|local_florist|6034467795||two_wheeler|6034483669|bike_scooter|6034513889|local_play|6034754448|directions_walk|6034754443|edit_attributes|6034767607|badge|6034483666|add_business|6034467792|taxi_alert|6034470800|plumbing|6034687975|layers_clear|6034483671|breakfast_dining|6034467799|volunteer_activism|6034483674|agriculture|6034767618|bus_alert|6034744064|home_repair_service|6034744037|ev_station|6034503364|person_pin|6034754433|directions_railway|6034687965|local_drink|6034687950|local_bar|6034503385|rate_review||6034767614|atm|6034754449|directions|6034470809|pest_control||6034767644|delivery_dining|6034467803|train|6034510024|no_meals|6034467794|terrain|6034767619|cleaning_services|6034503375|person_pin_circle|6034767620|attractions|6034767621|category|6034754441|directions_car|6034513895|local_police|6034470823|railway_alert|6034754436|directions_transit|6034503374|pedal_bike|6034503363|no_transfer|6034483670|alt_route|6034744043|electric_rickshaw|6034513903|local_pharmacy|6034744057|handyman|6034687957|layers|6034483672|add_location|6034510005|museum|6034744038|electrical_services|6034467809|transfer_within_a_station|6034509997|money|6034510001|medical_services|6034509999|moped|6034509992|maps_ugc||6034509993|miscellaneous_services||6034483675||||||beenhere|6034744029|electric_car|6034513891|local_offer|6034687956|local_convenience_store|6034467805|transit_enterexit|6034513887|local_see|6034744032|electric_bike|6034513884|local_phone|6034503370|satellite|6034744033|hail|6034754434|directions_bus|6034467796|theater_comedy|6034687954|local_cafe|6034684935|local_gas_station|6034503378|restaurant_menu|6034744027|electric_moped|6034467790|subway|6034470807|pin_drop|6035229856|zoom_out_map|6034687951|local_airport|6034754457|dinner_dining|6034509987|my_location|6034483677|add_road|6034684949|local_fire_department|6034754445|directions_run|6034483678|add_location_alt|6034509988|||near_me_disabled|6034767613|celebration|6034754453||design_services||6034510003|nightlife|6034467808|takeout_dining|6034513883|local_post_office|6034503367|run_circle|6034503372|6034767610|bakery_dining|6034754456|dry_cleaning|6034837802|security|6034818375|keyboard_arrow_left|6034837793|phone_android|6034837797|6034848734|tablet_android|6034848752|toys|6034818403|keyboard_capslock|6034789872|cast_for_education|6034818365|keyboard_arrow_right|6034837796|laptop_windows|6034837808|laptop_mac|6034818372|keyboard_arrow_down|6034789893|desktop_windows|6034848748|videogame_asset|6034837794|power_input|6034848731|smartphone|6034837811|phone_iphone|6034818364|laptop_chromebook|6034818381|keyboard_backspace|6034818379|keyboard_arrow_up|6034848747||watch|6034789895||cast_connected|6034818402|headset_off||||6034837804|phonelink_off|6034789870|connected_tv|6034789874|computer|6034789875|browser_not_supported|6034818383|headset_mic|6034848740|6034837799|scanner|6034818367|laptop|6034789873|devices_other|6034848746|speaker|6034789879|gamepad|6034789880|headset|6034837800|sim_card|6034837806|router|6034818363|keyboard_tab|6034837807|memory|6034837798|point_of_sale|6034789898|desktop_mac|6034848732|speaker_group|6034789884|device_unknown|6034837801|phonelink|6034789888|dock|6034818386|keyboard_hide|6034848733|tablet|6034789883|developer_board|6034789876|cast|6034818360||keyboard_voice|6034818398|keyboard|6034789877|||||device_hub|6034837803|monitor|6034818370|keyboard_return|6031067241|sensor_door|6031067242|sensor_window|6034464371|drive_eta|6034418517|directions_off|6034457064|network_locked|6034452656|support_agent|6034452648|vpn_lock|6034452662|sync|6034457106|phone_forwarded|6034457104|phone_callback|6034457092|priority_high|6034418514|airline_seat_individual_suite|6034457067|phone_in_talk|6034418520|airline_seat_legroom_reduced|6034457105|power|6034439635|imagesearch_roller|6034439642|do_not_disturb_off|6034461626|wifi|6034418532|airline_seat_legroom_normal|6034452641|sim_card_alert|6034452646|tv_off|6034418508|airline_seat_legroom_extra|6034457059|no_encryption|6034457065|ondemand_video||6034439645|do_not_disturb||||6034461619|||do_not_disturb_alt|6034452676|sms_failed|6034439643|event_available|6034418519|confirmation_number|6034452650|tap_and_play|6034452645|sms|6034418528|airline_seat_recline_extra|6034457056|phone_missed|6034439639|folder_special|6034439648|live_tv|6034452643|6034439652|enhanced_encryption|6034452663|system_update|6034452651|vibration|6034418522|bluetooth_audio|6034418513|airline_seat_flat_angled|6034461621|mms|6034452649|sync_disabled|6034439637|event_note|6034439649|do_not_disturb_on|6034418507|account_tree|6034418524|add_call|6034461627|6034457058|phone_locked|6034457066|phone_paused|6034457057|phone_bluetooth_speaker|6034452660|time_to_leave|6034457089|sd_card|||6034418518|disc_full|||6034418511|airline_seat_flat|6034439634||event_busy|6034461631|network_check|6034452653|sync_problem|6034418512|airline_seat_recline_normal|6034418515|adb|6034461625|wifi_off|6034457087|power_off|6034457070|personal_video|menu|6031091005|assistant_direction|6031104632|waterfall_chart|menu_open|6031091001|arrow_drop_down_circle|6031091002|arrow_left|6031094666|campaign|6031094687|expand_more|6031097234|pivot_table_chart|6031097226|refresh|6031091004|arrow_drop_down|6031091008|arrow_forward_ios|6031090995|arrow_forward|6031094680|chevron_right|6031104651|switch_left|6031104630|north_west|6031104647|subdirectory_arrow_right|6031090998|app_settings_alt|6031090997|arrow_upward|6031090999|||apps|6031091006||||assistant_navigation||6031104642|south_east|6031094679|expand_less|6031104652|south_west|6031097267|offline_share|6031090994|arrow_right|6031097227|payments|6031094682|first_page|6031104681|unfold_less|6031104650|more_horiz|6031094670|chevron_left|6031104648|more_vert|6031094674|double_arrow|6031097228|north_east|6031094683|home_work|6031094667|check|6031104649|switch_right|6031094686|last_page|6031094691|fullscreen_exit|6031097233|legend_toggle|6031104677|west|6031090991|arrow_downward|6031091000|arrow_back|6031090990|arrow_drop_up|6031104646|south|6031104644|unfold_more|6031094675|east|6031091003|arrow_back_ios||close|6031104654|subdirectory_arrow_left||6031094677|cancel|||6031094681|6031233841|swap_horiz|6022668935|assignment_ind|6031280884|settings_input_component|6026568225|6031086170|redeem|6031289452|subject|6026568232|not_started|6031229343|toll|6031154867|saved_search|6023426922|exit_to_app|6031280894|settings_applications|6031215986|perm_phone_msg|6023426937|comment_bank|6023426945|check_circle|6026568201|help_outline|6031243318|record_voice_over|6031229342|thumb_up_off_alt|6023426984|filter_alt|6026568200|6031084771|pan_tool|6022668906|accessible_forward|6031280882|6031215994|picture_in_picture|6022668884|analytics|6022860338|backup_table|6022668891|expand|6022668883|6026568191|grading|6023565891|flight_takeoff|6031225809|verified|6031225816|trending_up|6031289459|settings_overscan|6031086172|question_answer|6023426983|edit_off|6031225806|turned_in_not|6023565916|highlight_off|6026568207|label_outline|6031075926|wifi_protected_setup|6031289450|spellcheck|6031260785|polymer|6031086173|receipt|6031079156|view_list|6026568231|next_plan|6022668875|add_shopping_cart|6023426955|filter_list_alt|6026568240|minimize|6026568194|horizontal_split|6023426928|close_fullscreen|6031289466|subtitles_off|6022852107|bug_report|6031243319|quickreply|6022860332|book_online|6031154861|rounded_corner|6022668939|delete_forever|6023426941|explore|6031215990|perm_contact_calendar|6031229344|text_rotation_none|6031225810|update|6031084751|payment|6031289444|settings_input_svideo|6031082527|login|6031265976|shopping_cart|6022860334|batch_prediction|6031084743|nightlight_round|6022668885|delete|6022668890|arrow_right_alt|6031260784|privacy_tip|6023565898|copyright|6023565901|autorenew|6031154871|search|6031079172|view_column|6031260782|pets|6031260776|play_for_work|6022668900|account_balance|6031229373|thumbs_up_down|6023426946|calendar_view_day|6022668878|compress|6023426923|circle_notifications|6023426926|done|6031289461|shop_two|6031225831|view_agenda|6022668892|account_balance_wallet|6031233833|swap_horizontal_circle|6031154857|rowing|6022668899|dashboard_customize|6022668888|description|6026568210|info_outline|6022668917|calendar_today|6031154866|schedule_send|6031154859|rule|6023426942|card_membership|6026568266|open_in_browser|6022668961|admin_panel_settings|6031289446|settings_power|6031225842|view_array|6031280889|send_and_archive|6031154875|room|6031229361|touch_app|6023565894|flip_to_front|6022668879|contact_support|6031265970|shopping_bag|6023565913|highlight_alt|6023426931|assignment_return|6031233847|swap_vert|6031251505|tab_unselected|6026568189|grade|6031280896|settings_input_composite|6023426910|alarm|6031229335|theaters|6031084749|note_add|6031079155|view_quilt|6026568216|leaderboard|6031280970|settings_input_hdmi|6022668946|announcement|6022668887|accessibility|6023426957|feedback|6031084742|offline_bolt|6031265971|stars|6031075577|zoom_out|6031260781|power_settings_new|6031280905|settings_bluetooth|6031243324|6026568215|label_important|6022668909|all_inbox|6026568263|outbox|6026568202|important_devices|6023565895|fingerprint|6031086176|report_problem|6031225820|vertical_split|6023426974|favorite|6031084748|outlet|6031225817|unpublished|6023426921|cached|6031079151|view_headline|6023565897|flight_land|6022668894|date_range|6031084770|offline_pin|6031260808|schedule|6031225818|trending_flat|6022668886|contactless|6031225815|upgrade|6023426939|disabled_by_default|6031280891|settings_input_antenna|6023426911|backup|6023426938|build|6023426953|explore_off|6026568269|not_accessible|6031260777|pending_actions|6023426954|euro_symbol|6022668934|arrow_circle_up|6026568222|model_training|6031215983|perm_camera_mic|6023426935|camera_enhance|6031075938|wysiwyg|6023426944|face|6031079160|view_sidebar|6022668951|compare_arrows|6031229362|tour|6022860339|bookmark_border|6022668902|accessible|6022860335|add_to_drive|6031075931|visibility|6031251518|text_rotate_vertical|6031260778|remove_shopping_cart|6026568239|online_prediction|6031265965|speaker_notes_off|6026568237|loyalty|6022668963|cancel_schedule_send|6023426905|addchart|6031075929|6026568253|invert_colors|6026568196|history_toggle_off|6031289442|settings_remote|6026568199|label_important_outline|6026568249|mediation|6023426930|eject|6031233863|swipe|6031251526|text_rotate_up|6022668912|add_task|6031215996|perm_device_information|6026568224|lock|9080449299|home_filled|6023426915|account_box|6022668962|delete_outline|6031075937|work_off|6026568223|mark_as_unread|6031265997|shopping_basket|6022668907|article|6022668876|all_out|6026568209|label_off|6031086183|query_builder|6031215979|picture_in_picture_alt|6031075939|work|6031082540|gif|6022668901|commute|6031243320|plagiarism|6031215985|perm_scan_wifi|6023426958|dns|6031265966|settings_voice|6031280886|settings_backup_restore|6031225811|trending_down|6023426978|card_giftcard|6023426899|assignment_returned|6031229347|thumb_up|6023426951|fact_check|6031154868|reorder|6023426936|done_outline|6031251532|support|6031251516|supervisor_account|6022668949|class|6031229352|today|6023426924|bookmarks|6023426979|find_replace|6026568247|lightbulb|6023426929|done_all|6031289449|supervised_user_circle|6031280883|settings_ethernet|6022668952|app_blocking|6031075927|voice_over_off|6026568220|lock_open|6023426925|card_travel|6031079158|6031079154|view_week|6031082526|g_translate|6031082525|6031233851|6023565889|get_app|6023426959|event|6031082522|logout|6026568192|help_center|6031079153|view_day|6022668897|assessment|6022668916|dangerous|6026568226|line_weight|6031075930|work_outline|6022668882|assignment|6031260773|segment|6026568254|lightbulb_outline|6023426962|drag_indicator|6031225819|verified_user|6031243328|published_with_changes|6031251507|view_carousel|6026568244|outbond|6031082533|lock_outline|6026568267|maximize|6023426901|alarm_off|6031075924|watch_later|6026568256|open_in_new|6031233839|swap_vertical_circle|6023426920|alarm_on|6031082523|flaky|6022668877|arrow_circle_down|6031154869|restore_from_trash|6026568227|6031225808|turned_in|6031229350|timeline|6026568190|hourglass_full|6031075934|youtube_searched_for|6022668880|assignment_late|6023565882|favorite_border|6031260800|restore|6031260793|preview|6022668881|contact_page|6023565896|flip_to_back|6031229334|text_rotation_down|6026568211|launch|6022668911|api|6023426986|find_in_page|6023426988|eco|6031229337|text_rotation_angleup|6031265968|store|6031082531|markunread_mailbox|6031086169|remove_done|6031079164|view_stream|6022852108|bookmark|6031251513|text_rotation_angledown|6031229354|thumb_down_off_alt|6023426914|change_history|6023426904|assignment_turned_in|6031215991|perm_data_setting|6031079152|view_module|6031215978|perm_identity|6026568295|opacity|6026568214|integration_instructions|6031229336|thumb_down|6031289451|6031225814|track_changes|6023426970|dynamic_form|6026568242|outgoing_mail|6022668966|android|6026568260|lock_clock|6031154873|request_page|6031265962|smart_button|6022860343|book|6031233840|sync_alt|6023426912|chrome_reader_mode|6031154877|restore_page|6031280902|settings_brightness|6026568213|language|6023426906|anchor|6031265983|shop|6031260783|search_off|6031280890|settings_cell|6022668898|account_circle|6026568276|line_style|6026568193|hourglass_disabled|6022668945|accessibility_new|6026568197|history|6026568245|open_in_full|6031289445|settings_phone|6031229341|toc|6023426952|build_circle|6026568265|open_with|6031251515|system_update_alt|6031265978|star_rate|6031225812|translate|6022668893|3d_rotation|6022668955|6022668895|aspect_ratio|6031075573|zoom_in|6023565910|group_work|6031216007|pageview|6031084745|pending|6023565892|extension|6023426909|check_circle_outline|6031266001|speaker_notes|6023426898|alarm_add|6026568229|6026568195|6031233835|table_view|6023565902|gavel|6031265972|sticky_note_2|6031215982|perm_media|Respectively|qweery|Latte|Credits|IsStudio|github|LocalizationService|Beta|Prerelease|Release'.split('|'),0,{}))
+
+
+
+local Release = "Prerelease Beta 6.1"
+
+local Luna = { 
+	Folder = "Luna", 
+	Options = {}, 
+	ThemeGradient = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(117, 164, 206)), ColorSequenceKeypoint.new(0.50, Color3.fromRGB(123, 201, 201)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(224, 138, 175))} 
+}
+
+local UserInputService = game:GetService("UserInputService")
+local TweenService = game:GetService("TweenService")
+local HttpService = game:GetService("HttpService")
+local RunService = game:GetService("RunService")
+local Localization = game:GetService("LocalizationService")
+local Players = game:GetService("Players")
+local Player = Players.LocalPlayer
+local Camera = workspace.CurrentCamera
+local CoreGui = game:GetService("CoreGui")
+
+local isStudio
+local website = "github.com/Nebula-Softworks"
+
+if RunService:IsStudio() then
+	isStudio = true
+end
+
+-- Credits To Latte Softworks And qweery for Lucide And Material Icons Respectively.
+local IconModule = {
+	Lucide = nil,
+	Material = {
+		["perm_media"] = "http://www.roblox.com/asset/?id=6031215982";
+		["sticky_note_2"] = "http://www.roblox.com/asset/?id=6031265972";
+		["gavel"] = "http://www.roblox.com/asset/?id=6023565902";
+		["table_view"] = "http://www.roblox.com/asset/?id=6031233835";
+		["home"] = "http://www.roblox.com/asset/?id=6026568195";
+		["list"] = "http://www.roblox.com/asset/?id=6026568229";
+		["alarm_add"] = "http://www.roblox.com/asset/?id=6023426898";
+		["speaker_notes"] = "http://www.roblox.com/asset/?id=6031266001";
+		["check_circle_outline"] = "http://www.roblox.com/asset/?id=6023426909";
+		["extension"] = "http://www.roblox.com/asset/?id=6023565892";
+		["pending"] = "http://www.roblox.com/asset/?id=6031084745";
+		["pageview"] = "http://www.roblox.com/asset/?id=6031216007";
+		["group_work"] = "http://www.roblox.com/asset/?id=6023565910";
+		["zoom_in"] = "http://www.roblox.com/asset/?id=6031075573";
+		["aspect_ratio"] = "http://www.roblox.com/asset/?id=6022668895";
+		["code"] = "http://www.roblox.com/asset/?id=6022668955";
+		["3d_rotation"] = "http://www.roblox.com/asset/?id=6022668893";
+		["translate"] = "http://www.roblox.com/asset/?id=6031225812";
+		["star_rate"] = "http://www.roblox.com/asset/?id=6031265978";
+		["system_update_alt"] = "http://www.roblox.com/asset/?id=6031251515";
+		["open_with"] = "http://www.roblox.com/asset/?id=6026568265";
+		["build_circle"] = "http://www.roblox.com/asset/?id=6023426952";
+		["toc"] = "http://www.roblox.com/asset/?id=6031229341";
+		["settings_phone"] = "http://www.roblox.com/asset/?id=6031289445";
+		["open_in_full"] = "http://www.roblox.com/asset/?id=6026568245";
+		["history"] = "http://www.roblox.com/asset/?id=6026568197";
+		["accessibility_new"] = "http://www.roblox.com/asset/?id=6022668945";
+		["hourglass_disabled"] = "http://www.roblox.com/asset/?id=6026568193";
+		["line_style"] = "http://www.roblox.com/asset/?id=6026568276";
+		["account_circle"] = "http://www.roblox.com/asset/?id=6022668898";
+		["settings_cell"] = "http://www.roblox.com/asset/?id=6031280890";
+		["search_off"] = "http://www.roblox.com/asset/?id=6031260783";
+		["shop"] = "http://www.roblox.com/asset/?id=6031265983";
+		["anchor"] = "http://www.roblox.com/asset/?id=6023426906";
+		["language"] = "http://www.roblox.com/asset/?id=6026568213";
+		["settings_brightness"] = "http://www.roblox.com/asset/?id=6031280902";
+		["restore_page"] = "http://www.roblox.com/asset/?id=6031154877";
+		["chrome_reader_mode"] = "http://www.roblox.com/asset/?id=6023426912";
+		["sync_alt"] = "http://www.roblox.com/asset/?id=6031233840";
+		["book"] = "http://www.roblox.com/asset/?id=6022860343";
+		["smart_button"] = "http://www.roblox.com/asset/?id=6031265962";
+		["request_page"] = "http://www.roblox.com/asset/?id=6031154873";
+		["lock_clock"] = "http://www.roblox.com/asset/?id=6026568260";
+		["android"] = "http://www.roblox.com/asset/?id=6022668966";
+		["outgoing_mail"] = "http://www.roblox.com/asset/?id=6026568242";
+		["dynamic_form"] = "http://www.roblox.com/asset/?id=6023426970";
+		["track_changes"] = "http://www.roblox.com/asset/?id=6031225814";
+		["source"] = "http://www.roblox.com/asset/?id=6031289451";
+		["thumb_down"] = "http://www.roblox.com/asset/?id=6031229336";
+		["integration_instructions"] = "http://www.roblox.com/asset/?id=6026568214";
+		["opacity"] = "http://www.roblox.com/asset/?id=6026568295";
+		["perm_identity"] = "http://www.roblox.com/asset/?id=6031215978";
+		["view_module"] = "http://www.roblox.com/asset/?id=6031079152";
+		["perm_data_setting"] = "http://www.roblox.com/asset/?id=6031215991";
+		["assignment_turned_in"] = "http://www.roblox.com/asset/?id=6023426904";
+		["change_history"] = "http://www.roblox.com/asset/?id=6023426914";
+		["thumb_down_off_alt"] = "http://www.roblox.com/asset/?id=6031229354";
+		["text_rotation_angledown"] = "http://www.roblox.com/asset/?id=6031251513";
+		["bookmark"] = "http://www.roblox.com/asset/?id=6022852108";
+		["view_stream"] = "http://www.roblox.com/asset/?id=6031079164";
+		["remove_done"] = "http://www.roblox.com/asset/?id=6031086169";
+		["markunread_mailbox"] = "http://www.roblox.com/asset/?id=6031082531";
+		["store"] = "http://www.roblox.com/asset/?id=6031265968";
+		["text_rotation_angleup"] = "http://www.roblox.com/asset/?id=6031229337";
+		["eco"] = "http://www.roblox.com/asset/?id=6023426988";
+		["find_in_page"] = "http://www.roblox.com/asset/?id=6023426986";
+		["api"] = "http://www.roblox.com/asset/?id=6022668911";
+		["launch"] = "http://www.roblox.com/asset/?id=6026568211";
+		["text_rotation_down"] = "http://www.roblox.com/asset/?id=6031229334";
+		["flip_to_back"] = "http://www.roblox.com/asset/?id=6023565896";
+		["contact_page"] = "http://www.roblox.com/asset/?id=6022668881";
+		["preview"] = "http://www.roblox.com/asset/?id=6031260793";
+		["restore"] = "http://www.roblox.com/asset/?id=6031260800";
+		["favorite_border"] = "http://www.roblox.com/asset/?id=6023565882";
+		["assignment_late"] = "http://www.roblox.com/asset/?id=6022668880";
+		["youtube_searched_for"] = "http://www.roblox.com/asset/?id=6031075934";
+		["hourglass_full"] = "http://www.roblox.com/asset/?id=6026568190";
+		["timeline"] = "http://www.roblox.com/asset/?id=6031229350";
+		["turned_in"] = "http://www.roblox.com/asset/?id=6031225808";
+		["info"] = "http://www.roblox.com/asset/?id=6026568227";
+		["restore_from_trash"] = "http://www.roblox.com/asset/?id=6031154869";
+		["arrow_circle_down"] = "http://www.roblox.com/asset/?id=6022668877";
+		["flaky"] = "http://www.roblox.com/asset/?id=6031082523";
+		["alarm_on"] = "http://www.roblox.com/asset/?id=6023426920";
+		["swap_vertical_circle"] = "http://www.roblox.com/asset/?id=6031233839";
+		["open_in_new"] = "http://www.roblox.com/asset/?id=6026568256";
+		["watch_later"] = "http://www.roblox.com/asset/?id=6031075924";
+		["alarm_off"] = "http://www.roblox.com/asset/?id=6023426901";
+		["maximize"] = "http://www.roblox.com/asset/?id=6026568267";
+		["lock_outline"] = "http://www.roblox.com/asset/?id=6031082533";
+		["outbond"] = "http://www.roblox.com/asset/?id=6026568244";
+		["view_carousel"] = "http://www.roblox.com/asset/?id=6031251507";
+		["published_with_changes"] = "http://www.roblox.com/asset/?id=6031243328";
+		["verified_user"] = "http://www.roblox.com/asset/?id=6031225819";
+		["drag_indicator"] = "http://www.roblox.com/asset/?id=6023426962";
+		["lightbulb_outline"] = "http://www.roblox.com/asset/?id=6026568254";
+		["segment"] = "http://www.roblox.com/asset/?id=6031260773";
+		["assignment"] = "http://www.roblox.com/asset/?id=6022668882";
+		["work_outline"] = "http://www.roblox.com/asset/?id=6031075930";
+		["line_weight"] = "http://www.roblox.com/asset/?id=6026568226";
+		["dangerous"] = "http://www.roblox.com/asset/?id=6022668916";
+		["assessment"] = "http://www.roblox.com/asset/?id=6022668897";
+		["view_day"] = "http://www.roblox.com/asset/?id=6031079153";
+		["help_center"] = "http://www.roblox.com/asset/?id=6026568192";
+		["logout"] = "http://www.roblox.com/asset/?id=6031082522";
+		["event"] = "http://www.roblox.com/asset/?id=6023426959";
+		["get_app"] = "http://www.roblox.com/asset/?id=6023565889";
+		["tab"] = "http://www.roblox.com/asset/?id=6031233851";
+		["label"] = "http://www.roblox.com/asset/?id=6031082525";
+		["g_translate"] = "http://www.roblox.com/asset/?id=6031082526";
+		["view_week"] = "http://www.roblox.com/asset/?id=6031079154";
+		["view_in_ar"] = "http://www.roblox.com/asset/?id=6031079158";
+		["card_travel"] = "http://www.roblox.com/asset/?id=6023426925";
+		["lock_open"] = "http://www.roblox.com/asset/?id=6026568220";
+		["voice_over_off"] = "http://www.roblox.com/asset/?id=6031075927";
+		["app_blocking"] = "http://www.roblox.com/asset/?id=6022668952";
+		["settings_ethernet"] = "http://www.roblox.com/asset/?id=6031280883";
+		["supervised_user_circle"] = "http://www.roblox.com/asset/?id=6031289449";
+		["done_all"] = "http://www.roblox.com/asset/?id=6023426929";
+		["lightbulb"] = "http://www.roblox.com/asset/?id=6026568247";
+		["find_replace"] = "http://www.roblox.com/asset/?id=6023426979";
+		["bookmarks"] = "http://www.roblox.com/asset/?id=6023426924";
+		["today"] = "http://www.roblox.com/asset/?id=6031229352";
+		["class"] = "http://www.roblox.com/asset/?id=6022668949";
+		["supervisor_account"] = "http://www.roblox.com/asset/?id=6031251516";
+		["support"] = "http://www.roblox.com/asset/?id=6031251532";
+		["done_outline"] = "http://www.roblox.com/asset/?id=6023426936";
+		["reorder"] = "http://www.roblox.com/asset/?id=6031154868";
+		["fact_check"] = "http://www.roblox.com/asset/?id=6023426951";
+		["thumb_up"] = "http://www.roblox.com/asset/?id=6031229347";
+		["assignment_returned"] = "http://www.roblox.com/asset/?id=6023426899";
+		["card_giftcard"] = "http://www.roblox.com/asset/?id=6023426978";
+		["trending_down"] = "http://www.roblox.com/asset/?id=6031225811";
+		["settings_backup_restore"] = "http://www.roblox.com/asset/?id=6031280886";
+		["settings_voice"] = "http://www.roblox.com/asset/?id=6031265966";
+		["dns"] = "http://www.roblox.com/asset/?id=6023426958";
+		["perm_scan_wifi"] = "http://www.roblox.com/asset/?id=6031215985";
+		["plagiarism"] = "http://www.roblox.com/asset/?id=6031243320";
+		["commute"] = "http://www.roblox.com/asset/?id=6022668901";
+		["gif"] = "http://www.roblox.com/asset/?id=6031082540";
+		["work"] = "http://www.roblox.com/asset/?id=6031075939";
+		["picture_in_picture_alt"] = "http://www.roblox.com/asset/?id=6031215979";
+		["query_builder"] = "http://www.roblox.com/asset/?id=6031086183";
+		["label_off"] = "http://www.roblox.com/asset/?id=6026568209";
+		["all_out"] = "http://www.roblox.com/asset/?id=6022668876";
+		["article"] = "http://www.roblox.com/asset/?id=6022668907";
+		["shopping_basket"] = "http://www.roblox.com/asset/?id=6031265997";
+		["mark_as_unread"] = "http://www.roblox.com/asset/?id=6026568223";
+		["work_off"] = "http://www.roblox.com/asset/?id=6031075937";
+		["delete_outline"] = "http://www.roblox.com/asset/?id=6022668962";
+		["account_box"] = "http://www.roblox.com/asset/?id=6023426915";
+		["home_filled"] = "rbxassetid://9080449299";
+		["lock"] = "http://www.roblox.com/asset/?id=6026568224";
+		["perm_device_information"] = "http://www.roblox.com/asset/?id=6031215996";
+		["add_task"] = "http://www.roblox.com/asset/?id=6022668912";
+		["text_rotate_up"] = "http://www.roblox.com/asset/?id=6031251526";
+		["swipe"] = "http://www.roblox.com/asset/?id=6031233863";
+		["eject"] = "http://www.roblox.com/asset/?id=6023426930";
+		["mediation"] = "http://www.roblox.com/asset/?id=6026568249";
+		["label_important_outline"] = "http://www.roblox.com/asset/?id=6026568199";
+		["settings_remote"] = "http://www.roblox.com/asset/?id=6031289442";
+		["history_toggle_off"] = "http://www.roblox.com/asset/?id=6026568196";
+		["invert_colors"] = "http://www.roblox.com/asset/?id=6026568253";
+		["visibility_off"] = "http://www.roblox.com/asset/?id=6031075929";
+		["addchart"] = "http://www.roblox.com/asset/?id=6023426905";
+		["cancel_schedule_send"] = "http://www.roblox.com/asset/?id=6022668963";
+		["loyalty"] = "http://www.roblox.com/asset/?id=6026568237";
+		["speaker_notes_off"] = "http://www.roblox.com/asset/?id=6031265965";
+		["online_prediction"] = "http://www.roblox.com/asset/?id=6026568239";
+		["remove_shopping_cart"] = "http://www.roblox.com/asset/?id=6031260778";
+		["text_rotate_vertical"] = "http://www.roblox.com/asset/?id=6031251518";
+		["visibility"] = "http://www.roblox.com/asset/?id=6031075931";
+		["add_to_drive"] = "http://www.roblox.com/asset/?id=6022860335";
+		["accessible"] = "http://www.roblox.com/asset/?id=6022668902";
+		["bookmark_border"] = "http://www.roblox.com/asset/?id=6022860339";
+		["tour"] = "http://www.roblox.com/asset/?id=6031229362";
+		["compare_arrows"] = "http://www.roblox.com/asset/?id=6022668951";
+		["view_sidebar"] = "http://www.roblox.com/asset/?id=6031079160";
+		["face"] = "http://www.roblox.com/asset/?id=6023426944";
+		["wysiwyg"] = "http://www.roblox.com/asset/?id=6031075938";
+		["camera_enhance"] = "http://www.roblox.com/asset/?id=6023426935";
+		["perm_camera_mic"] = "http://www.roblox.com/asset/?id=6031215983";
+		["model_training"] = "http://www.roblox.com/asset/?id=6026568222";
+		["arrow_circle_up"] = "http://www.roblox.com/asset/?id=6022668934";
+		["euro_symbol"] = "http://www.roblox.com/asset/?id=6023426954";
+		["pending_actions"] = "http://www.roblox.com/asset/?id=6031260777";
+		["not_accessible"] = "http://www.roblox.com/asset/?id=6026568269";
+		["explore_off"] = "http://www.roblox.com/asset/?id=6023426953";
+		["build"] = "http://www.roblox.com/asset/?id=6023426938";
+		["backup"] = "http://www.roblox.com/asset/?id=6023426911";
+		["settings_input_antenna"] = "http://www.roblox.com/asset/?id=6031280891";
+		["disabled_by_default"] = "http://www.roblox.com/asset/?id=6023426939";
+		["upgrade"] = "http://www.roblox.com/asset/?id=6031225815";
+		["contactless"] = "http://www.roblox.com/asset/?id=6022668886";
+		["trending_flat"] = "http://www.roblox.com/asset/?id=6031225818";
+		["schedule"] = "http://www.roblox.com/asset/?id=6031260808";
+		["offline_pin"] = "http://www.roblox.com/asset/?id=6031084770";
+		["date_range"] = "http://www.roblox.com/asset/?id=6022668894";
+		["flight_land"] = "http://www.roblox.com/asset/?id=6023565897";
+		["view_headline"] = "http://www.roblox.com/asset/?id=6031079151";
+		["cached"] = "http://www.roblox.com/asset/?id=6023426921";
+		["unpublished"] = "http://www.roblox.com/asset/?id=6031225817";
+		["outlet"] = "http://www.roblox.com/asset/?id=6031084748";
+		["favorite"] = "http://www.roblox.com/asset/?id=6023426974";
+		["vertical_split"] = "http://www.roblox.com/asset/?id=6031225820";
+		["report_problem"] = "http://www.roblox.com/asset/?id=6031086176";
+		["fingerprint"] = "http://www.roblox.com/asset/?id=6023565895";
+		["important_devices"] = "http://www.roblox.com/asset/?id=6026568202";
+		["outbox"] = "http://www.roblox.com/asset/?id=6026568263";
+		["all_inbox"] = "http://www.roblox.com/asset/?id=6022668909";
+		["label_important"] = "http://www.roblox.com/asset/?id=6026568215";
+		["print"] = "http://www.roblox.com/asset/?id=6031243324";
+		["settings_bluetooth"] = "http://www.roblox.com/asset/?id=6031280905";
+		["power_settings_new"] = "http://www.roblox.com/asset/?id=6031260781";
+		["zoom_out"] = "http://www.roblox.com/asset/?id=6031075577";
+		["stars"] = "http://www.roblox.com/asset/?id=6031265971";
+		["offline_bolt"] = "http://www.roblox.com/asset/?id=6031084742";
+		["feedback"] = "http://www.roblox.com/asset/?id=6023426957";
+		["accessibility"] = "http://www.roblox.com/asset/?id=6022668887";
+		["announcement"] = "http://www.roblox.com/asset/?id=6022668946";
+		["settings_input_hdmi"] = "http://www.roblox.com/asset/?id=6031280970";
+		["leaderboard"] = "http://www.roblox.com/asset/?id=6026568216";
+		["view_quilt"] = "http://www.roblox.com/asset/?id=6031079155";
+		["note_add"] = "http://www.roblox.com/asset/?id=6031084749";
+		["theaters"] = "http://www.roblox.com/asset/?id=6031229335";
+		["alarm"] = "http://www.roblox.com/asset/?id=6023426910";
+		["settings_input_composite"] = "http://www.roblox.com/asset/?id=6031280896";
+		["grade"] = "http://www.roblox.com/asset/?id=6026568189";
+		["tab_unselected"] = "http://www.roblox.com/asset/?id=6031251505";
+		["swap_vert"] = "http://www.roblox.com/asset/?id=6031233847";
+		["assignment_return"] = "http://www.roblox.com/asset/?id=6023426931";
+		["highlight_alt"] = "http://www.roblox.com/asset/?id=6023565913";
+		["shopping_bag"] = "http://www.roblox.com/asset/?id=6031265970";
+		["contact_support"] = "http://www.roblox.com/asset/?id=6022668879";
+		["flip_to_front"] = "http://www.roblox.com/asset/?id=6023565894";
+		["touch_app"] = "http://www.roblox.com/asset/?id=6031229361";
+		["room"] = "http://www.roblox.com/asset/?id=6031154875";
+		["send_and_archive"] = "http://www.roblox.com/asset/?id=6031280889";
+		["view_array"] = "http://www.roblox.com/asset/?id=6031225842";
+		["settings_power"] = "http://www.roblox.com/asset/?id=6031289446";
+		["admin_panel_settings"] = "http://www.roblox.com/asset/?id=6022668961";
+		["open_in_browser"] = "http://www.roblox.com/asset/?id=6026568266";
+		["card_membership"] = "http://www.roblox.com/asset/?id=6023426942";
+		["rule"] = "http://www.roblox.com/asset/?id=6031154859";
+		["schedule_send"] = "http://www.roblox.com/asset/?id=6031154866";
+		["calendar_today"] = "http://www.roblox.com/asset/?id=6022668917";
+		["info_outline"] = "http://www.roblox.com/asset/?id=6026568210";
+		["description"] = "http://www.roblox.com/asset/?id=6022668888";
+		["dashboard_customize"] = "http://www.roblox.com/asset/?id=6022668899";
+		["rowing"] = "http://www.roblox.com/asset/?id=6031154857";
+		["swap_horizontal_circle"] = "http://www.roblox.com/asset/?id=6031233833";
+		["account_balance_wallet"] = "http://www.roblox.com/asset/?id=6022668892";
+		["view_agenda"] = "http://www.roblox.com/asset/?id=6031225831";
+		["shop_two"] = "http://www.roblox.com/asset/?id=6031289461";
+		["done"] = "http://www.roblox.com/asset/?id=6023426926";
+		["circle_notifications"] = "http://www.roblox.com/asset/?id=6023426923";
+		["compress"] = "http://www.roblox.com/asset/?id=6022668878";
+		["calendar_view_day"] = "http://www.roblox.com/asset/?id=6023426946";
+		["thumbs_up_down"] = "http://www.roblox.com/asset/?id=6031229373";
+		["account_balance"] = "http://www.roblox.com/asset/?id=6022668900";
+		["play_for_work"] = "http://www.roblox.com/asset/?id=6031260776";
+		["pets"] = "http://www.roblox.com/asset/?id=6031260782";
+		["view_column"] = "http://www.roblox.com/asset/?id=6031079172";
+		["search"] = "http://www.roblox.com/asset/?id=6031154871";
+		["autorenew"] = "http://www.roblox.com/asset/?id=6023565901";
+		["copyright"] = "http://www.roblox.com/asset/?id=6023565898";
+		["privacy_tip"] = "http://www.roblox.com/asset/?id=6031260784";
+		["arrow_right_alt"] = "http://www.roblox.com/asset/?id=6022668890";
+		["delete"] = "http://www.roblox.com/asset/?id=6022668885";
+		["nightlight_round"] = "http://www.roblox.com/asset/?id=6031084743";
+		["batch_prediction"] = "http://www.roblox.com/asset/?id=6022860334";
+		["shopping_cart"] = "http://www.roblox.com/asset/?id=6031265976";
+		["login"] = "http://www.roblox.com/asset/?id=6031082527";
+		["settings_input_svideo"] = "http://www.roblox.com/asset/?id=6031289444";
+		["payment"] = "http://www.roblox.com/asset/?id=6031084751";
+		["update"] = "http://www.roblox.com/asset/?id=6031225810";
+		["text_rotation_none"] = "http://www.roblox.com/asset/?id=6031229344";
+		["perm_contact_calendar"] = "http://www.roblox.com/asset/?id=6031215990";
+		["explore"] = "http://www.roblox.com/asset/?id=6023426941";
+		["delete_forever"] = "http://www.roblox.com/asset/?id=6022668939";
+		["rounded_corner"] = "http://www.roblox.com/asset/?id=6031154861";
+		["book_online"] = "http://www.roblox.com/asset/?id=6022860332";
+		["quickreply"] = "http://www.roblox.com/asset/?id=6031243319";
+		["bug_report"] = "http://www.roblox.com/asset/?id=6022852107";
+		["subtitles_off"] = "http://www.roblox.com/asset/?id=6031289466";
+		["close_fullscreen"] = "http://www.roblox.com/asset/?id=6023426928";
+		["horizontal_split"] = "http://www.roblox.com/asset/?id=6026568194";
+		["minimize"] = "http://www.roblox.com/asset/?id=6026568240";
+		["filter_list_alt"] = "http://www.roblox.com/asset/?id=6023426955";
+		["add_shopping_cart"] = "http://www.roblox.com/asset/?id=6022668875";
+		["next_plan"] = "http://www.roblox.com/asset/?id=6026568231";
+		["view_list"] = "http://www.roblox.com/asset/?id=6031079156";
+		["receipt"] = "http://www.roblox.com/asset/?id=6031086173";
+		["polymer"] = "http://www.roblox.com/asset/?id=6031260785";
+		["spellcheck"] = "http://www.roblox.com/asset/?id=6031289450";
+		["wifi_protected_setup"] = "http://www.roblox.com/asset/?id=6031075926";
+		["label_outline"] = "http://www.roblox.com/asset/?id=6026568207";
+		["highlight_off"] = "http://www.roblox.com/asset/?id=6023565916";
+		["turned_in_not"] = "http://www.roblox.com/asset/?id=6031225806";
+		["edit_off"] = "http://www.roblox.com/asset/?id=6023426983";
+		["question_answer"] = "http://www.roblox.com/asset/?id=6031086172";
+		["settings_overscan"] = "http://www.roblox.com/asset/?id=6031289459";
+		["trending_up"] = "http://www.roblox.com/asset/?id=6031225816";
+		["verified"] = "http://www.roblox.com/asset/?id=6031225809";
+		["flight_takeoff"] = "http://www.roblox.com/asset/?id=6023565891";
+		["grading"] = "http://www.roblox.com/asset/?id=6026568191";
+		["dashboard"] = "http://www.roblox.com/asset/?id=6022668883";
+		["expand"] = "http://www.roblox.com/asset/?id=6022668891";
+		["backup_table"] = "http://www.roblox.com/asset/?id=6022860338";
+		["analytics"] = "http://www.roblox.com/asset/?id=6022668884";
+		["picture_in_picture"] = "http://www.roblox.com/asset/?id=6031215994";
+		["settings"] = "http://www.roblox.com/asset/?id=6031280882";
+		["accessible_forward"] = "http://www.roblox.com/asset/?id=6022668906";
+		["pan_tool"] = "http://www.roblox.com/asset/?id=6031084771";
+		["https"] = "http://www.roblox.com/asset/?id=6026568200";
+		["filter_alt"] = "http://www.roblox.com/asset/?id=6023426984";
+		["thumb_up_off_alt"] = "http://www.roblox.com/asset/?id=6031229342";
+		["record_voice_over"] = "http://www.roblox.com/asset/?id=6031243318";
+		["help_outline"] = "http://www.roblox.com/asset/?id=6026568201";
+		["check_circle"] = "http://www.roblox.com/asset/?id=6023426945";
+		["comment_bank"] = "http://www.roblox.com/asset/?id=6023426937";
+		["perm_phone_msg"] = "http://www.roblox.com/asset/?id=6031215986";
+		["settings_applications"] = "http://www.roblox.com/asset/?id=6031280894";
+		["exit_to_app"] = "http://www.roblox.com/asset/?id=6023426922";
+		["saved_search"] = "http://www.roblox.com/asset/?id=6031154867";
+		["toll"] = "http://www.roblox.com/asset/?id=6031229343";
+		["not_started"] = "http://www.roblox.com/asset/?id=6026568232";
+		["subject"] = "http://www.roblox.com/asset/?id=6031289452";
+		["redeem"] = "http://www.roblox.com/asset/?id=6031086170";
+		["input"] = "http://www.roblox.com/asset/?id=6026568225";
+		["settings_input_component"] = "http://www.roblox.com/asset/?id=6031280884";
+		["assignment_ind"] = "http://www.roblox.com/asset/?id=6022668935";
+		["swap_horiz"] = "http://www.roblox.com/asset/?id=6031233841";
+		["fullscreen"] = "http://www.roblox.com/asset/?id=6031094681";
+		["cancel"] = "http://www.roblox.com/asset/?id=6031094677";
+		["subdirectory_arrow_left"] = "http://www.roblox.com/asset/?id=6031104654";
+		["close"] = "http://www.roblox.com/asset/?id=6031094678";
+		["arrow_back_ios"] = "http://www.roblox.com/asset/?id=6031091003";
+		["east"] = "http://www.roblox.com/asset/?id=6031094675";
+		["unfold_more"] = "http://www.roblox.com/asset/?id=6031104644";
+		["south"] = "http://www.roblox.com/asset/?id=6031104646";
+		["arrow_drop_up"] = "http://www.roblox.com/asset/?id=6031090990";
+		["arrow_back"] = "http://www.roblox.com/asset/?id=6031091000";
+		["arrow_downward"] = "http://www.roblox.com/asset/?id=6031090991";
+		["west"] = "http://www.roblox.com/asset/?id=6031104677";
+		["legend_toggle"] = "http://www.roblox.com/asset/?id=6031097233";
+		["fullscreen_exit"] = "http://www.roblox.com/asset/?id=6031094691";
+		["last_page"] = "http://www.roblox.com/asset/?id=6031094686";
+		["switch_right"] = "http://www.roblox.com/asset/?id=6031104649";
+		["check"] = "http://www.roblox.com/asset/?id=6031094667";
+		["home_work"] = "http://www.roblox.com/asset/?id=6031094683";
+		["north_east"] = "http://www.roblox.com/asset/?id=6031097228";
+		["double_arrow"] = "http://www.roblox.com/asset/?id=6031094674";
+		["more_vert"] = "http://www.roblox.com/asset/?id=6031104648";
+		["chevron_left"] = "http://www.roblox.com/asset/?id=6031094670";
+		["more_horiz"] = "http://www.roblox.com/asset/?id=6031104650";
+		["unfold_less"] = "http://www.roblox.com/asset/?id=6031104681";
+		["first_page"] = "http://www.roblox.com/asset/?id=6031094682";
+		["payments"] = "http://www.roblox.com/asset/?id=6031097227";
+		["arrow_right"] = "http://www.roblox.com/asset/?id=6031090994";
+		["offline_share"] = "http://www.roblox.com/asset/?id=6031097267";
+		["south_west"] = "http://www.roblox.com/asset/?id=6031104652";
+		["expand_less"] = "http://www.roblox.com/asset/?id=6031094679";
+		["south_east"] = "http://www.roblox.com/asset/?id=6031104642";
+		["assistant_navigation"] = "http://www.roblox.com/asset/?id=6031091006";
+		["apps"] = "http://www.roblox.com/asset/?id=6031090999";
+		["arrow_upward"] = "http://www.roblox.com/asset/?id=6031090997";
+		["app_settings_alt"] = "http://www.roblox.com/asset/?id=6031090998";
+		["subdirectory_arrow_right"] = "http://www.roblox.com/asset/?id=6031104647";
+		["north_west"] = "http://www.roblox.com/asset/?id=6031104630";
+		["switch_left"] = "http://www.roblox.com/asset/?id=6031104651";
+		["chevron_right"] = "http://www.roblox.com/asset/?id=6031094680";
+		["arrow_forward"] = "http://www.roblox.com/asset/?id=6031090995";
+		["arrow_forward_ios"] = "http://www.roblox.com/asset/?id=6031091008";
+		["arrow_drop_down"] = "http://www.roblox.com/asset/?id=6031091004";
+		["refresh"] = "http://www.roblox.com/asset/?id=6031097226";
+		["pivot_table_chart"] = "http://www.roblox.com/asset/?id=6031097234";
+		["expand_more"] = "http://www.roblox.com/asset/?id=6031094687";
+		["campaign"] = "http://www.roblox.com/asset/?id=6031094666";
+		["arrow_left"] = "http://www.roblox.com/asset/?id=6031091002";
+		["arrow_drop_down_circle"] = "http://www.roblox.com/asset/?id=6031091001";
+		["menu_open"] = "http://www.roblox.com/asset/?id=6031097229";
+		["waterfall_chart"] = "http://www.roblox.com/asset/?id=6031104632";
+		["assistant_direction"] = "http://www.roblox.com/asset/?id=6031091005";
+		["menu"] = "http://www.roblox.com/asset/?id=6031097225";
+		["personal_video"] = "http://www.roblox.com/asset/?id=6034457070";
+		["power_off"] = "http://www.roblox.com/asset/?id=6034457087";
+		["wifi_off"] = "http://www.roblox.com/asset/?id=6034461625";
+		["adb"] = "http://www.roblox.com/asset/?id=6034418515";
+		["airline_seat_recline_normal"] = "http://www.roblox.com/asset/?id=6034418512";
+		["sync_problem"] = "http://www.roblox.com/asset/?id=6034452653";
+		["network_check"] = "http://www.roblox.com/asset/?id=6034461631";
+		["event_busy"] = "http://www.roblox.com/asset/?id=6034439634";
+		["airline_seat_flat"] = "http://www.roblox.com/asset/?id=6034418511";
+		["disc_full"] = "http://www.roblox.com/asset/?id=6034418518";
+		["sd_card"] = "http://www.roblox.com/asset/?id=6034457089";
+		["time_to_leave"] = "http://www.roblox.com/asset/?id=6034452660";
+		["phone_bluetooth_speaker"] = "http://www.roblox.com/asset/?id=6034457057";
+		["phone_paused"] = "http://www.roblox.com/asset/?id=6034457066";
+		["phone_locked"] = "http://www.roblox.com/asset/?id=6034457058";
+		["more"] = "http://www.roblox.com/asset/?id=6034461627";
+		["add_call"] = "http://www.roblox.com/asset/?id=6034418524";
+		["account_tree"] = "http://www.roblox.com/asset/?id=6034418507";
+		["do_not_disturb_on"] = "http://www.roblox.com/asset/?id=6034439649";
+		["event_note"] = "http://www.roblox.com/asset/?id=6034439637";
+		["sync_disabled"] = "http://www.roblox.com/asset/?id=6034452649";
+		["mms"] = "http://www.roblox.com/asset/?id=6034461621";
+		["airline_seat_flat_angled"] = "http://www.roblox.com/asset/?id=6034418513";
+		["bluetooth_audio"] = "http://www.roblox.com/asset/?id=6034418522";
+		["vibration"] = "http://www.roblox.com/asset/?id=6034452651";
+		["system_update"] = "http://www.roblox.com/asset/?id=6034452663";
+		["enhanced_encryption"] = "http://www.roblox.com/asset/?id=6034439652";
+		["wc"] = "http://www.roblox.com/asset/?id=6034452643";
+		["live_tv"] = "http://www.roblox.com/asset/?id=6034439648";
+		["folder_special"] = "http://www.roblox.com/asset/?id=6034439639";
+		["phone_missed"] = "http://www.roblox.com/asset/?id=6034457056";
+		["airline_seat_recline_extra"] = "http://www.roblox.com/asset/?id=6034418528";
+		["sms"] = "http://www.roblox.com/asset/?id=6034452645";
+		["tap_and_play"] = "http://www.roblox.com/asset/?id=6034452650";
+		["confirmation_number"] = "http://www.roblox.com/asset/?id=6034418519";
+		["event_available"] = "http://www.roblox.com/asset/?id=6034439643";
+		["sms_failed"] = "http://www.roblox.com/asset/?id=6034452676";
+		["do_not_disturb_alt"] = "http://www.roblox.com/asset/?id=6034461619";
+		["do_not_disturb"] = "http://www.roblox.com/asset/?id=6034439645";
+		["ondemand_video"] = "http://www.roblox.com/asset/?id=6034457065";
+		["no_encryption"] = "http://www.roblox.com/asset/?id=6034457059";
+		["airline_seat_legroom_extra"] = "http://www.roblox.com/asset/?id=6034418508";
+		["tv_off"] = "http://www.roblox.com/asset/?id=6034452646";
+		["sim_card_alert"] = "http://www.roblox.com/asset/?id=6034452641";
+		["airline_seat_legroom_normal"] = "http://www.roblox.com/asset/?id=6034418532";
+		["wifi"] = "http://www.roblox.com/asset/?id=6034461626";
+		["do_not_disturb_off"] = "http://www.roblox.com/asset/?id=6034439642";
+		["imagesearch_roller"] = "http://www.roblox.com/asset/?id=6034439635";
+		["power"] = "http://www.roblox.com/asset/?id=6034457105";
+		["airline_seat_legroom_reduced"] = "http://www.roblox.com/asset/?id=6034418520";
+		["phone_in_talk"] = "http://www.roblox.com/asset/?id=6034457067";
+		["airline_seat_individual_suite"] = "http://www.roblox.com/asset/?id=6034418514";
+		["priority_high"] = "http://www.roblox.com/asset/?id=6034457092";
+		["phone_callback"] = "http://www.roblox.com/asset/?id=6034457104";
+		["phone_forwarded"] = "http://www.roblox.com/asset/?id=6034457106";
+		["sync"] = "http://www.roblox.com/asset/?id=6034452662";
+		["vpn_lock"] = "http://www.roblox.com/asset/?id=6034452648";
+		["support_agent"] = "http://www.roblox.com/asset/?id=6034452656";
+		["network_locked"] = "http://www.roblox.com/asset/?id=6034457064";
+		["directions_off"] = "http://www.roblox.com/asset/?id=6034418517";
+		["drive_eta"] = "http://www.roblox.com/asset/?id=6034464371";
+		["sensor_window"] = "http://www.roblox.com/asset/?id=6031067242";
+		["sensor_door"] = "http://www.roblox.com/asset/?id=6031067241";
+		["keyboard_return"] = "http://www.roblox.com/asset/?id=6034818370";
+		["monitor"] = "http://www.roblox.com/asset/?id=6034837803";
+		["device_hub"] = "http://www.roblox.com/asset/?id=6034789877";
+		["keyboard"] = "http://www.roblox.com/asset/?id=6034818398";
+		["keyboard_voice"] = "http://www.roblox.com/asset/?id=6034818360";
+		["cast"] = "http://www.roblox.com/asset/?id=6034789876";
+		["developer_board"] = "http://www.roblox.com/asset/?id=6034789883";
+		["tablet"] = "http://www.roblox.com/asset/?id=6034848733";
+		["keyboard_hide"] = "http://www.roblox.com/asset/?id=6034818386";
+		["dock"] = "http://www.roblox.com/asset/?id=6034789888";
+		["phonelink"] = "http://www.roblox.com/asset/?id=6034837801";
+		["device_unknown"] = "http://www.roblox.com/asset/?id=6034789884";
+		["speaker_group"] = "http://www.roblox.com/asset/?id=6034848732";
+		["desktop_mac"] = "http://www.roblox.com/asset/?id=6034789898";
+		["point_of_sale"] = "http://www.roblox.com/asset/?id=6034837798";
+		["memory"] = "http://www.roblox.com/asset/?id=6034837807";
+		["keyboard_tab"] = "http://www.roblox.com/asset/?id=6034818363";
+		["router"] = "http://www.roblox.com/asset/?id=6034837806";
+		["sim_card"] = "http://www.roblox.com/asset/?id=6034837800";
+		["headset"] = "http://www.roblox.com/asset/?id=6034789880";
+		["gamepad"] = "http://www.roblox.com/asset/?id=6034789879";
+		["speaker"] = "http://www.roblox.com/asset/?id=6034848746";
+		["devices_other"] = "http://www.roblox.com/asset/?id=6034789873";
+		["laptop"] = "http://www.roblox.com/asset/?id=6034818367";
+		["scanner"] = "http://www.roblox.com/asset/?id=6034837799";
+		["tv"] = "http://www.roblox.com/asset/?id=6034848740";
+		["headset_mic"] = "http://www.roblox.com/asset/?id=6034818383";
+		["browser_not_supported"] = "http://www.roblox.com/asset/?id=6034789875";
+		["computer"] = "http://www.roblox.com/asset/?id=6034789874";
+		["connected_tv"] = "http://www.roblox.com/asset/?id=6034789870";
+		["phonelink_off"] = "http://www.roblox.com/asset/?id=6034837804";
+		["headset_off"] = "http://www.roblox.com/asset/?id=6034818402";
+		["cast_connected"] = "http://www.roblox.com/asset/?id=6034789895";
+		["watch"] = "http://www.roblox.com/asset/?id=6034848747";
+		["keyboard_arrow_up"] = "http://www.roblox.com/asset/?id=6034818379";
+		["keyboard_backspace"] = "http://www.roblox.com/asset/?id=6034818381";
+		["laptop_chromebook"] = "http://www.roblox.com/asset/?id=6034818364";
+		["phone_iphone"] = "http://www.roblox.com/asset/?id=6034837811";
+		["smartphone"] = "http://www.roblox.com/asset/?id=6034848731";
+		["power_input"] = "http://www.roblox.com/asset/?id=6034837794";
+		["videogame_asset"] = "http://www.roblox.com/asset/?id=6034848748";
+		["desktop_windows"] = "http://www.roblox.com/asset/?id=6034789893";
+		["keyboard_arrow_down"] = "http://www.roblox.com/asset/?id=6034818372";
+		["laptop_mac"] = "http://www.roblox.com/asset/?id=6034837808";
+		["laptop_windows"] = "http://www.roblox.com/asset/?id=6034837796";
+		["keyboard_arrow_right"] = "http://www.roblox.com/asset/?id=6034818365";
+		["cast_for_education"] = "http://www.roblox.com/asset/?id=6034789872";
+		["keyboard_capslock"] = "http://www.roblox.com/asset/?id=6034818403";
+		["toys"] = "http://www.roblox.com/asset/?id=6034848752";
+		["tablet_android"] = "http://www.roblox.com/asset/?id=6034848734";
+		["mouse"] = "http://www.roblox.com/asset/?id=6034837797";
+		["phone_android"] = "http://www.roblox.com/asset/?id=6034837793";
+		["keyboard_arrow_left"] = "http://www.roblox.com/asset/?id=6034818375";
+		["security"] = "http://www.roblox.com/asset/?id=6034837802";
+		["dry_cleaning"] = "http://www.roblox.com/asset/?id=6034754456";
+		["bakery_dining"] = "http://www.roblox.com/asset/?id=6034767610";
+		["place"] = "http://www.roblox.com/asset/?id=6034503372";
+		["run_circle"] = "http://www.roblox.com/asset/?id=6034503367";
+		["local_post_office"] = "http://www.roblox.com/asset/?id=6034513883";
+		["takeout_dining"] = "http://www.roblox.com/asset/?id=6034467808";
+		["nightlife"] = "http://www.roblox.com/asset/?id=6034510003";
+		["design_services"] = "http://www.roblox.com/asset/?id=6034754453";
+		["celebration"] = "http://www.roblox.com/asset/?id=6034767613";
+		["near_me_disabled"] = "http://www.roblox.com/asset/?id=6034509988";
+		["add_location_alt"] = "http://www.roblox.com/asset/?id=6034483678";
+		["directions_run"] = "http://www.roblox.com/asset/?id=6034754445";
+		["local_fire_department"] = "http://www.roblox.com/asset/?id=6034684949";
+		["add_road"] = "http://www.roblox.com/asset/?id=6034483677";
+		["my_location"] = "http://www.roblox.com/asset/?id=6034509987";
+		["dinner_dining"] = "http://www.roblox.com/asset/?id=6034754457";
+		["local_airport"] = "http://www.roblox.com/asset/?id=6034687951";
+		["zoom_out_map"] = "http://www.roblox.com/asset/?id=6035229856";
+		["pin_drop"] = "http://www.roblox.com/asset/?id=6034470807";
+		["subway"] = "http://www.roblox.com/asset/?id=6034467790";
+		["electric_moped"] = "http://www.roblox.com/asset/?id=6034744027";
+		["restaurant_menu"] = "http://www.roblox.com/asset/?id=6034503378";
+		["local_gas_station"] = "http://www.roblox.com/asset/?id=6034684935";
+		["local_cafe"] = "http://www.roblox.com/asset/?id=6034687954";
+		["theater_comedy"] = "http://www.roblox.com/asset/?id=6034467796";
+		["directions_bus"] = "http://www.roblox.com/asset/?id=6034754434";
+		["hail"] = "http://www.roblox.com/asset/?id=6034744033";
+		["satellite"] = "http://www.roblox.com/asset/?id=6034503370";
+		["local_phone"] = "http://www.roblox.com/asset/?id=6034513884";
+		["electric_bike"] = "http://www.roblox.com/asset/?id=6034744032";
+		["local_see"] = "http://www.roblox.com/asset/?id=6034513887";
+		["transit_enterexit"] = "http://www.roblox.com/asset/?id=6034467805";
+		["local_convenience_store"] = "http://www.roblox.com/asset/?id=6034687956";
+		["local_offer"] = "http://www.roblox.com/asset/?id=6034513891";
+		["electric_car"] = "http://www.roblox.com/asset/?id=6034744029";
+		["beenhere"] = "http://www.roblox.com/asset/?id=6034483675";
+		["miscellaneous_services"] = "http://www.roblox.com/asset/?id=6034509993";
+		["maps_ugc"] = "http://www.roblox.com/asset/?id=6034509992";
+		["moped"] = "http://www.roblox.com/asset/?id=6034509999";
+		["medical_services"] = "http://www.roblox.com/asset/?id=6034510001";
+		["money"] = "http://www.roblox.com/asset/?id=6034509997";
+		["transfer_within_a_station"] = "http://www.roblox.com/asset/?id=6034467809";
+		["electrical_services"] = "http://www.roblox.com/asset/?id=6034744038";
+		["museum"] = "http://www.roblox.com/asset/?id=6034510005";
+		["add_location"] = "http://www.roblox.com/asset/?id=6034483672";
+		["layers"] = "http://www.roblox.com/asset/?id=6034687957";
+		["handyman"] = "http://www.roblox.com/asset/?id=6034744057";
+		["local_pharmacy"] = "http://www.roblox.com/asset/?id=6034513903";
+		["electric_rickshaw"] = "http://www.roblox.com/asset/?id=6034744043";
+		["alt_route"] = "http://www.roblox.com/asset/?id=6034483670";
+		["no_transfer"] = "http://www.roblox.com/asset/?id=6034503363";
+		["pedal_bike"] = "http://www.roblox.com/asset/?id=6034503374";
+		["directions_transit"] = "http://www.roblox.com/asset/?id=6034754436";
+		["railway_alert"] = "http://www.roblox.com/asset/?id=6034470823";
+		["local_police"] = "http://www.roblox.com/asset/?id=6034513895";
+		["directions_car"] = "http://www.roblox.com/asset/?id=6034754441";
+		["category"] = "http://www.roblox.com/asset/?id=6034767621";
+		["attractions"] = "http://www.roblox.com/asset/?id=6034767620";
+		["person_pin_circle"] = "http://www.roblox.com/asset/?id=6034503375";
+		["cleaning_services"] = "http://www.roblox.com/asset/?id=6034767619";
+		["terrain"] = "http://www.roblox.com/asset/?id=6034467794";
+		["no_meals"] = "http://www.roblox.com/asset/?id=6034510024";
+		["train"] = "http://www.roblox.com/asset/?id=6034467803";
+		["delivery_dining"] = "http://www.roblox.com/asset/?id=6034767644";
+		["pest_control"] = "http://www.roblox.com/asset/?id=6034470809";
+		["directions"] = "http://www.roblox.com/asset/?id=6034754449";
+		["atm"] = "http://www.roblox.com/asset/?id=6034767614";
+		["rate_review"] = "http://www.roblox.com/asset/?id=6034503385";
+		["local_bar"] = "http://www.roblox.com/asset/?id=6034687950";
+		["local_drink"] = "http://www.roblox.com/asset/?id=6034687965";
+		["directions_railway"] = "http://www.roblox.com/asset/?id=6034754433";
+		["person_pin"] = "http://www.roblox.com/asset/?id=6034503364";
+		["ev_station"] = "http://www.roblox.com/asset/?id=6034744037";
+		["home_repair_service"] = "http://www.roblox.com/asset/?id=6034744064";
+		["bus_alert"] = "http://www.roblox.com/asset/?id=6034767618";
+		["agriculture"] = "http://www.roblox.com/asset/?id=6034483674";
+		["volunteer_activism"] = "http://www.roblox.com/asset/?id=6034467799";
+		["breakfast_dining"] = "http://www.roblox.com/asset/?id=6034483671";
+		["layers_clear"] = "http://www.roblox.com/asset/?id=6034687975";
+		["plumbing"] = "http://www.roblox.com/asset/?id=6034470800";
+		["taxi_alert"] = "http://www.roblox.com/asset/?id=6034467792";
+		["add_business"] = "http://www.roblox.com/asset/?id=6034483666";
+		["badge"] = "http://www.roblox.com/asset/?id=6034767607";
+		["edit_attributes"] = "http://www.roblox.com/asset/?id=6034754443";
+		["directions_walk"] = "http://www.roblox.com/asset/?id=6034754448";
+		["local_play"] = "http://www.roblox.com/asset/?id=6034513889";
+		["bike_scooter"] = "http://www.roblox.com/asset/?id=6034483669";
+		["two_wheeler"] = "http://www.roblox.com/asset/?id=6034467795";
+		["local_florist"] = "http://www.roblox.com/asset/?id=6034684940";
+		["local_hotel"] = "http://www.roblox.com/asset/?id=6034684939";
+		["no_meals_ouline"] = "http://www.roblox.com/asset/?id=6034510025";
+		["festival"] = "http://www.roblox.com/asset/?id=6034744031";
+		["local_shipping"] = "http://www.roblox.com/asset/?id=6034684926";
+		["directions_boat"] = "http://www.roblox.com/asset/?id=6034754442";
+		["wrong_location"] = "http://www.roblox.com/asset/?id=6034467801";
+		["restaurant"] = "http://www.roblox.com/asset/?id=6034503366";
+		["directions_subway"] = "http://www.roblox.com/asset/?id=6034754440";
+		["not_listed_location"] = "http://www.roblox.com/asset/?id=6034503380";
+		["electric_scooter"] = "http://www.roblox.com/asset/?id=6034744041";
+		["ramen_dining"] = "http://www.roblox.com/asset/?id=6034503377";
+		["edit_road"] = "http://www.roblox.com/asset/?id=6034744035";
+		["local_printshop"] = "http://www.roblox.com/asset/?id=6034513897";
+		["map"] = "http://www.roblox.com/asset/?id=6034684930";
+		["car_rental"] = "http://www.roblox.com/asset/?id=6034767641";
+		["multiple_stop"] = "http://www.roblox.com/asset/?id=6034510026";
+		["brunch_dining"] = "http://www.roblox.com/asset/?id=6034767611";
+		["local_laundry_service"] = "http://www.roblox.com/asset/?id=6034684943";
+		["set_meal"] = "http://www.roblox.com/asset/?id=6034503368";
+		["local_car_wash"] = "http://www.roblox.com/asset/?id=6034687976";
+		["pest_control_rodent"] = "http://www.roblox.com/asset/?id=6034470803";
+		["local_pizza"] = "http://www.roblox.com/asset/?id=6034513885";
+		["local_grocery_store"] = "http://www.roblox.com/asset/?id=6034684933";
+		["traffic"] = "http://www.roblox.com/asset/?id=6034467797";
+		["departure_board"] = "http://www.roblox.com/asset/?id=6034767615";
+		["icecream"] = "http://www.roblox.com/asset/?id=6034687967";
+		["navigation"] = "http://www.roblox.com/asset/?id=6034509984";
+		["near_me"] = "http://www.roblox.com/asset/?id=6034509996";
+		["fastfood"] = "http://www.roblox.com/asset/?id=6034744034";
+		["local_library"] = "http://www.roblox.com/asset/?id=6034684931";
+		["local_activity"] = "http://www.roblox.com/asset/?id=6034687955";
+		["local_hospital"] = "http://www.roblox.com/asset/?id=6034684956";
+		["menu_book"] = "http://www.roblox.com/asset/?id=6034509994";
+		["directions_bike"] = "http://www.roblox.com/asset/?id=6034754459";
+		["store_mall_directory"] = "http://www.roblox.com/asset/?id=6034470811";
+		["trip_origin"] = "http://www.roblox.com/asset/?id=6034467804";
+		["tram"] = "http://www.roblox.com/asset/?id=6034467806";
+		["edit_location"] = "http://www.roblox.com/asset/?id=6034754439";
+		["streetview"] = "http://www.roblox.com/asset/?id=6034470805";
+		["hvac"] = "http://www.roblox.com/asset/?id=6034687960";
+		["lunch_dining"] = "http://www.roblox.com/asset/?id=6034684928";
+		["car_repair"] = "http://www.roblox.com/asset/?id=6034767617";
+		["compass_calibration"] = "http://www.roblox.com/asset/?id=6034767623";
+		["360"] = "http://www.roblox.com/asset/?id=6034767608";
+		["flight"] = "http://www.roblox.com/asset/?id=6034744030";
+		["local_mall"] = "http://www.roblox.com/asset/?id=6034684934";
+		["hotel"] = "http://www.roblox.com/asset/?id=6034687977";
+		["local_parking"] = "http://www.roblox.com/asset/?id=6034513893";
+		["hardware"] = "http://www.roblox.com/asset/?id=6034744036";
+		["local_dining"] = "http://www.roblox.com/asset/?id=6034687963";
+		["park"] = "http://www.roblox.com/asset/?id=6034503369";
+		["location_pin"] = "http://www.roblox.com/asset/?id=6034684937";
+		["local_movies"] = "http://www.roblox.com/asset/?id=6034684936";
+		["local_atm"] = "http://www.roblox.com/asset/?id=6034687953";
+		["local_taxi"] = "http://www.roblox.com/asset/?id=6034684927";
+		["brightness_low"] = "http://www.roblox.com/asset/?id=6034989542";
+		["screen_lock_landscape"] = "http://www.roblox.com/asset/?id=6034996700";
+		["graphic_eq"] = "http://www.roblox.com/asset/?id=6034989551";
+		["screen_lock_rotation"] = "http://www.roblox.com/asset/?id=6034996710";
+		["signal_cellular_4_bar"] = "http://www.roblox.com/asset/?id=6035030076";
+		["airplanemode_inactive"] = "http://www.roblox.com/asset/?id=6034983848";
+		["signal_wifi_0_bar"] = "http://www.roblox.com/asset/?id=6035030067";
+		["battery_full"] = "http://www.roblox.com/asset/?id=6034983854";
+		["gps_fixed"] = "http://www.roblox.com/asset/?id=6034989550";
+		["brightness_high"] = "http://www.roblox.com/asset/?id=6034989541";
+		["ad_units"] = "http://www.roblox.com/asset/?id=6034983845";
+		["signal_cellular_alt"] = "http://www.roblox.com/asset/?id=6035030079";
+		["bluetooth_connected"] = "http://www.roblox.com/asset/?id=6034983855";
+		["wifi_tethering"] = "http://www.roblox.com/asset/?id=6035039430";
+		["dvr"] = "http://www.roblox.com/asset/?id=6034989561";
+		["screen_search_desktop"] = "http://www.roblox.com/asset/?id=6034996711";
+		["network_wifi"] = "http://www.roblox.com/asset/?id=6034996712";
+		["access_alarms"] = "http://www.roblox.com/asset/?id=6034983853";
+		["nfc"] = "http://www.roblox.com/asset/?id=6034996698";
+		["location_disabled"] = "http://www.roblox.com/asset/?id=6034996694";
+		["signal_wifi_4_bar"] = "http://www.roblox.com/asset/?id=6035030077";
+		["access_time"] = "http://www.roblox.com/asset/?id=6034983856";
+		["mobile_off"] = "http://www.roblox.com/asset/?id=6034996702";
+		["battery_unknown"] = "http://www.roblox.com/asset/?id=6034983842";
+		["signal_cellular_null"] = "http://www.roblox.com/asset/?id=6035030075";
+		["bluetooth_disabled"] = "http://www.roblox.com/asset/?id=6034989562";
+		["developer_mode"] = "http://www.roblox.com/asset/?id=6034989549";
+		["network_cell"] = "http://www.roblox.com/asset/?id=6034996709";
+		["sd_storage"] = "http://www.roblox.com/asset/?id=6034996719";
+		["signal_cellular_no_sim"] = "http://www.roblox.com/asset/?id=6035030078";
+		["devices"] = "http://www.roblox.com/asset/?id=6034989540";
+		["screen_rotation"] = "http://www.roblox.com/asset/?id=6034996701";
+		["device_thermostat"] = "http://www.roblox.com/asset/?id=6034989544";
+		["signal_wifi_off"] = "http://www.roblox.com/asset/?id=6035030074";
+		["widgets"] = "http://www.roblox.com/asset/?id=6035039429";
+		["bluetooth"] = "http://www.roblox.com/asset/?id=6034983880";
+		["battery_charging_full"] = "http://www.roblox.com/asset/?id=6034983849";
+		["mobile_friendly"] = "http://www.roblox.com/asset/?id=6034996699";
+		["signal_cellular_0_bar"] = "http://www.roblox.com/asset/?id=6035030072";
+		["storage"] = "http://www.roblox.com/asset/?id=6035030083";
+		["send_to_mobile"] = "http://www.roblox.com/asset/?id=6034996697";
+		["location_searching"] = "http://www.roblox.com/asset/?id=6034996695";
+		["brightness_auto"] = "http://www.roblox.com/asset/?id=6034989545";
+		["wifi_lock"] = "http://www.roblox.com/asset/?id=6035039428";
+		["gps_not_fixed"] = "http://www.roblox.com/asset/?id=6034989547";
+		["access_alarm"] = "http://www.roblox.com/asset/?id=6034983844";
+		["battery_alert"] = "http://www.roblox.com/asset/?id=6034983843";
+		["signal_cellular_off"] = "http://www.roblox.com/asset/?id=6035030084";
+		["signal_cellular_connected_no_internet_4"] = "http://www.roblox.com/asset/?id=6035229858";
+		["gps_off"] = "http://www.roblox.com/asset/?id=6034989548";
+		["add_alarm"] = "http://www.roblox.com/asset/?id=6034983850";
+		["brightness_medium"] = "http://www.roblox.com/asset/?id=6034989543";
+		["usb"] = "http://www.roblox.com/asset/?id=6035030080";
+		["airplanemode_active"] = "http://www.roblox.com/asset/?id=6034983864";
+		["reset_tv"] = "http://www.roblox.com/asset/?id=6034996696";
+		["wallpaper"] = "http://www.roblox.com/asset/?id=6035030102";
+		["settings_system_daydream"] = "http://www.roblox.com/asset/?id=6035030081";
+		["bluetooth_searching"] = "http://www.roblox.com/asset/?id=6034989553";
+		["add_to_home_screen"] = "http://www.roblox.com/asset/?id=6034983858";
+		["screen_lock_portrait"] = "http://www.roblox.com/asset/?id=6034996706";
+		["data_usage"] = "http://www.roblox.com/asset/?id=6034989568";
+		["_auto_delete"] = "http://www.roblox.com/asset/?id=6031071068";
+		["_error"] = "http://www.roblox.com/asset/?id=6031071057";
+		["_notification_important"] = "http://www.roblox.com/asset/?id=6031071056";
+		["_add_alert"] = "http://www.roblox.com/asset/?id=6031071067";
+		["_warning"] = "http://www.roblox.com/asset/?id=6031071053";
+		["_error_outline"] = "http://www.roblox.com/asset/?id=6031071050";
+		["check_box_outline_blank"] = "http://www.roblox.com/asset/?id=6031068420";
+		["toggle_off"] = "http://www.roblox.com/asset/?id=6031068429";
+		["indeterminate_check_box"] = "http://www.roblox.com/asset/?id=6031068445";
+		["radio_button_checked"] = "http://www.roblox.com/asset/?id=6031068426";
+		["toggle_on"] = "http://www.roblox.com/asset/?id=6031068430";
+		["check_box"] = "http://www.roblox.com/asset/?id=6031068421";
+		["radio_button_unchecked"] = "http://www.roblox.com/asset/?id=6031068433";
+		["star"] = "http://www.roblox.com/asset/?id=6031068423";
+		["star_border"] = "http://www.roblox.com/asset/?id=6031068425";
+		["star_half"] = "http://www.roblox.com/asset/?id=6031068427";
+		["star_outline"] = "http://www.roblox.com/asset/?id=6031068428";
+		["multiline_chart"] = "http://www.roblox.com/asset/?id=6034941721";
+		["pie_chart"] = "http://www.roblox.com/asset/?id=6034973076";
+		["format_line_spacing"] = "http://www.roblox.com/asset/?id=6034910905";
+		["format_align_left"] = "http://www.roblox.com/asset/?id=6034900727";
+		["linear_scale"] = "http://www.roblox.com/asset/?id=6034941707";
+		["insert_photo"] = "http://www.roblox.com/asset/?id=6034941703";
+		["scatter_plot"] = "http://www.roblox.com/asset/?id=6034973094";
+		["post_add"] = "http://www.roblox.com/asset/?id=6034973083";
+		["format_textdirection_r_to_l"] = "http://www.roblox.com/asset/?id=6034925623";
+		["format_size"] = "http://www.roblox.com/asset/?id=6034910908";
+		["format_color_fill"] = "http://www.roblox.com/asset/?id=6034910903";
+		["format_paint"] = "http://www.roblox.com/asset/?id=6034925618";
+		["format_underlined"] = "http://www.roblox.com/asset/?id=6034925627";
+		["format_shapes"] = "http://www.roblox.com/asset/?id=6034910909";
+		["title"] = "http://www.roblox.com/asset/?id=6034934042";
+		["highlight"] = "http://www.roblox.com/asset/?id=6034925617";
+		["bar_chart"] = "http://www.roblox.com/asset/?id=6034898096";
+		["format_indent_increase"] = "http://www.roblox.com/asset/?id=6034900724";
+		["merge_type"] = "http://www.roblox.com/asset/?id=6034941705";
+		["bubble_chart"] = "http://www.roblox.com/asset/?id=6034925612";
+		["publish"] = "http://www.roblox.com/asset/?id=6034973085";
+		["format_indent_decrease"] = "http://www.roblox.com/asset/?id=6034900733";
+		["margin"] = "http://www.roblox.com/asset/?id=6034941701";
+		["table_rows"] = "http://www.roblox.com/asset/?id=6034934025";
+		["stacked_line_chart"] = "http://www.roblox.com/asset/?id=6034934039";
+		["border_clear"] = "http://www.roblox.com/asset/?id=6034898135";
+		["border_color"] = "http://www.roblox.com/asset/?id=6034898100";
+		["border_inner"] = "http://www.roblox.com/asset/?id=6034898131";
+		["insert_chart"] = "http://www.roblox.com/asset/?id=6034925628";
+		["border_top"] = "http://www.roblox.com/asset/?id=6034900726";
+		["padding"] = "http://www.roblox.com/asset/?id=6034973078";
+		["border_vertical"] = "http://www.roblox.com/asset/?id=6034900725";
+		["score"] = "http://www.roblox.com/asset/?id=6034934041";
+		["border_right"] = "http://www.roblox.com/asset/?id=6034898120";
+		["add_chart"] = "http://www.roblox.com/asset/?id=6034898093";
+		["space_bar"] = "http://www.roblox.com/asset/?id=6034934037";
+		["border_outer"] = "http://www.roblox.com/asset/?id=6034898104";
+		["mode_comment"] = "http://www.roblox.com/asset/?id=6034941700";
+		["attach_money"] = "http://www.roblox.com/asset/?id=6034898098";
+		["drag_handle"] = "http://www.roblox.com/asset/?id=6034910907";
+		["format_align_right"] = "http://www.roblox.com/asset/?id=6034900723";
+		["pie_chart_outlined"] = "http://www.roblox.com/asset/?id=6034973077";
+		["horizontal_rule"] = "http://www.roblox.com/asset/?id=6034925610";
+		["border_all"] = "http://www.roblox.com/asset/?id=6034898101";
+		["border_style"] = "http://www.roblox.com/asset/?id=6034898097";
+		["insert_comment"] = "http://www.roblox.com/asset/?id=6034925609";
+		["vertical_align_top"] = "http://www.roblox.com/asset/?id=6034973080";
+		["vertical_align_center"] = "http://www.roblox.com/asset/?id=6034934051";
+		["format_color_text"] = "http://www.roblox.com/asset/?id=6034910910";
+		["format_quote"] = "http://www.roblox.com/asset/?id=6034925629";
+		["height"] = "http://www.roblox.com/asset/?id=6034925613";
+		["add_comment"] = "http://www.roblox.com/asset/?id=6034898128";
+		["format_strikethrough"] = "http://www.roblox.com/asset/?id=6034910904";
+		["strikethrough_s"] = "http://www.roblox.com/asset/?id=6034934030";
+		["border_left"] = "http://www.roblox.com/asset/?id=6034898099";
+		["format_list_bulleted"] = "http://www.roblox.com/asset/?id=6034925620";
+		["format_italic"] = "http://www.roblox.com/asset/?id=6034910912";
+		["format_list_numbered"] = "http://www.roblox.com/asset/?id=6034925622";
+		["attach_file"] = "http://www.roblox.com/asset/?id=6034898102";
+		["wrap_text"] = "http://www.roblox.com/asset/?id=6034973118";
+		["insert_invitation"] = "http://www.roblox.com/asset/?id=6034973091";
+		["format_list_numbered_rtl"] = "http://www.roblox.com/asset/?id=6034910906";
+		["border_horizontal"] = "http://www.roblox.com/asset/?id=6034898105";
+		["format_align_center"] = "http://www.roblox.com/asset/?id=6034900718";
+		["format_textdirection_l_to_r"] = "http://www.roblox.com/asset/?id=6034925619";
+		["show_chart"] = "http://www.roblox.com/asset/?id=6034934032";
+		["insert_chart_outlined"] = "http://www.roblox.com/asset/?id=6034925606";
+		["vertical_align_bottom"] = "http://www.roblox.com/asset/?id=6034934023";
+		["subscript"] = "http://www.roblox.com/asset/?id=6034934059";
+		["format_align_justify"] = "http://www.roblox.com/asset/?id=6034900721";
+		["format_clear"] = "http://www.roblox.com/asset/?id=6034910902";
+		["notes"] = "http://www.roblox.com/asset/?id=6034973084";
+		["insert_drive_file"] = "http://www.roblox.com/asset/?id=6034941697";
+		["functions"] = "http://www.roblox.com/asset/?id=6034925614";
+		["insert_emoticon"] = "http://www.roblox.com/asset/?id=6034973079";
+		["insert_link"] = "http://www.roblox.com/asset/?id=6034973074";
+		["format_color_reset"] = "http://www.roblox.com/asset/?id=6034900743";
+		["monetization_on"] = "http://www.roblox.com/asset/?id=6034973115";
+		["short_text"] = "http://www.roblox.com/asset/?id=6034934035";
+		["mode_edit"] = "http://www.roblox.com/asset/?id=6034941708";
+		["superscript"] = "http://www.roblox.com/asset/?id=6034934034";
+		["table_chart"] = "http://www.roblox.com/asset/?id=6034973081";
+		["format_bold"] = "http://www.roblox.com/asset/?id=6034900732";
+		["money_off"] = "http://www.roblox.com/asset/?id=6034973088";
+		["border_bottom"] = "http://www.roblox.com/asset/?id=6034898094";
+		["text_fields"] = "http://www.roblox.com/asset/?id=6034934040";
+		["note"] = "http://www.roblox.com/asset/?id=6026663734";
+		["shuffle"] = "http://www.roblox.com/asset/?id=6026667003";
+		["library_books"] = "http://www.roblox.com/asset/?id=6026660085";
+		["library_music"] = "http://www.roblox.com/asset/?id=6026660075";
+		["surround_sound"] = "http://www.roblox.com/asset/?id=6026671209";
+		["forward_30"] = "http://www.roblox.com/asset/?id=6026660088";
+		["music_video"] = "http://www.roblox.com/asset/?id=6026663704";
+		["videocam_off"] = "http://www.roblox.com/asset/?id=6026671212";
+		["control_camera"] = "http://www.roblox.com/asset/?id=6026647916";
+		["explicit"] = "http://www.roblox.com/asset/?id=6026647913";
+		["3k_plus"] = "http://www.roblox.com/asset/?id=6026681598";
+		["fiber_pin"] = "http://www.roblox.com/asset/?id=6026660064";
+		["skip_previous"] = "http://www.roblox.com/asset/?id=6026667011";
+		["pause_circle_filled"] = "http://www.roblox.com/asset/?id=6026663718";
+		["video_settings"] = "http://www.roblox.com/asset/?id=6026671211";
+		["movie"] = "http://www.roblox.com/asset/?id=6026660081";
+		["add_to_queue"] = "http://www.roblox.com/asset/?id=6026647903";
+		["6k"] = "http://www.roblox.com/asset/?id=6026681579";
+		["web_asset"] = "http://www.roblox.com/asset/?id=6026671239";
+		["play_circle_outline"] = "http://www.roblox.com/asset/?id=6026663726";
+		["volume_off"] = "http://www.roblox.com/asset/?id=6026671224";
+		["mic_off"] = "http://www.roblox.com/asset/?id=6026660076";
+		["featured_play_list"] = "http://www.roblox.com/asset/?id=6026647932";
+		["pause_circle_outline"] = "http://www.roblox.com/asset/?id=6026663701";
+		["slow_motion_video"] = "http://www.roblox.com/asset/?id=6026681583";
+		["7k"] = "http://www.roblox.com/asset/?id=6026681584";
+		["playlist_add"] = "http://www.roblox.com/asset/?id=6026663728";
+		["fiber_smart_record"] = "http://www.roblox.com/asset/?id=6026660080";
+		["8k"] = "http://www.roblox.com/asset/?id=6026643014";
+		["hd"] = "http://www.roblox.com/asset/?id=6026660065";
+		["repeat_one_on"] = "http://www.roblox.com/asset/?id=6026666992";
+		["recent_actors"] = "http://www.roblox.com/asset/?id=6026663773";
+		["fiber_new"] = "http://www.roblox.com/asset/?id=6026647930";
+		["fiber_dvr"] = "http://www.roblox.com/asset/?id=6026647912";
+		["hearing_disabled"] = "http://www.roblox.com/asset/?id=6026660068";
+		["forward_10"] = "http://www.roblox.com/asset/?id=6026660062";
+		["4k_plus"] = "http://www.roblox.com/asset/?id=6026643005";
+		["repeat_one"] = "http://www.roblox.com/asset/?id=6026681590";
+		["equalizer"] = "http://www.roblox.com/asset/?id=6026647906";
+		["stop"] = "http://www.roblox.com/asset/?id=6026681576";
+		["2k"] = "http://www.roblox.com/asset/?id=6026643032";
+		["playlist_add_check"] = "http://www.roblox.com/asset/?id=6026663727";
+		["not_interested"] = "http://www.roblox.com/asset/?id=6026663743";
+		["videocam"] = "http://www.roblox.com/asset/?id=6026671213";
+		["sort_by_alpha"] = "http://www.roblox.com/asset/?id=6026667009";
+		["library_add"] = "http://www.roblox.com/asset/?id=6026660063";
+		["stop_circle"] = "http://www.roblox.com/asset/?id=6026681577";
+		["pause"] = "http://www.roblox.com/asset/?id=6026663719";
+		["new_releases"] = "http://www.roblox.com/asset/?id=6026663730";
+		["album"] = "http://www.roblox.com/asset/?id=6026647905";
+		["sd"] = "http://www.roblox.com/asset/?id=6026681582";
+		["volume_up"] = "http://www.roblox.com/asset/?id=6026671215";
+		["replay_5"] = "http://www.roblox.com/asset/?id=6026666993";
+		["high_quality"] = "http://www.roblox.com/asset/?id=6026660059";
+		["shuffle_on"] = "http://www.roblox.com/asset/?id=6026666996";
+		["play_arrow"] = "http://www.roblox.com/asset/?id=6026663699";
+		["snooze"] = "http://www.roblox.com/asset/?id=6026667006";
+		["closed_caption_disabled"] = "http://www.roblox.com/asset/?id=6026647900";
+		["subscriptions"] = "http://www.roblox.com/asset/?id=6026671207";
+		["skip_next"] = "http://www.roblox.com/asset/?id=6026667005";
+		["branding_watermark"] = "http://www.roblox.com/asset/?id=6026647911";
+		["speed"] = "http://www.roblox.com/asset/?id=6026681578";
+		["art_track"] = "http://www.roblox.com/asset/?id=6026647908";
+		["3k"] = "http://www.roblox.com/asset/?id=6026681574";
+		["4k"] = "http://www.roblox.com/asset/?id=6026643017";
+		["volume_mute"] = "http://www.roblox.com/asset/?id=6026671214";
+		["playlist_play"] = "http://www.roblox.com/asset/?id=6026663723";
+		["remove_from_queue"] = "http://www.roblox.com/asset/?id=6026663771";
+		["fast_forward"] = "http://www.roblox.com/asset/?id=6026647902";
+		["play_disabled"] = "http://www.roblox.com/asset/?id=6026663702";
+		["fast_rewind"] = "http://www.roblox.com/asset/?id=6026647942";
+		["5k"] = "http://www.roblox.com/asset/?id=6026681575";
+		["replay_10"] = "http://www.roblox.com/asset/?id=6026667007";
+		["video_library"] = "http://www.roblox.com/asset/?id=6026671208";
+		["loop"] = "http://www.roblox.com/asset/?id=6026660087";
+		["replay_circle_filled"] = "http://www.roblox.com/asset/?id=6026667002";
+		["5g"] = "http://www.roblox.com/asset/?id=6026643007";
+		["library_add_check"] = "http://www.roblox.com/asset/?id=6026660083";
+		["repeat"] = "http://www.roblox.com/asset/?id=6026666998";
+		["queue_play_next"] = "http://www.roblox.com/asset/?id=6026663700";
+		["forward_5"] = "http://www.roblox.com/asset/?id=6026660067";
+		["web"] = "http://www.roblox.com/asset/?id=6026671234";
+		["mic_none"] = "http://www.roblox.com/asset/?id=6026660066";
+		["queue"] = "http://www.roblox.com/asset/?id=6026663724";
+		["closed_caption_off"] = "http://www.roblox.com/asset/?id=6026647943";
+		["hearing"] = "http://www.roblox.com/asset/?id=6026660060";
+		["queue_music"] = "http://www.roblox.com/asset/?id=6026663725";
+		["airplay"] = "http://www.roblox.com/asset/?id=6026647929";
+		["9k"] = "http://www.roblox.com/asset/?id=6026643013";
+		["video_label"] = "http://www.roblox.com/asset/?id=6026671204";
+		["8k_plus"] = "http://www.roblox.com/asset/?id=6026643003";
+		["play_circle_filled"] = "http://www.roblox.com/asset/?id=6026663705";
+		["1k"] = "http://www.roblox.com/asset/?id=6026643002";
+		["fiber_manual_record"] = "http://www.roblox.com/asset/?id=6026647909";
+		["closed_caption"] = "http://www.roblox.com/asset/?id=6026647896";
+		["subtitles"] = "http://www.roblox.com/asset/?id=6026671203";
+		["featured_video"] = "http://www.roblox.com/asset/?id=6026647910";
+		["replay_30"] = "http://www.roblox.com/asset/?id=6026667010";
+		["10k"] = "http://www.roblox.com/asset/?id=6026643035";
+		["5k_plus"] = "http://www.roblox.com/asset/?id=6026643028";
+		["6k_plus"] = "http://www.roblox.com/asset/?id=6026643019";
+		["replay"] = "http://www.roblox.com/asset/?id=6026666999";
+		["repeat_on"] = "http://www.roblox.com/asset/?id=6026666994";
+		["1k_plus"] = "http://www.roblox.com/asset/?id=6026681580";
+		["2k_plus"] = "http://www.roblox.com/asset/?id=6026681588";
+		["games"] = "http://www.roblox.com/asset/?id=6026660074";
+		["volume_down"] = "http://www.roblox.com/asset/?id=6026671206";
+		["mic"] = "http://www.roblox.com/asset/?id=6026660078";
+		["call_to_action"] = "http://www.roblox.com/asset/?id=6026647898";
+		["7k_plus"] = "http://www.roblox.com/asset/?id=6026643012";
+		["av_timer"] = "http://www.roblox.com/asset/?id=6026647934";
+		["9k_plus"] = "http://www.roblox.com/asset/?id=6026681585";
+		["radio"] = "http://www.roblox.com/asset/?id=6026663698";
+		["10mp"] = "http://www.roblox.com/asset/?id=6031328149";
+		["20mp"] = "http://www.roblox.com/asset/?id=6031488940";
+		["wb_twighlight"] = "http://www.roblox.com/asset/?id=6034412760";
+		["movie_creation"] = "http://www.roblox.com/asset/?id=6034323681";
+		["crop_portrait"] = "http://www.roblox.com/asset/?id=6031630198";
+		["filter_5"] = "http://www.roblox.com/asset/?id=6031597518";
+		["broken_image"] = "http://www.roblox.com/asset/?id=6031471480";
+		["flip_camera_android"] = "http://www.roblox.com/asset/?id=6034333280";
+		["flip_camera_ios"] = "http://www.roblox.com/asset/?id=6034333267";
+		["circle"] = "http://www.roblox.com/asset/?id=6031625146";
+		["photo_camera_front"] = "http://www.roblox.com/asset/?id=6031771000";
+		["assistant"] = "http://www.roblox.com/asset/?id=6031360356";
+		["face_retouching_natural"] = "http://www.roblox.com/asset/?id=6034333274";
+		["palette"] = "http://www.roblox.com/asset/?id=6034316009";
+		["nature_people"] = "http://www.roblox.com/asset/?id=6034323711";
+		["14mp"] = "http://www.roblox.com/asset/?id=6031328161";
+		["gradient"] = "http://www.roblox.com/asset/?id=6034333261";
+		["filter_4"] = "http://www.roblox.com/asset/?id=6031597512";
+		["panorama_wide_angle_select"] = "http://www.roblox.com/asset/?id=6031770990";
+		["photo"] = "http://www.roblox.com/asset/?id=6031770993";
+		["grid_off"] = "http://www.roblox.com/asset/?id=6034333286";
+		["leak_add"] = "http://www.roblox.com/asset/?id=6034407074";
+		["landscape"] = "http://www.roblox.com/asset/?id=6034407069";
+		["exposure_plus_1"] = "http://www.roblox.com/asset/?id=6034328970";
+		["slideshow"] = "http://www.roblox.com/asset/?id=6031754546";
+		["camera_alt"] = "http://www.roblox.com/asset/?id=6031572307";
+		["audiotrack"] = "http://www.roblox.com/asset/?id=6031471489";
+		["filter_none"] = "http://www.roblox.com/asset/?id=6031600815";
+		["blur_off"] = "http://www.roblox.com/asset/?id=6031371055";
+		["crop_16_9"] = "http://www.roblox.com/asset/?id=6031630205";
+		["blur_on"] = "http://www.roblox.com/asset/?id=6031371068";
+		["brightness_4"] = "http://www.roblox.com/asset/?id=6031471483";
+		["details"] = "http://www.roblox.com/asset/?id=6034328968";
+		["panorama_horizontal"] = "http://www.roblox.com/asset/?id=6034315966";
+		["camera_rear"] = "http://www.roblox.com/asset/?id=6031572316";
+		["hdr_weak"] = "http://www.roblox.com/asset/?id=6034407083";
+		["collections"] = "http://www.roblox.com/asset/?id=6031625145";
+		["hdr_enhanced_select"] = "http://www.roblox.com/asset/?id=6034333281";
+		["adjust"] = "http://www.roblox.com/asset/?id=6031339048";
+		["burst_mode"] = "http://www.roblox.com/asset/?id=6031572306";
+		["nature"] = "http://www.roblox.com/asset/?id=6034323695";
+		["brightness_6"] = "http://www.roblox.com/asset/?id=6031572309";
+		["19mp"] = "http://www.roblox.com/asset/?id=6031339054";
+		["grain"] = "http://www.roblox.com/asset/?id=6034333288";
+		["receipt_long"] = "http://www.roblox.com/asset/?id=6031763428";
+		["photo_filter"] = "http://www.roblox.com/asset/?id=6031770992";
+		["edit"] = "http://www.roblox.com/asset/?id=6034328955";
+		["healing"] = "http://www.roblox.com/asset/?id=6034407071";
+		["exposure_neg_1"] = "http://www.roblox.com/asset/?id=6034328957";
+		["exposure"] = "http://www.roblox.com/asset/?id=6034328962";
+		["wb_shade"] = "http://www.roblox.com/asset/?id=6034315974";
+		["compare"] = "http://www.roblox.com/asset/?id=6031625151";
+		["cases"] = "http://www.roblox.com/asset/?id=6031572324";
+		["timer_3"] = "http://www.roblox.com/asset/?id=6031754540";
+		["exposure_plus_2"] = "http://www.roblox.com/asset/?id=6034328961";
+		["12mp"] = "http://www.roblox.com/asset/?id=6031328140";
+		["22mp"] = "http://www.roblox.com/asset/?id=6031360353";
+		["timer_off"] = "http://www.roblox.com/asset/?id=6031734881";
+		["auto_stories"] = "http://www.roblox.com/asset/?id=6031360360";
+		["rotate_left"] = "http://www.roblox.com/asset/?id=6031763427";
+		["wb_iridescent"] = "http://www.roblox.com/asset/?id=6034315972";
+		["shutter_speed"] = "http://www.roblox.com/asset/?id=6031763443";
+		["switch_video"] = "http://www.roblox.com/asset/?id=6031754536";
+		["23mp"] = "http://www.roblox.com/asset/?id=6031339045";
+		["euro"] = "http://www.roblox.com/asset/?id=6034328963";
+		["15mp"] = "http://www.roblox.com/asset/?id=6031328158";
+		["filter_center_focus"] = "http://www.roblox.com/asset/?id=6031600817";
+		["photo_library"] = "http://www.roblox.com/asset/?id=6031770998";
+		["mp"] = "http://www.roblox.com/asset/?id=6034323674";
+		["looks_4"] = "http://www.roblox.com/asset/?id=6034407089";
+		["filter_2"] = "http://www.roblox.com/asset/?id=6031597521";
+		["crop_3_2"] = "http://www.roblox.com/asset/?id=6034328956";
+		["auto_fix_normal"] = "http://www.roblox.com/asset/?id=6031371074";
+		["auto_fix_off"] = "http://www.roblox.com/asset/?id=6031360381";
+		["wb_auto"] = "http://www.roblox.com/asset/?id=6031734875";
+		["switch_camera"] = "http://www.roblox.com/asset/?id=6031754550";
+		["filter_vintage"] = "http://www.roblox.com/asset/?id=6031600811";
+		["photo_size_select_small"] = "http://www.roblox.com/asset/?id=6031763457";
+		["blur_linear"] = "http://www.roblox.com/asset/?id=6031488930";
+		["hdr_on"] = "http://www.roblox.com/asset/?id=6034333279";
+		["tag_faces"] = "http://www.roblox.com/asset/?id=6031754560";
+		["21mp"] = "http://www.roblox.com/asset/?id=6031339065";
+		["camera"] = "http://www.roblox.com/asset/?id=6031572312";
+		["image_aspect_ratio"] = "http://www.roblox.com/asset/?id=6034407073";
+		["filter_b_and_w"] = "http://www.roblox.com/asset/?id=6031600824";
+		["crop_landscape"] = "http://www.roblox.com/asset/?id=6031630202";
+		["13mp"] = "http://www.roblox.com/asset/?id=6031328137";
+		["grid_on"] = "http://www.roblox.com/asset/?id=6034333276";
+		["motion_photos_pause"] = "http://www.roblox.com/asset/?id=6034323668";
+		["filter_6"] = "http://www.roblox.com/asset/?id=6031597524";
+		["linked_camera"] = "http://www.roblox.com/asset/?id=6034407082";
+		["panorama_fish_eye"] = "http://www.roblox.com/asset/?id=6034315969";
+		["panorama"] = "http://www.roblox.com/asset/?id=6034315955";
+		["color_lens"] = "http://www.roblox.com/asset/?id=6031625148";
+		["lens"] = "http://www.roblox.com/asset/?id=6034407081";
+		["crop_din"] = "http://www.roblox.com/asset/?id=6031630208";
+		["exposure_neg_2"] = "http://www.roblox.com/asset/?id=6034328973";
+		["mic_external_off"] = "http://www.roblox.com/asset/?id=6034323672";
+		["crop_free"] = "http://www.roblox.com/asset/?id=6031630212";
+		["crop_original"] = "http://www.roblox.com/asset/?id=6031630204";
+		["panorama_photosphere_select"] = "http://www.roblox.com/asset/?id=6034315975";
+		["photo_size_select_actual"] = "http://www.roblox.com/asset/?id=6031771012";
+		["leak_remove"] = "http://www.roblox.com/asset/?id=6034407080";
+		["collections_bookmark"] = "http://www.roblox.com/asset/?id=6034328965";
+		["straighten"] = "http://www.roblox.com/asset/?id=6031754545";
+		["timelapse"] = "http://www.roblox.com/asset/?id=6031754541";
+		["picture_as_pdf"] = "http://www.roblox.com/asset/?id=6031763425";
+		["crop_rotate"] = "http://www.roblox.com/asset/?id=6031630203";
+		["control_point_duplicate"] = "http://www.roblox.com/asset/?id=6034328959";
+		["photo_camera_back"] = "http://www.roblox.com/asset/?id=6031771007";
+		["looks_3"] = "http://www.roblox.com/asset/?id=6034407088";
+		["motion_photos_off"] = "http://www.roblox.com/asset/?id=6034323670";
+		["rotate_right"] = "http://www.roblox.com/asset/?id=6031763429";
+		["view_compact"] = "http://www.roblox.com/asset/?id=6031734878";
+		["crop_7_5"] = "http://www.roblox.com/asset/?id=6031630197";
+		["style"] = "http://www.roblox.com/asset/?id=6031754538";
+		["exposure_zero"] = "http://www.roblox.com/asset/?id=6034329000";
+		["camera_front"] = "http://www.roblox.com/asset/?id=6031572318";
+		["hdr_strong"] = "http://www.roblox.com/asset/?id=6034333272";
+		["view_comfy"] = "http://www.roblox.com/asset/?id=6031734876";
+		["panorama_vertical"] = "http://www.roblox.com/asset/?id=6034315963";
+		["panorama_vertical_select"] = "http://www.roblox.com/asset/?id=6034315961";
+		["looks_two"] = "http://www.roblox.com/asset/?id=6034412757";
+		["filter_drama"] = "http://www.roblox.com/asset/?id=6031600813";
+		["center_focus_strong"] = "http://www.roblox.com/asset/?id=6031625147";
+		["18mp"] = "http://www.roblox.com/asset/?id=6031339064";
+		["7mp"] = "http://www.roblox.com/asset/?id=6031328139";
+		["wb_sunny"] = "http://www.roblox.com/asset/?id=6034412758";
+		["filter_9_plus"] = "http://www.roblox.com/asset/?id=6031600812";
+		["crop"] = "http://www.roblox.com/asset/?id=6034328964";
+		["vignette"] = "http://www.roblox.com/asset/?id=6031734905";
+		["brightness_2"] = "http://www.roblox.com/asset/?id=6031488938";
+		["crop_square"] = "http://www.roblox.com/asset/?id=6031630222";
+		["looks_5"] = "http://www.roblox.com/asset/?id=6034412764";
+		["flip"] = "http://www.roblox.com/asset/?id=6034333275";
+		["looks_one"] = "http://www.roblox.com/asset/?id=6034412761";
+		["flash_off"] = "http://www.roblox.com/asset/?id=6034333270";
+		["hdr_off"] = "http://www.roblox.com/asset/?id=6034333266";
+		["photo_album"] = "http://www.roblox.com/asset/?id=6031770989";
+		["motion_photos_paused"] = "http://www.roblox.com/asset/?id=6034323675";
+		["photo_camera"] = "http://www.roblox.com/asset/?id=6031770997";
+		["2mp"] = "http://www.roblox.com/asset/?id=6031328138";
+		["3mp"] = "http://www.roblox.com/asset/?id=6031328136";
+		["24mp"] = "http://www.roblox.com/asset/?id=6031360352";
+		["filter_9"] = "http://www.roblox.com/asset/?id=6031597534";
+		["6mp"] = "http://www.roblox.com/asset/?id=6031328131";
+		["remove_red_eye"] = "http://www.roblox.com/asset/?id=6031763426";
+		["4mp"] = "http://www.roblox.com/asset/?id=6031328152";
+		["add_a_photo"] = "http://www.roblox.com/asset/?id=6031339049";
+		["filter_3"] = "http://www.roblox.com/asset/?id=6031597513";
+		["crop_5_4"] = "http://www.roblox.com/asset/?id=6034328960";
+		["8mp"] = "http://www.roblox.com/asset/?id=6031328133";
+		["camera_roll"] = "http://www.roblox.com/asset/?id=6031572314";
+		["panorama_wide_angle"] = "http://www.roblox.com/asset/?id=6031770995";
+		["transform"] = "http://www.roblox.com/asset/?id=6031734873";
+		["flare"] = "http://www.roblox.com/asset/?id=6031600816";
+		["image_search"] = "http://www.roblox.com/asset/?id=6034407084";
+		["auto_awesome"] = "http://www.roblox.com/asset/?id=6031360365";
+		["motion_photos_on"] = "http://www.roblox.com/asset/?id=6034323669";
+		["rotate_90_degrees_ccw"] = "http://www.roblox.com/asset/?id=6031763456";
+		["filter_1"] = "http://www.roblox.com/asset/?id=6031597511";
+		["filter_tilt_shift"] = "http://www.roblox.com/asset/?id=6031600814";
+		["image"] = "http://www.roblox.com/asset/?id=6034407078";
+		["center_focus_weak"] = "http://www.roblox.com/asset/?id=6031625144";
+		["blur_circular"] = "http://www.roblox.com/asset/?id=6031488945";
+		["bedtime"] = "http://www.roblox.com/asset/?id=6031371054";
+		["auto_fix_high"] = "http://www.roblox.com/asset/?id=6031360355";
+		["monochrome_photos"] = "http://www.roblox.com/asset/?id=6034323678";
+		["flash_auto"] = "http://www.roblox.com/asset/?id=6034333287";
+		["5mp"] = "http://www.roblox.com/asset/?id=6031328144";
+		["photo_size_select_large"] = "http://www.roblox.com/asset/?id=6031763423";
+		["assistant_photo"] = "http://www.roblox.com/asset/?id=6031339052";
+		["animation"] = "http://www.roblox.com/asset/?id=6031625150";
+		["looks"] = "http://www.roblox.com/asset/?id=6034407096";
+		["17mp"] = "http://www.roblox.com/asset/?id=6031339055";
+		["panorama_horizontal_select"] = "http://www.roblox.com/asset/?id=6034315965";
+		["flash_on"] = "http://www.roblox.com/asset/?id=6034333271";
+		["iso"] = "http://www.roblox.com/asset/?id=6034407106";
+		["music_note"] = "http://www.roblox.com/asset/?id=6034323673";
+		["music_off"] = "http://www.roblox.com/asset/?id=6034323679";
+		["navigate_next"] = "http://www.roblox.com/asset/?id=6034315956";
+		["timer"] = "http://www.roblox.com/asset/?id=6031754564";
+		["loupe"] = "http://www.roblox.com/asset/?id=6034412770";
+		["navigate_before"] = "http://www.roblox.com/asset/?id=6034323696";
+		["brightness_1"] = "http://www.roblox.com/asset/?id=6031471488";
+		["brightness_7"] = "http://www.roblox.com/asset/?id=6031471491";
+		["tonality"] = "http://www.roblox.com/asset/?id=6031734891";
+		["brush"] = "http://www.roblox.com/asset/?id=6031572320";
+		["colorize"] = "http://www.roblox.com/asset/?id=6031625161";
+		["filter_7"] = "http://www.roblox.com/asset/?id=6031597515";
+		["16mp"] = "http://www.roblox.com/asset/?id=6031328168";
+		["timer_10"] = "http://www.roblox.com/asset/?id=6031734880";
+		["portrait"] = "http://www.roblox.com/asset/?id=6031763434";
+		["tune"] = "http://www.roblox.com/asset/?id=6031734877";
+		["image_not_supported"] = "http://www.roblox.com/asset/?id=6034407076";
+		["wb_cloudy"] = "http://www.roblox.com/asset/?id=6031734907";
+		["auto_awesome_motion"] = "http://www.roblox.com/asset/?id=6031360370";
+		["filter_8"] = "http://www.roblox.com/asset/?id=6031597532";
+		["brightness_5"] = "http://www.roblox.com/asset/?id=6031471479";
+		["movie_filter"] = "http://www.roblox.com/asset/?id=6034323687";
+		["add_photo_alternate"] = "http://www.roblox.com/asset/?id=6031471484";
+		["add_to_photos"] = "http://www.roblox.com/asset/?id=6031371075";
+		["texture"] = "http://www.roblox.com/asset/?id=6031754553";
+		["11mp"] = "http://www.roblox.com/asset/?id=6031328141";
+		["mic_external_on"] = "http://www.roblox.com/asset/?id=6034323671";
+		["looks_6"] = "http://www.roblox.com/asset/?id=6034412759";
+		["dehaze"] = "http://www.roblox.com/asset/?id=6031630200";
+		["control_point"] = "http://www.roblox.com/asset/?id=6031625131";
+		["panorama_photosphere"] = "http://www.roblox.com/asset/?id=6034412763";
+		["filter_frames"] = "http://www.roblox.com/asset/?id=6031600833";
+		["auto_awesome_mosaic"] = "http://www.roblox.com/asset/?id=6031371053";
+		["9mp"] = "http://www.roblox.com/asset/?id=6031328146";
+		["filter"] = "http://www.roblox.com/asset/?id=6031597514";
+		["brightness_3"] = "http://www.roblox.com/asset/?id=6031572317";
+		["dirty_lens"] = "http://www.roblox.com/asset/?id=6034328967";
+		["wb_incandescent"] = "http://www.roblox.com/asset/?id=6034316010";
+		["filter_hdr"] = "http://www.roblox.com/asset/?id=6031600819";
+		["textsms"] = "http://www.roblox.com/asset/?id=6035202006";
+		["comment"] = "http://www.roblox.com/asset/?id=6035181871";
+		["call_end"] = "http://www.roblox.com/asset/?id=6035173845";
+		["qr_code_scanner"] = "http://www.roblox.com/asset/?id=6035202022";
+		["phonelink_setup"] = "http://www.roblox.com/asset/?id=6035202025";
+		["call_merge"] = "http://www.roblox.com/asset/?id=6035173843";
+		["phonelink_erase"] = "http://www.roblox.com/asset/?id=6035202085";
+		["contact_mail"] = "http://www.roblox.com/asset/?id=6035181868";
+		["contact_phone"] = "http://www.roblox.com/asset/?id=6035181861";
+		["screen_share"] = "http://www.roblox.com/asset/?id=6035202008";
+		["present_to_all"] = "http://www.roblox.com/asset/?id=6035202020";
+		["stay_primary_portrait"] = "http://www.roblox.com/asset/?id=6035202009";
+		["message"] = "http://www.roblox.com/asset/?id=6035202033";
+		["sentiment_satisfied_alt"] = "http://www.roblox.com/asset/?id=6035202069";
+		["stay_current_portrait"] = "http://www.roblox.com/asset/?id=6035202004";
+		["voicemail"] = "http://www.roblox.com/asset/?id=6035202019";
+		["business"] = "http://www.roblox.com/asset/?id=6035173853";
+		["mail_outline"] = "http://www.roblox.com/asset/?id=6035190844";
+		["vpn_key"] = "http://www.roblox.com/asset/?id=6035202034";
+		["forward_to_inbox"] = "http://www.roblox.com/asset/?id=6035190840";
+		["contacts"] = "http://www.roblox.com/asset/?id=6035181864";
+		["phonelink_ring"] = "http://www.roblox.com/asset/?id=6035202066";
+		["domain_disabled"] = "http://www.roblox.com/asset/?id=6035181862";
+		["person_add_disabled"] = "http://www.roblox.com/asset/?id=6035202007";
+		["stay_primary_landscape"] = "http://www.roblox.com/asset/?id=6035202026";
+		["alternate_email"] = "http://www.roblox.com/asset/?id=6035173865";
+		["phone_disabled"] = "http://www.roblox.com/asset/?id=6035202028";
+		["email"] = "http://www.roblox.com/asset/?id=6035181866";
+		["mobile_screen_share"] = "http://www.roblox.com/asset/?id=6035202021";
+		["live_help"] = "http://www.roblox.com/asset/?id=6035190836";
+		["chat_bubble"] = "http://www.roblox.com/asset/?id=6035181858";
+		["stop_screen_share"] = "http://www.roblox.com/asset/?id=6035202042";
+		["location_on"] = "http://www.roblox.com/asset/?id=6035190846";
+		["chat_bubble_outline"] = "http://www.roblox.com/asset/?id=6035181869";
+		["dialer_sip"] = "http://www.roblox.com/asset/?id=6035181865";
+		["no_sim"] = "http://www.roblox.com/asset/?id=6035202030";
+		["list_alt"] = "http://www.roblox.com/asset/?id=6035190838";
+		["call"] = "http://www.roblox.com/asset/?id=6035173859";
+		["pause_presentation"] = "http://www.roblox.com/asset/?id=6035202015";
+		["invert_colors_off"] = "http://www.roblox.com/asset/?id=6035190842";
+		["call_missed_outgoing"] = "http://www.roblox.com/asset/?id=6035173847";
+		["stay_current_landscape"] = "http://www.roblox.com/asset/?id=6035202011";
+		["import_export"] = "http://www.roblox.com/asset/?id=6035202040";
+		["add_ic_call"] = "http://www.roblox.com/asset/?id=6035173839";
+		["dialpad"] = "http://www.roblox.com/asset/?id=6035181892";
+		["nat"] = "http://www.roblox.com/asset/?id=6035202082";
+		["unsubscribe"] = "http://www.roblox.com/asset/?id=6035202044";
+		["mark_chat_unread"] = "http://www.roblox.com/asset/?id=6035190841";
+		["portable_wifi_off"] = "http://www.roblox.com/asset/?id=6035202091";
+		["location_off"] = "http://www.roblox.com/asset/?id=6035202049";
+		["person_search"] = "http://www.roblox.com/asset/?id=6035202013";
+		["phonelink_lock"] = "http://www.roblox.com/asset/?id=6035202064";
+		["desktop_access_disabled"] = "http://www.roblox.com/asset/?id=6035181863";
+		["import_contacts"] = "http://www.roblox.com/asset/?id=6035190854";
+		["rss_feed"] = "http://www.roblox.com/asset/?id=6035202016";
+		["chat"] = "http://www.roblox.com/asset/?id=6035173838";
+		["print_disabled"] = "http://www.roblox.com/asset/?id=6035202041";
+		["mark_email_read"] = "http://www.roblox.com/asset/?id=6035202038";
+		["hourglass_top"] = "http://www.roblox.com/asset/?id=6035190886";
+		["clear_all"] = "http://www.roblox.com/asset/?id=6035181870";
+		["forum"] = "http://www.roblox.com/asset/?id=6035202002";
+		["qr_code"] = "http://www.roblox.com/asset/?id=6035202012";
+		["speaker_phone"] = "http://www.roblox.com/asset/?id=6035202018";
+		["rtt"] = "http://www.roblox.com/asset/?id=6035202010";
+		["domain_verification"] = "http://www.roblox.com/asset/?id=6035181867";
+		["app_registration"] = "http://www.roblox.com/asset/?id=6035173870";
+		["call_split"] = "http://www.roblox.com/asset/?id=6035173861";
+		["cell_wifi"] = "http://www.roblox.com/asset/?id=6035173852";
+		["phone_enabled"] = "http://www.roblox.com/asset/?id=6035202089";
+		["call_made"] = "http://www.roblox.com/asset/?id=6035173858";
+		["call_received"] = "http://www.roblox.com/asset/?id=6035173844";
+		["phone"] = "http://www.roblox.com/asset/?id=6035202017";
+		["ring_volume"] = "http://www.roblox.com/asset/?id=6035202032";
+		["mark_email_unread"] = "http://www.roblox.com/asset/?id=6035202027";
+		["hourglass_bottom"] = "http://www.roblox.com/asset/?id=6035202043";
+		["read_more"] = "http://www.roblox.com/asset/?id=6035202014";
+		["duo"] = "http://www.roblox.com/asset/?id=6035181860";
+		["more_time"] = "http://www.roblox.com/asset/?id=6035202036";
+		["wifi_calling"] = "http://www.roblox.com/asset/?id=6035202065";
+		["swap_calls"] = "http://www.roblox.com/asset/?id=6035202037";
+		["cancel_presentation"] = "http://www.roblox.com/asset/?id=6035173837";
+		["call_missed"] = "http://www.roblox.com/asset/?id=6035173850";
+		["mark_chat_read"] = "http://www.roblox.com/asset/?id=6035202031";
+		["text_snippet"] = "http://www.roblox.com/asset/?id=6031302995";
+		["snippet_folder"] = "http://www.roblox.com/asset/?id=6031302947";
+		["workspaces_outline"] = "http://www.roblox.com/asset/?id=6031302952";
+		["file_download"] = "http://www.roblox.com/asset/?id=6031302931";
+		["request_quote"] = "http://www.roblox.com/asset/?id=6031302941";
+		["approval"] = "http://www.roblox.com/asset/?id=6031302928";
+		["drive_folder_upload"] = "http://www.roblox.com/asset/?id=6031302929";
+		["rule_folder"] = "http://www.roblox.com/asset/?id=6031302940";
+		["attach_email"] = "http://www.roblox.com/asset/?id=6031302935";
+		["topic"] = "http://www.roblox.com/asset/?id=6031302976";
+		["upload_file"] = "http://www.roblox.com/asset/?id=6031302959";
+		["attachment"] = "http://www.roblox.com/asset/?id=6031302921";
+		["file_download_done"] = "http://www.roblox.com/asset/?id=6031302926";
+		["drive_file_move_outline"] = "http://www.roblox.com/asset/?id=6031302924";
+		["cloud_upload"] = "http://www.roblox.com/asset/?id=6031302992";
+		["cloud_circle"] = "http://www.roblox.com/asset/?id=6031302919";
+		["folder_shared"] = "http://www.roblox.com/asset/?id=6031302945";
+		["cloud_download"] = "http://www.roblox.com/asset/?id=6031302917";
+		["file_upload"] = "http://www.roblox.com/asset/?id=6031302996";
+		["workspaces_filled"] = "http://www.roblox.com/asset/?id=6031302961";
+		["cloud_queue"] = "http://www.roblox.com/asset/?id=6031302916";
+		["cloud"] = "http://www.roblox.com/asset/?id=6031302918";
+		["folder_open"] = "http://www.roblox.com/asset/?id=6031302934";
+		["grid_view"] = "http://www.roblox.com/asset/?id=6031302950";
+		["cloud_off"] = "http://www.roblox.com/asset/?id=6031302993";
+		["create_new_folder"] = "http://www.roblox.com/asset/?id=6031302933";
+		["cloud_done"] = "http://www.roblox.com/asset/?id=6031302927";
+		["folder"] = "http://www.roblox.com/asset/?id=6031302932";
+		["drive_file_move"] = "http://www.roblox.com/asset/?id=6031302922";
+		["drive_file_rename_outline"] = "http://www.roblox.com/asset/?id=6031302994";
+		["notifications_active"] = "http://www.roblox.com/asset/?id=6034304908";
+		["sentiment_neutral"] = "http://www.roblox.com/asset/?id=6034230636";
+		["sick"] = "http://www.roblox.com/asset/?id=6034230642";
+		["poll"] = "http://www.roblox.com/asset/?id=6034267991";
+		["emoji_events"] = "http://www.roblox.com/asset/?id=6034275726";
+		["groups"] = "http://www.roblox.com/asset/?id=6034281935";
+		["sports_soccer"] = "http://www.roblox.com/asset/?id=6034227075";
+		["person_add"] = "http://www.roblox.com/asset/?id=6034287514";
+		["mood_bad"] = "http://www.roblox.com/asset/?id=6034295706";
+		["person_remove_alt_1"] = "http://www.roblox.com/asset/?id=6034287515";
+		["king_bed"] = "http://www.roblox.com/asset/?id=6034281948";
+		["architecture"] = "http://www.roblox.com/asset/?id=6034275730";
+		["deck"] = "http://www.roblox.com/asset/?id=6034295703";
+		["group_add"] = "http://www.roblox.com/asset/?id=6034281909";
+		["sports_basketball"] = "http://www.roblox.com/asset/?id=6034230649";
+		["emoji_symbols"] = "http://www.roblox.com/asset/?id=6034281899";
+		["switch_account"] = "http://www.roblox.com/asset/?id=6034227138";
+		["remove_moderator"] = "http://www.roblox.com/asset/?id=6034267998";
+		["coronavirus"] = "http://www.roblox.com/asset/?id=6034275724";
+		["people"] = "http://www.roblox.com/asset/?id=6034287513";
+		["person"] = "http://www.roblox.com/asset/?id=6034287594";
+		["elderly"] = "http://www.roblox.com/asset/?id=6034295698";
+		["clean_hands"] = "http://www.roblox.com/asset/?id=6034275729";
+		["emoji_flags"] = "http://www.roblox.com/asset/?id=6034304898";
+		["psychology"] = "http://www.roblox.com/asset/?id=6034287516";
+		["person_add_alt"] = "http://www.roblox.com/asset/?id=6034267994";
+		["sports_volleyball"] = "http://www.roblox.com/asset/?id=6034227139";
+		["domain"] = "http://www.roblox.com/asset/?id=6034275722";
+		["emoji_objects"] = "http://www.roblox.com/asset/?id=6034281900";
+		["ios_share"] = "http://www.roblox.com/asset/?id=6034281941";
+		["history_edu"] = "http://www.roblox.com/asset/?id=6034281934";
+		["share"] = "http://www.roblox.com/asset/?id=6034230648";
+		["military_tech"] = "http://www.roblox.com/asset/?id=6034295711";
+		["sports_kabaddi"] = "http://www.roblox.com/asset/?id=6034227141";
+		["cake"] = "http://www.roblox.com/asset/?id=6034295702";
+		["engineering"] = "http://www.roblox.com/asset/?id=6034281908";
+		["emoji_food_beverage"] = "http://www.roblox.com/asset/?id=6034304883";
+		["notifications_none"] = "http://www.roblox.com/asset/?id=6034308947";
+		["emoji_people"] = "http://www.roblox.com/asset/?id=6034281904";
+		["thumb_down_alt"] = "http://www.roblox.com/asset/?id=6034227069";
+		["sentiment_very_satisfied"] = "http://www.roblox.com/asset/?id=6034230650";
+		["nights_stay"] = "http://www.roblox.com/asset/?id=6034304881";
+		["reduce_capacity"] = "http://www.roblox.com/asset/?id=6034268013";
+		["add_moderator"] = "http://www.roblox.com/asset/?id=6034295699";
+		["science"] = "http://www.roblox.com/asset/?id=6034230640";
+		["pages"] = "http://www.roblox.com/asset/?id=6034304892";
+		["sentiment_satisfied"] = "http://www.roblox.com/asset/?id=6034230668";
+		["plus_one"] = "http://www.roblox.com/asset/?id=6034268012";
+		["party_mode"] = "http://www.roblox.com/asset/?id=6034287521";
+		["person_remove"] = "http://www.roblox.com/asset/?id=6034267996";
+		["single_bed"] = "http://www.roblox.com/asset/?id=6034230651";
+		["mood"] = "http://www.roblox.com/asset/?id=6034295704";
+		["public"] = "http://www.roblox.com/asset/?id=6034287522";
+		["sports_rugby"] = "http://www.roblox.com/asset/?id=6034227073";
+		["sports_handball"] = "http://www.roblox.com/asset/?id=6034227074";
+		["person_add_alt_1"] = "http://www.roblox.com/asset/?id=6034287519";
+		["people_alt"] = "http://www.roblox.com/asset/?id=6034287518";
+		["notifications_off"] = "http://www.roblox.com/asset/?id=6034304894";
+		["whatshot"] = "http://www.roblox.com/asset/?id=6034287525";
+		["emoji_transportation"] = "http://www.roblox.com/asset/?id=6034281894";
+		["outdoor_grill"] = "http://www.roblox.com/asset/?id=6034304900";
+		["sentiment_very_dissatisfied"] = "http://www.roblox.com/asset/?id=6034230659";
+		["masks"] = "http://www.roblox.com/asset/?id=6034295710";
+		["luggage"] = "http://www.roblox.com/asset/?id=6034295708";
+		["sports_motorsports"] = "http://www.roblox.com/asset/?id=6034227071";
+		["sports_esports"] = "http://www.roblox.com/asset/?id=6034227061";
+		["location_city"] = "http://www.roblox.com/asset/?id=6034304889";
+		["sports_golf"] = "http://www.roblox.com/asset/?id=6034227060";
+		["sentiment_dissatisfied"] = "http://www.roblox.com/asset/?id=6034230637";
+		["no_luggage"] = "http://www.roblox.com/asset/?id=6034304891";
+		["fireplace"] = "http://www.roblox.com/asset/?id=6034281910";
+		["emoji_nature"] = "http://www.roblox.com/asset/?id=6034281896";
+		["group"] = "http://www.roblox.com/asset/?id=6034281901";
+		["thumb_up_alt"] = "http://www.roblox.com/asset/?id=6034227076";
+		["sports_tennis"] = "http://www.roblox.com/asset/?id=6034227068";
+		["facebook"] = "http://www.roblox.com/asset/?id=6034281898";
+		["sports_mma"] = "http://www.roblox.com/asset/?id=6034227072";
+		["person_outline"] = "http://www.roblox.com/asset/?id=6034268008";
+		["sports_baseball"] = "http://www.roblox.com/asset/?id=6034230652";
+		["sports_cricket"] = "http://www.roblox.com/asset/?id=6034230660";
+		["people_outline"] = "http://www.roblox.com/asset/?id=6034287528";
+		["notifications_paused"] = "http://www.roblox.com/asset/?id=6034304896";
+		["emoji_emotions"] = "http://www.roblox.com/asset/?id=6034275731";
+		["follow_the_signs"] = "http://www.roblox.com/asset/?id=6034281911";
+		["sanitizer"] = "http://www.roblox.com/asset/?id=6034287586";
+		["self_improvement"] = "http://www.roblox.com/asset/?id=6034230634";
+		["notifications"] = "http://www.roblox.com/asset/?id=6034308946";
+		["public_off"] = "http://www.roblox.com/asset/?id=6034287538";
+		["recommend"] = "http://www.roblox.com/asset/?id=6034287524";
+		["sports_football"] = "http://www.roblox.com/asset/?id=6034227067";
+		["sports_hockey"] = "http://www.roblox.com/asset/?id=6034227064";
+		["school"] = "http://www.roblox.com/asset/?id=6034230641";
+		["connect_without_contact"] = "http://www.roblox.com/asset/?id=6034275800";
+		["sports"] = "http://www.roblox.com/asset/?id=6034230647";
+		["construction"] = "http://www.roblox.com/asset/?id=6034275725";
+		["inventory"] = "http://www.roblox.com/asset/?id=6035056487";
+		["add_box"] = "http://www.roblox.com/asset/?id=6035047375";
+		["how_to_reg"] = "http://www.roblox.com/asset/?id=6035053288";
+		["unarchive"] = "http://www.roblox.com/asset/?id=6035078921";
+		["block_flipped"] = "http://www.roblox.com/asset/?id=6035047378";
+		["file_copy"] = "http://www.roblox.com/asset/?id=6035053293";
+		["bolt"] = "http://www.roblox.com/asset/?id=6035047381";
+		["remove_circle_outline"] = "http://www.roblox.com/asset/?id=6035067843";
+		["move_to_inbox"] = "http://www.roblox.com/asset/?id=6035067838";
+		["save_alt"] = "http://www.roblox.com/asset/?id=6035067842";
+		["weekend"] = "http://www.roblox.com/asset/?id=6035078894";
+		["where_to_vote"] = "http://www.roblox.com/asset/?id=6035078913";
+		["biotech"] = "http://www.roblox.com/asset/?id=6035047385";
+		["report_off"] = "http://www.roblox.com/asset/?id=6035067830";
+		["clear"] = "http://www.roblox.com/asset/?id=6035047409";
+		["redo"] = "http://www.roblox.com/asset/?id=6035056483";
+		["link"] = "http://www.roblox.com/asset/?id=6035056475";
+		["drafts"] = "http://www.roblox.com/asset/?id=6035053297";
+		["push_pin"] = "http://www.roblox.com/asset/?id=6035056481";
+		["reply"] = "http://www.roblox.com/asset/?id=6035067844";
+		["undo"] = "http://www.roblox.com/asset/?id=6035078896";
+		["archive"] = "http://www.roblox.com/asset/?id=6035047379";
+		["add"] = "http://www.roblox.com/asset/?id=6035047377";
+		["insights"] = "http://www.roblox.com/asset/?id=6035067839";
+		["flag"] = "http://www.roblox.com/asset/?id=6035053279";
+		["save"] = "http://www.roblox.com/asset/?id=6035067857";
+		["text_format"] = "http://www.roblox.com/asset/?id=6035078890";
+		["content_cut"] = "http://www.roblox.com/asset/?id=6035053280";
+		["ballot"] = "http://www.roblox.com/asset/?id=6035047386";
+		["remove"] = "http://www.roblox.com/asset/?id=6035067836";
+		["calculate"] = "http://www.roblox.com/asset/?id=6035047384";
+		["report"] = "http://www.roblox.com/asset/?id=6035067826";
+		["markunread"] = "http://www.roblox.com/asset/?id=6035056476";
+		["delete_sweep"] = "http://www.roblox.com/asset/?id=6035053301";
+		["gesture"] = "http://www.roblox.com/asset/?id=6035053287";
+		["link_off"] = "http://www.roblox.com/asset/?id=6035056484";
+		["forward"] = "http://www.roblox.com/asset/?id=6035053298";
+		["reply_all"] = "http://www.roblox.com/asset/?id=6035067824";
+		["how_to_vote"] = "http://www.roblox.com/asset/?id=6035053295";
+		["square_foot"] = "http://www.roblox.com/asset/?id=6035078918";
+		["outlined_flag"] = "http://www.roblox.com/asset/?id=6035056486";
+		["add_circle"] = "http://www.roblox.com/asset/?id=6035047380";
+		["stacked_bar_chart"] = "http://www.roblox.com/asset/?id=6035078892";
+		["policy"] = "http://www.roblox.com/asset/?id=6035056512";
+		["backspace"] = "http://www.roblox.com/asset/?id=6035047397";
+		["sort"] = "http://www.roblox.com/asset/?id=6035078888";
+		["content_paste"] = "http://www.roblox.com/asset/?id=6035053285";
+		["low_priority"] = "http://www.roblox.com/asset/?id=6035056491";
+		["font_download"] = "http://www.roblox.com/asset/?id=6035053275";
+		["shield"] = "http://www.roblox.com/asset/?id=6035078889";
+		["waves"] = "http://www.roblox.com/asset/?id=6035078898";
+		["select_all"] = "http://www.roblox.com/asset/?id=6035067834";
+		["dynamic_feed"] = "http://www.roblox.com/asset/?id=6035053289";
+		["mail"] = "http://www.roblox.com/asset/?id=6035056477";
+		["amp_stories"] = "http://www.roblox.com/asset/?id=6035047382";
+		["filter_list"] = "http://www.roblox.com/asset/?id=6035053294";
+		["send"] = "http://www.roblox.com/asset/?id=6035067832";
+		["create"] = "http://www.roblox.com/asset/?id=6035053304";
+		["stream"] = "http://www.roblox.com/asset/?id=6035078897";
+		["next_week"] = "http://www.roblox.com/asset/?id=6035067835";
+		["inbox"] = "http://www.roblox.com/asset/?id=6035067831";
+		["add_link"] = "http://www.roblox.com/asset/?id=6035047374";
+		["content_copy"] = "http://www.roblox.com/asset/?id=6035053278";
+		["remove_circle"] = "http://www.roblox.com/asset/?id=6035067837";
+		["add_circle_outline"] = "http://www.roblox.com/asset/?id=6035047391";
+		["block"] = "http://www.roblox.com/asset/?id=6035047387";
+		["tag"] = "http://www.roblox.com/asset/?id=6035078895";
+		["beach_access"] = "http://www.roblox.com/asset/?id=6035107923";
+		["stroller"] = "http://www.roblox.com/asset/?id=6035161535";
+		["family_restroom"] = "http://www.roblox.com/asset/?id=6035121916";
+		["corporate_fare"] = "http://www.roblox.com/asset/?id=6035121908";
+		["no_meeting_room"] = "http://www.roblox.com/asset/?id=6035153649";
+		["do_not_touch"] = "http://www.roblox.com/asset/?id=6035121915";
+		["ac_unit"] = "http://www.roblox.com/asset/?id=6035107929";
+		["business_center"] = "http://www.roblox.com/asset/?id=6035107933";
+		["spa"] = "http://www.roblox.com/asset/?id=6035153639";
+		["no_flash"] = "http://www.roblox.com/asset/?id=6035145424";
+		["no_cell"] = "http://www.roblox.com/asset/?id=6035145376";
+		["room_service"] = "http://www.roblox.com/asset/?id=6035153648";
+		["tapas"] = "http://www.roblox.com/asset/?id=6035161533";
+		["microwave"] = "http://www.roblox.com/asset/?id=6035145367";
+		["meeting_room"] = "http://www.roblox.com/asset/?id=6035145361";
+		["wash"] = "http://www.roblox.com/asset/?id=6035161540";
+		["escalator"] = "http://www.roblox.com/asset/?id=6035121939";
+		["house_siding"] = "http://www.roblox.com/asset/?id=6035145393";
+		["food_bank"] = "http://www.roblox.com/asset/?id=6035121921";
+		["foundation"] = "http://www.roblox.com/asset/?id=6035121918";
+		["elevator"] = "http://www.roblox.com/asset/?id=6035121912";
+		["room_preferences"] = "http://www.roblox.com/asset/?id=6035153642";
+		["do_not_step"] = "http://www.roblox.com/asset/?id=6035121910";
+		["free_breakfast"] = "http://www.roblox.com/asset/?id=6035145363";
+		["house"] = "http://www.roblox.com/asset/?id=6035145364";
+		["child_care"] = "http://www.roblox.com/asset/?id=6035107927";
+		["night_shelter"] = "http://www.roblox.com/asset/?id=6035145378";
+		["child_friendly"] = "http://www.roblox.com/asset/?id=6035121942";
+		["checkroom"] = "http://www.roblox.com/asset/?id=6035107931";
+		["hot_tub"] = "http://www.roblox.com/asset/?id=6035145382";
+		["dry"] = "http://www.roblox.com/asset/?id=6035121909";
+		["charging_station"] = "http://www.roblox.com/asset/?id=6035107925";
+		["all_inclusive"] = "http://www.roblox.com/asset/?id=6035107920";
+		["bento"] = "http://www.roblox.com/asset/?id=6035107924";
+		["no_backpack"] = "http://www.roblox.com/asset/?id=6035145368";
+		["storefront"] = "http://www.roblox.com/asset/?id=6035161534";
+		["no_food"] = "http://www.roblox.com/asset/?id=6035145372";
+		["backpack"] = "http://www.roblox.com/asset/?id=6035107928";
+		["stairs"] = "http://www.roblox.com/asset/?id=6035153637";
+		["carpenter"] = "http://www.roblox.com/asset/?id=6035107955";
+		["no_stroller"] = "http://www.roblox.com/asset/?id=6035153661";
+		["roofing"] = "http://www.roblox.com/asset/?id=6035153656";
+		["umbrella"] = "http://www.roblox.com/asset/?id=6035161550";
+		["sports_bar"] = "http://www.roblox.com/asset/?id=6035153638";
+		["apartment"] = "http://www.roblox.com/asset/?id=6035107922";
+		["smoke_free"] = "http://www.roblox.com/asset/?id=6035153647";
+		["pool"] = "http://www.roblox.com/asset/?id=6035153655";
+		["bathtub"] = "http://www.roblox.com/asset/?id=6035107939";
+		["no_drinks"] = "http://www.roblox.com/asset/?id=6035145390";
+		["escalator_warning"] = "http://www.roblox.com/asset/?id=6035121930";
+		["wheelchair_pickup"] = "http://www.roblox.com/asset/?id=6035161536";
+		["smoking_rooms"] = "http://www.roblox.com/asset/?id=6035153636";
+		["rice_bowl"] = "http://www.roblox.com/asset/?id=6035153662";
+		["tty"] = "http://www.roblox.com/asset/?id=6035161541";
+		["no_photography"] = "http://www.roblox.com/asset/?id=6035153664";
+		["casino"] = "http://www.roblox.com/asset/?id=6035107936";
+		["fence"] = "http://www.roblox.com/asset/?id=6035121923";
+		["grass"] = "http://www.roblox.com/asset/?id=6035145359";
+		["countertops"] = "http://www.roblox.com/asset/?id=6035121914";
+		["kitchen"] = "http://www.roblox.com/asset/?id=6035145362";
+		["golf_course"] = "http://www.roblox.com/asset/?id=6035145423";
+		["soap"] = "http://www.roblox.com/asset/?id=6035153645";
+		["water_damage"] = "http://www.roblox.com/asset/?id=6035161563";
+		["airport_shuttle"] = "http://www.roblox.com/asset/?id=6035107921";
+		["fitness_center"] = "http://www.roblox.com/asset/?id=6035121907";
+		["baby_changing_station"] = "http://www.roblox.com/asset/?id=6035107930";
+		["fire_extinguisher"] = "http://www.roblox.com/asset/?id=6035121913";
+		["sparkle"] = "http://www.roblox.com/asset/?id=4483362748"
+	}
+}
+
+-- Other Variables
+local request = (syn and syn.request) or (http and http.request) or http_request or nil
+local tweeninfo = TweenInfo.new(0.3, Enum.EasingStyle.Exponential, Enum.EasingDirection.Out)
+local PresetGradients = {
+	["Nightlight (Classic)"] = {Color3.fromRGB(147, 255, 239), Color3.fromRGB(201,211,233), Color3.fromRGB(255, 167, 227)},
+	["Nightlight (Neo)"] = {Color3.fromRGB(117, 164, 206), Color3.fromRGB(123, 201, 201), Color3.fromRGB(224, 138, 175)},
+	Starlight = {Color3.fromRGB(147, 255, 239), Color3.fromRGB(181, 206, 241), Color3.fromRGB(214, 158, 243)},
+	Solar = {Color3.fromRGB(242, 157, 76), Color3.fromRGB(240, 179, 81), Color3.fromRGB(238, 201, 86)},
+	Sparkle = {Color3.fromRGB(199, 130, 242), Color3.fromRGB(221, 130, 238), Color3.fromRGB(243, 129, 233)},
+	Lime = {Color3.fromRGB(170, 255, 127), Color3.fromRGB(163, 220, 138), Color3.fromRGB(155, 185, 149)},
+	Vine = {Color3.fromRGB(0, 191, 143), Color3.fromRGB(0, 126, 94), Color3.fromRGB(0, 61, 46)},
+	Cherry = {Color3.fromRGB(148, 54, 54), Color3.fromRGB(168, 67, 70), Color3.fromRGB(188, 80, 86)},
+	Daylight = {Color3.fromRGB(51, 156, 255), Color3.fromRGB(89, 171, 237), Color3.fromRGB(127, 186, 218)},
+	Blossom = {Color3.fromRGB(255, 165, 243), Color3.fromRGB(213, 129, 231), Color3.fromRGB(170, 92, 218)},
+}
+
+local function GetIcon(icon, source)
+	if source == "Custom" then
+		return "rbxassetid://" .. icon
+	elseif source == "Lucide" then
+		-- full credit to latte softworks :)
+		local iconData = not isStudio and game:HttpGet("https://raw.githubusercontent.com/latte-soft/lucide-roblox/refs/heads/master/lib/Icons.luau")
+		local icons = isStudio and IconModule.Lucide or loadstring(iconData)()
+		if not isStudio then
+			icon = string.match(string.lower(icon), "^%s*(.*)%s*$") :: string
+			local sizedicons = icons['48px']
+
+			local r = sizedicons[icon]
+			if not r then
+				error("Lucide Icons: Failed to find icon by the name of \"" .. icon .. "\.", 2)
+			end
+
+			local rirs = r[2]
+			local riro = r[3]
+
+			if type(r[1]) ~= "number" or type(rirs) ~= "table" or type(riro) ~= "table" then
+				error("Lucide Icons: Internal error: Invalid auto-generated asset entry")
+			end
+
+			local irs = Vector2.new(rirs[1], rirs[2])
+			local iro = Vector2.new(riro[1], riro[2])
+
+			local asset = {
+				id = r[1],
+				imageRectSize = irs,
+				imageRectOffset = iro,
+			}
+
+			return asset
+		else
+			return "rbxassetid://10723434557"
+		end
+	else	
+		if icon ~= nil and IconModule[source] then
+			local sourceicon = IconModule[source]
+			return sourceicon[icon]
+		else
+			return nil
+		end
+	end
+end
+
+local function RemoveTable(tablre, value)
+	for i,v in pairs(tablre) do
+		if tostring(v) == tostring(value) then
+			table.remove(tablre, i)
+		end
+	end
+end
+
+local function Kwargify(defaults, passed)
+	for i, v in pairs(defaults) do
+		if passed[i] == nil then
+			passed[i] = v
+		end
+	end
+	return passed
+end
+
+local function PackColor(Color)
+	return {R = Color.R * 255, G = Color.G * 255, B = Color.B * 255}
+end    
+
+local function UnpackColor(Color)
+	return Color3.fromRGB(Color.R, Color.G, Color.B)
+end
+
+function tween(object, goal, callback, tweenin)
+	local tween = TweenService:Create(object,tweenin or tweeninfo, goal)
+	tween.Completed:Connect(callback or function() end)
+	tween:Play()
+end
+
+local function BlurModule(Frame)
+	local RunService = game:GetService('RunService')
+	local camera = workspace.CurrentCamera
+	local MTREL = "Glass"
+	local binds = {}
+	local root = Instance.new('Folder', camera)
+	root.Name = 'LunaBlur'
+
+	local gTokenMH = 99999999
+	local gToken = math.random(1, gTokenMH)
+
+	local DepthOfField = Instance.new('DepthOfFieldEffect', game:GetService('Lighting'))
+	DepthOfField.FarIntensity = 0
+	DepthOfField.FocusDistance = 51.6
+	DepthOfField.InFocusRadius = 50
+	DepthOfField.NearIntensity = 6
+	DepthOfField.Name = "DPT_"..gToken
+
+	local frame = Instance.new('Frame')
+	frame.Parent = Frame
+	frame.Size = UDim2.new(0.95, 0, 0.95, 0)
+	frame.Position = UDim2.new(0.5, 0, 0.5, 0)
+	frame.AnchorPoint = Vector2.new(0.5, 0.5)
+	frame.BackgroundTransparency = 1
+
+	local GenUid; do -- Generate unique names for RenderStepped bindings
+		local id = 0
+		function GenUid()
+			id = id + 1
+			return 'neon::'..tostring(id)
+		end
+	end
+
+	do
+		local function IsNotNaN(x)
+			return x == x
+		end
+		local continue = IsNotNaN(camera:ScreenPointToRay(0,0).Origin.x)
+		while not continue do
+			RunService.RenderStepped:wait()
+			continue = IsNotNaN(camera:ScreenPointToRay(0,0).Origin.x)
+		end
+	end
+
+	local DrawQuad; do
+
+		local acos, max, pi, sqrt = math.acos, math.max, math.pi, math.sqrt
+		local sz = 0.22
+		local function DrawTriangle(v1, v2, v3, p0, p1) -- I think Stravant wrote this function
+
+			local s1 = (v1 - v2).magnitude
+			local s2 = (v2 - v3).magnitude
+			local s3 = (v3 - v1).magnitude
+			local smax = max(s1, s2, s3)
+			local A, B, C
+			if s1 == smax then
+				A, B, C = v1, v2, v3
+			elseif s2 == smax then
+				A, B, C = v2, v3, v1
+			elseif s3 == smax then
+				A, B, C = v3, v1, v2
+			end
+
+			local para = ( (B-A).x*(C-A).x + (B-A).y*(C-A).y + (B-A).z*(C-A).z ) / (A-B).magnitude
+			local perp = sqrt((C-A).magnitude^2 - para*para)
+			local dif_para = (A - B).magnitude - para
+
+			local st = CFrame.new(B, A)
+			local za = CFrame.Angles(pi/2,0,0)
+
+			local cf0 = st
+
+			local Top_Look = (cf0 * za).lookVector
+			local Mid_Point = A + CFrame.new(A, B).lookVector * para
+			local Needed_Look = CFrame.new(Mid_Point, C).lookVector
+			local dot = Top_Look.x*Needed_Look.x + Top_Look.y*Needed_Look.y + Top_Look.z*Needed_Look.z
+
+			local ac = CFrame.Angles(0, 0, acos(dot))
+
+			cf0 = cf0 * ac
+			if ((cf0 * za).lookVector - Needed_Look).magnitude > 0.01 then
+				cf0 = cf0 * CFrame.Angles(0, 0, -2*acos(dot))
+			end
+			cf0 = cf0 * CFrame.new(0, perp/2, -(dif_para + para/2))
+
+			local cf1 = st * ac * CFrame.Angles(0, pi, 0)
+			if ((cf1 * za).lookVector - Needed_Look).magnitude > 0.01 then
+				cf1 = cf1 * CFrame.Angles(0, 0, 2*acos(dot))
+			end
+			cf1 = cf1 * CFrame.new(0, perp/2, dif_para/2)
+
+			if not p0 then
+				p0 = Instance.new('Part')
+				p0.FormFactor = 'Custom'
+				p0.TopSurface = 0
+				p0.BottomSurface = 0
+				p0.Anchored = true
+				p0.CanCollide = false
+				p0.CastShadow = false
+				p0.Material = MTREL
+				p0.Size = Vector3.new(sz, sz, sz)
+				local mesh = Instance.new('SpecialMesh', p0)
+				mesh.MeshType = 2
+				mesh.Name = 'WedgeMesh'
+			end
+			p0.WedgeMesh.Scale = Vector3.new(0, perp/sz, para/sz)
+			p0.CFrame = cf0
+
+			if not p1 then
+				p1 = p0:clone()
+			end
+			p1.WedgeMesh.Scale = Vector3.new(0, perp/sz, dif_para/sz)
+			p1.CFrame = cf1
+
+			return p0, p1
+		end
+
+		function DrawQuad(v1, v2, v3, v4, parts)
+			parts[1], parts[2] = DrawTriangle(v1, v2, v3, parts[1], parts[2])
+			parts[3], parts[4] = DrawTriangle(v3, v2, v4, parts[3], parts[4])
+		end
+	end
+
+	if binds[frame] then
+		return binds[frame].parts
+	end
+
+	local uid = GenUid()
+	local parts = {}
+	local f = Instance.new('Folder', root)
+	f.Name = frame.Name
+
+	local parents = {}
+	do
+		local function add(child)
+			if child:IsA'GuiObject' then
+				parents[#parents + 1] = child
+				add(child.Parent)
+			end
+		end
+		add(frame)
+	end
+
+	local function UpdateOrientation(fetchProps)
+		local properties = {
+			Transparency = 0.98;
+			BrickColor = BrickColor.new('Institutional white');
+		}
+		local zIndex = 1 - 0.05*frame.ZIndex
+
+		local tl, br = frame.AbsolutePosition, frame.AbsolutePosition + frame.AbsoluteSize
+		local tr, bl = Vector2.new(br.x, tl.y), Vector2.new(tl.x, br.y)
+		do
+			local rot = 0;
+			for _, v in ipairs(parents) do
+				rot = rot + v.Rotation
+			end
+			if rot ~= 0 and rot%180 ~= 0 then
+				local mid = tl:lerp(br, 0.5)
+				local s, c = math.sin(math.rad(rot)), math.cos(math.rad(rot))
+				local vec = tl
+				tl = Vector2.new(c*(tl.x - mid.x) - s*(tl.y - mid.y), s*(tl.x - mid.x) + c*(tl.y - mid.y)) + mid
+				tr = Vector2.new(c*(tr.x - mid.x) - s*(tr.y - mid.y), s*(tr.x - mid.x) + c*(tr.y - mid.y)) + mid
+				bl = Vector2.new(c*(bl.x - mid.x) - s*(bl.y - mid.y), s*(bl.x - mid.x) + c*(bl.y - mid.y)) + mid
+				br = Vector2.new(c*(br.x - mid.x) - s*(br.y - mid.y), s*(br.x - mid.x) + c*(br.y - mid.y)) + mid
+			end
+		end
+		DrawQuad(
+			camera:ScreenPointToRay(tl.x, tl.y, zIndex).Origin, 
+			camera:ScreenPointToRay(tr.x, tr.y, zIndex).Origin, 
+			camera:ScreenPointToRay(bl.x, bl.y, zIndex).Origin, 
+			camera:ScreenPointToRay(br.x, br.y, zIndex).Origin, 
+			parts
+		)
+		if fetchProps then
+			for _, pt in pairs(parts) do
+				pt.Parent = f
+			end
+			for propName, propValue in pairs(properties) do
+				for _, pt in pairs(parts) do
+					pt[propName] = propValue
+				end
+			end
+		end
+
+	end
+
+	UpdateOrientation(true)
+	RunService:BindToRenderStep(uid, 2000, UpdateOrientation)
+end
+
+local function unpackt(array : table)
+
+	local val = ""
+	local i = 0
+	for _,v in pairs(array) do
+		if i < 3 then
+			val = val .. v .. ", "
+			i += 1
+		else
+			val = "Various"
+			break
+		end
+	end
+
+	return val
+end
+
+-- Interface Management
+local LunaUI
+if isStudio then
+	LunaUI = script.Parent:WaitForChild("Luna UI")
+else
+	local ok, result = pcall(function()
+		return game:GetObjects("rbxassetid://86467455075715")[1]
+	end)
+	if ok and result then
+		LunaUI = result
+	else
+		error("[BladeX] Error al cargar Luna UI. Verifica que tu executor soporte game:GetObjects.")
+	end
+end
+
+local SizeBleh = nil
+
+local function Hide(Window, bind, notif)
+	SizeBleh = Window.Size
+	bind = string.split(tostring(bind), "Enum.KeyCode.")
+	bind = bind[2]
+	if notif then
+		Luna:Notification({Title = "Interface Hidden", Content = "The interface has been hidden, you may reopen the interface by Pressing the UI Bind In Settings ("..tostring(bind)..")", Icon = "visibility_off"})
+	end
+	-- Sonido al cerrar
+	pcall(function()
+		local snd = Instance.new("Sound")
+		snd.SoundId = "http://www.roblox.com/asset/?id=6031097225"
+		snd.Volume = 0.6
+		snd.Parent = game:GetService("SoundService")
+		snd:Play()
+		game:GetService("Debris"):AddItem(snd, 3)
+	end)
+	tween(Window, {BackgroundTransparency = 1})
+	tween(Window.Elements, {BackgroundTransparency = 1})
+	tween(Window.Line, {BackgroundTransparency = 1})
+	tween(Window.Title.Title, {TextTransparency = 1})
+	local _ti = Window.Title:FindFirstChild("TitleImage") or Main:FindFirstChild("TitleImage")
+	if _ti then _ti.Visible = false end
+	tween(Window.Title.subtitle, {TextTransparency = 1})
+	tween(Window.Logo, {ImageTransparency = 1})
+	tween(Window.Navigation.Line, {BackgroundTransparency = 1})
+
+	for _, TopbarButton in ipairs(Window.Controls:GetChildren()) do
+		if TopbarButton.ClassName == "Frame" then
+			tween(TopbarButton, {BackgroundTransparency = 1})
+			tween(TopbarButton.UIStroke, {Transparency = 1})
+			tween(TopbarButton.ImageLabel, {ImageTransparency = 1})
+			TopbarButton.Visible = false
+		end
+	end
+	for _, tabbtn in ipairs(Window.Navigation.Tabs:GetChildren()) do
+		if tabbtn.ClassName == "Frame" and tabbtn.Name ~= "InActive Template" then
+			TweenService:Create(tabbtn, TweenInfo.new(0.3, Enum.EasingStyle.Exponential), {BackgroundTransparency = 1}):Play()
+			TweenService:Create(tabbtn.ImageLabel, TweenInfo.new(0.3, Enum.EasingStyle.Exponential), {ImageTransparency = 1}):Play()
+			TweenService:Create(tabbtn.DropShadowHolder.DropShadow, TweenInfo.new(0.3, Enum.EasingStyle.Exponential), {ImageTransparency = 1}):Play()
+			TweenService:Create(tabbtn.UIStroke, TweenInfo.new(0.3, Enum.EasingStyle.Exponential), {Transparency = 1}):Play()
+		end
+	end
+
+	task.wait(0.28)
+	Window.Size = UDim2.new(0,0,0,0)
+	Window.Parent.ShadowHolder.Visible = false
+	task.wait()
+	Window.Elements.Parent.Visible = false
+	Window.Visible = false
+end
+
+
+if gethui then
+	LunaUI.Parent = gethui()
+elseif syn and syn.protect_gui then 
+	syn.protect_gui(LunaUI)
+	LunaUI.Parent = CoreGui
+elseif not isStudio and CoreGui:FindFirstChild("RobloxGui") then
+	LunaUI.Parent = CoreGui:FindFirstChild("RobloxGui")
+elseif not isStudio then
+	LunaUI.Parent = CoreGui
+end
+
+if gethui then
+	for _, Interface in ipairs(gethui():GetChildren()) do
+		if Interface.Name == LunaUI.Name and Interface ~= LunaUI then
+			Hide(Interface.SmartWindow)
+			Interface.Enabled = false
+			Interface.Name = "Luna-Old"
+		end
+	end
+elseif not isStudio then
+	for _, Interface in ipairs(CoreGui:GetChildren()) do
+		if Interface.Name == LunaUI.Name and Interface ~= LunaUI then
+			Hide(Interface.SmartWindow)
+			Interface.Enabled = false
+			Interface.Name = "Luna-Old"
+		end
+	end
+end
+
+LunaUI.Enabled = false
+LunaUI.SmartWindow.Visible = false
+LunaUI.Notifications.Template.Visible = false
+LunaUI.DisplayOrder = 1000000000
+
+local Main : Frame = LunaUI.SmartWindow
+local Dragger = Main.Drag
+local dragBar = LunaUI.Drag
+local dragInteract = dragBar and dragBar.Interact or nil
+local dragBarCosmetic = dragBar and dragBar.Drag or nil
+local Elements = Main.Elements.Interactions
+local LoadingFrame = Main.LoadingFrame
+local Navigation = Main.Navigation
+local Tabs = Navigation.Tabs
+local Notifications = LunaUI.Notifications
+local KeySystem : Frame = Main.KeySystem
+
+-- local function LoadConfiguration(Configuration, autoload)
+-- 	local Data = HttpService:JSONDecode(Configuration)
+-- 	local changed
+-- 	local notified = false
+
+-- 	-- Iterate through current UI elements' flags
+-- 	for FlagName, Flag in pairs(Luna.Flags) do
+-- 		local FlagValue = Data[FlagName]
+
+-- 		if FlagValue then
+-- 			task.spawn(function()
+-- 				if Flag.Type == "ColorPicker" then
+-- 					changed = true
+-- 					Flag:Set(UnpackColor(FlagValue))
+-- 				else
+-- 					if (Flag.CurrentValue or Flag.CurrentKeybind or Flag.CurrentOption or Flag.Color) ~= FlagValue then 
+-- 						changed = true
+-- 						Flag:Set(FlagValue) 	
+-- 					end
+-- 				end
+-- 			end)
+-- 		else
+-- 			notified = true
+-- 			Luna:Notification({Title = "Config Error", Content = "Luna was unable to load or find '"..FlagName.. "'' in the current script. Check ".. website .." for help.", Icon = "flag"})
+-- 		end
+-- 	end
+-- 	if autoload and notified == false then
+-- 		Luna:Notification({
+-- 			Title = "Config Autoloaded",
+-- 			Content = "The Configuration Has Been Automatically Loaded. Thank You For Using Luna Library",
+-- 			Icon = "file-code-2",
+-- 			ImageSource = "Lucide"
+-- 		})
+-- 	elseif notified == false then
+-- 		Luna:Notification({
+-- 			Title = "Config Loaded",
+-- 			Content = "The Configuration Has Been Loaded. Thank You For Using Luna Library",
+-- 			Icon = "file-code-2",
+-- 			ImageSource = "Lucide"
+-- 		})
+-- 	end
+
+-- 	return changed
+-- end
+
+-- local function SaveConfiguration(Configuration, ConfigFolder, hasRoot)
+-- 	local Data = {}
+-- 	for i,v in pairs(Luna.Flags) do
+-- 		if v.Type == "ColorPicker" then
+-- 			Data[i] = PackColor(v.Color)
+-- 		else
+-- 			Data[i] = v.CurrentValue or v.CurrentBind or v.CurrentOption or v.Color
+-- 		end
+-- 	end	
+-- 	if hasRoot then
+-- 		writefile(ConfigurationFolder .. "/" .. hasRoot .. "/" .. ConfigFolder .. "/" .. Configuration .. ConfigurationExtension, tostring(HttpService:JSONEncode(Data)))
+-- 	else
+-- 		writefile(ConfigurationFolder .. "/" .. "/" .. ConfigFolder .. Configuration .. ConfigurationExtension, tostring(HttpService:JSONEncode(Data)))
+-- 	end
+-- end
+
+-- local function SetAutoload(ConfigName, ConfigFolder, hasRoot)
+-- 	if hasRoot then
+-- 		writefile(ConfigurationFolder .. "/" .. hasRoot .. "/" .. ConfigFolder .. "/" .. "autoload.txt", tostring(ConfigName) .. ConfigurationExtension)
+-- 	else
+-- 		writefile(ConfigurationFolder .. "/" .. "/" .. ConfigFolder .. "autoload.txt", tostring(ConfigName) .. ConfigurationExtension)
+-- 	end
+-- end
+
+-- local function LoadAutoLoad(ConfigFolder, hasRoot)
+-- 	local autoload = isfile(ConfigurationFolder .. "/" .. "/" .. ConfigFolder .. "autoload.txt")
+-- 	if hasRoot then
+-- 		autoload = isfile(ConfigurationFolder .. "/" .. hasRoot .. "/" .. ConfigFolder .. "/" .. "autoload.txt")
+-- 	end
+
+-- 	if autoload then
+-- 		if hasRoot then
+-- 			LoadConfiguration(readfile(ConfigurationFolder .. "/" .. hasRoot .. "/" .. ConfigFolder .. "/" .. readfile(ConfigurationFolder .. "/" .. hasRoot .. "/" .. ConfigFolder .. "/" .. "autoload.txt")), true)
+-- 		else
+-- 			LoadConfiguration(readfile(ConfigurationFolder .. "/" .. ConfigFolder .. "/" .. readfile(ConfigurationFolder .. "/" .. ConfigFolder .. "/" .. "autoload.txt")), true)
+-- 		end
+-- 	end
+-- end
+
+local function Draggable(Bar, Window, enableTaptic, tapticOffset)
+	pcall(function()
+		local Dragging, DragInput, MousePos, FramePos
+
+		local function connectFunctions()
+			if dragBar and enableTaptic then
+				dragBar.MouseEnter:Connect(function()
+					if not Dragging then
+						TweenService:Create(dragBarCosmetic, TweenInfo.new(0.25, Enum.EasingStyle.Back, Enum.EasingDirection.Out), {BackgroundTransparency = 0.5, Size = UDim2.new(0, 120, 0, 4)}):Play()
+					end
+				end)
+
+				dragBar.MouseLeave:Connect(function()
+					if not Dragging then
+						TweenService:Create(dragBarCosmetic, TweenInfo.new(0.25, Enum.EasingStyle.Back, Enum.EasingDirection.Out), {BackgroundTransparency = 0.7, Size = UDim2.new(0, 100, 0, 4)}):Play()
+					end
+				end)
+			end
+		end
+
+		connectFunctions()
+
+		Bar.InputBegan:Connect(function(Input)
+			if Input.UserInputType == Enum.UserInputType.MouseButton1 or Input.UserInputType == Enum.UserInputType.Touch then
+				Dragging = true
+				MousePos = Input.Position
+				FramePos = Window.Position
+
+				if enableTaptic then
+					TweenService:Create(dragBarCosmetic, TweenInfo.new(0.35, Enum.EasingStyle.Back, Enum.EasingDirection.Out), {Size = UDim2.new(0, 110, 0, 4), BackgroundTransparency = 0}):Play()
+				end
+
+				Input.Changed:Connect(function()
+					if Input.UserInputState == Enum.UserInputState.End then
+						Dragging = false
+						connectFunctions()
+
+						if enableTaptic then
+							TweenService:Create(dragBarCosmetic, TweenInfo.new(0.35, Enum.EasingStyle.Back, Enum.EasingDirection.Out), {Size = UDim2.new(0, 100, 0, 4), BackgroundTransparency = 0.7}):Play()
+						end
+					end
+				end)
+			end
+		end)
+
+		Bar.InputChanged:Connect(function(Input)
+			if Input.UserInputType == Enum.UserInputType.MouseMovement or Input.UserInputType == Enum.UserInputType.Touch then
+				DragInput = Input
+			end
+		end)
+
+		UserInputService.InputChanged:Connect(function(Input)
+			if Input == DragInput and Dragging then
+				local Delta = Input.Position - MousePos
+
+				local newMainPosition = UDim2.new(FramePos.X.Scale, FramePos.X.Offset + Delta.X, FramePos.Y.Scale, FramePos.Y.Offset + Delta.Y)
+				TweenService:Create(Window, TweenInfo.new(0.35, Enum.EasingStyle.Exponential, Enum.EasingDirection.Out), {Position = newMainPosition}):Play()
+
+				if dragBar then
+					local newDragBarPosition = UDim2.new(FramePos.X.Scale, FramePos.X.Offset + Delta.X, FramePos.Y.Scale, FramePos.Y.Offset + Delta.Y + 240)
+					dragBar.Position = newDragBarPosition
+				end
+			end
+		end)
+
+	end)
+end
+
+function Luna:Notification(data) -- action e.g open messages
+	task.spawn(function()
+		data = Kwargify({
+			Title = "Missing Title",
+			Content = "Missing or Unknown Content",
+			Icon = "view_in_ar",
+			ImageSource = "Material"
+		}, data or {})
+
+		-- Notification Object Creation
+		local newNotification = Notifications.Template:Clone()
+		newNotification.Name = data.Title
+		newNotification.Parent = Notifications
+		newNotification.LayoutOrder = #Notifications:GetChildren()
+		newNotification.Visible = false
+		BlurModule(newNotification)
+
+		-- Set Data
+		newNotification.Title.Text = data.Title
+		newNotification.Description.Text = data.Content 
+		newNotification.Icon.Image = GetIcon(data.Icon, data.ImageSource)
+
+		-- Set initial transparency values
+		newNotification.BackgroundTransparency = 1
+		newNotification.Title.TextTransparency = 1
+		newNotification.Description.TextTransparency = 1
+		newNotification.UIStroke.Transparency = 1
+		newNotification.Shadow.ImageTransparency = 1
+		newNotification.Icon.ImageTransparency = 1
+		newNotification.Icon.BackgroundTransparency = 1
+
+		task.wait()
+
+		-- Calculate textbounds and set initial values
+		newNotification.Size = UDim2.new(1, 0, 0, -Notifications:FindFirstChild("UIListLayout").Padding.Offset)
+
+		newNotification.Icon.Size = UDim2.new(0, 28, 0, 28)
+		newNotification.Icon.Position = UDim2.new(0, 16, 0.5, -1)
+
+		newNotification.Visible = true
+
+		newNotification.Description.Size = UDim2.new(1, -65, 0, math.huge)
+		local bounds = newNotification.Description.TextBounds.Y + 55
+		newNotification.Description.Size = UDim2.new(1,-65,0, bounds - 35)
+		newNotification.Size = UDim2.new(1, 0, 0, -Notifications:FindFirstChild("UIListLayout").Padding.Offset)
+		TweenService:Create(newNotification, TweenInfo.new(0.6, Enum.EasingStyle.Exponential), {Size = UDim2.new(1, 0, 0, bounds)}):Play()
+
+		task.wait(0.15)
+		TweenService:Create(newNotification, TweenInfo.new(0.4, Enum.EasingStyle.Exponential), {BackgroundTransparency = 0.45}):Play()
+		TweenService:Create(newNotification.Title, TweenInfo.new(0.3, Enum.EasingStyle.Exponential), {TextTransparency = 0}):Play()
+
+		task.wait(0.05)
+
+		TweenService:Create(newNotification.Icon, TweenInfo.new(0.3, Enum.EasingStyle.Exponential), {ImageTransparency = 0}):Play()
+
+		task.wait(0.05)
+		TweenService:Create(newNotification.Description, TweenInfo.new(0.3, Enum.EasingStyle.Exponential), {TextTransparency = 0.35}):Play()
+		TweenService:Create(newNotification.UIStroke, TweenInfo.new(0.4, Enum.EasingStyle.Exponential), {Transparency = 0.95}):Play()
+		TweenService:Create(newNotification.Shadow, TweenInfo.new(0.3, Enum.EasingStyle.Exponential), {ImageTransparency = 0.82}):Play()
+
+		local waitDuration = math.min(math.max((#newNotification.Description.Text * 0.1) + 2.5, 3), 10)
+		task.wait(data.Duration or waitDuration)
+
+		newNotification.Icon.Visible = false
+		TweenService:Create(newNotification, TweenInfo.new(0.4, Enum.EasingStyle.Exponential), {BackgroundTransparency = 1}):Play()
+		TweenService:Create(newNotification.UIStroke, TweenInfo.new(0.4, Enum.EasingStyle.Exponential), {Transparency = 1}):Play()
+		TweenService:Create(newNotification.Shadow, TweenInfo.new(0.3, Enum.EasingStyle.Exponential), {ImageTransparency = 1}):Play()
+		TweenService:Create(newNotification.Title, TweenInfo.new(0.3, Enum.EasingStyle.Exponential), {TextTransparency = 1}):Play()
+		TweenService:Create(newNotification.Description, TweenInfo.new(0.3, Enum.EasingStyle.Exponential), {TextTransparency = 1}):Play()
+
+		TweenService:Create(newNotification, TweenInfo.new(1, Enum.EasingStyle.Exponential), {Size = UDim2.new(1, -90, 0, 0)}):Play()
+
+		task.wait(1)
+
+		TweenService:Create(newNotification, TweenInfo.new(1, Enum.EasingStyle.Exponential), {Size = UDim2.new(1, -90, 0, -Notifications:FindFirstChild("UIListLayout").Padding.Offset)}):Play()
+
+		newNotification.Visible = false
+		newNotification:Destroy()
+	end)
+end
+
+local function Unhide(Window, currentTab)
+	-- Sonido al abrir
+	pcall(function()
+		local snd = Instance.new("Sound")
+		snd.SoundId = "http://www.roblox.com/asset/?id=6031097229"
+		snd.Volume = 0.6
+		snd.Parent = game:GetService("SoundService")
+		snd:Play()
+		game:GetService("Debris"):AddItem(snd, 3)
+	end)
+	Window.Size = SizeBleh
+	Window.Elements.Visible = true
+	Window.Visible = true
+	task.wait()
+	tween(Window, {BackgroundTransparency = 0.2})
+	tween(Window.Elements, {BackgroundTransparency = 0.08})
+	tween(Window.Line, {BackgroundTransparency = 0})
+	tween(Window.Title.Title, {TextTransparency = 0})
+	local _ti2 = Window.Title:FindFirstChild("TitleImage") or Main:FindFirstChild("TitleImage")
+	if _ti2 then _ti2.Visible = true end
+	tween(Window.Title.subtitle, {TextTransparency = 0})
+	tween(Window.Logo, {ImageTransparency = 0})
+	tween(Window.Navigation.Line, {BackgroundTransparency = 0})
+
+	for _, TopbarButton in ipairs(Window.Controls:GetChildren()) do
+		if TopbarButton.ClassName == "Frame" and TopbarButton.Name ~= "Theme" then
+			TopbarButton.Visible = true
+			tween(TopbarButton, {BackgroundTransparency = 0.25})
+			tween(TopbarButton.UIStroke, {Transparency = 0.5})
+			tween(TopbarButton.ImageLabel, {ImageTransparency = 0.25})
+		end
+	end
+	for _, tabbtn in ipairs(Window.Navigation.Tabs:GetChildren()) do
+		if tabbtn.ClassName == "Frame" and tabbtn.Name ~= "InActive Template" then
+			if tabbtn.Name == currentTab then
+				TweenService:Create(tabbtn, TweenInfo.new(0.3, Enum.EasingStyle.Exponential), {BackgroundTransparency = 0}):Play()
+				TweenService:Create(tabbtn.UIStroke, TweenInfo.new(0.3, Enum.EasingStyle.Exponential), {Transparency = 0.41}):Play()
+			end
+			TweenService:Create(tabbtn.ImageLabel, TweenInfo.new(0.3, Enum.EasingStyle.Exponential), {ImageTransparency = 0}):Play()
+			TweenService:Create(tabbtn.DropShadowHolder.DropShadow, TweenInfo.new(0.3, Enum.EasingStyle.Exponential), {ImageTransparency = 1}):Play()
+		end
+	end
+
+end
+
+local MainSize
+local MinSize 
+if Camera.ViewportSize.X > 774 and Camera.ViewportSize.Y > 503 then
+	MainSize = UDim2.fromOffset(675, 424)
+	MinSize = UDim2.fromOffset(500, 42)
+else
+	MainSize = UDim2.fromOffset(Camera.ViewportSize.X - 100, Camera.ViewportSize.Y - 100)
+	MinSize = UDim2.fromOffset(Camera.ViewportSize.X - 275, 42)
+end
+
+local function Maximise(Window)
+	Window.Controls.ToggleSize.ImageLabel.Image = "rbxassetid://10137941941"
+	tween(Window, {Size = MainSize})
+	Window.Elements.Visible = true
+	Window.Navigation.Visible = true
+end
+
+local function Minimize(Window)
+	Window.Controls.ToggleSize.ImageLabel.Image = "rbxassetid://11036884234"
+	Window.Elements.Visible = false
+	Window.Navigation.Visible = false
+	tween(Window, {Size = MinSize})
+	-- Blur se mantiene al minimizar (no se apaga)
+end
+
+
+function Luna:CreateWindow(WindowSettings)
+
+	WindowSettings = Kwargify({
+		Name = "Luna UI Example Window",
+		Subtitle = "",
+		LogoID = "6031097225",
+		LoadingEnabled = true,
+		LoadingTitle = "Luna Interface Suite",
+		LoadingSubtitle = "by Nebula Softworks",
+
+		ConfigSettings = {},
+
+		KeySystem = false,
+		KeySettings = {}
+	}, WindowSettings or {})
+
+	WindowSettings.ConfigSettings = Kwargify({
+		RootFolder = nil,
+		ConfigFolder = "Big Hub"
+	}, WindowSettings.ConfigSettings or {})
+
+	WindowSettings.KeySettings = Kwargify({
+		Title = WindowSettings.Name,
+		Subtitle = "Key System",
+		Note = "No Instructions",
+		SaveInRoot = false, -- Enabling will save the key in your RootFolder (YOU MUST HAVE ONE BEFORE ENABLING THIS OPTION)
+		SaveKey = true, -- The user's key will be saved, but if you change the key, they will be unable to use your script
+		Key = {""}, -- List of keys that will be accepted by the system, please use a system like Pelican or Luarmor that provide key strings based on your HWID since putting a simple string is very easy to bypass
+		SecondAction = {}	
+	}, WindowSettings.KeySettings or {})
+
+	WindowSettings.KeySettings.SecondAction = Kwargify({
+		Enabled = false,
+		Type = "Discord", -- Link/Discord
+		Parameter = "" -- for discord, add the invite link like home tab. for link, type the link of ur key sys
+	}, WindowSettings.KeySettings.SecondAction)
+
+	local Passthrough = false
+
+	local Window = { Bind = Enum.KeyCode.K, CurrentTab = nil, State = true, Size = false, Settings = nil }
+
+	Main.Title.Title.Text = WindowSettings.Name
+	Main.Title.subtitle.Text = WindowSettings.Subtitle
+
+	-- Reemplazar texto "BladeX" con imagen de letras con textura
+	if WindowSettings.Name == "BladeX" then
+		Main.Title.Title.TextTransparency = 1
+		-- Crear TitleImage encima del texto del título
+		-- Se pone en Main directamente para evitar UIListLayout de Main.Title
+		local TitleImg = Instance.new("ImageLabel", Main)
+		TitleImg.Name = "TitleImage"
+		TitleImg.Size = UDim2.new(0, 130, 0, 28)
+		-- Main.Title ocupa la barra superior; posicionamos encima del logo (~50px desde izq, centrado verticalmente en ~25px de alto)
+		TitleImg.Position = UDim2.new(0, 88, 0, 11)
+		TitleImg.AnchorPoint = Vector2.new(0, 0)
+		TitleImg.BackgroundTransparency = 1
+		TitleImg.Image = "rbxassetid://12187371840"
+		TitleImg.ScaleType = Enum.ScaleType.Fit
+		TitleImg.ImageTransparency = 0
+		TitleImg.ZIndex = 20
+		TitleImg.Visible = true
+	end
+	Main.Logo.Image = "rbxassetid://" .. WindowSettings.LogoID
+	Main.Visible = true
+	Main.BackgroundTransparency = 1
+	Main.Size = MainSize
+	Main.Size = UDim2.fromOffset(Main.Size.X.Offset - 70, Main.Size.Y.Offset - 55)
+	Main.Parent.ShadowHolder.Size = Main.Size
+	LoadingFrame.Frame.Frame.Title.TextTransparency = 1
+	LoadingFrame.Frame.Frame.Subtitle.TextTransparency = 1
+	LoadingFrame.Version.TextTransparency = 1
+	LoadingFrame.Frame.ImageLabel.ImageTransparency = 1
+
+	tween(Elements.Parent, {BackgroundTransparency = 1})
+	Elements.Parent.Visible = false
+
+	LoadingFrame.Frame.Frame.Title.Text = WindowSettings.LoadingTitle
+	LoadingFrame.Frame.Frame.Subtitle.Text = WindowSettings.LoadingSubtitle
+	LoadingFrame.Version.Text = ""
+
+	Navigation.Player.icon.ImageLabel.Image = Players:GetUserThumbnailAsync(Players.LocalPlayer.UserId, Enum.ThumbnailType.HeadShot, Enum.ThumbnailSize.Size48x48)
+	Navigation.Player.Namez.Text = Players.LocalPlayer.DisplayName
+	Navigation.Player.TextLabel.Text = Players.LocalPlayer.Name
+
+	for i,v in pairs(Main.Controls:GetChildren()) do
+		v.Visible = false
+	end
+
+	Main.Parent.ShadowHolder.Visible = false
+	Main.Parent.ShadowHolder.Visible = false
+	Main:GetPropertyChangedSignal("Position"):Connect(function()
+		Main.Parent.ShadowHolder.Position = Main.Position
+	end)
+	Main:GetPropertyChangedSignal("Size"):Connect(function()
+		Main.Parent.ShadowHolder.Size = Main.Size
+	end)
+
+	LoadingFrame.Visible = true
+
+	-- pcall(function()
+	-- 	if not isfolder(ConfigurationFolder) then
+	-- 		makefolder(ConfigurationFolder)
+	-- 	end
+	-- 	if WindowSettings.ConfigSettings.RootFolder then
+	-- 		if not isfolder(ConfigurationFolder .. WindowSettings.ConfigSettings.RootFolder) then
+	-- 			makefolder(ConfigurationFolder .. WindowSettings.ConfigSettings.RootFolder)
+	-- 			if not isfolder(ConfigurationFolder .. WindowSettings.ConfigSettings.RootFolder .. WindowSettings.ConfigSettings.ConfigFolder) then
+	-- 				makefolder(ConfigurationFolder .. WindowSettings.ConfigSettings.RootFolder .. WindowSettings.ConfigSettings.ConfigFolder)
+	-- 			end
+	-- 		end
+	-- 	else
+	-- 		if not isfolder(ConfigurationFolder .. WindowSettings.ConfigSettings.ConfigFolder) then
+	-- 			makefolder(ConfigurationFolder .. WindowSettings.ConfigSettings.ConfigFolder)
+	-- 		end
+	-- 	end
+
+	-- 	LoadAutoLoad(WindowSettings.ConfigSettings.ConfigFolder, WindowSettings.ConfigSettings.RootFolder)
+	-- end)
+
+	-- LunaUI solo se activa después de validar la key
+	if not WindowSettings.KeySystem then
+		LunaUI.Enabled = true
+	end
+
+	BlurModule(Main)
+
+	if WindowSettings.KeySystem then
+		local KeySettings = WindowSettings.KeySettings
+
+		-- Luna UI permanece desactivada hasta que la key sea válida
+		Main.Visible = false
+		LoadingFrame.Visible = false
+		LunaUI.Enabled = false
+		pcall(function()
+			LunaUI.SmartWindow.Visible = false
+			local sh = LunaUI:FindFirstChild("ShadowHolder")
+			if sh then
+				sh.Visible = false
+				sh.BackgroundTransparency = 1
+				for _, c in ipairs(sh:GetDescendants()) do
+					if c:IsA("ImageLabel") or c:IsA("Frame") then
+						pcall(function() c.Visible = false end)
+					end
+				end
+			end
+		end)
+
+		Draggable(Dragger, Main)
+		Draggable(LunaUI.MobileSupport, LunaUI.MobileSupport)
+		if dragBar then Draggable(dragInteract, Main, true, 255) end
+
+		if not WindowSettings.KeySettings then
+			Passthrough = true
+			return
+		end
+		
+		WindowSettings.KeySettings.FileName = "key"
+
+		if typeof(WindowSettings.KeySettings.Key) == "string" then WindowSettings.KeySettings.Key = {WindowSettings.KeySettings.Key} end
+
+		local direc = WindowSettings.KeySettings.SaveInRoot and "Luna/Configurations/" .. WindowSettings.ConfigSettings.RootFolder .. "/" .. WindowSettings.ConfigSettings.ConfigFolder .. "/Key System/" or "Luna/Configurations/" ..  WindowSettings.ConfigSettings.ConfigFolder .. "/Key System/"
+
+		if isfile and isfile(direc .. WindowSettings.KeySettings.FileName .. ".luna") then
+			local savedKey = readfile(direc .. WindowSettings.KeySettings.FileName .. ".luna")
+			local savedValid = false
+			-- Solo validar si hay keys remotas cargadas (evitar borrar si fallo de red)
+			if #WindowSettings.KeySettings.Key > 0 then
+				for i, Key in ipairs(WindowSettings.KeySettings.Key) do
+					if savedKey == Key then
+						savedValid = true
+						Passthrough = true
+						break
+					end
+				end
+				-- Key guardada ya no existe en GitHub → borrar y pedir de nuevo
+				if not savedValid then
+					pcall(writefile, direc .. WindowSettings.KeySettings.FileName .. ".luna", "")
+					pcall(delfile, direc .. WindowSettings.KeySettings.FileName .. ".luna")
+				end
+			else
+				-- Sin conexión: dejar pasar con la key guardada
+				Passthrough = true
+			end
+		end
+
+		-- Si la key ya estaba guardada y válida, reactivar la UI directamente
+		if Passthrough then
+			LunaUI.Enabled = true
+			Main.Visible = true
+			Main.BackgroundTransparency = 1
+			LoadingFrame.Visible = true
+			LoadingFrame.BackgroundTransparency = 0
+			pcall(function() Main.Parent.Visible = true end)
+			pcall(function() Main.Parent.ShadowHolder.Visible = true end)
+		end
+
+		if not Passthrough then
+			-- UI custom estilo Ronix Hub
+			local KGui = Instance.new("ScreenGui")
+			KGui.Name = "BladeXKeyUI"
+			KGui.ResetOnSpawn = false
+			KGui.DisplayOrder = 999999999
+			KGui.IgnoreGuiInset = true
+			if gethui then
+				KGui.Parent = gethui()
+			else
+				pcall(function() KGui.Parent = game:GetService("CoreGui") end)
+				if not KGui.Parent or not KGui.Parent:IsA("Instance") then
+					KGui.Parent = Players.LocalPlayer.PlayerGui
+				end
+			end
+
+			-- Sin overlay
+
+			-- Panel compacto estilo Ronix
+			local Panel = Instance.new("Frame", KGui)
+			Panel.Size = UDim2.new(0, 400, 0, 265)
+			Panel.Position = UDim2.new(0.5, 0, 0.5, 0)
+			Panel.AnchorPoint = Vector2.new(0.5, 0.5)
+			Panel.ClipsDescendants = true
+			Panel.BackgroundColor3 = Color3.fromRGB(22, 20, 36)
+			Panel.BackgroundTransparency = 0
+			Panel.BorderSizePixel = 0
+			Panel.ZIndex = 2
+			Instance.new("UICorner", Panel).CornerRadius = UDim.new(0, 14)
+			local PStroke = Instance.new("UIStroke", Panel)
+			PStroke.Color = Color3.fromRGB(60, 55, 100)
+			PStroke.Thickness = 1
+			PStroke.Transparency = 0.4
+
+			-- Header: Logo + Titulo + Cerrar
+			local Header = Instance.new("Frame", Panel)
+			Header.Size = UDim2.new(1, 0, 0, 60)
+			Header.Position = UDim2.new(0, 0, 0, 0)
+			Header.BackgroundTransparency = 1
+			Header.ZIndex = 3
+
+			local Logo = Instance.new("ImageLabel", Header)
+			Logo.Size = UDim2.new(0, 36, 0, 36)
+			Logo.Position = UDim2.new(0, 14, 0.5, -18)
+			Logo.BackgroundTransparency = 1
+			Logo.Image = "rbxassetid://113679886240651"
+			Logo.ZIndex = 3
+			Instance.new("UICorner", Logo).CornerRadius = UDim.new(0, 8)
+
+			local Title = Instance.new("TextLabel", Header)
+			Title.Size = UDim2.new(1, -110, 0, 20)
+			Title.Position = UDim2.new(0, 58, 0, 12)
+			Title.BackgroundTransparency = 1
+			Title.Text = WindowSettings.KeySettings.Title
+			Title.TextColor3 = Color3.fromRGB(255, 255, 255)
+			Title.Font = Enum.Font.GothamBold
+			Title.TextSize = 15
+			Title.TextXAlignment = Enum.TextXAlignment.Left
+			Title.ZIndex = 3
+
+			local Subtitle = Instance.new("TextLabel", Header)
+			Subtitle.Size = UDim2.new(1, -110, 0, 16)
+			Subtitle.Position = UDim2.new(0, 58, 0, 34)
+			Subtitle.BackgroundTransparency = 1
+			Subtitle.Text = WindowSettings.KeySettings.Subtitle
+			Subtitle.TextColor3 = Color3.fromRGB(130, 120, 170)
+			Subtitle.Font = Enum.Font.Gotham
+			Subtitle.TextSize = 11
+			Subtitle.TextXAlignment = Enum.TextXAlignment.Left
+			Subtitle.ZIndex = 3
+
+			-- Botón minimizar (imagen Luna UI)
+			local MinBtnFrame = Instance.new("Frame", Panel)
+			MinBtnFrame.Size = UDim2.new(0, 28, 0, 28)
+			MinBtnFrame.Position = UDim2.new(1, -72, 0, 14)
+			MinBtnFrame.BackgroundColor3 = Color3.fromRGB(40, 36, 60)
+			MinBtnFrame.BorderSizePixel = 0
+			MinBtnFrame.ZIndex = 6
+			Instance.new("UICorner", MinBtnFrame).CornerRadius = UDim.new(0, 7)
+			local MinImg = Instance.new("ImageButton", MinBtnFrame)
+			MinImg.Size = UDim2.new(0, 16, 0, 16)
+			MinImg.Position = UDim2.new(0.5, -8, 0.5, -8)
+			MinImg.BackgroundTransparency = 1
+			MinImg.Image = "http://www.roblox.com/asset/?id=10137941941"
+			MinImg.ImageColor3 = Color3.fromRGB(195, 195, 195)
+			MinImg.ZIndex = 7
+			local minimized = false
+			local panelFullSize = UDim2.new(0, 400, 0, 265)
+			local panelMinSize  = UDim2.new(0, 400, 0, 58)
+			local hideOnMin = {}
+			MinImg.MouseEnter:Connect(function()
+				TweenService:Create(MinImg, TweenInfo.new(0.15), {ImageColor3 = Color3.new(1,1,1)}):Play()
+			end)
+			MinImg.MouseLeave:Connect(function()
+				TweenService:Create(MinImg, TweenInfo.new(0.15), {ImageColor3 = Color3.fromRGB(195,195,195)}):Play()
+			end)
+			MinImg.MouseButton1Click:Connect(function()
+				minimized = not minimized
+				if minimized then
+					MinImg.Image = "http://www.roblox.com/asset/?id=11036884234"
+					TweenService:Create(Panel, TweenInfo.new(0.3, Enum.EasingStyle.Exponential), {Size = panelMinSize}):Play()
+					task.wait(0.15)
+					for _, c in ipairs(hideOnMin) do c.Visible = false end
+				else
+					MinImg.Image = "http://www.roblox.com/asset/?id=10137941941"
+					for _, c in ipairs(hideOnMin) do c.Visible = true end
+					TweenService:Create(Panel, TweenInfo.new(0.3, Enum.EasingStyle.Back, Enum.EasingDirection.Out), {Size = panelFullSize}):Play()
+				end
+			end)
+
+			-- Botón cerrar (imagen Luna UI)
+			local CloseBtnFrame = Instance.new("Frame", Panel)
+			CloseBtnFrame.Size = UDim2.new(0, 28, 0, 28)
+			CloseBtnFrame.Position = UDim2.new(1, -38, 0, 14)
+			CloseBtnFrame.BackgroundColor3 = Color3.fromRGB(40, 36, 60)
+			CloseBtnFrame.BorderSizePixel = 0
+			CloseBtnFrame.ZIndex = 6
+			Instance.new("UICorner", CloseBtnFrame).CornerRadius = UDim.new(0, 7)
+			local CloseImg = Instance.new("ImageButton", CloseBtnFrame)
+			CloseImg.Size = UDim2.new(0, 16, 0, 16)
+			CloseImg.Position = UDim2.new(0.5, -8, 0.5, -8)
+			CloseImg.BackgroundTransparency = 1
+			CloseImg.Image = "http://www.roblox.com/asset/?id=6031094678"
+			CloseImg.ImageColor3 = Color3.fromRGB(195, 195, 195)
+			CloseImg.ZIndex = 7
+			local CloseBtn = CloseImg
+			CloseImg.MouseEnter:Connect(function()
+				TweenService:Create(CloseImg, TweenInfo.new(0.15), {ImageColor3 = Color3.new(1,1,1)}):Play()
+			end)
+			CloseImg.MouseLeave:Connect(function()
+				TweenService:Create(CloseImg, TweenInfo.new(0.15), {ImageColor3 = Color3.fromRGB(195,195,195)}):Play()
+			end)
+
+			-- Separador
+			local Sep = Instance.new("Frame", Panel)
+			Sep.Size = UDim2.new(1, -28, 0, 1)
+			Sep.Position = UDim2.new(0, 14, 0, 62)
+			Sep.BackgroundColor3 = Color3.fromRGB(50, 45, 80)
+			Sep.BorderSizePixel = 0
+			Sep.ZIndex = 3
+
+			-- Input
+			local InputFrame = Instance.new("Frame", Panel)
+			InputFrame.Size = UDim2.new(1, -28, 0, 38)
+			InputFrame.Position = UDim2.new(0, 14, 0, 76)
+			InputFrame.BackgroundColor3 = Color3.fromRGB(15, 13, 26)
+			InputFrame.BorderSizePixel = 0
+			InputFrame.ZIndex = 3
+			Instance.new("UICorner", InputFrame).CornerRadius = UDim.new(0, 8)
+			local IStroke = Instance.new("UIStroke", InputFrame)
+			IStroke.Color = Color3.fromRGB(60, 55, 100)
+			IStroke.Thickness = 1
+			IStroke.Transparency = 0.4
+
+			local KeyIcon = Instance.new("TextLabel", InputFrame)
+			KeyIcon.Size = UDim2.new(0, 28, 1, 0)
+			KeyIcon.Position = UDim2.new(0, 8, 0, 0)
+			KeyIcon.BackgroundTransparency = 1
+			KeyIcon.Text = "🔑"
+			KeyIcon.TextSize = 14
+			KeyIcon.ZIndex = 4
+
+			local InputBox = Instance.new("TextBox", InputFrame)
+			InputBox.Size = UDim2.new(1, -44, 1, 0)
+			InputBox.Position = UDim2.new(0, 38, 0, 0)
+			InputBox.BackgroundTransparency = 1
+			InputBox.PlaceholderText = "Enter Key here..."
+			InputBox.PlaceholderColor3 = Color3.fromRGB(90, 80, 125)
+			InputBox.Text = ""
+			InputBox.TextColor3 = Color3.fromRGB(220, 215, 255)
+			InputBox.Font = Enum.Font.Gotham
+			InputBox.TextSize = 13
+			InputBox.ClearTextOnFocus = false
+			InputBox.TextXAlignment = Enum.TextXAlignment.Left
+			InputBox.ZIndex = 4
+
+			-- Botones Get Key / Verify Key
+			local GetKeyBtn = Instance.new("TextButton", Panel)
+			GetKeyBtn.Size = UDim2.new(0.48, -7, 0, 36)
+			GetKeyBtn.Position = UDim2.new(0, 14, 0, 126)
+			GetKeyBtn.BackgroundColor3 = Color3.fromRGB(28, 25, 45)
+			GetKeyBtn.Text = "🔗  Get Key"
+			GetKeyBtn.TextColor3 = Color3.fromRGB(200, 195, 245)
+			GetKeyBtn.Font = Enum.Font.GothamBold
+			GetKeyBtn.TextSize = 13
+			GetKeyBtn.BorderSizePixel = 0
+			GetKeyBtn.ZIndex = 3
+			Instance.new("UICorner", GetKeyBtn).CornerRadius = UDim.new(0, 8)
+			local GStroke = Instance.new("UIStroke", GetKeyBtn)
+			GStroke.Color = Color3.fromRGB(70, 60, 110)
+			GStroke.Thickness = 1
+			GStroke.Transparency = 0.4
+
+			local VerifyBtn = Instance.new("TextButton", Panel)
+			VerifyBtn.Size = UDim2.new(0.48, -7, 0, 36)
+			VerifyBtn.Position = UDim2.new(0.52, -7, 0, 126)
+			VerifyBtn.BackgroundColor3 = Color3.fromRGB(28, 25, 45)
+			VerifyBtn.Text = "✔  Verify Key"
+			VerifyBtn.TextColor3 = Color3.fromRGB(200, 195, 245)
+			VerifyBtn.Font = Enum.Font.GothamBold
+			VerifyBtn.TextSize = 13
+			VerifyBtn.BorderSizePixel = 0
+			VerifyBtn.ZIndex = 3
+			Instance.new("UICorner", VerifyBtn).CornerRadius = UDim.new(0, 8)
+			local VStroke = Instance.new("UIStroke", VerifyBtn)
+			VStroke.Color = Color3.fromRGB(70, 60, 110)
+			VStroke.Thickness = 1
+			VStroke.Transparency = 0.4
+
+			-- Nota
+			local Note = Instance.new("TextLabel", Panel)
+			Note.Size = UDim2.new(1, -28, 0, 16)
+			Note.Position = UDim2.new(0, 14, 0, 174)
+			Note.BackgroundTransparency = 1
+			Note.Text = WindowSettings.KeySettings.Note
+			Note.TextColor3 = Color3.fromRGB(100, 90, 140)
+			Note.Font = Enum.Font.Gotham
+			Note.TextSize = 11
+			Note.TextXAlignment = Enum.TextXAlignment.Center
+			Note.ZIndex = 3
+
+			-- Botón Discord
+			local DiscordBtn = Instance.new("TextButton", Panel)
+			DiscordBtn.Size = UDim2.new(1, -28, 0, 36)
+			DiscordBtn.Position = UDim2.new(0, 14, 0, 198)
+			DiscordBtn.BackgroundColor3 = Color3.fromRGB(22, 19, 38)
+			DiscordBtn.Text = "👑  Join our Discord"
+			DiscordBtn.TextColor3 = Color3.fromRGB(200, 195, 245)
+			DiscordBtn.Font = Enum.Font.GothamBold
+			DiscordBtn.TextSize = 13
+			DiscordBtn.BorderSizePixel = 0
+			DiscordBtn.ZIndex = 3
+			Instance.new("UICorner", DiscordBtn).CornerRadius = UDim.new(0, 8)
+			local DStroke = Instance.new("UIStroke", DiscordBtn)
+			DStroke.Color = Color3.fromRGB(70, 60, 110)
+			DStroke.Thickness = 1
+			DStroke.Transparency = 0.4
+
+			-- Status label
+			local StatusLabel = Instance.new("TextLabel", Panel)
+			StatusLabel.Size = UDim2.new(1, -28, 0, 16)
+			StatusLabel.Position = UDim2.new(0, 14, 0, 248)
+			StatusLabel.BackgroundTransparency = 1
+			StatusLabel.Text = ""
+			StatusLabel.Font = Enum.Font.GothamBold
+			StatusLabel.TextSize = 11
+			StatusLabel.TextXAlignment = Enum.TextXAlignment.Center
+			StatusLabel.ZIndex = 3
+
+			-- Llenar lista de elementos a ocultar al minimizar
+			table.insert(hideOnMin, Sep)
+			table.insert(hideOnMin, InputFrame)
+			table.insert(hideOnMin, GetKeyBtn)
+			table.insert(hideOnMin, VerifyBtn)
+			table.insert(hideOnMin, Note)
+			table.insert(hideOnMin, DiscordBtn)
+			table.insert(hideOnMin, StatusLabel)
+
+			-- Drag (usando Header directamente, sin dragZone invisible)
+			local dragging = false
+			local dragStart, startPos
+			Header.InputBegan:Connect(function(input)
+				if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
+					dragging = true
+					dragStart = input.Position
+					startPos = Panel.Position
+					input.Changed:Connect(function()
+						if input.UserInputState == Enum.UserInputState.End then
+							dragging = false
+						end
+					end)
+				end
+			end)
+			game:GetService("UserInputService").InputChanged:Connect(function(input)
+				if dragging and (input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch) then
+					local delta = input.Position - dragStart
+					Panel.Position = UDim2.new(
+						startPos.X.Scale,
+						startPos.X.Offset + delta.X,
+						startPos.Y.Scale,
+						startPos.Y.Offset + delta.Y
+					)
+				end
+			end)
+
+			-- Botón cerrar
+			CloseBtn.MouseButton1Click:Connect(function()
+				KGui:Destroy()
+				Luna:Destroy()
+			end)
+
+			-- Get Key
+			GetKeyBtn.MouseButton1Click:Connect(function()
+				local link = KeySettings.SecondAction.Parameter ~= "" and KeySettings.SecondAction.Parameter or "discord.gg/bladex"
+				pcall(setclipboard, link)
+				StatusLabel.TextColor3 = Color3.fromRGB(100, 200, 255)
+				StatusLabel.Text = "✔ Link copiado al portapapeles!"
+			end)
+
+			DiscordBtn.MouseButton1Click:Connect(function()
+				local link = KeySettings.SecondAction.Parameter ~= "" and KeySettings.SecondAction.Parameter or "discord.gg/bladex"
+				pcall(setclipboard, link)
+				StatusLabel.TextColor3 = Color3.fromRGB(100, 200, 255)
+				StatusLabel.Text = "✔ Link copiado al portapapeles!"
+			end)
+
+			-- Verify Key
+			VerifyBtn.MouseButton1Click:Connect(function()
+				local entered = InputBox.Text
+				if entered == "" then return end
+				local KeyFound = false
+				local FoundKey = ""
+				for _, Key in ipairs(WindowSettings.KeySettings.Key) do
+					if entered == Key then
+						KeyFound = true
+						FoundKey = Key
+						break
+					end
+				end
+				if KeyFound then
+					StatusLabel.TextColor3 = Color3.fromRGB(100, 255, 150)
+					StatusLabel.Text = "✔ Key correcta! Cargando..."
+					task.wait(0.4)
+					if WindowSettings.KeySettings.SaveKey and writefile then
+						pcall(function()
+							if not isfolder(direc) then makefolder(direc) end
+							writefile(direc .. WindowSettings.KeySettings.FileName .. ".luna", FoundKey)
+						end)
+					end
+					KGui:Destroy()
+					Passthrough = true
+					LunaUI.Enabled = true
+					Main.Visible = true
+					Main.BackgroundTransparency = 1
+					LoadingFrame.Visible = true
+					LoadingFrame.BackgroundTransparency = 0
+					pcall(function() Main.Parent.Visible = true end)
+					pcall(function() Main.Parent.ShadowHolder.Visible = true end)
+				else
+					StatusLabel.TextColor3 = Color3.fromRGB(255, 80, 80)
+					StatusLabel.Text = "✖ Key incorrecta. Intenta de nuevo."
+					task.wait(2)
+					StatusLabel.Text = ""
+				end
+			end)
+
+			repeat task.wait(0.05) until Passthrough or not KGui.Parent
+
+		end
+	end
+
+	if WindowSettings.KeySystem then
+		repeat task.wait() until Passthrough
+	end
+
+	if WindowSettings.LoadingEnabled then
+		task.wait(0.3)
+		TweenService:Create(LoadingFrame.Frame.Frame.Title, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {TextTransparency = 0}):Play()
+		TweenService:Create(LoadingFrame.Frame.ImageLabel, TweenInfo.new(0.3, Enum.EasingStyle.Exponential), {ImageTransparency = 0}):Play()
+		task.wait(0.05)
+		TweenService:Create(LoadingFrame.Frame.Frame.Subtitle, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {TextTransparency = 0}):Play()
+		TweenService:Create(LoadingFrame.Version, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {TextTransparency = 0}):Play()
+		task.wait(0.29)
+		TweenService:Create(LoadingFrame.Frame.ImageLabel, TweenInfo.new(1.7, Enum.EasingStyle.Back, Enum.EasingDirection.Out, 2, false, 0.2), {Rotation = 450}):Play()
+
+		task.wait(3.32)
+
+		TweenService:Create(LoadingFrame.Frame.Frame.Title, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {TextTransparency = 1}):Play()
+		TweenService:Create(LoadingFrame.Frame.ImageLabel, TweenInfo.new(0.3, Enum.EasingStyle.Exponential), {ImageTransparency = 1}):Play()
+		task.wait(0.05)
+		TweenService:Create(LoadingFrame.Frame.Frame.Subtitle, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {TextTransparency = 1}):Play()
+		TweenService:Create(LoadingFrame.Version, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {TextTransparency = 1}):Play()
+		wait(0.3)
+		TweenService:Create(LoadingFrame, TweenInfo.new(0.5, Enum.EasingStyle.Exponential, Enum.EasingDirection.Out), {BackgroundTransparency = 1}):Play()
+	end
+
+	TweenService:Create(Main, TweenInfo.new(0.5, Enum.EasingStyle.Exponential, Enum.EasingDirection.Out), {BackgroundTransparency = 0.2, Size = MainSize}):Play()
+	TweenService:Create(Main.Parent.ShadowHolder, TweenInfo.new(0.5, Enum.EasingStyle.Exponential, Enum.EasingDirection.Out), {Size = MainSize}):Play()
+	if not Main.Title:FindFirstChild("TitleImage") then
+		TweenService:Create(Main.Title.Title, TweenInfo.new(0.35, Enum.EasingStyle.Exponential, Enum.EasingDirection.Out), {TextTransparency = 0}):Play()
+	end
+	TweenService:Create(Main.Title.subtitle, TweenInfo.new(0.35, Enum.EasingStyle.Exponential, Enum.EasingDirection.Out), {TextTransparency = 0}):Play()
+	TweenService:Create(Main.Logo, TweenInfo.new(0.35, Enum.EasingStyle.Exponential, Enum.EasingDirection.Out), {ImageTransparency = 0}):Play()
+	TweenService:Create(Navigation.Player.icon.ImageLabel, TweenInfo.new(0.35, Enum.EasingStyle.Exponential, Enum.EasingDirection.Out), {ImageTransparency = 0}):Play()
+	TweenService:Create(Navigation.Player.icon.UIStroke, TweenInfo.new(0.35, Enum.EasingStyle.Exponential, Enum.EasingDirection.Out), {Transparency = 0}):Play()
+	TweenService:Create(Main.Line, TweenInfo.new(0.35, Enum.EasingStyle.Exponential, Enum.EasingDirection.Out), {BackgroundTransparency = 0}):Play()
+	wait(0.4)
+	LoadingFrame.Visible = false
+
+	Draggable(Dragger, Main)
+	Draggable(LunaUI.MobileSupport, LunaUI.MobileSupport)
+	if dragBar then Draggable(dragInteract, Main, true, 255) end
+
+	Elements.Template.LayoutOrder = 1000000000
+	Elements.Template.Visible = false
+	Navigation.Tabs["InActive Template"].LayoutOrder = 1000000000
+	Navigation.Tabs["InActive Template"].Visible = false
+
+	local FirstTab = true
+
+	function Window:CreateHomeTab(HomeTabSettings)
+
+		HomeTabSettings = Kwargify({
+			Icon = 1,
+			SupportedExecutors = {"Vega X", "Delta", "Nihon", "Xeno"}, -- THESE DEFAULTS ARE PLACEHOLDERS!! I DO NOT ADVERTISE THESE, THEY ARE JUS THE FIRST THAT CAME TO MIND. I HAVE NO IDEA WHETHER THEYA RE RATS (they prob are) AND IM NOT RESPONSIBLE IF U GET VIRUSES FROM INSTALLING AFTER SEEING THIS LIST
+			DiscordInvite = "noinvitelink" -- The disvord invite link. Do not include the link so for example if my invite was discord.gg/nebula I would put nebula
+		}, HomeTabSettings or {})
+
+		local HomeTab = {}
+
+		local HomeTabButton = Navigation.Tabs.Home
+		HomeTabButton.Visible = true
+		if HomeTabSettings.Icon == 2 then
+			HomeTabButton.ImageLabel.Image = GetIcon("dashboard", "Material")
+		end
+
+		local HomeTabPage = Elements.Home
+		HomeTabPage.Visible = true
+
+		function HomeTab:Activate()
+			tween(HomeTabButton.ImageLabel, {ImageColor3 = Color3.fromRGB(255,255,255)})
+			tween(HomeTabButton, {BackgroundTransparency = 0})
+			tween(HomeTabButton.UIStroke, {Transparency = 0.41})
+
+			Elements.UIPageLayout:JumpTo(HomeTabPage)
+
+			task.wait(0.05)
+
+			for _, OtherTabButton in ipairs(Navigation.Tabs:GetChildren()) do
+				if OtherTabButton.Name ~= "InActive Template" and OtherTabButton.ClassName == "Frame" and OtherTabButton ~= HomeTabButton then
+					tween(OtherTabButton.ImageLabel, {ImageColor3 = Color3.fromRGB(221,221,221)})
+					tween(OtherTabButton, {BackgroundTransparency = 1})
+					tween(OtherTabButton.UIStroke, {Transparency = 1})
+				end
+
+			end
+
+			Window.CurrentTab = "Home"
+		end
+
+		HomeTab:Activate()
+		FirstTab = false
+		HomeTabButton.Interact.MouseButton1Click:Connect(function()
+			HomeTab:Activate()
+		end)
+
+
+		HomeTabPage.icon.ImageLabel.Image = Players:GetUserThumbnailAsync(Players.LocalPlayer.UserId, Enum.ThumbnailType.HeadShot, Enum.ThumbnailSize.Size420x420)
+		HomeTabPage.player.Text.Text = "Hello, " .. Players.LocalPlayer.DisplayName
+		HomeTabPage.player.user.Text = Players.LocalPlayer.Name .. " - ".. WindowSettings.Name
+
+		HomeTabPage.detailsholder.dashboard.Client.Title.Text = (isStudio and "Debugging (Studio)" or identifyexecutor()) or "Your Executor Does Not Support identifyexecutor."
+		for i,v in pairs(HomeTabSettings.SupportedExecutors) do
+			if isStudio then HomeTabPage.detailsholder.dashboard.Client.Subtitle.Text = "Luna Interface Suite - Debugging Mode" break end
+			if v == identifyexecutor() then
+				HomeTabPage.detailsholder.dashboard.Client.Subtitle.Text = "Your Executor Supports This Script."
+				break
+			else
+				HomeTabPage.detailsholder.dashboard.Client.Subtitle.Text = "Your Executor Isn't Officialy Supported By This Script."
+				break
+			end
+		end
+
+		-- Stolen From Sirius Stuff Begins Here
+
+		HomeTabPage.detailsholder.dashboard.Discord.Interact.MouseButton1Click:Connect(function()
+			-- Discord desactivado
+		end)
+
+		local friendsCooldown = 0
+		local function getPing() return math.clamp(game:GetService("Stats").Network.ServerStatsItem["Data Ping"]:GetValue(), 10, 700) end
+
+		local function checkFriends()
+			if friendsCooldown == 0 then
+
+				friendsCooldown = 25
+
+				local playersFriends = {}
+				local friendsInTotal = 0
+				local onlineFriends = 0 
+				local friendsInGame = 0 
+
+				local list = Players:GetFriendsAsync(Player.UserId)
+				while true do -- loop through all the pages
+					for _, data in list:GetCurrentPage() do
+						friendsInTotal +=1
+						table.insert(playersFriends, Data)
+					end
+
+					if list.IsFinished then
+						-- stop the loop since this is the last page
+						break
+					else 
+						-- go to the next page
+						list:AdvanceToNextPageAsync()
+					end
+				end
+				for i, v in pairs(Player:GetFriendsOnline()) do
+					onlineFriends += 1
+				end
+
+				for i,v in pairs(playersFriends) do
+					if Players:FindFirstChild(v.Username) then
+						friendsInGame = friendsInGame + 1
+					end
+				end
+
+				HomeTabPage.detailsholder.dashboard.Friends.All.Value.Text = tostring(friendsInTotal).." friends"
+				HomeTabPage.detailsholder.dashboard.Friends.Offline.Value.Text = tostring(friendsInTotal - onlineFriends).." friends"
+				HomeTabPage.detailsholder.dashboard.Friends.Online.Value.Text = tostring(onlineFriends).." friends"
+				HomeTabPage.detailsholder.dashboard.Friends.InGame.Value.Text = tostring(friendsInGame).." friends"
+
+			else
+				friendsCooldown -= 1
+			end
+		end
+
+		local function format(Int)
+			return string.format("%02i", Int)
+		end
+
+		local function convertToHMS(Seconds)
+			local Minutes = (Seconds - Seconds%60)/60
+			Seconds = Seconds - Minutes*60
+			local Hours = (Minutes - Minutes%60)/60
+			Minutes = Minutes - Hours*60
+			return format(Hours)..":"..format(Minutes)..":"..format(Seconds)
+		end
+
+		coroutine.wrap(function()
+			while task.wait() do
+
+
+				-- Players
+				HomeTabPage.detailsholder.dashboard.Server.Players.Value.Text = #Players:GetPlayers().." playing"
+				HomeTabPage.detailsholder.dashboard.Server.MaxPlayers.Value.Text = Players.MaxPlayers.." players can join this server"
+
+				-- Ping
+				HomeTabPage.detailsholder.dashboard.Server.Latency.Value.Text = isStudio and tostring(math.round((Players.LocalPlayer:GetNetworkPing() * 2 ) / 0.01)) .."ms" or tostring(math.floor(getPing()) .."ms")
+
+				-- Time
+				HomeTabPage.detailsholder.dashboard.Server.Time.Value.Text = convertToHMS(time())
+
+				-- Region
+				HomeTabPage.detailsholder.dashboard.Server.Region.Value.Text = Localization:GetCountryRegionForPlayerAsync(Players.LocalPlayer)
+
+				checkFriends()
+			end
+		end)()
+
+		-- Stolen From Sirius Stuff ends here
+
+	end
+
+	function Window:CreateTab(TabSettings)
+
+		local Tab = {}
+
+		TabSettings = Kwargify({
+			Name = "Tab",
+			ShowTitle = true,
+			Icon = "view_in_ar",
+			ImageSource = "Material" 
+		}, TabSettings or {})
+
+		local TabButton = Navigation.Tabs["InActive Template"]:Clone()
+
+		TabButton.Name = TabSettings.Name
+		TabButton.TextLabel.Text = TabSettings.Name
+		TabButton.Parent = Navigation.Tabs
+		TabButton.ImageLabel.Image = GetIcon(TabSettings.Icon, TabSettings.ImageSource)
+
+		TabButton.Visible = true
+
+		local TabPage = Elements.Template:Clone()
+		TabPage.Name = TabSettings.Name
+		TabPage.Title.Visible = TabSettings.ShowTitle
+		TabPage.Title.Text = TabSettings.Name
+		TabPage.Visible = true
+
+		Tab.Page = TabPage
+
+		if TabSettings.ShowTitle == false then
+			TabPage.UIPadding.PaddingTop = UDim.new(0,10)
+		end
+
+		TabPage.LayoutOrder = #Elements:GetChildren() - 3
+
+		for _, TemplateElement in ipairs(TabPage:GetChildren()) do
+			if TemplateElement.ClassName == "Frame" or TemplateElement.ClassName == "TextLabel" and TemplateElement.Name ~= "Title" then
+				TemplateElement:Destroy()
+			end
+		end
+		TabPage.Parent = Elements
+
+		function Tab:Activate()
+			tween(TabButton.ImageLabel, {ImageColor3 = Color3.fromRGB(255,255,255)})
+			tween(TabButton, {BackgroundTransparency = 0})
+			tween(TabButton.UIStroke, {Transparency = 0.41})
+
+			Elements.UIPageLayout:JumpTo(TabPage)
+
+			task.wait(0.05)
+
+			for _, OtherTabButton in ipairs(Navigation.Tabs:GetChildren()) do
+				if OtherTabButton.Name ~= "InActive Template" and OtherTabButton.ClassName == "Frame" and OtherTabButton ~= TabButton then
+					tween(OtherTabButton.ImageLabel, {ImageColor3 = Color3.fromRGB(221,221,221)})
+					tween(OtherTabButton, {BackgroundTransparency = 1})
+					tween(OtherTabButton.UIStroke, {Transparency = 1})
+				end
+
+			end
+
+			Window.CurrentTab = TabSettings.Name
+		end
+
+		if FirstTab then
+			Tab:Activate()
+		end
+
+		task.wait(0.01)
+
+		TabButton.Interact.MouseButton1Click:Connect(function()
+			Tab:Activate()
+		end)
+
+		FirstTab = false
+
+		-- Section
+		function Tab:CreateSection(name : string)
+
+			local Section = {}
+
+			if name == nil then name = "Section" end
+
+			Section.Name = name
+
+			local Sectiont = Elements.Template.Section:Clone()
+			Sectiont.Text = name
+			Sectiont.Visible = true
+			Sectiont.Parent = TabPage
+			local TabPage = Sectiont.Frame
+
+			Sectiont.TextTransparency = 1
+			tween(Sectiont, {TextTransparency = 0})
+
+			function Section:Set(NewSection)
+				Sectiont.Text = NewSection
+			end
+
+			function Section:Destroy()
+				Sectiont:Destroy()
+			end
+
+			-- Divider
+			function Section:CreateDivider()
+				TabPage.Position = UDim2.new(0,0,0,28)
+				local b = Elements.Template.Divider:Clone()
+				b.Parent = TabPage
+				b.Size = UDim2.new(1,0,0,18)
+				b.Line.BackgroundTransparency = 1
+				tween(b.Line, {BackgroundTransparency = 0})
+			end
+
+			-- Button
+			function Section:CreateButton(ButtonSettings)
+				TabPage.Position = UDim2.new(0,0,0,28)
+
+				ButtonSettings = Kwargify({
+					Name = "Button",
+					Description = nil,
+					Callback = function()
+
+					end,
+				}, ButtonSettings or {})
+
+				local ButtonV = {
+					Hover = false,
+					Settings = ButtonSettings
+				}
+
+
+				local Button
+				if ButtonSettings.Description == nil and ButtonSettings.Description ~= "" then
+					Button = Elements.Template.Button:Clone()
+				else
+					Button = Elements.Template.ButtonDesc:Clone()
+				end
+				Button.Name = ButtonSettings.Name
+				Button.Title.Text = ButtonSettings.Name
+				if ButtonSettings.Description ~= nil and ButtonSettings.Description ~= "" then
+					Button.Desc.Text = ButtonSettings.Description
+				end
+				Button.Visible = true
+				Button.Parent = TabPage
+
+				Button.UIStroke.Transparency = 1
+				Button.Title.TextTransparency = 1
+				if ButtonSettings.Description ~= nil and ButtonSettings.Description ~= "" then
+					Button.Desc.TextTransparency = 1
+				end
+
+				TweenService:Create(Button, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {BackgroundTransparency = 0.5}):Play()
+				TweenService:Create(Button.UIStroke, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {Transparency = 0.5}):Play()
+				TweenService:Create(Button.Title, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {TextTransparency = 0}):Play()	
+				if ButtonSettings.Description ~= nil and ButtonSettings.Description ~= "" then
+					TweenService:Create(Button.Desc, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {TextTransparency = 0}):Play()	
+				end
+
+				Button.Interact["MouseButton1Click"]:Connect(function()
+					local Success,Response = pcall(ButtonSettings.Callback)
+
+					if not Success then
+						TweenService:Create(Button, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {BackgroundTransparency = 0}):Play()
+						TweenService:Create(Button, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {BackgroundColor3 = Color3.fromRGB(85, 0, 0)}):Play()
+						TweenService:Create(Button.UIStroke, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {Transparency = 1}):Play()
+						Button.Title.Text = "Callback Error"
+						print("Luna Interface Suite | "..ButtonSettings.Name.." Callback Error " ..tostring(Response))
+						wait(0.5)
+						Button.Title.Text = ButtonSettings.Name
+						TweenService:Create(Button, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {BackgroundTransparency = 0.5}):Play()
+						TweenService:Create(Button, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {BackgroundColor3 = Color3.fromRGB(32, 30, 38)}):Play()
+						TweenService:Create(Button.UIStroke, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {Transparency = 0.5}):Play()
+					else
+						tween(Button.UIStroke, {Color = Color3.fromRGB(136, 131, 163)})
+						wait(0.2)
+						if ButtonV.Hover then
+							tween(Button.UIStroke, {Color = Color3.fromRGB(87, 84, 104)})
+						else
+							tween(Button.UIStroke, {Color = Color3.fromRGB(64,61,76)})
+						end
+					end
+				end)
+
+				Button["MouseEnter"]:Connect(function()
+					ButtonV.Hover = true
+					tween(Button.UIStroke, {Color = Color3.fromRGB(87, 84, 104)})
+				end)
+
+				Button["MouseLeave"]:Connect(function()
+					ButtonV.Hover = false
+					tween(Button.UIStroke, {Color = Color3.fromRGB(64,61,76)})
+				end)
+
+				function ButtonV:Set(ButtonSettings2)
+					ButtonSettings2 = Kwargify({
+						Name = ButtonSettings.Name,
+						Description = ButtonSettings.Description,
+						Callback = ButtonSettings.Callback
+					}, ButtonSettings2 or {})
+
+					ButtonSettings = ButtonSettings2
+					ButtonV.Settings = ButtonSettings2
+
+					Button.Name = ButtonSettings.Name
+					Button.Title.Text = ButtonSettings.Name
+					if ButtonSettings.Description ~= nil and ButtonSettings.Description ~= "" and Button.Desc ~= nil then
+						Button.Desc.Text = ButtonSettings.Description
+					end
+				end
+
+				function ButtonV:Destroy()
+					Button.Visible = false
+					Button:Destroy()
+				end
+
+				return ButtonV
+			end
+
+			-- Label
+			function Section:CreateLabel(LabelSettings)
+				TabPage.Position = UDim2.new(0,0,0,28)
+
+				local LabelV = {}
+
+				LabelSettings = Kwargify({
+					Text = "Label",
+					Style = 1
+				}, LabelSettings or {}) 
+
+				LabelV.Settings = LabelSettings
+
+				local Label
+				if LabelSettings.Style == 1 then
+					Label = Elements.Template.Label:Clone()
+				elseif LabelSettings.Style == 2 then
+					Label = Elements.Template.Info:Clone()
+				elseif LabelSettings.Style == 3 then
+					Label = Elements.Template.Warn:Clone()
+				end
+
+				Label.Text.Text = LabelSettings.Text
+				Label.Visible = true
+				Label.Parent = TabPage
+
+				Label.BackgroundTransparency = 1
+				Label.UIStroke.Transparency = 1
+				Label.Text.TextTransparency = 1
+
+				if LabelSettings.Style ~= 1 then
+					TweenService:Create(Label, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {BackgroundTransparency = 0.8}):Play()
+				else
+					TweenService:Create(Label, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {BackgroundTransparency = 1}):Play()
+				end
+				TweenService:Create(Label.UIStroke, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {Transparency = 0.5}):Play()
+				TweenService:Create(Label.Text, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {TextTransparency = 0}):Play()	
+
+				function LabelV:Set(NewLabel)
+					LabelSettings.Text = NewLabel
+					LabelV.Settings = LabelSettings
+					Label.Text.Text = NewLabel
+				end
+
+				function LabelV:Destroy()
+					Label.Visible = false
+					Label:Destroy()
+				end
+
+				return LabelV
+			end
+
+			-- Paragraph
+			function Section:CreateParagraph(ParagraphSettings)
+				TabPage.Position = UDim2.new(0,0,0,28)
+
+				ParagraphSettings = Kwargify({
+					Title = "Paragraph",
+					Text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus venenatis lacus sed tempus eleifend. Mauris interdum bibendum felis, in tempor augue egestas vel. Praesent tristique consectetur ex, eu pretium sem placerat non. Vestibulum a nisi sit amet augue facilisis consectetur sit amet et nunc. Integer fermentum ornare cursus. Pellentesque sed ultricies metus, ut egestas metus. Vivamus auctor erat ac sapien vulputate, nec ultricies sem tempor. Quisque leo lorem, faucibus nec pulvinar nec, congue eu velit. Duis sodales massa efficitur imperdiet ultrices. Donec eros ipsum, ornare pharetra purus aliquam, tincidunt elementum nisi. Ut mi tortor, feugiat eget nunc vitae, facilisis interdum dui. Vivamus ullamcorper nunc dui, a dapibus nisi pretium ac. Integer eleifend placerat nibh, maximus malesuada tellus. Cras in justo in ligula scelerisque suscipit vel vitae quam."
+				}, ParagraphSettings or {})
+
+				local ParagraphV = {
+					Settings = ParagraphSettings
+				}
+
+				local Paragraph = Elements.Template.Paragraph:Clone()
+				Paragraph.Title.Text = ParagraphSettings.Title
+				Paragraph.Text.Text = ParagraphSettings.Text
+				Paragraph.Visible = true
+				Paragraph.Parent = TabPage
+
+				Paragraph.BackgroundTransparency = 1
+				Paragraph.UIStroke.Transparency = 1
+				Paragraph.Title.TextTransparency = 1
+				Paragraph.Text.TextTransparency = 1
+
+				TweenService:Create(Paragraph, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {BackgroundTransparency = 1}):Play()
+				TweenService:Create(Paragraph.UIStroke, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {Transparency = 0.5}):Play()
+				TweenService:Create(Paragraph.Title, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {TextTransparency = 0}):Play()	
+				TweenService:Create(Paragraph.Text, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {TextTransparency = 0}):Play()	
+
+				function ParagraphV:Update()
+					Paragraph.Text.Size = UDim2.new(Paragraph.Text.Size.X.Scale, Paragraph.Text.Size.X.Offset, 0, math.huge)
+					Paragraph.Text.Size = UDim2.new(Paragraph.Text.Size.X.Scale, Paragraph.Text.Size.X.Offset, 0, Paragraph.Text.TextBounds.Y)
+					tween(Paragraph, {Size = UDim2.new(Paragraph.Size.X.Scale, Paragraph.Size.X.Offset, 0, Paragraph.Text.TextBounds.Y + 40)})
+				end
+
+				function ParagraphV:Set(NewParagraphSettings)
+
+					NewParagraphSettings = Kwargify({
+						Title = ParagraphSettings.Title,
+						Text = ParagraphSettings.Text
+					}, NewParagraphSettings or {})
+
+					ParagraphV.Settings = NewParagraphSettings
+
+					Paragraph.Title.Text = NewParagraphSettings.Title
+					Paragraph.Text.Text = NewParagraphSettings.Text
+
+					ParagraphV:Update()
+
+				end
+
+				function ParagraphV:Destroy()
+					Paragraph.Visible = false
+					Paragraph:Destroy()
+				end
+
+				ParagraphV:Update()
+
+				return ParagraphV
+			end
+
+			-- Slider
+			function Section:CreateSlider(SliderSettings, Flag)
+				TabPage.Position = UDim2.new(0,0,0,28)
+				local SliderV = { IgnoreConfig = false, Class = "Slider", Settings = SliderSettings }
+
+				SliderSettings = Kwargify({
+					Name = "Slider",
+					Range = {0, 200},
+					Increment = 1,
+					CurrentValue = 100,
+					Callback = function(Value)
+
+					end,
+				}, SliderSettings or {})
+
+				local SLDragging = false
+				local Slider = Elements.Template.Slider:Clone()
+				Slider.Name = SliderSettings.Name .. " - Slider"
+				Slider.Title.Text = SliderSettings.Name
+				Slider.Visible = true
+				Slider.Parent = TabPage
+
+				Slider.BackgroundTransparency = 1
+				Slider.UIStroke.Transparency = 1
+				Slider.Title.TextTransparency = 1
+
+				TweenService:Create(Slider, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {BackgroundTransparency = 0.5}):Play()
+				TweenService:Create(Slider.UIStroke, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {Transparency = 0.5}):Play()
+				TweenService:Create(Slider.Title, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {TextTransparency = 0}):Play()	
+
+				Slider.Main.Progress.Size =	UDim2.new(0, Slider.Main.AbsoluteSize.X * ((SliderSettings.CurrentValue + SliderSettings.Range[1]) / (SliderSettings.Range[2] - SliderSettings.Range[1])) > 5 and Slider.Main.AbsoluteSize.X * (SliderSettings.CurrentValue / (SliderSettings.Range[2] - SliderSettings.Range[1])) or 5, 1, 0)
+
+				Slider.Value.Text = tostring(SliderSettings.CurrentValue)
+				SliderV.CurrentValue = Slider.Value.Text
+
+				SliderSettings.Callback(SliderSettings.CurrentValue)
+
+				Slider["MouseEnter"]:Connect(function()
+					tween(Slider.UIStroke, {Color = Color3.fromRGB(87, 84, 104)})
+				end)
+
+				Slider["MouseLeave"]:Connect(function()
+					tween(Slider.UIStroke, {Color = Color3.fromRGB(64,61,76)})
+				end)
+
+				Slider.Interact.InputBegan:Connect(function(Input)
+					if Input.UserInputType == Enum.UserInputType.MouseButton1 or Input.UserInputType == Enum.UserInputType.Touch then 
+						SLDragging = true 
+					end 
+				end)
+
+				Slider.Interact.InputEnded:Connect(function(Input) 
+					if Input.UserInputType == Enum.UserInputType.MouseButton1 or Input.UserInputType == Enum.UserInputType.Touch then 
+						SLDragging = false 
+					end 
+				end)
+
+				Slider.Interact.MouseButton1Down:Connect(function()
+					local Current = Slider.Main.Progress.AbsolutePosition.X + Slider.Main.Progress.AbsoluteSize.X
+					local Start = Current
+					local Location
+					local Loop; Loop = RunService.Stepped:Connect(function()
+						if SLDragging then
+							Location = UserInputService:GetMouseLocation().X
+							Current = Current + 0.025 * (Location - Start)
+
+							if Location < Slider.Main.AbsolutePosition.X then
+								Location = Slider.Main.AbsolutePosition.X
+							elseif Location > Slider.Main.AbsolutePosition.X + Slider.Main.AbsoluteSize.X then
+								Location = Slider.Main.AbsolutePosition.X + Slider.Main.AbsoluteSize.X
+							end
+
+							if Current < Slider.Main.AbsolutePosition.X + 5 then
+								Current = Slider.Main.AbsolutePosition.X + 5
+							elseif Current > Slider.Main.AbsolutePosition.X + Slider.Main.AbsoluteSize.X then
+								Current = Slider.Main.AbsolutePosition.X + Slider.Main.AbsoluteSize.X
+							end
+
+							if Current <= Location and (Location - Start) < 0 then
+								Start = Location
+							elseif Current >= Location and (Location - Start) > 0 then
+								Start = Location
+							end
+							Slider.Main.Progress.Size = UDim2.new(0, Location - Slider.Main.AbsolutePosition.X, 1, 0)
+							local NewValue = SliderSettings.Range[1] + (Location - Slider.Main.AbsolutePosition.X) / Slider.Main.AbsoluteSize.X * (SliderSettings.Range[2] - SliderSettings.Range[1])
+
+							NewValue = math.floor(NewValue / SliderSettings.Increment + 0.5) * (SliderSettings.Increment * 10000000) / 10000000
+
+							Slider.Value.Text = tostring(NewValue)
+
+							if SliderSettings.CurrentValue ~= NewValue then
+								local Success, Response = pcall(function()
+									SliderSettings.Callback(NewValue)
+								end)
+								if not Success then
+									TweenService:Create(Slider, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {BackgroundTransparency = 0}):Play()
+									TweenService:Create(Slider, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {BackgroundColor3 = Color3.fromRGB(85, 0, 0)}):Play()
+									TweenService:Create(Slider.UIStroke, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {Transparency = 1}):Play()
+									Slider.Title.Text = "Callback Error"
+									print("Luna Interface Suite | "..SliderSettings.Name.." Callback Error " ..tostring(Response))
+									wait(0.5)
+									Slider.Title.Text = SliderSettings.Name
+									TweenService:Create(Slider, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {BackgroundTransparency = 0.5}):Play()
+									TweenService:Create(Slider, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {BackgroundColor3 = Color3.fromRGB(32, 30, 38)}):Play()
+									TweenService:Create(Slider.UIStroke, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {Transparency = 0.5}):Play()
+								end
+
+								SliderSettings.CurrentValue = NewValue
+								SliderV.CurrentValue = SliderSettings.CurrentValue
+								-- Luna.Flags[SliderSettings.Flag] = SliderSettings
+							end
+						else
+							TweenService:Create(Slider.Main.Progress, TweenInfo.new(0.1, Enum.EasingStyle.Back, Enum.EasingDirection.In, 0, false), {Size = UDim2.new(0, Location - Slider.Main.AbsolutePosition.X > 5 and Location - Slider.Main.AbsolutePosition.X or 5, 1, 0)}):Play()
+							Loop:Disconnect()
+						end
+					end)
+				end)
+
+				local function Set(NewVal, bleh)
+
+					NewVal = NewVal or SliderSettings.CurrentValue
+
+					TweenService:Create(Slider.Main.Progress, TweenInfo.new(0.3, Enum.EasingStyle.Back, Enum.EasingDirection.InOut), {Size = UDim2.new(0, Slider.Main.AbsoluteSize.X * ((NewVal + SliderSettings.Range[1]) / (SliderSettings.Range[2] - SliderSettings.Range[1])) > 5 and Slider.Main.AbsoluteSize.X * (NewVal / (SliderSettings.Range[2] - SliderSettings.Range[1])) or 5, 1, 0)}):Play()
+					if not bleh then Slider.Value.Text = tostring(NewVal) end
+					local Success, Response = pcall(function()
+						SliderSettings.Callback(NewVal)
+					end)
+					if not Success then
+						TweenService:Create(Slider, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {BackgroundTransparency = 0}):Play()
+						TweenService:Create(Slider, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {BackgroundColor3 = Color3.fromRGB(85, 0, 0)}):Play()
+						TweenService:Create(Slider.UIStroke, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {Transparency = 1}):Play()
+						Slider.Title.Text = "Callback Error"
+						print("Luna Interface Suite | "..SliderSettings.Name.." Callback Error " ..tostring(Response))
+						wait(0.5)
+						Slider.Title.Text = SliderSettings.Name
+						TweenService:Create(Slider, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {BackgroundTransparency = 0.5}):Play()
+						TweenService:Create(Slider, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {BackgroundColor3 = Color3.fromRGB(30, 33, 40)}):Play()
+						TweenService:Create(Slider.UIStroke, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {Transparency = 0.5}):Play()
+					end
+
+					SliderSettings.CurrentValue = NewVal
+					SliderV.CurrentValue = SliderSettings.CurrentValue
+					-- Luna.Flags[SliderSettings.Flag] = SliderSettings
+
+				end
+
+				function SliderV:UpdateValue(Value)
+					Set(tonumber(Value))
+				end 
+
+				Slider.Value:GetPropertyChangedSignal("Text"):Connect(function()
+					local text = Slider.Value.Text
+					if not tonumber(text) and text ~= "." then
+						Slider.Value.Text = text:match("[0-9.]*") or ""
+					end
+					if SliderSettings.Range[2] < (tonumber(Slider.Value.Text) or 0) then Slider.Value.Text = SliderSettings.Range[2] end
+					Slider.Value.Size = UDim2.fromOffset(Slider.Value.TextBounds.X, 23)
+					Set(tonumber(Slider.Value.Text), true)
+				end)
+
+				function SliderV:Set(NewSliderSettings)
+					NewSliderSettings = Kwargify({
+						Name = SliderSettings.Name,
+						Range = SliderSettings.Range,
+						Increment = SliderSettings.Increment,
+						CurrentValue = SliderSettings.CurrentValue,
+						Callback = SliderSettings.Callback
+					}, NewSliderSettings or {})
+
+					SliderSettings = NewSliderSettings
+					SliderV.Settings = NewSliderSettings
+
+					Slider.Name = SliderSettings.Name .. " - Slider"
+					Slider.Title.Text = SliderSettings.Name
+
+					Set()
+
+					-- Luna.Flags[SliderSettings.Flag] = SliderSettings
+				end
+
+				function SliderV:Destroy()
+					Slider.Visible = false
+					Slider:Destroy()
+				end
+
+				if Flag then
+					Luna.Options[Flag] = SliderV
+				end
+
+				LunaUI.ThemeRemote:GetPropertyChangedSignal("Value"):Connect(function()
+					Slider.Main.color.Color = Luna.ThemeGradient
+					Slider.Main.UIStroke.color.Color = Luna.ThemeGradient
+				end)
+
+				return SliderV
+
+			end
+
+			-- Toggle
+			function Section:CreateToggle(ToggleSettings, Flag)    
+				TabPage.Position = UDim2.new(0,0,0,28)
+				local ToggleV = { IgnoreConfig = false, Class = "Toggle" }
+
+				ToggleSettings = Kwargify({
+					Name = "Toggle",
+					Description = nil,
+					CurrentValue = false,
+					Callback = function(Value)
+					end,
+				}, ToggleSettings or {})
+
+
+				local Toggle
+
+				if ToggleSettings.Description ~= nil and ToggleSettings.Description ~= "" then
+					Toggle = Elements.Template.ToggleDesc:Clone()
+				else
+					Toggle = Elements.Template.Toggle:Clone()
+				end
+
+				Toggle.Visible = true
+				Toggle.Parent = TabPage
+
+				Toggle.Name = ToggleSettings.Name .. " - Toggle"
+				Toggle.Title.Text = ToggleSettings.Name
+				if ToggleSettings.Description ~= nil and ToggleSettings.Description ~= "" then
+					Toggle.Desc.Text = ToggleSettings.Description
+				end
+
+				Toggle.UIStroke.Transparency = 1
+				Toggle.Title.TextTransparency = 1
+				if ToggleSettings.Description ~= nil and ToggleSettings.Description ~= "" then
+					Toggle.Desc.TextTransparency = 1
+				end
+
+				TweenService:Create(Toggle, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {BackgroundTransparency = 0.5}):Play()
+				if ToggleSettings.Description ~= nil and ToggleSettings.Description ~= "" then
+					TweenService:Create(Toggle.Desc, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {TextTransparency = 0}):Play()
+				end
+				TweenService:Create(Toggle.UIStroke, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {Transparency = 0.5}):Play()
+				TweenService:Create(Toggle.Title, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {TextTransparency = 0}):Play()	
+
+				local function Set(bool)
+					if bool then
+						Toggle.toggle.color.Enabled = true
+						tween(Toggle.toggle, {BackgroundTransparency = 0})
+
+						Toggle.toggle.UIStroke.color.Enabled = true
+						tween(Toggle.toggle.UIStroke, {Color = Color3.new(255,255,255)})
+
+						tween(Toggle.toggle.val, {BackgroundColor3 = Color3.fromRGB(255,255,255), Position = UDim2.new(1,-23,0.5,0), BackgroundTransparency = 0.45})
+					else
+						Toggle.toggle.color.Enabled = false
+						Toggle.toggle.UIStroke.color.Enabled = false
+
+						Toggle.toggle.UIStroke.Color = Color3.fromRGB(97,97,97)
+
+						tween(Toggle.toggle, {BackgroundTransparency = 1})
+
+						tween(Toggle.toggle.val, {BackgroundColor3 = Color3.fromRGB(97,97,97), Position = UDim2.new(0,5,0.5,0), BackgroundTransparency = 0})
+					end
+
+					ToggleV.CurrentValue = bool
+				end
+
+				Toggle.Interact.MouseButton1Click:Connect(function()
+					ToggleSettings.CurrentValue = not ToggleSettings.CurrentValue
+					Set(ToggleSettings.CurrentValue)
+
+					local Success, Response = pcall(function()
+						ToggleSettings.Callback(ToggleSettings.CurrentValue)
+					end)
+					if not Success then
+						TweenService:Create(Toggle, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {BackgroundTransparency = 0}):Play()
+						TweenService:Create(Toggle, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {BackgroundColor3 = Color3.fromRGB(85, 0, 0)}):Play()
+						TweenService:Create(Toggle.UIStroke, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {Transparency = 1}):Play()
+						Toggle.Title.Text = "Callback Error"
+						print("Luna Interface Suite | "..ToggleSettings.Name.." Callback Error " ..tostring(Response))
+						wait(0.5)
+						Toggle.Title.Text = ToggleSettings.Name
+						TweenService:Create(Toggle, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {BackgroundTransparency = 0.5}):Play()
+						TweenService:Create(Toggle, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {BackgroundColor3 = Color3.fromRGB(32, 30, 38)}):Play()
+						TweenService:Create(Toggle.UIStroke, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {Transparency = 0.5}):Play()
+					end
+				end)
+
+				Toggle["MouseEnter"]:Connect(function()
+					tween(Toggle.UIStroke, {Color = Color3.fromRGB(87, 84, 104)})
+				end)
+
+				Toggle["MouseLeave"]:Connect(function()
+					tween(Toggle.UIStroke, {Color = Color3.fromRGB(64,61,76)})
+				end)
+
+				if ToggleSettings.CurrentValue then
+					Set(ToggleSettings.CurrentValue)
+					local Success, Response = pcall(function()
+						ToggleSettings.Callback(ToggleSettings.CurrentValue)
+					end)
+					if not Success then
+						TweenService:Create(Toggle, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {BackgroundTransparency = 0}):Play()
+						TweenService:Create(Toggle, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {BackgroundColor3 = Color3.fromRGB(85, 0, 0)}):Play()
+						TweenService:Create(Toggle.UIStroke, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {Transparency = 1}):Play()
+						Toggle.Title.Text = "Callback Error"
+						print("Luna Interface Suite | "..ToggleSettings.Name.." Callback Error " ..tostring(Response))
+						wait(0.5)
+						Toggle.Title.Text = ToggleSettings.Name
+						TweenService:Create(Toggle, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {BackgroundTransparency = 0.5}):Play()
+						TweenService:Create(Toggle, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {BackgroundColor3 = Color3.fromRGB(32, 30, 38)}):Play()
+						TweenService:Create(Toggle.UIStroke, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {Transparency = 0.5}):Play()
+					end
+				end
+
+				function ToggleV:UpdateState(State)
+					ToggleSettings.CurrentValue = State
+					Set(ToggleSettings.CurrentValue)
+				end
+
+				function ToggleV:Set(NewToggleSettings)
+
+					NewToggleSettings = Kwargify({
+						Name = ToggleSettings.Name,
+						Description = ToggleSettings.Description,
+						CurrentValue = ToggleSettings.CurrentValue,
+						Callback = ToggleSettings.Callback
+					}, NewToggleSettings or {})
+
+					ToggleV.Settings = NewToggleSettings
+					ToggleSettings = NewToggleSettings
+
+					Toggle.Name = ToggleSettings.Name .. " - Toggle"
+					Toggle.Title.Text = ToggleSettings.Name
+					if ToggleSettings.Description ~= nil and ToggleSettings.Description ~= "" and Toggle.Desc ~= nil then
+						Toggle.Desc.Text = ToggleSettings.Description
+					end
+
+					Set(ToggleSettings.CurrentValue)
+
+					ToggleV.CurrentValue = ToggleSettings.CurrentValue
+
+					local Success, Response = pcall(function()
+						ToggleSettings.Callback(ToggleSettings.CurrentValue)
+					end)
+					if not Success then
+						TweenService:Create(Toggle, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {BackgroundTransparency = 0}):Play()
+						TweenService:Create(Toggle, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {BackgroundColor3 = Color3.fromRGB(85, 0, 0)}):Play()
+						TweenService:Create(Toggle.UIStroke, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {Transparency = 0}):Play()
+						Toggle.Title.Text = "Callback Error"
+						print("Luna Interface Suite | "..ToggleSettings.Name.." Callback Error " ..tostring(Response))
+						wait(0.5)
+						Toggle.Title.Text = ToggleSettings.Name
+						TweenService:Create(Toggle, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {BackgroundTransparency = 0.5}):Play()
+						TweenService:Create(Toggle, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {BackgroundColor3 = Color3.fromRGB(32, 30, 38)}):Play()
+						TweenService:Create(Toggle.UIStroke, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {Transparency = 0.5}):Play()
+					end
+				end
+
+				function ToggleV:Destroy()
+					Toggle.Visible = false
+					Toggle:Destroy()
+				end
+
+				LunaUI.ThemeRemote:GetPropertyChangedSignal("Value"):Connect(function()
+					Toggle.toggle.color.Color = Luna.ThemeGradient
+					Toggle.toggle.UIStroke.color.Color = Luna.ThemeGradient
+				end)
+
+				if Flag then
+					Luna.Options[Flag] = ToggleV
+				end
+
+				return ToggleV
+
+			end
+
+			-- Bind
+			function Section:CreateBind(BindSettings, Flag)
+				TabPage.Position = UDim2.new(0,0,0,28)
+				local BindV = { Class = "Keybind", IgnoreConfig = false, Settings = BindSettings, Active = false }
+
+				BindSettings = Kwargify({
+					Name = "Bind",
+					Description = nil,
+					CurrentBind = "Q",
+					HoldToInteract = false, -- setting this makes the Bind in toggle mode
+					Callback = function(Bind)
+						-- The function that takes place when the Bind is pressed
+						-- The variable (Bind) is a boolean for whether the Bind is being held or not (HoldToInteract needs to be true) or whether the Bind is currently active
+					end,
+
+					OnChangedCallback = function(Bind)
+						-- The function that takes place when the binded key changes
+						-- The variable (Bind) is a Enum.KeyCode for the new Binded Key
+					end,
+				}, BindSettings or {})
+
+				local CheckingForKey = false
+
+				local Bind
+				if BindSettings.Description ~= nil and BindSettings.Description ~= "" then
+					Bind = Elements.Template.BindDesc:Clone()
+				else
+					Bind = Elements.Template.Bind:Clone()
+				end
+
+				Bind.Visible = true
+				Bind.Parent = TabPage
+
+				Bind.Name = BindSettings.Name
+				Bind.Title.Text = BindSettings.Name
+				if BindSettings.Description ~= nil and BindSettings.Description ~= "" then
+					Bind.Desc.Text = BindSettings.Description
+				end
+
+				Bind.Title.TextTransparency = 1
+				if BindSettings.Description ~= nil and BindSettings.Description ~= "" then
+					Bind.Desc.TextTransparency = 1
+				end
+				Bind.BindFrame.BackgroundTransparency = 1
+				Bind.BindFrame.UIStroke.Transparency = 1
+				Bind.BindFrame.BindBox.TextTransparency = 1
+
+				TweenService:Create(Bind, TweenInfo.new(0.3, Enum.EasingStyle.Exponential), {BackgroundTransparency = 0.5}):Play()
+				TweenService:Create(Bind.Title, TweenInfo.new(0.3, Enum.EasingStyle.Exponential), {TextTransparency = 0}):Play()
+				if BindSettings.Description ~= nil and BindSettings.Description ~= "" then
+					TweenService:Create(Bind.Desc, TweenInfo.new(0.3, Enum.EasingStyle.Exponential), {TextTransparency = 0}):Play()
+				end
+				TweenService:Create(Bind.BindFrame, TweenInfo.new(0.3, Enum.EasingStyle.Exponential), {BackgroundTransparency = 0.9}):Play()
+				TweenService:Create(Bind.BindFrame.UIStroke, TweenInfo.new(0.3, Enum.EasingStyle.Exponential), {Transparency = 0.3}):Play()
+				TweenService:Create(Bind.BindFrame.BindBox, TweenInfo.new(0.3, Enum.EasingStyle.Exponential), {TextTransparency = 0}):Play()
+
+
+				Bind.BindFrame.BindBox.Text = BindSettings.CurrentBind
+				Bind.BindFrame.BindBox.Size = UDim2.new(0, Bind.BindFrame.BindBox.TextBounds.X + 20, 0, 42)
+
+				Bind.BindFrame.BindBox.Focused:Connect(function()
+					CheckingForKey = true
+					Bind.BindFrame.BindBox.Text = ""
+				end)
+
+				Bind.BindFrame.BindBox.FocusLost:Connect(function()
+					CheckingForKey = false
+					if Bind.BindFrame.BindBox.Text == (nil or "") then
+						Bind.BindFrame.BindBox.Text = BindSettings.CurrentBind
+					end
+				end)
+
+				Bind["MouseEnter"]:Connect(function()
+					tween(Bind.UIStroke, {Color = Color3.fromRGB(87, 84, 104)})
+				end)
+
+				Bind["MouseLeave"]:Connect(function()
+					tween(Bind.UIStroke, {Color = Color3.fromRGB(64,61,76)})
+				end)
+				UserInputService.InputBegan:Connect(function(input, processed)
+
+					if CheckingForKey then
+						if input.KeyCode ~= Enum.KeyCode.Unknown and input.KeyCode ~= Window.Bind then
+							local SplitMessage = string.split(tostring(input.KeyCode), ".")
+							local NewKeyNoEnum = SplitMessage[3]
+							Bind.BindFrame.BindBox.Text = tostring(NewKeyNoEnum)
+							BindSettings.CurrentBind = tostring(NewKeyNoEnum)
+							local Success, Response = pcall(function()
+								BindSettings.OnChangedCallback(BindSettings.CurrentBind)
+							end)
+							if not Success then
+								TweenService:Create(Bind, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {BackgroundTransparency = 0}):Play()
+								TweenService:Create(Bind, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {BackgroundColor3 = Color3.fromRGB(85, 0, 0)}):Play()
+								TweenService:Create(Bind.UIStroke, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {Transparency = 1}):Play()
+								Bind.Title.Text = "Callback Error"
+								print("Luna Interface Suite | "..BindSettings.Name.." Callback Error " ..tostring(Response))
+								wait(0.5)
+								Bind.Title.Text = BindSettings.Name
+								TweenService:Create(Bind, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {BackgroundTransparency = 0.5}):Play()
+								TweenService:Create(Bind, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {BackgroundColor3 = Color3.fromRGB(32, 30, 38)}):Play()
+								TweenService:Create(Bind.UIStroke, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {Transparency = 0.5}):Play()
+							end
+							Bind.BindFrame.BindBox:ReleaseFocus()
+						end
+					elseif BindSettings.CurrentBind ~= nil and (input.KeyCode == Enum.KeyCode[BindSettings.CurrentBind] and not processed) then -- Test
+						local Held = true
+						local Connection
+						Connection = input.Changed:Connect(function(prop)
+							if prop == "UserInputState" then
+								Connection:Disconnect()
+								Held = false
+							end
+						end)
+
+						if not BindSettings.HoldToInteract then
+							BindV.Active = not BindV.Active
+							local Success, Response = pcall(function()
+								BindSettings.Callback(BindV.Active)
+							end)
+							if not Success then
+								TweenService:Create(Bind, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {BackgroundTransparency = 0}):Play()
+								TweenService:Create(Bind, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {BackgroundColor3 = Color3.fromRGB(85, 0, 0)}):Play()
+								TweenService:Create(Bind.UIStroke, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {Transparency = 1}):Play()
+								Bind.Title.Text = "Callback Error"
+								print("Luna Interface Suite | "..BindSettings.Name.." Callback Error " ..tostring(Response))
+								wait(0.5)
+								Bind.Title.Text = BindSettings.Name
+								TweenService:Create(Bind, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {BackgroundTransparency = 0.5}):Play()
+								TweenService:Create(Bind, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {BackgroundColor3 = Color3.fromRGB(32, 30, 38)}):Play()
+								TweenService:Create(Bind.UIStroke, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {Transparency = 0.5}):Play()
+							end
+						else
+							wait(0.1)
+							if Held then
+								local Loop; Loop = RunService.Stepped:Connect(function()
+									if not Held then
+										local Success, Response = pcall(function()
+											BindSettings.Callback(false)
+										end)
+										if not Success then
+											TweenService:Create(Bind, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {BackgroundTransparency = 0}):Play()
+											TweenService:Create(Bind, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {BackgroundColor3 = Color3.fromRGB(85, 0, 0)}):Play()
+											TweenService:Create(Bind.UIStroke, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {Transparency = 1}):Play()
+											Bind.Title.Text = "Callback Error"
+											print("Luna Interface Suite | "..BindSettings.Name.." Callback Error " ..tostring(Response))
+											wait(0.5)
+											Bind.Title.Text = BindSettings.Name
+											TweenService:Create(Bind, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {BackgroundTransparency = 0.5}):Play()
+											TweenService:Create(Bind, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {BackgroundColor3 = Color3.fromRGB(32, 30, 38)}):Play()
+											TweenService:Create(Bind.UIStroke, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {Transparency = 0.5}):Play()
+										end 
+										Loop:Disconnect()
+									else
+										local Success, Response = pcall(function()
+											BindSettings.Callback(true)
+										end)
+										if not Success then
+											TweenService:Create(Bind, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {BackgroundTransparency = 0}):Play()
+											TweenService:Create(Bind, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {BackgroundColor3 = Color3.fromRGB(85, 0, 0)}):Play()
+											TweenService:Create(Bind.UIStroke, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {Transparency = 1}):Play()
+											Bind.Title.Text = "Callback Error"
+											print("Luna Interface Suite | "..BindSettings.Name.." Callback Error " ..tostring(Response))
+											wait(0.5)
+											Bind.Title.Text = BindSettings.Name
+											TweenService:Create(Bind, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {BackgroundTransparency = 0.5}):Play()
+											TweenService:Create(Bind, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {BackgroundColor3 = Color3.fromRGB(32, 30, 38)}):Play()
+											TweenService:Create(Bind.UIStroke, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {Transparency = 0.5}):Play()
+										end
+									end
+								end)	
+							end
+						end
+					end
+				end)
+
+				Bind.BindFrame.BindBox:GetPropertyChangedSignal("Text"):Connect(function()
+					TweenService:Create(Bind.BindFrame, TweenInfo.new(0.55, Enum.EasingStyle.Exponential, Enum.EasingDirection.Out), {Size = UDim2.new(0, Bind.BindFrame.BindBox.TextBounds.X + 20, 0, 30)}):Play()
+				end)
+
+				function BindV:Set(NewBindSettings)
+
+					NewBindSettings = Kwargify({
+						Name = BindSettings.Name,
+						Description = BindSettings.Description,
+						CurrentBind =  BindSettings.CurrentBind,
+						HoldToInteract = BindSettings.HoldToInteract,
+						Callback = BindSettings.Callback
+					}, NewBindSettings or {})
+
+					BindV.Settings = NewBindSettings
+					BindSettings = NewBindSettings
+
+					Bind.Name = BindSettings.Name
+					Bind.Title.Text = BindSettings.Name
+					if BindSettings.Description ~= nil and BindSettings.Description ~= "" and Bind.Desc ~= nil then
+						Bind.Desc.Text = BindSettings.Description
+					end
+
+					Bind.BindFrame.BindBox.Text = BindSettings.CurrentBind
+					Bind.BindFrame.Size = UDim2.new(0, Bind.BindFrame.BindBox.TextBounds.X + 20, 0, 42)
+
+
+					BindV.CurrentBind = BindSettings.CurrentBind
+				end
+
+				function BindV:Destroy()
+					Bind.Visible = false
+					Bind:Destroy()
+				end
+
+				if Flag then
+					Luna.Options[Flag] = BindV
+				end
+
+				-- Luna.Flags[BindSettings.Flag] = BindSettings
+
+				return BindV
+
+			end
+
+			-- Dynamic Input
+			function Section:CreateInput(InputSettings, Flag)
+				TabPage.Position = UDim2.new(0,0,0,28)
+				local InputV = { IgnoreConfig = false, Class = "Input", Settings = InputSettings }
+
+				InputSettings = Kwargify({
+					Name = "Dynamic Input",
+					Description = nil,
+					CurrentValue = "",
+					PlaceholderText = "Input Placeholder",
+					RemoveTextAfterFocusLost = false,
+					Numeric = false,
+					Enter = false,
+					MaxCharacters = nil,
+					Callback = function(Text)
+
+					end, -- 52
+				}, InputSettings or {})
+
+				InputV.CurrentValue = InputSettings.CurrentValue
+
+				local descriptionbool
+				if InputSettings.Description ~= nil and InputSettings.Description ~= "" then
+					descriptionbool = true
+				end
+
+				local Input 
+				if descriptionbool then
+					Input = Elements.Template.InputDesc:Clone()
+				else
+					Input = Elements.Template.Input:Clone()
+				end
+
+				Input.Name = InputSettings.Name
+				Input.Title.Text = InputSettings.Name
+				if descriptionbool then Input.Desc.Text = InputSettings.Description end
+				Input.Visible = true
+				Input.Parent = TabPage
+
+				Input.BackgroundTransparency = 1
+				Input.UIStroke.Transparency = 1
+				Input.Title.TextTransparency = 1
+				if descriptionbool then Input.Desc.TextTransparency = 1 end
+				Input.InputFrame.BackgroundTransparency = 1
+				Input.InputFrame.UIStroke.Transparency = 1
+				Input.InputFrame.InputBox.TextTransparency = 1
+
+				TweenService:Create(Input, TweenInfo.new(0.3, Enum.EasingStyle.Exponential), {BackgroundTransparency = 0.5}):Play()
+				TweenService:Create(Input.UIStroke, TweenInfo.new(0.3, Enum.EasingStyle.Exponential), {Transparency = 0.5}):Play()
+				TweenService:Create(Input.Title, TweenInfo.new(0.3, Enum.EasingStyle.Exponential), {TextTransparency = 0}):Play()	
+				if descriptionbool then TweenService:Create(Input.Desc, TweenInfo.new(0.3, Enum.EasingStyle.Exponential), {TextTransparency = 0}):Play() end
+				TweenService:Create(Input.InputFrame, TweenInfo.new(0.3, Enum.EasingStyle.Exponential), {BackgroundTransparency = 0.9}):Play()
+				TweenService:Create(Input.InputFrame.UIStroke, TweenInfo.new(0.3, Enum.EasingStyle.Exponential), {Transparency = 0.3}):Play()
+				TweenService:Create(Input.InputFrame.InputBox, TweenInfo.new(0.3, Enum.EasingStyle.Exponential), {TextTransparency = 0}):Play()
+
+				Input.InputFrame.InputBox.PlaceholderText = InputSettings.PlaceholderText
+				Input.InputFrame.Size = UDim2.new(0, Input.InputFrame.InputBox.TextBounds.X + 52, 0, 30)
+
+				Input.InputFrame.InputBox.FocusLost:Connect(function(bleh)
+
+					if InputSettings.Enter then
+						if bleh then
+							local Success, Response = pcall(function()
+								InputSettings.Callback(Input.InputFrame.InputBox.Text)
+								InputV.CurrentValue = Input.InputFrame.InputBox.Text
+							end)
+							if not Success then
+								TweenService:Create(Input, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {BackgroundTransparency = 0}):Play()
+								TweenService:Create(Input, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {BackgroundColor3 = Color3.fromRGB(85, 0, 0)}):Play()
+								TweenService:Create(Input.UIStroke, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {Transparency = 1}):Play()
+								Input.Title.Text = "Callback Error"
+								print("Luna Interface Suite | "..InputSettings.Name.." Callback Error " ..tostring(Response))
+								wait(0.5)
+								Input.Title.Text = InputSettings.Name
+								TweenService:Create(Input, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {BackgroundTransparency = 0.5}):Play()
+								TweenService:Create(Input, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {BackgroundColor3 = Color3.fromRGB(32, 30, 38)}):Play()
+								TweenService:Create(Input.UIStroke, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {Transparency = 0.5}):Play()
+							end
+						end
+					end
+
+					if InputSettings.RemoveTextAfterFocusLost then
+						Input.InputFrame.InputBox.Text = ""
+					end
+
+				end)
+
+				if InputSettings.Numeric then
+					Input.InputFrame.InputBox:GetPropertyChangedSignal("Text"):Connect(function()
+						local text = Input.InputFrame.InputBox.Text
+						if not tonumber(text) and text ~= "." then
+							Input.InputFrame.InputBox.Text = text:match("[0-9.]*") or ""
+						end
+					end)
+				end
+
+				Input.InputFrame.InputBox:GetPropertyChangedSignal("Text"):Connect(function()
+					if tonumber(InputSettings.MaxCharacters) then
+						if (#Input.InputFrame.InputBox.Text - 1) == InputSettings.MaxCharacters then
+							Input.InputFrame.InputBox.Text = Input.InputFrame.InputBox.Text:sub(1, InputSettings.MaxCharacters)
+						end
+					end
+					TweenService:Create(Input.InputFrame, TweenInfo.new(0.55, Enum.EasingStyle.Exponential, Enum.EasingDirection.Out), {Size = UDim2.new(0, Input.InputFrame.InputBox.TextBounds.X + 52, 0, 30)}):Play()
+					if not InputSettings.Enter then
+						local Success, Response = pcall(function()
+							InputSettings.Callback(Input.InputFrame.InputBox.Text)
+						end)
+						if not Success then
+							TweenService:Create(Input, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {BackgroundTransparency = 0}):Play()
+							TweenService:Create(Input, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {BackgroundColor3 = Color3.fromRGB(85, 0, 0)}):Play()
+							TweenService:Create(Input.UIStroke, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {Transparency = 1}):Play()
+							Input.Title.Text = "Callback Error"
+							print("Luna Interface Suite | "..InputSettings.Name.." Callback Error " ..tostring(Response))
+							wait(0.5)
+							Input.Title.Text = InputSettings.Name
+							TweenService:Create(Input, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {BackgroundTransparency = 0.5}):Play()
+							TweenService:Create(Input, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {BackgroundColor3 = Color3.fromRGB(32, 30, 38)}):Play()
+							TweenService:Create(Input.UIStroke, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {Transparency = 0.5}):Play()
+						end
+					end
+					InputV.CurrentValue = Input.InputFrame.InputBox.Text				
+				end)
+
+				Input["MouseEnter"]:Connect(function()
+					tween(Input.UIStroke, {Color = Color3.fromRGB(87, 84, 104)})
+				end)
+
+				Input["MouseLeave"]:Connect(function()
+					tween(Input.UIStroke, {Color = Color3.fromRGB(64,61,76)})
+				end)
+
+
+				function InputV:Set(NewInputSettings)
+
+					NewInputSettings = Kwargify(InputSettings, NewInputSettings or {})
+
+					InputV.Settings = NewInputSettings
+					InputSettings = NewInputSettings
+
+					Input.Name = InputSettings.Name
+					Input.Title.Text = InputSettings.Name
+					if InputSettings.Description ~= nil and InputSettings.Description ~= "" and Input.Desc ~= nil then
+						Input.Desc.Text = InputSettings.Description
+					end
+
+					Input.InputFrame.InputBox:CaptureFocus()
+					Input.InputFrame.InputBox.Text = tostring(InputSettings.CurrentValue)
+					Input.InputFrame.InputBox:ReleaseFocus()
+					Input.InputFrame.Size = UDim2.new(0, Input.InputFrame.InputBox.TextBounds.X + 52, 0, 42)
+
+					InputV.CurrentValue = InputSettings.CurrentValue
+				end
+
+				function InputV:Destroy()
+					Input.Visible = false
+					Input:Destroy()
+				end
+
+				if Flag then
+					Luna.Options[Flag] = InputV
+				end
+
+
+				return InputV
+
+			end
+
+			-- Dropdown
+			function Section:CreateDropdown(DropdownSettings, Flag)
+				TabPage.Position = UDim2.new(0,0,0,28)
+				local DropdownV = { IgnoreConfig = false, Class = "Dropdown", Settings = DropdownSettings}
+
+				DropdownSettings = Kwargify({
+					Name = "Dropdown",
+					Description = nil,
+					Options = {"Option 1", "Option 2"},
+					CurrentOption = {"Option 1"},
+					MultipleOptions = false,
+					SpecialType = nil, -- currently onl player, might add more soon
+					Callback = function(Options)
+						-- The function that takes place when the selected option is changed
+						-- The variable (Options) is a table of strings for the current selected options or a string if multioptions is false
+					end,
+				}, DropdownSettings or {})
+
+				DropdownV.CurrentOption = DropdownSettings.CurrentOption
+
+				local descriptionbool = false
+				if DropdownSettings.Description ~= nil and DropdownSettings.Description ~= "" then
+					descriptionbool = true
+				end
+				local closedsize
+				local openedsize
+				if descriptionbool then
+					closedsize = 48
+					openedsize = 170
+				elseif not descriptionbool then
+					closedsize = 38
+					openedsize = 160
+				end
+				local opened = false
+
+				local Dropdown
+				if descriptionbool then Dropdown = Elements.Template.DropdownDesc:Clone() else Dropdown = Elements.Template.Dropdown:Clone() end
+
+				Dropdown.Name = DropdownSettings.Name
+				Dropdown.Title.Text = DropdownSettings.Name
+				if descriptionbool then Dropdown.Desc.Text = DropdownSettings.Description end
+
+				Dropdown.Parent = TabPage
+				Dropdown.Visible = true
+
+				local function Toggle()
+					opened = not opened
+					if opened then
+						tween(Dropdown.icon, {Rotation = 180})
+						tween(Dropdown, {Size = UDim2.new(1, -25, 0, openedsize)})
+					else
+						tween(Dropdown.icon, {Rotation = 0})
+						tween(Dropdown, {Size = UDim2.new(1, -25, 0, closedsize)})
+					end
+				end
+
+				local function SafeCallback(param, c2)
+					local Success, Response = pcall(function()
+						DropdownSettings.Callback(param)
+					end)
+					if not Success then
+						TweenService:Create(Dropdown, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {BackgroundTransparency = 0}):Play()
+						TweenService:Create(Dropdown, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {BackgroundColor3 = Color3.fromRGB(85, 0, 0)}):Play()
+						TweenService:Create(Dropdown.UIStroke, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {Transparency = 1}):Play()
+						Dropdown.Title.Text = "Callback Error"
+						print("Luna Interface Suite | "..DropdownSettings.Name.." Callback Error " ..tostring(Response))
+						wait(0.5)
+						Dropdown.Title.Text = DropdownSettings.Name
+						TweenService:Create(Dropdown, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {BackgroundTransparency = 0.5}):Play()
+						TweenService:Create(Dropdown, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {BackgroundColor3 = Color3.fromRGB(32, 30, 38)}):Play()
+						TweenService:Create(Dropdown.UIStroke, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {Transparency = 0.5}):Play()
+					end
+					if Success and c2 then
+						c2()
+					end
+				end
+
+				-- fixed by justhey
+				Dropdown.Selected:GetPropertyChangedSignal("Text"):Connect(function()
+					local text = Dropdown.Selected.Text:lower()
+					for _, Item in ipairs(Dropdown.List:GetChildren()) do
+						if Item:IsA("TextLabel") and Item.Name ~= "Template" then
+							Item.Visible = text == "" or string.find(Item.Name:lower(), text, 1, true) ~= nil
+						end
+					end
+				end)
+
+
+				local function Clear()
+					for _, option in ipairs(Dropdown.List:GetChildren()) do
+						if option.ClassName == "TextLabel" and option.Name ~= "Template" then
+							option:Destroy()
+						end
+					end
+				end
+
+				local function ActivateColorSingle(name)
+					for _, Option in pairs(Dropdown.List:GetChildren()) do
+						if Option.ClassName == "TextLabel" and Option.Name ~= "Template" then
+							tween(Option, {BackgroundTransparency = 0.98})
+						end
+					end
+
+					Toggle()
+					tween(Dropdown.List[name], {BackgroundTransparency = 0.95, TextColor3 = Color3.fromRGB(240,240,240)})
+				end
+
+				local function Refresh()
+					Clear()
+					for i,v in pairs(DropdownSettings.Options) do
+						local Option = Dropdown.List.Template:Clone()
+						local optionhover = false
+						Option.Text = v
+						if v == "Template" then v = "Template (Name)" end
+						Option.Name = v
+						Option.Interact.MouseButton1Click:Connect(function()
+							local bleh
+							if DropdownSettings.MultipleOptions then
+								if table.find(DropdownSettings.CurrentOption, v) then
+									RemoveTable(DropdownSettings.CurrentOption, v)
+									DropdownV.CurrentOption = DropdownSettings.CurrentOption
+									if not optionhover then
+										tween(Option, {TextColor3 = Color3.fromRGB(200,200,200)})
+									end
+									tween(Option, {BackgroundTransparency = 0.98})
+								else
+									table.insert(DropdownSettings.CurrentOption, v)
+									DropdownV.CurrentOption = DropdownSettings.CurrentOption
+									tween(Option, {TextColor3 = Color3.fromRGB(240,240,240), BackgroundTransparency = 0.95})
+								end
+								bleh = DropdownSettings.CurrentOption
+							else
+								DropdownSettings.CurrentOption = {v}
+								bleh = v
+								DropdownV.CurrentOption = bleh
+								ActivateColorSingle(v)
+							end
+
+							SafeCallback(bleh, function()
+								if DropdownSettings.MultipleOptions then
+									if DropdownSettings.CurrentOption and type(DropdownSettings.CurrentOption) == "table" then
+										if #DropdownSettings.CurrentOption == 1 then
+											Dropdown.Selected.PlaceholderText = DropdownSettings.CurrentOption[1]
+										elseif #DropdownSettings.CurrentOption == 0 then
+											Dropdown.Selected.PlaceholderText = "None"
+										else
+											Dropdown.Selected.PlaceholderText = unpackt(DropdownSettings.CurrentOption)
+										end
+									else
+										DropdownSettings.CurrentOption = {}
+										Dropdown.Selected.PlaceholderText = "None"
+									end
+								end
+								if not DropdownSettings.MultipleOptions then
+									Dropdown.Selected.PlaceholderText = DropdownSettings.CurrentOption[1] or "None"
+								end
+								Dropdown.Selected.Text = ""
+							end)
+						end)
+						Option.Visible = true
+						Option.Parent = Dropdown.List
+						Option.MouseEnter:Connect(function()
+							optionhover = true
+							if Option.BackgroundTransparency == 0.95 then
+								return
+							else
+								tween(Option, {TextColor3 = Color3.fromRGB(240,240,240)})
+							end
+						end)
+						Option.MouseLeave:Connect(function()
+							optionhover = false
+							if Option.BackgroundTransparency == 0.95 then
+								return
+							else
+								tween(Option, {TextColor3 = Color3.fromRGB(200,200,200)})
+							end
+						end)	
+					end
+				end
+
+				local function PlayerTableRefresh()
+					for i,v in pairs(DropdownSettings.Options) do
+						table.remove(DropdownSettings.Options, i)
+					end
+
+					for i,v in pairs(Players:GetChildren()) do
+						table.insert(DropdownSettings.Options, v.Name)
+					end
+				end
+
+				Dropdown.Interact.MouseButton1Click:Connect(function()
+					Toggle()
+				end)
+
+				Dropdown["MouseEnter"]:Connect(function()
+					tween(Dropdown.UIStroke, {Color = Color3.fromRGB(87, 84, 104)})
+				end)
+
+				Dropdown["MouseLeave"]:Connect(function()
+					tween(Dropdown.UIStroke, {Color = Color3.fromRGB(64,61,76)})
+				end)
+
+				if DropdownSettings.SpecialType == "Player" then
+
+					for i,v in pairs(DropdownSettings.Options) do
+						table.remove(DropdownSettings.Options, i)
+					end
+					PlayerTableRefresh()
+					DropdownSettings.CurrentOption = DropdownSettings.Options[1]
+
+					Players.PlayerAdded:Connect(function() PlayerTableRefresh() end)
+					Players.PlayerRemoving:Connect(function() PlayerTableRefresh() end)
+
+				end
+
+				Refresh()
+
+				if DropdownSettings.CurrentOption then
+					if type(DropdownSettings.CurrentOption) == "string" then
+						DropdownSettings.CurrentOption = {DropdownSettings.CurrentOption}
+					end
+					if not DropdownSettings.MultipleOptions and type(DropdownSettings.CurrentOption) == "table" then
+						DropdownSettings.CurrentOption = {DropdownSettings.CurrentOption[1]}
+					end
+				else
+					DropdownSettings.CurrentOption = {}
+				end
+
+				local bleh, ind = nil,0
+				for i,v in pairs(DropdownSettings.CurrentOption) do
+					ind = ind + 1
+				end
+				if ind == 1 then bleh = DropdownSettings.CurrentOption[1] else bleh = DropdownSettings.CurrentOption end
+				SafeCallback(bleh)
+				if type(bleh) == "string" then 
+					tween(Dropdown.List[bleh], {TextColor3 = Color3.fromRGB(240,240,240), BackgroundTransparency = 0.95})
+				else
+					for i,v in pairs(bleh) do
+						tween(Dropdown.List[v], {TextColor3 = Color3.fromRGB(240,240,240), BackgroundTransparency = 0.95})
+					end
+				end
+
+				if DropdownSettings.MultipleOptions then
+					if DropdownSettings.CurrentOption and type(DropdownSettings.CurrentOption) == "table" then
+						if #DropdownSettings.CurrentOption == 1 then
+							Dropdown.Selected.PlaceholderText = DropdownSettings.CurrentOption[1]
+						elseif #DropdownSettings.CurrentOption == 0 then
+							Dropdown.Selected.PlaceholderText = "None"
+						else
+							Dropdown.Selected.PlaceholderText = unpackt(DropdownSettings.CurrentOption)
+						end
+					else
+						DropdownSettings.CurrentOption = {}
+						Dropdown.Selected.PlaceholderText = "None"
+					end
+					for _, name in pairs(DropdownSettings.CurrentOption) do
+						tween(Dropdown.List[name], {TextColor3 = Color3.fromRGB(227,227,227), BackgroundTransparency = 0.95})
+					end
+				else
+					Dropdown.Selected.PlaceholderText = DropdownSettings.CurrentOption[1] or "None"
+				end
+				Dropdown.Selected.Text = ""
+
+				function DropdownV:Set(NewDropdownSettings)
+					NewDropdownSettings = Kwargify(DropdownSettings, NewDropdownSettings or {})
+
+					DropdownV.Settings = NewDropdownSettings
+					DropdownSettings = NewDropdownSettings
+
+					Dropdown.Name = DropdownSettings.Name
+					Dropdown.Title.Text = DropdownSettings.Name
+					if DropdownSettings.Description ~= nil and DropdownSettings.Description ~= "" and Dropdown.Desc ~= nil then
+						Dropdown.Desc.Text = DropdownSettings.Description
+					end
+
+					if DropdownSettings.SpecialType == "Player" then
+
+						for i,v in pairs(DropdownSettings.Options) do
+							table.remove(DropdownSettings.Options, i)
+						end
+						PlayerTableRefresh()
+						DropdownSettings.CurrentOption = DropdownSettings.Options[1]                    
+						Players.PlayerAdded:Connect(function() PlayerTableRefresh() end)
+						Players.PlayerRemoving:Connect(function() PlayerTableRefresh() end)
+
+					end
+
+					Refresh()
+
+					if DropdownSettings.CurrentOption then
+						if type(DropdownSettings.CurrentOption) == "string" then
+							DropdownSettings.CurrentOption = {DropdownSettings.CurrentOption}
+						end
+						if not DropdownSettings.MultipleOptions and type(DropdownSettings.CurrentOption) == "table" then
+							DropdownSettings.CurrentOption = {DropdownSettings.CurrentOption[1]}
+						end
+					else
+						DropdownSettings.CurrentOption = {}
+					end
+
+					local bleh, ind = nil,0
+					for i,v in pairs(DropdownSettings.CurrentOption) do
+						ind = ind + 1
+					end
+					if ind == 1 then bleh = DropdownSettings.CurrentOption[1] else bleh = DropdownSettings.CurrentOption end
+					SafeCallback(bleh)
+					for _, Option in pairs(Dropdown.List:GetChildren()) do
+						if Option.ClassName == "TextLabel" then
+							tween(Option, {TextColor3 = Color3.fromRGB(200,200,200), BackgroundTransparency = 0.98})
+						end
+					end
+					tween(Dropdown.List[bleh], {TextColor3 = Color3.fromRGB(240,240,240), BackgroundTransparency = 0.95})
+
+					if DropdownSettings.MultipleOptions then
+						if DropdownSettings.CurrentOption and type(DropdownSettings.CurrentOption) == "table" then
+							if #DropdownSettings.CurrentOption == 1 then
+								Dropdown.Selected.PlaceholderText = DropdownSettings.CurrentOption[1]
+							elseif #DropdownSettings.CurrentOption == 0 then
+								Dropdown.Selected.PlaceholderText = "None"
+							else
+								Dropdown.Selected.PlaceholderText = unpackt(DropdownSettings.CurrentOption)
+							end
+						else
+							DropdownSettings.CurrentOption = {}
+							Dropdown.Selected.PlaceholderText = "None"
+						end
+						for _, name in pairs(DropdownSettings.CurrentOption) do
+							tween(Dropdown.List[name], {TextColor3 = Color3.fromRGB(227,227,227), BackgroundTransparency = 0.95})
+						end
+					else
+						Dropdown.Selected.PlaceholderText = DropdownSettings.CurrentOption[1] or "None"
+					end
+					Dropdown.Selected.Text = ""
+
+					-- Luna.Flags[DropdownSettings.Flag] = DropdownSettings
+
+				end
+
+				function DropdownV:Destroy()
+					Dropdown.Visible = false
+					Dropdown:Destroy()
+				end
+
+				if Flag then
+					Luna.Options[Flag] = DropdownV
+				end
+
+				-- Luna.Flags[DropdownSettings.Flag] = DropdownSettings
+
+				return DropdownV
+
+			end
+
+			-- Color Picker
+			function Section:CreateColorPicker(ColorPickerSettings, Flag) -- by Rayfield/Throit
+				TabPage.Position = UDim2.new(0,0,0,28)
+				local ColorPickerV = {IgnoreClass = false, Class = "Colorpicker", Settings = ColorPickerSettings}
+
+				ColorPickerSettings = Kwargify({
+					Name = "Color Picker",
+					Color = Color3.fromRGB(255,255,255),
+					Callback = function(Value)
+						-- The function that takes place every time the color picker is moved/changed
+						-- The variable (Value) is a Color3fromRGB value based on which color is selected
+					end
+				}, ColorPickerSettings or {})
+
+				local function Color3ToHex(color)
+					return string.format("#%02X%02X%02X", math.floor(color.R * 255), math.floor(color.G * 255), math.floor(color.B * 255))
+				end
+
+				ColorPickerV.Color = Color3ToHex(ColorPickerSettings.Color)
+
+				local closedsize = UDim2.new(0, 75, 0, 22)
+				local openedsize = UDim2.new(0, 219, 0, 129)
+
+				local ColorPicker = Elements.Template.ColorPicker:Clone()
+				local Background = ColorPicker.CPBackground
+				local Display = Background.Display
+				local Main = Background.MainCP
+				local Slider = ColorPicker.ColorSlider
+
+				ColorPicker.Name = ColorPickerSettings.Name
+				ColorPicker.Title.Text = ColorPickerSettings.Name
+				ColorPicker.Visible = true
+				ColorPicker.Parent = TabPage
+				ColorPicker.Size = UDim2.new(1.042, -25,0, 38)
+				Background.Size = closedsize
+				Display.BackgroundTransparency = 0
+
+				ColorPicker["MouseEnter"]:Connect(function()
+					tween(ColorPicker.UIStroke, {Color = Color3.fromRGB(87, 84, 104)})
+				end)
+				ColorPicker["MouseLeave"]:Connect(function()
+					tween(ColorPicker.UIStroke, {Color = Color3.fromRGB(64,61,76)})
+				end)
+
+				local function SafeCallback(param, c2)
+					local Success, Response = pcall(function()
+						ColorPickerSettings.Callback(param)
+					end)
+					if not Success then
+						TweenService:Create(ColorPicker, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {BackgroundTransparency = 0}):Play()
+						TweenService:Create(ColorPicker, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {BackgroundColor3 = Color3.fromRGB(85, 0, 0)}):Play()
+						TweenService:Create(ColorPicker.UIStroke, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {Transparency = 1}):Play()
+						ColorPicker.Title.Text = "Callback Error"
+						print("Luna Interface Suite | "..ColorPickerSettings.Name.." Callback Error " ..tostring(Response))
+						wait(0.5)
+						ColorPicker.Title.Text = ColorPickerSettings.Name
+						TweenService:Create(ColorPicker, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {BackgroundTransparency = 0.5}):Play()
+						TweenService:Create(ColorPicker, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {BackgroundColor3 = Color3.fromRGB(32, 30, 38)}):Play()
+						TweenService:Create(ColorPicker.UIStroke, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {Transparency = 0.5}):Play()
+					end
+					if Success and c2 then
+						c2()
+					end
+				end
+
+				local opened = false
+
+				local mouse = game.Players.LocalPlayer:GetMouse()
+				Main.Image = "http://www.roblox.com/asset/?id=11415645739"
+				local mainDragging = false 
+				local sliderDragging = false 
+				ColorPicker.Interact.MouseButton1Down:Connect(function()
+					if not opened then
+						opened = true 
+						tween(ColorPicker, {Size = UDim2.new( 1.042, -25,0, 165)}, nil, TweenInfo.new(0.6, Enum.EasingStyle.Exponential))
+						tween(Background, {Size = openedsize})
+						tween(Display, {BackgroundTransparency = 1})
+					else
+						opened = false
+						tween(ColorPicker, {Size = UDim2.new(1.042, -25,0, 38)}, nil, TweenInfo.new(0.6, Enum.EasingStyle.Exponential))
+						tween(Background, {Size = closedsize})
+						tween(Display, {BackgroundTransparency = 0})
+					end
+				end)
+				UserInputService.InputEnded:Connect(function(input, gameProcessed) if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then 
+						mainDragging = false
+						sliderDragging = false
+					end end)
+				Main.MouseButton1Down:Connect(function()
+					if opened then
+						mainDragging = true 
+					end
+				end)
+				Main.MainPoint.MouseButton1Down:Connect(function()
+					if opened then
+						mainDragging = true 
+					end
+				end)
+				Slider.MouseButton1Down:Connect(function()
+					sliderDragging = true 
+				end)
+				Slider.SliderPoint.MouseButton1Down:Connect(function()
+					sliderDragging = true 
+				end)
+				local h,s,v = ColorPickerSettings.Color:ToHSV()
+				local color = Color3.fromHSV(h,s,v) 
+				local r,g,b = math.floor((h*255)+0.5),math.floor((s*255)+0.5),math.floor((v*255)+0.5)
+				local hex = string.format("#%02X%02X%02X",color.R*0xFF,color.G*0xFF,color.B*0xFF)
+				ColorPicker.HexInput.InputBox.Text = hex
+				local function setDisplay(hp,sp,vp)
+					--Main
+					Main.MainPoint.Position = UDim2.new(s,-Main.MainPoint.AbsoluteSize.X/2,1-v,-Main.MainPoint.AbsoluteSize.Y/2)
+					Main.MainPoint.ImageColor3 = Color3.fromHSV(hp,sp,vp)
+					Background.BackgroundColor3 = Color3.fromHSV(hp,1,1)
+					Display.BackgroundColor3 = Color3.fromHSV(hp,sp,vp)
+					--Slider 
+					local x = hp * Slider.AbsoluteSize.X
+					Slider.SliderPoint.Position = UDim2.new(0,x-Slider.SliderPoint.AbsoluteSize.X/2,0.5,0)
+					Slider.SliderPoint.ImageColor3 = Color3.fromHSV(hp,1,1)
+					local color = Color3.fromHSV(hp,sp,vp) 
+					local r,g,b = math.floor((color.R*255)+0.5),math.floor((color.G*255)+0.5),math.floor((color.B*255)+0.5)
+					ColorPicker.RInput.InputBox.Text = tostring(r)
+					ColorPicker.GInput.InputBox.Text = tostring(g)
+					ColorPicker.BInput.InputBox.Text = tostring(b)
+					hex = string.format("#%02X%02X%02X",color.R*0xFF,color.G*0xFF,color.B*0xFF)
+					ColorPicker.HexInput.InputBox.Text = hex
+				end
+				setDisplay(h,s,v)
+				ColorPicker.HexInput.InputBox.FocusLost:Connect(function()
+					if not pcall(function()
+							local r, g, b = string.match(ColorPicker.HexInput.InputBox.Text, "^#?(%w%w)(%w%w)(%w%w)$")
+							local rgbColor = Color3.fromRGB(tonumber(r, 16),tonumber(g, 16), tonumber(b, 16))
+							h,s,v = rgbColor:ToHSV()
+							hex = ColorPicker.HexInput.InputBox.Text
+							setDisplay()
+							ColorPickerSettings.Color = rgbColor
+						end) 
+					then 
+						ColorPicker.HexInput.InputBox.Text = hex 
+					end
+					local r,g,b = math.floor((h*255)+0.5),math.floor((s*255)+0.5),math.floor((v*255)+0.5)
+					ColorPickerSettings.Color = Color3.fromRGB(r,g,b)
+					SafeCallback( Color3.fromRGB(r,g,b))
+				end)
+				--RGB
+				local function rgbBoxes(box,toChange)
+					local value = tonumber(box.Text) 
+					local color = Color3.fromHSV(h,s,v) 
+					local oldR,oldG,oldB = math.floor((color.R*255)+0.5),math.floor((color.G*255)+0.5),math.floor((color.B*255)+0.5)
+					local save 
+					if toChange == "R" then save = oldR;oldR = value elseif toChange == "G" then save = oldG;oldG = value else save = oldB;oldB = value end
+					if value then 
+						value = math.clamp(value,0,255)
+						h,s,v = Color3.fromRGB(oldR,oldG,oldB):ToHSV()
+						setDisplay()
+					else 
+						box.Text = tostring(save)
+					end
+					local r,g,b = math.floor((color.R*255)+0.5),math.floor((color.G*255)+0.5),math.floor((color.B*255)+0.5)
+					ColorPickerSettings.Color = Color3.fromRGB(r,g,b)
+				end
+				ColorPicker.RInput.InputBox.FocusLost:connect(function()
+					rgbBoxes(ColorPicker.RInput.InputBox,"R")
+					SafeCallback(Color3.fromRGB(r,g,b))
+				end)
+				ColorPicker.GInput.InputBox.FocusLost:connect(function()
+					rgbBoxes(ColorPicker.GInput.InputBox,"G")
+					SafeCallback(Color3.fromRGB(r,g,b))
+				end)
+				ColorPicker.BInput.InputBox.FocusLost:connect(function()
+					rgbBoxes(ColorPicker.BInput.InputBox,"B")
+					SafeCallback(Color3.fromRGB(r,g,b))
+				end)
+				RunService.RenderStepped:connect(function()
+					if mainDragging then 
+						local localX = math.clamp(mouse.X-Main.AbsolutePosition.X,0,Main.AbsoluteSize.X)
+						local localY = math.clamp(mouse.Y-Main.AbsolutePosition.Y,0,Main.AbsoluteSize.Y)
+						Main.MainPoint.Position = UDim2.new(0,localX-Main.MainPoint.AbsoluteSize.X/2,0,localY-Main.MainPoint.AbsoluteSize.Y/2)
+						s = localX / Main.AbsoluteSize.X
+						v = 1 - (localY / Main.AbsoluteSize.Y)
+						Display.BackgroundColor3 = Color3.fromHSV(h,s,v)
+						Main.MainPoint.ImageColor3 = Color3.fromHSV(h,s,v)
+						Background.BackgroundColor3 = Color3.fromHSV(h,1,1)
+						local color = Color3.fromHSV(h,s,v) 
+						local r,g,b = math.floor((color.R*255)+0.5),math.floor((color.G*255)+0.5),math.floor((color.B*255)+0.5)
+						ColorPicker.RInput.InputBox.Text = tostring(r)
+						ColorPicker.GInput.InputBox.Text = tostring(g)
+						ColorPicker.BInput.InputBox.Text = tostring(b)
+						ColorPicker.HexInput.InputBox.Text = string.format("#%02X%02X%02X",color.R*0xFF,color.G*0xFF,color.B*0xFF)
+						SafeCallback(Color3.fromRGB(r,g,b))
+						ColorPickerSettings.Color = Color3.fromRGB(r,g,b)
+						ColorPickerV.Color = ColorPickerSettings.Color
+					end
+					if sliderDragging then 
+						local localX = math.clamp(mouse.X-Slider.AbsolutePosition.X,0,Slider.AbsoluteSize.X)
+						h = localX / Slider.AbsoluteSize.X
+						Display.BackgroundColor3 = Color3.fromHSV(h,s,v)
+						Slider.SliderPoint.Position = UDim2.new(0,localX-Slider.SliderPoint.AbsoluteSize.X/2,0.5,0)
+						Slider.SliderPoint.ImageColor3 = Color3.fromHSV(h,1,1)
+						Background.BackgroundColor3 = Color3.fromHSV(h,1,1)
+						Main.MainPoint.ImageColor3 = Color3.fromHSV(h,s,v)
+						local color = Color3.fromHSV(h,s,v) 
+						local r,g,b = math.floor((color.R*255)+0.5),math.floor((color.G*255)+0.5),math.floor((color.B*255)+0.5)
+						ColorPicker.RInput.InputBox.Text = tostring(r)
+						ColorPicker.GInput.InputBox.Text = tostring(g)
+						ColorPicker.BInput.InputBox.Text = tostring(b)
+						ColorPicker.HexInput.InputBox.Text = string.format("#%02X%02X%02X",color.R*0xFF,color.G*0xFF,color.B*0xFF)
+						SafeCallback(Color3.fromRGB(r,g,b))
+						ColorPickerSettings.Color = Color3.fromRGB(r,g,b)
+						ColorPickerV.Color = ColorPickerSettings.Color
+					end
+				end)
+
+				function ColorPickerV:Set(NewColorPickerSettings)
+
+					NewColorPickerSettings = Kwargify(ColorPickerSettings, NewColorPickerSettings or {})
+
+					ColorPickerV.Settings = NewColorPickerSettings
+					ColorPickerSettings = NewColorPickerSettings
+
+					ColorPicker.Name = ColorPickerSettings.Name
+					ColorPicker.Title.Text = ColorPickerSettings.Name
+					ColorPicker.Visible = true
+
+					local h,s,v = ColorPickerSettings.Color:ToHSV()
+					local color = Color3.fromHSV(h,s,v) 
+					local r,g,b = math.floor((color.R*255)+0.5),math.floor((color.G*255)+0.5),math.floor((color.B*255)+0.5)
+					local hex = string.format("#%02X%02X%02X",color.R*0xFF,color.G*0xFF,color.B*0xFF)
+					ColorPicker.HexInput.InputBox.Text = hex
+					setDisplay(h,s,v)
+					SafeCallback(Color3.fromRGB(r,g,b))
+
+					ColorPickerV.Color = ColorPickerSettings.Color
+				end
+
+				function ColorPickerV:Destroy()
+					ColorPicker:Destroy()
+				end
+
+				if Flag then
+					Luna.Options[Flag] = ColorPickerV
+				end
+
+				SafeCallback(ColorPickerSettings.Color)
+
+				return ColorPickerV
+			end
+
+			return Section
+
+		end
+
+		-- Divider
+		function Tab:CreateDivider()
+			local b = Elements.Template.Divider:Clone()
+			b.Parent = TabPage
+			b.Line.BackgroundTransparency = 1
+			tween(b.Line, {BackgroundTransparency = 0})
+		end
+
+		-- Button
+		function Tab:CreateButton(ButtonSettings)
+
+			ButtonSettings = Kwargify({
+				Name = "Button",
+				Description = nil,
+				Callback = function()
+
+				end,
+			}, ButtonSettings or {})
+
+			local ButtonV = {
+				Hover = false,
+				Settings = ButtonSettings
+			}
+
+
+			local Button
+			if ButtonSettings.Description == nil and ButtonSettings.Description ~= "" then
+				Button = Elements.Template.Button:Clone()
+			else
+				Button = Elements.Template.ButtonDesc:Clone()
+			end
+			Button.Name = ButtonSettings.Name
+			Button.Title.Text = ButtonSettings.Name
+			if ButtonSettings.Description ~= nil and ButtonSettings.Description ~= "" then
+				Button.Desc.Text = ButtonSettings.Description
+			end
+			Button.Visible = true
+			Button.Parent = TabPage
+
+			Button.UIStroke.Transparency = 1
+			Button.Title.TextTransparency = 1
+			if ButtonSettings.Description ~= nil and ButtonSettings.Description ~= "" then
+				Button.Desc.TextTransparency = 1
+			end
+
+			TweenService:Create(Button, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {BackgroundTransparency = 0.5}):Play()
+			TweenService:Create(Button.UIStroke, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {Transparency = 0.5}):Play()
+			TweenService:Create(Button.Title, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {TextTransparency = 0}):Play()	
+			if ButtonSettings.Description ~= nil and ButtonSettings.Description ~= "" then
+				TweenService:Create(Button.Desc, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {TextTransparency = 0}):Play()	
+			end
+
+			Button.Interact["MouseButton1Click"]:Connect(function()
+				local Success,Response = pcall(ButtonSettings.Callback)
+
+				if not Success then
+					TweenService:Create(Button, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {BackgroundTransparency = 0}):Play()
+					TweenService:Create(Button, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {BackgroundColor3 = Color3.fromRGB(85, 0, 0)}):Play()
+					TweenService:Create(Button.UIStroke, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {Transparency = 1}):Play()
+					Button.Title.Text = "Callback Error"
+					print("Luna Interface Suite | "..ButtonSettings.Name.." Callback Error " ..tostring(Response))
+					wait(0.5)
+					Button.Title.Text = ButtonSettings.Name
+					TweenService:Create(Button, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {BackgroundTransparency = 0.5}):Play()
+					TweenService:Create(Button, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {BackgroundColor3 = Color3.fromRGB(32, 30, 38)}):Play()
+					TweenService:Create(Button.UIStroke, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {Transparency = 0.5}):Play()
+				else
+					tween(Button.UIStroke, {Color = Color3.fromRGB(136, 131, 163)})
+					wait(0.2)
+					if ButtonV.Hover then
+						tween(Button.UIStroke, {Color = Color3.fromRGB(87, 84, 104)})
+					else
+						tween(Button.UIStroke, {Color = Color3.fromRGB(64,61,76)})
+					end
+				end
+			end)
+
+			Button["MouseEnter"]:Connect(function()
+				ButtonV.Hover = true
+				tween(Button.UIStroke, {Color = Color3.fromRGB(87, 84, 104)})
+			end)
+
+			Button["MouseLeave"]:Connect(function()
+				ButtonV.Hover = false
+				tween(Button.UIStroke, {Color = Color3.fromRGB(64,61,76)})
+			end)
+
+			function ButtonV:Set(ButtonSettings2)
+				ButtonSettings2 = Kwargify({
+					Name = ButtonSettings.Name,
+					Description = ButtonSettings.Description,
+					Callback = ButtonSettings.Callback
+				}, ButtonSettings2 or {})
+
+				ButtonSettings = ButtonSettings2
+				ButtonV.Settings = ButtonSettings2
+
+				Button.Name = ButtonSettings.Name
+				Button.Title.Text = ButtonSettings.Name
+				if ButtonSettings.Description ~= nil and ButtonSettings.Description ~= "" and Button.Desc ~= nil then
+					Button.Desc.Text = ButtonSettings.Description
+				end
+			end
+
+			function ButtonV:Destroy()
+				Button.Visible = false
+				Button:Destroy()
+			end
+
+			return ButtonV
+		end
+
+		-- Label
+		function Tab:CreateLabel(LabelSettings)
+
+			local LabelV = {}
+
+			LabelSettings = Kwargify({
+				Text = "Label",
+				Style = 1
+			}, LabelSettings or {}) 
+
+			LabelV.Settings = LabelSettings
+
+			local Label
+			if LabelSettings.Style == 1 then
+				Label = Elements.Template.Label:Clone()
+			elseif LabelSettings.Style == 2 then
+				Label = Elements.Template.Info:Clone()
+			elseif LabelSettings.Style == 3 then
+				Label = Elements.Template.Warn:Clone()
+			end
+
+			Label.Text.Text = LabelSettings.Text
+			Label.Visible = true
+			Label.Parent = TabPage
+
+			Label.BackgroundTransparency = 1
+			Label.UIStroke.Transparency = 1
+			Label.Text.TextTransparency = 1
+
+			if LabelSettings.Style ~= 1 then
+				TweenService:Create(Label, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {BackgroundTransparency = 0.8}):Play()
+			else
+				TweenService:Create(Label, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {BackgroundTransparency = 1}):Play()
+			end
+			TweenService:Create(Label.UIStroke, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {Transparency = 0.5}):Play()
+			TweenService:Create(Label.Text, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {TextTransparency = 0}):Play()	
+
+			function LabelV:Set(NewLabel)
+				LabelSettings.Text = NewLabel
+				LabelV.Settings = LabelSettings
+				Label.Text.Text = NewLabel
+			end
+
+			function LabelV:Destroy()
+				Label.Visible = false
+				Label:Destroy()
+			end
+
+			return LabelV
+		end
+
+		-- Paragraph
+		function Tab:CreateParagraph(ParagraphSettings)
+
+			ParagraphSettings = Kwargify({
+				Title = "Paragraph",
+				Text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus venenatis lacus sed tempus eleifend. Mauris interdum bibendum felis, in tempor augue egestas vel. Praesent tristique consectetur ex, eu pretium sem placerat non. Vestibulum a nisi sit amet augue facilisis consectetur sit amet et nunc. Integer fermentum ornare cursus. Pellentesque sed ultricies metus, ut egestas metus. Vivamus auctor erat ac sapien vulputate, nec ultricies sem tempor. Quisque leo lorem, faucibus nec pulvinar nec, congue eu velit. Duis sodales massa efficitur imperdiet ultrices. Donec eros ipsum, ornare pharetra purus aliquam, tincidunt elementum nisi. Ut mi tortor, feugiat eget nunc vitae, facilisis interdum dui. Vivamus ullamcorper nunc dui, a dapibus nisi pretium ac. Integer eleifend placerat nibh, maximus malesuada tellus. Cras in justo in ligula scelerisque suscipit vel vitae quam."
+			}, ParagraphSettings or {})
+
+			local ParagraphV = {
+				Settings = ParagraphSettings
+			}
+
+			local Paragraph = Elements.Template.Paragraph:Clone()
+			Paragraph.Title.Text = ParagraphSettings.Title
+			Paragraph.Text.Text = ParagraphSettings.Text
+			Paragraph.Visible = true
+			Paragraph.Parent = TabPage
+
+			Paragraph.BackgroundTransparency = 1
+			Paragraph.UIStroke.Transparency = 1
+			Paragraph.Title.TextTransparency = 1
+			Paragraph.Text.TextTransparency = 1
+
+			TweenService:Create(Paragraph, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {BackgroundTransparency = 1}):Play()
+			TweenService:Create(Paragraph.UIStroke, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {Transparency = 0.5}):Play()
+			TweenService:Create(Paragraph.Title, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {TextTransparency = 0}):Play()	
+			TweenService:Create(Paragraph.Text, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {TextTransparency = 0}):Play()	
+
+			function ParagraphV:Update()
+				Paragraph.Text.Size = UDim2.new(Paragraph.Text.Size.X.Scale, Paragraph.Text.Size.X.Offset, 0, math.huge)
+				Paragraph.Text.Size = UDim2.new(Paragraph.Text.Size.X.Scale, Paragraph.Text.Size.X.Offset, 0, Paragraph.Text.TextBounds.Y)
+				tween(Paragraph, {Size = UDim2.new(Paragraph.Size.X.Scale, Paragraph.Size.X.Offset, 0, Paragraph.Text.TextBounds.Y + 40)})
+			end
+
+			function ParagraphV:Set(NewParagraphSettings)
+
+				NewParagraphSettings = Kwargify({
+					Title = ParagraphSettings.Title,
+					Text = ParagraphSettings.Text
+				}, NewParagraphSettings or {})
+
+				ParagraphV.Settings = NewParagraphSettings
+
+				Paragraph.Title.Text = NewParagraphSettings.Title
+				Paragraph.Text.Text = NewParagraphSettings.Text
+
+				ParagraphV:Update()
+
+			end
+
+			function ParagraphV:Destroy()
+				Paragraph.Visible = false
+				Paragraph:Destroy()
+			end
+
+			ParagraphV:Update()
+
+			return ParagraphV
+		end
+
+		-- Slider
+		function Tab:CreateSlider(SliderSettings, Flag)
+			local SliderV = { IgnoreConfig = false, Class = "Slider", Settings = SliderSettings }
+
+			SliderSettings = Kwargify({
+				Name = "Slider",
+				Range = {0, 200},
+				Increment = 1,
+				CurrentValue = 100,
+				Callback = function(Value)
+
+				end,
+			}, SliderSettings or {})
+
+			local SLDragging = false
+			local Slider = Elements.Template.Slider:Clone()
+			Slider.Name = SliderSettings.Name .. " - Slider"
+			Slider.Title.Text = SliderSettings.Name
+			Slider.Visible = true
+			Slider.Parent = TabPage
+
+			Slider.BackgroundTransparency = 1
+			Slider.UIStroke.Transparency = 1
+			Slider.Title.TextTransparency = 1
+
+			TweenService:Create(Slider, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {BackgroundTransparency = 0.5}):Play()
+			TweenService:Create(Slider.UIStroke, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {Transparency = 0.5}):Play()
+			TweenService:Create(Slider.Title, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {TextTransparency = 0}):Play()	
+
+			Slider.Main.Progress.Size =	UDim2.new(0, Slider.Main.AbsoluteSize.X * ((SliderSettings.CurrentValue + SliderSettings.Range[1]) / (SliderSettings.Range[2] - SliderSettings.Range[1])) > 5 and Slider.Main.AbsoluteSize.X * (SliderSettings.CurrentValue / (SliderSettings.Range[2] - SliderSettings.Range[1])) or 5, 1, 0)
+
+			Slider.Value.Text = tostring(SliderSettings.CurrentValue)
+			SliderV.CurrentValue = Slider.Value.Text
+
+			SliderSettings.Callback(SliderSettings.CurrentValue)
+
+			Slider["MouseEnter"]:Connect(function()
+				tween(Slider.UIStroke, {Color = Color3.fromRGB(87, 84, 104)})
+			end)
+
+			Slider["MouseLeave"]:Connect(function()
+				tween(Slider.UIStroke, {Color = Color3.fromRGB(64,61,76)})
+			end)
+
+			Slider.Interact.InputBegan:Connect(function(Input)
+				if Input.UserInputType == Enum.UserInputType.MouseButton1 or Input.UserInputType == Enum.UserInputType.Touch then 
+					SLDragging = true 
+				end 
+			end)
+
+			Slider.Interact.InputEnded:Connect(function(Input) 
+				if Input.UserInputType == Enum.UserInputType.MouseButton1 or Input.UserInputType == Enum.UserInputType.Touch then 
+					SLDragging = false 
+				end 
+			end)
+
+			Slider.Interact.MouseButton1Down:Connect(function()
+				local Current = Slider.Main.Progress.AbsolutePosition.X + Slider.Main.Progress.AbsoluteSize.X
+				local Start = Current
+				local Location
+				local Loop; Loop = RunService.Stepped:Connect(function()
+					if SLDragging then
+						Location = UserInputService:GetMouseLocation().X
+						Current = Current + 0.025 * (Location - Start)
+
+						if Location < Slider.Main.AbsolutePosition.X then
+							Location = Slider.Main.AbsolutePosition.X
+						elseif Location > Slider.Main.AbsolutePosition.X + Slider.Main.AbsoluteSize.X then
+							Location = Slider.Main.AbsolutePosition.X + Slider.Main.AbsoluteSize.X
+						end
+
+						if Current < Slider.Main.AbsolutePosition.X + 5 then
+							Current = Slider.Main.AbsolutePosition.X + 5
+						elseif Current > Slider.Main.AbsolutePosition.X + Slider.Main.AbsoluteSize.X then
+							Current = Slider.Main.AbsolutePosition.X + Slider.Main.AbsoluteSize.X
+						end
+
+						if Current <= Location and (Location - Start) < 0 then
+							Start = Location
+						elseif Current >= Location and (Location - Start) > 0 then
+							Start = Location
+						end
+						Slider.Main.Progress.Size = UDim2.new(0, Location - Slider.Main.AbsolutePosition.X, 1, 0)
+						local NewValue = SliderSettings.Range[1] + (Location - Slider.Main.AbsolutePosition.X) / Slider.Main.AbsoluteSize.X * (SliderSettings.Range[2] - SliderSettings.Range[1])
+
+						NewValue = math.floor(NewValue / SliderSettings.Increment + 0.5) * (SliderSettings.Increment * 10000000) / 10000000
+
+						Slider.Value.Text = tostring(NewValue)
+
+						if SliderSettings.CurrentValue ~= NewValue then
+							local Success, Response = pcall(function()
+								SliderSettings.Callback(NewValue)
+							end)
+							if not Success then
+								TweenService:Create(Slider, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {BackgroundTransparency = 0}):Play()
+								TweenService:Create(Slider, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {BackgroundColor3 = Color3.fromRGB(85, 0, 0)}):Play()
+								TweenService:Create(Slider.UIStroke, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {Transparency = 1}):Play()
+								Slider.Title.Text = "Callback Error"
+								print("Luna Interface Suite | "..SliderSettings.Name.." Callback Error " ..tostring(Response))
+								wait(0.5)
+								Slider.Title.Text = SliderSettings.Name
+								TweenService:Create(Slider, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {BackgroundTransparency = 0.5}):Play()
+								TweenService:Create(Slider, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {BackgroundColor3 = Color3.fromRGB(32, 30, 38)}):Play()
+								TweenService:Create(Slider.UIStroke, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {Transparency = 0.5}):Play()
+							end
+
+							SliderSettings.CurrentValue = NewValue
+							SliderV.CurrentValue = SliderSettings.CurrentValue
+							-- Luna.Flags[SliderSettings.Flag] = SliderSettings
+						end
+					else
+						TweenService:Create(Slider.Main.Progress, TweenInfo.new(0.1, Enum.EasingStyle.Back, Enum.EasingDirection.In, 0, false), {Size = UDim2.new(0, Location - Slider.Main.AbsolutePosition.X > 5 and Location - Slider.Main.AbsolutePosition.X or 5, 1, 0)}):Play()
+						Loop:Disconnect()
+					end
+				end)
+			end)
+
+			local function Set(NewVal, bleh)
+
+				NewVal = NewVal or SliderSettings.CurrentValue
+
+				TweenService:Create(Slider.Main.Progress, TweenInfo.new(0.3, Enum.EasingStyle.Back, Enum.EasingDirection.InOut), {Size = UDim2.new(0, Slider.Main.AbsoluteSize.X * ((NewVal + SliderSettings.Range[1]) / (SliderSettings.Range[2] - SliderSettings.Range[1])) > 5 and Slider.Main.AbsoluteSize.X * (NewVal / (SliderSettings.Range[2] - SliderSettings.Range[1])) or 5, 1, 0)}):Play()
+				if not bleh then Slider.Value.Text = tostring(NewVal) end
+				local Success, Response = pcall(function()
+					SliderSettings.Callback(NewVal)
+				end)
+				if not Success then
+					TweenService:Create(Slider, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {BackgroundTransparency = 0}):Play()
+					TweenService:Create(Slider, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {BackgroundColor3 = Color3.fromRGB(85, 0, 0)}):Play()
+					TweenService:Create(Slider.UIStroke, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {Transparency = 1}):Play()
+					Slider.Title.Text = "Callback Error"
+					print("Luna Interface Suite | "..SliderSettings.Name.." Callback Error " ..tostring(Response))
+					wait(0.5)
+					Slider.Title.Text = SliderSettings.Name
+					TweenService:Create(Slider, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {BackgroundTransparency = 0.5}):Play()
+					TweenService:Create(Slider, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {BackgroundColor3 = Color3.fromRGB(30, 33, 40)}):Play()
+					TweenService:Create(Slider.UIStroke, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {Transparency = 0.5}):Play()
+				end
+
+				SliderSettings.CurrentValue = NewVal
+				SliderV.CurrentValue = SliderSettings.CurrentValue
+				-- Luna.Flags[SliderSettings.Flag] = SliderSettings
+
+			end
+
+			function SliderV:UpdateValue(Value)
+				Set(tonumber(Value))
+			end 
+
+			Slider.Value:GetPropertyChangedSignal("Text"):Connect(function()
+				local text = Slider.Value.Text
+				if not tonumber(text) and text ~= "." then
+					Slider.Value.Text = text:match("[0-9.]*") or ""
+				end
+				if SliderSettings.Range[2] < (tonumber(Slider.Value.Text) or 0) then Slider.Value.Text = SliderSettings.Range[2] end
+				Slider.Value.Size = UDim2.fromOffset(Slider.Value.TextBounds.X, 23)
+				Set(tonumber(Slider.Value.Text), true)
+			end)
+
+			function SliderV:Set(NewSliderSettings)
+				NewSliderSettings = Kwargify({
+					Name = SliderSettings.Name,
+					Range = SliderSettings.Range,
+					Increment = SliderSettings.Increment,
+					CurrentValue = SliderSettings.CurrentValue,
+					Callback = SliderSettings.Callback
+				}, NewSliderSettings or {})
+
+				SliderSettings = NewSliderSettings
+				SliderV.Settings = NewSliderSettings
+
+				Slider.Name = SliderSettings.Name .. " - Slider"
+				Slider.Title.Text = SliderSettings.Name
+
+				Set()
+
+				-- Luna.Flags[SliderSettings.Flag] = SliderSettings
+			end
+
+			function SliderV:Destroy()
+				Slider.Visible = false
+				Slider:Destroy()
+			end
+
+			if Flag then
+				Luna.Options[Flag] = SliderV
+			end
+
+			LunaUI.ThemeRemote:GetPropertyChangedSignal("Value"):Connect(function()
+				Slider.Main.color.Color = Luna.ThemeGradient
+				Slider.Main.UIStroke.color.Color = Luna.ThemeGradient
+			end)
+
+			return SliderV
+
+		end
+
+		-- Toggle
+		function Tab:CreateToggle(ToggleSettings, Flag)    
+			local ToggleV = { IgnoreConfig = false, Class = "Toggle" }
+
+			ToggleSettings = Kwargify({
+				Name = "Toggle",
+				Description = nil,
+				CurrentValue = false,
+				Callback = function(Value)
+				end,
+			}, ToggleSettings or {})
+
+
+			local Toggle
+
+			if ToggleSettings.Description ~= nil and ToggleSettings.Description ~= "" then
+				Toggle = Elements.Template.ToggleDesc:Clone()
+			else
+				Toggle = Elements.Template.Toggle:Clone()
+			end
+
+			Toggle.Visible = true
+			Toggle.Parent = TabPage
+
+			Toggle.Name = ToggleSettings.Name .. " - Toggle"
+			Toggle.Title.Text = ToggleSettings.Name
+			if ToggleSettings.Description ~= nil and ToggleSettings.Description ~= "" then
+				Toggle.Desc.Text = ToggleSettings.Description
+			end
+
+			Toggle.UIStroke.Transparency = 1
+			Toggle.Title.TextTransparency = 1
+			if ToggleSettings.Description ~= nil and ToggleSettings.Description ~= "" then
+				Toggle.Desc.TextTransparency = 1
+			end
+
+			TweenService:Create(Toggle, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {BackgroundTransparency = 0.5}):Play()
+			if ToggleSettings.Description ~= nil and ToggleSettings.Description ~= "" then
+				TweenService:Create(Toggle.Desc, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {TextTransparency = 0}):Play()
+			end
+			TweenService:Create(Toggle.UIStroke, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {Transparency = 0.5}):Play()
+			TweenService:Create(Toggle.Title, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {TextTransparency = 0}):Play()	
+
+			local function Set(bool)
+				if bool then
+					Toggle.toggle.color.Enabled = true
+					tween(Toggle.toggle, {BackgroundTransparency = 0})
+
+					Toggle.toggle.UIStroke.color.Enabled = true
+					tween(Toggle.toggle.UIStroke, {Color = Color3.new(255,255,255)})
+
+					tween(Toggle.toggle.val, {BackgroundColor3 = Color3.fromRGB(255,255,255), Position = UDim2.new(1,-23,0.5,0), BackgroundTransparency = 0.45})
+				else
+					Toggle.toggle.color.Enabled = false
+					Toggle.toggle.UIStroke.color.Enabled = false
+
+					Toggle.toggle.UIStroke.Color = Color3.fromRGB(97,97,97)
+
+					tween(Toggle.toggle, {BackgroundTransparency = 1})
+
+					tween(Toggle.toggle.val, {BackgroundColor3 = Color3.fromRGB(97,97,97), Position = UDim2.new(0,5,0.5,0), BackgroundTransparency = 0})
+				end
+
+				ToggleV.CurrentValue = bool
+			end
+
+			Toggle.Interact.MouseButton1Click:Connect(function()
+				ToggleSettings.CurrentValue = not ToggleSettings.CurrentValue
+				Set(ToggleSettings.CurrentValue)
+
+				local Success, Response = pcall(function()
+					ToggleSettings.Callback(ToggleSettings.CurrentValue)
+				end)
+				if not Success then
+					TweenService:Create(Toggle, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {BackgroundTransparency = 0}):Play()
+					TweenService:Create(Toggle, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {BackgroundColor3 = Color3.fromRGB(85, 0, 0)}):Play()
+					TweenService:Create(Toggle.UIStroke, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {Transparency = 1}):Play()
+					Toggle.Title.Text = "Callback Error"
+					print("Luna Interface Suite | "..ToggleSettings.Name.." Callback Error " ..tostring(Response))
+					wait(0.5)
+					Toggle.Title.Text = ToggleSettings.Name
+					TweenService:Create(Toggle, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {BackgroundTransparency = 0.5}):Play()
+					TweenService:Create(Toggle, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {BackgroundColor3 = Color3.fromRGB(32, 30, 38)}):Play()
+					TweenService:Create(Toggle.UIStroke, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {Transparency = 0.5}):Play()
+				end
+			end)
+
+			Toggle["MouseEnter"]:Connect(function()
+				tween(Toggle.UIStroke, {Color = Color3.fromRGB(87, 84, 104)})
+			end)
+
+			Toggle["MouseLeave"]:Connect(function()
+				tween(Toggle.UIStroke, {Color = Color3.fromRGB(64,61,76)})
+			end)
+
+			if ToggleSettings.CurrentValue then
+				Set(ToggleSettings.CurrentValue)
+				local Success, Response = pcall(function()
+					ToggleSettings.Callback(ToggleSettings.CurrentValue)
+				end)
+				if not Success then
+					TweenService:Create(Toggle, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {BackgroundTransparency = 0}):Play()
+					TweenService:Create(Toggle, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {BackgroundColor3 = Color3.fromRGB(85, 0, 0)}):Play()
+					TweenService:Create(Toggle.UIStroke, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {Transparency = 1}):Play()
+					Toggle.Title.Text = "Callback Error"
+					print("Luna Interface Suite | "..ToggleSettings.Name.." Callback Error " ..tostring(Response))
+					wait(0.5)
+					Toggle.Title.Text = ToggleSettings.Name
+					TweenService:Create(Toggle, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {BackgroundTransparency = 0.5}):Play()
+					TweenService:Create(Toggle, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {BackgroundColor3 = Color3.fromRGB(32, 30, 38)}):Play()
+					TweenService:Create(Toggle.UIStroke, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {Transparency = 0.5}):Play()
+				end
+			end
+
+			function ToggleV:UpdateState(State)
+				ToggleSettings.CurrentValue = State
+				Set(ToggleSettings.CurrentValue)
+			end
+
+			function ToggleV:Set(NewToggleSettings)
+
+				NewToggleSettings = Kwargify({
+					Name = ToggleSettings.Name,
+					Description = ToggleSettings.Description,
+					CurrentValue = ToggleSettings.CurrentValue,
+					Callback = ToggleSettings.Callback
+				}, NewToggleSettings or {})
+
+				ToggleV.Settings = NewToggleSettings
+				ToggleSettings = NewToggleSettings
+
+				Toggle.Name = ToggleSettings.Name .. " - Toggle"
+				Toggle.Title.Text = ToggleSettings.Name
+				if ToggleSettings.Description ~= nil and ToggleSettings.Description ~= "" and Toggle.Desc ~= nil then
+					Toggle.Desc.Text = ToggleSettings.Description
+				end
+
+				Set(ToggleSettings.CurrentValue)
+
+				ToggleV.CurrentValue = ToggleSettings.CurrentValue
+
+				local Success, Response = pcall(function()
+					ToggleSettings.Callback(ToggleSettings.CurrentValue)
+				end)
+				if not Success then
+					TweenService:Create(Toggle, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {BackgroundTransparency = 0}):Play()
+					TweenService:Create(Toggle, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {BackgroundColor3 = Color3.fromRGB(85, 0, 0)}):Play()
+					TweenService:Create(Toggle.UIStroke, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {Transparency = 0}):Play()
+					Toggle.Title.Text = "Callback Error"
+					print("Luna Interface Suite | "..ToggleSettings.Name.." Callback Error " ..tostring(Response))
+					wait(0.5)
+					Toggle.Title.Text = ToggleSettings.Name
+					TweenService:Create(Toggle, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {BackgroundTransparency = 0.5}):Play()
+					TweenService:Create(Toggle, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {BackgroundColor3 = Color3.fromRGB(32, 30, 38)}):Play()
+					TweenService:Create(Toggle.UIStroke, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {Transparency = 0.5}):Play()
+				end
+			end
+
+			function ToggleV:Destroy()
+				Toggle.Visible = false
+				Toggle:Destroy()
+			end
+
+			LunaUI.ThemeRemote:GetPropertyChangedSignal("Value"):Connect(function()
+				Toggle.toggle.color.Color = Luna.ThemeGradient
+				Toggle.toggle.UIStroke.color.Color = Luna.ThemeGradient
+			end)
+
+			if Flag then
+				Luna.Options[Flag] = ToggleV
+			end
+
+			return ToggleV
+
+		end
+
+		-- Bind
+		function Tab:CreateBind(BindSettings, Flag)
+			local BindV = { Class = "Keybind", IgnoreConfig = false, Settings = BindSettings, Active = false }
+
+			BindSettings = Kwargify({
+				Name = "Bind",
+				Description = nil,
+				CurrentBind = "Q",
+				HoldToInteract = false, -- setting this makes the Bind in toggle mode
+				Callback = function(Bind)
+					-- The function that takes place when the Bind is pressed
+					-- The variable (Bind) is a boolean for whether the Bind is being held or not (HoldToInteract needs to be true) or whether the Bind is currently active
+				end,
+
+				OnChangedCallback = function(Bind)
+					-- The function that takes place when the binded key changes
+					-- The variable (Bind) is a Enum.KeyCode for the new Binded Key
+				end,
+			}, BindSettings or {})
+
+			local CheckingForKey = false
+
+			local Bind
+			if BindSettings.Description ~= nil and BindSettings.Description ~= "" then
+				Bind = Elements.Template.BindDesc:Clone()
+			else
+				Bind = Elements.Template.Bind:Clone()
+			end
+
+			Bind.Visible = true
+			Bind.Parent = TabPage
+
+			Bind.Name = BindSettings.Name
+			Bind.Title.Text = BindSettings.Name
+			if BindSettings.Description ~= nil and BindSettings.Description ~= "" then
+				Bind.Desc.Text = BindSettings.Description
+			end
+
+			Bind.Title.TextTransparency = 1
+			if BindSettings.Description ~= nil and BindSettings.Description ~= "" then
+				Bind.Desc.TextTransparency = 1
+			end
+			Bind.BindFrame.BackgroundTransparency = 1
+			Bind.BindFrame.UIStroke.Transparency = 1
+			Bind.BindFrame.BindBox.TextTransparency = 1
+
+			TweenService:Create(Bind, TweenInfo.new(0.3, Enum.EasingStyle.Exponential), {BackgroundTransparency = 0.5}):Play()
+			TweenService:Create(Bind.Title, TweenInfo.new(0.3, Enum.EasingStyle.Exponential), {TextTransparency = 0}):Play()
+			if BindSettings.Description ~= nil and BindSettings.Description ~= "" then
+				TweenService:Create(Bind.Desc, TweenInfo.new(0.3, Enum.EasingStyle.Exponential), {TextTransparency = 0}):Play()
+			end
+			TweenService:Create(Bind.BindFrame, TweenInfo.new(0.3, Enum.EasingStyle.Exponential), {BackgroundTransparency = 0.9}):Play()
+			TweenService:Create(Bind.BindFrame.UIStroke, TweenInfo.new(0.3, Enum.EasingStyle.Exponential), {Transparency = 0.3}):Play()
+			TweenService:Create(Bind.BindFrame.BindBox, TweenInfo.new(0.3, Enum.EasingStyle.Exponential), {TextTransparency = 0}):Play()
+
+
+			Bind.BindFrame.BindBox.Text = BindSettings.CurrentBind
+			Bind.BindFrame.BindBox.Size = UDim2.new(0, Bind.BindFrame.BindBox.TextBounds.X + 20, 0, 42)
+
+			Bind.BindFrame.BindBox.Focused:Connect(function()
+				CheckingForKey = true
+				Bind.BindFrame.BindBox.Text = ""
+			end)
+
+			Bind.BindFrame.BindBox.FocusLost:Connect(function()
+				CheckingForKey = false
+				if Bind.BindFrame.BindBox.Text == (nil or "") then
+					Bind.BindFrame.BindBox.Text = BindSettings.CurrentBind
+				end
+			end)
+
+			Bind["MouseEnter"]:Connect(function()
+				tween(Bind.UIStroke, {Color = Color3.fromRGB(87, 84, 104)})
+			end)
+
+			Bind["MouseLeave"]:Connect(function()
+				tween(Bind.UIStroke, {Color = Color3.fromRGB(64,61,76)})
+			end)
+			UserInputService.InputBegan:Connect(function(input, processed)
+
+				if CheckingForKey then
+					if input.KeyCode ~= Enum.KeyCode.Unknown and input.KeyCode ~= Window.Bind then
+						local SplitMessage = string.split(tostring(input.KeyCode), ".")
+						local NewKeyNoEnum = SplitMessage[3]
+						Bind.BindFrame.BindBox.Text = tostring(NewKeyNoEnum)
+						BindSettings.CurrentBind = tostring(NewKeyNoEnum)
+						local Success, Response = pcall(function()
+							BindSettings.OnChangedCallback(BindSettings.CurrentBind)
+						end)
+						if not Success then
+							TweenService:Create(Bind, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {BackgroundTransparency = 0}):Play()
+							TweenService:Create(Bind, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {BackgroundColor3 = Color3.fromRGB(85, 0, 0)}):Play()
+							TweenService:Create(Bind.UIStroke, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {Transparency = 1}):Play()
+							Bind.Title.Text = "Callback Error"
+							print("Luna Interface Suite | "..BindSettings.Name.." Callback Error " ..tostring(Response))
+							wait(0.5)
+							Bind.Title.Text = BindSettings.Name
+							TweenService:Create(Bind, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {BackgroundTransparency = 0.5}):Play()
+							TweenService:Create(Bind, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {BackgroundColor3 = Color3.fromRGB(32, 30, 38)}):Play()
+							TweenService:Create(Bind.UIStroke, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {Transparency = 0.5}):Play()
+						end
+						Bind.BindFrame.BindBox:ReleaseFocus()
+					end
+				elseif BindSettings.CurrentBind ~= nil and (input.KeyCode == Enum.KeyCode[BindSettings.CurrentBind] and not processed) then -- Test
+					local Held = true
+					local Connection
+					Connection = input.Changed:Connect(function(prop)
+						if prop == "UserInputState" then
+							Connection:Disconnect()
+							Held = false
+						end
+					end)
+
+					if not BindSettings.HoldToInteract then
+						BindV.Active = not BindV.Active
+						local Success, Response = pcall(function()
+							BindSettings.Callback(BindV.Active)
+						end)
+						if not Success then
+							TweenService:Create(Bind, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {BackgroundTransparency = 0}):Play()
+							TweenService:Create(Bind, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {BackgroundColor3 = Color3.fromRGB(85, 0, 0)}):Play()
+							TweenService:Create(Bind.UIStroke, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {Transparency = 1}):Play()
+							Bind.Title.Text = "Callback Error"
+							print("Luna Interface Suite | "..BindSettings.Name.." Callback Error " ..tostring(Response))
+							wait(0.5)
+							Bind.Title.Text = BindSettings.Name
+							TweenService:Create(Bind, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {BackgroundTransparency = 0.5}):Play()
+							TweenService:Create(Bind, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {BackgroundColor3 = Color3.fromRGB(32, 30, 38)}):Play()
+							TweenService:Create(Bind.UIStroke, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {Transparency = 0.5}):Play()
+						end
+					else
+						wait(0.1)
+						if Held then
+							local Loop; Loop = RunService.Stepped:Connect(function()
+								if not Held then
+									local Success, Response = pcall(function()
+										BindSettings.Callback(false)
+									end)
+									if not Success then
+										TweenService:Create(Bind, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {BackgroundTransparency = 0}):Play()
+										TweenService:Create(Bind, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {BackgroundColor3 = Color3.fromRGB(85, 0, 0)}):Play()
+										TweenService:Create(Bind.UIStroke, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {Transparency = 1}):Play()
+										Bind.Title.Text = "Callback Error"
+										print("Luna Interface Suite | "..BindSettings.Name.." Callback Error " ..tostring(Response))
+										wait(0.5)
+										Bind.Title.Text = BindSettings.Name
+										TweenService:Create(Bind, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {BackgroundTransparency = 0.5}):Play()
+										TweenService:Create(Bind, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {BackgroundColor3 = Color3.fromRGB(32, 30, 38)}):Play()
+										TweenService:Create(Bind.UIStroke, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {Transparency = 0.5}):Play()
+									end 
+									Loop:Disconnect()
+								else
+									local Success, Response = pcall(function()
+										BindSettings.Callback(true)
+									end)
+									if not Success then
+										TweenService:Create(Bind, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {BackgroundTransparency = 0}):Play()
+										TweenService:Create(Bind, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {BackgroundColor3 = Color3.fromRGB(85, 0, 0)}):Play()
+										TweenService:Create(Bind.UIStroke, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {Transparency = 1}):Play()
+										Bind.Title.Text = "Callback Error"
+										print("Luna Interface Suite | "..BindSettings.Name.." Callback Error " ..tostring(Response))
+										wait(0.5)
+										Bind.Title.Text = BindSettings.Name
+										TweenService:Create(Bind, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {BackgroundTransparency = 0.5}):Play()
+										TweenService:Create(Bind, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {BackgroundColor3 = Color3.fromRGB(32, 30, 38)}):Play()
+										TweenService:Create(Bind.UIStroke, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {Transparency = 0.5}):Play()
+									end
+								end
+							end)	
+						end
+					end
+				end
+			end)
+
+			Bind.BindFrame.BindBox:GetPropertyChangedSignal("Text"):Connect(function()
+				TweenService:Create(Bind.BindFrame, TweenInfo.new(0.55, Enum.EasingStyle.Exponential, Enum.EasingDirection.Out), {Size = UDim2.new(0, Bind.BindFrame.BindBox.TextBounds.X + 20, 0, 30)}):Play()
+			end)
+
+			function BindV:Set(NewBindSettings)
+
+				NewBindSettings = Kwargify({
+					Name = BindSettings.Name,
+					Description = BindSettings.Description,
+					CurrentBind =  BindSettings.CurrentBind,
+					HoldToInteract = BindSettings.HoldToInteract,
+					Callback = BindSettings.Callback
+				}, NewBindSettings or {})
+
+				BindV.Settings = NewBindSettings
+				BindSettings = NewBindSettings
+
+				Bind.Name = BindSettings.Name
+				Bind.Title.Text = BindSettings.Name
+				if BindSettings.Description ~= nil and BindSettings.Description ~= "" and Bind.Desc ~= nil then
+					Bind.Desc.Text = BindSettings.Description
+				end
+
+				Bind.BindFrame.BindBox.Text = BindSettings.CurrentBind
+				Bind.BindFrame.Size = UDim2.new(0, Bind.BindFrame.BindBox.TextBounds.X + 20, 0, 42)
+
+
+				BindV.CurrentBind = BindSettings.CurrentBind
+			end
+
+			function BindV:Destroy()
+				Bind.Visible = false
+				Bind:Destroy()
+			end
+
+			if Flag then
+				Luna.Options[Flag] = BindV
+			end
+
+			-- Luna.Flags[BindSettings.Flag] = BindSettings
+
+			return BindV
+
+		end
+
+		function Tab:CreateKeybind(BindSettings)
+
+			BindSettings = Kwargify({
+				Name = "Bind",
+				Description = nil,
+				CurrentBind = "Q",
+				HoldToInteract = false, -- setting this makes the Bind in toggle mode
+				Callback = function(Bind)
+					-- The function that takes place when the Bind is pressed
+					-- The variable (Bind) is a boolean for whether the Bind is being held or not (HoldToInteract needs to be true) or whether the Bind is currently active
+				end
+			}, BindSettings or {})
+
+			local BindV = { Settings = BindSettings, Active = false }
+			local CheckingForKey = false
+
+			local Bind
+			if BindSettings.Description ~= nil and BindSettings.Description ~= "" then
+				Bind = Elements.Template.BindDesc:Clone()
+			else
+				Bind = Elements.Template.Bind:Clone()
+			end
+
+			Bind.Visible = true
+			Bind.Parent = TabPage
+
+			Bind.Name = BindSettings.Name
+			Bind.Title.Text = BindSettings.Name
+			if BindSettings.Description ~= nil and BindSettings.Description ~= "" then
+				Bind.Desc.Text = BindSettings.Description
+			end
+
+			Bind.Title.TextTransparency = 1
+			if BindSettings.Description ~= nil and BindSettings.Description ~= "" then
+				Bind.Desc.TextTransparency = 1
+			end
+			Bind.BindFrame.BackgroundTransparency = 1
+			Bind.BindFrame.UIStroke.Transparency = 1
+			Bind.BindFrame.BindBox.TextTransparency = 1
+
+			TweenService:Create(Bind, TweenInfo.new(0.3, Enum.EasingStyle.Exponential), {BackgroundTransparency = 0.5}):Play()
+			TweenService:Create(Bind.Title, TweenInfo.new(0.3, Enum.EasingStyle.Exponential), {TextTransparency = 0}):Play()
+			if BindSettings.Description ~= nil and BindSettings.Description ~= "" then
+				TweenService:Create(Bind.Desc, TweenInfo.new(0.3, Enum.EasingStyle.Exponential), {TextTransparency = 0}):Play()
+			end
+			TweenService:Create(Bind.BindFrame, TweenInfo.new(0.3, Enum.EasingStyle.Exponential), {BackgroundTransparency = 0.9}):Play()
+			TweenService:Create(Bind.BindFrame.UIStroke, TweenInfo.new(0.3, Enum.EasingStyle.Exponential), {Transparency = 0.3}):Play()
+			TweenService:Create(Bind.BindFrame.BindBox, TweenInfo.new(0.3, Enum.EasingStyle.Exponential), {TextTransparency = 0}):Play()
+
+
+			Bind.BindFrame.BindBox.Text = BindSettings.CurrentBind
+			Bind.BindFrame.BindBox.Size = UDim2.new(0, Bind.BindFrame.BindBox.TextBounds.X + 16, 0, 42)
+
+			Bind.BindFrame.BindBox.Focused:Connect(function()
+				CheckingForKey = true
+				Bind.BindFrame.BindBox.Text = ""
+			end)
+
+			Bind.BindFrame.BindBox.FocusLost:Connect(function()
+				CheckingForKey = false
+				if Bind.BindFrame.BindBox.Text == (nil or "") then
+					Bind.BindFrame.BindBox.Text = BindSettings.CurrentBind
+				end
+			end)
+
+			Bind["MouseEnter"]:Connect(function()
+				tween(Bind.UIStroke, {Color = Color3.fromRGB(87, 84, 104)})
+			end)
+
+			Bind["MouseLeave"]:Connect(function()
+				tween(Bind.UIStroke, {Color = Color3.fromRGB(64,61,76)})
+			end)
+			UserInputService.InputBegan:Connect(function(input, processed)
+
+				if CheckingForKey then
+					if input.KeyCode ~= Enum.KeyCode.Unknown and input.KeyCode ~= Enum.KeyCode.K then
+						local SplitMessage = string.split(tostring(input.KeyCode), ".")
+						local NewKeyNoEnum = SplitMessage[3]
+						Bind.BindFrame.BindBox.Text = tostring(NewKeyNoEnum)
+						BindSettings.CurrentBind = tostring(NewKeyNoEnum)
+						Bind.BindFrame.BindBox:ReleaseFocus()
+					end
+				elseif BindSettings.CurrentBind ~= nil and (input.KeyCode == Enum.KeyCode[BindSettings.CurrentBind] and not processed) then -- Test
+					local Held = true
+					local Connection
+					Connection = input.Changed:Connect(function(prop)
+						if prop == "UserInputState" then
+							Connection:Disconnect()
+							Held = false
+						end
+					end)
+
+					if not BindSettings.HoldToInteract then
+						BindV.Active = not BindV.Active
+						local Success, Response = pcall(function()
+							BindSettings.Callback(BindV.Active)
+						end)
+						if not Success then
+							TweenService:Create(Bind, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {BackgroundTransparency = 0}):Play()
+							TweenService:Create(Bind, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {BackgroundColor3 = Color3.fromRGB(85, 0, 0)}):Play()
+							TweenService:Create(Bind.UIStroke, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {Transparency = 1}):Play()
+							Bind.Title.Text = "Callback Error"
+							print("Luna Interface Suite | "..BindSettings.Name.." Callback Error " ..tostring(Response))
+							wait(0.5)
+							Bind.Title.Text = BindSettings.Name
+							TweenService:Create(Bind, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {BackgroundTransparency = 0.5}):Play()
+							TweenService:Create(Bind, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {BackgroundColor3 = Color3.fromRGB(32, 30, 38)}):Play()
+							TweenService:Create(Bind.UIStroke, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {Transparency = 0.5}):Play()
+						end
+					else
+						wait(0.1)
+						if Held then
+							local Loop; Loop = RunService.Stepped:Connect(function()
+								if not Held then
+									local Success, Response = pcall(function()
+										BindSettings.Callback(false)
+									end)
+									if not Success then
+										TweenService:Create(Bind, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {BackgroundTransparency = 0}):Play()
+										TweenService:Create(Bind, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {BackgroundColor3 = Color3.fromRGB(85, 0, 0)}):Play()
+										TweenService:Create(Bind.UIStroke, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {Transparency = 1}):Play()
+										Bind.Title.Text = "Callback Error"
+										print("Luna Interface Suite | "..BindSettings.Name.." Callback Error " ..tostring(Response))
+										wait(0.5)
+										Bind.Title.Text = BindSettings.Name
+										TweenService:Create(Bind, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {BackgroundTransparency = 0.5}):Play()
+										TweenService:Create(Bind, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {BackgroundColor3 = Color3.fromRGB(32, 30, 38)}):Play()
+										TweenService:Create(Bind.UIStroke, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {Transparency = 0.5}):Play()
+									end 
+									Loop:Disconnect()
+								else
+									local Success, Response = pcall(function()
+										BindSettings.Callback(true)
+									end)
+									if not Success then
+										TweenService:Create(Bind, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {BackgroundTransparency = 0}):Play()
+										TweenService:Create(Bind, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {BackgroundColor3 = Color3.fromRGB(85, 0, 0)}):Play()
+										TweenService:Create(Bind.UIStroke, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {Transparency = 1}):Play()
+										Bind.Title.Text = "Callback Error"
+										print("Luna Interface Suite | "..BindSettings.Name.." Callback Error " ..tostring(Response))
+										wait(0.5)
+										Bind.Title.Text = BindSettings.Name
+										TweenService:Create(Bind, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {BackgroundTransparency = 0.5}):Play()
+										TweenService:Create(Bind, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {BackgroundColor3 = Color3.fromRGB(32, 30, 38)}):Play()
+										TweenService:Create(Bind.UIStroke, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {Transparency = 0.5}):Play()
+									end
+								end
+							end)	
+						end
+					end
+				end
+			end)
+
+			Bind.BindFrame.BindBox:GetPropertyChangedSignal("Text"):Connect(function()
+				TweenService:Create(Bind.BindFrame, TweenInfo.new(0.55, Enum.EasingStyle.Exponential, Enum.EasingDirection.Out), {Size = UDim2.new(0, Bind.BindFrame.BindBox.TextBounds.X + 16, 0, 30)}):Play()
+			end)
+
+			function BindV:Set(NewBindSettings)
+
+				NewBindSettings = Kwargify({
+					Name = BindSettings.Name,
+					Description = BindSettings.Description,
+					CurrentBind =  BindSettings.CurrentBind,
+					HoldToInteract = BindSettings.HoldToInteract,
+					Callback = BindSettings.Callback
+				}, NewBindSettings or {})
+
+				BindV.Settings = NewBindSettings
+				BindSettings = NewBindSettings
+
+				Bind.Name = BindSettings.Name
+				Bind.Title.Text = BindSettings.Name
+				if BindSettings.Description ~= nil and BindSettings.Description ~= "" and Bind.Desc ~= nil then
+					Bind.Desc.Text = BindSettings.Description
+				end
+
+				Bind.BindFrame.BindBox.Text = BindSettings.CurrentBind
+				Bind.BindFrame.BindBox.Size = UDim2.new(0, Bind.BindFrame.BindBox.TextBounds.X + 16, 0, 42)
+
+				-- Luna.Flags[BindSettings.Flag] = BindSettings
+
+			end
+
+			function BindV:Destroy()
+				Bind.Visible = false
+				Bind:Destroy()
+			end
+
+			-- Luna.Flags[BindSettings.Flag] = BindSettings
+
+			return BindV
+
+		end
+
+		-- Dynamic Input
+		function Tab:CreateInput(InputSettings, Flag)
+			local InputV = { IgnoreConfig = false, Class = "Input", Settings = InputSettings }
+
+			InputSettings = Kwargify({
+				Name = "Dynamic Input",
+				Description = nil,
+				CurrentValue = "",
+				PlaceholderText = "Input Placeholder",
+				RemoveTextAfterFocusLost = false,
+				Numeric = false,
+				Enter = false,
+				MaxCharacters = nil,
+				Callback = function(Text)
+
+				end, -- 52
+			}, InputSettings or {})
+
+			InputV.CurrentValue = InputSettings.CurrentValue
+
+			local descriptionbool
+			if InputSettings.Description ~= nil and InputSettings.Description ~= "" then
+				descriptionbool = true
+			end
+
+			local Input 
+			if descriptionbool then
+				Input = Elements.Template.InputDesc:Clone()
+			else
+				Input = Elements.Template.Input:Clone()
+			end
+
+			Input.Name = InputSettings.Name
+			Input.Title.Text = InputSettings.Name
+			if descriptionbool then Input.Desc.Text = InputSettings.Description end
+			Input.Visible = true
+			Input.Parent = TabPage
+
+			Input.BackgroundTransparency = 1
+			Input.UIStroke.Transparency = 1
+			Input.Title.TextTransparency = 1
+			if descriptionbool then Input.Desc.TextTransparency = 1 end
+			Input.InputFrame.BackgroundTransparency = 1
+			Input.InputFrame.UIStroke.Transparency = 1
+			Input.InputFrame.InputBox.TextTransparency = 1
+
+			TweenService:Create(Input, TweenInfo.new(0.3, Enum.EasingStyle.Exponential), {BackgroundTransparency = 0.5}):Play()
+			TweenService:Create(Input.UIStroke, TweenInfo.new(0.3, Enum.EasingStyle.Exponential), {Transparency = 0.5}):Play()
+			TweenService:Create(Input.Title, TweenInfo.new(0.3, Enum.EasingStyle.Exponential), {TextTransparency = 0}):Play()	
+			if descriptionbool then TweenService:Create(Input.Desc, TweenInfo.new(0.3, Enum.EasingStyle.Exponential), {TextTransparency = 0}):Play() end
+			TweenService:Create(Input.InputFrame, TweenInfo.new(0.3, Enum.EasingStyle.Exponential), {BackgroundTransparency = 0.9}):Play()
+			TweenService:Create(Input.InputFrame.UIStroke, TweenInfo.new(0.3, Enum.EasingStyle.Exponential), {Transparency = 0.3}):Play()
+			TweenService:Create(Input.InputFrame.InputBox, TweenInfo.new(0.3, Enum.EasingStyle.Exponential), {TextTransparency = 0}):Play()
+
+			Input.InputFrame.InputBox.PlaceholderText = InputSettings.PlaceholderText
+			Input.InputFrame.Size = UDim2.new(0, Input.InputFrame.InputBox.TextBounds.X + 52, 0, 30)
+
+			Input.InputFrame.InputBox.FocusLost:Connect(function(bleh)
+
+				if InputSettings.Enter then
+					if bleh then
+						local Success, Response = pcall(function()
+							InputSettings.Callback(Input.InputFrame.InputBox.Text)
+							InputV.CurrentValue = Input.InputFrame.InputBox.Text
+						end)
+						if not Success then
+							TweenService:Create(Input, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {BackgroundTransparency = 0}):Play()
+							TweenService:Create(Input, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {BackgroundColor3 = Color3.fromRGB(85, 0, 0)}):Play()
+							TweenService:Create(Input.UIStroke, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {Transparency = 1}):Play()
+							Input.Title.Text = "Callback Error"
+							print("Luna Interface Suite | "..InputSettings.Name.." Callback Error " ..tostring(Response))
+							wait(0.5)
+							Input.Title.Text = InputSettings.Name
+							TweenService:Create(Input, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {BackgroundTransparency = 0.5}):Play()
+							TweenService:Create(Input, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {BackgroundColor3 = Color3.fromRGB(32, 30, 38)}):Play()
+							TweenService:Create(Input.UIStroke, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {Transparency = 0.5}):Play()
+						end
+					end
+				end
+
+				if InputSettings.RemoveTextAfterFocusLost then
+					Input.InputFrame.InputBox.Text = ""
+				end
+
+			end)
+
+			if InputSettings.Numeric then
+				Input.InputFrame.InputBox:GetPropertyChangedSignal("Text"):Connect(function()
+					local text = Input.InputFrame.InputBox.Text
+					if not tonumber(text) and text ~= "." then
+						Input.InputFrame.InputBox.Text = text:match("[0-9.]*") or ""
+					end
+				end)
+			end
+
+			Input.InputFrame.InputBox:GetPropertyChangedSignal("Text"):Connect(function()
+				if tonumber(InputSettings.MaxCharacters) then
+					if (#Input.InputFrame.InputBox.Text - 1) == InputSettings.MaxCharacters then
+						Input.InputFrame.InputBox.Text = Input.InputFrame.InputBox.Text:sub(1, InputSettings.MaxCharacters)
+					end
+				end
+				TweenService:Create(Input.InputFrame, TweenInfo.new(0.55, Enum.EasingStyle.Exponential, Enum.EasingDirection.Out), {Size = UDim2.new(0, Input.InputFrame.InputBox.TextBounds.X + 52, 0, 30)}):Play()
+				if not InputSettings.Enter then
+					local Success, Response = pcall(function()
+						InputSettings.Callback(Input.InputFrame.InputBox.Text)
+					end)
+					if not Success then
+						TweenService:Create(Input, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {BackgroundTransparency = 0}):Play()
+						TweenService:Create(Input, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {BackgroundColor3 = Color3.fromRGB(85, 0, 0)}):Play()
+						TweenService:Create(Input.UIStroke, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {Transparency = 1}):Play()
+						Input.Title.Text = "Callback Error"
+						print("Luna Interface Suite | "..InputSettings.Name.." Callback Error " ..tostring(Response))
+						wait(0.5)
+						Input.Title.Text = InputSettings.Name
+						TweenService:Create(Input, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {BackgroundTransparency = 0.5}):Play()
+						TweenService:Create(Input, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {BackgroundColor3 = Color3.fromRGB(32, 30, 38)}):Play()
+						TweenService:Create(Input.UIStroke, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {Transparency = 0.5}):Play()
+					end
+				end
+				InputV.CurrentValue = Input.InputFrame.InputBox.Text				
+			end)
+
+			Input["MouseEnter"]:Connect(function()
+				tween(Input.UIStroke, {Color = Color3.fromRGB(87, 84, 104)})
+			end)
+
+			Input["MouseLeave"]:Connect(function()
+				tween(Input.UIStroke, {Color = Color3.fromRGB(64,61,76)})
+			end)
+
+
+			function InputV:Set(NewInputSettings)
+
+				NewInputSettings = Kwargify(InputSettings, NewInputSettings or {})
+
+				InputV.Settings = NewInputSettings
+				InputSettings = NewInputSettings
+
+				Input.Name = InputSettings.Name
+				Input.Title.Text = InputSettings.Name
+				if InputSettings.Description ~= nil and InputSettings.Description ~= "" and Input.Desc ~= nil then
+					Input.Desc.Text = InputSettings.Description
+				end
+
+				Input.InputFrame.InputBox:CaptureFocus()
+				Input.InputFrame.InputBox.Text = tostring(InputSettings.CurrentValue)
+				Input.InputFrame.InputBox:ReleaseFocus()
+				Input.InputFrame.Size = UDim2.new(0, Input.InputFrame.InputBox.TextBounds.X + 52, 0, 42)
+
+				InputV.CurrentValue = InputSettings.CurrentValue
+			end
+
+			function InputV:Destroy()
+				Input.Visible = false
+				Input:Destroy()
+			end
+
+			if Flag then
+				Luna.Options[Flag] = InputV
+			end
+
+
+			return InputV
+
+		end
+
+		-- Dropdown
+		function Tab:CreateDropdown(DropdownSettings, Flag)
+			local DropdownV = { IgnoreConfig = false, Class = "Dropdown", Settings = DropdownSettings}
+
+			DropdownSettings = Kwargify({
+				Name = "Dropdown",
+				Description = nil,
+				Options = {"Option 1", "Option 2"},
+				CurrentOption = {"Option 1"},
+				MultipleOptions = false,
+				SpecialType = nil, -- currently onl player, might add more soon
+				Callback = function(Options)
+					-- The function that takes place when the selected option is changed
+					-- The variable (Options) is a table of strings for the current selected options or a string if multioptions is false
+				end,
+			}, DropdownSettings or {})
+
+			DropdownV.CurrentOption = DropdownSettings.CurrentOption
+
+			local descriptionbool = false
+			if DropdownSettings.Description ~= nil and DropdownSettings.Description ~= "" then
+				descriptionbool = true
+			end
+			local closedsize
+			local openedsize
+			if descriptionbool then
+				closedsize = 48
+				openedsize = 170
+			elseif not descriptionbool then
+				closedsize = 38
+				openedsize = 160
+			end
+			local opened = false
+
+			local Dropdown
+			if descriptionbool then Dropdown = Elements.Template.DropdownDesc:Clone() else Dropdown = Elements.Template.Dropdown:Clone() end
+
+			Dropdown.Name = DropdownSettings.Name
+			Dropdown.Title.Text = DropdownSettings.Name
+			if descriptionbool then Dropdown.Desc.Text = DropdownSettings.Description end
+
+			Dropdown.Parent = TabPage
+			Dropdown.Visible = true
+
+			local function Toggle()
+				opened = not opened
+				if opened then
+					tween(Dropdown.icon, {Rotation = 180})
+					tween(Dropdown, {Size = UDim2.new(1, -25, 0, openedsize)})
+				else
+					tween(Dropdown.icon, {Rotation = 0})
+					tween(Dropdown, {Size = UDim2.new(1, -25, 0, closedsize)})
+				end
+			end
+
+			local function SafeCallback(param, c2)
+				local Success, Response = pcall(function()
+					DropdownSettings.Callback(param)
+				end)
+				if not Success then
+					TweenService:Create(Dropdown, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {BackgroundTransparency = 0}):Play()
+					TweenService:Create(Dropdown, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {BackgroundColor3 = Color3.fromRGB(85, 0, 0)}):Play()
+					TweenService:Create(Dropdown.UIStroke, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {Transparency = 1}):Play()
+					Dropdown.Title.Text = "Callback Error"
+					print("Luna Interface Suite | "..DropdownSettings.Name.." Callback Error " ..tostring(Response))
+					wait(0.5)
+					Dropdown.Title.Text = DropdownSettings.Name
+					TweenService:Create(Dropdown, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {BackgroundTransparency = 0.5}):Play()
+					TweenService:Create(Dropdown, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {BackgroundColor3 = Color3.fromRGB(32, 30, 38)}):Play()
+					TweenService:Create(Dropdown.UIStroke, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {Transparency = 0.5}):Play()
+				end
+				if Success and c2 then
+					c2()
+				end
+			end
+
+			-- fixed by justhey
+			Dropdown.Selected:GetPropertyChangedSignal("Text"):Connect(function()
+				local text = Dropdown.Selected.Text:lower()
+				for _, Item in ipairs(Dropdown.List:GetChildren()) do
+					if Item:IsA("TextLabel") and Item.Name ~= "Template" then
+						Item.Visible = text == "" or string.find(Item.Name:lower(), text, 1, true) ~= nil
+					end
+				end
+			end)
+
+
+			local function Clear()
+				for _, option in ipairs(Dropdown.List:GetChildren()) do
+					if option.ClassName == "TextLabel" and option.Name ~= "Template" then
+						option:Destroy()
+					end
+				end
+			end
+
+			local function ActivateColorSingle(name)
+				for _, Option in pairs(Dropdown.List:GetChildren()) do
+					if Option.ClassName == "TextLabel" and Option.Name ~= "Template" then
+						tween(Option, {BackgroundTransparency = 0.98})
+					end
+				end
+
+				Toggle()
+				tween(Dropdown.List[name], {BackgroundTransparency = 0.95, TextColor3 = Color3.fromRGB(240,240,240)})
+			end
+
+			local function Refresh()
+				Clear()
+				for i,v in pairs(DropdownSettings.Options) do
+					local Option = Dropdown.List.Template:Clone()
+					local optionhover = false
+					Option.Text = v
+					if v == "Template" then v = "Template (Name)" end
+					Option.Name = v
+					Option.Interact.MouseButton1Click:Connect(function()
+						local bleh
+						if DropdownSettings.MultipleOptions then
+							if table.find(DropdownSettings.CurrentOption, v) then
+								RemoveTable(DropdownSettings.CurrentOption, v)
+								DropdownV.CurrentOption = DropdownSettings.CurrentOption
+								if not optionhover then
+									tween(Option, {TextColor3 = Color3.fromRGB(200,200,200)})
+								end
+								tween(Option, {BackgroundTransparency = 0.98})
+							else
+								table.insert(DropdownSettings.CurrentOption, v)
+								DropdownV.CurrentOption = DropdownSettings.CurrentOption
+								tween(Option, {TextColor3 = Color3.fromRGB(240,240,240), BackgroundTransparency = 0.95})
+							end
+							bleh = DropdownSettings.CurrentOption
+						else
+							DropdownSettings.CurrentOption = {v}
+							bleh = v
+							DropdownV.CurrentOption = bleh
+							ActivateColorSingle(v)
+						end
+
+						SafeCallback(bleh, function()
+							if DropdownSettings.MultipleOptions then
+								if DropdownSettings.CurrentOption and type(DropdownSettings.CurrentOption) == "table" then
+									if #DropdownSettings.CurrentOption == 1 then
+										Dropdown.Selected.PlaceholderText = DropdownSettings.CurrentOption[1]
+									elseif #DropdownSettings.CurrentOption == 0 then
+										Dropdown.Selected.PlaceholderText = "None"
+									else
+										Dropdown.Selected.PlaceholderText = unpackt(DropdownSettings.CurrentOption)
+									end
+								else
+									DropdownSettings.CurrentOption = {}
+									Dropdown.Selected.PlaceholderText = "None"
+								end
+							end
+							if not DropdownSettings.MultipleOptions then
+								Dropdown.Selected.PlaceholderText = DropdownSettings.CurrentOption[1] or "None"
+							end
+							Dropdown.Selected.Text = ""
+						end)
+					end)
+					Option.Visible = true
+					Option.Parent = Dropdown.List
+					Option.MouseEnter:Connect(function()
+						optionhover = true
+						if Option.BackgroundTransparency == 0.95 then
+							return
+						else
+							tween(Option, {TextColor3 = Color3.fromRGB(240,240,240)})
+						end
+					end)
+					Option.MouseLeave:Connect(function()
+						optionhover = false
+						if Option.BackgroundTransparency == 0.95 then
+							return
+						else
+							tween(Option, {TextColor3 = Color3.fromRGB(200,200,200)})
+						end
+					end)	
+				end
+			end
+
+			local function PlayerTableRefresh()
+				for i,v in pairs(DropdownSettings.Options) do
+					table.remove(DropdownSettings.Options, i)
+				end
+
+				for i,v in pairs(Players:GetChildren()) do
+					table.insert(DropdownSettings.Options, v.Name)
+				end
+			end
+
+			Dropdown.Interact.MouseButton1Click:Connect(function()
+				Toggle()
+			end)
+
+			Dropdown["MouseEnter"]:Connect(function()
+				tween(Dropdown.UIStroke, {Color = Color3.fromRGB(87, 84, 104)})
+			end)
+
+			Dropdown["MouseLeave"]:Connect(function()
+				tween(Dropdown.UIStroke, {Color = Color3.fromRGB(64,61,76)})
+			end)
+
+			if DropdownSettings.SpecialType == "Player" then
+
+				for i,v in pairs(DropdownSettings.Options) do
+					table.remove(DropdownSettings.Options, i)
+				end
+				PlayerTableRefresh()
+				DropdownSettings.CurrentOption = DropdownSettings.Options[1]
+
+				Players.PlayerAdded:Connect(function() PlayerTableRefresh() end)
+				Players.PlayerRemoving:Connect(function() PlayerTableRefresh() end)
+
+			end
+
+			Refresh()
+
+			if DropdownSettings.CurrentOption then
+				if type(DropdownSettings.CurrentOption) == "string" then
+					DropdownSettings.CurrentOption = {DropdownSettings.CurrentOption}
+				end
+				if not DropdownSettings.MultipleOptions and type(DropdownSettings.CurrentOption) == "table" then
+					DropdownSettings.CurrentOption = {DropdownSettings.CurrentOption[1]}
+				end
+			else
+				DropdownSettings.CurrentOption = {}
+			end
+
+			local bleh, ind = nil,0
+			for i,v in pairs(DropdownSettings.CurrentOption) do
+				ind = ind + 1
+			end
+			if ind == 1 then bleh = DropdownSettings.CurrentOption[1] else bleh = DropdownSettings.CurrentOption end
+			SafeCallback(bleh)
+			if type(bleh) == "string" then 
+				tween(Dropdown.List[bleh], {TextColor3 = Color3.fromRGB(240,240,240), BackgroundTransparency = 0.95})
+			else
+				for i,v in pairs(bleh) do
+					tween(Dropdown.List[v], {TextColor3 = Color3.fromRGB(240,240,240), BackgroundTransparency = 0.95})
+				end
+			end
+
+			if DropdownSettings.MultipleOptions then
+				if DropdownSettings.CurrentOption and type(DropdownSettings.CurrentOption) == "table" then
+					if #DropdownSettings.CurrentOption == 1 then
+						Dropdown.Selected.PlaceholderText = DropdownSettings.CurrentOption[1]
+					elseif #DropdownSettings.CurrentOption == 0 then
+						Dropdown.Selected.PlaceholderText = "None"
+					else
+						Dropdown.Selected.PlaceholderText = unpackt(DropdownSettings.CurrentOption)
+					end
+				else
+					DropdownSettings.CurrentOption = {}
+					Dropdown.Selected.PlaceholderText = "None"
+				end
+				for _, name in pairs(DropdownSettings.CurrentOption) do
+					tween(Dropdown.List[name], {TextColor3 = Color3.fromRGB(227,227,227), BackgroundTransparency = 0.95})
+				end
+			else
+				Dropdown.Selected.PlaceholderText = DropdownSettings.CurrentOption[1] or "None"
+			end
+			Dropdown.Selected.Text = ""
+
+			function DropdownV:Set(NewDropdownSettings)
+				NewDropdownSettings = Kwargify(DropdownSettings, NewDropdownSettings or {})
+
+				DropdownV.Settings = NewDropdownSettings
+				DropdownSettings = NewDropdownSettings
+
+				Dropdown.Name = DropdownSettings.Name
+				Dropdown.Title.Text = DropdownSettings.Name
+				if DropdownSettings.Description ~= nil and DropdownSettings.Description ~= "" and Dropdown.Desc ~= nil then
+					Dropdown.Desc.Text = DropdownSettings.Description
+				end
+
+				if DropdownSettings.SpecialType == "Player" then
+
+					for i,v in pairs(DropdownSettings.Options) do
+						table.remove(DropdownSettings.Options, i)
+					end
+					PlayerTableRefresh()
+					DropdownSettings.CurrentOption = DropdownSettings.Options[1]                    
+					Players.PlayerAdded:Connect(function() PlayerTableRefresh() end)
+					Players.PlayerRemoving:Connect(function() PlayerTableRefresh() end)
+
+				end
+
+				Refresh()
+
+				if DropdownSettings.CurrentOption then
+					if type(DropdownSettings.CurrentOption) == "string" then
+						DropdownSettings.CurrentOption = {DropdownSettings.CurrentOption}
+					end
+					if not DropdownSettings.MultipleOptions and type(DropdownSettings.CurrentOption) == "table" then
+						DropdownSettings.CurrentOption = {DropdownSettings.CurrentOption[1]}
+					end
+				else
+					DropdownSettings.CurrentOption = {}
+				end
+
+				local bleh, ind = nil,0
+				for i,v in pairs(DropdownSettings.CurrentOption) do
+					ind = ind + 1
+				end
+				if ind == 1 then bleh = DropdownSettings.CurrentOption[1] else bleh = DropdownSettings.CurrentOption end
+				SafeCallback(bleh)
+				for _, Option in pairs(Dropdown.List:GetChildren()) do
+					if Option.ClassName == "TextLabel" then
+						tween(Option, {TextColor3 = Color3.fromRGB(200,200,200), BackgroundTransparency = 0.98})
+					end
+				end
+				tween(Dropdown.List[bleh], {TextColor3 = Color3.fromRGB(240,240,240), BackgroundTransparency = 0.95})
+
+				if DropdownSettings.MultipleOptions then
+					if DropdownSettings.CurrentOption and type(DropdownSettings.CurrentOption) == "table" then
+						if #DropdownSettings.CurrentOption == 1 then
+							Dropdown.Selected.PlaceholderText = DropdownSettings.CurrentOption[1]
+						elseif #DropdownSettings.CurrentOption == 0 then
+							Dropdown.Selected.PlaceholderText = "None"
+						else
+							Dropdown.Selected.PlaceholderText = unpackt(DropdownSettings.CurrentOption)
+						end
+					else
+						DropdownSettings.CurrentOption = {}
+						Dropdown.Selected.PlaceholderText = "None"
+					end
+					for _, name in pairs(DropdownSettings.CurrentOption) do
+						tween(Dropdown.List[name], {TextColor3 = Color3.fromRGB(227,227,227), BackgroundTransparency = 0.95})
+					end
+				else
+					Dropdown.Selected.PlaceholderText = DropdownSettings.CurrentOption[1] or "None"
+				end
+				Dropdown.Selected.Text = ""
+
+				-- Luna.Flags[DropdownSettings.Flag] = DropdownSettings
+
+			end
+
+			function DropdownV:Destroy()
+				Dropdown.Visible = false
+				Dropdown:Destroy()
+			end
+
+			if Flag then
+				Luna.Options[Flag] = DropdownV
+			end
+
+			-- Luna.Flags[DropdownSettings.Flag] = DropdownSettings
+
+			return DropdownV
+
+		end
+
+		-- Color Picker
+		function Tab:CreateColorPicker(ColorPickerSettings, Flag) -- by Rayfield/Throit
+			local ColorPickerV = {IgnoreClass = false, Class = "Colorpicker", Settings = ColorPickerSettings}
+
+			ColorPickerSettings = Kwargify({
+				Name = "Color Picker",
+				Color = Color3.fromRGB(255,255,255),
+				Callback = function(Value)
+					-- The function that takes place every time the color picker is moved/changed
+					-- The variable (Value) is a Color3fromRGB value based on which color is selected
+				end
+			}, ColorPickerSettings or {})
+
+			local function Color3ToHex(color)
+				return string.format("#%02X%02X%02X", math.floor(color.R * 255), math.floor(color.G * 255), math.floor(color.B * 255))
+			end
+
+			ColorPickerV.Color = Color3ToHex(ColorPickerSettings.Color)
+
+			local closedsize = UDim2.new(0, 75, 0, 22)
+			local openedsize = UDim2.new(0, 219, 0, 129)
+
+			local ColorPicker = Elements.Template.ColorPicker:Clone()
+			local Background = ColorPicker.CPBackground
+			local Display = Background.Display
+			local Main = Background.MainCP
+			local Slider = ColorPicker.ColorSlider
+
+			ColorPicker.Name = ColorPickerSettings.Name
+			ColorPicker.Title.Text = ColorPickerSettings.Name
+			ColorPicker.Visible = true
+			ColorPicker.Parent = TabPage
+			ColorPicker.Size = UDim2.new(1.042, -25,0, 38)
+			Background.Size = closedsize
+			Display.BackgroundTransparency = 0
+
+			ColorPicker["MouseEnter"]:Connect(function()
+				tween(ColorPicker.UIStroke, {Color = Color3.fromRGB(87, 84, 104)})
+			end)
+			ColorPicker["MouseLeave"]:Connect(function()
+				tween(ColorPicker.UIStroke, {Color = Color3.fromRGB(64,61,76)})
+			end)
+
+			local function SafeCallback(param, c2)
+				local Success, Response = pcall(function()
+					ColorPickerSettings.Callback(param)
+				end)
+				if not Success then
+					TweenService:Create(ColorPicker, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {BackgroundTransparency = 0}):Play()
+					TweenService:Create(ColorPicker, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {BackgroundColor3 = Color3.fromRGB(85, 0, 0)}):Play()
+					TweenService:Create(ColorPicker.UIStroke, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {Transparency = 1}):Play()
+					ColorPicker.Title.Text = "Callback Error"
+					print("Luna Interface Suite | "..ColorPickerSettings.Name.." Callback Error " ..tostring(Response))
+					wait(0.5)
+					ColorPicker.Title.Text = ColorPickerSettings.Name
+					TweenService:Create(ColorPicker, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {BackgroundTransparency = 0.5}):Play()
+					TweenService:Create(ColorPicker, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {BackgroundColor3 = Color3.fromRGB(32, 30, 38)}):Play()
+					TweenService:Create(ColorPicker.UIStroke, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {Transparency = 0.5}):Play()
+				end
+				if Success and c2 then
+					c2()
+				end
+			end
+
+			local opened = false
+
+			local mouse = game.Players.LocalPlayer:GetMouse()
+			Main.Image = "http://www.roblox.com/asset/?id=11415645739"
+			local mainDragging = false 
+			local sliderDragging = false 
+			ColorPicker.Interact.MouseButton1Down:Connect(function()
+				if not opened then
+					opened = true 
+					tween(ColorPicker, {Size = UDim2.new( 1.042, -25,0, 165)}, nil, TweenInfo.new(0.6, Enum.EasingStyle.Exponential))
+					tween(Background, {Size = openedsize})
+					tween(Display, {BackgroundTransparency = 1})
+				else
+					opened = false
+					tween(ColorPicker, {Size = UDim2.new(1.042, -25,0, 38)}, nil, TweenInfo.new(0.6, Enum.EasingStyle.Exponential))
+					tween(Background, {Size = closedsize})
+					tween(Display, {BackgroundTransparency = 0})
+				end
+			end)
+			UserInputService.InputEnded:Connect(function(input, gameProcessed) if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then 
+					mainDragging = false
+					sliderDragging = false
+				end end)
+			Main.MouseButton1Down:Connect(function()
+				if opened then
+					mainDragging = true 
+				end
+			end)
+			Main.MainPoint.MouseButton1Down:Connect(function()
+				if opened then
+					mainDragging = true 
+				end
+			end)
+			Slider.MouseButton1Down:Connect(function()
+				sliderDragging = true 
+			end)
+			Slider.SliderPoint.MouseButton1Down:Connect(function()
+				sliderDragging = true 
+			end)
+			local h,s,v = ColorPickerSettings.Color:ToHSV()
+			local color = Color3.fromHSV(h,s,v) 
+			local r,g,b = math.floor((h*255)+0.5),math.floor((s*255)+0.5),math.floor((v*255)+0.5)
+			local hex = string.format("#%02X%02X%02X",color.R*0xFF,color.G*0xFF,color.B*0xFF)
+			ColorPicker.HexInput.InputBox.Text = hex
+			local function setDisplay(hp,sp,vp)
+				--Main
+				Main.MainPoint.Position = UDim2.new(s,-Main.MainPoint.AbsoluteSize.X/2,1-v,-Main.MainPoint.AbsoluteSize.Y/2)
+				Main.MainPoint.ImageColor3 = Color3.fromHSV(hp,sp,vp)
+				Background.BackgroundColor3 = Color3.fromHSV(hp,1,1)
+				Display.BackgroundColor3 = Color3.fromHSV(hp,sp,vp)
+				--Slider 
+				local x = hp * Slider.AbsoluteSize.X
+				Slider.SliderPoint.Position = UDim2.new(0,x-Slider.SliderPoint.AbsoluteSize.X/2,0.5,0)
+				Slider.SliderPoint.ImageColor3 = Color3.fromHSV(hp,1,1)
+				local color = Color3.fromHSV(hp,sp,vp) 
+				local r,g,b = math.floor((color.R*255)+0.5),math.floor((color.G*255)+0.5),math.floor((color.B*255)+0.5)
+				ColorPicker.RInput.InputBox.Text = tostring(r)
+				ColorPicker.GInput.InputBox.Text = tostring(g)
+				ColorPicker.BInput.InputBox.Text = tostring(b)
+				hex = string.format("#%02X%02X%02X",color.R*0xFF,color.G*0xFF,color.B*0xFF)
+				ColorPicker.HexInput.InputBox.Text = hex
+			end
+			setDisplay(h,s,v)
+			ColorPicker.HexInput.InputBox.FocusLost:Connect(function()
+				if not pcall(function()
+						local r, g, b = string.match(ColorPicker.HexInput.InputBox.Text, "^#?(%w%w)(%w%w)(%w%w)$")
+						local rgbColor = Color3.fromRGB(tonumber(r, 16),tonumber(g, 16), tonumber(b, 16))
+						h,s,v = rgbColor:ToHSV()
+						hex = ColorPicker.HexInput.InputBox.Text
+						setDisplay()
+						ColorPickerSettings.Color = rgbColor
+					end) 
+				then 
+					ColorPicker.HexInput.InputBox.Text = hex 
+				end
+				local r,g,b = math.floor((h*255)+0.5),math.floor((s*255)+0.5),math.floor((v*255)+0.5)
+				ColorPickerSettings.Color = Color3.fromRGB(r,g,b)
+				SafeCallback( Color3.fromRGB(r,g,b))
+			end)
+			--RGB
+			local function rgbBoxes(box,toChange)
+				local value = tonumber(box.Text) 
+				local color = Color3.fromHSV(h,s,v) 
+				local oldR,oldG,oldB = math.floor((color.R*255)+0.5),math.floor((color.G*255)+0.5),math.floor((color.B*255)+0.5)
+				local save 
+				if toChange == "R" then save = oldR;oldR = value elseif toChange == "G" then save = oldG;oldG = value else save = oldB;oldB = value end
+				if value then 
+					value = math.clamp(value,0,255)
+					h,s,v = Color3.fromRGB(oldR,oldG,oldB):ToHSV()
+					setDisplay()
+				else 
+					box.Text = tostring(save)
+				end
+				local r,g,b = math.floor((color.R*255)+0.5),math.floor((color.G*255)+0.5),math.floor((color.B*255)+0.5)
+				ColorPickerSettings.Color = Color3.fromRGB(r,g,b)
+			end
+			ColorPicker.RInput.InputBox.FocusLost:connect(function()
+				rgbBoxes(ColorPicker.RInput.InputBox,"R")
+				SafeCallback(Color3.fromRGB(r,g,b))
+			end)
+			ColorPicker.GInput.InputBox.FocusLost:connect(function()
+				rgbBoxes(ColorPicker.GInput.InputBox,"G")
+				SafeCallback(Color3.fromRGB(r,g,b))
+			end)
+			ColorPicker.BInput.InputBox.FocusLost:connect(function()
+				rgbBoxes(ColorPicker.BInput.InputBox,"B")
+				SafeCallback(Color3.fromRGB(r,g,b))
+			end)
+			RunService.RenderStepped:connect(function()
+				if mainDragging then 
+					local localX = math.clamp(mouse.X-Main.AbsolutePosition.X,0,Main.AbsoluteSize.X)
+					local localY = math.clamp(mouse.Y-Main.AbsolutePosition.Y,0,Main.AbsoluteSize.Y)
+					Main.MainPoint.Position = UDim2.new(0,localX-Main.MainPoint.AbsoluteSize.X/2,0,localY-Main.MainPoint.AbsoluteSize.Y/2)
+					s = localX / Main.AbsoluteSize.X
+					v = 1 - (localY / Main.AbsoluteSize.Y)
+					Display.BackgroundColor3 = Color3.fromHSV(h,s,v)
+					Main.MainPoint.ImageColor3 = Color3.fromHSV(h,s,v)
+					Background.BackgroundColor3 = Color3.fromHSV(h,1,1)
+					local color = Color3.fromHSV(h,s,v) 
+					local r,g,b = math.floor((color.R*255)+0.5),math.floor((color.G*255)+0.5),math.floor((color.B*255)+0.5)
+					ColorPicker.RInput.InputBox.Text = tostring(r)
+					ColorPicker.GInput.InputBox.Text = tostring(g)
+					ColorPicker.BInput.InputBox.Text = tostring(b)
+					ColorPicker.HexInput.InputBox.Text = string.format("#%02X%02X%02X",color.R*0xFF,color.G*0xFF,color.B*0xFF)
+					SafeCallback(Color3.fromRGB(r,g,b))
+					ColorPickerSettings.Color = Color3.fromRGB(r,g,b)
+					ColorPickerV.Color = ColorPickerSettings.Color
+				end
+				if sliderDragging then 
+					local localX = math.clamp(mouse.X-Slider.AbsolutePosition.X,0,Slider.AbsoluteSize.X)
+					h = localX / Slider.AbsoluteSize.X
+					Display.BackgroundColor3 = Color3.fromHSV(h,s,v)
+					Slider.SliderPoint.Position = UDim2.new(0,localX-Slider.SliderPoint.AbsoluteSize.X/2,0.5,0)
+					Slider.SliderPoint.ImageColor3 = Color3.fromHSV(h,1,1)
+					Background.BackgroundColor3 = Color3.fromHSV(h,1,1)
+					Main.MainPoint.ImageColor3 = Color3.fromHSV(h,s,v)
+					local color = Color3.fromHSV(h,s,v) 
+					local r,g,b = math.floor((color.R*255)+0.5),math.floor((color.G*255)+0.5),math.floor((color.B*255)+0.5)
+					ColorPicker.RInput.InputBox.Text = tostring(r)
+					ColorPicker.GInput.InputBox.Text = tostring(g)
+					ColorPicker.BInput.InputBox.Text = tostring(b)
+					ColorPicker.HexInput.InputBox.Text = string.format("#%02X%02X%02X",color.R*0xFF,color.G*0xFF,color.B*0xFF)
+					SafeCallback(Color3.fromRGB(r,g,b))
+					ColorPickerSettings.Color = Color3.fromRGB(r,g,b)
+					ColorPickerV.Color = ColorPickerSettings.Color
+				end
+			end)
+
+			function ColorPickerV:Set(NewColorPickerSettings)
+
+				NewColorPickerSettings = Kwargify(ColorPickerSettings, NewColorPickerSettings or {})
+
+				ColorPickerV.Settings = NewColorPickerSettings
+				ColorPickerSettings = NewColorPickerSettings
+
+				ColorPicker.Name = ColorPickerSettings.Name
+				ColorPicker.Title.Text = ColorPickerSettings.Name
+				ColorPicker.Visible = true
+
+				local h,s,v = ColorPickerSettings.Color:ToHSV()
+				local color = Color3.fromHSV(h,s,v) 
+				local r,g,b = math.floor((color.R*255)+0.5),math.floor((color.G*255)+0.5),math.floor((color.B*255)+0.5)
+				local hex = string.format("#%02X%02X%02X",color.R*0xFF,color.G*0xFF,color.B*0xFF)
+				ColorPicker.HexInput.InputBox.Text = hex
+				setDisplay(h,s,v)
+				SafeCallback(Color3.fromRGB(r,g,b))
+
+				ColorPickerV.Color = ColorPickerSettings.Color
+			end
+
+			function ColorPickerV:Destroy()
+				ColorPicker:Destroy()
+			end
+
+			if Flag then
+				Luna.Options[Flag] = ColorPickerV
+			end
+
+			SafeCallback(ColorPickerSettings.Color)
+
+			return ColorPickerV
+		end
+
+
+		function Tab:BuildConfigSection()
+			if isStudio then
+				Tab:CreateLabel({Text = "Config system unavailable. (Environment isStudio)", Style = 3})
+				return "Config system unavailable." 
+			end
+
+			local inputPath = nil
+			local selectedConfig = nil
+
+			local Title = Elements.Template.Title:Clone()
+			Title.Text = "Configurations"
+			Title.Visible = true
+			Title.Parent = TabPage
+			Title.TextTransparency = 1
+			TweenService:Create(Title, TweenInfo.new(0.4, Enum.EasingStyle.Exponential, Enum.EasingDirection.Out), {TextTransparency = 0}):Play()
+
+			Tab:CreateSection("Config Creator")
+
+			Tab:CreateInput({
+				Name = "Config Name",
+				Description = "Insert a name for your to be created config.",
+				PlaceholderText = "Name",
+				CurrentValue = "",
+				Numeric = false,
+				MaxCharacters = nil,
+				Enter = false,
+				Callback = function(input)
+					inputPath = input
+				end,
+			})
+
+			local configSelection
+
+			Tab:CreateButton({
+				Name = "Create Config",
+				Description = "Create a config with all of your current settings.",
+				Callback = function()
+					if not inputPath or string.gsub(inputPath, " ", "") == "" then
+						Luna:Notification({
+							Title = "Interface",
+							Icon = "warning",
+							ImageSource = "Material",
+							Content = "Config name cannot be empty."
+						})
+						return
+					end
+
+					local success, returned = Luna:SaveConfig(inputPath)
+					if not success then
+						Luna:Notification({
+							Title = "Interface",
+							Icon = "error",
+							ImageSource = "Material",
+							Content = "Unable to save config, return error: " .. returned
+						})
+					end
+
+					Luna:Notification({
+						Title = "Interface",
+						Icon = "info",
+						ImageSource = "Material",
+						Content = string.format("Created config %q", inputPath),
+					})
+
+					configSelection:Set({ Options = Luna:RefreshConfigList() })
+				end
+			})
+
+			Tab:CreateSection("Config Load/Settings")
+
+
+			configSelection = Tab:CreateDropdown({
+				Name = "Select Config",
+				Description = "Select a config to load your settings on.",
+				Options = Luna:RefreshConfigList(),
+				CurrentOption = {},
+				MultipleOptions = false,
+				SpecialType = nil,
+				Callback = function(Value)
+					selectedConfig = Value
+				end,
+			})
+
+			Tab:CreateButton({
+				Name = "Load Config",
+				Description = "Load your saved config settings.",
+				Callback = function()
+					local success, returned = Luna:LoadConfig(selectedConfig)
+					if not success then
+						Luna:Notification({
+							Title = "Interface",
+							Icon = "error",
+							ImageSource = "Material",
+							Content = "Unable to load config, return error: " .. returned
+						})
+						return
+					end
+
+					Luna:Notification({
+						Title = "Interface",
+						Icon = "info",
+						ImageSource = "Material",
+						Content = string.format("Loaded config %q", selectedConfig),
+					})
+				end
+			})
+
+			Tab:CreateButton({
+				Name = "Overwrite Config",
+				Description = "Overwrite your current config settings.",
+				Callback = function()
+					local success, returned = Luna:SaveConfig(selectedConfig)
+					if not success then
+						Luna:Notification({
+							Title = "Interface",
+							Icon = "error",
+							ImageSource = "Material",
+							Content = "Unable to overwrite config, return error: " .. returned
+						})
+						return
+					end
+
+					Luna:Notification({
+						Title = "Interface",
+						Icon = "info",
+						ImageSource = "Material",
+						Content = string.format("Overwrote config %q", selectedConfig),
+					})
+				end
+			})
+
+			Tab:CreateButton({
+				Name = "Refresh Config List",
+				Description = "Refresh the current config list.",
+				Callback = function()
+					configSelection:Set({ Options = Luna:RefreshConfigList() })
+				end,
+			})
+
+			local loadlabel
+			Tab:CreateButton({
+				Name = "Set as autoload",
+				Description = "Set a config to auto load setting in your next session.",
+				Callback = function()
+					local name = selectedConfig
+					writefile(Luna.Folder .. "/settings/autoload.txt", name)
+					loadlabel:Set({ Text = "Current autoload config: " .. name })
+
+					Luna:Notification({
+						Title = "Interface",
+						Icon = "info",
+						ImageSource = "Material",
+						Content = string.format("Set %q to auto load", name),
+					})
+				end,
+			})
+
+			loadlabel = Tab:CreateParagraph({
+				Title = "Current Auto Load",
+				Text = "None"
+			})
+
+			Tab:CreateButton({
+				Name = "Delete Autoload",
+				Description = "Delete The Autoload File",
+				Callback = function()
+					local name = selectedConfig
+					delfile(Luna.Folder .. "/settings/autoload.txt")
+					loadlabel:Set({ Text = "None" })
+
+					Luna:Notification({
+						Title = "Interface",
+						Icon = "info",
+						ImageSource = "Material",
+						Content = "Deleted Autoload",
+					})
+				end,
+			})
+
+			if isfile(Luna.Folder .. "/settings/autoload.txt") then
+				local name = readfile(Luna.Folder .. "/settings/autoload.txt")
+				loadlabel:Set( { Text = "Current autoload config: " .. name })
+			end     
+		end
+
+		local ClassParser = {
+			["Toggle"] = {
+				Save = function(Flag, data)
+					return {
+						type = "Toggle", 
+						flag = Flag, 
+						state = data.CurrentValue or false
+					}
+				end,
+				Load = function(Flag, data)
+					if Luna.Options[Flag] then
+						Luna.Options[Flag]:Set({ CurrentValue = data.state })
+					end
+				end
+			},
+			["Slider"] = {
+				Save = function(Flag, data)
+					return {
+						type = "Slider", 
+						flag = Flag, 
+						value = (data.CurrentValue and tostring(data.CurrentValue)),
+					}
+				end,
+				Load = function(Flag, data)
+					if Luna.Options[Flag] and data.value then
+						Luna.Options[Flag]:Set({ CurrentValue = data.value })
+					end
+				end
+			},
+			["Input"] = {
+				Save = function(Flag, data)
+					return {
+						type = "Input", 
+						flag = Flag, 
+						text = data.CurrentValue
+					}
+				end,
+				Load = function(Flag, data)
+					if Luna.Options[Flag] and data.text and type(data.text) == "string" then
+						Luna.Options[Flag]:Set({ CurrentValue = data.text })
+					end
+				end
+			},
+			["Dropdown"] = {
+				Save = function(Flag, data)
+					return {
+						type = "Dropdown", 
+						flag = Flag, 
+						value = data.CurrentOption
+					}
+				end,
+				Load = function(Flag, data)
+					if Luna.Options[Flag] and data.value then
+						Luna.Options[Flag]:Set({ CurrentOption = data.value })
+					end
+				end
+			},
+			-- buggy as hell stil
+			["Colorpicker"] = {
+				Save = function(Flag, data)
+					local function Color3ToHex(color)
+						return string.format("#%02X%02X%02X", math.floor(color.R * 255), math.floor(color.G * 255), math.floor(color.B * 255))
+					end
+
+					return {
+						type = "Colorpicker", 
+						flag = Flag, 
+						color = Color3ToHex(data.Color) or nil,
+						alpha = data.Alpha
+					}
+				end,
+				Load = function(Flag, data)
+					local function HexToColor3(hex)
+						local r = tonumber(hex:sub(2, 3), 16) / 255
+						local g = tonumber(hex:sub(4, 5), 16) / 255
+						local b = tonumber(hex:sub(6, 7), 16) / 255
+						return Color3.new(r, g, b)
+					end
+
+					if Luna.Options[Flag] and data.color then
+						Luna.Options[Flag]:Set({Color = HexToColor3(data.color)})
+					end
+				end
+			}
+		}
+
+
+		function Tab:BuildThemeSection()
+
+			local Title = Elements.Template.Title:Clone()
+			Title.Text = "Theming"
+			Title.Visible = true
+			Title.Parent = TabPage
+			Title.TextTransparency = 1
+			TweenService:Create(Title, TweenInfo.new(0.4, Enum.EasingStyle.Exponential, Enum.EasingDirection.Out), {TextTransparency = 0}):Play()
+
+			Tab:CreateSection("Custom Editor")
+
+			local c1cp = Tab:CreateColorPicker({
+				Name = "Color 1",
+				Color = Color3.fromRGB(117, 164, 206),
+			}, "LunaInterfaceSuitePrebuiltCPC1") -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+
+			local c2cp = Tab:CreateColorPicker({
+				Name = "Color 2",
+				Color = Color3.fromRGB(123, 201, 201),
+			}, "LunaInterfaceSuitePrebuiltCPC2")
+
+			local c3cp = Tab:CreateColorPicker({
+				Name = "Color 3",
+				Color = Color3.fromRGB(224, 138, 184),
+			}, "LunaInterfaceSuitePrebuiltCPC3") 
+
+			task.wait(1)
+
+			c1cp:Set({
+				Callback = function(Value)
+					if c2cp and c3cp then
+						Luna.ThemeGradient = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Value or Color3.fromRGB(255,255,255)), ColorSequenceKeypoint.new(0.50, c2cp.Color or Color3.fromRGB(255,255,255)), ColorSequenceKeypoint.new(1.00, c3cp.Color or Color3.fromRGB(255,255,255))}
+						LunaUI.ThemeRemote.Value = not LunaUI.ThemeRemote.Value
+					end
+				end
+			})
+
+			c2cp:Set({
+				Callback = function(Value)
+					if c1cp and c3cp then
+						Luna.ThemeGradient = ColorSequence.new{ColorSequenceKeypoint.new(0.00, c1cp.Color or Color3.fromRGB(255,255,255)), ColorSequenceKeypoint.new(0.50, Value or Color3.fromRGB(255,255,255)), ColorSequenceKeypoint.new(1.00, c3cp.Color or Color3.fromRGB(255,255,255))}
+						LunaUI.ThemeRemote.Value = not LunaUI.ThemeRemote.Value
+					end
+				end
+			})
+
+			c3cp:Set({
+				Callback = function(Valuex)
+					if c2cp and c1cp then
+						Luna.ThemeGradient = ColorSequence.new{ColorSequenceKeypoint.new(0.00, c1cp.Color or Color3.fromRGB(255,255,255)), ColorSequenceKeypoint.new(0.50, c2cp.Color or Color3.fromRGB(255,255,255)), ColorSequenceKeypoint.new(1.00, Valuex or Color3.fromRGB(255,255,255))}
+						LunaUI.ThemeRemote.Value = not LunaUI.ThemeRemote.Value
+					end
+				end
+			})
+
+			Tab:CreateSection("Preset Gradients")
+
+			for i,v in pairs(PresetGradients) do
+				Tab:CreateButton({
+					Name = tostring(i),
+					Callback = function()
+						c1cp:Set({ Color = v[1] })
+						c2cp:Set({ Color = v[2] })
+						c3cp:Set({ Color = v[3] })
+					end,
+				})
+			end
+
+		end
+
+
+		local function BuildFolderTree()
+			if isStudio then return "Config system unavailable." end
+			local paths = {
+				Luna.Folder,
+				Luna.Folder .. "/settings"
+			}
+
+			for i = 1, #paths do
+				local str = paths[i]
+				if not isfolder(str) then
+					makefolder(str)
+				end
+			end
+		end
+
+		local function SetFolder()
+
+			if isStudio then return "Config system unavailable." end
+
+			if WindowSettings.ConfigSettings.RootFolder ~= nil and WindowSettings.ConfigSettings.RootFolder ~= "" then
+				Luna.Folder = WindowSettings.ConfigSettings.RootFolder .. "/" .. WindowSettings.ConfigSettings.ConfigFolder
+			else
+				Luna.Folder = WindowSettings.ConfigSettings.ConfigFolder
+			end
+
+			BuildFolderTree()
+		end
+
+		SetFolder()
+
+		function Luna:SaveConfig(Path)
+			if isStudio then return "Config system unavailable." end
+
+			if (not Path) then
+				return false, "Please select a config file."
+			end
+
+			local fullPath = Luna.Folder .. "/settings/" .. Path .. ".luna"
+
+			local data = {
+				objects = {}
+			}
+
+			for flag, option in next, Luna.Options do
+				if not ClassParser[option.Class] then continue end
+				if option.IgnoreConfig then continue end
+
+				table.insert(data.objects, ClassParser[option.Class].Save(flag, option))
+			end	
+
+			local success, encoded = pcall(HttpService.JSONEncode, HttpService, data)
+			if not success then
+				return false, "Unable to encode into JSON data"
+			end
+
+			writefile(fullPath, encoded)
+			return true
+		end
+
+		function Luna:LoadConfig(Path)
+			if isStudio then return "Config system unavailable." end
+
+			if (not Path) then
+				return false, "Please select a config file."
+			end
+
+			local file = Luna.Folder .. "/settings/" .. Path .. ".luna"
+			if not isfile(file) then return false, "Invalid file" end
+
+			local success, decoded = pcall(HttpService.JSONDecode, HttpService, readfile(file))
+			if not success then return false, "Unable to decode JSON data." end
+
+			for _, option in next, decoded.objects do
+				if ClassParser[option.type] then
+					task.spawn(function() 
+						ClassParser[option.type].Load(option.flag, option) 
+					end)
+				end
+			end
+
+			return true
+		end
+
+		function Luna:LoadAutoloadConfig()
+			if isfile(Luna.Folder .. "/settings/autoload.txt") then
+
+				if isStudio then return "Config system unavailable." end
+
+				local name = readfile(Luna.Folder .. "/settings/autoload.txt")
+
+				local success, err = Luna:LoadConfig(name)
+				if not success then
+					return Luna:Notification({
+						Title = "Interface",
+						Icon = "sparkle",
+						ImageSource = "Material",
+						Content = "Failed to load autoload config: " .. err,
+					})
+				end
+
+				Luna:Notification({
+					Title = "Interface",
+					Icon = "sparkle",
+					ImageSource = "Material",
+					Content = string.format("Auto loaded config %q", name),
+				})
+
+			end 
+		end
+
+		function Luna:RefreshConfigList()
+			if isStudio then return "Config system unavailable." end
+
+			local list = listfiles(Luna.Folder .. "/settings")
+
+			local out = {}
+			for i = 1, #list do
+				local file = list[i]
+				if file:sub(-5) == ".luna" then
+					local pos = file:find(".luna", 1, true)
+					local start = pos
+
+					local char = file:sub(pos, pos)
+					while char ~= "/" and char ~= "\\" and char ~= "" do
+						pos = pos - 1
+						char = file:sub(pos, pos)
+					end
+
+					if char == "/" or char == "\\" then
+						local name = file:sub(pos + 1, start - 1)
+						if name ~= "options" then
+							table.insert(out, name)
+						end
+					end
+				end
+			end
+
+			return out
+		end
+		return Tab
+	end
+
+
+	Elements.Parent.Visible = true
+	tween(Elements.Parent, {BackgroundTransparency = 0.1})
+	Navigation.Visible = true
+	tween(Navigation.Line, {BackgroundTransparency = 0})
+
+	for _, TopbarButton in ipairs(Main.Controls:GetChildren()) do
+		if TopbarButton.ClassName == "Frame" and TopbarButton.Name ~= "Theme" then
+			TopbarButton.Visible = true
+			tween(TopbarButton, {BackgroundTransparency = 0.25})
+			tween(TopbarButton.UIStroke, {Transparency = 0.5})
+			tween(TopbarButton.ImageLabel, {ImageTransparency = 0.25})
+		end
+	end
+
+	Main.Controls.Close.ImageLabel.MouseButton1Click:Connect(function()
+		-- Destruir toda la interfaz y resetear el guard para poder reejecutar
+		Luna:Destroy()
+		if getgenv then
+			getgenv().BladeXLoaded = nil
+		end
+	end)
+	Main.Controls.Close["MouseEnter"]:Connect(function()
+		tween(Main.Controls.Close.ImageLabel, {ImageColor3 = Color3.new(1,1,1)})
+	end)
+	Main.Controls.Close["MouseLeave"]:Connect(function()
+		tween(Main.Controls.Close.ImageLabel, {ImageColor3 = Color3.fromRGB(195,195,195)})
+	end)
+
+	UserInputService.InputBegan:Connect(function(input, gpe)
+		if gpe then return end
+		if Window.State then return end
+		if input.KeyCode == Window.Bind then
+			Unhide(Main, Window.CurrentTab)
+			LunaUI.MobileSupport.Visible = false
+			dragBar.Visible = true
+			Window.State = true
+		end
+	end)
+
+	Main.Logo.MouseButton1Click:Connect(function()
+		if Navigation.Size.X.Offset == 205 then
+			tween(Elements.Parent, {Size = UDim2.new(1, -55, Elements.Parent.Size.Y.Scale, Elements.Parent.Size.Y.Offset)})
+			tween(Navigation, {Size = UDim2.new(Navigation.Size.X.Scale, 55, Navigation.Size.Y.Scale, Navigation.Size.Y.Offset)})
+		else
+			tween(Elements.Parent, {Size = UDim2.new(1, -205, Elements.Parent.Size.Y.Scale, Elements.Parent.Size.Y.Offset)})
+			tween(Navigation, {Size = UDim2.new(Navigation.Size.X.Scale, 205, Navigation.Size.Y.Scale, Navigation.Size.Y.Offset)})
+		end
+	end)
+
+	Main.Controls.ToggleSize.ImageLabel.MouseButton1Click:Connect(function()
+		Window.Size = not Window.Size
+		if Window.Size then
+			Minimize(Main)
+			dragBar.Visible = false
+		else
+			Maximise(Main)
+			dragBar.Visible = true
+		end
+	end)
+	Main.Controls.ToggleSize["MouseEnter"]:Connect(function()
+		tween(Main.Controls.ToggleSize.ImageLabel, {ImageColor3 = Color3.new(1,1,1)})
+	end)
+	Main.Controls.ToggleSize["MouseLeave"]:Connect(function()
+		tween(Main.Controls.ToggleSize.ImageLabel, {ImageColor3 = Color3.fromRGB(195,195,195)})
+	end)
+
+	Main.Controls.Theme.ImageLabel.MouseButton1Click:Connect(function()
+		if Window.Settings then
+			Window.Settings:Activate()
+			Elements.Settings.CanvasPosition = Vector2.new(0,698)
+		end
+	end)
+	Main.Controls.Theme["MouseEnter"]:Connect(function()
+		tween(Main.Controls.Theme.ImageLabel, {ImageColor3 = Color3.new(1,1,1)})
+	end)
+	Main.Controls.Theme["MouseLeave"]:Connect(function()
+		tween(Main.Controls.Theme.ImageLabel, {ImageColor3 = Color3.fromRGB(195,195,195)})
+	end)	
+
+
+	LunaUI.MobileSupport.Interact.MouseButton1Click:Connect(function()
+		Unhide(Main, Window.CurrentTab)
+		dragBar.Visible = true
+		Window.State = true
+		LunaUI.MobileSupport.Visible = false
+	end)
+
+	return Window
+end
+
+function Luna:Destroy()
+	Main.Visible = false
+	for _, Notification in ipairs(Notifications:GetChildren()) do
+		if Notification.ClassName == "Frame" then
+			Notification.Visible = false
+			Notification:Destroy()
+		end
+	end
+	LunaUI:Destroy()
+end
+
+-- Suppress deprecated warning to avoid errors before UI is initialized
+if getgenv then getgenv().ConfirmLuna = true end
+
+;(function()
+	-- =============================================
+	--   BLADEX KEY SYSTEM
+	-- =============================================
+	local KEY_URL   = "https://raw.githubusercontent.com/martin009gonzg-cmd/bladex-keys/refs/heads/main/bladex-keys.txt"
+
+	-- Cargar keys remotas desde GitHub
+	local remoteKeys = {}
+	local ok, data = pcall(game.HttpGet, game, KEY_URL)
+	if ok and data then
+		for line in data:gmatch("[^\r\n]+") do
+			local k = line:match("^%s*(.-)%s*$")
+			if k ~= "" then table.insert(remoteKeys, k) end
+		end
+	end
+
+	local Window = Luna:CreateWindow({
+		Name            = "BladeX",
+		Subtitle        = "",
+		LogoID          = "113679886240651",
+		LoadingEnabled  = true,
+		LoadingTitle    = "BladeX",
+		LoadingSubtitle = "",
+		KeySystem       = true,
+		KeySettings     = {
+			Title       = "BladeX | Key System",
+			Subtitle    = "Ingresa tu key para continuar",
+			Note        = "Obtén tu key en nuestro Discord",
+			FileName    = "bladex_key",
+			SaveKey     = true,
+			Key         = remoteKeys,
+			SecondAction = {
+				Enabled   = false,
+				Type      = "Discord",
+				Parameter = ""
+			}
+		}
+	})
+	
+	local Tabs = {
+		Extra = Window:CreateTab({
+			Name = "Home",
+			Icon = "dashboard",
+			ImageSource = "Material",
+			ShowTitle = true
+		}),
+		Aimbot = Window:CreateTab({
+			Name = "Aimbot",
+			Icon = "gps_fixed",
+			ImageSource = "Material",
+			ShowTitle = true
+		}),
+		Scripts = Window:CreateTab({
+			Name = "Scripts",
+			Icon = "6031097225",
+			ImageSource = "Custom",
+			ShowTitle = true
+		}),
+		Info = Window:CreateTab({
+			Name = "Info",
+			Icon = "info",
+			ImageSource = "Material",
+			ShowTitle = true
+		})
+	}
+
+	Window:CreateHomeTab({
+		DiscordInvite = "noinvitelink"
+	})
+
+
+	-- ============================================================
+	--   BLADEX  |  AIMBOT MÓVIL V4  +  MOBILE GUI
+	--   Inspirado en interfaz móvil: panel flotante drag,
+	--   toggles ON/OFF, FOV slider, flechas de target, botón X
+	--   Método: mousemoverel + camera lerp (funciona en móvil)
+	-- ============================================================
+
+	local SV   = game:GetService("Players")
+	local RS   = game:GetService("RunService")
+	local UIS  = game:GetService("UserInputService")
+	local WS   = game:GetService("Workspace")
+	local TW   = game:GetService("TweenService")
+	local LP   = SV.LocalPlayer
+	local CAM  = WS.CurrentCamera
+
+	-- ── CONFIG ────────────────────────────────────────────────
+	local CFG = {
+		Enabled       = false,
+		TeamCheck     = true,
+		WallCheck     = true,
+		KillCheck     = false,  -- ignorar targets con < 5 HP
+		FOVRadius     = 293,
+		SmoothFactor  = 10,
+		PredictFactor = 0.13,
+		PingComp      = true,
+		Jitter        = true,
+		JitterAmt     = 0.4,
+		MaxDist       = 1500,
+		TargetPart    = "Head",
+		StickyAim     = true,
+		StickyTime    = 1.5,
+		MaxLockTime   = 5.0,
+		-- ESP
+		ESPEnabled    = false,
+		ESPBox        = true,
+		ESPName       = true,
+		ESPHealth     = true,
+		ESPDist       = true,
+		ESPTracers    = false,
+		ESPColor      = Color3.fromRGB(255, 60, 60),
+		ESPMaxDist    = 1000,
+	}
+
+	-- ── ESTADO ────────────────────────────────────────────────
+	local ST = {
+		IsAiming    = false,
+		Targets     = {},    -- lista ordenada de targets visibles
+		TargetIdx   = 1,     -- índice del target seleccionado
+		Target      = nil,
+		LockStart   = 0,
+		LastLock    = 0,
+		Ping        = 0.05,
+		Conn        = nil,
+		FOVCircle   = nil,
+		TargetDot   = nil,
+		TargetLine  = nil,
+		ESPObjs     = {},
+		JitterT     = 0,
+		RainT       = 0,
+		_pingT      = 0,
+	}
+
+	-- ╔══════════════════════════════════════════════════════╗
+	--   UTILIDADES
+	-- ╚══════════════════════════════════════════════════════╝
+	local function GetChar(p)  return p and p.Character end
+	local function GetHRP(p)   local c=GetChar(p or LP) return c and c:FindFirstChild("HumanoidRootPart") end
+	local function GetHum(p)   local c=GetChar(p or LP) return c and c:FindFirstChildOfClass("Humanoid") end
+
+	local function IsTeam(pl)
+		if not CFG.TeamCheck then return false end
+		return pl.Team ~= nil and pl.Team == LP.Team
+	end
+
+	local function CanSee(origin, part)
+		if not CFG.WallCheck then return true end
+		local dir = part.Position - origin
+		if dir.Magnitude > CFG.MaxDist then return false end
+		local p = RaycastParams.new()
+		p.FilterType = Enum.RaycastFilterType.Exclude
+		p.FilterDescendantsInstances = {LP.Character or {}}
+		local r = WS:Raycast(origin, dir.Unit*(dir.Magnitude+2), p)
+		return r and r.Instance:IsDescendantOf(part.Parent)
+	end
+
+	local function ScreenDist(pos)
+		local sp, vis = CAM:WorldToViewportPoint(pos)
+		if not vis then return math.huge, Vector2.zero, Vector2.zero end
+		local c = CAM.ViewportSize/2
+		local d = Vector2.new(sp.X-c.X, sp.Y-c.Y)
+		return d.Magnitude, d, Vector2.new(sp.X, sp.Y)
+	end
+
+	local function InFOV(pos)
+		return (ScreenDist(pos)) <= CFG.FOVRadius
+	end
+
+	local function UpdatePing()
+		local n = os.clock()
+		if n - ST._pingT < 1 then return end
+		ST._pingT = n
+		pcall(function() ST.Ping = LP:GetNetworkPing() end)
+	end
+
+	-- ╔══════════════════════════════════════════════════════╗
+	--   AIMBOT CORE  (mousemoverel = universal, incluye móvil)
+	-- ╚══════════════════════════════════════════════════════╝
+	local function BuildTargetList()
+		local list = {}
+		local hrp  = GetHRP(LP)
+		for _, pl in pairs(SV:GetPlayers()) do
+			if pl == LP then continue end
+			local c  = GetChar(pl)
+			if not c then continue end
+			local h  = c:FindFirstChildOfClass("Humanoid")
+			local pt = c:FindFirstChild(CFG.TargetPart) or c:FindFirstChild("Head")
+			if not (h and h.Health > 0 and pt) then continue end
+			if IsTeam(pl) then continue end
+			if CFG.KillCheck and h.Health < 5 then continue end
+			if hrp and (pt.Position-hrp.Position).Magnitude > CFG.MaxDist then continue end
+			if not InFOV(pt.Position) then continue end
+			if not CanSee(CAM.CFrame.Position, pt) then continue end
+			local d = ScreenDist(pt.Position)
+			table.insert(list, {part=pt, dist=d, player=pl})
+		end
+		table.sort(list, function(a,b) return a.dist < b.dist end)
+		return list
+	end
+
+	local function GetTarget()
+		local list = BuildTargetList()
+		ST.Targets = list
+		if #list == 0 then return nil end
+		ST.TargetIdx = math.clamp(ST.TargetIdx, 1, #list)
+		return list[ST.TargetIdx].part
+	end
+
+	local function Predict(part)
+		if not part then return nil end
+		local f = CFG.PredictFactor + (CFG.PingComp and ST.Ping*0.6 or 0)
+		local v = part.Velocity
+		return part.Position + Vector3.new(v.X*f, v.Y*f*0.45, v.Z*f)
+	end
+
+	local function Jitter()
+		if not CFG.Jitter then return 0,0 end
+		ST.JitterT = ST.JitterT + 0.09
+		local a = CFG.JitterAmt
+		return math.sin(ST.JitterT*1.8+0.4)*a*(0.6+math.random()*0.7),
+		       math.cos(ST.JitterT*1.1+1.3)*a*(0.5+math.random()*0.8)
+	end
+
+	-- Mueve el mouse (sistema): funciona en PC y en ejecutores móviles
+	local function MoveToTarget(part)
+		if not part or not part.Parent then ST.Target=nil return end
+		local predicted = Predict(part)
+		local sp, vis   = CAM:WorldToViewportPoint(predicted)
+		if not vis then return end
+		local center    = CAM.ViewportSize/2
+		local dx, dy    = sp.X-center.X, sp.Y-center.Y
+		local rawDist   = math.sqrt(dx*dx+dy*dy)
+		local smooth    = CFG.SmoothFactor * math.clamp(rawDist/(CFG.FOVRadius*0.4+1), 0.1, 4)
+		local jx, jy    = Jitter()
+		local mx = dx/smooth + jx
+		local my = dy/smooth + jy
+		if math.abs(mx) > 0.05 or math.abs(my) > 0.05 then
+			-- mousemoverel funciona en todos los executores (Fluxus, Delta, Codex, etc.)
+			pcall(mousemoverel, mx, my)
+		end
+	end
+
+	local function AimLoop()
+		UpdatePing()
+		if not CFG.Enabled then ST.Target=nil return end
+		if not ST.IsAiming  then ST.Target=nil return end
+		local now = tick()
+		if ST.Target and ST.Target.Parent then
+			if now-ST.LockStart > CFG.MaxLockTime then
+				ST.Target=nil
+			elseif InFOV(ST.Target.Position) and CanSee(CAM.CFrame.Position, ST.Target) then
+				MoveToTarget(ST.Target) return
+			elseif CFG.StickyAim and (now-ST.LastLock)<CFG.StickyTime then
+				MoveToTarget(ST.Target) return
+			else
+				ST.Target=nil
+			end
+		end
+		local t = GetTarget()
+		if t then
+			ST.Target    = t
+			ST.LastLock  = now
+			ST.LockStart = now
+			MoveToTarget(t)
+		end
+	end
+
+	-- ╔══════════════════════════════════════════════════════╗
+	--   DRAWINGS  (FOV circle + target dot)
+	-- ╚══════════════════════════════════════════════════════╝
+	local function MkCircle(th,ns,r,col,al,fill,zi)
+		local c=Drawing.new("Circle")
+		c.Thickness=th c.NumSides=ns c.Radius=r c.Color=col
+		c.Transparency=al c.Filled=fill c.ZIndex=zi c.Visible=false
+		return c
+	end
+	local function MkLine(th,col,al,zi)
+		local l=Drawing.new("Line")
+		l.Thickness=th l.Color=col l.Transparency=al l.ZIndex=zi l.Visible=false
+		return l
+	end
+	local function MkText(sz,col,zi)
+		local t=Drawing.new("Text")
+		t.Size=sz t.Color=col t.Outline=true t.ZIndex=zi t.Visible=false
+		return t
+	end
+
+	local function CreateFOVDrawings()
+		if ST.FOVCircle  then ST.FOVCircle:Remove()  end
+		if ST.TargetDot  then ST.TargetDot:Remove()  end
+		if ST.TargetLine then ST.TargetLine:Remove() end
+		ST.FOVCircle  = MkCircle(1.8, 128, CFG.FOVRadius, Color3.fromRGB(255,255,255), 0.45, false, 5)
+		ST.TargetDot  = MkCircle(1, 32, 5, Color3.fromRGB(255,60,60), 0.05, true, 7)
+		ST.TargetLine = MkLine(1.2, Color3.fromRGB(255,60,60), 0.25, 6)
+	end
+
+	local function RemoveFOVDrawings()
+		if ST.FOVCircle  then ST.FOVCircle:Remove()  ST.FOVCircle=nil  end
+		if ST.TargetDot  then ST.TargetDot:Remove()  ST.TargetDot=nil  end
+		if ST.TargetLine then ST.TargetLine:Remove() ST.TargetLine=nil end
+	end
+
+	local function UpdateFOVDrawings()
+		if not ST.FOVCircle then return end
+		local center = CAM.ViewportSize/2
+		ST.FOVCircle.Position    = Vector2.new(center.X, center.Y)
+		ST.FOVCircle.Radius      = CFG.FOVRadius
+		ST.FOVCircle.Visible     = CFG.Enabled
+		local hasTgt = ST.Target and ST.Target.Parent
+		if hasTgt then
+			local sp,vis = CAM:WorldToViewportPoint(ST.Target.Position)
+			if vis then
+				local tp = Vector2.new(sp.X,sp.Y)
+				ST.TargetDot.Position = tp
+				ST.TargetDot.Visible  = true
+				ST.TargetLine.From    = Vector2.new(center.X,center.Y)
+				ST.TargetLine.To      = tp
+				ST.TargetLine.Visible = true
+			else
+				ST.TargetDot.Visible=false ST.TargetLine.Visible=false
+			end
+		else
+			if ST.TargetDot  then ST.TargetDot.Visible=false  end
+			if ST.TargetLine then ST.TargetLine.Visible=false end
+		end
+	end
+
+	-- ╔══════════════════════════════════════════════════════╗
+	--   ESP
+	-- ╚══════════════════════════════════════════════════════╝
+	local BONE_OFF = {
+		Vector3.new(0,2.6,0), Vector3.new(0,1.3,0),
+		Vector3.new(0,0,0),   Vector3.new(0,-1.3,0),
+		Vector3.new(-1.5,1.2,0), Vector3.new(1.5,1.2,0),
+		Vector3.new(-0.6,-2.2,0),Vector3.new(0.6,-2.2,0),
+	}
+	local function GetBBox(hrp)
+		local x1,y1,x2,y2 = math.huge,math.huge,-math.huge,-math.huge
+		local any=false
+		for _,off in pairs(BONE_OFF) do
+			local wp = hrp.CFrame:PointToWorldSpace(off)
+			local sp,vis = CAM:WorldToViewportPoint(wp)
+			if vis then
+				any=true
+				if sp.X<x1 then x1=sp.X end if sp.Y<y1 then y1=sp.Y end
+				if sp.X>x2 then x2=sp.X end if sp.Y>y2 then y2=sp.Y end
+			end
+		end
+		if not any then return nil end
+		return x1-3,y1-3,x2+3,y2+3
+	end
+
+	local function MakeESP(pl)
+		local o={}
+		o.box={}
+		for i=1,4 do o.box[i]=MkLine(1.2,CFG.ESPColor,0,8) end
+		o.fill=Drawing.new("Square") o.fill.Filled=true o.fill.Color=CFG.ESPColor
+		o.fill.Transparency=0.88 o.fill.Thickness=0 o.fill.Visible=false o.fill.ZIndex=7
+		o.name=MkText(13,Color3.fromRGB(255,255,255),9)
+		o.hpBg=MkLine(4,Color3.fromRGB(0,0,0),0,8)
+		o.hpBar=MkLine(3,Color3.fromRGB(80,220,80),0,9)
+		o.dist=MkText(11,Color3.fromRGB(200,200,200),9)
+		o.tracer=MkLine(1,CFG.ESPColor,0.2,6)
+		ST.ESPObjs[pl]=o
+	end
+
+	local function HideESP(o)
+		if not o then return end
+		for _,l in pairs(o.box) do l.Visible=false end
+		o.fill.Visible=false o.name.Visible=false
+		o.hpBg.Visible=false o.hpBar.Visible=false
+		o.dist.Visible=false o.tracer.Visible=false
+	end
+
+	local function RemoveESP(pl)
+		local o=ST.ESPObjs[pl] if not o then return end
+		for _,l in pairs(o.box) do pcall(function() l:Remove() end) end
+		for _,k in pairs({"fill","name","hpBg","hpBar","dist","tracer"}) do
+			pcall(function() o[k]:Remove() end)
+		end
+		ST.ESPObjs[pl]=nil
+	end
+
+	local function DrawESP(pl,o)
+		local c=GetChar(pl) local hrp=c and c:FindFirstChild("HumanoidRootPart")
+		local hum=c and c:FindFirstChildOfClass("Humanoid")
+		if not(hrp and hum and hum.Health>0) then HideESP(o) return end
+		local myH=GetHRP(LP)
+		local dist=myH and math.floor((hrp.Position-myH.Position).Magnitude) or 0
+		if dist>CFG.ESPMaxDist then HideESP(o) return end
+		local x1,y1,x2,y2=GetBBox(hrp)
+		if not x1 then HideESP(o) return end
+		local col=CFG.ESPColor
+		-- Box
+		local segs={{Vector2.new(x1,y1),Vector2.new(x2,y1)},
+		            {Vector2.new(x1,y2),Vector2.new(x2,y2)},
+		            {Vector2.new(x1,y1),Vector2.new(x1,y2)},
+		            {Vector2.new(x2,y1),Vector2.new(x2,y2)}}
+		for i,s in pairs(segs) do
+			o.box[i].From=s[1] o.box[i].To=s[2] o.box[i].Color=col
+			o.box[i].Visible=CFG.ESPBox
+		end
+		-- Name
+		if CFG.ESPName then
+			o.name.Text=pl.Name
+			o.name.Position=Vector2.new((x1+x2)/2-#pl.Name*3.5, y1-16)
+			o.name.Visible=true
+		else o.name.Visible=false end
+		-- HP
+		if CFG.ESPHealth then
+			local hp=math.clamp(hum.Health/hum.MaxHealth,0,1)
+			local bx=x1-7
+			o.hpBg.From=Vector2.new(bx,y1) o.hpBg.To=Vector2.new(bx,y2) o.hpBg.Visible=true
+			local hcol=Color3.fromRGB(math.floor(255*(1-hp)),math.floor(220*hp),30)
+			o.hpBar.From=Vector2.new(bx,y2) o.hpBar.To=Vector2.new(bx,y2-(y2-y1)*hp)
+			o.hpBar.Color=hcol o.hpBar.Visible=true
+		else o.hpBg.Visible=false o.hpBar.Visible=false end
+		-- Dist
+		if CFG.ESPDist then
+			o.dist.Text=dist.."m"
+			o.dist.Position=Vector2.new((x1+x2)/2-12, y2+3)
+			o.dist.Visible=true
+		else o.dist.Visible=false end
+		-- Tracer
+		if CFG.ESPTracers then
+			local sp,vis=CAM:WorldToViewportPoint(hrp.Position)
+			if vis then
+				local vp=CAM.ViewportSize
+				o.tracer.From=Vector2.new(vp.X/2,vp.Y)
+				o.tracer.To=Vector2.new(sp.X,sp.Y)
+				o.tracer.Color=col o.tracer.Visible=true
+			else o.tracer.Visible=false end
+		else o.tracer.Visible=false end
+	end
+
+	local function ESPLoop()
+		if not CFG.ESPEnabled then
+			for pl,_ in pairs(ST.ESPObjs) do HideESP(ST.ESPObjs[pl]) end
+			return
+		end
+		for _,pl in pairs(SV:GetPlayers()) do
+			if pl==LP or IsTeam(pl) then
+				if ST.ESPObjs[pl] then HideESP(ST.ESPObjs[pl]) end
+				continue
+			end
+			if not ST.ESPObjs[pl] then MakeESP(pl) end
+			DrawESP(pl, ST.ESPObjs[pl])
+		end
+		for pl,_ in pairs(ST.ESPObjs) do
+			if not pl.Parent then RemoveESP(pl) end
+		end
+	end
+
+	-- ╔══════════════════════════════════════════════════════╗
+	--   MOBILE GUI  — Panel flotante arrastrable
+	--   Estilo: "Aimbot Mobile" de la imagen de referencia
+	-- ╚══════════════════════════════════════════════════════╝
+	local function CreateMobileGUI()
+		-- Limpiar GUI anterior si existe
+		pcall(function()
+			local old = LP.PlayerGui:FindFirstChild("BladeXMobile")
+			if old then old:Destroy() end
+		end)
+
+		local sg = Instance.new("ScreenGui")
+		sg.Name              = "BladeXMobile"
+		sg.ResetOnSpawn      = false
+		sg.DisplayOrder      = 999
+		sg.IgnoreGuiInset    = true
+		sg.ZIndexBehavior    = Enum.ZIndexBehavior.Sibling
+		pcall(function() sg.Parent = LP.PlayerGui end)
+		pcall(function()
+			if not sg.Parent then
+				sg.Parent = game:GetService("CoreGui")
+			end
+		end)
+
+		-- Panel principal
+		local panel = Instance.new("Frame", sg)
+		panel.Name               = "Panel"
+		panel.Size               = UDim2.fromOffset(260, 310)
+		panel.Position           = UDim2.fromOffset(500, 180)
+		panel.BackgroundColor3   = Color3.fromRGB(28, 28, 35)
+		panel.BorderSizePixel    = 0
+		panel.Active             = true
+		panel.ClipsDescendants   = true
+
+		local corner = Instance.new("UICorner", panel)
+		corner.CornerRadius = UDim.new(0, 12)
+
+		-- Borde brillante
+		local stroke = Instance.new("UIStroke", panel)
+		stroke.Color     = Color3.fromRGB(255, 255, 255)
+		stroke.Thickness = 1.5
+		stroke.Transparency = 0.6
+
+		-- Título del panel (draggable)
+		local titleBar = Instance.new("Frame", panel)
+		titleBar.Size            = UDim2.new(1,0,0,44)
+		titleBar.BackgroundColor3 = Color3.fromRGB(18,18,24)
+		titleBar.BorderSizePixel = 0
+		titleBar.ZIndex          = 2
+
+		local tcorner = Instance.new("UICorner", titleBar)
+		tcorner.CornerRadius = UDim.new(0, 12)
+
+		-- fix corner bottom del titlebar
+		local titleFix = Instance.new("Frame", titleBar)
+		titleFix.Size = UDim2.new(1,0,0,12)
+		titleFix.Position = UDim2.new(0,0,1,-12)
+		titleFix.BackgroundColor3 = Color3.fromRGB(18,18,24)
+		titleFix.BorderSizePixel = 0
+		titleFix.ZIndex = 2
+
+		local titleLabel = Instance.new("TextLabel", titleBar)
+		titleLabel.Size            = UDim2.new(1,-44,1,0)
+		titleLabel.Position        = UDim2.new(0,0,0,0)
+		titleLabel.BackgroundTransparency = 1
+		titleLabel.Text            = "Aimbot Mobile"
+		titleLabel.TextColor3      = Color3.fromRGB(255,255,255)
+		titleLabel.Font            = Enum.Font.GothamBold
+		titleLabel.TextSize        = 17
+		titleLabel.ZIndex          = 3
+
+		-- Botón X cerrar
+		local closeBtn = Instance.new("TextButton", titleBar)
+		closeBtn.Size              = UDim2.fromOffset(30, 30)
+		closeBtn.Position          = UDim2.new(1,-36,0.5,-15)
+		closeBtn.BackgroundColor3  = Color3.fromRGB(200, 40, 40)
+		closeBtn.Text              = "X"
+		closeBtn.TextColor3        = Color3.fromRGB(255,255,255)
+		closeBtn.Font              = Enum.Font.GothamBold
+		closeBtn.TextSize          = 14
+		closeBtn.BorderSizePixel   = 0
+		closeBtn.ZIndex            = 4
+		Instance.new("UICorner", closeBtn).CornerRadius = UDim.new(0,8)
+
+		closeBtn.MouseButton1Click:Connect(function()
+			panel.Visible = false
+		end)
+
+		-- Botón para re-abrir (esquina superior derecha del juego)
+		local reopenBtn = Instance.new("TextButton", sg)
+		reopenBtn.Size             = UDim2.fromOffset(44, 44)
+		reopenBtn.Position         = UDim2.new(1,-54, 0, 10)
+		reopenBtn.BackgroundColor3 = Color3.fromRGB(28,28,35)
+		reopenBtn.Text             = "🎯"
+		reopenBtn.TextSize         = 22
+		reopenBtn.Font             = Enum.Font.GothamBold
+		reopenBtn.BorderSizePixel  = 0
+		reopenBtn.ZIndex           = 10
+		Instance.new("UICorner", reopenBtn).CornerRadius = UDim.new(0,10)
+		local rStroke = Instance.new("UIStroke", reopenBtn)
+		rStroke.Color = Color3.fromRGB(255,255,255) rStroke.Thickness=1.2 rStroke.Transparency=0.5
+		reopenBtn.MouseButton1Click:Connect(function()
+			panel.Visible = true
+		end)
+
+		-- ── Drag ───────────────────────────────────────────
+		local dragging, dragStart, startPos = false, nil, nil
+		titleBar.InputBegan:Connect(function(inp)
+			if inp.UserInputType == Enum.UserInputType.MouseButton1
+			or inp.UserInputType == Enum.UserInputType.Touch then
+				dragging = true
+				dragStart = inp.Position
+				startPos  = panel.Position
+			end
+		end)
+		local function onMove(inp)
+			if not dragging then return end
+			local delta = inp.Position - dragStart
+			panel.Position = UDim2.fromOffset(
+				startPos.X.Offset + delta.X,
+				startPos.Y.Offset + delta.Y
+			)
+		end
+		titleBar.InputChanged:Connect(onMove)
+		UIS.InputChanged:Connect(function(inp)
+			if inp.UserInputType == Enum.UserInputType.MouseMovement
+			or inp.UserInputType == Enum.UserInputType.Touch then
+				onMove(inp)
+			end
+		end)
+		UIS.InputEnded:Connect(function(inp)
+			if inp.UserInputType == Enum.UserInputType.MouseButton1
+			or inp.UserInputType == Enum.UserInputType.Touch then
+				dragging = false
+			end
+		end)
+
+		-- ── Contenido ──────────────────────────────────────
+		local content = Instance.new("Frame", panel)
+		content.Size             = UDim2.new(1,0,1,-44)
+		content.Position         = UDim2.new(0,0,0,44)
+		content.BackgroundTransparency = 1
+
+		local layout = Instance.new("UIListLayout", content)
+		layout.Padding         = UDim.new(0, 0)
+		layout.SortOrder       = Enum.SortOrder.LayoutOrder
+		layout.HorizontalAlignment = Enum.HorizontalAlignment.Center
+
+		-- Helper: fila de toggle
+		local function MakeRow(labelText, initVal, callback, order)
+			local row = Instance.new("Frame", content)
+			row.Size             = UDim2.new(1,0,0,46)
+			row.BackgroundTransparency = 1
+			row.LayoutOrder      = order
+
+			-- separador
+			local sep = Instance.new("Frame", row)
+			sep.Size             = UDim2.new(0.85,0,0,1)
+			sep.Position         = UDim2.new(0.075,0,0,0)
+			sep.BackgroundColor3 = Color3.fromRGB(60,60,75)
+			sep.BorderSizePixel  = 0
+
+			local lbl = Instance.new("TextLabel", row)
+			lbl.Size             = UDim2.new(0.62,0,1,-2)
+			lbl.Position         = UDim2.new(0.06,0,0,1)
+			lbl.BackgroundTransparency = 1
+			lbl.Text             = labelText
+			lbl.TextColor3       = Color3.fromRGB(220,220,235)
+			lbl.Font             = Enum.Font.Gotham
+			lbl.TextSize         = 15
+			lbl.TextXAlignment   = Enum.TextXAlignment.Left
+
+			-- Toggle pill
+			local pillBg = Instance.new("Frame", row)
+			pillBg.Size          = UDim2.fromOffset(52,26)
+			pillBg.Position      = UDim2.new(0.72,0,0.5,-13)
+			pillBg.BackgroundColor3 = initVal and Color3.fromRGB(50,200,80) or Color3.fromRGB(80,80,95)
+			pillBg.BorderSizePixel = 0
+			Instance.new("UICorner", pillBg).CornerRadius = UDim.new(1,0)
+
+			local pill = Instance.new("Frame", pillBg)
+			pill.Size            = UDim2.fromOffset(20,20)
+			pill.Position        = initVal and UDim2.fromOffset(29,3) or UDim2.fromOffset(3,3)
+			pill.BackgroundColor3 = Color3.fromRGB(255,255,255)
+			pill.BorderSizePixel = 0
+			Instance.new("UICorner", pill).CornerRadius = UDim.new(1,0)
+
+			-- Estado ON label
+			local valLabel = Instance.new("TextLabel", row)
+			valLabel.Size        = UDim2.fromOffset(40,20)
+			valLabel.Position    = UDim2.new(1,-46,0.5,-10)
+			valLabel.BackgroundTransparency = 1
+			valLabel.Text        = initVal and "ON" or "OFF"
+			valLabel.TextColor3  = initVal and Color3.fromRGB(50,220,80) or Color3.fromRGB(160,160,180)
+			valLabel.Font        = Enum.Font.GothamBold
+			valLabel.TextSize    = 13
+
+			local state = initVal
+			local btn = Instance.new("TextButton", row)
+			btn.Size             = UDim2.new(1,0,1,0)
+			btn.BackgroundTransparency = 1
+			btn.Text             = ""
+			btn.ZIndex           = 5
+
+			btn.MouseButton1Click:Connect(function()
+				state = not state
+				local ti = TweenInfo.new(0.18, Enum.EasingStyle.Quad)
+				TW:Create(pillBg, ti, {BackgroundColor3 = state and Color3.fromRGB(50,200,80) or Color3.fromRGB(80,80,95)}):Play()
+				TW:Create(pill, ti, {Position = state and UDim2.fromOffset(29,3) or UDim2.fromOffset(3,3)}):Play()
+				valLabel.Text      = state and "ON" or "OFF"
+				valLabel.TextColor3 = state and Color3.fromRGB(50,220,80) or Color3.fromRGB(160,160,180)
+				callback(state)
+			end)
+
+			return row
+		end
+
+		-- Helper: slider de FOV
+		local function MakeFOVSlider(order)
+			local row = Instance.new("Frame", content)
+			row.Size             = UDim2.new(1,0,0,56)
+			row.BackgroundTransparency = 1
+			row.LayoutOrder      = order
+
+			local sep = Instance.new("Frame", row)
+			sep.Size             = UDim2.new(0.85,0,0,1)
+			sep.Position         = UDim2.new(0.075,0,0,0)
+			sep.BackgroundColor3 = Color3.fromRGB(60,60,75)
+			sep.BorderSizePixel  = 0
+
+			local topRow = Instance.new("Frame", row)
+			topRow.Size          = UDim2.new(1,0,0,22)
+			topRow.Position      = UDim2.new(0,0,0,6)
+			topRow.BackgroundTransparency = 1
+
+			local lbl = Instance.new("TextLabel", topRow)
+			lbl.Size             = UDim2.new(0.55,0,1,0)
+			lbl.Position         = UDim2.new(0.06,0,0,0)
+			lbl.BackgroundTransparency = 1
+			lbl.Text             = "FOV:"
+			lbl.TextColor3       = Color3.fromRGB(220,220,235)
+			lbl.Font             = Enum.Font.Gotham
+			lbl.TextSize         = 15
+			lbl.TextXAlignment   = Enum.TextXAlignment.Left
+
+			local valLbl = Instance.new("TextLabel", topRow)
+			valLbl.Size          = UDim2.new(0.4,0,1,0)
+			valLbl.Position      = UDim2.new(0.55,0,0,0)
+			valLbl.BackgroundTransparency = 1
+			valLbl.Text          = tostring(CFG.FOVRadius)
+			valLbl.TextColor3    = Color3.fromRGB(255,255,255)
+			valLbl.Font          = Enum.Font.GothamBold
+			valLbl.TextSize      = 15
+			valLbl.TextXAlignment = Enum.TextXAlignment.Right
+
+			-- Track
+			local trackBg = Instance.new("Frame", row)
+			trackBg.Size         = UDim2.new(0.86,0,0,6)
+			trackBg.Position     = UDim2.new(0.07,0,0,34)
+			trackBg.BackgroundColor3 = Color3.fromRGB(60,60,80)
+			trackBg.BorderSizePixel = 0
+			Instance.new("UICorner", trackBg).CornerRadius = UDim.new(1,0)
+
+			local trackFill = Instance.new("Frame", trackBg)
+			local pct = (CFG.FOVRadius - 50) / (600 - 50)
+			trackFill.Size       = UDim2.new(pct,0,1,0)
+			trackFill.BackgroundColor3 = Color3.fromRGB(255,255,255)
+			trackFill.BorderSizePixel = 0
+			Instance.new("UICorner", trackFill).CornerRadius = UDim.new(1,0)
+
+			local thumb = Instance.new("Frame", trackBg)
+			thumb.Size           = UDim2.fromOffset(16,16)
+			thumb.Position       = UDim2.new(pct,0,0.5,-8)
+			thumb.BackgroundColor3 = Color3.fromRGB(255,255,255)
+			thumb.BorderSizePixel = 0
+			Instance.new("UICorner", thumb).CornerRadius = UDim.new(1,0)
+
+			-- Drag slider
+			local slideDrag = false
+			local function Slide(inp)
+				local rel = (inp.Position.X - trackBg.AbsolutePosition.X) / trackBg.AbsoluteSize.X
+				rel = math.clamp(rel, 0, 1)
+				local val = math.floor(50 + rel * (600-50))
+				CFG.FOVRadius = val
+				valLbl.Text   = tostring(val)
+				trackFill.Size = UDim2.new(rel,0,1,0)
+				thumb.Position = UDim2.new(rel,0,0.5,-8)
+				if ST.FOVCircle then ST.FOVCircle.Radius = val end
+			end
+			trackBg.InputBegan:Connect(function(inp)
+				if inp.UserInputType == Enum.UserInputType.MouseButton1
+				or inp.UserInputType == Enum.UserInputType.Touch then
+					slideDrag = true Slide(inp)
+				end
+			end)
+			UIS.InputChanged:Connect(function(inp)
+				if not slideDrag then return end
+				if inp.UserInputType == Enum.UserInputType.MouseMovement
+				or inp.UserInputType == Enum.UserInputType.Touch then Slide(inp) end
+			end)
+			UIS.InputEnded:Connect(function(inp)
+				if inp.UserInputType == Enum.UserInputType.MouseButton1
+				or inp.UserInputType == Enum.UserInputType.Touch then slideDrag = false end
+			end)
+		end
+
+		-- Helper: fila de navegación de targets (flechas)
+		local function MakeTargetRow(order)
+			local row = Instance.new("Frame", content)
+			row.Size             = UDim2.new(1,0,0,52)
+			row.BackgroundTransparency = 1
+			row.LayoutOrder      = order
+
+			local sep = Instance.new("Frame", row)
+			sep.Size             = UDim2.new(0.85,0,0,1)
+			sep.Position         = UDim2.new(0.075,0,0,0)
+			sep.BackgroundColor3 = Color3.fromRGB(60,60,75)
+			sep.BorderSizePixel  = 0
+
+			-- Botón izquierda
+			local btnL = Instance.new("TextButton", row)
+			btnL.Size            = UDim2.fromOffset(42,34)
+			btnL.Position        = UDim2.new(0.06,0,0.5,-17)
+			btnL.BackgroundColor3 = Color3.fromRGB(50,50,65)
+			btnL.Text            = "◀"
+			btnL.TextColor3      = Color3.fromRGB(255,255,255)
+			btnL.Font            = Enum.Font.GothamBold
+			btnL.TextSize        = 18
+			btnL.BorderSizePixel = 0
+			Instance.new("UICorner", btnL).CornerRadius = UDim.new(0,8)
+
+			-- Nombre del target
+			local tname = Instance.new("TextLabel", row)
+			tname.Name           = "TargetName"
+			tname.Size           = UDim2.new(0.52,0,0,34)
+			tname.Position       = UDim2.new(0.24,0,0.5,-17)
+			tname.BackgroundColor3 = Color3.fromRGB(40,40,55)
+			tname.BorderSizePixel = 0
+			tname.Text           = "—"
+			tname.TextColor3     = Color3.fromRGB(255,180,50)
+			tname.Font           = Enum.Font.GothamBold
+			tname.TextSize       = 13
+			Instance.new("UICorner", tname).CornerRadius = UDim.new(0,6)
+
+			-- Botón derecha
+			local btnR = Instance.new("TextButton", row)
+			btnR.Size            = UDim2.fromOffset(42,34)
+			btnR.Position        = UDim2.new(0.82,0,0.5,-17)
+			btnR.BackgroundColor3 = Color3.fromRGB(50,50,65)
+			btnR.Text            = "▶"
+			btnR.TextColor3      = Color3.fromRGB(255,255,255)
+			btnR.Font            = Enum.Font.GothamBold
+			btnR.TextSize        = 18
+			btnR.BorderSizePixel = 0
+			Instance.new("UICorner", btnR).CornerRadius = UDim.new(0,8)
+
+			-- Actualizar label de target
+			local function RefreshLabel()
+				local list = ST.Targets
+				if #list == 0 then tname.Text = "—" return end
+				local idx = math.clamp(ST.TargetIdx,1,#list)
+				local pl = list[idx] and list[idx].player
+				tname.Text = pl and pl.Name or "—"
+			end
+
+			btnL.MouseButton1Click:Connect(function()
+				local list = BuildTargetList()
+				ST.Targets = list
+				if #list == 0 then return end
+				ST.TargetIdx = ST.TargetIdx - 1
+				if ST.TargetIdx < 1 then ST.TargetIdx = #list end
+				ST.Target = list[ST.TargetIdx] and list[ST.TargetIdx].part
+				RefreshLabel()
+			end)
+			btnR.MouseButton1Click:Connect(function()
+				local list = BuildTargetList()
+				ST.Targets = list
+				if #list == 0 then return end
+				ST.TargetIdx = ST.TargetIdx + 1
+				if ST.TargetIdx > #list then ST.TargetIdx = 1 end
+				ST.Target = list[ST.TargetIdx] and list[ST.TargetIdx].part
+				RefreshLabel()
+			end)
+
+			-- Actualizar label cada 0.5s
+			task.spawn(function()
+				while sg and sg.Parent do
+					task.wait(0.5)
+					RefreshLabel()
+				end
+			end)
+		end
+
+		-- ── Construir filas ─────────────────────────────────
+
+		-- Fila 1: Activar Aimbot
+		MakeRow("Ativar Aimbot:", false, function(v)
+			CFG.Enabled = v
+			if v then
+				CreateFOVDrawings()
+				ST.IsAiming = true   -- en móvil siempre activo
+				if not ST.Conn then
+					ST.Conn = RS.RenderStepped:Connect(function()
+						UpdateFOVDrawings()
+						AimLoop()
+						ESPLoop()
+					end)
+				end
+			else
+				CFG.Enabled = false
+				ST.IsAiming = false
+				ST.Target   = nil
+				RemoveFOVDrawings()
+				if ST.Conn then ST.Conn:Disconnect() ST.Conn=nil end
+			end
+		end, 1)
+
+		-- Fila 2: FOV slider
+		MakeFOVSlider(2)
+
+		-- Fila 3: Team Check
+		MakeRow("Team Check:", true, function(v) CFG.TeamCheck = v end, 3)
+
+		-- Fila 4: Kill Check (ignorar bajos HP)
+		MakeRow("Kill Check:", false, function(v) CFG.KillCheck = v end, 4)
+
+		-- Fila 5: Wall Check
+		MakeRow("Wall Check:", true, function(v) CFG.WallCheck = v end, 5)
+
+		-- Fila 6: ESP
+		MakeRow("ESP (Hologramas):", false, function(v)
+			CFG.ESPEnabled = v
+			if not v then
+				for pl,_ in pairs(ST.ESPObjs) do HideESP(ST.ESPObjs[pl]) end
+			end
+		end, 6)
+
+		-- Fila 7: Target navigator
+		MakeTargetRow(7)
+
+		-- ── Botón APAGAR al fondo ─────────────────────────
+		local apagadoRow = Instance.new("Frame", content)
+		apagadoRow.Size  = UDim2.new(1,0,0,10) -- spacer
+		apagadoRow.BackgroundTransparency=1 apagadoRow.LayoutOrder=8
+	end
+
+	-- Lanzar la GUI móvil
+	-- Esperar a que el PlayerGui esté listo
+	task.spawn(function()
+		local ok = false
+		for _ = 1, 20 do
+			pcall(function()
+				if LP.PlayerGui then ok = true end
+			end)
+			if ok then break end
+			task.wait(0.5)
+		end
+		CreateMobileGUI()
+	end)
+
+	-- Eventos de jugadores para ESP
+	SV.PlayerAdded:Connect(function(p)
+		task.wait(1)
+		if CFG.ESPEnabled and p ~= LP then MakeESP(p) end
+	end)
+	SV.PlayerRemoving:Connect(function(p) RemoveESP(p) end)
+
+	-- ╔══════════════════════════════════════════════════════╗
+	--   LUNA TABS  (mantiene compatibilidad con el GUI Luna)
+	-- ╚══════════════════════════════════════════════════════╝
+
+	Tabs.Aimbot:CreateSection("🎯 Aimbot — Configuración Avanzada")
+	Tabs.Aimbot:CreateParagraph({
+		Title = "📱 GUI Móvil Activa",
+		Text  = "Usa el panel flotante en pantalla para control rápido.\nAquí puedes ajustar opciones avanzadas."
+	})
+
+	Tabs.Aimbot:CreateSlider({
+		Name="Suavizado (Smooth)", Description="1=instantáneo | 50=muy suave",
+		Range={1,50}, Increment=1, CurrentValue=10,
+		Callback=function(v) CFG.SmoothFactor=v end
+	})
+	Tabs.Aimbot:CreateSlider({
+		Name="Factor de Predicción", Description="Anticipa el movimiento del objetivo",
+		Range={5,35}, Increment=1, CurrentValue=13,
+		Callback=function(v) CFG.PredictFactor=v/100 end
+	})
+	Tabs.Aimbot:CreateToggle({
+		Name="Compensar Ping", Description="Ajusta predicción con latencia real",
+		CurrentValue=true, Callback=function(v) CFG.PingComp=v end
+	})
+	Tabs.Aimbot:CreateToggle({
+		Name="Micro-Jitter Humano", Description="Temblor natural anti-detección",
+		CurrentValue=true, Callback=function(v) CFG.Jitter=v end
+	})
+	Tabs.Aimbot:CreateSlider({
+		Name="Intensidad Jitter", Description="Píxeles de variación",
+		Range={0,20}, Increment=1, CurrentValue=4,
+		Callback=function(v) CFG.JitterAmt=v/10 end
+	})
+	Tabs.Aimbot:CreateToggle({
+		Name="Sticky Aim", Description="Mantiene el target aunque salga del FOV",
+		CurrentValue=true, Callback=function(v) CFG.StickyAim=v end
+	})
+	Tabs.Aimbot:CreateDropdown({
+		Name="Parte Objetivo", Description="Hitbox del enemigo",
+		Options={"Head","UpperTorso","HumanoidRootPart","LowerTorso"},
+		CurrentOption={"Head"}, Callback=function(v) CFG.TargetPart=v[1] or v end
+	})
+	Tabs.Aimbot:CreateSlider({
+		Name="Distancia Máxima (studs)", Description="Rango de detección",
+		Range={100,2000}, Increment=50, CurrentValue=1500,
+		Callback=function(v) CFG.MaxDist=v end
+	})
+
+	Tabs.Aimbot:CreateSection("⚙️ Presets Rápidos")
+	Tabs.Aimbot:CreateButton({
+		Name="🥷 Sigiloso", Description="Muy humano, anti-detección máxima",
+		Callback=function()
+			CFG.SmoothFactor=22 CFG.PredictFactor=0.10
+			CFG.Jitter=true CFG.JitterAmt=0.7 CFG.FOVRadius=100
+		end
+	})
+	Tabs.Aimbot:CreateButton({
+		Name="⚡ Agresivo", Description="Máxima velocidad",
+		Callback=function()
+			CFG.SmoothFactor=3 CFG.PredictFactor=0.22
+			CFG.Jitter=false CFG.FOVRadius=320
+		end
+	})
+	Tabs.Aimbot:CreateButton({
+		Name="⚖️ Balanceado", Description="Uso general recomendado",
+		Callback=function()
+			CFG.SmoothFactor=10 CFG.PredictFactor=0.13
+			CFG.Jitter=true CFG.JitterAmt=0.4 CFG.FOVRadius=200
+		end
+	})
+
+	Tabs.Scripts:CreateSection("🔴 ESP — Hologramas")
+	Tabs.Scripts:CreateToggle({
+		Name="ESP Box",Description="Caja 2D alrededor del enemigo",
+		CurrentValue=true,Callback=function(v) CFG.ESPBox=v end
+	})
+	Tabs.Scripts:CreateToggle({
+		Name="ESP Nombres",Description="Nombre del jugador sobre la caja",
+		CurrentValue=true,Callback=function(v) CFG.ESPName=v end
+	})
+	Tabs.Scripts:CreateToggle({
+		Name="ESP Barra de Vida",Description="HP bar lateral",
+		CurrentValue=true,Callback=function(v) CFG.ESPHealth=v end
+	})
+	Tabs.Scripts:CreateToggle({
+		Name="ESP Distancia",Description="Studs de distancia",
+		CurrentValue=true,Callback=function(v) CFG.ESPDist=v end
+	})
+	Tabs.Scripts:CreateToggle({
+		Name="ESP Tracers",Description="Líneas desde tu pantalla al enemigo",
+		CurrentValue=false,Callback=function(v) CFG.ESPTracers=v end
+	})
+	Tabs.Scripts:CreateColorPicker({
+		Name="Color ESP",Color=Color3.fromRGB(255,60,60),
+		Callback=function(v) CFG.ESPColor=v end
+	})
+	Tabs.Scripts:CreateSlider({
+		Name="Distancia Máx. ESP",Range={100,2000},Increment=50,CurrentValue=1000,
+		Callback=function(v) CFG.ESPMaxDist=v end
+	})
+	Tabs.Scripts:CreateSection("🎨 GUI Settings")
+
+
+	-- =============================================
+	--   SISTEMA DE BACKGROUND IMAGE (MEJORADO)
+	-- =============================================
+
+	-- Activar recorte en el frame principal para que la imagen no se salga
+	Main.ClipsDescendants = true
+
+	-- Imagen de fondo dentro del GUI (no fullscreen)
+	local bgImageLabel = Instance.new("ImageLabel")
+	bgImageLabel.Name = "BackgroundImage"
+	bgImageLabel.Size = UDim2.new(1, 0, 1, 0)
+	bgImageLabel.Position = UDim2.new(0, 0, 0, 0)
+	bgImageLabel.AnchorPoint = Vector2.new(0, 0)
+	bgImageLabel.BackgroundTransparency = 1
+	bgImageLabel.ImageTransparency = 0
+	bgImageLabel.ScaleType = Enum.ScaleType.Crop
+	bgImageLabel.ZIndex = 1  -- Dentro del GUI, detrás del contenido
+	bgImageLabel.Visible = false
+	bgImageLabel.Parent = Main.Elements.Parent  -- Dentro del contenedor de elementos
+
+	-- =============================================
+	--   PERSISTENCIA DE CONFIGURACIÓN
+	-- =============================================
+	local HttpService = game:GetService("HttpService")
+	local DEFAULT_ID = "6368108640"
+	local saveFolder = "BladeX"
+	local saveFile = saveFolder .. "/bgSettings.txt"
+
+	if not isfolder(saveFolder) then
+		pcall(function() makefolder(saveFolder) end)
+	end
+
+	-- Valores en memoria
+	local currentID = DEFAULT_ID
+	local currentTransparency = 0
+	local currentEnabled = false  -- se activa solo si el usuario lo guardó
+
+	-- Cargar configuración guardada
+	local function loadSettings()
+		if not isfile(saveFile) then return end
+		local ok, data = pcall(function()
+			return HttpService:JSONDecode(readfile(saveFile))
+		end)
+		if ok and type(data) == "table" then
+			currentID          = (type(data.imageID) == "string" and data.imageID ~= "") and data.imageID or DEFAULT_ID
+			currentTransparency = type(data.transparency) == "number" and math.clamp(data.transparency, 0, 1) or 0
+			currentEnabled     = data.enabled ~= false  -- default true
+		end
+	end
+
+	local function saveSettings()
+		pcall(function()
+			writefile(saveFile, HttpService:JSONEncode({
+				imageID      = currentID,
+				transparency = currentTransparency,
+				enabled      = currentEnabled,
+			}))
+		end)
+	end
+
+	-- Aplicar imagen con validación (soporta Decals y texturas directas)
+	local function applyImage(id)
+		if not id or id == "" then return end
+		local numericID = tostring(id):match("%d+")
+		if not numericID then return end
+
+		-- Intentar obtener la textura real del Decal
+		local finalImage = "rbxassetid://" .. numericID
+		pcall(function()
+			local obj = game:GetObjects("rbxassetid://" .. numericID)[1]
+			if obj and obj:IsA("Decal") and obj.Texture ~= "" then
+				finalImage = obj.Texture
+			elseif obj and obj:IsA("Texture") and obj.Texture ~= "" then
+				finalImage = obj.Texture
+			end
+		end)
+
+		currentID = numericID
+		bgImageLabel.Image = finalImage
+		bgImageLabel.Visible = currentEnabled
+		saveSettings()
+	end
+
+	local function applyTransparency(value)
+		currentTransparency = math.clamp(value, 0, 1)
+		bgImageLabel.ImageTransparency = currentTransparency
+		saveSettings()
+	end
+
+	-- Guardar valores originales ANTES de modificar nada
+	local origMain       = Main.BackgroundTransparency
+	local origElements   = Main.Elements.BackgroundTransparency
+	local origNav        = Main.Navigation.BackgroundTransparency
+	local origLine       = pcall(function() return Main.Line.BackgroundTransparency end) and Main.Line.BackgroundTransparency or 0
+	local origNavLine    = pcall(function() return Main.Navigation.Line.BackgroundTransparency end) and Main.Navigation.Line.BackgroundTransparency or 0
+	local origElementsParent = Main.Elements.Parent.BackgroundTransparency
+
+	local function setBgTransparent(transparent)
+		local t = TweenInfo.new(0.3, Enum.EasingStyle.Exponential)
+		if transparent then
+			TweenService:Create(Main, t, {BackgroundTransparency = 1}):Play()
+			TweenService:Create(Main.Elements, t, {BackgroundTransparency = 1}):Play()
+			TweenService:Create(Main.Navigation, t, {BackgroundTransparency = 1}):Play()
+			TweenService:Create(Main.Elements.Parent, t, {BackgroundTransparency = 1}):Play()
+			pcall(function() TweenService:Create(Main.Line, t, {BackgroundTransparency = 1}):Play() end)
+			pcall(function() TweenService:Create(Main.Navigation.Line, t, {BackgroundTransparency = 1}):Play() end)
+		else
+			TweenService:Create(Main, t, {BackgroundTransparency = origMain}):Play()
+			TweenService:Create(Main.Elements, t, {BackgroundTransparency = origElements}):Play()
+			TweenService:Create(Main.Navigation, t, {BackgroundTransparency = origNav}):Play()
+			TweenService:Create(Main.Elements.Parent, t, {BackgroundTransparency = origElementsParent}):Play()
+			pcall(function() TweenService:Create(Main.Line, t, {BackgroundTransparency = origLine}):Play() end)
+			pcall(function() TweenService:Create(Main.Navigation.Line, t, {BackgroundTransparency = origNavLine}):Play() end)
+		end
+	end
+
+	local function applyEnabled(value)
+		currentEnabled = value
+		bgImageLabel.Visible = value and currentID ~= ""
+		setBgTransparent(value)
+		saveSettings()
+	end
+
+	-- Cargar y aplicar configuración inicial
+	loadSettings()
+	-- Si no existía archivo, guardar el ID default ahora
+	if not isfile(saveFile) then
+		saveSettings()
+	end
+	-- Resolver textura del decal al inicio
+	local initImage = "rbxassetid://" .. currentID
+	pcall(function()
+		local obj = game:GetObjects("rbxassetid://" .. currentID)[1]
+		if obj and obj:IsA("Decal") and obj.Texture ~= "" then
+			initImage = obj.Texture
+		elseif obj and obj:IsA("Texture") and obj.Texture ~= "" then
+			initImage = obj.Texture
+		end
+	end)
+	bgImageLabel.Image = initImage
+	bgImageLabel.ImageTransparency = currentTransparency
+	bgImageLabel.Visible = currentEnabled
+	-- Si la imagen está activa, quitar el fondo de todos los frames
+	if currentEnabled then
+		Main.BackgroundTransparency = 1
+		pcall(function() Main.Elements.BackgroundTransparency = 1 end)
+		pcall(function() Main.Elements.Parent.BackgroundTransparency = 1 end)
+		pcall(function() Main.Navigation.BackgroundTransparency = 1 end)
+		pcall(function() Main.Line.BackgroundTransparency = 1 end)
+		pcall(function() Main.Navigation.Line.BackgroundTransparency = 1 end)
+	end
+
+	-- =============================================
+	--   CONTROLES EN LA INTERFAZ
+	-- =============================================
+	Tabs.Scripts:CreateToggle({
+		Name = "Enable Background Image",
+		Description = "Mostrar/ocultar imagen de fondo",
+		CurrentValue = currentEnabled,
+		Callback = function(Value)
+			applyEnabled(Value)
+		end
+	})
+
+	Tabs.Scripts:CreateSlider({
+		Name = "Image Transparency",
+		Description = "Set transparency of the Image",
+		Range = {0, 100},
+		Increment = 5,
+		CurrentValue = math.floor(currentTransparency * 100),
+		Callback = function(Value)
+			applyTransparency(Value / 100)
+		end
+	})
+
+	Tabs.Scripts:CreateInput({
+		Name = "Background Image ID",
+		Description = "Change GUI background image",
+		PlaceholderText = "rbxassetid://" .. currentID,
+		DefaultText = currentID,
+		NumbersOnly = false,
+		ClearTextAfterFocusLost = false,
+		Callback = function(Value)
+			if Value and Value ~= "" then
+				applyImage(Value)
+			end
+		end
+	})
+
+	-- Tab de Info
+	Tabs.Info:CreateSection("Redes Sociales")
+	Tabs.Info:CreateButton({
+		Name = "Discord",
+		Callback = function()
+			-- Pon aquí el link de tu Discord
+		end
+	})
+	Tabs.Info:CreateButton({
+		Name = "TikTok",
+		Callback = function()
+			-- Pon aquí el link de tu TikTok
+		end
+	})
+end)()
+-- THIS IS THE DEBUG DEMO, ONLY USED WHEN TESTING NEW ELEMENTS AND CODE
+--[[if isStudio then
+    window = Luna:CreateWindow({LoadingEnabled = false})
+    t1 = window:CreateTab()
+    t2 = window:CreateTab({ Name = "Tab 2", Icon = "location_searching"})
+    Luna:Notification({ 
+        Title = "Welcome to Luna",
+        Icon = "sparkle",
+        ImageSource = "Material",
+        Content = "Welcome to the Luna Interface Suite. This Is an Amazing Quality Freemium UI Library For Roblox Exploiting Made By Nebula Softworks. Luna was Created in hopes of improving the standard of UI Library designs by being the golden standard for it. Luna Has Amazing Features like a key system, notification and perfection in aesthetics and design. So, What Are You Waiting For? Start Using Luna Today at " .. website
+    })
+    t1:CreateSection()
+    local btn = t1:CreateButton({Callback = "", Description = "This Is A Description"})
+    local l = t1:CreateLabel({ Style = 2})
+    local l2 = t1:CreateLabel({ Text = "Another Label" })
+    t2:CreateButton({ Callback = function() 
+        l:Destroy()
+        l2:Set("New Text")
+    end})
+    t2:CreateLabel({Style = 3})
+    t1:CreateParagraph({Text = "Single String"})
+    t1:CreateParagraph({Text = "Welcome to the Luna Interface Suite. This Is an Amazing Quality Freemium UI Library For Roblox Exploiting Made By Nebula Softworks. Luna was Created in hopes of improving the standard of UI Library designs by being the golden standard for it. Luna Has Amazing Features like a key system, notification and perfection in aesthetics and design. So, What Are You Waiting For? Start Using Luna Today at " .. website})
+    s = t2:CreateSlider({ Callback = function(v) print(v) end })	
+    t1:CreateButton({ Callback = function()
+        s:Set({Name = "new name", Callback = ""})
+        wait(5)
+        s:Destroy()
+    end})
+    t1:CreateColorPicker()
+    local toggle = t1:CreateToggle({Name = "test", Description = "test", CurrentValue = true, Callback = ""}, "toggle2")
+    t1:CreateToggle({Callback = function(Value) toggle:Destroy() print(Value) end})
+    local bind = t2:CreateBind({Name = "test", Description = "test", CurrentBind = "E", HoldToInteract = false, Callback = ""})
+    t2:CreateKeybind({HoldToInteract = true, Callback = function(v)
+        if v then
+            Players.LocalPlayer.Character.Humanoid.WalkSpeed = 100
+        else
+            Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
+        end
+    end,})
+    local input = t2:CreateInput({Name = "test",ClearTextAfterFocusLost = false, Description = "Numbers only, 8 max characters and enter required.",MaxCharacters = 8 ,Numeric = true, Enter = true, Callback = ""})
+    t2:CreateInput({Callback = function(text) print(text) end})
+    local d = t1:CreateDropdown({Name = "test", Options = {"Apples", "Bananas", "Strawberries", "Elixir"}, Description = "MultiOptions", MultipleOptions = true, Callback = function(t) print(t) end, CurrentOption = {"Apples", "Elixir"}})
+    t1:CreateDropdown({Callback = function(t) print(unpack(t)) end})
+    t1:CreateDropdown({Description = "Special Type - Player", Callback = "", SpecialType = "Player"})
+end]]--
+return Luna
