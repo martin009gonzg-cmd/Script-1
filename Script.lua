@@ -1,12 +1,458 @@
+do
+	local function destroyNamed(parent, names)
+		if not parent then return end
+		local ok, children = pcall(function() return parent:GetChildren() end)
+		if not ok then return end
+		for _, gui in ipairs(children) do
+			for _, n in ipairs(names) do
+				if gui.Name == n then
+					pcall(function() gui:Destroy() end)
+					break
+				end
+			end
+		end
+	end
+
+	local NAMES = { "Luna UI", "LunaUI", "BladeX_MusicPlayer", "Luna", "Luna-Old" }
+	-- Fix: también destruir BladeXKeyUI anterior para evitar ventanas duplicadas al re-ejecutar
+	local KEY_NAMES = { "BladeXKeyUI" }
+
+	local _cg = game:GetService("CoreGui")
+	destroyNamed(_cg, NAMES)
+	destroyNamed(_cg, KEY_NAMES)
+
+	local _rcg = _cg:FindFirstChild("RobloxGui")
+	if _rcg then destroyNamed(_rcg, NAMES) destroyNamed(_rcg, KEY_NAMES) end
+
+	if gethui then
+		local ok, hui = pcall(gethui)
+		if ok and hui then
+			destroyNamed(hui, NAMES)
+			destroyNamed(hui, KEY_NAMES)
+		end
+	end
+
+	local _pg = game:GetService("Players").LocalPlayer:FindFirstChild("PlayerGui")
+	destroyNamed(_pg, NAMES)
+	destroyNamed(_pg, KEY_NAMES)
+
+	-- Fix: limpiar LunaBlur y DepthOfField residuales del BlurModule anterior
+	pcall(function()
+		local cam = workspace.CurrentCamera
+		if cam then
+			for _, v in ipairs(cam:GetChildren()) do
+				if v.Name == "LunaBlur" then v:Destroy() end
+			end
+		end
+		local lighting = game:GetService("Lighting")
+		for _, v in ipairs(lighting:GetChildren()) do
+			if v:IsA("DepthOfFieldEffect") and v.Name:sub(1,4) == "DPT_" then
+				v:Destroy()
+			end
+		end
+	end)
+
+	if _G.BladeXMusic then
+		pcall(function() _G.BladeXMusic:Stop() _G.BladeXMusic:Destroy() end)
+		_G.BladeXMusic = nil
+	end
+
+	if _G.BladeXProgressConn then
+		pcall(function() _G.BladeXProgressConn:Disconnect() end)
+		_G.BladeXProgressConn = nil
+	end
+
+	local ss = game:GetService("SoundService")
+	for _, s in ipairs(ss:GetChildren()) do
+		if s.Name == "BladeX_Music" then
+			pcall(function() s:Stop() s:Destroy() end)
+		end
+	end
+
+	if getgenv then getgenv().ConfirmLuna = nil end
+
+	-- ── LIMPIEZA POR REFERENCIA GLOBAL ─────────────────────────────
+	-- Si existe una ejecución anterior, destruir su LunaUI directamente
+	-- (independientemente de su nombre o contenedor actual)
+	if _G.BladeX_LunaUI then
+		pcall(function() _G.BladeX_LunaUI:Destroy() end)
+		_G.BladeX_LunaUI = nil
+	end
+
+	-- Desconectar el enforcer Heartbeat de ejecuciones anteriores
+	if getgenv then
+		local genv = getgenv()
+		if genv._BladeXDragGuard then
+			pcall(function() genv._BladeXDragGuard:Disconnect() end)
+			genv._BladeXDragGuard = nil
+		end
+		if genv._BladeXLoaderDone ~= nil then
+			genv._BladeXLoaderDone = nil
+		end
+	end
+
+	-- Destruir cualquier elemento suelto residual (Drag, ShadowHolder, MobileSupport)
+	-- que no haya sido eliminado junto con LunaUI
+	local _cleanContainers = {game:GetService("CoreGui")}
+	pcall(function()
+		local pg = game:GetService("Players").LocalPlayer:FindFirstChild("PlayerGui")
+		if pg then table.insert(_cleanContainers, pg) end
+	end)
+	if gethui then
+		pcall(function()
+			local h = gethui()
+			if h then table.insert(_cleanContainers, h) end
+		end)
+	end
+	local _GHOST_NAMES = {Drag=true, ShadowHolder=true, MobileSupport=true, BladeXLoader=true}
+	for _, container in ipairs(_cleanContainers) do
+		pcall(function()
+			for _, child in ipairs(container:GetDescendants()) do
+				if _GHOST_NAMES[child.Name] then
+					pcall(function() child:Destroy() end)
+				end
+			end
+		end)
+	end
+
+	task.wait(0.15)
+end
+
+-- ================================================================
+--   BLADEX LOADING SCREEN
+--   _loaderDone se activa al terminar completamente la animación
+-- ================================================================
+local _loaderDone = false
+task.spawn(function()
+	local ok, _TS  = pcall(function() return game:GetService("TweenService") end)
+	local ok2, _RS = pcall(function() return game:GetService("RunService")   end)
+	if not ok or not ok2 then return end
+
+	local _guiParent = game:GetService("CoreGui")
+	pcall(function()
+		local h = gethui()
+		if h then _guiParent = h end
+	end)
+
+	local C_OVERLAY = Color3.fromRGB(8,  4, 10)
+	local C_M_BG    = Color3.fromRGB(110, 18, 28)
+	local C_LOGO    = Color3.fromRGB(240, 55, 90)
+	local C_TEXT    = Color3.fromRGB(210, 75, 75)
+	local C_STAR    = Color3.fromRGB(255, 245, 245)
+
+	local _sg = Instance.new("ScreenGui")
+	_sg.Name           = "BladeXLoader"
+	_sg.IgnoreGuiInset = true
+	_sg.ResetOnSpawn   = false
+	_sg.DisplayOrder   = 9999
+	pcall(function() _sg.Parent = _guiParent end)
+
+	local _ov = Instance.new("Frame", _sg)
+	_ov.Size                   = UDim2.new(1, 0, 1, 0)
+	_ov.BackgroundColor3       = C_OVERLAY
+	_ov.BackgroundTransparency = 1
+	_ov.BorderSizePixel        = 0
+
+	-- Estrellas
+	math.randomseed(42)
+	for _ = 1, 60 do
+		local s = Instance.new("Frame", _ov)
+		local sz = math.random(1, 3)
+		s.Size                   = UDim2.new(0, sz, 0, sz)
+		s.Position               = UDim2.new(math.random(), 0, math.random(), 0)
+		s.BackgroundColor3       = C_STAR
+		s.BackgroundTransparency = math.random(55, 88) / 100
+		s.BorderSizePixel        = 0
+		s.ZIndex                 = 2
+		Instance.new("UICorner", s).CornerRadius = UDim.new(1, 0)
+	end
+
+	-- Gran "B" de fondo
+	local _bigB = Instance.new("TextLabel", _ov)
+	_bigB.Size                   = UDim2.new(0, 860, 0, 860)
+	_bigB.AnchorPoint            = Vector2.new(0.5, 0.5)
+	_bigB.Position               = UDim2.new(0.5, 0, 0.44, 0)
+	_bigB.BackgroundTransparency = 1
+	_bigB.Text                   = "B"
+	_bigB.TextColor3             = C_M_BG
+	_bigB.Font                   = Enum.Font.GothamBold
+	_bigB.TextScaled             = true
+	_bigB.TextTransparency       = 1
+	_bigB.ZIndex                 = 3
+
+	-- Logo container
+	local _lh = Instance.new("Frame", _ov)
+	_lh.Size                   = UDim2.new(0, 120, 0, 120)
+	_lh.AnchorPoint            = Vector2.new(0.5, 0.5)
+	_lh.Position               = UDim2.new(0.5, 0, 0.30, 0)
+	_lh.BackgroundTransparency = 1
+	_lh.ZIndex                 = 6
+
+	local _lglow = Instance.new("Frame", _lh)
+	_lglow.Size                   = UDim2.new(1, 30, 1, 30)
+	_lglow.Position               = UDim2.new(0, -15, 0, -15)
+	_lglow.BackgroundColor3       = C_LOGO
+	_lglow.BackgroundTransparency = 1
+	_lglow.BorderSizePixel        = 0
+	_lglow.ZIndex                 = 6
+	Instance.new("UICorner", _lglow).CornerRadius = UDim.new(1, 0)
+
+	local _lbase = Instance.new("Frame", _lh)
+	_lbase.Size                   = UDim2.new(1, 0, 1, 0)
+	_lbase.BackgroundColor3       = Color3.fromRGB(30, 6, 10)
+	_lbase.BackgroundTransparency = 1
+	_lbase.BorderSizePixel        = 0
+	_lbase.ZIndex                 = 7
+	Instance.new("UICorner", _lbase).CornerRadius = UDim.new(1, 0)
+
+	local _ltop = Instance.new("Frame", _lh)
+	_ltop.Size                   = UDim2.new(0.88, 0, 0.55, 0)
+	_ltop.Position               = UDim2.new(0.06, 0, 0.04, 0)
+	_ltop.BackgroundColor3       = C_LOGO
+	_ltop.BackgroundTransparency = 1
+	_ltop.BorderSizePixel        = 0
+	_ltop.ZIndex                 = 8
+	Instance.new("UICorner", _ltop).CornerRadius = UDim.new(0.4, 0)
+	local _tg = Instance.new("UIGradient", _ltop)
+	_tg.Rotation = 135
+	_tg.Color    = ColorSequence.new({
+		ColorSequenceKeypoint.new(0, Color3.fromRGB(255, 85, 115)),
+		ColorSequenceKeypoint.new(1, Color3.fromRGB(180, 30,  55))
+	})
+
+	local _lhole = Instance.new("Frame", _lh)
+	_lhole.Size                   = UDim2.new(0.55, 0, 0.50, 0)
+	_lhole.Position               = UDim2.new(0.22, 0, 0.30, 0)
+	_lhole.BackgroundColor3       = Color3.fromRGB(30, 6, 10)
+	_lhole.BackgroundTransparency = 1
+	_lhole.BorderSizePixel        = 0
+	_lhole.ZIndex                 = 9
+	Instance.new("UICorner", _lhole).CornerRadius = UDim.new(1, 0)
+
+	local _lbot = Instance.new("Frame", _lh)
+	_lbot.Size                   = UDim2.new(0.40, 0, 0.38, 0)
+	_lbot.Position               = UDim2.new(0.30, 0, 0.58, 0)
+	_lbot.BackgroundColor3       = C_LOGO
+	_lbot.BackgroundTransparency = 1
+	_lbot.BorderSizePixel        = 0
+	_lbot.ZIndex                 = 8
+	Instance.new("UICorner", _lbot).CornerRadius = UDim.new(0.5, 0)
+
+	-- Letras B L A D E X
+	local WORD    = {"B","L","A","D","E","X"}
+	local STEP    = 74
+	local TOTAL_W = #WORD * STEP - 14
+	local _letters = {}
+	for i, char in ipairs(WORD) do
+		local lbl = Instance.new("TextLabel", _ov)
+		lbl.Size                   = UDim2.new(0, 60, 0, 72)
+		lbl.AnchorPoint            = Vector2.new(0.5, 0.5)
+		lbl.Position               = UDim2.new(0.5, -TOTAL_W/2 + (i-0.5)*STEP, 0.68, 0)
+		lbl.BackgroundTransparency = 1
+		lbl.Text                   = char
+		lbl.TextColor3             = C_TEXT
+		lbl.Font                   = Enum.Font.GothamBold
+		lbl.TextScaled             = true
+		lbl.TextTransparency       = 1
+		lbl.ZIndex                 = 10
+		local g = Instance.new("UIGradient", lbl)
+		g.Rotation = 90
+		g.Color    = ColorSequence.new({
+			ColorSequenceKeypoint.new(0, Color3.fromRGB(235, 95, 95)),
+			ColorSequenceKeypoint.new(1, Color3.fromRGB(165, 42, 42))
+		})
+		_letters[i] = lbl
+	end
+
+	-- Spinner
+	local _spinAngle = 0
+	local _doSpin    = true
+	local _spinConn  = _RS.Heartbeat:Connect(function(dt)
+		if not _doSpin then return end
+		_spinAngle        = (_spinAngle + dt * 180) % 360
+		_ltop.Rotation    =  _spinAngle
+		_lbot.Rotation    = -_spinAngle
+		_lhole.Rotation   =  _spinAngle * 1.5
+		_lglow.BackgroundTransparency = 0.70 + math.sin(tick() * 3) * 0.10
+	end)
+
+	-- Fade-in overlay
+	_TS:Create(_ov, TweenInfo.new(0.5, Enum.EasingStyle.Quart), {BackgroundTransparency = 0.30}):Play()
+	task.wait(0.25)
+
+	-- Gran B aparece
+	_TS:Create(_bigB, TweenInfo.new(1.0, Enum.EasingStyle.Quart), {TextTransparency = 0.58}):Play()
+
+	-- Logo aparece (poner visible y animar)
+	_lglow.BackgroundTransparency = 0.75
+	_lbase.BackgroundTransparency = 0
+	_ltop.BackgroundTransparency  = 0
+	_lhole.BackgroundTransparency = 0
+	_lbot.BackgroundTransparency  = 0
+	_TS:Create(_lh, TweenInfo.new(0.75, Enum.EasingStyle.Back, Enum.EasingDirection.Out), {
+		Position = UDim2.new(0.5, 0, 0.38, 0)
+	}):Play()
+	task.wait(0.6)
+
+	-- Letras aparecen una por una
+	for i, lbl in ipairs(_letters) do
+		local px, ox = lbl.Position.X.Scale, lbl.Position.X.Offset
+		_TS:Create(lbl, TweenInfo.new(0.30, Enum.EasingStyle.Back, Enum.EasingDirection.Out), {
+			TextTransparency = 0,
+			Position         = UDim2.new(px, ox, 0.62, 0)
+		}):Play()
+		task.wait(0.075)
+	end
+	task.wait(0.8)
+
+	-- Fade-out
+	_doSpin = false
+	_TS:Create(_lh, TweenInfo.new(0.55, Enum.EasingStyle.Quart, Enum.EasingDirection.In), {
+		Position = UDim2.new(0.5, 0, 0.22, 0)
+	}):Play()
+	for _, d in ipairs(_lh:GetDescendants()) do
+		if d:IsA("Frame") then
+			_TS:Create(d, TweenInfo.new(0.45), {BackgroundTransparency = 1}):Play()
+		end
+	end
+	local _half = (#_letters + 1) / 2
+	for i, lbl in ipairs(_letters) do
+		local dir = (i - _half) / _half
+		_TS:Create(lbl, TweenInfo.new(0.40, Enum.EasingStyle.Quart, Enum.EasingDirection.In), {
+			TextTransparency = 1,
+			Position         = UDim2.new(lbl.Position.X.Scale + dir * 0.15, lbl.Position.X.Offset, 0.70, 0)
+		}):Play()
+		task.wait(0.025)
+	end
+	task.wait(0.15)
+	_TS:Create(_bigB, TweenInfo.new(0.5), {TextTransparency = 1}):Play()
+	_TS:Create(_ov,   TweenInfo.new(0.65, Enum.EasingStyle.Quart), {BackgroundTransparency = 1}):Play()
+	task.wait(0.7)
+	_spinConn:Disconnect()
+	pcall(function() _sg:Destroy() end)
+	_loaderDone = true  -- ✓ animación completada
+end)
+-- ================================================================
 
 
+-- ================================================================
+-- BLADEX TRANSPARENCY GUARD
+-- Función centralizada que corrige elementos transparentes residuales.
+-- Llámala si en el futuro modificas la UI y aparecen frames fantasma.
+-- ================================================================
+-- ================================================================
+-- BLADEX GHOST SCANNER & ENFORCER
+-- Escanea TODOS los hijos de LunaUI y neutraliza cualquier Frame
+-- o ImageLabel que esté renderizándose de forma no deseada.
+-- Se ejecuta al inicio y puede llamarse manualmente en cualquier momento.
+-- ================================================================
+local _ALLOWED_LUNAUI_CHILDREN = {
+	SmartWindow   = true,
+	Notifications = true,
+	Drag          = true,
+	-- ShadowHolder existe en el asset pero debe mantenerse invisible hasta que la ventana abra
+	ShadowHolder  = true,
+}
+
+-- ── Helper: neutraliza un elemento GUI por completo ──────────────
+-- Pone transparencia = 1, Visible = false y Active = false.
+-- Esto evita que frames INVISIBLES sigan mostrando el cursor de mano
+-- y capturando clics/toques en el juego.
+local function _neutralizeElement(obj)
+	pcall(function()
+		if obj:IsA("Frame") or obj:IsA("ScrollingFrame") then
+			obj.BackgroundTransparency = 1
+			obj.Visible = false
+			-- Active=false: impide que el Frame capture input y muestre "manita"
+			pcall(function() obj.Active = false end)
+		elseif obj:IsA("ImageLabel") then
+			obj.ImageTransparency = 1
+			obj.BackgroundTransparency = 1
+			obj.Visible = false
+		elseif obj:IsA("ImageButton") or obj:IsA("TextButton") then
+			obj.ImageTransparency    = 1
+			obj.BackgroundTransparency = 1
+			obj.Visible  = false
+			obj.AutoButtonColor = false
+			-- Botones invisibles: desactivar para no mostrar cursor de mano
+			pcall(function() obj.Active = false end)
+		elseif obj:IsA("TextLabel") then
+			obj.TextTransparency = 1
+			obj.BackgroundTransparency = 1
+			obj.Visible = false
+		end
+	end)
+end
+
+local function BladeX_Guard()
+	pcall(function()
+		if not LunaUI then return end
+
+		-- 1. Escanear TODOS los hijos directos de LunaUI
+		--    y forzar transparencia + Active=false en los desconocidos
+		for _, child in ipairs(LunaUI:GetChildren()) do
+			if not _ALLOWED_LUNAUI_CHILDREN[child.Name] then
+				_neutralizeElement(child)
+				pcall(function()
+					for _, d in ipairs(child:GetDescendants()) do
+						_neutralizeElement(d)
+					end
+				end)
+			end
+		end
+
+		-- 2. ShadowHolder específico: transparente y sin input cuando Main no es visible
+		local sh = LunaUI:FindFirstChild("ShadowHolder")
+		if sh then
+			sh.BackgroundTransparency = 1
+			sh.Visible = false
+			pcall(function() sh.Active = false end)
+			for _, d in ipairs(sh:GetDescendants()) do
+				_neutralizeElement(d)
+			end
+		end
+
+		-- 3. dragBar: siempre transparente (el enforcer Heartbeat lo cubre también)
+		local db = LunaUI:FindFirstChild("Drag")
+		if db then
+			db.BackgroundTransparency = 1
+			for _, d in ipairs(db:GetDescendants()) do
+				if d:IsA("Frame") and d.Name ~= "Drag" then
+					d.BackgroundTransparency = 1
+				end
+			end
+		end
+
+		-- 4. MobileSupport: destruir si existe (causa línea derecha y captura input)
+		local ms = LunaUI:FindFirstChild("MobileSupport")
+		if ms then pcall(function() ms:Destroy() end) end
+
+		-- 5. Limpiar ScreenGuis residuales del loader en todos los contenedores
+		local containers = {game:GetService("CoreGui"), Players.LocalPlayer:FindFirstChild("PlayerGui")}
+		if gethui then pcall(function() table.insert(containers, gethui()) end) end
+		for _, container in ipairs(containers) do
+			if container then
+				for _, sg in ipairs(container:GetChildren()) do
+					if sg.Name == "BladeXLoader" then
+						pcall(function() sg:Destroy() end)
+					end
+				end
+			end
+		end
+	end)
+end
+
+-- Esperar a que la animación de carga termine ANTES de inicializar Luna UI
+repeat task.wait(0.05) until _loaderDone
+BladeX_Guard()
+-- ================================================================
 
 local Release = "Prerelease Beta 6.1"
 
-local Luna = { 
-	Folder = "Luna", 
-	Options = {}, 
-	ThemeGradient = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(117, 164, 206)), ColorSequenceKeypoint.new(0.50, Color3.fromRGB(123, 201, 201)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(224, 138, 175))} 
+local Luna = {
+	Folder = "Luna",
+	Options = {},
+	ThemeGradient = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(117, 164, 206)), ColorSequenceKeypoint.new(0.50, Color3.fromRGB(123, 201, 201)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(224, 138, 175))}
 }
 
 local UserInputService = game:GetService("UserInputService")
@@ -26,7 +472,6 @@ if RunService:IsStudio() then
 	isStudio = true
 end
 
--- Credits To Latte Softworks And qweery for Lucide And Material Icons Respectively.
 local IconModule = {
 	Lucide = nil,
 	Material = {
@@ -1516,27 +1961,48 @@ local IconModule = {
 	}
 }
 
--- Other Variables
-local request = (syn and syn.request) or (http and http.request) or http_request or nil
+-- request: disponible para uso futuro por el framework (http request cross-executor)
+local request = (syn and syn.request) or (http and http.request) or (rawget(_G,"http_request")) or nil
 local tweeninfo = TweenInfo.new(0.3, Enum.EasingStyle.Exponential, Enum.EasingDirection.Out)
 local PresetGradients = {
-	["Nightlight (Classic)"] = {Color3.fromRGB(147, 255, 239), Color3.fromRGB(201,211,233), Color3.fromRGB(255, 167, 227)},
-	["Nightlight (Neo)"] = {Color3.fromRGB(117, 164, 206), Color3.fromRGB(123, 201, 201), Color3.fromRGB(224, 138, 175)},
+	-- ── Clásicos originales ─────────────────────────────────────────
+	["Nightlight (Classic)"] = {Color3.fromRGB(147, 255, 239), Color3.fromRGB(201, 211, 233), Color3.fromRGB(255, 167, 227)},
+	["Nightlight (Neo)"]     = {Color3.fromRGB(117, 164, 206), Color3.fromRGB(123, 201, 201), Color3.fromRGB(224, 138, 175)},
 	Starlight = {Color3.fromRGB(147, 255, 239), Color3.fromRGB(181, 206, 241), Color3.fromRGB(214, 158, 243)},
-	Solar = {Color3.fromRGB(242, 157, 76), Color3.fromRGB(240, 179, 81), Color3.fromRGB(238, 201, 86)},
-	Sparkle = {Color3.fromRGB(199, 130, 242), Color3.fromRGB(221, 130, 238), Color3.fromRGB(243, 129, 233)},
-	Lime = {Color3.fromRGB(170, 255, 127), Color3.fromRGB(163, 220, 138), Color3.fromRGB(155, 185, 149)},
-	Vine = {Color3.fromRGB(0, 191, 143), Color3.fromRGB(0, 126, 94), Color3.fromRGB(0, 61, 46)},
-	Cherry = {Color3.fromRGB(148, 54, 54), Color3.fromRGB(168, 67, 70), Color3.fromRGB(188, 80, 86)},
-	Daylight = {Color3.fromRGB(51, 156, 255), Color3.fromRGB(89, 171, 237), Color3.fromRGB(127, 186, 218)},
-	Blossom = {Color3.fromRGB(255, 165, 243), Color3.fromRGB(213, 129, 231), Color3.fromRGB(170, 92, 218)},
+	Solar     = {Color3.fromRGB(242, 157,  76), Color3.fromRGB(240, 179,  81), Color3.fromRGB(238, 201,  86)},
+	Sparkle   = {Color3.fromRGB(199, 130, 242), Color3.fromRGB(221, 130, 238), Color3.fromRGB(243, 129, 233)},
+	Lime      = {Color3.fromRGB(170, 255, 127), Color3.fromRGB(163, 220, 138), Color3.fromRGB(155, 185, 149)},
+	Vine      = {Color3.fromRGB(  0, 191, 143), Color3.fromRGB(  0, 126,  94), Color3.fromRGB(  0,  61,  46)},
+	Cherry    = {Color3.fromRGB(148,  54,  54), Color3.fromRGB(168,  67,  70), Color3.fromRGB(188,  80,  86)},
+	Daylight  = {Color3.fromRGB( 51, 156, 255), Color3.fromRGB( 89, 171, 237), Color3.fromRGB(127, 186, 218)},
+	Blossom   = {Color3.fromRGB(255, 165, 243), Color3.fromRGB(213, 129, 231), Color3.fromRGB(170,  92, 218)},
+	-- ── Nuevos presets ──────────────────────────────────────────────
+	-- Naranja → Magenta. Vibrante y llamativo.
+	Sunset    = {Color3.fromRGB(255,  94,  77), Color3.fromRGB(255, 154,  68), Color3.fromRGB(255, 206,  84)},
+	-- Azul eléctrico → Cyan puro. Estilo hacker.
+	Neon      = {Color3.fromRGB( 30, 215, 255), Color3.fromRGB( 20, 160, 255), Color3.fromRGB( 10,  90, 235)},
+	-- Índigo profundo → Violeta → Rosa. Estilo galaxia.
+	Galaxy    = {Color3.fromRGB( 70,  30, 160), Color3.fromRGB(130,  50, 200), Color3.fromRGB(210,  80, 180)},
+	-- Verde menta → Azul cielo. Fresco y limpio.
+	Arctic    = {Color3.fromRGB(160, 245, 220), Color3.fromRGB(110, 210, 240), Color3.fromRGB( 70, 160, 255)},
+	-- Rojo → Naranja intenso. Energético y agresivo.
+	Ember     = {Color3.fromRGB(255,  45,  45), Color3.fromRGB(255, 100,  20), Color3.fromRGB(255, 165,   0)},
+	-- Turquesa → Verde esmeralda. Elegante.
+	Emerald   = {Color3.fromRGB( 80, 235, 200), Color3.fromRGB( 30, 195, 145), Color3.fromRGB(  0, 145,  90)},
+	-- Magenta → Violeta oscuro. Llamativo y oscuro.
+	Amethyst  = {Color3.fromRGB(220,  80, 220), Color3.fromRGB(170,  50, 210), Color3.fromRGB(100,  20, 180)},
+	-- Dorado → Ámbar. Premium y lujoso.
+	Gold      = {Color3.fromRGB(255, 215,   0), Color3.fromRGB(235, 175,  20), Color3.fromRGB(200, 130,  40)},
+	-- Blanco → Gris plata. Minimalista y limpio.
+	Silver    = {Color3.fromRGB(240, 240, 245), Color3.fromRGB(190, 195, 210), Color3.fromRGB(130, 140, 165)},
+	-- Verde neón → Lima. Clásico gamer.
+	["Toxic"] = {Color3.fromRGB(100, 255,  50), Color3.fromRGB(155, 230,  30), Color3.fromRGB(200, 200,  10)},
 }
 
 local function GetIcon(icon, source)
 	if source == "Custom" then
 		return "rbxassetid://" .. icon
 	elseif source == "Lucide" then
-		-- full credit to latte softworks :)
 		local iconData = not isStudio and game:HttpGet("https://raw.githubusercontent.com/latte-soft/lucide-roblox/refs/heads/master/lib/Icons.luau")
 		local icons = isStudio and IconModule.Lucide or loadstring(iconData)()
 		if not isStudio then
@@ -1568,7 +2034,7 @@ local function GetIcon(icon, source)
 		else
 			return "rbxassetid://10723434557"
 		end
-	else	
+	else
 		if icon ~= nil and IconModule[source] then
 			local sourceicon = IconModule[source]
 			return sourceicon[icon]
@@ -1597,7 +2063,7 @@ end
 
 local function PackColor(Color)
 	return {R = Color.R * 255, G = Color.G * 255, B = Color.B * 255}
-end    
+end
 
 local function UnpackColor(Color)
 	return Color3.fromRGB(Color.R, Color.G, Color.B)
@@ -1634,7 +2100,7 @@ local function BlurModule(Frame)
 	frame.AnchorPoint = Vector2.new(0.5, 0.5)
 	frame.BackgroundTransparency = 1
 
-	local GenUid; do -- Generate unique names for RenderStepped bindings
+	local GenUid; do
 		local id = 0
 		function GenUid()
 			id = id + 1
@@ -1648,7 +2114,7 @@ local function BlurModule(Frame)
 		end
 		local continue = IsNotNaN(camera:ScreenPointToRay(0,0).Origin.x)
 		while not continue do
-			RunService.RenderStepped:wait()
+			RunService.RenderStepped:Wait()
 			continue = IsNotNaN(camera:ScreenPointToRay(0,0).Origin.x)
 		end
 	end
@@ -1657,7 +2123,7 @@ local function BlurModule(Frame)
 
 		local acos, max, pi, sqrt = math.acos, math.max, math.pi, math.sqrt
 		local sz = 0.22
-		local function DrawTriangle(v1, v2, v3, p0, p1) -- I think Stravant wrote this function
+		local function DrawTriangle(v1, v2, v3, p0, p1)
 
 			local s1 = (v1 - v2).magnitude
 			local s2 = (v2 - v3).magnitude
@@ -1777,10 +2243,10 @@ local function BlurModule(Frame)
 			end
 		end
 		DrawQuad(
-			camera:ScreenPointToRay(tl.x, tl.y, zIndex).Origin, 
-			camera:ScreenPointToRay(tr.x, tr.y, zIndex).Origin, 
-			camera:ScreenPointToRay(bl.x, bl.y, zIndex).Origin, 
-			camera:ScreenPointToRay(br.x, br.y, zIndex).Origin, 
+			camera:ScreenPointToRay(tl.x, tl.y, zIndex).Origin,
+			camera:ScreenPointToRay(tr.x, tr.y, zIndex).Origin,
+			camera:ScreenPointToRay(bl.x, bl.y, zIndex).Origin,
+			camera:ScreenPointToRay(br.x, br.y, zIndex).Origin,
 			parts
 		)
 		if fetchProps then
@@ -1817,7 +2283,6 @@ local function unpackt(array : table)
 	return val
 end
 
--- Interface Management
 local LunaUI
 if isStudio then
 	LunaUI = script.Parent:WaitForChild("Luna UI")
@@ -1831,6 +2296,8 @@ else
 		error("[BladeX] Error al cargar Luna UI. Verifica que tu executor soporte game:GetObjects.")
 	end
 end
+-- Guardar referencia global para que futuras ejecuciones puedan destruir esta instancia
+_G.BladeX_LunaUI = LunaUI
 
 local SizeBleh = nil
 
@@ -1841,7 +2308,6 @@ local function Hide(Window, bind, notif)
 	if notif then
 		Luna:Notification({Title = "Interface Hidden", Content = "The interface has been hidden, you may reopen the interface by Pressing the UI Bind In Settings ("..tostring(bind)..")", Icon = "visibility_off"})
 	end
-	-- Sonido al cerrar
 	pcall(function()
 		local snd = Instance.new("Sound")
 		snd.SoundId = "http://www.roblox.com/asset/?id=6031097225"
@@ -1883,17 +2349,59 @@ local function Hide(Window, bind, notif)
 	task.wait()
 	Window.Elements.Parent.Visible = false
 	Window.Visible = false
+	-- Colapsar dragBar al ocultar la ventana (usa FindFirstChild para no depender del upvalue)
+	pcall(function()
+		local db = LunaUI and LunaUI:FindFirstChild("Drag")
+		if db then
+			db.Visible = false
+			db.Size = UDim2.new(0, 0, 0, 0)
+			db.BackgroundTransparency = 1
+		end
+	end)
 end
 
-
+local _gethuiValid = false
 if gethui then
-	LunaUI.Parent = gethui()
-elseif syn and syn.protect_gui then 
-	syn.protect_gui(LunaUI)
+	local _ok, _hui = pcall(gethui)
+	if _ok and _hui and typeof(_hui) == "Instance" then
+		_gethuiValid = true
+	end
+end
+if _gethuiValid then
+	LunaUI.Enabled = false
+	pcall(function()
+		for _, child in ipairs(LunaUI:GetChildren()) do
+			if child:IsA("Frame") or child:IsA("ScrollingFrame") then
+				child.BackgroundTransparency = 1
+				child.Visible = false
+			elseif child:IsA("ImageLabel") then
+				child.ImageTransparency = 1
+				child.Visible = false
+			end
+		end
+	end)
+	local _ok2, _hui2 = pcall(gethui)
+	LunaUI.Parent = (_ok2 and _hui2) or CoreGui
+elseif pcall(function() return syn ~= nil and syn.protect_gui ~= nil end) and syn and syn.protect_gui then
+	LunaUI.Enabled = false
+	pcall(function()
+		for _, child in ipairs(LunaUI:GetChildren()) do
+			if child:IsA("Frame") or child:IsA("ScrollingFrame") then
+				child.BackgroundTransparency = 1
+				child.Visible = false
+			elseif child:IsA("ImageLabel") then
+				child.ImageTransparency = 1
+				child.Visible = false
+			end
+		end
+	end)
+	pcall(function() syn.protect_gui(LunaUI) end)
 	LunaUI.Parent = CoreGui
 elseif not isStudio and CoreGui:FindFirstChild("RobloxGui") then
+	LunaUI.Enabled = false
 	LunaUI.Parent = CoreGui:FindFirstChild("RobloxGui")
 elseif not isStudio then
+	LunaUI.Enabled = false
 	LunaUI.Parent = CoreGui
 end
 
@@ -1920,101 +2428,106 @@ LunaUI.SmartWindow.Visible = false
 LunaUI.Notifications.Template.Visible = false
 LunaUI.DisplayOrder = 1000000000
 
+-- Fix: ocultar el dragBar al inicio para evitar el frame fantasma en la izquierda
+if LunaUI:FindFirstChild("Drag") then
+	LunaUI.Drag.Visible = false
+	LunaUI.Drag.BackgroundTransparency = 1
+	LunaUI.Drag.Size = UDim2.new(0, 0, 0, 0)  -- tamaño cero: imposible renderizar
+end
+-- Fix: ocultar MobileSupport al inicio para evitar la línea fantasma en la derecha
+if LunaUI:FindFirstChild("MobileSupport") then
+	pcall(function() LunaUI.MobileSupport:Destroy() end)
+end
+
 local Main : Frame = LunaUI.SmartWindow
 local Dragger = Main.Drag
 local dragBar = LunaUI.Drag
 local dragInteract = dragBar and dragBar.Interact or nil
 local dragBarCosmetic = dragBar and dragBar.Drag or nil
+-- Fix: hardcodear el tamaño real del dragBar (no leerlo después de zeroearlo)
+local _dragBarOriginalSize = UDim2.new(1, 0, 0, 48)
+
+-- ================================================================
+-- DRAGBAR TRANSPARENCY ENFORCER (igual que v9 - sin restricción móvil)
+-- El dragBar puede resetearse por tweens, eventos o race conditions.
+-- Este enforcer Heartbeat lo corrige cada frame de forma permanente.
+-- ================================================================
+if dragBar then
+	dragBar.BackgroundTransparency = 1
+	dragBar.Size = UDim2.new(0, 0, 0, 0)
+	pcall(function()
+		for _, d in ipairs(dragBar:GetDescendants()) do
+			if d:IsA("Frame") and d ~= dragBarCosmetic then
+				d.BackgroundTransparency = 1
+			end
+		end
+	end)
+	local _dragGuardConn
+	_dragGuardConn = RunService.Heartbeat:Connect(function()
+		if not dragBar or not dragBar.Parent then
+			_dragGuardConn:Disconnect()
+			if getgenv then getgenv()._BladeXDragGuard = nil end
+			return
+		end
+		-- Cuando dragBar NO está visible: colapsar a tamaño cero Y transparente
+		if not dragBar.Visible then
+			if dragBar.BackgroundTransparency ~= 1 then dragBar.BackgroundTransparency = 1 end
+			if dragBar.Size ~= UDim2.new(0,0,0,0) then dragBar.Size = UDim2.new(0,0,0,0) end
+			return
+		end
+		-- Cuando SÍ está visible: restaurar tamaño si fue colapsado y mantener fondo transparente
+		if dragBar.Size == UDim2.new(0,0,0,0) then
+			dragBar.Size = _dragBarOriginalSize
+		end
+		if dragBar.BackgroundTransparency ~= 1 then
+			dragBar.BackgroundTransparency = 1
+		end
+		for _, d in ipairs(dragBar:GetDescendants()) do
+			if d:IsA("Frame") and d ~= dragBarCosmetic and d.BackgroundTransparency ~= 1 then
+				d.BackgroundTransparency = 1
+			end
+		end
+		-- Mantener ShadowHolder invisible cuando Main no es visible
+		pcall(function()
+			local sh = LunaUI:FindFirstChild("ShadowHolder")
+			if sh and not (Main and Main.Visible) then
+				if sh.BackgroundTransparency ~= 1 then sh.BackgroundTransparency = 1 end
+				for _, d in ipairs(sh:GetDescendants()) do
+					if d:IsA("ImageLabel") and d.ImageTransparency ~= 1 then d.ImageTransparency = 1 end
+					if d:IsA("Frame") and d.BackgroundTransparency ~= 1 then d.BackgroundTransparency = 1 end
+				end
+			end
+		end)
+		-- Mantener otros hijos desconocidos siempre transparentes
+		if LunaUI and LunaUI.Parent then
+			for _, child in ipairs(LunaUI:GetChildren()) do
+				if not _ALLOWED_LUNAUI_CHILDREN[child.Name] then
+					pcall(function()
+						if child:IsA("Frame") and child.BackgroundTransparency ~= 1 then
+							child.BackgroundTransparency = 1
+						end
+						if child:IsA("ImageLabel") and child.ImageTransparency ~= 1 then
+							child.ImageTransparency = 1
+						end
+					end)
+				end
+			end
+		end
+	end)
+	-- Guardar la conexión para poder desconectarla si se re-ejecuta el script
+	if getgenv then getgenv()._BladeXDragGuard = _dragGuardConn end
+end
+-- ================================================================
+-- Llamada inicial del Guard: LunaUI ya está declarado aquí,
+-- limpia ShadowHolder, hijos desconocidos y residuos del loader.
+BladeX_Guard()
+
 local Elements = Main.Elements.Interactions
 local LoadingFrame = Main.LoadingFrame
 local Navigation = Main.Navigation
 local Tabs = Navigation.Tabs
 local Notifications = LunaUI.Notifications
 local KeySystem : Frame = Main.KeySystem
-
--- local function LoadConfiguration(Configuration, autoload)
--- 	local Data = HttpService:JSONDecode(Configuration)
--- 	local changed
--- 	local notified = false
-
--- 	-- Iterate through current UI elements' flags
--- 	for FlagName, Flag in pairs(Luna.Flags) do
--- 		local FlagValue = Data[FlagName]
-
--- 		if FlagValue then
--- 			task.spawn(function()
--- 				if Flag.Type == "ColorPicker" then
--- 					changed = true
--- 					Flag:Set(UnpackColor(FlagValue))
--- 				else
--- 					if (Flag.CurrentValue or Flag.CurrentKeybind or Flag.CurrentOption or Flag.Color) ~= FlagValue then 
--- 						changed = true
--- 						Flag:Set(FlagValue) 	
--- 					end
--- 				end
--- 			end)
--- 		else
--- 			notified = true
--- 			Luna:Notification({Title = "Config Error", Content = "Luna was unable to load or find '"..FlagName.. "'' in the current script. Check ".. website .." for help.", Icon = "flag"})
--- 		end
--- 	end
--- 	if autoload and notified == false then
--- 		Luna:Notification({
--- 			Title = "Config Autoloaded",
--- 			Content = "The Configuration Has Been Automatically Loaded. Thank You For Using Luna Library",
--- 			Icon = "file-code-2",
--- 			ImageSource = "Lucide"
--- 		})
--- 	elseif notified == false then
--- 		Luna:Notification({
--- 			Title = "Config Loaded",
--- 			Content = "The Configuration Has Been Loaded. Thank You For Using Luna Library",
--- 			Icon = "file-code-2",
--- 			ImageSource = "Lucide"
--- 		})
--- 	end
-
--- 	return changed
--- end
-
--- local function SaveConfiguration(Configuration, ConfigFolder, hasRoot)
--- 	local Data = {}
--- 	for i,v in pairs(Luna.Flags) do
--- 		if v.Type == "ColorPicker" then
--- 			Data[i] = PackColor(v.Color)
--- 		else
--- 			Data[i] = v.CurrentValue or v.CurrentBind or v.CurrentOption or v.Color
--- 		end
--- 	end	
--- 	if hasRoot then
--- 		writefile(ConfigurationFolder .. "/" .. hasRoot .. "/" .. ConfigFolder .. "/" .. Configuration .. ConfigurationExtension, tostring(HttpService:JSONEncode(Data)))
--- 	else
--- 		writefile(ConfigurationFolder .. "/" .. "/" .. ConfigFolder .. Configuration .. ConfigurationExtension, tostring(HttpService:JSONEncode(Data)))
--- 	end
--- end
-
--- local function SetAutoload(ConfigName, ConfigFolder, hasRoot)
--- 	if hasRoot then
--- 		writefile(ConfigurationFolder .. "/" .. hasRoot .. "/" .. ConfigFolder .. "/" .. "autoload.txt", tostring(ConfigName) .. ConfigurationExtension)
--- 	else
--- 		writefile(ConfigurationFolder .. "/" .. "/" .. ConfigFolder .. "autoload.txt", tostring(ConfigName) .. ConfigurationExtension)
--- 	end
--- end
-
--- local function LoadAutoLoad(ConfigFolder, hasRoot)
--- 	local autoload = isfile(ConfigurationFolder .. "/" .. "/" .. ConfigFolder .. "autoload.txt")
--- 	if hasRoot then
--- 		autoload = isfile(ConfigurationFolder .. "/" .. hasRoot .. "/" .. ConfigFolder .. "/" .. "autoload.txt")
--- 	end
-
--- 	if autoload then
--- 		if hasRoot then
--- 			LoadConfiguration(readfile(ConfigurationFolder .. "/" .. hasRoot .. "/" .. ConfigFolder .. "/" .. readfile(ConfigurationFolder .. "/" .. hasRoot .. "/" .. ConfigFolder .. "/" .. "autoload.txt")), true)
--- 		else
--- 			LoadConfiguration(readfile(ConfigurationFolder .. "/" .. ConfigFolder .. "/" .. readfile(ConfigurationFolder .. "/" .. ConfigFolder .. "/" .. "autoload.txt")), true)
--- 		end
--- 	end
--- end
 
 local function Draggable(Bar, Window, enableTaptic, tapticOffset)
 	pcall(function()
@@ -2040,17 +2553,14 @@ local function Draggable(Bar, Window, enableTaptic, tapticOffset)
 
 		Bar.InputBegan:Connect(function(Input)
 			if Input.UserInputType == Enum.UserInputType.MouseButton1 or Input.UserInputType == Enum.UserInputType.Touch then
-				Dragging = true
+				Dragging = false  -- no activar hasta superar el umbral
 				MousePos = Input.Position
 				FramePos = Window.Position
-
-				if enableTaptic then
-					TweenService:Create(dragBarCosmetic, TweenInfo.new(0.35, Enum.EasingStyle.Back, Enum.EasingDirection.Out), {Size = UDim2.new(0, 110, 0, 4), BackgroundTransparency = 0}):Play()
-				end
 
 				Input.Changed:Connect(function()
 					if Input.UserInputState == Enum.UserInputState.End then
 						Dragging = false
+						DragInput = nil
 						connectFunctions()
 
 						if enableTaptic then
@@ -2068,8 +2578,20 @@ local function Draggable(Bar, Window, enableTaptic, tapticOffset)
 		end)
 
 		UserInputService.InputChanged:Connect(function(Input)
-			if Input == DragInput and Dragging then
+			if Input == DragInput and MousePos then
 				local Delta = Input.Position - MousePos
+				local dist  = math.sqrt(Delta.X^2 + Delta.Y^2)
+
+				-- Umbral de 30px antes de empezar a arrastrar (evita movimientos accidentales)
+				if not Dragging and dist < 30 then return end
+
+				if not Dragging then
+					Dragging = true
+					FramePos = Window.Position
+					if enableTaptic then
+						TweenService:Create(dragBarCosmetic, TweenInfo.new(0.35, Enum.EasingStyle.Back, Enum.EasingDirection.Out), {Size = UDim2.new(0, 110, 0, 4), BackgroundTransparency = 0}):Play()
+					end
+				end
 
 				local newMainPosition = UDim2.new(FramePos.X.Scale, FramePos.X.Offset + Delta.X, FramePos.Y.Scale, FramePos.Y.Offset + Delta.Y)
 				TweenService:Create(Window, TweenInfo.new(0.35, Enum.EasingStyle.Exponential, Enum.EasingDirection.Out), {Position = newMainPosition}):Play()
@@ -2084,7 +2606,7 @@ local function Draggable(Bar, Window, enableTaptic, tapticOffset)
 	end)
 end
 
-function Luna:Notification(data) -- action e.g open messages
+function Luna:Notification(data)
 	task.spawn(function()
 		data = Kwargify({
 			Title = "Missing Title",
@@ -2093,7 +2615,10 @@ function Luna:Notification(data) -- action e.g open messages
 			ImageSource = "Material"
 		}, data or {})
 
-		-- Notification Object Creation
+		pcall(function()
+			Notifications.Visible = true
+			Notifications.BackgroundTransparency = 1
+		end)
 		local newNotification = Notifications.Template:Clone()
 		newNotification.Name = data.Title
 		newNotification.Parent = Notifications
@@ -2101,12 +2626,10 @@ function Luna:Notification(data) -- action e.g open messages
 		newNotification.Visible = false
 		BlurModule(newNotification)
 
-		-- Set Data
 		newNotification.Title.Text = data.Title
-		newNotification.Description.Text = data.Content 
+		newNotification.Description.Text = data.Content
 		newNotification.Icon.Image = GetIcon(data.Icon, data.ImageSource)
 
-		-- Set initial transparency values
 		newNotification.BackgroundTransparency = 1
 		newNotification.Title.TextTransparency = 1
 		newNotification.Description.TextTransparency = 1
@@ -2117,7 +2640,6 @@ function Luna:Notification(data) -- action e.g open messages
 
 		task.wait()
 
-		-- Calculate textbounds and set initial values
 		newNotification.Size = UDim2.new(1, 0, 0, -Notifications:FindFirstChild("UIListLayout").Padding.Offset)
 
 		newNotification.Icon.Size = UDim2.new(0, 28, 0, 28)
@@ -2144,7 +2666,7 @@ function Luna:Notification(data) -- action e.g open messages
 		TweenService:Create(newNotification.UIStroke, TweenInfo.new(0.4, Enum.EasingStyle.Exponential), {Transparency = 0.95}):Play()
 		TweenService:Create(newNotification.Shadow, TweenInfo.new(0.3, Enum.EasingStyle.Exponential), {ImageTransparency = 0.82}):Play()
 
-		local waitDuration = math.min(math.max((#newNotification.Description.Text * 0.1) + 2.5, 3), 10)
+		local waitDuration = 1
 		task.wait(data.Duration or waitDuration)
 
 		newNotification.Icon.Visible = false
@@ -2166,7 +2688,6 @@ function Luna:Notification(data) -- action e.g open messages
 end
 
 local function Unhide(Window, currentTab)
-	-- Sonido al abrir
 	pcall(function()
 		local snd = Instance.new("Sound")
 		snd.SoundId = "http://www.roblox.com/asset/?id=6031097229"
@@ -2211,7 +2732,7 @@ local function Unhide(Window, currentTab)
 end
 
 local MainSize
-local MinSize 
+local MinSize
 if Camera.ViewportSize.X > 774 and Camera.ViewportSize.Y > 503 then
 	MainSize = UDim2.fromOffset(675, 424)
 	MinSize = UDim2.fromOffset(500, 42)
@@ -2232,9 +2753,7 @@ local function Minimize(Window)
 	Window.Elements.Visible = false
 	Window.Navigation.Visible = false
 	tween(Window, {Size = MinSize})
-	-- Blur se mantiene al minimizar (no se apaga)
 end
-
 
 function Luna:CreateWindow(WindowSettings)
 
@@ -2242,7 +2761,7 @@ function Luna:CreateWindow(WindowSettings)
 		Name = "Luna UI Example Window",
 		Subtitle = "",
 		LogoID = "6031097225",
-		LoadingEnabled = true,
+		LoadingEnabled = false,
 		LoadingTitle = "Luna Interface Suite",
 		LoadingSubtitle = "by Nebula Softworks",
 
@@ -2261,16 +2780,16 @@ function Luna:CreateWindow(WindowSettings)
 		Title = WindowSettings.Name,
 		Subtitle = "Key System",
 		Note = "No Instructions",
-		SaveInRoot = false, -- Enabling will save the key in your RootFolder (YOU MUST HAVE ONE BEFORE ENABLING THIS OPTION)
-		SaveKey = true, -- The user's key will be saved, but if you change the key, they will be unable to use your script
-		Key = {""}, -- List of keys that will be accepted by the system, please use a system like Pelican or Luarmor that provide key strings based on your HWID since putting a simple string is very easy to bypass
-		SecondAction = {}	
+		SaveInRoot = false,
+		SaveKey = true,
+		Key = {""},
+		SecondAction = {}
 	}, WindowSettings.KeySettings or {})
 
 	WindowSettings.KeySettings.SecondAction = Kwargify({
 		Enabled = false,
-		Type = "Discord", -- Link/Discord
-		Parameter = "" -- for discord, add the invite link like home tab. for link, type the link of ur key sys
+		Type = "Discord",
+		Parameter = ""
 	}, WindowSettings.KeySettings.SecondAction)
 
 	local Passthrough = false
@@ -2280,15 +2799,11 @@ function Luna:CreateWindow(WindowSettings)
 	Main.Title.Title.Text = WindowSettings.Name
 	Main.Title.subtitle.Text = WindowSettings.Subtitle
 
-	-- Reemplazar texto "BladeX" con imagen de letras con textura
 	if WindowSettings.Name == "BladeX" then
 		Main.Title.Title.TextTransparency = 1
-		-- Crear TitleImage encima del texto del título
-		-- Se pone en Main directamente para evitar UIListLayout de Main.Title
 		local TitleImg = Instance.new("ImageLabel", Main)
 		TitleImg.Name = "TitleImage"
 		TitleImg.Size = UDim2.new(0, 130, 0, 28)
-		-- Main.Title ocupa la barra superior; posicionamos encima del logo (~50px desde izq, centrado verticalmente en ~25px de alto)
 		TitleImg.Position = UDim2.new(0, 88, 0, 11)
 		TitleImg.AnchorPoint = Vector2.new(0, 0)
 		TitleImg.BackgroundTransparency = 1
@@ -2316,7 +2831,13 @@ function Luna:CreateWindow(WindowSettings)
 	LoadingFrame.Frame.Frame.Subtitle.Text = WindowSettings.LoadingSubtitle
 	LoadingFrame.Version.Text = ""
 
-	Navigation.Player.icon.ImageLabel.Image = Players:GetUserThumbnailAsync(Players.LocalPlayer.UserId, Enum.ThumbnailType.HeadShot, Enum.ThumbnailSize.Size48x48)
+	-- Fix 2.6: GetUserThumbnailAsync envuelto en pcall para evitar crash por timeout/error de red
+	do
+		local okThumb, thumbUrl = pcall(function()
+			return Players:GetUserThumbnailAsync(Players.LocalPlayer.UserId, Enum.ThumbnailType.HeadShot, Enum.ThumbnailSize.Size48x48)
+		end)
+		Navigation.Player.icon.ImageLabel.Image = okThumb and thumbUrl or "rbxassetid://0"
+	end
 	Navigation.Player.Namez.Text = Players.LocalPlayer.DisplayName
 	Navigation.Player.TextLabel.Text = Players.LocalPlayer.Name
 
@@ -2335,39 +2856,18 @@ function Luna:CreateWindow(WindowSettings)
 
 	LoadingFrame.Visible = true
 
-	-- pcall(function()
-	-- 	if not isfolder(ConfigurationFolder) then
-	-- 		makefolder(ConfigurationFolder)
-	-- 	end
-	-- 	if WindowSettings.ConfigSettings.RootFolder then
-	-- 		if not isfolder(ConfigurationFolder .. WindowSettings.ConfigSettings.RootFolder) then
-	-- 			makefolder(ConfigurationFolder .. WindowSettings.ConfigSettings.RootFolder)
-	-- 			if not isfolder(ConfigurationFolder .. WindowSettings.ConfigSettings.RootFolder .. WindowSettings.ConfigSettings.ConfigFolder) then
-	-- 				makefolder(ConfigurationFolder .. WindowSettings.ConfigSettings.RootFolder .. WindowSettings.ConfigSettings.ConfigFolder)
-	-- 			end
-	-- 		end
-	-- 	else
-	-- 		if not isfolder(ConfigurationFolder .. WindowSettings.ConfigSettings.ConfigFolder) then
-	-- 			makefolder(ConfigurationFolder .. WindowSettings.ConfigSettings.ConfigFolder)
-	-- 		end
-	-- 	end
-
-	-- 	LoadAutoLoad(WindowSettings.ConfigSettings.ConfigFolder, WindowSettings.ConfigSettings.RootFolder)
-	-- end)
-
-	-- LunaUI solo se activa después de validar la key
 	if not WindowSettings.KeySystem then
 		LunaUI.Enabled = true
+		-- Fix: solo activar BlurModule cuando NO hay KeySystem activo
+		BlurModule(Main)
 	end
-
-	BlurModule(Main)
 
 	if WindowSettings.KeySystem then
 		local KeySettings = WindowSettings.KeySettings
 
-		-- Luna UI permanece desactivada hasta que la key sea válida
 		Main.Visible = false
 		LoadingFrame.Visible = false
+	pcall(function() LoadingFrame.Active = false end)
 		LunaUI.Enabled = false
 		pcall(function()
 			LunaUI.SmartWindow.Visible = false
@@ -2384,14 +2884,29 @@ function Luna:CreateWindow(WindowSettings)
 		end)
 
 		Draggable(Dragger, Main)
-		Draggable(LunaUI.MobileSupport, LunaUI.MobileSupport)
+	pcall(function() Draggable(LunaUI.MobileSupport, LunaUI.MobileSupport) end)
 		if dragBar then Draggable(dragInteract, Main, true, 255) end
 
 		if not WindowSettings.KeySettings then
 			Passthrough = true
 			return
 		end
-		
+
+		-- Fix 2.2: Función recursiva para crear carpetas anidadas con pcall
+		local function createFolderRecursive(path)
+			local parts = {}
+			for part in path:gmatch("[^/\\]+") do
+				table.insert(parts, part)
+			end
+			local current = ""
+			for i, part in ipairs(parts) do
+				current = current == "" and part or (current .. "/" .. part)
+				pcall(function()
+					if not isfolder(current) then makefolder(current) end
+				end)
+			end
+		end
+
 		WindowSettings.KeySettings.FileName = "key"
 
 		if typeof(WindowSettings.KeySettings.Key) == "string" then WindowSettings.KeySettings.Key = {WindowSettings.KeySettings.Key} end
@@ -2401,7 +2916,6 @@ function Luna:CreateWindow(WindowSettings)
 		if isfile and isfile(direc .. WindowSettings.KeySettings.FileName .. ".luna") then
 			local savedKey = readfile(direc .. WindowSettings.KeySettings.FileName .. ".luna")
 			local savedValid = false
-			-- Solo validar si hay keys remotas cargadas (evitar borrar si fallo de red)
 			if #WindowSettings.KeySettings.Key > 0 then
 				for i, Key in ipairs(WindowSettings.KeySettings.Key) do
 					if savedKey == Key then
@@ -2410,18 +2924,15 @@ function Luna:CreateWindow(WindowSettings)
 						break
 					end
 				end
-				-- Key guardada ya no existe en GitHub → borrar y pedir de nuevo
 				if not savedValid then
 					pcall(writefile, direc .. WindowSettings.KeySettings.FileName .. ".luna", "")
 					pcall(delfile, direc .. WindowSettings.KeySettings.FileName .. ".luna")
 				end
 			else
-				-- Sin conexión: dejar pasar con la key guardada
 				Passthrough = true
 			end
 		end
 
-		-- Si la key ya estaba guardada y válida, reactivar la UI directamente
 		if Passthrough then
 			LunaUI.Enabled = true
 			Main.Visible = true
@@ -2430,10 +2941,11 @@ function Luna:CreateWindow(WindowSettings)
 			LoadingFrame.BackgroundTransparency = 0
 			pcall(function() Main.Parent.Visible = true end)
 			pcall(function() Main.Parent.ShadowHolder.Visible = true end)
+			-- Fix: activar BlurModule aquí cuando la key ya está guardada (Passthrough)
+			BlurModule(Main)
 		end
 
 		if not Passthrough then
-			-- UI custom estilo Ronix Hub
 			local KGui = Instance.new("ScreenGui")
 			KGui.Name = "BladeXKeyUI"
 			KGui.ResetOnSpawn = false
@@ -2448,25 +2960,21 @@ function Luna:CreateWindow(WindowSettings)
 				end
 			end
 
-			-- Sin overlay
-
-			-- Panel compacto estilo Ronix
 			local Panel = Instance.new("Frame", KGui)
 			Panel.Size = UDim2.new(0, 400, 0, 265)
 			Panel.Position = UDim2.new(0.5, 0, 0.5, 0)
 			Panel.AnchorPoint = Vector2.new(0.5, 0.5)
 			Panel.ClipsDescendants = true
-			Panel.BackgroundColor3 = Color3.fromRGB(22, 20, 36)
+			Panel.BackgroundColor3 = Color3.fromRGB(10, 10, 10)
 			Panel.BackgroundTransparency = 0
 			Panel.BorderSizePixel = 0
 			Panel.ZIndex = 2
 			Instance.new("UICorner", Panel).CornerRadius = UDim.new(0, 14)
 			local PStroke = Instance.new("UIStroke", Panel)
-			PStroke.Color = Color3.fromRGB(60, 55, 100)
+			PStroke.Color = Color3.fromRGB(50, 50, 50)
 			PStroke.Thickness = 1
 			PStroke.Transparency = 0.4
 
-			-- Header: Logo + Titulo + Cerrar
 			local Header = Instance.new("Frame", Panel)
 			Header.Size = UDim2.new(1, 0, 0, 60)
 			Header.Position = UDim2.new(0, 0, 0, 0)
@@ -2497,17 +3005,16 @@ function Luna:CreateWindow(WindowSettings)
 			Subtitle.Position = UDim2.new(0, 58, 0, 34)
 			Subtitle.BackgroundTransparency = 1
 			Subtitle.Text = WindowSettings.KeySettings.Subtitle
-			Subtitle.TextColor3 = Color3.fromRGB(130, 120, 170)
+			Subtitle.TextColor3 = Color3.fromRGB(160, 160, 160)
 			Subtitle.Font = Enum.Font.Gotham
 			Subtitle.TextSize = 11
 			Subtitle.TextXAlignment = Enum.TextXAlignment.Left
 			Subtitle.ZIndex = 3
 
-			-- Botón minimizar (imagen Luna UI)
 			local MinBtnFrame = Instance.new("Frame", Panel)
 			MinBtnFrame.Size = UDim2.new(0, 28, 0, 28)
 			MinBtnFrame.Position = UDim2.new(1, -72, 0, 14)
-			MinBtnFrame.BackgroundColor3 = Color3.fromRGB(40, 36, 60)
+			MinBtnFrame.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
 			MinBtnFrame.BorderSizePixel = 0
 			MinBtnFrame.ZIndex = 6
 			Instance.new("UICorner", MinBtnFrame).CornerRadius = UDim.new(0, 7)
@@ -2542,11 +3049,10 @@ function Luna:CreateWindow(WindowSettings)
 				end
 			end)
 
-			-- Botón cerrar (imagen Luna UI)
 			local CloseBtnFrame = Instance.new("Frame", Panel)
 			CloseBtnFrame.Size = UDim2.new(0, 28, 0, 28)
 			CloseBtnFrame.Position = UDim2.new(1, -38, 0, 14)
-			CloseBtnFrame.BackgroundColor3 = Color3.fromRGB(40, 36, 60)
+			CloseBtnFrame.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
 			CloseBtnFrame.BorderSizePixel = 0
 			CloseBtnFrame.ZIndex = 6
 			Instance.new("UICorner", CloseBtnFrame).CornerRadius = UDim.new(0, 7)
@@ -2565,33 +3071,31 @@ function Luna:CreateWindow(WindowSettings)
 				TweenService:Create(CloseImg, TweenInfo.new(0.15), {ImageColor3 = Color3.fromRGB(195,195,195)}):Play()
 			end)
 
-			-- Separador
 			local Sep = Instance.new("Frame", Panel)
 			Sep.Size = UDim2.new(1, -28, 0, 1)
 			Sep.Position = UDim2.new(0, 14, 0, 62)
-			Sep.BackgroundColor3 = Color3.fromRGB(50, 45, 80)
+			Sep.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
 			Sep.BorderSizePixel = 0
 			Sep.ZIndex = 3
 
-			-- Input
 			local InputFrame = Instance.new("Frame", Panel)
 			InputFrame.Size = UDim2.new(1, -28, 0, 38)
 			InputFrame.Position = UDim2.new(0, 14, 0, 76)
-			InputFrame.BackgroundColor3 = Color3.fromRGB(15, 13, 26)
+			InputFrame.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
 			InputFrame.BorderSizePixel = 0
 			InputFrame.ZIndex = 3
 			Instance.new("UICorner", InputFrame).CornerRadius = UDim.new(0, 8)
 			local IStroke = Instance.new("UIStroke", InputFrame)
-			IStroke.Color = Color3.fromRGB(60, 55, 100)
+			IStroke.Color = Color3.fromRGB(50, 50, 50)
 			IStroke.Thickness = 1
 			IStroke.Transparency = 0.4
 
-			local KeyIcon = Instance.new("TextLabel", InputFrame)
-			KeyIcon.Size = UDim2.new(0, 28, 1, 0)
-			KeyIcon.Position = UDim2.new(0, 8, 0, 0)
+			local KeyIcon = Instance.new("ImageLabel", InputFrame)
+			KeyIcon.Size = UDim2.new(0, 18, 0, 18)
+			KeyIcon.Position = UDim2.new(0, 10, 0.5, -9)
 			KeyIcon.BackgroundTransparency = 1
-			KeyIcon.Text = "🔑"
-			KeyIcon.TextSize = 14
+			KeyIcon.Image = "http://www.roblox.com/asset/?id=6026568224"
+			KeyIcon.ImageColor3 = Color3.fromRGB(140, 140, 140)
 			KeyIcon.ZIndex = 4
 
 			local InputBox = Instance.new("TextBox", InputFrame)
@@ -2599,89 +3103,133 @@ function Luna:CreateWindow(WindowSettings)
 			InputBox.Position = UDim2.new(0, 38, 0, 0)
 			InputBox.BackgroundTransparency = 1
 			InputBox.PlaceholderText = "Enter Key here..."
-			InputBox.PlaceholderColor3 = Color3.fromRGB(90, 80, 125)
+			InputBox.PlaceholderColor3 = Color3.fromRGB(70, 70, 70)
 			InputBox.Text = ""
-			InputBox.TextColor3 = Color3.fromRGB(220, 215, 255)
+			InputBox.TextColor3 = Color3.fromRGB(220, 220, 220)
 			InputBox.Font = Enum.Font.Gotham
 			InputBox.TextSize = 13
 			InputBox.ClearTextOnFocus = false
 			InputBox.TextXAlignment = Enum.TextXAlignment.Left
 			InputBox.ZIndex = 4
 
-			-- Botones Get Key / Verify Key
 			local GetKeyBtn = Instance.new("TextButton", Panel)
 			GetKeyBtn.Size = UDim2.new(0.48, -7, 0, 36)
 			GetKeyBtn.Position = UDim2.new(0, 14, 0, 126)
-			GetKeyBtn.BackgroundColor3 = Color3.fromRGB(28, 25, 45)
-			GetKeyBtn.Text = "🔗  Get Key"
-			GetKeyBtn.TextColor3 = Color3.fromRGB(200, 195, 245)
-			GetKeyBtn.Font = Enum.Font.GothamBold
-			GetKeyBtn.TextSize = 13
+			GetKeyBtn.BackgroundColor3 = Color3.fromRGB(18, 18, 18)
+			GetKeyBtn.Text = ""
 			GetKeyBtn.BorderSizePixel = 0
 			GetKeyBtn.ZIndex = 3
 			Instance.new("UICorner", GetKeyBtn).CornerRadius = UDim.new(0, 8)
 			local GStroke = Instance.new("UIStroke", GetKeyBtn)
-			GStroke.Color = Color3.fromRGB(70, 60, 110)
-			GStroke.Thickness = 1
-			GStroke.Transparency = 0.4
+			GStroke.Color = Color3.fromRGB(60, 60, 60)
+			GStroke.Thickness = 1.2
+			GStroke.Transparency = 0.3
+			local GIcon = Instance.new("ImageLabel", GetKeyBtn)
+			GIcon.Size = UDim2.new(0, 16, 0, 16)
+			GIcon.Position = UDim2.new(0, 10, 0.5, -8)
+			GIcon.BackgroundTransparency = 1
+			GIcon.Image = "http://www.roblox.com/asset/?id=6026568211"
+			GIcon.ImageColor3 = Color3.fromRGB(200, 200, 200)
+			GIcon.ZIndex = 4
+			local GText = Instance.new("TextLabel", GetKeyBtn)
+			GText.Size = UDim2.new(1, -32, 1, 0)
+			GText.Position = UDim2.new(0, 32, 0, 0)
+			GText.BackgroundTransparency = 1
+			GText.Text = "Get Key"
+			GText.TextColor3 = Color3.fromRGB(220, 220, 220)
+			GText.Font = Enum.Font.GothamBold
+			GText.TextSize = 13
+			GText.TextXAlignment = Enum.TextXAlignment.Center
+			GText.ZIndex = 4
 
 			local VerifyBtn = Instance.new("TextButton", Panel)
 			VerifyBtn.Size = UDim2.new(0.48, -7, 0, 36)
 			VerifyBtn.Position = UDim2.new(0.52, -7, 0, 126)
-			VerifyBtn.BackgroundColor3 = Color3.fromRGB(28, 25, 45)
-			VerifyBtn.Text = "✔  Verify Key"
-			VerifyBtn.TextColor3 = Color3.fromRGB(200, 195, 245)
-			VerifyBtn.Font = Enum.Font.GothamBold
-			VerifyBtn.TextSize = 13
+			VerifyBtn.BackgroundColor3 = Color3.fromRGB(18, 18, 18)
+			VerifyBtn.Text = ""
 			VerifyBtn.BorderSizePixel = 0
 			VerifyBtn.ZIndex = 3
 			Instance.new("UICorner", VerifyBtn).CornerRadius = UDim.new(0, 8)
 			local VStroke = Instance.new("UIStroke", VerifyBtn)
-			VStroke.Color = Color3.fromRGB(70, 60, 110)
-			VStroke.Thickness = 1
-			VStroke.Transparency = 0.4
+			VStroke.Color = Color3.fromRGB(60, 60, 60)
+			VStroke.Thickness = 1.2
+			VStroke.Transparency = 0.3
+			local VIcon = Instance.new("ImageLabel", VerifyBtn)
+			VIcon.Size = UDim2.new(0, 16, 0, 16)
+			VIcon.Position = UDim2.new(0, 10, 0.5, -8)
+			VIcon.BackgroundTransparency = 1
+			VIcon.Image = "http://www.roblox.com/asset/?id=6023426909"
+			VIcon.ImageColor3 = Color3.fromRGB(100, 220, 160)
+			VIcon.ZIndex = 4
+			local VText = Instance.new("TextLabel", VerifyBtn)
+			VText.Size = UDim2.new(1, -32, 1, 0)
+			VText.Position = UDim2.new(0, 32, 0, 0)
+			VText.BackgroundTransparency = 1
+			VText.Text = "Verify Key"
+			VText.TextColor3 = Color3.fromRGB(220, 220, 220)
+			VText.Font = Enum.Font.GothamBold
+			VText.TextSize = 13
+			VText.TextXAlignment = Enum.TextXAlignment.Center
+			VText.ZIndex = 4
 
-			-- Nota
 			local Note = Instance.new("TextLabel", Panel)
 			Note.Size = UDim2.new(1, -28, 0, 16)
 			Note.Position = UDim2.new(0, 14, 0, 174)
 			Note.BackgroundTransparency = 1
 			Note.Text = WindowSettings.KeySettings.Note
-			Note.TextColor3 = Color3.fromRGB(100, 90, 140)
+			Note.TextColor3 = Color3.fromRGB(100, 100, 100)
 			Note.Font = Enum.Font.Gotham
 			Note.TextSize = 11
 			Note.TextXAlignment = Enum.TextXAlignment.Center
 			Note.ZIndex = 3
 
-			-- Botón Discord
 			local DiscordBtn = Instance.new("TextButton", Panel)
-			DiscordBtn.Size = UDim2.new(1, -28, 0, 36)
+			DiscordBtn.Size = UDim2.new(1, -28, 0, 40)
 			DiscordBtn.Position = UDim2.new(0, 14, 0, 198)
-			DiscordBtn.BackgroundColor3 = Color3.fromRGB(22, 19, 38)
-			DiscordBtn.Text = "👑  Join our Discord"
-			DiscordBtn.TextColor3 = Color3.fromRGB(200, 195, 245)
-			DiscordBtn.Font = Enum.Font.GothamBold
-			DiscordBtn.TextSize = 13
+			DiscordBtn.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+			DiscordBtn.Text = ""
 			DiscordBtn.BorderSizePixel = 0
 			DiscordBtn.ZIndex = 3
-			Instance.new("UICorner", DiscordBtn).CornerRadius = UDim.new(0, 8)
+			Instance.new("UICorner", DiscordBtn).CornerRadius = UDim.new(0, 10)
 			local DStroke = Instance.new("UIStroke", DiscordBtn)
-			DStroke.Color = Color3.fromRGB(70, 60, 110)
-			DStroke.Thickness = 1
-			DStroke.Transparency = 0.4
+			DStroke.Color = Color3.fromRGB(88, 101, 242)
+			DStroke.Thickness = 1.5
+			DStroke.Transparency = 0.2
+			local DGrad = Instance.new("UIGradient", DiscordBtn)
+			DGrad.Color = ColorSequence.new{
+				ColorSequenceKeypoint.new(0, Color3.fromRGB(20, 20, 35)),
+				ColorSequenceKeypoint.new(1, Color3.fromRGB(10, 10, 20))
+			}
+			DGrad.Rotation = 90
+			local DIcon = Instance.new("ImageLabel", DiscordBtn)
+			DIcon.Size = UDim2.new(0, 20, 0, 20)
+			DIcon.Position = UDim2.new(0, 14, 0.5, -10)
+			DIcon.BackgroundTransparency = 1
+			DIcon.Image = "http://www.roblox.com/asset/?id=6031225819"
+			DIcon.ImageColor3 = Color3.fromRGB(88, 101, 242)
+			DIcon.ZIndex = 4
+			local DText = Instance.new("TextLabel", DiscordBtn)
+			DText.Size = UDim2.new(1, -44, 1, 0)
+			DText.Position = UDim2.new(0, 44, 0, 0)
+			DText.BackgroundTransparency = 1
+			DText.Text = "Join our Discord"
+			DText.TextColor3 = Color3.fromRGB(220, 220, 220)
+			DText.Font = Enum.Font.GothamBold
+			DText.TextSize = 14
+			DText.TextXAlignment = Enum.TextXAlignment.Center
+			DText.ZIndex = 4
 
-			-- Status label
 			local StatusLabel = Instance.new("TextLabel", Panel)
 			StatusLabel.Size = UDim2.new(1, -28, 0, 16)
 			StatusLabel.Position = UDim2.new(0, 14, 0, 248)
 			StatusLabel.BackgroundTransparency = 1
 			StatusLabel.Text = ""
+				StatusLabel.TextColor3 = Color3.fromRGB(100, 220, 160)
 			StatusLabel.Font = Enum.Font.GothamBold
 			StatusLabel.TextSize = 11
 			StatusLabel.TextXAlignment = Enum.TextXAlignment.Center
 			StatusLabel.ZIndex = 3
 
-			-- Llenar lista de elementos a ocultar al minimizar
 			table.insert(hideOnMin, Sep)
 			table.insert(hideOnMin, InputFrame)
 			table.insert(hideOnMin, GetKeyBtn)
@@ -2690,7 +3238,6 @@ function Luna:CreateWindow(WindowSettings)
 			table.insert(hideOnMin, DiscordBtn)
 			table.insert(hideOnMin, StatusLabel)
 
-			-- Drag (usando Header directamente, sin dragZone invisible)
 			local dragging = false
 			local dragStart, startPos
 			Header.InputBegan:Connect(function(input)
@@ -2717,28 +3264,33 @@ function Luna:CreateWindow(WindowSettings)
 				end
 			end)
 
-			-- Botón cerrar
 			CloseBtn.MouseButton1Click:Connect(function()
 				KGui:Destroy()
 				Luna:Destroy()
 			end)
 
-			-- Get Key
 			GetKeyBtn.MouseButton1Click:Connect(function()
-				local link = KeySettings.SecondAction.Parameter ~= "" and KeySettings.SecondAction.Parameter or "discord.gg/bladex"
+				local link = "https://discord.com/invite/GB5C5CKDk"
+				local opened = false
+				pcall(function() openurl(link) opened = true end)
+				if not opened then pcall(function() syn.open_url(link) opened = true end) end
+				if not opened then pcall(function() open_url(link) opened = true end) end
 				pcall(setclipboard, link)
 				StatusLabel.TextColor3 = Color3.fromRGB(100, 200, 255)
-				StatusLabel.Text = "✔ Link copiado al portapapeles!"
+				StatusLabel.Text = opened and "Abriendo Discord..." or "Link copiado al portapapeles!"
 			end)
 
 			DiscordBtn.MouseButton1Click:Connect(function()
-				local link = KeySettings.SecondAction.Parameter ~= "" and KeySettings.SecondAction.Parameter or "discord.gg/bladex"
+				local link = "https://discord.com/invite/GB5C5CKDk"
+				local opened = false
+				pcall(function() openurl(link) opened = true end)
+				if not opened then pcall(function() syn.open_url(link) opened = true end) end
+				if not opened then pcall(function() open_url(link) opened = true end) end
 				pcall(setclipboard, link)
 				StatusLabel.TextColor3 = Color3.fromRGB(100, 200, 255)
-				StatusLabel.Text = "✔ Link copiado al portapapeles!"
+				StatusLabel.Text = opened and "Abriendo Discord..." or "Link copiado al portapapeles!"
 			end)
 
-			-- Verify Key
 			VerifyBtn.MouseButton1Click:Connect(function()
 				local entered = InputBox.Text
 				if entered == "" then return end
@@ -2757,7 +3309,8 @@ function Luna:CreateWindow(WindowSettings)
 					task.wait(0.4)
 					if WindowSettings.KeySettings.SaveKey and writefile then
 						pcall(function()
-							if not isfolder(direc) then makefolder(direc) end
+							-- Fix 2.2: Crear subcarpetas recursivamente
+							createFolderRecursive(direc)
 							writefile(direc .. WindowSettings.KeySettings.FileName .. ".luna", FoundKey)
 						end)
 					end
@@ -2770,11 +3323,14 @@ function Luna:CreateWindow(WindowSettings)
 					LoadingFrame.BackgroundTransparency = 0
 					pcall(function() Main.Parent.Visible = true end)
 					pcall(function() Main.Parent.ShadowHolder.Visible = true end)
+					-- Fix: activar BlurModule después de verificar la key correctamente
+					BlurModule(Main)
 				else
 					StatusLabel.TextColor3 = Color3.fromRGB(255, 80, 80)
 					StatusLabel.Text = "✖ Key incorrecta. Intenta de nuevo."
 					task.wait(2)
 					StatusLabel.Text = ""
+				StatusLabel.TextColor3 = Color3.fromRGB(100, 220, 160)
 				end
 			end)
 
@@ -2804,7 +3360,7 @@ function Luna:CreateWindow(WindowSettings)
 		task.wait(0.05)
 		TweenService:Create(LoadingFrame.Frame.Frame.Subtitle, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {TextTransparency = 1}):Play()
 		TweenService:Create(LoadingFrame.Version, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {TextTransparency = 1}):Play()
-		wait(0.3)
+		task.wait(0.3)
 		TweenService:Create(LoadingFrame, TweenInfo.new(0.5, Enum.EasingStyle.Exponential, Enum.EasingDirection.Out), {BackgroundTransparency = 1}):Play()
 	end
 
@@ -2818,12 +3374,18 @@ function Luna:CreateWindow(WindowSettings)
 	TweenService:Create(Navigation.Player.icon.ImageLabel, TweenInfo.new(0.35, Enum.EasingStyle.Exponential, Enum.EasingDirection.Out), {ImageTransparency = 0}):Play()
 	TweenService:Create(Navigation.Player.icon.UIStroke, TweenInfo.new(0.35, Enum.EasingStyle.Exponential, Enum.EasingDirection.Out), {Transparency = 0}):Play()
 	TweenService:Create(Main.Line, TweenInfo.new(0.35, Enum.EasingStyle.Exponential, Enum.EasingDirection.Out), {BackgroundTransparency = 0}):Play()
-	wait(0.4)
+	task.wait(0.4)
 	LoadingFrame.Visible = false
+	pcall(function() LoadingFrame.Active = false end)
 
 	Draggable(Dragger, Main)
-	Draggable(LunaUI.MobileSupport, LunaUI.MobileSupport)
-	if dragBar then Draggable(dragInteract, Main, true, 255) end
+	pcall(function() Draggable(LunaUI.MobileSupport, LunaUI.MobileSupport) end)
+	if dragBar then
+		dragBar.Size = _dragBarOriginalSize
+		dragBar.Visible = true
+		dragBar.BackgroundTransparency = 1
+		Draggable(dragInteract, Main, true, 255)
+	end
 
 	Elements.Template.LayoutOrder = 1000000000
 	Elements.Template.Visible = false
@@ -2836,8 +3398,8 @@ function Luna:CreateWindow(WindowSettings)
 
 		HomeTabSettings = Kwargify({
 			Icon = 1,
-			SupportedExecutors = {"Vega X", "Delta", "Nihon", "Xeno"}, -- THESE DEFAULTS ARE PLACEHOLDERS!! I DO NOT ADVERTISE THESE, THEY ARE JUS THE FIRST THAT CAME TO MIND. I HAVE NO IDEA WHETHER THEYA RE RATS (they prob are) AND IM NOT RESPONSIBLE IF U GET VIRUSES FROM INSTALLING AFTER SEEING THIS LIST
-			DiscordInvite = "noinvitelink" -- The disvord invite link. Do not include the link so for example if my invite was discord.gg/nebula I would put nebula
+			SupportedExecutors = {"Vega X", "Delta", "Nihon", "Xeno"},
+			DiscordInvite = "GB5C5CKDk"
 		}, HomeTabSettings or {})
 
 		local HomeTab = {}
@@ -2878,15 +3440,29 @@ function Luna:CreateWindow(WindowSettings)
 			HomeTab:Activate()
 		end)
 
-
-		HomeTabPage.icon.ImageLabel.Image = Players:GetUserThumbnailAsync(Players.LocalPlayer.UserId, Enum.ThumbnailType.HeadShot, Enum.ThumbnailSize.Size420x420)
+		-- Fix 2.6: GetUserThumbnailAsync envuelto en pcall (HomeTab)
+		do
+			local okThumb2, thumbUrl2 = pcall(function()
+				return Players:GetUserThumbnailAsync(Players.LocalPlayer.UserId, Enum.ThumbnailType.HeadShot, Enum.ThumbnailSize.Size420x420)
+			end)
+			HomeTabPage.icon.ImageLabel.Image = okThumb2 and thumbUrl2 or "rbxassetid://0"
+		end
 		HomeTabPage.player.Text.Text = "Hello, " .. Players.LocalPlayer.DisplayName
 		HomeTabPage.player.user.Text = Players.LocalPlayer.Name .. " - ".. WindowSettings.Name
 
-		HomeTabPage.detailsholder.dashboard.Client.Title.Text = (isStudio and "Debugging (Studio)" or identifyexecutor()) or "Your Executor Does Not Support identifyexecutor."
+		-- Fix 2.11: identifyexecutor envuelto en pcall para ejecutores que no lo soportan
+		local _executorName = "Executor desconocido"
+		if isStudio then
+			_executorName = "Debugging (Studio)"
+		else
+			local okExec, execName = pcall(identifyexecutor)
+			_executorName = (okExec and execName) or "Tu executor no soporta identifyexecutor."
+		end
+		HomeTabPage.detailsholder.dashboard.Client.Title.Text = _executorName
 		for i,v in pairs(HomeTabSettings.SupportedExecutors) do
 			if isStudio then HomeTabPage.detailsholder.dashboard.Client.Subtitle.Text = "Luna Interface Suite - Debugging Mode" break end
-			if v == identifyexecutor() then
+			local okExec2, execName2 = pcall(identifyexecutor)
+			if execName2 and v == execName2 then
 				HomeTabPage.detailsholder.dashboard.Client.Subtitle.Text = "Your Executor Supports This Script."
 				break
 			else
@@ -2895,10 +3471,10 @@ function Luna:CreateWindow(WindowSettings)
 			end
 		end
 
-		-- Stolen From Sirius Stuff Begins Here
-
 		HomeTabPage.detailsholder.dashboard.Discord.Interact.MouseButton1Click:Connect(function()
-			-- Discord desactivado
+			pcall(function() openurl("https://discord.gg/GB5C5CKDk") end)
+			pcall(function() syn.open_url("https://discord.gg/GB5C5CKDk") end)
+			pcall(setclipboard, "https://discord.gg/GB5C5CKDk")
 		end)
 
 		local friendsCooldown = 0
@@ -2911,21 +3487,19 @@ function Luna:CreateWindow(WindowSettings)
 
 				local playersFriends = {}
 				local friendsInTotal = 0
-				local onlineFriends = 0 
-				local friendsInGame = 0 
+				local onlineFriends = 0
+				local friendsInGame = 0
 
 				local list = Players:GetFriendsAsync(Player.UserId)
-				while true do -- loop through all the pages
+				while true do
 					for _, data in list:GetCurrentPage() do
 						friendsInTotal +=1
 						table.insert(playersFriends, Data)
 					end
 
 					if list.IsFinished then
-						-- stop the loop since this is the last page
 						break
-					else 
-						-- go to the next page
+					else
 						list:AdvanceToNextPageAsync()
 					end
 				end
@@ -2964,25 +3538,18 @@ function Luna:CreateWindow(WindowSettings)
 		coroutine.wrap(function()
 			while task.wait() do
 
-
-				-- Players
 				HomeTabPage.detailsholder.dashboard.Server.Players.Value.Text = #Players:GetPlayers().." playing"
 				HomeTabPage.detailsholder.dashboard.Server.MaxPlayers.Value.Text = Players.MaxPlayers.." players can join this server"
 
-				-- Ping
 				HomeTabPage.detailsholder.dashboard.Server.Latency.Value.Text = isStudio and tostring(math.round((Players.LocalPlayer:GetNetworkPing() * 2 ) / 0.01)) .."ms" or tostring(math.floor(getPing()) .."ms")
 
-				-- Time
 				HomeTabPage.detailsholder.dashboard.Server.Time.Value.Text = convertToHMS(time())
 
-				-- Region
 				HomeTabPage.detailsholder.dashboard.Server.Region.Value.Text = Localization:GetCountryRegionForPlayerAsync(Players.LocalPlayer)
 
 				checkFriends()
 			end
 		end)()
-
-		-- Stolen From Sirius Stuff ends here
 
 	end
 
@@ -2994,7 +3561,7 @@ function Luna:CreateWindow(WindowSettings)
 			Name = "Tab",
 			ShowTitle = true,
 			Icon = "view_in_ar",
-			ImageSource = "Material" 
+			ImageSource = "Material"
 		}, TabSettings or {})
 
 		local TabButton = Navigation.Tabs["InActive Template"]:Clone()
@@ -3060,7 +3627,6 @@ function Luna:CreateWindow(WindowSettings)
 
 		FirstTab = false
 
-		-- Section
 		function Tab:CreateSection(name : string)
 
 			local Section = {}
@@ -3086,7 +3652,6 @@ function Luna:CreateWindow(WindowSettings)
 				Sectiont:Destroy()
 			end
 
-			-- Divider
 			function Section:CreateDivider()
 				TabPage.Position = UDim2.new(0,0,0,28)
 				local b = Elements.Template.Divider:Clone()
@@ -3096,7 +3661,6 @@ function Luna:CreateWindow(WindowSettings)
 				tween(b.Line, {BackgroundTransparency = 0})
 			end
 
-			-- Button
 			function Section:CreateButton(ButtonSettings)
 				TabPage.Position = UDim2.new(0,0,0,28)
 
@@ -3113,9 +3677,8 @@ function Luna:CreateWindow(WindowSettings)
 					Settings = ButtonSettings
 				}
 
-
 				local Button
-				if ButtonSettings.Description == nil and ButtonSettings.Description ~= "" then
+				if ButtonSettings.Description == nil or ButtonSettings.Description == "" then
 					Button = Elements.Template.Button:Clone()
 				else
 					Button = Elements.Template.ButtonDesc:Clone()
@@ -3136,9 +3699,9 @@ function Luna:CreateWindow(WindowSettings)
 
 				TweenService:Create(Button, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {BackgroundTransparency = 0.5}):Play()
 				TweenService:Create(Button.UIStroke, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {Transparency = 0.5}):Play()
-				TweenService:Create(Button.Title, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {TextTransparency = 0}):Play()	
+				TweenService:Create(Button.Title, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {TextTransparency = 0}):Play()
 				if ButtonSettings.Description ~= nil and ButtonSettings.Description ~= "" then
-					TweenService:Create(Button.Desc, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {TextTransparency = 0}):Play()	
+					TweenService:Create(Button.Desc, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {TextTransparency = 0}):Play()
 				end
 
 				Button.Interact["MouseButton1Click"]:Connect(function()
@@ -3150,14 +3713,14 @@ function Luna:CreateWindow(WindowSettings)
 						TweenService:Create(Button.UIStroke, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {Transparency = 1}):Play()
 						Button.Title.Text = "Callback Error"
 						print("Luna Interface Suite | "..ButtonSettings.Name.." Callback Error " ..tostring(Response))
-						wait(0.5)
+						task.wait(0.5)
 						Button.Title.Text = ButtonSettings.Name
 						TweenService:Create(Button, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {BackgroundTransparency = 0.5}):Play()
 						TweenService:Create(Button, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {BackgroundColor3 = Color3.fromRGB(32, 30, 38)}):Play()
 						TweenService:Create(Button.UIStroke, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {Transparency = 0.5}):Play()
 					else
 						tween(Button.UIStroke, {Color = Color3.fromRGB(136, 131, 163)})
-						wait(0.2)
+						task.wait(0.2)
 						if ButtonV.Hover then
 							tween(Button.UIStroke, {Color = Color3.fromRGB(87, 84, 104)})
 						else
@@ -3201,7 +3764,6 @@ function Luna:CreateWindow(WindowSettings)
 				return ButtonV
 			end
 
-			-- Label
 			function Section:CreateLabel(LabelSettings)
 				TabPage.Position = UDim2.new(0,0,0,28)
 
@@ -3210,7 +3772,7 @@ function Luna:CreateWindow(WindowSettings)
 				LabelSettings = Kwargify({
 					Text = "Label",
 					Style = 1
-				}, LabelSettings or {}) 
+				}, LabelSettings or {})
 
 				LabelV.Settings = LabelSettings
 
@@ -3237,7 +3799,7 @@ function Luna:CreateWindow(WindowSettings)
 					TweenService:Create(Label, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {BackgroundTransparency = 1}):Play()
 				end
 				TweenService:Create(Label.UIStroke, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {Transparency = 0.5}):Play()
-				TweenService:Create(Label.Text, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {TextTransparency = 0}):Play()	
+				TweenService:Create(Label.Text, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {TextTransparency = 0}):Play()
 
 				function LabelV:Set(NewLabel)
 					LabelSettings.Text = NewLabel
@@ -3253,7 +3815,6 @@ function Luna:CreateWindow(WindowSettings)
 				return LabelV
 			end
 
-			-- Paragraph
 			function Section:CreateParagraph(ParagraphSettings)
 				TabPage.Position = UDim2.new(0,0,0,28)
 
@@ -3279,8 +3840,8 @@ function Luna:CreateWindow(WindowSettings)
 
 				TweenService:Create(Paragraph, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {BackgroundTransparency = 1}):Play()
 				TweenService:Create(Paragraph.UIStroke, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {Transparency = 0.5}):Play()
-				TweenService:Create(Paragraph.Title, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {TextTransparency = 0}):Play()	
-				TweenService:Create(Paragraph.Text, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {TextTransparency = 0}):Play()	
+				TweenService:Create(Paragraph.Title, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {TextTransparency = 0}):Play()
+				TweenService:Create(Paragraph.Text, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {TextTransparency = 0}):Play()
 
 				function ParagraphV:Update()
 					Paragraph.Text.Size = UDim2.new(Paragraph.Text.Size.X.Scale, Paragraph.Text.Size.X.Offset, 0, math.huge)
@@ -3314,7 +3875,6 @@ function Luna:CreateWindow(WindowSettings)
 				return ParagraphV
 			end
 
-			-- Slider
 			function Section:CreateSlider(SliderSettings, Flag)
 				TabPage.Position = UDim2.new(0,0,0,28)
 				local SliderV = { IgnoreConfig = false, Class = "Slider", Settings = SliderSettings }
@@ -3342,7 +3902,7 @@ function Luna:CreateWindow(WindowSettings)
 
 				TweenService:Create(Slider, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {BackgroundTransparency = 0.5}):Play()
 				TweenService:Create(Slider.UIStroke, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {Transparency = 0.5}):Play()
-				TweenService:Create(Slider.Title, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {TextTransparency = 0}):Play()	
+				TweenService:Create(Slider.Title, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {TextTransparency = 0}):Play()
 
 				Slider.Main.Progress.Size =	UDim2.new(0, Slider.Main.AbsoluteSize.X * ((SliderSettings.CurrentValue + SliderSettings.Range[1]) / (SliderSettings.Range[2] - SliderSettings.Range[1])) > 5 and Slider.Main.AbsoluteSize.X * (SliderSettings.CurrentValue / (SliderSettings.Range[2] - SliderSettings.Range[1])) or 5, 1, 0)
 
@@ -3360,15 +3920,15 @@ function Luna:CreateWindow(WindowSettings)
 				end)
 
 				Slider.Interact.InputBegan:Connect(function(Input)
-					if Input.UserInputType == Enum.UserInputType.MouseButton1 or Input.UserInputType == Enum.UserInputType.Touch then 
-						SLDragging = true 
-					end 
+					if Input.UserInputType == Enum.UserInputType.MouseButton1 or Input.UserInputType == Enum.UserInputType.Touch then
+						SLDragging = true
+					end
 				end)
 
-				Slider.Interact.InputEnded:Connect(function(Input) 
-					if Input.UserInputType == Enum.UserInputType.MouseButton1 or Input.UserInputType == Enum.UserInputType.Touch then 
-						SLDragging = false 
-					end 
+				Slider.Interact.InputEnded:Connect(function(Input)
+					if Input.UserInputType == Enum.UserInputType.MouseButton1 or Input.UserInputType == Enum.UserInputType.Touch then
+						SLDragging = false
+					end
 				end)
 
 				Slider.Interact.MouseButton1Down:Connect(function()
@@ -3414,7 +3974,7 @@ function Luna:CreateWindow(WindowSettings)
 									TweenService:Create(Slider.UIStroke, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {Transparency = 1}):Play()
 									Slider.Title.Text = "Callback Error"
 									print("Luna Interface Suite | "..SliderSettings.Name.." Callback Error " ..tostring(Response))
-									wait(0.5)
+									task.wait(0.5)
 									Slider.Title.Text = SliderSettings.Name
 									TweenService:Create(Slider, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {BackgroundTransparency = 0.5}):Play()
 									TweenService:Create(Slider, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {BackgroundColor3 = Color3.fromRGB(32, 30, 38)}):Play()
@@ -3423,7 +3983,6 @@ function Luna:CreateWindow(WindowSettings)
 
 								SliderSettings.CurrentValue = NewValue
 								SliderV.CurrentValue = SliderSettings.CurrentValue
-								-- Luna.Flags[SliderSettings.Flag] = SliderSettings
 							end
 						else
 							TweenService:Create(Slider.Main.Progress, TweenInfo.new(0.1, Enum.EasingStyle.Back, Enum.EasingDirection.In, 0, false), {Size = UDim2.new(0, Location - Slider.Main.AbsolutePosition.X > 5 and Location - Slider.Main.AbsolutePosition.X or 5, 1, 0)}):Play()
@@ -3447,7 +4006,7 @@ function Luna:CreateWindow(WindowSettings)
 						TweenService:Create(Slider.UIStroke, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {Transparency = 1}):Play()
 						Slider.Title.Text = "Callback Error"
 						print("Luna Interface Suite | "..SliderSettings.Name.." Callback Error " ..tostring(Response))
-						wait(0.5)
+						task.wait(0.5)
 						Slider.Title.Text = SliderSettings.Name
 						TweenService:Create(Slider, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {BackgroundTransparency = 0.5}):Play()
 						TweenService:Create(Slider, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {BackgroundColor3 = Color3.fromRGB(30, 33, 40)}):Play()
@@ -3456,13 +4015,12 @@ function Luna:CreateWindow(WindowSettings)
 
 					SliderSettings.CurrentValue = NewVal
 					SliderV.CurrentValue = SliderSettings.CurrentValue
-					-- Luna.Flags[SliderSettings.Flag] = SliderSettings
 
 				end
 
 				function SliderV:UpdateValue(Value)
 					Set(tonumber(Value))
-				end 
+				end
 
 				Slider.Value:GetPropertyChangedSignal("Text"):Connect(function()
 					local text = Slider.Value.Text
@@ -3491,7 +4049,6 @@ function Luna:CreateWindow(WindowSettings)
 
 					Set()
 
-					-- Luna.Flags[SliderSettings.Flag] = SliderSettings
 				end
 
 				function SliderV:Destroy()
@@ -3512,8 +4069,7 @@ function Luna:CreateWindow(WindowSettings)
 
 			end
 
-			-- Toggle
-			function Section:CreateToggle(ToggleSettings, Flag)    
+			function Section:CreateToggle(ToggleSettings, Flag)
 				TabPage.Position = UDim2.new(0,0,0,28)
 				local ToggleV = { IgnoreConfig = false, Class = "Toggle" }
 
@@ -3524,7 +4080,6 @@ function Luna:CreateWindow(WindowSettings)
 					Callback = function(Value)
 					end,
 				}, ToggleSettings or {})
-
 
 				local Toggle
 
@@ -3554,7 +4109,7 @@ function Luna:CreateWindow(WindowSettings)
 					TweenService:Create(Toggle.Desc, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {TextTransparency = 0}):Play()
 				end
 				TweenService:Create(Toggle.UIStroke, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {Transparency = 0.5}):Play()
-				TweenService:Create(Toggle.Title, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {TextTransparency = 0}):Play()	
+				TweenService:Create(Toggle.Title, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {TextTransparency = 0}):Play()
 
 				local function Set(bool)
 					if bool then
@@ -3592,7 +4147,7 @@ function Luna:CreateWindow(WindowSettings)
 						TweenService:Create(Toggle.UIStroke, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {Transparency = 1}):Play()
 						Toggle.Title.Text = "Callback Error"
 						print("Luna Interface Suite | "..ToggleSettings.Name.." Callback Error " ..tostring(Response))
-						wait(0.5)
+						task.wait(0.5)
 						Toggle.Title.Text = ToggleSettings.Name
 						TweenService:Create(Toggle, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {BackgroundTransparency = 0.5}):Play()
 						TweenService:Create(Toggle, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {BackgroundColor3 = Color3.fromRGB(32, 30, 38)}):Play()
@@ -3619,7 +4174,7 @@ function Luna:CreateWindow(WindowSettings)
 						TweenService:Create(Toggle.UIStroke, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {Transparency = 1}):Play()
 						Toggle.Title.Text = "Callback Error"
 						print("Luna Interface Suite | "..ToggleSettings.Name.." Callback Error " ..tostring(Response))
-						wait(0.5)
+						task.wait(0.5)
 						Toggle.Title.Text = ToggleSettings.Name
 						TweenService:Create(Toggle, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {BackgroundTransparency = 0.5}):Play()
 						TweenService:Create(Toggle, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {BackgroundColor3 = Color3.fromRGB(32, 30, 38)}):Play()
@@ -3663,7 +4218,7 @@ function Luna:CreateWindow(WindowSettings)
 						TweenService:Create(Toggle.UIStroke, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {Transparency = 0}):Play()
 						Toggle.Title.Text = "Callback Error"
 						print("Luna Interface Suite | "..ToggleSettings.Name.." Callback Error " ..tostring(Response))
-						wait(0.5)
+						task.wait(0.5)
 						Toggle.Title.Text = ToggleSettings.Name
 						TweenService:Create(Toggle, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {BackgroundTransparency = 0.5}):Play()
 						TweenService:Create(Toggle, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {BackgroundColor3 = Color3.fromRGB(32, 30, 38)}):Play()
@@ -3689,7 +4244,6 @@ function Luna:CreateWindow(WindowSettings)
 
 			end
 
-			-- Bind
 			function Section:CreateBind(BindSettings, Flag)
 				TabPage.Position = UDim2.new(0,0,0,28)
 				local BindV = { Class = "Keybind", IgnoreConfig = false, Settings = BindSettings, Active = false }
@@ -3698,15 +4252,11 @@ function Luna:CreateWindow(WindowSettings)
 					Name = "Bind",
 					Description = nil,
 					CurrentBind = "Q",
-					HoldToInteract = false, -- setting this makes the Bind in toggle mode
+					HoldToInteract = false,
 					Callback = function(Bind)
-						-- The function that takes place when the Bind is pressed
-						-- The variable (Bind) is a boolean for whether the Bind is being held or not (HoldToInteract needs to be true) or whether the Bind is currently active
 					end,
 
 					OnChangedCallback = function(Bind)
-						-- The function that takes place when the binded key changes
-						-- The variable (Bind) is a Enum.KeyCode for the new Binded Key
 					end,
 				}, BindSettings or {})
 
@@ -3744,7 +4294,6 @@ function Luna:CreateWindow(WindowSettings)
 				TweenService:Create(Bind.BindFrame, TweenInfo.new(0.3, Enum.EasingStyle.Exponential), {BackgroundTransparency = 0.9}):Play()
 				TweenService:Create(Bind.BindFrame.UIStroke, TweenInfo.new(0.3, Enum.EasingStyle.Exponential), {Transparency = 0.3}):Play()
 				TweenService:Create(Bind.BindFrame.BindBox, TweenInfo.new(0.3, Enum.EasingStyle.Exponential), {TextTransparency = 0}):Play()
-
 
 				Bind.BindFrame.BindBox.Text = BindSettings.CurrentBind
 				Bind.BindFrame.BindBox.Size = UDim2.new(0, Bind.BindFrame.BindBox.TextBounds.X + 20, 0, 42)
@@ -3785,7 +4334,7 @@ function Luna:CreateWindow(WindowSettings)
 								TweenService:Create(Bind.UIStroke, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {Transparency = 1}):Play()
 								Bind.Title.Text = "Callback Error"
 								print("Luna Interface Suite | "..BindSettings.Name.." Callback Error " ..tostring(Response))
-								wait(0.5)
+								task.wait(0.5)
 								Bind.Title.Text = BindSettings.Name
 								TweenService:Create(Bind, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {BackgroundTransparency = 0.5}):Play()
 								TweenService:Create(Bind, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {BackgroundColor3 = Color3.fromRGB(32, 30, 38)}):Play()
@@ -3793,7 +4342,7 @@ function Luna:CreateWindow(WindowSettings)
 							end
 							Bind.BindFrame.BindBox:ReleaseFocus()
 						end
-					elseif BindSettings.CurrentBind ~= nil and (input.KeyCode == Enum.KeyCode[BindSettings.CurrentBind] and not processed) then -- Test
+					elseif BindSettings.CurrentBind ~= nil and (input.KeyCode == Enum.KeyCode[BindSettings.CurrentBind] and not processed) then
 						local Held = true
 						local Connection
 						Connection = input.Changed:Connect(function(prop)
@@ -3814,14 +4363,14 @@ function Luna:CreateWindow(WindowSettings)
 								TweenService:Create(Bind.UIStroke, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {Transparency = 1}):Play()
 								Bind.Title.Text = "Callback Error"
 								print("Luna Interface Suite | "..BindSettings.Name.." Callback Error " ..tostring(Response))
-								wait(0.5)
+								task.wait(0.5)
 								Bind.Title.Text = BindSettings.Name
 								TweenService:Create(Bind, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {BackgroundTransparency = 0.5}):Play()
 								TweenService:Create(Bind, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {BackgroundColor3 = Color3.fromRGB(32, 30, 38)}):Play()
 								TweenService:Create(Bind.UIStroke, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {Transparency = 0.5}):Play()
 							end
 						else
-							wait(0.1)
+							task.wait(0.1)
 							if Held then
 								local Loop; Loop = RunService.Stepped:Connect(function()
 									if not Held then
@@ -3834,12 +4383,12 @@ function Luna:CreateWindow(WindowSettings)
 											TweenService:Create(Bind.UIStroke, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {Transparency = 1}):Play()
 											Bind.Title.Text = "Callback Error"
 											print("Luna Interface Suite | "..BindSettings.Name.." Callback Error " ..tostring(Response))
-											wait(0.5)
+											task.wait(0.5)
 											Bind.Title.Text = BindSettings.Name
 											TweenService:Create(Bind, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {BackgroundTransparency = 0.5}):Play()
 											TweenService:Create(Bind, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {BackgroundColor3 = Color3.fromRGB(32, 30, 38)}):Play()
 											TweenService:Create(Bind.UIStroke, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {Transparency = 0.5}):Play()
-										end 
+										end
 										Loop:Disconnect()
 									else
 										local Success, Response = pcall(function()
@@ -3851,14 +4400,14 @@ function Luna:CreateWindow(WindowSettings)
 											TweenService:Create(Bind.UIStroke, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {Transparency = 1}):Play()
 											Bind.Title.Text = "Callback Error"
 											print("Luna Interface Suite | "..BindSettings.Name.." Callback Error " ..tostring(Response))
-											wait(0.5)
+											task.wait(0.5)
 											Bind.Title.Text = BindSettings.Name
 											TweenService:Create(Bind, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {BackgroundTransparency = 0.5}):Play()
 											TweenService:Create(Bind, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {BackgroundColor3 = Color3.fromRGB(32, 30, 38)}):Play()
 											TweenService:Create(Bind.UIStroke, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {Transparency = 0.5}):Play()
 										end
 									end
-								end)	
+								end)
 							end
 						end
 					end
@@ -3890,7 +4439,6 @@ function Luna:CreateWindow(WindowSettings)
 					Bind.BindFrame.BindBox.Text = BindSettings.CurrentBind
 					Bind.BindFrame.Size = UDim2.new(0, Bind.BindFrame.BindBox.TextBounds.X + 20, 0, 42)
 
-
 					BindV.CurrentBind = BindSettings.CurrentBind
 				end
 
@@ -3903,13 +4451,10 @@ function Luna:CreateWindow(WindowSettings)
 					Luna.Options[Flag] = BindV
 				end
 
-				-- Luna.Flags[BindSettings.Flag] = BindSettings
-
 				return BindV
 
 			end
 
-			-- Dynamic Input
 			function Section:CreateInput(InputSettings, Flag)
 				TabPage.Position = UDim2.new(0,0,0,28)
 				local InputV = { IgnoreConfig = false, Class = "Input", Settings = InputSettings }
@@ -3925,7 +4470,7 @@ function Luna:CreateWindow(WindowSettings)
 					MaxCharacters = nil,
 					Callback = function(Text)
 
-					end, -- 52
+					end,
 				}, InputSettings or {})
 
 				InputV.CurrentValue = InputSettings.CurrentValue
@@ -3935,7 +4480,7 @@ function Luna:CreateWindow(WindowSettings)
 					descriptionbool = true
 				end
 
-				local Input 
+				local Input
 				if descriptionbool then
 					Input = Elements.Template.InputDesc:Clone()
 				else
@@ -3958,7 +4503,7 @@ function Luna:CreateWindow(WindowSettings)
 
 				TweenService:Create(Input, TweenInfo.new(0.3, Enum.EasingStyle.Exponential), {BackgroundTransparency = 0.5}):Play()
 				TweenService:Create(Input.UIStroke, TweenInfo.new(0.3, Enum.EasingStyle.Exponential), {Transparency = 0.5}):Play()
-				TweenService:Create(Input.Title, TweenInfo.new(0.3, Enum.EasingStyle.Exponential), {TextTransparency = 0}):Play()	
+				TweenService:Create(Input.Title, TweenInfo.new(0.3, Enum.EasingStyle.Exponential), {TextTransparency = 0}):Play()
 				if descriptionbool then TweenService:Create(Input.Desc, TweenInfo.new(0.3, Enum.EasingStyle.Exponential), {TextTransparency = 0}):Play() end
 				TweenService:Create(Input.InputFrame, TweenInfo.new(0.3, Enum.EasingStyle.Exponential), {BackgroundTransparency = 0.9}):Play()
 				TweenService:Create(Input.InputFrame.UIStroke, TweenInfo.new(0.3, Enum.EasingStyle.Exponential), {Transparency = 0.3}):Play()
@@ -3981,7 +4526,7 @@ function Luna:CreateWindow(WindowSettings)
 								TweenService:Create(Input.UIStroke, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {Transparency = 1}):Play()
 								Input.Title.Text = "Callback Error"
 								print("Luna Interface Suite | "..InputSettings.Name.." Callback Error " ..tostring(Response))
-								wait(0.5)
+								task.wait(0.5)
 								Input.Title.Text = InputSettings.Name
 								TweenService:Create(Input, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {BackgroundTransparency = 0.5}):Play()
 								TweenService:Create(Input, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {BackgroundColor3 = Color3.fromRGB(32, 30, 38)}):Play()
@@ -4022,14 +4567,14 @@ function Luna:CreateWindow(WindowSettings)
 							TweenService:Create(Input.UIStroke, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {Transparency = 1}):Play()
 							Input.Title.Text = "Callback Error"
 							print("Luna Interface Suite | "..InputSettings.Name.." Callback Error " ..tostring(Response))
-							wait(0.5)
+							task.wait(0.5)
 							Input.Title.Text = InputSettings.Name
 							TweenService:Create(Input, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {BackgroundTransparency = 0.5}):Play()
 							TweenService:Create(Input, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {BackgroundColor3 = Color3.fromRGB(32, 30, 38)}):Play()
 							TweenService:Create(Input.UIStroke, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {Transparency = 0.5}):Play()
 						end
 					end
-					InputV.CurrentValue = Input.InputFrame.InputBox.Text				
+					InputV.CurrentValue = Input.InputFrame.InputBox.Text
 				end)
 
 				Input["MouseEnter"]:Connect(function()
@@ -4039,7 +4584,6 @@ function Luna:CreateWindow(WindowSettings)
 				Input["MouseLeave"]:Connect(function()
 					tween(Input.UIStroke, {Color = Color3.fromRGB(64,61,76)})
 				end)
-
 
 				function InputV:Set(NewInputSettings)
 
@@ -4071,12 +4615,10 @@ function Luna:CreateWindow(WindowSettings)
 					Luna.Options[Flag] = InputV
 				end
 
-
 				return InputV
 
 			end
 
-			-- Dropdown
 			function Section:CreateDropdown(DropdownSettings, Flag)
 				TabPage.Position = UDim2.new(0,0,0,28)
 				local DropdownV = { IgnoreConfig = false, Class = "Dropdown", Settings = DropdownSettings}
@@ -4087,10 +4629,8 @@ function Luna:CreateWindow(WindowSettings)
 					Options = {"Option 1", "Option 2"},
 					CurrentOption = {"Option 1"},
 					MultipleOptions = false,
-					SpecialType = nil, -- currently onl player, might add more soon
+					SpecialType = nil,
 					Callback = function(Options)
-						-- The function that takes place when the selected option is changed
-						-- The variable (Options) is a table of strings for the current selected options or a string if multioptions is false
 					end,
 				}, DropdownSettings or {})
 
@@ -4142,7 +4682,7 @@ function Luna:CreateWindow(WindowSettings)
 						TweenService:Create(Dropdown.UIStroke, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {Transparency = 1}):Play()
 						Dropdown.Title.Text = "Callback Error"
 						print("Luna Interface Suite | "..DropdownSettings.Name.." Callback Error " ..tostring(Response))
-						wait(0.5)
+						task.wait(0.5)
 						Dropdown.Title.Text = DropdownSettings.Name
 						TweenService:Create(Dropdown, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {BackgroundTransparency = 0.5}):Play()
 						TweenService:Create(Dropdown, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {BackgroundColor3 = Color3.fromRGB(32, 30, 38)}):Play()
@@ -4153,7 +4693,6 @@ function Luna:CreateWindow(WindowSettings)
 					end
 				end
 
-				-- fixed by justhey
 				Dropdown.Selected:GetPropertyChangedSignal("Text"):Connect(function()
 					local text = Dropdown.Selected.Text:lower()
 					for _, Item in ipairs(Dropdown.List:GetChildren()) do
@@ -4162,7 +4701,6 @@ function Luna:CreateWindow(WindowSettings)
 						end
 					end
 				end)
-
 
 				local function Clear()
 					for _, option in ipairs(Dropdown.List:GetChildren()) do
@@ -4252,7 +4790,7 @@ function Luna:CreateWindow(WindowSettings)
 							else
 								tween(Option, {TextColor3 = Color3.fromRGB(200,200,200)})
 							end
-						end)	
+						end)
 					end
 				end
 
@@ -4310,7 +4848,7 @@ function Luna:CreateWindow(WindowSettings)
 				end
 				if ind == 1 then bleh = DropdownSettings.CurrentOption[1] else bleh = DropdownSettings.CurrentOption end
 				SafeCallback(bleh)
-				if type(bleh) == "string" then 
+				if type(bleh) == "string" then
 					tween(Dropdown.List[bleh], {TextColor3 = Color3.fromRGB(240,240,240), BackgroundTransparency = 0.95})
 				else
 					for i,v in pairs(bleh) do
@@ -4357,7 +4895,7 @@ function Luna:CreateWindow(WindowSettings)
 							table.remove(DropdownSettings.Options, i)
 						end
 						PlayerTableRefresh()
-						DropdownSettings.CurrentOption = DropdownSettings.Options[1]                    
+						DropdownSettings.CurrentOption = DropdownSettings.Options[1]
 						Players.PlayerAdded:Connect(function() PlayerTableRefresh() end)
 						Players.PlayerRemoving:Connect(function() PlayerTableRefresh() end)
 
@@ -4410,8 +4948,6 @@ function Luna:CreateWindow(WindowSettings)
 					end
 					Dropdown.Selected.Text = ""
 
-					-- Luna.Flags[DropdownSettings.Flag] = DropdownSettings
-
 				end
 
 				function DropdownV:Destroy()
@@ -4423,14 +4959,11 @@ function Luna:CreateWindow(WindowSettings)
 					Luna.Options[Flag] = DropdownV
 				end
 
-				-- Luna.Flags[DropdownSettings.Flag] = DropdownSettings
-
 				return DropdownV
 
 			end
 
-			-- Color Picker
-			function Section:CreateColorPicker(ColorPickerSettings, Flag) -- by Rayfield/Throit
+			function Section:CreateColorPicker(ColorPickerSettings, Flag)
 				TabPage.Position = UDim2.new(0,0,0,28)
 				local ColorPickerV = {IgnoreClass = false, Class = "Colorpicker", Settings = ColorPickerSettings}
 
@@ -4438,8 +4971,6 @@ function Luna:CreateWindow(WindowSettings)
 					Name = "Color Picker",
 					Color = Color3.fromRGB(255,255,255),
 					Callback = function(Value)
-						-- The function that takes place every time the color picker is moved/changed
-						-- The variable (Value) is a Color3fromRGB value based on which color is selected
 					end
 				}, ColorPickerSettings or {})
 
@@ -4483,7 +5014,7 @@ function Luna:CreateWindow(WindowSettings)
 						TweenService:Create(ColorPicker.UIStroke, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {Transparency = 1}):Play()
 						ColorPicker.Title.Text = "Callback Error"
 						print("Luna Interface Suite | "..ColorPickerSettings.Name.." Callback Error " ..tostring(Response))
-						wait(0.5)
+						task.wait(0.5)
 						ColorPicker.Title.Text = ColorPickerSettings.Name
 						TweenService:Create(ColorPicker, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {BackgroundTransparency = 0.5}):Play()
 						TweenService:Create(ColorPicker, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {BackgroundColor3 = Color3.fromRGB(32, 30, 38)}):Play()
@@ -4498,11 +5029,11 @@ function Luna:CreateWindow(WindowSettings)
 
 				local mouse = game.Players.LocalPlayer:GetMouse()
 				Main.Image = "http://www.roblox.com/asset/?id=11415645739"
-				local mainDragging = false 
-				local sliderDragging = false 
+				local mainDragging = false
+				local sliderDragging = false
 				ColorPicker.Interact.MouseButton1Down:Connect(function()
 					if not opened then
-						opened = true 
+						opened = true
 						tween(ColorPicker, {Size = UDim2.new( 1.042, -25,0, 165)}, nil, TweenInfo.new(0.6, Enum.EasingStyle.Exponential))
 						tween(Background, {Size = openedsize})
 						tween(Display, {BackgroundTransparency = 1})
@@ -4513,42 +5044,40 @@ function Luna:CreateWindow(WindowSettings)
 						tween(Display, {BackgroundTransparency = 0})
 					end
 				end)
-				UserInputService.InputEnded:Connect(function(input, gameProcessed) if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then 
+				UserInputService.InputEnded:Connect(function(input, gameProcessed) if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
 						mainDragging = false
 						sliderDragging = false
 					end end)
 				Main.MouseButton1Down:Connect(function()
 					if opened then
-						mainDragging = true 
+						mainDragging = true
 					end
 				end)
 				Main.MainPoint.MouseButton1Down:Connect(function()
 					if opened then
-						mainDragging = true 
+						mainDragging = true
 					end
 				end)
 				Slider.MouseButton1Down:Connect(function()
-					sliderDragging = true 
+					sliderDragging = true
 				end)
 				Slider.SliderPoint.MouseButton1Down:Connect(function()
-					sliderDragging = true 
+					sliderDragging = true
 				end)
 				local h,s,v = ColorPickerSettings.Color:ToHSV()
-				local color = Color3.fromHSV(h,s,v) 
+				local color = Color3.fromHSV(h,s,v)
 				local r,g,b = math.floor((h*255)+0.5),math.floor((s*255)+0.5),math.floor((v*255)+0.5)
 				local hex = string.format("#%02X%02X%02X",color.R*0xFF,color.G*0xFF,color.B*0xFF)
 				ColorPicker.HexInput.InputBox.Text = hex
 				local function setDisplay(hp,sp,vp)
-					--Main
 					Main.MainPoint.Position = UDim2.new(s,-Main.MainPoint.AbsoluteSize.X/2,1-v,-Main.MainPoint.AbsoluteSize.Y/2)
 					Main.MainPoint.ImageColor3 = Color3.fromHSV(hp,sp,vp)
 					Background.BackgroundColor3 = Color3.fromHSV(hp,1,1)
 					Display.BackgroundColor3 = Color3.fromHSV(hp,sp,vp)
-					--Slider 
 					local x = hp * Slider.AbsoluteSize.X
 					Slider.SliderPoint.Position = UDim2.new(0,x-Slider.SliderPoint.AbsoluteSize.X/2,0.5,0)
 					Slider.SliderPoint.ImageColor3 = Color3.fromHSV(hp,1,1)
-					local color = Color3.fromHSV(hp,sp,vp) 
+					local color = Color3.fromHSV(hp,sp,vp)
 					local r,g,b = math.floor((color.R*255)+0.5),math.floor((color.G*255)+0.5),math.floor((color.B*255)+0.5)
 					ColorPicker.RInput.InputBox.Text = tostring(r)
 					ColorPicker.GInput.InputBox.Text = tostring(g)
@@ -4565,45 +5094,44 @@ function Luna:CreateWindow(WindowSettings)
 							hex = ColorPicker.HexInput.InputBox.Text
 							setDisplay()
 							ColorPickerSettings.Color = rgbColor
-						end) 
-					then 
-						ColorPicker.HexInput.InputBox.Text = hex 
+						end)
+					then
+						ColorPicker.HexInput.InputBox.Text = hex
 					end
 					local r,g,b = math.floor((h*255)+0.5),math.floor((s*255)+0.5),math.floor((v*255)+0.5)
 					ColorPickerSettings.Color = Color3.fromRGB(r,g,b)
 					SafeCallback( Color3.fromRGB(r,g,b))
 				end)
-				--RGB
 				local function rgbBoxes(box,toChange)
-					local value = tonumber(box.Text) 
-					local color = Color3.fromHSV(h,s,v) 
+					local value = tonumber(box.Text)
+					local color = Color3.fromHSV(h,s,v)
 					local oldR,oldG,oldB = math.floor((color.R*255)+0.5),math.floor((color.G*255)+0.5),math.floor((color.B*255)+0.5)
-					local save 
+					local save
 					if toChange == "R" then save = oldR;oldR = value elseif toChange == "G" then save = oldG;oldG = value else save = oldB;oldB = value end
-					if value then 
+					if value then
 						value = math.clamp(value,0,255)
 						h,s,v = Color3.fromRGB(oldR,oldG,oldB):ToHSV()
 						setDisplay()
-					else 
+					else
 						box.Text = tostring(save)
 					end
 					local r,g,b = math.floor((color.R*255)+0.5),math.floor((color.G*255)+0.5),math.floor((color.B*255)+0.5)
 					ColorPickerSettings.Color = Color3.fromRGB(r,g,b)
 				end
-				ColorPicker.RInput.InputBox.FocusLost:connect(function()
+				ColorPicker.RInput.InputBox.FocusLost:Connect(function()
 					rgbBoxes(ColorPicker.RInput.InputBox,"R")
 					SafeCallback(Color3.fromRGB(r,g,b))
 				end)
-				ColorPicker.GInput.InputBox.FocusLost:connect(function()
+				ColorPicker.GInput.InputBox.FocusLost:Connect(function()
 					rgbBoxes(ColorPicker.GInput.InputBox,"G")
 					SafeCallback(Color3.fromRGB(r,g,b))
 				end)
-				ColorPicker.BInput.InputBox.FocusLost:connect(function()
+				ColorPicker.BInput.InputBox.FocusLost:Connect(function()
 					rgbBoxes(ColorPicker.BInput.InputBox,"B")
 					SafeCallback(Color3.fromRGB(r,g,b))
 				end)
-				RunService.RenderStepped:connect(function()
-					if mainDragging then 
+				RunService.RenderStepped:Connect(function()
+					if mainDragging then
 						local localX = math.clamp(mouse.X-Main.AbsolutePosition.X,0,Main.AbsoluteSize.X)
 						local localY = math.clamp(mouse.Y-Main.AbsolutePosition.Y,0,Main.AbsoluteSize.Y)
 						Main.MainPoint.Position = UDim2.new(0,localX-Main.MainPoint.AbsoluteSize.X/2,0,localY-Main.MainPoint.AbsoluteSize.Y/2)
@@ -4612,7 +5140,7 @@ function Luna:CreateWindow(WindowSettings)
 						Display.BackgroundColor3 = Color3.fromHSV(h,s,v)
 						Main.MainPoint.ImageColor3 = Color3.fromHSV(h,s,v)
 						Background.BackgroundColor3 = Color3.fromHSV(h,1,1)
-						local color = Color3.fromHSV(h,s,v) 
+						local color = Color3.fromHSV(h,s,v)
 						local r,g,b = math.floor((color.R*255)+0.5),math.floor((color.G*255)+0.5),math.floor((color.B*255)+0.5)
 						ColorPicker.RInput.InputBox.Text = tostring(r)
 						ColorPicker.GInput.InputBox.Text = tostring(g)
@@ -4622,7 +5150,7 @@ function Luna:CreateWindow(WindowSettings)
 						ColorPickerSettings.Color = Color3.fromRGB(r,g,b)
 						ColorPickerV.Color = ColorPickerSettings.Color
 					end
-					if sliderDragging then 
+					if sliderDragging then
 						local localX = math.clamp(mouse.X-Slider.AbsolutePosition.X,0,Slider.AbsoluteSize.X)
 						h = localX / Slider.AbsoluteSize.X
 						Display.BackgroundColor3 = Color3.fromHSV(h,s,v)
@@ -4630,7 +5158,7 @@ function Luna:CreateWindow(WindowSettings)
 						Slider.SliderPoint.ImageColor3 = Color3.fromHSV(h,1,1)
 						Background.BackgroundColor3 = Color3.fromHSV(h,1,1)
 						Main.MainPoint.ImageColor3 = Color3.fromHSV(h,s,v)
-						local color = Color3.fromHSV(h,s,v) 
+						local color = Color3.fromHSV(h,s,v)
 						local r,g,b = math.floor((color.R*255)+0.5),math.floor((color.G*255)+0.5),math.floor((color.B*255)+0.5)
 						ColorPicker.RInput.InputBox.Text = tostring(r)
 						ColorPicker.GInput.InputBox.Text = tostring(g)
@@ -4654,7 +5182,7 @@ function Luna:CreateWindow(WindowSettings)
 					ColorPicker.Visible = true
 
 					local h,s,v = ColorPickerSettings.Color:ToHSV()
-					local color = Color3.fromHSV(h,s,v) 
+					local color = Color3.fromHSV(h,s,v)
 					local r,g,b = math.floor((color.R*255)+0.5),math.floor((color.G*255)+0.5),math.floor((color.B*255)+0.5)
 					local hex = string.format("#%02X%02X%02X",color.R*0xFF,color.G*0xFF,color.B*0xFF)
 					ColorPicker.HexInput.InputBox.Text = hex
@@ -4681,7 +5209,6 @@ function Luna:CreateWindow(WindowSettings)
 
 		end
 
-		-- Divider
 		function Tab:CreateDivider()
 			local b = Elements.Template.Divider:Clone()
 			b.Parent = TabPage
@@ -4689,7 +5216,6 @@ function Luna:CreateWindow(WindowSettings)
 			tween(b.Line, {BackgroundTransparency = 0})
 		end
 
-		-- Button
 		function Tab:CreateButton(ButtonSettings)
 
 			ButtonSettings = Kwargify({
@@ -4705,9 +5231,8 @@ function Luna:CreateWindow(WindowSettings)
 				Settings = ButtonSettings
 			}
 
-
 			local Button
-			if ButtonSettings.Description == nil and ButtonSettings.Description ~= "" then
+			if ButtonSettings.Description == nil or ButtonSettings.Description == "" then
 				Button = Elements.Template.Button:Clone()
 			else
 				Button = Elements.Template.ButtonDesc:Clone()
@@ -4728,9 +5253,9 @@ function Luna:CreateWindow(WindowSettings)
 
 			TweenService:Create(Button, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {BackgroundTransparency = 0.5}):Play()
 			TweenService:Create(Button.UIStroke, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {Transparency = 0.5}):Play()
-			TweenService:Create(Button.Title, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {TextTransparency = 0}):Play()	
+			TweenService:Create(Button.Title, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {TextTransparency = 0}):Play()
 			if ButtonSettings.Description ~= nil and ButtonSettings.Description ~= "" then
-				TweenService:Create(Button.Desc, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {TextTransparency = 0}):Play()	
+				TweenService:Create(Button.Desc, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {TextTransparency = 0}):Play()
 			end
 
 			Button.Interact["MouseButton1Click"]:Connect(function()
@@ -4742,14 +5267,14 @@ function Luna:CreateWindow(WindowSettings)
 					TweenService:Create(Button.UIStroke, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {Transparency = 1}):Play()
 					Button.Title.Text = "Callback Error"
 					print("Luna Interface Suite | "..ButtonSettings.Name.." Callback Error " ..tostring(Response))
-					wait(0.5)
+					task.wait(0.5)
 					Button.Title.Text = ButtonSettings.Name
 					TweenService:Create(Button, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {BackgroundTransparency = 0.5}):Play()
 					TweenService:Create(Button, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {BackgroundColor3 = Color3.fromRGB(32, 30, 38)}):Play()
 					TweenService:Create(Button.UIStroke, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {Transparency = 0.5}):Play()
 				else
 					tween(Button.UIStroke, {Color = Color3.fromRGB(136, 131, 163)})
-					wait(0.2)
+					task.wait(0.2)
 					if ButtonV.Hover then
 						tween(Button.UIStroke, {Color = Color3.fromRGB(87, 84, 104)})
 					else
@@ -4793,7 +5318,6 @@ function Luna:CreateWindow(WindowSettings)
 			return ButtonV
 		end
 
-		-- Label
 		function Tab:CreateLabel(LabelSettings)
 
 			local LabelV = {}
@@ -4801,7 +5325,7 @@ function Luna:CreateWindow(WindowSettings)
 			LabelSettings = Kwargify({
 				Text = "Label",
 				Style = 1
-			}, LabelSettings or {}) 
+			}, LabelSettings or {})
 
 			LabelV.Settings = LabelSettings
 
@@ -4828,7 +5352,7 @@ function Luna:CreateWindow(WindowSettings)
 				TweenService:Create(Label, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {BackgroundTransparency = 1}):Play()
 			end
 			TweenService:Create(Label.UIStroke, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {Transparency = 0.5}):Play()
-			TweenService:Create(Label.Text, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {TextTransparency = 0}):Play()	
+			TweenService:Create(Label.Text, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {TextTransparency = 0}):Play()
 
 			function LabelV:Set(NewLabel)
 				LabelSettings.Text = NewLabel
@@ -4844,7 +5368,6 @@ function Luna:CreateWindow(WindowSettings)
 			return LabelV
 		end
 
-		-- Paragraph
 		function Tab:CreateParagraph(ParagraphSettings)
 
 			ParagraphSettings = Kwargify({
@@ -4869,8 +5392,8 @@ function Luna:CreateWindow(WindowSettings)
 
 			TweenService:Create(Paragraph, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {BackgroundTransparency = 1}):Play()
 			TweenService:Create(Paragraph.UIStroke, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {Transparency = 0.5}):Play()
-			TweenService:Create(Paragraph.Title, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {TextTransparency = 0}):Play()	
-			TweenService:Create(Paragraph.Text, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {TextTransparency = 0}):Play()	
+			TweenService:Create(Paragraph.Title, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {TextTransparency = 0}):Play()
+			TweenService:Create(Paragraph.Text, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {TextTransparency = 0}):Play()
 
 			function ParagraphV:Update()
 				Paragraph.Text.Size = UDim2.new(Paragraph.Text.Size.X.Scale, Paragraph.Text.Size.X.Offset, 0, math.huge)
@@ -4904,7 +5427,6 @@ function Luna:CreateWindow(WindowSettings)
 			return ParagraphV
 		end
 
-		-- Slider
 		function Tab:CreateSlider(SliderSettings, Flag)
 			local SliderV = { IgnoreConfig = false, Class = "Slider", Settings = SliderSettings }
 
@@ -4931,7 +5453,7 @@ function Luna:CreateWindow(WindowSettings)
 
 			TweenService:Create(Slider, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {BackgroundTransparency = 0.5}):Play()
 			TweenService:Create(Slider.UIStroke, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {Transparency = 0.5}):Play()
-			TweenService:Create(Slider.Title, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {TextTransparency = 0}):Play()	
+			TweenService:Create(Slider.Title, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {TextTransparency = 0}):Play()
 
 			Slider.Main.Progress.Size =	UDim2.new(0, Slider.Main.AbsoluteSize.X * ((SliderSettings.CurrentValue + SliderSettings.Range[1]) / (SliderSettings.Range[2] - SliderSettings.Range[1])) > 5 and Slider.Main.AbsoluteSize.X * (SliderSettings.CurrentValue / (SliderSettings.Range[2] - SliderSettings.Range[1])) or 5, 1, 0)
 
@@ -4949,15 +5471,15 @@ function Luna:CreateWindow(WindowSettings)
 			end)
 
 			Slider.Interact.InputBegan:Connect(function(Input)
-				if Input.UserInputType == Enum.UserInputType.MouseButton1 or Input.UserInputType == Enum.UserInputType.Touch then 
-					SLDragging = true 
-				end 
+				if Input.UserInputType == Enum.UserInputType.MouseButton1 or Input.UserInputType == Enum.UserInputType.Touch then
+					SLDragging = true
+				end
 			end)
 
-			Slider.Interact.InputEnded:Connect(function(Input) 
-				if Input.UserInputType == Enum.UserInputType.MouseButton1 or Input.UserInputType == Enum.UserInputType.Touch then 
-					SLDragging = false 
-				end 
+			Slider.Interact.InputEnded:Connect(function(Input)
+				if Input.UserInputType == Enum.UserInputType.MouseButton1 or Input.UserInputType == Enum.UserInputType.Touch then
+					SLDragging = false
+				end
 			end)
 
 			Slider.Interact.MouseButton1Down:Connect(function()
@@ -5003,7 +5525,7 @@ function Luna:CreateWindow(WindowSettings)
 								TweenService:Create(Slider.UIStroke, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {Transparency = 1}):Play()
 								Slider.Title.Text = "Callback Error"
 								print("Luna Interface Suite | "..SliderSettings.Name.." Callback Error " ..tostring(Response))
-								wait(0.5)
+								task.wait(0.5)
 								Slider.Title.Text = SliderSettings.Name
 								TweenService:Create(Slider, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {BackgroundTransparency = 0.5}):Play()
 								TweenService:Create(Slider, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {BackgroundColor3 = Color3.fromRGB(32, 30, 38)}):Play()
@@ -5012,7 +5534,6 @@ function Luna:CreateWindow(WindowSettings)
 
 							SliderSettings.CurrentValue = NewValue
 							SliderV.CurrentValue = SliderSettings.CurrentValue
-							-- Luna.Flags[SliderSettings.Flag] = SliderSettings
 						end
 					else
 						TweenService:Create(Slider.Main.Progress, TweenInfo.new(0.1, Enum.EasingStyle.Back, Enum.EasingDirection.In, 0, false), {Size = UDim2.new(0, Location - Slider.Main.AbsolutePosition.X > 5 and Location - Slider.Main.AbsolutePosition.X or 5, 1, 0)}):Play()
@@ -5036,7 +5557,7 @@ function Luna:CreateWindow(WindowSettings)
 					TweenService:Create(Slider.UIStroke, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {Transparency = 1}):Play()
 					Slider.Title.Text = "Callback Error"
 					print("Luna Interface Suite | "..SliderSettings.Name.." Callback Error " ..tostring(Response))
-					wait(0.5)
+					task.wait(0.5)
 					Slider.Title.Text = SliderSettings.Name
 					TweenService:Create(Slider, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {BackgroundTransparency = 0.5}):Play()
 					TweenService:Create(Slider, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {BackgroundColor3 = Color3.fromRGB(30, 33, 40)}):Play()
@@ -5045,13 +5566,12 @@ function Luna:CreateWindow(WindowSettings)
 
 				SliderSettings.CurrentValue = NewVal
 				SliderV.CurrentValue = SliderSettings.CurrentValue
-				-- Luna.Flags[SliderSettings.Flag] = SliderSettings
 
 			end
 
 			function SliderV:UpdateValue(Value)
 				Set(tonumber(Value))
-			end 
+			end
 
 			Slider.Value:GetPropertyChangedSignal("Text"):Connect(function()
 				local text = Slider.Value.Text
@@ -5080,7 +5600,6 @@ function Luna:CreateWindow(WindowSettings)
 
 				Set()
 
-				-- Luna.Flags[SliderSettings.Flag] = SliderSettings
 			end
 
 			function SliderV:Destroy()
@@ -5101,8 +5620,7 @@ function Luna:CreateWindow(WindowSettings)
 
 		end
 
-		-- Toggle
-		function Tab:CreateToggle(ToggleSettings, Flag)    
+		function Tab:CreateToggle(ToggleSettings, Flag)
 			local ToggleV = { IgnoreConfig = false, Class = "Toggle" }
 
 			ToggleSettings = Kwargify({
@@ -5112,7 +5630,6 @@ function Luna:CreateWindow(WindowSettings)
 				Callback = function(Value)
 				end,
 			}, ToggleSettings or {})
-
 
 			local Toggle
 
@@ -5142,7 +5659,7 @@ function Luna:CreateWindow(WindowSettings)
 				TweenService:Create(Toggle.Desc, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {TextTransparency = 0}):Play()
 			end
 			TweenService:Create(Toggle.UIStroke, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {Transparency = 0.5}):Play()
-			TweenService:Create(Toggle.Title, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {TextTransparency = 0}):Play()	
+			TweenService:Create(Toggle.Title, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {TextTransparency = 0}):Play()
 
 			local function Set(bool)
 				if bool then
@@ -5180,7 +5697,7 @@ function Luna:CreateWindow(WindowSettings)
 					TweenService:Create(Toggle.UIStroke, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {Transparency = 1}):Play()
 					Toggle.Title.Text = "Callback Error"
 					print("Luna Interface Suite | "..ToggleSettings.Name.." Callback Error " ..tostring(Response))
-					wait(0.5)
+					task.wait(0.5)
 					Toggle.Title.Text = ToggleSettings.Name
 					TweenService:Create(Toggle, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {BackgroundTransparency = 0.5}):Play()
 					TweenService:Create(Toggle, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {BackgroundColor3 = Color3.fromRGB(32, 30, 38)}):Play()
@@ -5207,7 +5724,7 @@ function Luna:CreateWindow(WindowSettings)
 					TweenService:Create(Toggle.UIStroke, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {Transparency = 1}):Play()
 					Toggle.Title.Text = "Callback Error"
 					print("Luna Interface Suite | "..ToggleSettings.Name.." Callback Error " ..tostring(Response))
-					wait(0.5)
+					task.wait(0.5)
 					Toggle.Title.Text = ToggleSettings.Name
 					TweenService:Create(Toggle, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {BackgroundTransparency = 0.5}):Play()
 					TweenService:Create(Toggle, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {BackgroundColor3 = Color3.fromRGB(32, 30, 38)}):Play()
@@ -5251,7 +5768,7 @@ function Luna:CreateWindow(WindowSettings)
 					TweenService:Create(Toggle.UIStroke, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {Transparency = 0}):Play()
 					Toggle.Title.Text = "Callback Error"
 					print("Luna Interface Suite | "..ToggleSettings.Name.." Callback Error " ..tostring(Response))
-					wait(0.5)
+					task.wait(0.5)
 					Toggle.Title.Text = ToggleSettings.Name
 					TweenService:Create(Toggle, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {BackgroundTransparency = 0.5}):Play()
 					TweenService:Create(Toggle, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {BackgroundColor3 = Color3.fromRGB(32, 30, 38)}):Play()
@@ -5277,7 +5794,6 @@ function Luna:CreateWindow(WindowSettings)
 
 		end
 
-		-- Bind
 		function Tab:CreateBind(BindSettings, Flag)
 			local BindV = { Class = "Keybind", IgnoreConfig = false, Settings = BindSettings, Active = false }
 
@@ -5285,15 +5801,11 @@ function Luna:CreateWindow(WindowSettings)
 				Name = "Bind",
 				Description = nil,
 				CurrentBind = "Q",
-				HoldToInteract = false, -- setting this makes the Bind in toggle mode
+				HoldToInteract = false,
 				Callback = function(Bind)
-					-- The function that takes place when the Bind is pressed
-					-- The variable (Bind) is a boolean for whether the Bind is being held or not (HoldToInteract needs to be true) or whether the Bind is currently active
 				end,
 
 				OnChangedCallback = function(Bind)
-					-- The function that takes place when the binded key changes
-					-- The variable (Bind) is a Enum.KeyCode for the new Binded Key
 				end,
 			}, BindSettings or {})
 
@@ -5331,7 +5843,6 @@ function Luna:CreateWindow(WindowSettings)
 			TweenService:Create(Bind.BindFrame, TweenInfo.new(0.3, Enum.EasingStyle.Exponential), {BackgroundTransparency = 0.9}):Play()
 			TweenService:Create(Bind.BindFrame.UIStroke, TweenInfo.new(0.3, Enum.EasingStyle.Exponential), {Transparency = 0.3}):Play()
 			TweenService:Create(Bind.BindFrame.BindBox, TweenInfo.new(0.3, Enum.EasingStyle.Exponential), {TextTransparency = 0}):Play()
-
 
 			Bind.BindFrame.BindBox.Text = BindSettings.CurrentBind
 			Bind.BindFrame.BindBox.Size = UDim2.new(0, Bind.BindFrame.BindBox.TextBounds.X + 20, 0, 42)
@@ -5372,7 +5883,7 @@ function Luna:CreateWindow(WindowSettings)
 							TweenService:Create(Bind.UIStroke, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {Transparency = 1}):Play()
 							Bind.Title.Text = "Callback Error"
 							print("Luna Interface Suite | "..BindSettings.Name.." Callback Error " ..tostring(Response))
-							wait(0.5)
+							task.wait(0.5)
 							Bind.Title.Text = BindSettings.Name
 							TweenService:Create(Bind, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {BackgroundTransparency = 0.5}):Play()
 							TweenService:Create(Bind, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {BackgroundColor3 = Color3.fromRGB(32, 30, 38)}):Play()
@@ -5380,7 +5891,7 @@ function Luna:CreateWindow(WindowSettings)
 						end
 						Bind.BindFrame.BindBox:ReleaseFocus()
 					end
-				elseif BindSettings.CurrentBind ~= nil and (input.KeyCode == Enum.KeyCode[BindSettings.CurrentBind] and not processed) then -- Test
+				elseif BindSettings.CurrentBind ~= nil and (input.KeyCode == Enum.KeyCode[BindSettings.CurrentBind] and not processed) then
 					local Held = true
 					local Connection
 					Connection = input.Changed:Connect(function(prop)
@@ -5401,14 +5912,14 @@ function Luna:CreateWindow(WindowSettings)
 							TweenService:Create(Bind.UIStroke, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {Transparency = 1}):Play()
 							Bind.Title.Text = "Callback Error"
 							print("Luna Interface Suite | "..BindSettings.Name.." Callback Error " ..tostring(Response))
-							wait(0.5)
+							task.wait(0.5)
 							Bind.Title.Text = BindSettings.Name
 							TweenService:Create(Bind, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {BackgroundTransparency = 0.5}):Play()
 							TweenService:Create(Bind, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {BackgroundColor3 = Color3.fromRGB(32, 30, 38)}):Play()
 							TweenService:Create(Bind.UIStroke, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {Transparency = 0.5}):Play()
 						end
 					else
-						wait(0.1)
+						task.wait(0.1)
 						if Held then
 							local Loop; Loop = RunService.Stepped:Connect(function()
 								if not Held then
@@ -5421,12 +5932,12 @@ function Luna:CreateWindow(WindowSettings)
 										TweenService:Create(Bind.UIStroke, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {Transparency = 1}):Play()
 										Bind.Title.Text = "Callback Error"
 										print("Luna Interface Suite | "..BindSettings.Name.." Callback Error " ..tostring(Response))
-										wait(0.5)
+										task.wait(0.5)
 										Bind.Title.Text = BindSettings.Name
 										TweenService:Create(Bind, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {BackgroundTransparency = 0.5}):Play()
 										TweenService:Create(Bind, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {BackgroundColor3 = Color3.fromRGB(32, 30, 38)}):Play()
 										TweenService:Create(Bind.UIStroke, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {Transparency = 0.5}):Play()
-									end 
+									end
 									Loop:Disconnect()
 								else
 									local Success, Response = pcall(function()
@@ -5438,14 +5949,14 @@ function Luna:CreateWindow(WindowSettings)
 										TweenService:Create(Bind.UIStroke, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {Transparency = 1}):Play()
 										Bind.Title.Text = "Callback Error"
 										print("Luna Interface Suite | "..BindSettings.Name.." Callback Error " ..tostring(Response))
-										wait(0.5)
+										task.wait(0.5)
 										Bind.Title.Text = BindSettings.Name
 										TweenService:Create(Bind, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {BackgroundTransparency = 0.5}):Play()
 										TweenService:Create(Bind, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {BackgroundColor3 = Color3.fromRGB(32, 30, 38)}):Play()
 										TweenService:Create(Bind.UIStroke, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {Transparency = 0.5}):Play()
 									end
 								end
-							end)	
+							end)
 						end
 					end
 				end
@@ -5477,7 +5988,6 @@ function Luna:CreateWindow(WindowSettings)
 				Bind.BindFrame.BindBox.Text = BindSettings.CurrentBind
 				Bind.BindFrame.Size = UDim2.new(0, Bind.BindFrame.BindBox.TextBounds.X + 20, 0, 42)
 
-
 				BindV.CurrentBind = BindSettings.CurrentBind
 			end
 
@@ -5490,8 +6000,6 @@ function Luna:CreateWindow(WindowSettings)
 				Luna.Options[Flag] = BindV
 			end
 
-			-- Luna.Flags[BindSettings.Flag] = BindSettings
-
 			return BindV
 
 		end
@@ -5502,10 +6010,8 @@ function Luna:CreateWindow(WindowSettings)
 				Name = "Bind",
 				Description = nil,
 				CurrentBind = "Q",
-				HoldToInteract = false, -- setting this makes the Bind in toggle mode
+				HoldToInteract = false,
 				Callback = function(Bind)
-					-- The function that takes place when the Bind is pressed
-					-- The variable (Bind) is a boolean for whether the Bind is being held or not (HoldToInteract needs to be true) or whether the Bind is currently active
 				end
 			}, BindSettings or {})
 
@@ -5545,7 +6051,6 @@ function Luna:CreateWindow(WindowSettings)
 			TweenService:Create(Bind.BindFrame.UIStroke, TweenInfo.new(0.3, Enum.EasingStyle.Exponential), {Transparency = 0.3}):Play()
 			TweenService:Create(Bind.BindFrame.BindBox, TweenInfo.new(0.3, Enum.EasingStyle.Exponential), {TextTransparency = 0}):Play()
 
-
 			Bind.BindFrame.BindBox.Text = BindSettings.CurrentBind
 			Bind.BindFrame.BindBox.Size = UDim2.new(0, Bind.BindFrame.BindBox.TextBounds.X + 16, 0, 42)
 
@@ -5578,7 +6083,7 @@ function Luna:CreateWindow(WindowSettings)
 						BindSettings.CurrentBind = tostring(NewKeyNoEnum)
 						Bind.BindFrame.BindBox:ReleaseFocus()
 					end
-				elseif BindSettings.CurrentBind ~= nil and (input.KeyCode == Enum.KeyCode[BindSettings.CurrentBind] and not processed) then -- Test
+				elseif BindSettings.CurrentBind ~= nil and (input.KeyCode == Enum.KeyCode[BindSettings.CurrentBind] and not processed) then
 					local Held = true
 					local Connection
 					Connection = input.Changed:Connect(function(prop)
@@ -5599,14 +6104,14 @@ function Luna:CreateWindow(WindowSettings)
 							TweenService:Create(Bind.UIStroke, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {Transparency = 1}):Play()
 							Bind.Title.Text = "Callback Error"
 							print("Luna Interface Suite | "..BindSettings.Name.." Callback Error " ..tostring(Response))
-							wait(0.5)
+							task.wait(0.5)
 							Bind.Title.Text = BindSettings.Name
 							TweenService:Create(Bind, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {BackgroundTransparency = 0.5}):Play()
 							TweenService:Create(Bind, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {BackgroundColor3 = Color3.fromRGB(32, 30, 38)}):Play()
 							TweenService:Create(Bind.UIStroke, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {Transparency = 0.5}):Play()
 						end
 					else
-						wait(0.1)
+						task.wait(0.1)
 						if Held then
 							local Loop; Loop = RunService.Stepped:Connect(function()
 								if not Held then
@@ -5619,12 +6124,12 @@ function Luna:CreateWindow(WindowSettings)
 										TweenService:Create(Bind.UIStroke, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {Transparency = 1}):Play()
 										Bind.Title.Text = "Callback Error"
 										print("Luna Interface Suite | "..BindSettings.Name.." Callback Error " ..tostring(Response))
-										wait(0.5)
+										task.wait(0.5)
 										Bind.Title.Text = BindSettings.Name
 										TweenService:Create(Bind, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {BackgroundTransparency = 0.5}):Play()
 										TweenService:Create(Bind, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {BackgroundColor3 = Color3.fromRGB(32, 30, 38)}):Play()
 										TweenService:Create(Bind.UIStroke, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {Transparency = 0.5}):Play()
-									end 
+									end
 									Loop:Disconnect()
 								else
 									local Success, Response = pcall(function()
@@ -5636,14 +6141,14 @@ function Luna:CreateWindow(WindowSettings)
 										TweenService:Create(Bind.UIStroke, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {Transparency = 1}):Play()
 										Bind.Title.Text = "Callback Error"
 										print("Luna Interface Suite | "..BindSettings.Name.." Callback Error " ..tostring(Response))
-										wait(0.5)
+										task.wait(0.5)
 										Bind.Title.Text = BindSettings.Name
 										TweenService:Create(Bind, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {BackgroundTransparency = 0.5}):Play()
 										TweenService:Create(Bind, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {BackgroundColor3 = Color3.fromRGB(32, 30, 38)}):Play()
 										TweenService:Create(Bind.UIStroke, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {Transparency = 0.5}):Play()
 									end
 								end
-							end)	
+							end)
 						end
 					end
 				end
@@ -5675,8 +6180,6 @@ function Luna:CreateWindow(WindowSettings)
 				Bind.BindFrame.BindBox.Text = BindSettings.CurrentBind
 				Bind.BindFrame.BindBox.Size = UDim2.new(0, Bind.BindFrame.BindBox.TextBounds.X + 16, 0, 42)
 
-				-- Luna.Flags[BindSettings.Flag] = BindSettings
-
 			end
 
 			function BindV:Destroy()
@@ -5684,13 +6187,10 @@ function Luna:CreateWindow(WindowSettings)
 				Bind:Destroy()
 			end
 
-			-- Luna.Flags[BindSettings.Flag] = BindSettings
-
 			return BindV
 
 		end
 
-		-- Dynamic Input
 		function Tab:CreateInput(InputSettings, Flag)
 			local InputV = { IgnoreConfig = false, Class = "Input", Settings = InputSettings }
 
@@ -5705,7 +6205,7 @@ function Luna:CreateWindow(WindowSettings)
 				MaxCharacters = nil,
 				Callback = function(Text)
 
-				end, -- 52
+				end,
 			}, InputSettings or {})
 
 			InputV.CurrentValue = InputSettings.CurrentValue
@@ -5715,7 +6215,7 @@ function Luna:CreateWindow(WindowSettings)
 				descriptionbool = true
 			end
 
-			local Input 
+			local Input
 			if descriptionbool then
 				Input = Elements.Template.InputDesc:Clone()
 			else
@@ -5738,7 +6238,7 @@ function Luna:CreateWindow(WindowSettings)
 
 			TweenService:Create(Input, TweenInfo.new(0.3, Enum.EasingStyle.Exponential), {BackgroundTransparency = 0.5}):Play()
 			TweenService:Create(Input.UIStroke, TweenInfo.new(0.3, Enum.EasingStyle.Exponential), {Transparency = 0.5}):Play()
-			TweenService:Create(Input.Title, TweenInfo.new(0.3, Enum.EasingStyle.Exponential), {TextTransparency = 0}):Play()	
+			TweenService:Create(Input.Title, TweenInfo.new(0.3, Enum.EasingStyle.Exponential), {TextTransparency = 0}):Play()
 			if descriptionbool then TweenService:Create(Input.Desc, TweenInfo.new(0.3, Enum.EasingStyle.Exponential), {TextTransparency = 0}):Play() end
 			TweenService:Create(Input.InputFrame, TweenInfo.new(0.3, Enum.EasingStyle.Exponential), {BackgroundTransparency = 0.9}):Play()
 			TweenService:Create(Input.InputFrame.UIStroke, TweenInfo.new(0.3, Enum.EasingStyle.Exponential), {Transparency = 0.3}):Play()
@@ -5761,7 +6261,7 @@ function Luna:CreateWindow(WindowSettings)
 							TweenService:Create(Input.UIStroke, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {Transparency = 1}):Play()
 							Input.Title.Text = "Callback Error"
 							print("Luna Interface Suite | "..InputSettings.Name.." Callback Error " ..tostring(Response))
-							wait(0.5)
+							task.wait(0.5)
 							Input.Title.Text = InputSettings.Name
 							TweenService:Create(Input, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {BackgroundTransparency = 0.5}):Play()
 							TweenService:Create(Input, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {BackgroundColor3 = Color3.fromRGB(32, 30, 38)}):Play()
@@ -5802,14 +6302,14 @@ function Luna:CreateWindow(WindowSettings)
 						TweenService:Create(Input.UIStroke, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {Transparency = 1}):Play()
 						Input.Title.Text = "Callback Error"
 						print("Luna Interface Suite | "..InputSettings.Name.." Callback Error " ..tostring(Response))
-						wait(0.5)
+						task.wait(0.5)
 						Input.Title.Text = InputSettings.Name
 						TweenService:Create(Input, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {BackgroundTransparency = 0.5}):Play()
 						TweenService:Create(Input, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {BackgroundColor3 = Color3.fromRGB(32, 30, 38)}):Play()
 						TweenService:Create(Input.UIStroke, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {Transparency = 0.5}):Play()
 					end
 				end
-				InputV.CurrentValue = Input.InputFrame.InputBox.Text				
+				InputV.CurrentValue = Input.InputFrame.InputBox.Text
 			end)
 
 			Input["MouseEnter"]:Connect(function()
@@ -5819,7 +6319,6 @@ function Luna:CreateWindow(WindowSettings)
 			Input["MouseLeave"]:Connect(function()
 				tween(Input.UIStroke, {Color = Color3.fromRGB(64,61,76)})
 			end)
-
 
 			function InputV:Set(NewInputSettings)
 
@@ -5851,12 +6350,10 @@ function Luna:CreateWindow(WindowSettings)
 				Luna.Options[Flag] = InputV
 			end
 
-
 			return InputV
 
 		end
 
-		-- Dropdown
 		function Tab:CreateDropdown(DropdownSettings, Flag)
 			local DropdownV = { IgnoreConfig = false, Class = "Dropdown", Settings = DropdownSettings}
 
@@ -5866,10 +6363,8 @@ function Luna:CreateWindow(WindowSettings)
 				Options = {"Option 1", "Option 2"},
 				CurrentOption = {"Option 1"},
 				MultipleOptions = false,
-				SpecialType = nil, -- currently onl player, might add more soon
+				SpecialType = nil,
 				Callback = function(Options)
-					-- The function that takes place when the selected option is changed
-					-- The variable (Options) is a table of strings for the current selected options or a string if multioptions is false
 				end,
 			}, DropdownSettings or {})
 
@@ -5921,7 +6416,7 @@ function Luna:CreateWindow(WindowSettings)
 					TweenService:Create(Dropdown.UIStroke, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {Transparency = 1}):Play()
 					Dropdown.Title.Text = "Callback Error"
 					print("Luna Interface Suite | "..DropdownSettings.Name.." Callback Error " ..tostring(Response))
-					wait(0.5)
+					task.wait(0.5)
 					Dropdown.Title.Text = DropdownSettings.Name
 					TweenService:Create(Dropdown, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {BackgroundTransparency = 0.5}):Play()
 					TweenService:Create(Dropdown, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {BackgroundColor3 = Color3.fromRGB(32, 30, 38)}):Play()
@@ -5932,7 +6427,6 @@ function Luna:CreateWindow(WindowSettings)
 				end
 			end
 
-			-- fixed by justhey
 			Dropdown.Selected:GetPropertyChangedSignal("Text"):Connect(function()
 				local text = Dropdown.Selected.Text:lower()
 				for _, Item in ipairs(Dropdown.List:GetChildren()) do
@@ -5941,7 +6435,6 @@ function Luna:CreateWindow(WindowSettings)
 					end
 				end
 			end)
-
 
 			local function Clear()
 				for _, option in ipairs(Dropdown.List:GetChildren()) do
@@ -6031,7 +6524,7 @@ function Luna:CreateWindow(WindowSettings)
 						else
 							tween(Option, {TextColor3 = Color3.fromRGB(200,200,200)})
 						end
-					end)	
+					end)
 				end
 			end
 
@@ -6089,7 +6582,7 @@ function Luna:CreateWindow(WindowSettings)
 			end
 			if ind == 1 then bleh = DropdownSettings.CurrentOption[1] else bleh = DropdownSettings.CurrentOption end
 			SafeCallback(bleh)
-			if type(bleh) == "string" then 
+			if type(bleh) == "string" then
 				tween(Dropdown.List[bleh], {TextColor3 = Color3.fromRGB(240,240,240), BackgroundTransparency = 0.95})
 			else
 				for i,v in pairs(bleh) do
@@ -6136,7 +6629,7 @@ function Luna:CreateWindow(WindowSettings)
 						table.remove(DropdownSettings.Options, i)
 					end
 					PlayerTableRefresh()
-					DropdownSettings.CurrentOption = DropdownSettings.Options[1]                    
+					DropdownSettings.CurrentOption = DropdownSettings.Options[1]
 					Players.PlayerAdded:Connect(function() PlayerTableRefresh() end)
 					Players.PlayerRemoving:Connect(function() PlayerTableRefresh() end)
 
@@ -6189,8 +6682,6 @@ function Luna:CreateWindow(WindowSettings)
 				end
 				Dropdown.Selected.Text = ""
 
-				-- Luna.Flags[DropdownSettings.Flag] = DropdownSettings
-
 			end
 
 			function DropdownV:Destroy()
@@ -6202,22 +6693,17 @@ function Luna:CreateWindow(WindowSettings)
 				Luna.Options[Flag] = DropdownV
 			end
 
-			-- Luna.Flags[DropdownSettings.Flag] = DropdownSettings
-
 			return DropdownV
 
 		end
 
-		-- Color Picker
-		function Tab:CreateColorPicker(ColorPickerSettings, Flag) -- by Rayfield/Throit
+		function Tab:CreateColorPicker(ColorPickerSettings, Flag)
 			local ColorPickerV = {IgnoreClass = false, Class = "Colorpicker", Settings = ColorPickerSettings}
 
 			ColorPickerSettings = Kwargify({
 				Name = "Color Picker",
 				Color = Color3.fromRGB(255,255,255),
 				Callback = function(Value)
-					-- The function that takes place every time the color picker is moved/changed
-					-- The variable (Value) is a Color3fromRGB value based on which color is selected
 				end
 			}, ColorPickerSettings or {})
 
@@ -6261,7 +6747,7 @@ function Luna:CreateWindow(WindowSettings)
 					TweenService:Create(ColorPicker.UIStroke, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {Transparency = 1}):Play()
 					ColorPicker.Title.Text = "Callback Error"
 					print("Luna Interface Suite | "..ColorPickerSettings.Name.." Callback Error " ..tostring(Response))
-					wait(0.5)
+					task.wait(0.5)
 					ColorPicker.Title.Text = ColorPickerSettings.Name
 					TweenService:Create(ColorPicker, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {BackgroundTransparency = 0.5}):Play()
 					TweenService:Create(ColorPicker, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {BackgroundColor3 = Color3.fromRGB(32, 30, 38)}):Play()
@@ -6276,11 +6762,11 @@ function Luna:CreateWindow(WindowSettings)
 
 			local mouse = game.Players.LocalPlayer:GetMouse()
 			Main.Image = "http://www.roblox.com/asset/?id=11415645739"
-			local mainDragging = false 
-			local sliderDragging = false 
+			local mainDragging = false
+			local sliderDragging = false
 			ColorPicker.Interact.MouseButton1Down:Connect(function()
 				if not opened then
-					opened = true 
+					opened = true
 					tween(ColorPicker, {Size = UDim2.new( 1.042, -25,0, 165)}, nil, TweenInfo.new(0.6, Enum.EasingStyle.Exponential))
 					tween(Background, {Size = openedsize})
 					tween(Display, {BackgroundTransparency = 1})
@@ -6291,42 +6777,40 @@ function Luna:CreateWindow(WindowSettings)
 					tween(Display, {BackgroundTransparency = 0})
 				end
 			end)
-			UserInputService.InputEnded:Connect(function(input, gameProcessed) if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then 
+			UserInputService.InputEnded:Connect(function(input, gameProcessed) if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
 					mainDragging = false
 					sliderDragging = false
 				end end)
 			Main.MouseButton1Down:Connect(function()
 				if opened then
-					mainDragging = true 
+					mainDragging = true
 				end
 			end)
 			Main.MainPoint.MouseButton1Down:Connect(function()
 				if opened then
-					mainDragging = true 
+					mainDragging = true
 				end
 			end)
 			Slider.MouseButton1Down:Connect(function()
-				sliderDragging = true 
+				sliderDragging = true
 			end)
 			Slider.SliderPoint.MouseButton1Down:Connect(function()
-				sliderDragging = true 
+				sliderDragging = true
 			end)
 			local h,s,v = ColorPickerSettings.Color:ToHSV()
-			local color = Color3.fromHSV(h,s,v) 
+			local color = Color3.fromHSV(h,s,v)
 			local r,g,b = math.floor((h*255)+0.5),math.floor((s*255)+0.5),math.floor((v*255)+0.5)
 			local hex = string.format("#%02X%02X%02X",color.R*0xFF,color.G*0xFF,color.B*0xFF)
 			ColorPicker.HexInput.InputBox.Text = hex
 			local function setDisplay(hp,sp,vp)
-				--Main
 				Main.MainPoint.Position = UDim2.new(s,-Main.MainPoint.AbsoluteSize.X/2,1-v,-Main.MainPoint.AbsoluteSize.Y/2)
 				Main.MainPoint.ImageColor3 = Color3.fromHSV(hp,sp,vp)
 				Background.BackgroundColor3 = Color3.fromHSV(hp,1,1)
 				Display.BackgroundColor3 = Color3.fromHSV(hp,sp,vp)
-				--Slider 
 				local x = hp * Slider.AbsoluteSize.X
 				Slider.SliderPoint.Position = UDim2.new(0,x-Slider.SliderPoint.AbsoluteSize.X/2,0.5,0)
 				Slider.SliderPoint.ImageColor3 = Color3.fromHSV(hp,1,1)
-				local color = Color3.fromHSV(hp,sp,vp) 
+				local color = Color3.fromHSV(hp,sp,vp)
 				local r,g,b = math.floor((color.R*255)+0.5),math.floor((color.G*255)+0.5),math.floor((color.B*255)+0.5)
 				ColorPicker.RInput.InputBox.Text = tostring(r)
 				ColorPicker.GInput.InputBox.Text = tostring(g)
@@ -6343,45 +6827,44 @@ function Luna:CreateWindow(WindowSettings)
 						hex = ColorPicker.HexInput.InputBox.Text
 						setDisplay()
 						ColorPickerSettings.Color = rgbColor
-					end) 
-				then 
-					ColorPicker.HexInput.InputBox.Text = hex 
+					end)
+				then
+					ColorPicker.HexInput.InputBox.Text = hex
 				end
 				local r,g,b = math.floor((h*255)+0.5),math.floor((s*255)+0.5),math.floor((v*255)+0.5)
 				ColorPickerSettings.Color = Color3.fromRGB(r,g,b)
 				SafeCallback( Color3.fromRGB(r,g,b))
 			end)
-			--RGB
 			local function rgbBoxes(box,toChange)
-				local value = tonumber(box.Text) 
-				local color = Color3.fromHSV(h,s,v) 
+				local value = tonumber(box.Text)
+				local color = Color3.fromHSV(h,s,v)
 				local oldR,oldG,oldB = math.floor((color.R*255)+0.5),math.floor((color.G*255)+0.5),math.floor((color.B*255)+0.5)
-				local save 
+				local save
 				if toChange == "R" then save = oldR;oldR = value elseif toChange == "G" then save = oldG;oldG = value else save = oldB;oldB = value end
-				if value then 
+				if value then
 					value = math.clamp(value,0,255)
 					h,s,v = Color3.fromRGB(oldR,oldG,oldB):ToHSV()
 					setDisplay()
-				else 
+				else
 					box.Text = tostring(save)
 				end
 				local r,g,b = math.floor((color.R*255)+0.5),math.floor((color.G*255)+0.5),math.floor((color.B*255)+0.5)
 				ColorPickerSettings.Color = Color3.fromRGB(r,g,b)
 			end
-			ColorPicker.RInput.InputBox.FocusLost:connect(function()
+			ColorPicker.RInput.InputBox.FocusLost:Connect(function()
 				rgbBoxes(ColorPicker.RInput.InputBox,"R")
 				SafeCallback(Color3.fromRGB(r,g,b))
 			end)
-			ColorPicker.GInput.InputBox.FocusLost:connect(function()
+			ColorPicker.GInput.InputBox.FocusLost:Connect(function()
 				rgbBoxes(ColorPicker.GInput.InputBox,"G")
 				SafeCallback(Color3.fromRGB(r,g,b))
 			end)
-			ColorPicker.BInput.InputBox.FocusLost:connect(function()
+			ColorPicker.BInput.InputBox.FocusLost:Connect(function()
 				rgbBoxes(ColorPicker.BInput.InputBox,"B")
 				SafeCallback(Color3.fromRGB(r,g,b))
 			end)
-			RunService.RenderStepped:connect(function()
-				if mainDragging then 
+			RunService.RenderStepped:Connect(function()
+				if mainDragging then
 					local localX = math.clamp(mouse.X-Main.AbsolutePosition.X,0,Main.AbsoluteSize.X)
 					local localY = math.clamp(mouse.Y-Main.AbsolutePosition.Y,0,Main.AbsoluteSize.Y)
 					Main.MainPoint.Position = UDim2.new(0,localX-Main.MainPoint.AbsoluteSize.X/2,0,localY-Main.MainPoint.AbsoluteSize.Y/2)
@@ -6390,7 +6873,7 @@ function Luna:CreateWindow(WindowSettings)
 					Display.BackgroundColor3 = Color3.fromHSV(h,s,v)
 					Main.MainPoint.ImageColor3 = Color3.fromHSV(h,s,v)
 					Background.BackgroundColor3 = Color3.fromHSV(h,1,1)
-					local color = Color3.fromHSV(h,s,v) 
+					local color = Color3.fromHSV(h,s,v)
 					local r,g,b = math.floor((color.R*255)+0.5),math.floor((color.G*255)+0.5),math.floor((color.B*255)+0.5)
 					ColorPicker.RInput.InputBox.Text = tostring(r)
 					ColorPicker.GInput.InputBox.Text = tostring(g)
@@ -6400,7 +6883,7 @@ function Luna:CreateWindow(WindowSettings)
 					ColorPickerSettings.Color = Color3.fromRGB(r,g,b)
 					ColorPickerV.Color = ColorPickerSettings.Color
 				end
-				if sliderDragging then 
+				if sliderDragging then
 					local localX = math.clamp(mouse.X-Slider.AbsolutePosition.X,0,Slider.AbsoluteSize.X)
 					h = localX / Slider.AbsoluteSize.X
 					Display.BackgroundColor3 = Color3.fromHSV(h,s,v)
@@ -6408,7 +6891,7 @@ function Luna:CreateWindow(WindowSettings)
 					Slider.SliderPoint.ImageColor3 = Color3.fromHSV(h,1,1)
 					Background.BackgroundColor3 = Color3.fromHSV(h,1,1)
 					Main.MainPoint.ImageColor3 = Color3.fromHSV(h,s,v)
-					local color = Color3.fromHSV(h,s,v) 
+					local color = Color3.fromHSV(h,s,v)
 					local r,g,b = math.floor((color.R*255)+0.5),math.floor((color.G*255)+0.5),math.floor((color.B*255)+0.5)
 					ColorPicker.RInput.InputBox.Text = tostring(r)
 					ColorPicker.GInput.InputBox.Text = tostring(g)
@@ -6432,7 +6915,7 @@ function Luna:CreateWindow(WindowSettings)
 				ColorPicker.Visible = true
 
 				local h,s,v = ColorPickerSettings.Color:ToHSV()
-				local color = Color3.fromHSV(h,s,v) 
+				local color = Color3.fromHSV(h,s,v)
 				local r,g,b = math.floor((color.R*255)+0.5),math.floor((color.G*255)+0.5),math.floor((color.B*255)+0.5)
 				local hex = string.format("#%02X%02X%02X",color.R*0xFF,color.G*0xFF,color.B*0xFF)
 				ColorPicker.HexInput.InputBox.Text = hex
@@ -6455,11 +6938,10 @@ function Luna:CreateWindow(WindowSettings)
 			return ColorPickerV
 		end
 
-
 		function Tab:BuildConfigSection()
 			if isStudio then
 				Tab:CreateLabel({Text = "Config system unavailable. (Environment isStudio)", Style = 3})
-				return "Config system unavailable." 
+				return "Config system unavailable."
 			end
 
 			local inputPath = nil
@@ -6525,7 +7007,6 @@ function Luna:CreateWindow(WindowSettings)
 			})
 
 			Tab:CreateSection("Config Load/Settings")
-
 
 			configSelection = Tab:CreateDropdown({
 				Name = "Select Config",
@@ -6638,15 +7119,15 @@ function Luna:CreateWindow(WindowSettings)
 			if isfile(Luna.Folder .. "/settings/autoload.txt") then
 				local name = readfile(Luna.Folder .. "/settings/autoload.txt")
 				loadlabel:Set( { Text = "Current autoload config: " .. name })
-			end     
+			end
 		end
 
 		local ClassParser = {
 			["Toggle"] = {
 				Save = function(Flag, data)
 					return {
-						type = "Toggle", 
-						flag = Flag, 
+						type = "Toggle",
+						flag = Flag,
 						state = data.CurrentValue or false
 					}
 				end,
@@ -6659,8 +7140,8 @@ function Luna:CreateWindow(WindowSettings)
 			["Slider"] = {
 				Save = function(Flag, data)
 					return {
-						type = "Slider", 
-						flag = Flag, 
+						type = "Slider",
+						flag = Flag,
 						value = (data.CurrentValue and tostring(data.CurrentValue)),
 					}
 				end,
@@ -6673,8 +7154,8 @@ function Luna:CreateWindow(WindowSettings)
 			["Input"] = {
 				Save = function(Flag, data)
 					return {
-						type = "Input", 
-						flag = Flag, 
+						type = "Input",
+						flag = Flag,
 						text = data.CurrentValue
 					}
 				end,
@@ -6687,8 +7168,8 @@ function Luna:CreateWindow(WindowSettings)
 			["Dropdown"] = {
 				Save = function(Flag, data)
 					return {
-						type = "Dropdown", 
-						flag = Flag, 
+						type = "Dropdown",
+						flag = Flag,
 						value = data.CurrentOption
 					}
 				end,
@@ -6698,7 +7179,6 @@ function Luna:CreateWindow(WindowSettings)
 					end
 				end
 			},
-			-- buggy as hell stil
 			["Colorpicker"] = {
 				Save = function(Flag, data)
 					local function Color3ToHex(color)
@@ -6706,8 +7186,8 @@ function Luna:CreateWindow(WindowSettings)
 					end
 
 					return {
-						type = "Colorpicker", 
-						flag = Flag, 
+						type = "Colorpicker",
+						flag = Flag,
 						color = Color3ToHex(data.Color) or nil,
 						alpha = data.Alpha
 					}
@@ -6727,7 +7207,6 @@ function Luna:CreateWindow(WindowSettings)
 			}
 		}
 
-
 		function Tab:BuildThemeSection()
 
 			local Title = Elements.Template.Title:Clone()
@@ -6742,7 +7221,7 @@ function Luna:CreateWindow(WindowSettings)
 			local c1cp = Tab:CreateColorPicker({
 				Name = "Color 1",
 				Color = Color3.fromRGB(117, 164, 206),
-			}, "LunaInterfaceSuitePrebuiltCPC1") -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+			}, "LunaInterfaceSuitePrebuiltCPC1")
 
 			local c2cp = Tab:CreateColorPicker({
 				Name = "Color 2",
@@ -6752,7 +7231,7 @@ function Luna:CreateWindow(WindowSettings)
 			local c3cp = Tab:CreateColorPicker({
 				Name = "Color 3",
 				Color = Color3.fromRGB(224, 138, 184),
-			}, "LunaInterfaceSuitePrebuiltCPC3") 
+			}, "LunaInterfaceSuitePrebuiltCPC3")
 
 			task.wait(1)
 
@@ -6797,7 +7276,6 @@ function Luna:CreateWindow(WindowSettings)
 			end
 
 		end
-
 
 		local function BuildFolderTree()
 			if isStudio then return "Config system unavailable." end
@@ -6847,7 +7325,7 @@ function Luna:CreateWindow(WindowSettings)
 				if option.IgnoreConfig then continue end
 
 				table.insert(data.objects, ClassParser[option.Class].Save(flag, option))
-			end	
+			end
 
 			local success, encoded = pcall(HttpService.JSONEncode, HttpService, data)
 			if not success then
@@ -6873,8 +7351,8 @@ function Luna:CreateWindow(WindowSettings)
 
 			for _, option in next, decoded.objects do
 				if ClassParser[option.type] then
-					task.spawn(function() 
-						ClassParser[option.type].Load(option.flag, option) 
+					task.spawn(function()
+						ClassParser[option.type].Load(option.flag, option)
 					end)
 				end
 			end
@@ -6906,7 +7384,7 @@ function Luna:CreateWindow(WindowSettings)
 					Content = string.format("Auto loaded config %q", name),
 				})
 
-			end 
+			end
 		end
 
 		function Luna:RefreshConfigList()
@@ -6941,11 +7419,21 @@ function Luna:CreateWindow(WindowSettings)
 		return Tab
 	end
 
-
 	Elements.Parent.Visible = true
 	tween(Elements.Parent, {BackgroundTransparency = 0.1})
 	Navigation.Visible = true
 	tween(Navigation.Line, {BackgroundTransparency = 0})
+
+	-- Fix: re-saltar al tab activo para que el UIPageLayout lo muestre correctamente
+	-- (Elements.Parent estaba invisible cuando CreateHomeTab llamó JumpTo por primera vez)
+	task.defer(function()
+		pcall(function()
+			local currentPage = Elements:FindFirstChild(Window.CurrentTab or "Home")
+			if currentPage then
+				Elements.UIPageLayout:JumpTo(currentPage)
+			end
+		end)
+	end)
 
 	for _, TopbarButton in ipairs(Main.Controls:GetChildren()) do
 		if TopbarButton.ClassName == "Frame" and TopbarButton.Name ~= "Theme" then
@@ -6957,7 +7445,6 @@ function Luna:CreateWindow(WindowSettings)
 	end
 
 	Main.Controls.Close.ImageLabel.MouseButton1Click:Connect(function()
-		-- Destruir toda la interfaz y resetear el guard para poder reejecutar
 		Luna:Destroy()
 		if getgenv then
 			getgenv().BladeXLoaded = nil
@@ -6975,8 +7462,10 @@ function Luna:CreateWindow(WindowSettings)
 		if Window.State then return end
 		if input.KeyCode == Window.Bind then
 			Unhide(Main, Window.CurrentTab)
-			LunaUI.MobileSupport.Visible = false
+	pcall(function() LunaUI.MobileSupport.Visible = false end)
+			dragBar.Size = _dragBarOriginalSize
 			dragBar.Visible = true
+			dragBar.BackgroundTransparency = 1
 			Window.State = true
 		end
 	end)
@@ -6998,7 +7487,9 @@ function Luna:CreateWindow(WindowSettings)
 			dragBar.Visible = false
 		else
 			Maximise(Main)
+			dragBar.Size = _dragBarOriginalSize
 			dragBar.Visible = true
+			dragBar.BackgroundTransparency = 1
 		end
 	end)
 	Main.Controls.ToggleSize["MouseEnter"]:Connect(function()
@@ -7019,20 +7510,71 @@ function Luna:CreateWindow(WindowSettings)
 	end)
 	Main.Controls.Theme["MouseLeave"]:Connect(function()
 		tween(Main.Controls.Theme.ImageLabel, {ImageColor3 = Color3.fromRGB(195,195,195)})
-	end)	
+	end)
 
-
-	LunaUI.MobileSupport.Interact.MouseButton1Click:Connect(function()
-		Unhide(Main, Window.CurrentTab)
-		dragBar.Visible = true
-		Window.State = true
-		LunaUI.MobileSupport.Visible = false
+	pcall(function()
+		LunaUI.MobileSupport.Interact.MouseButton1Click:Connect(function()
+			Unhide(Main, Window.CurrentTab)
+			dragBar.Size = _dragBarOriginalSize
+			dragBar.Visible = true
+			dragBar.BackgroundTransparency = 1
+			Window.State = true
+			pcall(function() LunaUI.MobileSupport.Visible = false end)
+		end)
 	end)
 
 	return Window
 end
 
 function Luna:Destroy()
+	-- Limpiar Music player
+	if _G.BladeXProgressConn then
+		pcall(function() _G.BladeXProgressConn:Disconnect() end)
+		_G.BladeXProgressConn = nil
+	end
+	if _G.BladeXMusic then
+		pcall(function() _G.BladeXMusic:Stop() _G.BladeXMusic:Destroy() end)
+		_G.BladeXMusic = nil
+	end
+	local playerGuiMusic = Player:FindFirstChild("PlayerGui")
+	if playerGuiMusic then
+		local mp = playerGuiMusic:FindFirstChild("BladeX_MusicPlayer")
+		if mp then pcall(function() mp:Destroy() end) end
+	end
+	-- Limpiar AntiAFK
+	if _G.AntiAFK then
+		pcall(function() _G.AntiAFK:Disconnect() end)
+		_G.AntiAFK = nil
+	end
+	-- Limpiar NoClip
+	if _G.NoClipConn then
+		pcall(function() _G.NoClipConn:Disconnect() end)
+		_G.NoClipConn = nil
+		_G.NoClip = nil
+	end
+	-- Fix 2.7: Limpiar LunaBlur y DepthOfFieldEffect del BlurModule
+	pcall(function()
+		local cam = workspace.CurrentCamera
+		if cam then
+			for _, v in ipairs(cam:GetChildren()) do
+				if v.Name == "LunaBlur" then v:Destroy() end
+			end
+		end
+		local lighting = game:GetService("Lighting")
+		for _, v in ipairs(lighting:GetChildren()) do
+			if v:IsA("DepthOfFieldEffect") and v.Name:sub(1,4) == "DPT_" then
+				v:Destroy()
+			end
+		end
+	end)
+	-- Desconectar enforcer Heartbeat
+	if getgenv then
+		local genv = getgenv()
+		if genv._BladeXDragGuard then
+			pcall(function() genv._BladeXDragGuard:Disconnect() end)
+			genv._BladeXDragGuard = nil
+		end
+	end
 	Main.Visible = false
 	for _, Notification in ipairs(Notifications:GetChildren()) do
 		if Notification.ClassName == "Frame" then
@@ -7040,20 +7582,38 @@ function Luna:Destroy()
 			Notification:Destroy()
 		end
 	end
-	LunaUI:Destroy()
+	-- Destruir la UI y limpiar referencia global
+	pcall(function() LunaUI:Destroy() end)
+	_G.BladeX_LunaUI = nil
+	-- Limpiar cualquier elemento residual suelto en todos los contenedores
+	local _containers = {game:GetService("CoreGui")}
+	pcall(function()
+		local pg = game:GetService("Players").LocalPlayer:FindFirstChild("PlayerGui")
+		if pg then table.insert(_containers, pg) end
+	end)
+	if gethui then pcall(function()
+		local h = gethui()
+		if h then table.insert(_containers, h) end
+	end) end
+	local _ghostNames = {Drag=true, ShadowHolder=true, MobileSupport=true, BladeXLoader=true}
+	for _, container in ipairs(_containers) do
+		pcall(function()
+			for _, child in ipairs(container:GetDescendants()) do
+				if _ghostNames[child.Name] then
+					pcall(function() child:Destroy() end)
+				end
+			end
+		end)
+	end
 end
 
--- Suppress deprecated warning to avoid errors before UI is initialized
 if getgenv then getgenv().ConfirmLuna = true end
 
 ;(function()
-	-- =============================================
-	--   BLADEX KEY SYSTEM
-	-- =============================================
 	local KEY_URL   = "https://raw.githubusercontent.com/martin009gonzg-cmd/bladex-keys/refs/heads/main/bladex-keys.txt"
 
-	-- Cargar keys remotas desde GitHub
 	local remoteKeys = {}
+	local remoteKeysFailed = false
 	local ok, data = pcall(game.HttpGet, game, KEY_URL)
 	if ok and data then
 		for line in data:gmatch("[^\r\n]+") do
@@ -7061,1022 +7621,519 @@ if getgenv then getgenv().ConfirmLuna = true end
 			if k ~= "" then table.insert(remoteKeys, k) end
 		end
 	end
+	-- Fix 2.14: Si no hay keys remotas, no bloquear ciegamente.
+	-- Se intentará usar la key guardada localmente. Si tampoco hay, entonces bloquear.
+	if #remoteKeys == 0 then
+		remoteKeysFailed = true
+		-- Intentar leer la key guardada para usarla como única válida
+		local _savedKeyPath = "Luna/Configurations/BladeX/Key System/key.luna"
+		local _hasSavedKey = false
+		pcall(function()
+			if isfile and isfile(_savedKeyPath) then
+				local savedK = readfile(_savedKeyPath)
+				if savedK and savedK ~= "" then
+					table.insert(remoteKeys, savedK)
+					_hasSavedKey = true
+				end
+			end
+		end)
+		-- Si no hay ninguna key guardada, bloquear con mensaje claro
+		if not _hasSavedKey then
+			remoteKeys = {"CLAVE_INVALIDA_SIN_CONEXION"}
+		end
+	end
 
 	local Window = Luna:CreateWindow({
 		Name            = "BladeX",
 		Subtitle        = "",
 		LogoID          = "113679886240651",
-		LoadingEnabled  = true,
+		LoadingEnabled  = false,
 		LoadingTitle    = "BladeX",
 		LoadingSubtitle = "",
 		KeySystem       = true,
 		KeySettings     = {
 			Title       = "BladeX | Key System",
 			Subtitle    = "Ingresa tu key para continuar",
-			Note        = "Obtén tu key en nuestro Discord",
+			Note        = "Obtén la key en discord.com/invite/GB5C5CKDk",
 			FileName    = "bladex_key",
 			SaveKey     = true,
 			Key         = remoteKeys,
 			SecondAction = {
-				Enabled   = false,
+				Enabled   = true,
 				Type      = "Discord",
-				Parameter = ""
+				Parameter = "https://discord.com/invite/GB5C5CKDk"
 			}
 		}
 	})
-	
+
+	-- Pestaña Favoritos eliminada: dummy para evitar errores en rebuildFn
+	local _dummyTab = setmetatable({}, {__index = function() return function() end end})
 	local Tabs = {
-		Extra = Window:CreateTab({
-			Name = "Home",
-			Icon = "dashboard",
+		Extra = _dummyTab,
+		Farm = Window:CreateTab({
+			Name = "Farm",
+			Icon = "nature",
 			ImageSource = "Material",
 			ShowTitle = true
 		}),
 		Aimbot = Window:CreateTab({
 			Name = "Aimbot",
-			Icon = "gps_fixed",
+			Icon = "adjust",
+			ImageSource = "Material",
+			ShowTitle = true
+		}),
+		FPSBoost = Window:CreateTab({
+			Name = "FPS Boost",
+			Icon = "sports_esports",
+			ImageSource = "Material",
+			ShowTitle = true
+		}),
+		Scripts2 = Window:CreateTab({
+			Name = "Scripts",
+			Icon = "code",
+			ImageSource = "Material",
+			ShowTitle = true
+		}),
+		Music = Window:CreateTab({
+			Name = "Música",
+			Icon = "queue_music",
 			ImageSource = "Material",
 			ShowTitle = true
 		}),
 		Scripts = Window:CreateTab({
-			Name = "Scripts",
-			Icon = "6031097225",
-			ImageSource = "Custom",
+			Name = "Image ID",
+			Icon = "image_search",
+			ImageSource = "Material",
 			ShowTitle = true
 		}),
 		Info = Window:CreateTab({
-			Name = "Info",
-			Icon = "info",
+			Name = "Redes",
+			Icon = "people",
 			ImageSource = "Material",
 			ShowTitle = true
 		})
 	}
-
 	Window:CreateHomeTab({
-		DiscordInvite = "noinvitelink"
+		DiscordInvite = "GB5C5CKDk"
 	})
 
-
-	-- ============================================================
-	--   BLADEX  |  AIMBOT MÓVIL V4  +  MOBILE GUI
-	--   Inspirado en interfaz móvil: panel flotante drag,
-	--   toggles ON/OFF, FOV slider, flechas de target, botón X
-	--   Método: mousemoverel + camera lerp (funciona en móvil)
-	-- ============================================================
-
-	local SV   = game:GetService("Players")
-	local RS   = game:GetService("RunService")
-	local UIS  = game:GetService("UserInputService")
-	local WS   = game:GetService("Workspace")
-	local TW   = game:GetService("TweenService")
-	local LP   = SV.LocalPlayer
-	local CAM  = WS.CurrentCamera
-
-	-- ── CONFIG ────────────────────────────────────────────────
-	local CFG = {
-		Enabled       = false,
-		TeamCheck     = true,
-		WallCheck     = true,
-		KillCheck     = false,  -- ignorar targets con < 5 HP
-		FOVRadius     = 293,
-		SmoothFactor  = 10,
-		PredictFactor = 0.13,
-		PingComp      = true,
-		Jitter        = true,
-		JitterAmt     = 0.4,
-		MaxDist       = 1500,
-		TargetPart    = "Head",
-		StickyAim     = true,
-		StickyTime    = 1.5,
-		MaxLockTime   = 5.0,
-		-- ESP
-		ESPEnabled    = false,
-		ESPBox        = true,
-		ESPName       = true,
-		ESPHealth     = true,
-		ESPDist       = true,
-		ESPTracers    = false,
-		ESPColor      = Color3.fromRGB(255, 60, 60),
-		ESPMaxDist    = 1000,
-	}
-
-	-- ── ESTADO ────────────────────────────────────────────────
-	local ST = {
-		IsAiming    = false,
-		Targets     = {},    -- lista ordenada de targets visibles
-		TargetIdx   = 1,     -- índice del target seleccionado
-		Target      = nil,
-		LockStart   = 0,
-		LastLock    = 0,
-		Ping        = 0.05,
-		Conn        = nil,
-		FOVCircle   = nil,
-		TargetDot   = nil,
-		TargetLine  = nil,
-		ESPObjs     = {},
-		JitterT     = 0,
-		RainT       = 0,
-		_pingT      = 0,
-	}
-
-	-- ╔══════════════════════════════════════════════════════╗
-	--   UTILIDADES
-	-- ╚══════════════════════════════════════════════════════╝
-	local function GetChar(p)  return p and p.Character end
-	local function GetHRP(p)   local c=GetChar(p or LP) return c and c:FindFirstChild("HumanoidRootPart") end
-	local function GetHum(p)   local c=GetChar(p or LP) return c and c:FindFirstChildOfClass("Humanoid") end
-
-	local function IsTeam(pl)
-		if not CFG.TeamCheck then return false end
-		return pl.Team ~= nil and pl.Team == LP.Team
-	end
-
-	local function CanSee(origin, part)
-		if not CFG.WallCheck then return true end
-		local dir = part.Position - origin
-		if dir.Magnitude > CFG.MaxDist then return false end
-		local p = RaycastParams.new()
-		p.FilterType = Enum.RaycastFilterType.Exclude
-		p.FilterDescendantsInstances = {LP.Character or {}}
-		local r = WS:Raycast(origin, dir.Unit*(dir.Magnitude+2), p)
-		return r and r.Instance:IsDescendantOf(part.Parent)
-	end
-
-	local function ScreenDist(pos)
-		local sp, vis = CAM:WorldToViewportPoint(pos)
-		if not vis then return math.huge, Vector2.zero, Vector2.zero end
-		local c = CAM.ViewportSize/2
-		local d = Vector2.new(sp.X-c.X, sp.Y-c.Y)
-		return d.Magnitude, d, Vector2.new(sp.X, sp.Y)
-	end
-
-	local function InFOV(pos)
-		return (ScreenDist(pos)) <= CFG.FOVRadius
-	end
-
-	local function UpdatePing()
-		local n = os.clock()
-		if n - ST._pingT < 1 then return end
-		ST._pingT = n
-		pcall(function() ST.Ping = LP:GetNetworkPing() end)
-	end
-
-	-- ╔══════════════════════════════════════════════════════╗
-	--   AIMBOT CORE  (mousemoverel = universal, incluye móvil)
-	-- ╚══════════════════════════════════════════════════════╝
-	local function BuildTargetList()
-		local list = {}
-		local hrp  = GetHRP(LP)
-		for _, pl in pairs(SV:GetPlayers()) do
-			if pl == LP then continue end
-			local c  = GetChar(pl)
-			if not c then continue end
-			local h  = c:FindFirstChildOfClass("Humanoid")
-			local pt = c:FindFirstChild(CFG.TargetPart) or c:FindFirstChild("Head")
-			if not (h and h.Health > 0 and pt) then continue end
-			if IsTeam(pl) then continue end
-			if CFG.KillCheck and h.Health < 5 then continue end
-			if hrp and (pt.Position-hrp.Position).Magnitude > CFG.MaxDist then continue end
-			if not InFOV(pt.Position) then continue end
-			if not CanSee(CAM.CFrame.Position, pt) then continue end
-			local d = ScreenDist(pt.Position)
-			table.insert(list, {part=pt, dist=d, player=pl})
-		end
-		table.sort(list, function(a,b) return a.dist < b.dist end)
-		return list
-	end
-
-	local function GetTarget()
-		local list = BuildTargetList()
-		ST.Targets = list
-		if #list == 0 then return nil end
-		ST.TargetIdx = math.clamp(ST.TargetIdx, 1, #list)
-		return list[ST.TargetIdx].part
-	end
-
-	local function Predict(part)
-		if not part then return nil end
-		local f = CFG.PredictFactor + (CFG.PingComp and ST.Ping*0.6 or 0)
-		local v = part.Velocity
-		return part.Position + Vector3.new(v.X*f, v.Y*f*0.45, v.Z*f)
-	end
-
-	local function Jitter()
-		if not CFG.Jitter then return 0,0 end
-		ST.JitterT = ST.JitterT + 0.09
-		local a = CFG.JitterAmt
-		return math.sin(ST.JitterT*1.8+0.4)*a*(0.6+math.random()*0.7),
-		       math.cos(ST.JitterT*1.1+1.3)*a*(0.5+math.random()*0.8)
-	end
-
-	-- Mueve el mouse (sistema): funciona en PC y en ejecutores móviles
-	local function MoveToTarget(part)
-		if not part or not part.Parent then ST.Target=nil return end
-		local predicted = Predict(part)
-		local sp, vis   = CAM:WorldToViewportPoint(predicted)
-		if not vis then return end
-		local center    = CAM.ViewportSize/2
-		local dx, dy    = sp.X-center.X, sp.Y-center.Y
-		local rawDist   = math.sqrt(dx*dx+dy*dy)
-		local smooth    = CFG.SmoothFactor * math.clamp(rawDist/(CFG.FOVRadius*0.4+1), 0.1, 4)
-		local jx, jy    = Jitter()
-		local mx = dx/smooth + jx
-		local my = dy/smooth + jy
-		if math.abs(mx) > 0.05 or math.abs(my) > 0.05 then
-			-- mousemoverel funciona en todos los executores (Fluxus, Delta, Codex, etc.)
-			pcall(mousemoverel, mx, my)
-		end
-	end
-
-	local function AimLoop()
-		UpdatePing()
-		if not CFG.Enabled then ST.Target=nil return end
-		if not ST.IsAiming  then ST.Target=nil return end
-		local now = tick()
-		if ST.Target and ST.Target.Parent then
-			if now-ST.LockStart > CFG.MaxLockTime then
-				ST.Target=nil
-			elseif InFOV(ST.Target.Position) and CanSee(CAM.CFrame.Position, ST.Target) then
-				MoveToTarget(ST.Target) return
-			elseif CFG.StickyAim and (now-ST.LastLock)<CFG.StickyTime then
-				MoveToTarget(ST.Target) return
-			else
-				ST.Target=nil
-			end
-		end
-		local t = GetTarget()
-		if t then
-			ST.Target    = t
-			ST.LastLock  = now
-			ST.LockStart = now
-			MoveToTarget(t)
-		end
-	end
-
-	-- ╔══════════════════════════════════════════════════════╗
-	--   DRAWINGS  (FOV circle + target dot)
-	-- ╚══════════════════════════════════════════════════════╝
-	local function MkCircle(th,ns,r,col,al,fill,zi)
-		local c=Drawing.new("Circle")
-		c.Thickness=th c.NumSides=ns c.Radius=r c.Color=col
-		c.Transparency=al c.Filled=fill c.ZIndex=zi c.Visible=false
-		return c
-	end
-	local function MkLine(th,col,al,zi)
-		local l=Drawing.new("Line")
-		l.Thickness=th l.Color=col l.Transparency=al l.ZIndex=zi l.Visible=false
-		return l
-	end
-	local function MkText(sz,col,zi)
-		local t=Drawing.new("Text")
-		t.Size=sz t.Color=col t.Outline=true t.ZIndex=zi t.Visible=false
-		return t
-	end
-
-	local function CreateFOVDrawings()
-		if ST.FOVCircle  then ST.FOVCircle:Remove()  end
-		if ST.TargetDot  then ST.TargetDot:Remove()  end
-		if ST.TargetLine then ST.TargetLine:Remove() end
-		ST.FOVCircle  = MkCircle(1.8, 128, CFG.FOVRadius, Color3.fromRGB(255,255,255), 0.45, false, 5)
-		ST.TargetDot  = MkCircle(1, 32, 5, Color3.fromRGB(255,60,60), 0.05, true, 7)
-		ST.TargetLine = MkLine(1.2, Color3.fromRGB(255,60,60), 0.25, 6)
-	end
-
-	local function RemoveFOVDrawings()
-		if ST.FOVCircle  then ST.FOVCircle:Remove()  ST.FOVCircle=nil  end
-		if ST.TargetDot  then ST.TargetDot:Remove()  ST.TargetDot=nil  end
-		if ST.TargetLine then ST.TargetLine:Remove() ST.TargetLine=nil end
-	end
-
-	local function UpdateFOVDrawings()
-		if not ST.FOVCircle then return end
-		local center = CAM.ViewportSize/2
-		ST.FOVCircle.Position    = Vector2.new(center.X, center.Y)
-		ST.FOVCircle.Radius      = CFG.FOVRadius
-		ST.FOVCircle.Visible     = CFG.Enabled
-		local hasTgt = ST.Target and ST.Target.Parent
-		if hasTgt then
-			local sp,vis = CAM:WorldToViewportPoint(ST.Target.Position)
-			if vis then
-				local tp = Vector2.new(sp.X,sp.Y)
-				ST.TargetDot.Position = tp
-				ST.TargetDot.Visible  = true
-				ST.TargetLine.From    = Vector2.new(center.X,center.Y)
-				ST.TargetLine.To      = tp
-				ST.TargetLine.Visible = true
-			else
-				ST.TargetDot.Visible=false ST.TargetLine.Visible=false
-			end
-		else
-			if ST.TargetDot  then ST.TargetDot.Visible=false  end
-			if ST.TargetLine then ST.TargetLine.Visible=false end
-		end
-	end
-
-	-- ╔══════════════════════════════════════════════════════╗
-	--   ESP
-	-- ╚══════════════════════════════════════════════════════╝
-	local BONE_OFF = {
-		Vector3.new(0,2.6,0), Vector3.new(0,1.3,0),
-		Vector3.new(0,0,0),   Vector3.new(0,-1.3,0),
-		Vector3.new(-1.5,1.2,0), Vector3.new(1.5,1.2,0),
-		Vector3.new(-0.6,-2.2,0),Vector3.new(0.6,-2.2,0),
-	}
-	local function GetBBox(hrp)
-		local x1,y1,x2,y2 = math.huge,math.huge,-math.huge,-math.huge
-		local any=false
-		for _,off in pairs(BONE_OFF) do
-			local wp = hrp.CFrame:PointToWorldSpace(off)
-			local sp,vis = CAM:WorldToViewportPoint(wp)
-			if vis then
-				any=true
-				if sp.X<x1 then x1=sp.X end if sp.Y<y1 then y1=sp.Y end
-				if sp.X>x2 then x2=sp.X end if sp.Y>y2 then y2=sp.Y end
-			end
-		end
-		if not any then return nil end
-		return x1-3,y1-3,x2+3,y2+3
-	end
-
-	local function MakeESP(pl)
-		local o={}
-		o.box={}
-		for i=1,4 do o.box[i]=MkLine(1.2,CFG.ESPColor,0,8) end
-		o.fill=Drawing.new("Square") o.fill.Filled=true o.fill.Color=CFG.ESPColor
-		o.fill.Transparency=0.88 o.fill.Thickness=0 o.fill.Visible=false o.fill.ZIndex=7
-		o.name=MkText(13,Color3.fromRGB(255,255,255),9)
-		o.hpBg=MkLine(4,Color3.fromRGB(0,0,0),0,8)
-		o.hpBar=MkLine(3,Color3.fromRGB(80,220,80),0,9)
-		o.dist=MkText(11,Color3.fromRGB(200,200,200),9)
-		o.tracer=MkLine(1,CFG.ESPColor,0.2,6)
-		ST.ESPObjs[pl]=o
-	end
-
-	local function HideESP(o)
-		if not o then return end
-		for _,l in pairs(o.box) do l.Visible=false end
-		o.fill.Visible=false o.name.Visible=false
-		o.hpBg.Visible=false o.hpBar.Visible=false
-		o.dist.Visible=false o.tracer.Visible=false
-	end
-
-	local function RemoveESP(pl)
-		local o=ST.ESPObjs[pl] if not o then return end
-		for _,l in pairs(o.box) do pcall(function() l:Remove() end) end
-		for _,k in pairs({"fill","name","hpBg","hpBar","dist","tracer"}) do
-			pcall(function() o[k]:Remove() end)
-		end
-		ST.ESPObjs[pl]=nil
-	end
-
-	local function DrawESP(pl,o)
-		local c=GetChar(pl) local hrp=c and c:FindFirstChild("HumanoidRootPart")
-		local hum=c and c:FindFirstChildOfClass("Humanoid")
-		if not(hrp and hum and hum.Health>0) then HideESP(o) return end
-		local myH=GetHRP(LP)
-		local dist=myH and math.floor((hrp.Position-myH.Position).Magnitude) or 0
-		if dist>CFG.ESPMaxDist then HideESP(o) return end
-		local x1,y1,x2,y2=GetBBox(hrp)
-		if not x1 then HideESP(o) return end
-		local col=CFG.ESPColor
-		-- Box
-		local segs={{Vector2.new(x1,y1),Vector2.new(x2,y1)},
-		            {Vector2.new(x1,y2),Vector2.new(x2,y2)},
-		            {Vector2.new(x1,y1),Vector2.new(x1,y2)},
-		            {Vector2.new(x2,y1),Vector2.new(x2,y2)}}
-		for i,s in pairs(segs) do
-			o.box[i].From=s[1] o.box[i].To=s[2] o.box[i].Color=col
-			o.box[i].Visible=CFG.ESPBox
-		end
-		-- Name
-		if CFG.ESPName then
-			o.name.Text=pl.Name
-			o.name.Position=Vector2.new((x1+x2)/2-#pl.Name*3.5, y1-16)
-			o.name.Visible=true
-		else o.name.Visible=false end
-		-- HP
-		if CFG.ESPHealth then
-			local hp=math.clamp(hum.Health/hum.MaxHealth,0,1)
-			local bx=x1-7
-			o.hpBg.From=Vector2.new(bx,y1) o.hpBg.To=Vector2.new(bx,y2) o.hpBg.Visible=true
-			local hcol=Color3.fromRGB(math.floor(255*(1-hp)),math.floor(220*hp),30)
-			o.hpBar.From=Vector2.new(bx,y2) o.hpBar.To=Vector2.new(bx,y2-(y2-y1)*hp)
-			o.hpBar.Color=hcol o.hpBar.Visible=true
-		else o.hpBg.Visible=false o.hpBar.Visible=false end
-		-- Dist
-		if CFG.ESPDist then
-			o.dist.Text=dist.."m"
-			o.dist.Position=Vector2.new((x1+x2)/2-12, y2+3)
-			o.dist.Visible=true
-		else o.dist.Visible=false end
-		-- Tracer
-		if CFG.ESPTracers then
-			local sp,vis=CAM:WorldToViewportPoint(hrp.Position)
-			if vis then
-				local vp=CAM.ViewportSize
-				o.tracer.From=Vector2.new(vp.X/2,vp.Y)
-				o.tracer.To=Vector2.new(sp.X,sp.Y)
-				o.tracer.Color=col o.tracer.Visible=true
-			else o.tracer.Visible=false end
-		else o.tracer.Visible=false end
-	end
-
-	local function ESPLoop()
-		if not CFG.ESPEnabled then
-			for pl,_ in pairs(ST.ESPObjs) do HideESP(ST.ESPObjs[pl]) end
-			return
-		end
-		for _,pl in pairs(SV:GetPlayers()) do
-			if pl==LP or IsTeam(pl) then
-				if ST.ESPObjs[pl] then HideESP(ST.ESPObjs[pl]) end
-				continue
-			end
-			if not ST.ESPObjs[pl] then MakeESP(pl) end
-			DrawESP(pl, ST.ESPObjs[pl])
-		end
-		for pl,_ in pairs(ST.ESPObjs) do
-			if not pl.Parent then RemoveESP(pl) end
-		end
-	end
-
-	-- ╔══════════════════════════════════════════════════════╗
-	--   MOBILE GUI  — Panel flotante arrastrable
-	--   Estilo: "Aimbot Mobile" de la imagen de referencia
-	-- ╚══════════════════════════════════════════════════════╝
-	local function CreateMobileGUI()
-		-- Limpiar GUI anterior si existe
-		pcall(function()
-			local old = LP.PlayerGui:FindFirstChild("BladeXMobile")
-			if old then old:Destroy() end
-		end)
-
-		local sg = Instance.new("ScreenGui")
-		sg.Name              = "BladeXMobile"
-		sg.ResetOnSpawn      = false
-		sg.DisplayOrder      = 999
-		sg.IgnoreGuiInset    = true
-		sg.ZIndexBehavior    = Enum.ZIndexBehavior.Sibling
-		pcall(function() sg.Parent = LP.PlayerGui end)
-		pcall(function()
-			if not sg.Parent then
-				sg.Parent = game:GetService("CoreGui")
-			end
-		end)
-
-		-- Panel principal
-		local panel = Instance.new("Frame", sg)
-		panel.Name               = "Panel"
-		panel.Size               = UDim2.fromOffset(260, 310)
-		panel.Position           = UDim2.fromOffset(500, 180)
-		panel.BackgroundColor3   = Color3.fromRGB(28, 28, 35)
-		panel.BorderSizePixel    = 0
-		panel.Active             = true
-		panel.ClipsDescendants   = true
-
-		local corner = Instance.new("UICorner", panel)
-		corner.CornerRadius = UDim.new(0, 12)
-
-		-- Borde brillante
-		local stroke = Instance.new("UIStroke", panel)
-		stroke.Color     = Color3.fromRGB(255, 255, 255)
-		stroke.Thickness = 1.5
-		stroke.Transparency = 0.6
-
-		-- Título del panel (draggable)
-		local titleBar = Instance.new("Frame", panel)
-		titleBar.Size            = UDim2.new(1,0,0,44)
-		titleBar.BackgroundColor3 = Color3.fromRGB(18,18,24)
-		titleBar.BorderSizePixel = 0
-		titleBar.ZIndex          = 2
-
-		local tcorner = Instance.new("UICorner", titleBar)
-		tcorner.CornerRadius = UDim.new(0, 12)
-
-		-- fix corner bottom del titlebar
-		local titleFix = Instance.new("Frame", titleBar)
-		titleFix.Size = UDim2.new(1,0,0,12)
-		titleFix.Position = UDim2.new(0,0,1,-12)
-		titleFix.BackgroundColor3 = Color3.fromRGB(18,18,24)
-		titleFix.BorderSizePixel = 0
-		titleFix.ZIndex = 2
-
-		local titleLabel = Instance.new("TextLabel", titleBar)
-		titleLabel.Size            = UDim2.new(1,-44,1,0)
-		titleLabel.Position        = UDim2.new(0,0,0,0)
-		titleLabel.BackgroundTransparency = 1
-		titleLabel.Text            = "Aimbot Mobile"
-		titleLabel.TextColor3      = Color3.fromRGB(255,255,255)
-		titleLabel.Font            = Enum.Font.GothamBold
-		titleLabel.TextSize        = 17
-		titleLabel.ZIndex          = 3
-
-		-- Botón X cerrar
-		local closeBtn = Instance.new("TextButton", titleBar)
-		closeBtn.Size              = UDim2.fromOffset(30, 30)
-		closeBtn.Position          = UDim2.new(1,-36,0.5,-15)
-		closeBtn.BackgroundColor3  = Color3.fromRGB(200, 40, 40)
-		closeBtn.Text              = "X"
-		closeBtn.TextColor3        = Color3.fromRGB(255,255,255)
-		closeBtn.Font              = Enum.Font.GothamBold
-		closeBtn.TextSize          = 14
-		closeBtn.BorderSizePixel   = 0
-		closeBtn.ZIndex            = 4
-		Instance.new("UICorner", closeBtn).CornerRadius = UDim.new(0,8)
-
-		closeBtn.MouseButton1Click:Connect(function()
-			panel.Visible = false
-		end)
-
-		-- Botón para re-abrir (esquina superior derecha del juego)
-		local reopenBtn = Instance.new("TextButton", sg)
-		reopenBtn.Size             = UDim2.fromOffset(44, 44)
-		reopenBtn.Position         = UDim2.new(1,-54, 0, 10)
-		reopenBtn.BackgroundColor3 = Color3.fromRGB(28,28,35)
-		reopenBtn.Text             = "🎯"
-		reopenBtn.TextSize         = 22
-		reopenBtn.Font             = Enum.Font.GothamBold
-		reopenBtn.BorderSizePixel  = 0
-		reopenBtn.ZIndex           = 10
-		Instance.new("UICorner", reopenBtn).CornerRadius = UDim.new(0,10)
-		local rStroke = Instance.new("UIStroke", reopenBtn)
-		rStroke.Color = Color3.fromRGB(255,255,255) rStroke.Thickness=1.2 rStroke.Transparency=0.5
-		reopenBtn.MouseButton1Click:Connect(function()
-			panel.Visible = true
-		end)
-
-		-- ── Drag ───────────────────────────────────────────
-		local dragging, dragStart, startPos = false, nil, nil
-		titleBar.InputBegan:Connect(function(inp)
-			if inp.UserInputType == Enum.UserInputType.MouseButton1
-			or inp.UserInputType == Enum.UserInputType.Touch then
-				dragging = true
-				dragStart = inp.Position
-				startPos  = panel.Position
-			end
-		end)
-		local function onMove(inp)
-			if not dragging then return end
-			local delta = inp.Position - dragStart
-			panel.Position = UDim2.fromOffset(
-				startPos.X.Offset + delta.X,
-				startPos.Y.Offset + delta.Y
-			)
-		end
-		titleBar.InputChanged:Connect(onMove)
-		UIS.InputChanged:Connect(function(inp)
-			if inp.UserInputType == Enum.UserInputType.MouseMovement
-			or inp.UserInputType == Enum.UserInputType.Touch then
-				onMove(inp)
-			end
-		end)
-		UIS.InputEnded:Connect(function(inp)
-			if inp.UserInputType == Enum.UserInputType.MouseButton1
-			or inp.UserInputType == Enum.UserInputType.Touch then
-				dragging = false
-			end
-		end)
-
-		-- ── Contenido ──────────────────────────────────────
-		local content = Instance.new("Frame", panel)
-		content.Size             = UDim2.new(1,0,1,-44)
-		content.Position         = UDim2.new(0,0,0,44)
-		content.BackgroundTransparency = 1
-
-		local layout = Instance.new("UIListLayout", content)
-		layout.Padding         = UDim.new(0, 0)
-		layout.SortOrder       = Enum.SortOrder.LayoutOrder
-		layout.HorizontalAlignment = Enum.HorizontalAlignment.Center
-
-		-- Helper: fila de toggle
-		local function MakeRow(labelText, initVal, callback, order)
-			local row = Instance.new("Frame", content)
-			row.Size             = UDim2.new(1,0,0,46)
-			row.BackgroundTransparency = 1
-			row.LayoutOrder      = order
-
-			-- separador
-			local sep = Instance.new("Frame", row)
-			sep.Size             = UDim2.new(0.85,0,0,1)
-			sep.Position         = UDim2.new(0.075,0,0,0)
-			sep.BackgroundColor3 = Color3.fromRGB(60,60,75)
-			sep.BorderSizePixel  = 0
-
-			local lbl = Instance.new("TextLabel", row)
-			lbl.Size             = UDim2.new(0.62,0,1,-2)
-			lbl.Position         = UDim2.new(0.06,0,0,1)
-			lbl.BackgroundTransparency = 1
-			lbl.Text             = labelText
-			lbl.TextColor3       = Color3.fromRGB(220,220,235)
-			lbl.Font             = Enum.Font.Gotham
-			lbl.TextSize         = 15
-			lbl.TextXAlignment   = Enum.TextXAlignment.Left
-
-			-- Toggle pill
-			local pillBg = Instance.new("Frame", row)
-			pillBg.Size          = UDim2.fromOffset(52,26)
-			pillBg.Position      = UDim2.new(0.72,0,0.5,-13)
-			pillBg.BackgroundColor3 = initVal and Color3.fromRGB(50,200,80) or Color3.fromRGB(80,80,95)
-			pillBg.BorderSizePixel = 0
-			Instance.new("UICorner", pillBg).CornerRadius = UDim.new(1,0)
-
-			local pill = Instance.new("Frame", pillBg)
-			pill.Size            = UDim2.fromOffset(20,20)
-			pill.Position        = initVal and UDim2.fromOffset(29,3) or UDim2.fromOffset(3,3)
-			pill.BackgroundColor3 = Color3.fromRGB(255,255,255)
-			pill.BorderSizePixel = 0
-			Instance.new("UICorner", pill).CornerRadius = UDim.new(1,0)
-
-			-- Estado ON label
-			local valLabel = Instance.new("TextLabel", row)
-			valLabel.Size        = UDim2.fromOffset(40,20)
-			valLabel.Position    = UDim2.new(1,-46,0.5,-10)
-			valLabel.BackgroundTransparency = 1
-			valLabel.Text        = initVal and "ON" or "OFF"
-			valLabel.TextColor3  = initVal and Color3.fromRGB(50,220,80) or Color3.fromRGB(160,160,180)
-			valLabel.Font        = Enum.Font.GothamBold
-			valLabel.TextSize    = 13
-
-			local state = initVal
-			local btn = Instance.new("TextButton", row)
-			btn.Size             = UDim2.new(1,0,1,0)
-			btn.BackgroundTransparency = 1
-			btn.Text             = ""
-			btn.ZIndex           = 5
-
-			btn.MouseButton1Click:Connect(function()
-				state = not state
-				local ti = TweenInfo.new(0.18, Enum.EasingStyle.Quad)
-				TW:Create(pillBg, ti, {BackgroundColor3 = state and Color3.fromRGB(50,200,80) or Color3.fromRGB(80,80,95)}):Play()
-				TW:Create(pill, ti, {Position = state and UDim2.fromOffset(29,3) or UDim2.fromOffset(3,3)}):Play()
-				valLabel.Text      = state and "ON" or "OFF"
-				valLabel.TextColor3 = state and Color3.fromRGB(50,220,80) or Color3.fromRGB(160,160,180)
-				callback(state)
-			end)
-
-			return row
-		end
-
-		-- Helper: slider de FOV
-		local function MakeFOVSlider(order)
-			local row = Instance.new("Frame", content)
-			row.Size             = UDim2.new(1,0,0,56)
-			row.BackgroundTransparency = 1
-			row.LayoutOrder      = order
-
-			local sep = Instance.new("Frame", row)
-			sep.Size             = UDim2.new(0.85,0,0,1)
-			sep.Position         = UDim2.new(0.075,0,0,0)
-			sep.BackgroundColor3 = Color3.fromRGB(60,60,75)
-			sep.BorderSizePixel  = 0
-
-			local topRow = Instance.new("Frame", row)
-			topRow.Size          = UDim2.new(1,0,0,22)
-			topRow.Position      = UDim2.new(0,0,0,6)
-			topRow.BackgroundTransparency = 1
-
-			local lbl = Instance.new("TextLabel", topRow)
-			lbl.Size             = UDim2.new(0.55,0,1,0)
-			lbl.Position         = UDim2.new(0.06,0,0,0)
-			lbl.BackgroundTransparency = 1
-			lbl.Text             = "FOV:"
-			lbl.TextColor3       = Color3.fromRGB(220,220,235)
-			lbl.Font             = Enum.Font.Gotham
-			lbl.TextSize         = 15
-			lbl.TextXAlignment   = Enum.TextXAlignment.Left
-
-			local valLbl = Instance.new("TextLabel", topRow)
-			valLbl.Size          = UDim2.new(0.4,0,1,0)
-			valLbl.Position      = UDim2.new(0.55,0,0,0)
-			valLbl.BackgroundTransparency = 1
-			valLbl.Text          = tostring(CFG.FOVRadius)
-			valLbl.TextColor3    = Color3.fromRGB(255,255,255)
-			valLbl.Font          = Enum.Font.GothamBold
-			valLbl.TextSize      = 15
-			valLbl.TextXAlignment = Enum.TextXAlignment.Right
-
-			-- Track
-			local trackBg = Instance.new("Frame", row)
-			trackBg.Size         = UDim2.new(0.86,0,0,6)
-			trackBg.Position     = UDim2.new(0.07,0,0,34)
-			trackBg.BackgroundColor3 = Color3.fromRGB(60,60,80)
-			trackBg.BorderSizePixel = 0
-			Instance.new("UICorner", trackBg).CornerRadius = UDim.new(1,0)
-
-			local trackFill = Instance.new("Frame", trackBg)
-			local pct = (CFG.FOVRadius - 50) / (600 - 50)
-			trackFill.Size       = UDim2.new(pct,0,1,0)
-			trackFill.BackgroundColor3 = Color3.fromRGB(255,255,255)
-			trackFill.BorderSizePixel = 0
-			Instance.new("UICorner", trackFill).CornerRadius = UDim.new(1,0)
-
-			local thumb = Instance.new("Frame", trackBg)
-			thumb.Size           = UDim2.fromOffset(16,16)
-			thumb.Position       = UDim2.new(pct,0,0.5,-8)
-			thumb.BackgroundColor3 = Color3.fromRGB(255,255,255)
-			thumb.BorderSizePixel = 0
-			Instance.new("UICorner", thumb).CornerRadius = UDim.new(1,0)
-
-			-- Drag slider
-			local slideDrag = false
-			local function Slide(inp)
-				local rel = (inp.Position.X - trackBg.AbsolutePosition.X) / trackBg.AbsoluteSize.X
-				rel = math.clamp(rel, 0, 1)
-				local val = math.floor(50 + rel * (600-50))
-				CFG.FOVRadius = val
-				valLbl.Text   = tostring(val)
-				trackFill.Size = UDim2.new(rel,0,1,0)
-				thumb.Position = UDim2.new(rel,0,0.5,-8)
-				if ST.FOVCircle then ST.FOVCircle.Radius = val end
-			end
-			trackBg.InputBegan:Connect(function(inp)
-				if inp.UserInputType == Enum.UserInputType.MouseButton1
-				or inp.UserInputType == Enum.UserInputType.Touch then
-					slideDrag = true Slide(inp)
-				end
-			end)
-			UIS.InputChanged:Connect(function(inp)
-				if not slideDrag then return end
-				if inp.UserInputType == Enum.UserInputType.MouseMovement
-				or inp.UserInputType == Enum.UserInputType.Touch then Slide(inp) end
-			end)
-			UIS.InputEnded:Connect(function(inp)
-				if inp.UserInputType == Enum.UserInputType.MouseButton1
-				or inp.UserInputType == Enum.UserInputType.Touch then slideDrag = false end
-			end)
-		end
-
-		-- Helper: fila de navegación de targets (flechas)
-		local function MakeTargetRow(order)
-			local row = Instance.new("Frame", content)
-			row.Size             = UDim2.new(1,0,0,52)
-			row.BackgroundTransparency = 1
-			row.LayoutOrder      = order
-
-			local sep = Instance.new("Frame", row)
-			sep.Size             = UDim2.new(0.85,0,0,1)
-			sep.Position         = UDim2.new(0.075,0,0,0)
-			sep.BackgroundColor3 = Color3.fromRGB(60,60,75)
-			sep.BorderSizePixel  = 0
-
-			-- Botón izquierda
-			local btnL = Instance.new("TextButton", row)
-			btnL.Size            = UDim2.fromOffset(42,34)
-			btnL.Position        = UDim2.new(0.06,0,0.5,-17)
-			btnL.BackgroundColor3 = Color3.fromRGB(50,50,65)
-			btnL.Text            = "◀"
-			btnL.TextColor3      = Color3.fromRGB(255,255,255)
-			btnL.Font            = Enum.Font.GothamBold
-			btnL.TextSize        = 18
-			btnL.BorderSizePixel = 0
-			Instance.new("UICorner", btnL).CornerRadius = UDim.new(0,8)
-
-			-- Nombre del target
-			local tname = Instance.new("TextLabel", row)
-			tname.Name           = "TargetName"
-			tname.Size           = UDim2.new(0.52,0,0,34)
-			tname.Position       = UDim2.new(0.24,0,0.5,-17)
-			tname.BackgroundColor3 = Color3.fromRGB(40,40,55)
-			tname.BorderSizePixel = 0
-			tname.Text           = "—"
-			tname.TextColor3     = Color3.fromRGB(255,180,50)
-			tname.Font           = Enum.Font.GothamBold
-			tname.TextSize       = 13
-			Instance.new("UICorner", tname).CornerRadius = UDim.new(0,6)
-
-			-- Botón derecha
-			local btnR = Instance.new("TextButton", row)
-			btnR.Size            = UDim2.fromOffset(42,34)
-			btnR.Position        = UDim2.new(0.82,0,0.5,-17)
-			btnR.BackgroundColor3 = Color3.fromRGB(50,50,65)
-			btnR.Text            = "▶"
-			btnR.TextColor3      = Color3.fromRGB(255,255,255)
-			btnR.Font            = Enum.Font.GothamBold
-			btnR.TextSize        = 18
-			btnR.BorderSizePixel = 0
-			Instance.new("UICorner", btnR).CornerRadius = UDim.new(0,8)
-
-			-- Actualizar label de target
-			local function RefreshLabel()
-				local list = ST.Targets
-				if #list == 0 then tname.Text = "—" return end
-				local idx = math.clamp(ST.TargetIdx,1,#list)
-				local pl = list[idx] and list[idx].player
-				tname.Text = pl and pl.Name or "—"
-			end
-
-			btnL.MouseButton1Click:Connect(function()
-				local list = BuildTargetList()
-				ST.Targets = list
-				if #list == 0 then return end
-				ST.TargetIdx = ST.TargetIdx - 1
-				if ST.TargetIdx < 1 then ST.TargetIdx = #list end
-				ST.Target = list[ST.TargetIdx] and list[ST.TargetIdx].part
-				RefreshLabel()
-			end)
-			btnR.MouseButton1Click:Connect(function()
-				local list = BuildTargetList()
-				ST.Targets = list
-				if #list == 0 then return end
-				ST.TargetIdx = ST.TargetIdx + 1
-				if ST.TargetIdx > #list then ST.TargetIdx = 1 end
-				ST.Target = list[ST.TargetIdx] and list[ST.TargetIdx].part
-				RefreshLabel()
-			end)
-
-			-- Actualizar label cada 0.5s
-			task.spawn(function()
-				while sg and sg.Parent do
-					task.wait(0.5)
-					RefreshLabel()
-				end
-			end)
-		end
-
-		-- ── Construir filas ─────────────────────────────────
-
-		-- Fila 1: Activar Aimbot
-		MakeRow("Ativar Aimbot:", false, function(v)
-			CFG.Enabled = v
-			if v then
-				CreateFOVDrawings()
-				ST.IsAiming = true   -- en móvil siempre activo
-				if not ST.Conn then
-					ST.Conn = RS.RenderStepped:Connect(function()
-						UpdateFOVDrawings()
-						AimLoop()
-						ESPLoop()
-					end)
-				end
-			else
-				CFG.Enabled = false
-				ST.IsAiming = false
-				ST.Target   = nil
-				RemoveFOVDrawings()
-				if ST.Conn then ST.Conn:Disconnect() ST.Conn=nil end
-			end
-		end, 1)
-
-		-- Fila 2: FOV slider
-		MakeFOVSlider(2)
-
-		-- Fila 3: Team Check
-		MakeRow("Team Check:", true, function(v) CFG.TeamCheck = v end, 3)
-
-		-- Fila 4: Kill Check (ignorar bajos HP)
-		MakeRow("Kill Check:", false, function(v) CFG.KillCheck = v end, 4)
-
-		-- Fila 5: Wall Check
-		MakeRow("Wall Check:", true, function(v) CFG.WallCheck = v end, 5)
-
-		-- Fila 6: ESP
-		MakeRow("ESP (Hologramas):", false, function(v)
-			CFG.ESPEnabled = v
-			if not v then
-				for pl,_ in pairs(ST.ESPObjs) do HideESP(ST.ESPObjs[pl]) end
-			end
-		end, 6)
-
-		-- Fila 7: Target navigator
-		MakeTargetRow(7)
-
-		-- ── Botón APAGAR al fondo ─────────────────────────
-		local apagadoRow = Instance.new("Frame", content)
-		apagadoRow.Size  = UDim2.new(1,0,0,10) -- spacer
-		apagadoRow.BackgroundTransparency=1 apagadoRow.LayoutOrder=8
-	end
-
-	-- Lanzar la GUI móvil
-	-- Esperar a que el PlayerGui esté listo
+	-- Fix Delta: espera dinámica hasta que LunaUI esté activo
 	task.spawn(function()
-		local ok = false
-		for _ = 1, 20 do
+		local _waited = 0
+		repeat task.wait(0.1) _waited = _waited + 0.1
+		until (LunaUI and LunaUI.Enabled) or _waited >= 8
+		task.wait(0.5)
+		if LunaUI and LunaUI.Enabled then
+			Luna:Notification({
+				Title = "Bienvenido a BladeX",
+				Content = "Hola, " .. Player.DisplayName .. "! BladeX " .. Release .. " cargado correctamente.",
+				Icon = "113679886240651",
+				ImageSource = "Custom",
+				Duration = 1
+			})
+		end
+	end)
+
+
+	-- ─── CONFIG PERSISTENCE (guardado general) ───────────────────────────────
+	local _cfgFolder = "BladeX"
+	local _cfgFile   = _cfgFolder .. "/utilidades.json"
+	local _cfg = { walkSpeed=16, jumpPower=50, noClip=false, antiAFK=false, espEnabled=false, espTeamColor=false }
+
+	local function _loadCfg()
+		-- Fix 2.3: Verificar soporte de sistema de archivos antes de usarlo
+		if not (isfolder and makefolder and readfile and writefile) then return end
+		pcall(function() if not isfolder(_cfgFolder) then makefolder(_cfgFolder) end end)
+		if isfile(_cfgFile) then
+			local ok, data = pcall(function() return HttpService:JSONDecode(readfile(_cfgFile)) end)
+			if ok and type(data)=="table" then
+				for k,v in pairs(data) do _cfg[k]=v end
+			end
+		end
+	end
+	local function _saveCfg()
+		-- Fix 2.3: Verificar soporte de sistema de archivos antes de usarlo
+		if not (isfolder and makefolder and writefile) then return end
+		pcall(function()
+			if not isfolder(_cfgFolder) then makefolder(_cfgFolder) end
+			writefile(_cfgFile, HttpService:JSONEncode(_cfg))
+		end)
+	end
+	_loadCfg()
+
+	-- ═══════════════════════════════════════════════════════════════════════════
+	--   SISTEMA DE FAVORITOS AUTOMÁTICOS
+	--   Rastrea cuántas veces se usa cada opción y rellena la pestaña Favoritos
+	-- ═══════════════════════════════════════════════════════════════════════════
+	local _favFile    = _cfgFolder .. "/favorites.json"
+	local _favUsage   = {}   -- {[nombre] = count}
+	local _favItems   = {}   -- lista ordenada para reconstruir la UI
+
+	-- Detectar si el executor soporta filesystem
+	local _hasFS = pcall(function()
+		return type(isfolder) == "function" and type(isfile) == "function"
+			and type(readfile) == "function" and type(writefile) == "function"
+			and type(makefolder) == "function"
+	end)
+	_hasFS = _hasFS and type(isfolder) == "function"
+
+	-- Cargar datos de uso guardados (filesystem + _G como fallback)
+	local function _loadFavUsage()
+		-- Primero intentar desde _G (memoria de sesión anterior si no se reinició)
+		if _G._BladeXFavUsage and type(_G._BladeXFavUsage) == "table" then
+			for k, v in pairs(_G._BladeXFavUsage) do
+				_favUsage[k] = v
+			end
+		end
+		-- Luego sobreescribir con datos del archivo (más recientes)
+		if _hasFS then
 			pcall(function()
-				if LP.PlayerGui then ok = true end
+				if isfile(_favFile) then
+					local raw = readfile(_favFile)
+					local ok, data = pcall(function() return HttpService:JSONDecode(raw) end)
+					if ok and type(data) == "table" then
+						for k, v in pairs(data) do
+							_favUsage[k] = math.max(_favUsage[k] or 0, v)
+						end
+					end
+				end
 			end)
-			if ok then break end
-			task.wait(0.5)
 		end
-		CreateMobileGUI()
-	end)
+	end
 
-	-- Eventos de jugadores para ESP
-	SV.PlayerAdded:Connect(function(p)
-		task.wait(1)
-		if CFG.ESPEnabled and p ~= LP then MakeESP(p) end
-	end)
-	SV.PlayerRemoving:Connect(function(p) RemoveESP(p) end)
+	-- Guardar datos de uso (filesystem + _G como respaldo en memoria)
+	local function _saveFavUsage()
+		-- Siempre guardar en _G (persiste mientras Roblox no se cierre)
+		_G._BladeXFavUsage = _favUsage
 
-	-- ╔══════════════════════════════════════════════════════╗
-	--   LUNA TABS  (mantiene compatibilidad con el GUI Luna)
-	-- ╚══════════════════════════════════════════════════════╝
+		-- Si hay filesystem, guardar también en disco
+		if _hasFS then
+			pcall(function()
+				if not isfolder(_cfgFolder) then makefolder(_cfgFolder) end
+				writefile(_favFile, HttpService:JSONEncode(_favUsage))
+			end)
+		end
+	end
 
-	Tabs.Aimbot:CreateSection("🎯 Aimbot — Configuración Avanzada")
-	Tabs.Aimbot:CreateParagraph({
-		Title = "📱 GUI Móvil Activa",
-		Text  = "Usa el panel flotante en pantalla para control rápido.\nAquí puedes ajustar opciones avanzadas."
-	})
+	-- Registrar un item trackeable
+	local function _registerFavItem(data)
+		-- data = {name, description, type, rebuildFn}
+		table.insert(_favItems, data)
+	end
 
-	Tabs.Aimbot:CreateSlider({
-		Name="Suavizado (Smooth)", Description="1=instantáneo | 50=muy suave",
-		Range={1,50}, Increment=1, CurrentValue=10,
-		Callback=function(v) CFG.SmoothFactor=v end
-	})
-	Tabs.Aimbot:CreateSlider({
-		Name="Factor de Predicción", Description="Anticipa el movimiento del objetivo",
-		Range={5,35}, Increment=1, CurrentValue=13,
-		Callback=function(v) CFG.PredictFactor=v/100 end
-	})
-	Tabs.Aimbot:CreateToggle({
-		Name="Compensar Ping", Description="Ajusta predicción con latencia real",
-		CurrentValue=true, Callback=function(v) CFG.PingComp=v end
-	})
-	Tabs.Aimbot:CreateToggle({
-		Name="Micro-Jitter Humano", Description="Temblor natural anti-detección",
-		CurrentValue=true, Callback=function(v) CFG.Jitter=v end
-	})
-	Tabs.Aimbot:CreateSlider({
-		Name="Intensidad Jitter", Description="Píxeles de variación",
-		Range={0,20}, Increment=1, CurrentValue=4,
-		Callback=function(v) CFG.JitterAmt=v/10 end
-	})
-	Tabs.Aimbot:CreateToggle({
-		Name="Sticky Aim", Description="Mantiene el target aunque salga del FOV",
-		CurrentValue=true, Callback=function(v) CFG.StickyAim=v end
-	})
-	Tabs.Aimbot:CreateDropdown({
-		Name="Parte Objetivo", Description="Hitbox del enemigo",
-		Options={"Head","UpperTorso","HumanoidRootPart","LowerTorso"},
-		CurrentOption={"Head"}, Callback=function(v) CFG.TargetPart=v[1] or v end
-	})
-	Tabs.Aimbot:CreateSlider({
-		Name="Distancia Máxima (studs)", Description="Rango de detección",
-		Range={100,2000}, Increment=50, CurrentValue=1500,
-		Callback=function(v) CFG.MaxDist=v end
-	})
+	-- Incrementar uso de una opción y actualizar Favoritos en tiempo real
+	local function _trackUse(name)
+		local wasZero = (_favUsage[name] or 0) == 0
+		_favUsage[name] = (_favUsage[name] or 0) + 1
+		_saveFavUsage()
 
-	Tabs.Aimbot:CreateSection("⚙️ Presets Rápidos")
-	Tabs.Aimbot:CreateButton({
-		Name="🥷 Sigiloso", Description="Muy humano, anti-detección máxima",
-		Callback=function()
-			CFG.SmoothFactor=22 CFG.PredictFactor=0.10
-			CFG.Jitter=true CFG.JitterAmt=0.7 CFG.FOVRadius=100
+		-- Si es la primera vez que se usa, reconstruir Favoritos en tiempo real
+		if wasZero then
+			task.spawn(function()
+				task.wait(0.05)
+				-- Limpiar contenido actual de la página Favoritos
+				pcall(function()
+					local page = Tabs.Extra.Page
+					if page then
+						for _, child in ipairs(page:GetChildren()) do
+							local n = child.Name
+							if n ~= "UIListLayout" and n ~= "UIPadding" and n ~= "Title" then
+								pcall(function() child:Destroy() end)
+							end
+						end
+					end
+				end)
+				task.wait(0.05)
+				_buildFavoritos()
+			end)
+		end
+	end
+
+	_loadFavUsage()
+
+	-- Pestaña Favoritos eliminada: función vacía para evitar errores
+	local function _buildFavoritos()
+	end
+
+	-- ─── FARM ────────────────────────────────────────────────────────────────
+	local _autoFarmConn    = nil
+	local _autoCollectConn = nil
+	local _farmEnabled     = false
+	local _collectEnabled  = false
+
+	local _farmRange = 150
+	local function _getNearestEnemy(maxDist)
+		local hrp = Player.Character and Player.Character:FindFirstChild("HumanoidRootPart")
+		if not hrp then return nil end
+		local best, bestDist = nil, maxDist or _farmRange
+		for _, obj in pairs(workspace:GetDescendants()) do
+			if obj:IsA("Humanoid") and obj.Health > 0 then
+				local model = obj.Parent
+				if model ~= Player.Character then
+					local root = model:FindFirstChild("HumanoidRootPart") or model:FindFirstChildWhichIsA("BasePart")
+					if root then
+						local d = (hrp.Position - root.Position).Magnitude
+						if d < bestDist then bestDist=d best=model end
+					end
+				end
+			end
+		end
+		return best
+	end
+
+	Tabs.Farm:CreateSection("⚔️ Farm")
+	Tabs.Farm:CreateToggle({
+		Name = "Auto Farm",
+		Description = "Ataca automáticamente al enemigo más cercano",
+		CurrentValue = false,
+		Callback = function(Value)
+			if Value then _trackUse("Auto Farm") end
+			_farmEnabled = Value
+			if Value then
+				local _farmTimer = 0
+				_autoFarmConn = RunService.Heartbeat:Connect(function(dt)
+					if not _farmEnabled then return end
+					_farmTimer = _farmTimer + dt
+					if _farmTimer < 0.35 then return end
+					_farmTimer = 0
+					local char = Player.Character
+					if not char then return end
+					local hrp  = char:FindFirstChild("HumanoidRootPart")
+					local hum  = char:FindFirstChildOfClass("Humanoid")
+					if not hrp or not hum or hum.Health <= 0 then return end
+					local target = _getNearestEnemy(_farmRange)
+					if not target then return end
+					local targetRoot = target:FindFirstChild("HumanoidRootPart") or target:FindFirstChildWhichIsA("BasePart")
+					if not targetRoot then return end
+					hrp.CFrame = CFrame.new(targetRoot.Position + Vector3.new(0,0,3))
+					local tool = char:FindFirstChildOfClass("Tool")
+					if tool then
+						local remote = tool:FindFirstChildOfClass("RemoteEvent") or tool:FindFirstChildOfClass("RemoteFunction")
+						if remote and remote:IsA("RemoteEvent") then
+							pcall(function() remote:FireServer() end)
+						end
+						pcall(function()
+							local activate = tool:FindFirstChild("Activate") or tool:FindFirstChild("Slash")
+							if activate then activate:Fire() end
+						end)
+					end
+					local targetHum = target:FindFirstChildOfClass("Humanoid")
+					if targetHum then
+						pcall(function() targetHum:TakeDamage(25) end)
+					end
+				end)
+				Luna:Notification({Title="Farm", Content="Auto Farm activado!", Icon="eco", ImageSource="Material", Duration=3})
+			else
+				if _autoFarmConn then _autoFarmConn:Disconnect() _autoFarmConn=nil end
+				Luna:Notification({Title="Farm", Content="Auto Farm desactivado.", Icon="eco", ImageSource="Material", Duration=2})
+			end
 		end
 	})
-	Tabs.Aimbot:CreateButton({
-		Name="⚡ Agresivo", Description="Máxima velocidad",
-		Callback=function()
-			CFG.SmoothFactor=3 CFG.PredictFactor=0.22
-			CFG.Jitter=false CFG.FOVRadius=320
+	Tabs.Farm:CreateSlider({
+		Name = "Rango de Farm",
+		Description = "Distancia máxima en studs para detectar enemigos",
+		Range = {20, 500}, Increment = 10, CurrentValue = 150,
+		Callback = function(v)
+			_farmRange = v
 		end
 	})
-	Tabs.Aimbot:CreateButton({
-		Name="⚖️ Balanceado", Description="Uso general recomendado",
-		Callback=function()
-			CFG.SmoothFactor=10 CFG.PredictFactor=0.13
-			CFG.Jitter=true CFG.JitterAmt=0.4 CFG.FOVRadius=200
+	Tabs.Farm:CreateToggle({
+		Name = "Auto Collect",
+		Description = "Recoge automáticamente items y drops del suelo cercanos",
+		CurrentValue = false,
+		Callback = function(Value)
+			if Value then _trackUse("Auto Collect") end
+			_collectEnabled = Value
+			if Value then
+				if _autoCollectConn then _autoCollectConn:Disconnect() _autoCollectConn = nil end
+				local _collectTimer = 0
+				_autoCollectConn = RunService.Heartbeat:Connect(function(dt)
+					if not _collectEnabled then return end
+					_collectTimer = _collectTimer + dt
+					if _collectTimer < 0.5 then return end
+					_collectTimer = 0
+					local hrp = Player.Character and Player.Character:FindFirstChild("HumanoidRootPart")
+					if not hrp then return end
+					for _, obj in pairs(workspace:GetDescendants()) do
+						if (obj:IsA("Tool") or obj:IsA("Part") or obj:IsA("MeshPart") or obj:IsA("UnionOperation"))
+						and obj.Parent == workspace then
+							local ok, dist = pcall(function()
+								return (hrp.Position - obj.Position).Magnitude
+							end)
+							if ok and dist and dist < 60 then
+								pcall(function()
+									local tEvent = obj:FindFirstChild("TouchInterest")
+									if tEvent then
+										hrp.CFrame = CFrame.new(obj.Position + Vector3.new(0,3,0))
+									end
+								end)
+								if obj:IsA("Tool") then
+									pcall(function() obj.Parent = Player.Backpack end)
+								end
+							end
+						end
+					end
+				end)
+				Luna:Notification({Title="Farm", Content="Auto Collect activado! (rango 60 studs)", Icon="eco", ImageSource="Material", Duration=3})
+			else
+				if _autoCollectConn then _autoCollectConn:Disconnect() _autoCollectConn=nil end
+				Luna:Notification({Title="Farm", Content="Auto Collect desactivado.", Icon="eco", ImageSource="Material", Duration=2})
+			end
+		end
+	})
+	Tabs.Farm:CreateButton({
+		Name = "Ir al Enemigo Más Cercano",
+		Description = "Teletransporta tu personaje junto al NPC más cercano",
+		Callback = function()
+			local target = _getNearestEnemy(500)
+			if not target then
+				Luna:Notification({Title="Farm", Content="No hay enemigos en 500 studs.", Icon="dangerous", ImageSource="Material", Duration=3})
+				return
+			end
+			local hrp = Player.Character and Player.Character:FindFirstChild("HumanoidRootPart")
+			local root = target:FindFirstChild("HumanoidRootPart") or target:FindFirstChildWhichIsA("BasePart")
+			if hrp and root then
+				hrp.CFrame = CFrame.new(root.Position + Vector3.new(0,0,4))
+				Luna:Notification({Title="Farm", Content="Teleport a '"..target.Name.."'!", Icon="room", ImageSource="Material", Duration=3})
+			end
 		end
 	})
 
-	Tabs.Scripts:CreateSection("🔴 ESP — Hologramas")
-	Tabs.Scripts:CreateToggle({
-		Name="ESP Box",Description="Caja 2D alrededor del enemigo",
-		CurrentValue=true,Callback=function(v) CFG.ESPBox=v end
-	})
-	Tabs.Scripts:CreateToggle({
-		Name="ESP Nombres",Description="Nombre del jugador sobre la caja",
-		CurrentValue=true,Callback=function(v) CFG.ESPName=v end
-	})
-	Tabs.Scripts:CreateToggle({
-		Name="ESP Barra de Vida",Description="HP bar lateral",
-		CurrentValue=true,Callback=function(v) CFG.ESPHealth=v end
-	})
-	Tabs.Scripts:CreateToggle({
-		Name="ESP Distancia",Description="Studs de distancia",
-		CurrentValue=true,Callback=function(v) CFG.ESPDist=v end
-	})
-	Tabs.Scripts:CreateToggle({
-		Name="ESP Tracers",Description="Líneas desde tu pantalla al enemigo",
-		CurrentValue=false,Callback=function(v) CFG.ESPTracers=v end
-	})
-	Tabs.Scripts:CreateColorPicker({
-		Name="Color ESP",Color=Color3.fromRGB(255,60,60),
-		Callback=function(v) CFG.ESPColor=v end
-	})
-	Tabs.Scripts:CreateSlider({
-		Name="Distancia Máx. ESP",Range={100,2000},Increment=50,CurrentValue=1000,
-		Callback=function(v) CFG.ESPMaxDist=v end
-	})
-	Tabs.Scripts:CreateSection("🎨 GUI Settings")
+	local Lighting = game:GetService("Lighting")
 
+	-- Guardar estado original de Lighting para restaurar correctamente
+	local _origLighting = {
+		GlobalShadows = Lighting.GlobalShadows,
+		Brightness    = Lighting.Brightness,
+		Ambient       = Lighting.Ambient,
+		FogEnd        = Lighting.FogEnd,
+		FogStart      = Lighting.FogStart,
+		ClockTime     = Lighting.ClockTime,
+	}
 
-	-- =============================================
-	--   SISTEMA DE BACKGROUND IMAGE (MEJORADO)
-	-- =============================================
+	Tabs.FPSBoost:CreateSection("⚡ FPS Boost")
 
-	-- Activar recorte en el frame principal para que la imagen no se salga
+	Tabs.FPSBoost:CreateToggle({
+		Name = "FPS Boost",
+		Description = "Activa todas las optimizaciones al mismo tiempo",
+		CurrentValue = false,
+		Callback = function(v)
+			if v then _trackUse("FPS Boost") end
+			pcall(function() settings().Rendering.QualityLevel = v and 1 or 10 end)
+			Lighting.GlobalShadows = v and false or _origLighting.GlobalShadows
+			Lighting.FogEnd        = v and 100000 or _origLighting.FogEnd
+			Lighting.FogStart      = v and 99999  or _origLighting.FogStart
+			for _, obj in pairs(Lighting:GetDescendants()) do
+				if obj:IsA("PostEffect") then obj.Enabled = not v end
+			end
+			for _, obj in pairs(workspace:GetDescendants()) do
+				if obj:IsA("ParticleEmitter") or obj:IsA("Smoke") or obj:IsA("Fire") or obj:IsA("Sparkles") then
+					obj.Enabled = not v
+				end
+			end
+			Luna:Notification({
+				Title = "FPS Boost",
+				Content = v and "Optimizaciones activadas!" or "Optimizaciones desactivadas!",
+				Icon = "16781406675", ImageSource = "Custom", Duration = 3
+			})
+		end
+	})
+
+	Tabs.FPSBoost:CreateToggle({
+		Name = "Fullbright",
+		Description = "Máximo brillo, sin oscuridad ni niebla",
+		CurrentValue = false,
+		Callback = function(v)
+			if v then _trackUse("Fullbright") end
+			Lighting.Brightness    = v and 2   or _origLighting.Brightness
+			Lighting.Ambient       = v and Color3.fromRGB(178,178,178) or _origLighting.Ambient
+			Lighting.GlobalShadows = v and false or _origLighting.GlobalShadows
+			Lighting.FogEnd        = v and 100000 or _origLighting.FogEnd
+			Lighting.FogStart      = v and 99999  or _origLighting.FogStart
+			Lighting.ClockTime     = v and 14 or _origLighting.ClockTime
+		end
+	})
+
+	local _savedMaterials = {}
+	Tabs.FPSBoost:CreateToggle({
+		Name = "Remove Textures",
+		Description = "Elimina texturas, decals y partículas del mapa",
+		CurrentValue = false,
+		Callback = function(v)
+			if v then _trackUse("Remove Textures") end
+			if v then
+				_savedMaterials = {}
+				for _, obj in pairs(workspace:GetDescendants()) do
+					if obj:IsA("BasePart") then
+						_savedMaterials[obj] = obj.Material
+						obj.Material = Enum.Material.SmoothPlastic
+					end
+					if obj:IsA("Decal") or obj:IsA("Texture") then
+						obj.Transparency = 1
+					end
+					if obj:IsA("ParticleEmitter") or obj:IsA("Smoke") or obj:IsA("Fire") or obj:IsA("Sparkles") then
+						obj.Enabled = false
+					end
+				end
+			else
+				for _, obj in pairs(workspace:GetDescendants()) do
+					if obj:IsA("BasePart") and _savedMaterials[obj] then
+						obj.Material = _savedMaterials[obj]
+					end
+					if obj:IsA("Decal") or obj:IsA("Texture") then
+						obj.Transparency = 0
+					end
+					if obj:IsA("ParticleEmitter") or obj:IsA("Smoke") or obj:IsA("Fire") or obj:IsA("Sparkles") then
+						obj.Enabled = true
+					end
+				end
+				_savedMaterials = {}
+			end
+		end
+	})
+
+	Tabs.FPSBoost:CreateButton({
+		Name = "Nuke Effects",
+		Description = "⚠️ Elimina permanentemente partículas, efectos y SelectionBoxes. Usa 'Restore' para los demás valores.",
+		Callback = function()
+			_trackUse("Nuke Effects")
+			pcall(function() settings().Rendering.QualityLevel = 1 end)
+			Lighting.GlobalShadows = false
+			for _, obj in pairs(Lighting:GetDescendants()) do
+				if obj:IsA("PostEffect") then obj.Enabled = false end
+			end
+			for _, obj in pairs(workspace:GetDescendants()) do
+				if obj:IsA("ParticleEmitter") or obj:IsA("Smoke") or obj:IsA("Fire")
+				or obj:IsA("Sparkles") or obj:IsA("SelectionBox") then
+					pcall(function() obj:Destroy() end)
+				end
+			end
+			Luna:Notification({Title="FPS Boost", Content="Efectos nukiados! (permanente en esta sesión)", Icon="16781406675", ImageSource="Custom", Duration=4})
+		end
+	})
+
+	Tabs.FPSBoost:CreateButton({
+		Name = "Restore",
+		Description = "Restaura gráficos al estado original del juego",
+		Callback = function()
+			pcall(function() settings().Rendering.QualityLevel = 10 end)
+			Lighting.GlobalShadows = _origLighting.GlobalShadows
+			Lighting.Brightness    = _origLighting.Brightness
+			Lighting.Ambient       = _origLighting.Ambient
+			Lighting.FogEnd        = _origLighting.FogEnd
+			Lighting.FogStart      = _origLighting.FogStart
+			Lighting.ClockTime     = _origLighting.ClockTime
+			for _, obj in pairs(Lighting:GetDescendants()) do
+				if obj:IsA("PostEffect") then obj.Enabled = true end
+			end
+			Luna:Notification({Title="FPS Boost", Content="Gráficos restaurados al estado original!", Icon="16781406675", ImageSource="Custom", Duration=3})
+		end
+	})
+
+	Tabs.Scripts:CreateSection("🖼️ Image ID")
+
 	Main.ClipsDescendants = true
 
-	-- Imagen de fondo dentro del GUI (no fullscreen)
 	local bgImageLabel = Instance.new("ImageLabel")
 	bgImageLabel.Name = "BackgroundImage"
 	bgImageLabel.Size = UDim2.new(1, 0, 1, 0)
@@ -8085,15 +8142,12 @@ if getgenv then getgenv().ConfirmLuna = true end
 	bgImageLabel.BackgroundTransparency = 1
 	bgImageLabel.ImageTransparency = 0
 	bgImageLabel.ScaleType = Enum.ScaleType.Crop
-	bgImageLabel.ZIndex = 1  -- Dentro del GUI, detrás del contenido
+	bgImageLabel.ZIndex = 1
 	bgImageLabel.Visible = false
-	bgImageLabel.Parent = Main.Elements.Parent  -- Dentro del contenedor de elementos
+	bgImageLabel.Parent = Main.Elements.Parent
 
-	-- =============================================
-	--   PERSISTENCIA DE CONFIGURACIÓN
-	-- =============================================
 	local HttpService = game:GetService("HttpService")
-	local DEFAULT_ID = "6368108640"
+	local DEFAULT_ID = "91100393730169"
 	local saveFolder = "BladeX"
 	local saveFile = saveFolder .. "/bgSettings.txt"
 
@@ -8101,12 +8155,10 @@ if getgenv then getgenv().ConfirmLuna = true end
 		pcall(function() makefolder(saveFolder) end)
 	end
 
-	-- Valores en memoria
 	local currentID = DEFAULT_ID
 	local currentTransparency = 0
-	local currentEnabled = false  -- se activa solo si el usuario lo guardó
+	local currentEnabled = false
 
-	-- Cargar configuración guardada
 	local function loadSettings()
 		if not isfile(saveFile) then return end
 		local ok, data = pcall(function()
@@ -8115,7 +8167,7 @@ if getgenv then getgenv().ConfirmLuna = true end
 		if ok and type(data) == "table" then
 			currentID          = (type(data.imageID) == "string" and data.imageID ~= "") and data.imageID or DEFAULT_ID
 			currentTransparency = type(data.transparency) == "number" and math.clamp(data.transparency, 0, 1) or 0
-			currentEnabled     = data.enabled ~= false  -- default true
+			currentEnabled     = data.enabled ~= false
 		end
 	end
 
@@ -8129,13 +8181,11 @@ if getgenv then getgenv().ConfirmLuna = true end
 		end)
 	end
 
-	-- Aplicar imagen con validación (soporta Decals y texturas directas)
 	local function applyImage(id)
 		if not id or id == "" then return end
 		local numericID = tostring(id):match("%d+")
 		if not numericID then return end
 
-		-- Intentar obtener la textura real del Decal
 		local finalImage = "rbxassetid://" .. numericID
 		pcall(function()
 			local obj = game:GetObjects("rbxassetid://" .. numericID)[1]
@@ -8158,12 +8208,13 @@ if getgenv then getgenv().ConfirmLuna = true end
 		saveSettings()
 	end
 
-	-- Guardar valores originales ANTES de modificar nada
 	local origMain       = Main.BackgroundTransparency
 	local origElements   = Main.Elements.BackgroundTransparency
 	local origNav        = Main.Navigation.BackgroundTransparency
-	local origLine       = pcall(function() return Main.Line.BackgroundTransparency end) and Main.Line.BackgroundTransparency or 0
-	local origNavLine    = pcall(function() return Main.Navigation.Line.BackgroundTransparency end) and Main.Navigation.Line.BackgroundTransparency or 0
+	local _okLine, origLine = pcall(function() return Main.Line.BackgroundTransparency end)
+	origLine = _okLine and origLine or 0
+	local _okNavLine, origNavLine = pcall(function() return Main.Navigation.Line.BackgroundTransparency end)
+	origNavLine = _okNavLine and origNavLine or 0
 	local origElementsParent = Main.Elements.Parent.BackgroundTransparency
 
 	local function setBgTransparent(transparent)
@@ -8192,13 +8243,14 @@ if getgenv then getgenv().ConfirmLuna = true end
 		saveSettings()
 	end
 
-	-- Cargar y aplicar configuración inicial
 	loadSettings()
-	-- Si no existía archivo, guardar el ID default ahora
+	if currentID == "6368108640" then
+		currentID = DEFAULT_ID
+		saveSettings()
+	end
 	if not isfile(saveFile) then
 		saveSettings()
 	end
-	-- Resolver textura del decal al inicio
 	local initImage = "rbxassetid://" .. currentID
 	pcall(function()
 		local obj = game:GetObjects("rbxassetid://" .. currentID)[1]
@@ -8211,7 +8263,6 @@ if getgenv then getgenv().ConfirmLuna = true end
 	bgImageLabel.Image = initImage
 	bgImageLabel.ImageTransparency = currentTransparency
 	bgImageLabel.Visible = currentEnabled
-	-- Si la imagen está activa, quitar el fondo de todos los frames
 	if currentEnabled then
 		Main.BackgroundTransparency = 1
 		pcall(function() Main.Elements.BackgroundTransparency = 1 end)
@@ -8221,9 +8272,6 @@ if getgenv then getgenv().ConfirmLuna = true end
 		pcall(function() Main.Navigation.Line.BackgroundTransparency = 1 end)
 	end
 
-	-- =============================================
-	--   CONTROLES EN LA INTERFAZ
-	-- =============================================
 	Tabs.Scripts:CreateToggle({
 		Name = "Enable Background Image",
 		Description = "Mostrar/ocultar imagen de fondo",
@@ -8244,13 +8292,14 @@ if getgenv then getgenv().ConfirmLuna = true end
 		end
 	})
 
+	-- Fix 2.1: Parámetros corregidos de CreateInput (DefaultText→CurrentValue, NumbersOnly→Numeric, ClearTextAfterFocusLost→RemoveTextAfterFocusLost)
 	Tabs.Scripts:CreateInput({
 		Name = "Background Image ID",
 		Description = "Change GUI background image",
 		PlaceholderText = "rbxassetid://" .. currentID,
-		DefaultText = currentID,
-		NumbersOnly = false,
-		ClearTextAfterFocusLost = false,
+		CurrentValue = currentID,
+		Numeric = false,
+		RemoveTextAfterFocusLost = false,
 		Callback = function(Value)
 			if Value and Value ~= "" then
 				applyImage(Value)
@@ -8258,64 +8307,2195 @@ if getgenv then getgenv().ConfirmLuna = true end
 		end
 	})
 
-	-- Tab de Info
+	Tabs.Scripts2:CreateSection("📜 Scripts")
+	Tabs.Scripts2:CreateButton({
+		Name = "Climb For Brainrots",
+		Description = "Carga el script Climb For Brainrots",
+		Callback = function()
+			local ok, err = pcall(function()
+				loadstring(game:HttpGet("https://raw.githubusercontent.com/gumanba/Scripts/main/ClimbForBrainrots"))()
+			end)
+			if ok then
+				Luna:Notification({Title="Scripts", Content="Climb For Brainrots cargado!", Icon="integration_instructions", ImageSource="Material", Duration=3})
+			else
+				Luna:Notification({Title="Error al cargar", Content="ClimbForBrainrots: "..tostring(err):sub(1,80), Icon="dangerous", ImageSource="Material", Duration=5})
+			end
+		end
+	})
+	Tabs.Scripts2:CreateButton({
+		Name = "Climb Worm Tower",
+		Description = "Carga el script Climb Worm Tower For Brainrots",
+		Callback = function()
+			local ok, err = pcall(function()
+				loadstring(game:HttpGet("https://raw.githubusercontent.com/gumanba/Scripts/main/ClimbWormTowerforBrainrots"))()
+			end)
+			if ok then
+				Luna:Notification({Title="Scripts", Content="Climb Worm Tower cargado!", Icon="integration_instructions", ImageSource="Material", Duration=3})
+			else
+				Luna:Notification({Title="Error al cargar", Content="ClimbWormTower: "..tostring(err):sub(1,80), Icon="dangerous", ImageSource="Material", Duration=5})
+			end
+		end
+	})
+	Tabs.Scripts2:CreateButton({
+		Name = "Infinite Yield",
+		Description = "Carga el admin command script Infinite Yield",
+		Callback = function()
+			local ok, err = pcall(function()
+				loadstring(game:HttpGet("https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source"))()
+			end)
+			if ok then
+				Luna:Notification({Title="Scripts", Content="Infinite Yield cargado!", Icon="integration_instructions", ImageSource="Material", Duration=3})
+			else
+				Luna:Notification({Title="Error al cargar", Content="InfiniteYield: "..tostring(err):sub(1,80), Icon="dangerous", ImageSource="Material", Duration=5})
+			end
+		end
+	})
+	Tabs.Scripts2:CreateButton({
+		Name = "Dark Dex",
+		Description = "Explorador del juego (Dark Dex v3)",
+		Callback = function()
+			local ok, err = pcall(function()
+				loadstring(game:HttpGet("https://raw.githubusercontent.com/infyiff/backup/main/dex.lua"))()
+			end)
+			if ok then
+				Luna:Notification({Title="Scripts", Content="Dark Dex cargado!", Icon="integration_instructions", ImageSource="Material", Duration=3})
+			else
+				Luna:Notification({Title="Error al cargar", Content="DarkDex: "..tostring(err):sub(1,80), Icon="dangerous", ImageSource="Material", Duration=5})
+			end
+		end
+	})
+	Tabs.Scripts2:CreateButton({
+		Name = "Remote Spy",
+		Description = "Espía los eventos remotos del juego",
+		Callback = function()
+			local ok, err = pcall(function()
+				loadstring(game:HttpGet("https://raw.githubusercontent.com/exxtremestuffs/SimpleSpySource/master/SimpleSpy.lua"))()
+			end)
+			if ok then
+				Luna:Notification({Title="Scripts", Content="Remote Spy cargado!", Icon="integration_instructions", ImageSource="Material", Duration=3})
+			else
+				Luna:Notification({Title="Error al cargar", Content="RemoteSpy: "..tostring(err):sub(1,80), Icon="dangerous", ImageSource="Material", Duration=5})
+			end
+		end
+	})
+	Tabs.Scripts2:CreateSection("⚡ Utilidades")
+
+	-- ── Anti AFK (con persistencia) ─────────────────────────────────────────
+	local function _startAntiAFK()
+		if _G.AntiAFK then
+			pcall(function() _G.AntiAFK:Disconnect() end)
+			_G.AntiAFK = nil
+		end
+		local _afkTimer = 0
+		_G.AntiAFK = RunService.Heartbeat:Connect(function(dt)
+			_afkTimer = _afkTimer + dt
+			if _afkTimer < 60 then return end -- simular actividad cada 60s
+			_afkTimer = 0
+			pcall(function()
+				local VirtualUser = game:GetService("VirtualUser")
+				VirtualUser:Button2Down(Vector2.new(0,0), workspace.CurrentCamera.CFrame)
+				VirtualUser:Button2Up(Vector2.new(0,0), workspace.CurrentCamera.CFrame)
+			end)
+		end)
+	end
+
+	Tabs.Scripts2:CreateToggle({
+		Name = "Anti AFK",
+		Description = "Evita que Roblox te expulse por inactividad",
+		CurrentValue = _cfg.antiAFK,
+		Callback = function(v)
+			if v then _trackUse("Anti AFK") end
+			_cfg.antiAFK = v
+			_saveCfg()
+			if v then
+				_startAntiAFK()
+			elseif _G.AntiAFK then
+				pcall(function() _G.AntiAFK:Disconnect() end)
+				_G.AntiAFK = nil
+			end
+		end
+	})
+	-- Aplicar Anti AFK guardado al cargar
+	if _cfg.antiAFK then
+		_startAntiAFK()
+	end
+
+	-- ── No Clip (persistencia + respawn) ────────────────────────────────────
+	local _noClipActive = _cfg.noClip
+	local function _applyNoClip(char)
+		if not char or not _noClipActive then return end
+		for _, p in pairs(char:GetDescendants()) do
+			if p:IsA("BasePart") then p.CanCollide = false end
+		end
+	end
+
+	Tabs.Scripts2:CreateToggle({
+		Name = "No Clip",
+		Description = "Atraviesa paredes y objetos del mapa",
+		CurrentValue = _cfg.noClip,
+		Callback = function(v)
+			if v then _trackUse("No Clip") end
+			_noClipActive = v
+			_G.NoClip = v
+			_cfg.noClip = v
+			_saveCfg()
+			if v then
+				_G.NoClipConn = game:GetService("RunService").Stepped:Connect(function()
+					if _noClipActive then
+						_applyNoClip(game.Players.LocalPlayer.Character)
+					end
+				end)
+			elseif _G.NoClipConn then
+				_G.NoClipConn:Disconnect()
+				_G.NoClipConn = nil
+				-- Restaurar colisión
+				local char = Player.Character
+				if char then
+					for _, p in pairs(char:GetDescendants()) do
+						if p:IsA("BasePart") then
+							pcall(function() p.CanCollide = true end)
+						end
+					end
+				end
+			end
+		end
+	})
+	-- Aplicar NoClip guardado al cargar
+	if _cfg.noClip then
+		_G.NoClip = true
+		_G.NoClipConn = game:GetService("RunService").Stepped:Connect(function()
+			if _noClipActive then _applyNoClip(Player.Character) end
+		end)
+	end
+
+	-- ── Walk Speed (persistencia + respawn) ─────────────────────────────────
+	local _savedWalkSpeed = _cfg.walkSpeed
+	local function _applyWalkSpeed(char)
+		local hum = char and char:FindFirstChildOfClass("Humanoid")
+		if hum then hum.WalkSpeed = _savedWalkSpeed end
+	end
+
+	Tabs.Scripts2:CreateSlider({
+		Name = "Walk Speed",
+		Description = "Velocidad de movimiento del personaje (se mantiene al respawnear)",
+		Range = {5, 300},
+		Increment = 1,
+		CurrentValue = _cfg.walkSpeed,
+		Callback = function(v)
+			_trackUse("Walk Speed")
+			_savedWalkSpeed = v
+			_cfg.walkSpeed = v
+			_saveCfg()
+			_applyWalkSpeed(Player.Character)
+		end
+	})
+
+	-- ── Jump Power (persistencia + respawn) ─────────────────────────────────
+	local _savedJumpPower = _cfg.jumpPower
+	local function _applyJumpPower(char)
+		local hum = char and char:FindFirstChildOfClass("Humanoid")
+		if hum then hum.JumpPower = _savedJumpPower end
+	end
+
+	Tabs.Scripts2:CreateSlider({
+		Name = "Jump Power",
+		Description = "Potencia de salto (default: 50). Nota: juegos con JumpHeight pueden ignorarlo.",
+		Range = {0, 500},
+		Increment = 5,
+		CurrentValue = _cfg.jumpPower,
+		Callback = function(v)
+			_trackUse("Jump Power")
+			_savedJumpPower = v
+			_cfg.jumpPower = v
+			_saveCfg()
+			_applyJumpPower(Player.Character)
+		end
+	})
+
+	-- ── Aplicar stats al cargar y en cada respawn ────────────────────────────
+	_applyWalkSpeed(Player.Character)
+	_applyJumpPower(Player.Character)
+	Player.CharacterAdded:Connect(function(char)
+		task.wait(0.5) -- esperar a que el personaje esté listo
+		_applyWalkSpeed(char)
+		_applyJumpPower(char)
+		if _noClipActive then _applyNoClip(char) end
+	end)
+
+	do
+			local playlists = {
+				{
+					genre = "Phonk / Drift",
+					songs = {
+						{ name = "Metamorphosis",          id = "rbxassetid://15689451063"         },
+						{ name = "Sinistra",               id = "rbxassetid://15689443663"         },
+						{ name = "Dionic",                 id = "rbxassetid://15689445424"         },
+						{ name = "Invade Groom",           id = "rbxassetid://15689453529"         },
+						{ name = "The Final Phonk",        id = "rbxassetid://14145620056"         },
+						{ name = "Emotional Damage",       id = "rbxassetid://14145621151"         },
+						{ name = "Raven Theme",            id = "rbxassetid://14145621445"         },
+						{ name = "No Lights",              id = "rbxassetid://14145623221"         },
+						{ name = "Monster Bass",           id = "rbxassetid://14145623658"         },
+						{ name = "Bell Pepper",            id = "rbxassetid://14145626111"         },
+					}
+				},
+				{
+					genre = "Phonk Hard",
+					songs = {
+						{ name = "Phonk't Out",            id = "rbxassetid://14145625743"         },
+						{ name = "Unbreakable",            id = "rbxassetid://14145626744"         },
+						{ name = "Black Seed",             id = "rbxassetid://14145622615"         },
+						{ name = "Back & Front",           id = "rbxassetid://14145627474"         },
+						{ name = "Cowbell God",            id = "rbxassetid://16190760005"         },
+						{ name = "Down2Kill",              id = "rbxassetid://16190760285"         },
+						{ name = "HR -Eeyuh",              id = "rbxassetid://16190782181"         },
+						{ name = "Infinite",               id = "rbxassetid://16190784875"         },
+						{ name = "Ultima",                 id = "rbxassetid://16190756998"         },
+						{ name = "Redemption",             id = "rbxassetid://16190783774"         },
+					}
+				},
+				{
+					genre = "Phonk Chill",
+					songs = {
+						{ name = "Drooly",                 id = "rbxassetid://8053389869"          },
+						{ name = "Heptraxous",             id = "rbxassetid://8185857772"          },
+						{ name = "Stupid Remix",           id = "rbxassetid://16662833837"         },
+						{ name = "AB4T",                   id = "rbxassetid://17422173467"         },
+						{ name = "Alanwaad",               id = "rbxassetid://17422074849"         },
+						{ name = "Metaverse",              id = "rbxassetid://17422168798"         },
+						{ name = "Wassa",                  id = "rbxassetid://17422207260"         },
+						{ name = "Gabbermix",              id = "rbxassetid://18841887539"         },
+						{ name = "Uzipack",                id = "rbxassetid://18841894272"         },
+					}
+				},
+			}
+		local allSongs = {}
+		for _, pl in ipairs(playlists) do
+			for _, s in ipairs(pl.songs) do
+				table.insert(allSongs, { name = s.name, id = s.id, genre = pl.genre })
+			end
+		end
+
+		local SoundService = game:GetService("SoundService")
+		local _musicSound = Instance.new("Sound")
+		_musicSound.Name   = "BladeX_Music"
+		_musicSound.Volume = 0.5
+		-- Fix 2.4: Siempre false; el loop se maneja en el evento Ended
+		_musicSound.Looped = false
+		_musicSound.Parent = SoundService
+		_G.BladeXMusic = _musicSound
+
+		local _isPlaying   = false
+		local _isShuffle   = false
+		local _isLoop      = true
+		local _currentIdx  = 1
+		local _currentList = allSongs
+		local _progressConn = nil
+		local _loaded      = false
+
+		local playerGui = Player:WaitForChild("PlayerGui")
+		local screenGui = Instance.new("ScreenGui", playerGui)
+		screenGui.Name = "BladeX_MusicPlayer"
+		screenGui.ResetOnSpawn = false
+		screenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+		-- ══════════════════════════════════════════════════════
+		-- BLADEX MUSIC PLAYER  v3  ·  estilo RELICS
+		-- ══════════════════════════════════════════════════════
+		local CA  = Color3.fromRGB(180, 40, 220)     -- magenta accent
+		local CB  = Color3.fromRGB(22,  22,  30)    -- fondo base (más oscuro)
+		local CC  = Color3.fromRGB(30,  30,  42)    -- card
+		local CT  = Color3.fromRGB(245, 245, 255)   -- texto claro
+		local CM  = Color3.fromRGB(120, 118, 148)   -- texto muted
+
+		local ICON_SHUFFLE = "rbxassetid://6026667003"
+		local ICON_PREV    = "rbxassetid://6026667011"
+		local ICON_PLAY    = "rbxassetid://6026663699"
+		local ICON_PAUSE   = "rbxassetid://6026663719"
+		local ICON_NEXT    = "rbxassetid://6026667005"
+		local ICON_LOOP    = "rbxassetid://6026666998"
+
+		-- ══════════════════════════════════════════════════════
+		-- FRAME RAÍZ – diseño HORIZONTAL COMPACTO estilo RELICSxyz
+		-- Tamaño: 420 × 260  (ancho > alto, compacto)
+		-- ══════════════════════════════════════════════════════
+		local PW, PH = 420, 260   -- ancho, alto EXPANDIDO
+		local PH_MIN = 44          -- alto MINIMIZADO (solo header)
+
+		local playerFrame = Instance.new("Frame", screenGui)
+		playerFrame.Name             = "PlayerFrame"
+		playerFrame.Size             = UDim2.fromOffset(PW, PH)
+		playerFrame.Position         = UDim2.new(0.5,-PW/2, 1,-PH-18)
+		playerFrame.BackgroundColor3 = CB
+		playerFrame.BorderSizePixel  = 0
+		playerFrame.Active           = true
+		playerFrame.Draggable        = true
+		playerFrame.Visible          = false
+		playerFrame.ClipsDescendants = true
+		Instance.new("UICorner", playerFrame).CornerRadius = UDim.new(0,14)
+		local _pfStroke = Instance.new("UIStroke", playerFrame)
+		_pfStroke.Color = Color3.fromRGB(60,52,88) _pfStroke.Thickness = 1 _pfStroke.Transparency = 0.38
+
+		-- ── HEADER (siempre visible, incluye minimize) ───────────────────
+		local _hdr = Instance.new("Frame", playerFrame)
+		_hdr.Size = UDim2.new(1,0,0,44)
+		_hdr.Position = UDim2.new(0,0,0,0)   -- SIEMPRE en la cima, posición absoluta
+		_hdr.BackgroundColor3 = Color3.fromRGB(16,15,22)
+		_hdr.BorderSizePixel = 0
+		_hdr.ZIndex = 10
+		local _hdrCorner = Instance.new("UICorner",_hdr)
+		_hdrCorner.CornerRadius = UDim.new(0,14)
+
+		local _hdrBotFill = Instance.new("Frame",_hdr)
+		_hdrBotFill.Size=UDim2.new(1,0,0,14) _hdrBotFill.Position=UDim2.new(0,0,1,-14)
+		_hdrBotFill.BackgroundColor3=Color3.fromRGB(16,15,22) _hdrBotFill.BorderSizePixel=0 _hdrBotFill.ZIndex=10
+
+		local _hdrLine = Instance.new("Frame", playerFrame)
+		_hdrLine.Size = UDim2.new(1,0,0,1) _hdrLine.Position = UDim2.new(0,0,0,44)
+		_hdrLine.BackgroundColor3 = Color3.fromRGB(44,38,62) _hdrLine.BorderSizePixel = 0
+
+		-- ícono diamante
+		local _hdrIcon = Instance.new("ImageLabel", _hdr)
+		_hdrIcon.Size = UDim2.fromOffset(20,20) _hdrIcon.Position = UDim2.new(0,12,0.5,-10)
+		_hdrIcon.BackgroundTransparency = 1 _hdrIcon.ZIndex = 11
+		_hdrIcon.Image = "rbxassetid://99259191458226"
+		_hdrIcon.ImageColor3 = CA _hdrIcon.ScaleType = Enum.ScaleType.Fit
+
+		local _hdrLbl = Instance.new("TextLabel", _hdr)
+		_hdrLbl.Size = UDim2.new(1,-110,1,0) _hdrLbl.Position = UDim2.new(0,38,0,0)
+		_hdrLbl.BackgroundTransparency = 1 _hdrLbl.ZIndex = 11
+		_hdrLbl.Text = "Bladex reproductor"
+		_hdrLbl.TextColor3 = CM _hdrLbl.TextSize = 12 _hdrLbl.Font = Enum.Font.Gotham
+		_hdrLbl.TextXAlignment = Enum.TextXAlignment.Left
+
+		-- Botón MINIMIZAR (—/▲)
+		local _minimized = false
+		local minimizeBtn = Instance.new("TextButton", _hdr)
+		minimizeBtn.Size = UDim2.fromOffset(28,28) minimizeBtn.Position = UDim2.new(1,-64,0.5,-14)
+		minimizeBtn.BackgroundColor3 = Color3.fromRGB(38,30,55) minimizeBtn.ZIndex = 12
+		minimizeBtn.Text = "—" minimizeBtn.TextColor3 = CT
+		minimizeBtn.TextSize = 14 minimizeBtn.Font = Enum.Font.GothamBold
+		minimizeBtn.BorderSizePixel = 0 minimizeBtn.AutoButtonColor = false
+		Instance.new("UICorner", minimizeBtn).CornerRadius = UDim.new(1,0)
+
+		-- Botón CERRAR (×)
+		local closeBtn = Instance.new("TextButton", _hdr)
+		closeBtn.Size = UDim2.fromOffset(28,28) closeBtn.Position = UDim2.new(1,-30,0.5,-14)
+		closeBtn.BackgroundColor3 = Color3.fromRGB(38,30,55) closeBtn.ZIndex = 12
+		closeBtn.Text = "×" closeBtn.TextColor3 = CT
+		closeBtn.TextSize = 18 closeBtn.Font = Enum.Font.GothamBold
+		closeBtn.BorderSizePixel = 0 closeBtn.AutoButtonColor = false
+		Instance.new("UICorner", closeBtn).CornerRadius = UDim.new(1,0)
+
+		-- ── CUERPO COLAPSABLE (todo lo que NO es el header) ─────────────
+		-- Se oculta/muestra al minimizar, en lugar de redimensionar el frame completo
+		local _body = Instance.new("Frame", playerFrame)
+		_body.Name = "Body"
+		_body.Size = UDim2.new(1,0,0, PH - 44)
+		_body.Position = UDim2.new(0,0,0,45)
+		_body.BackgroundTransparency = 1
+		_body.ClipsDescendants = true
+
+		-- Lógica minimizar / expandir  (toggle Visible del body)
+		local TweenService2 = game:GetService("TweenService")
+		minimizeBtn.MouseButton1Click:Connect(function()
+			_minimized = not _minimized
+			if _minimized then
+				-- Colapsar: animar hacia 44px y ocultar body al final
+				local tw = TweenService2:Create(playerFrame,
+					TweenInfo.new(0.2, Enum.EasingStyle.Quart, Enum.EasingDirection.Out),
+					{Size = UDim2.fromOffset(PW, PH_MIN)}
+				)
+				tw:Play()
+				tw.Completed:Connect(function()
+					_body.Visible = false
+				end)
+				minimizeBtn.Text = "▲"
+				minimizeBtn.TextSize = 11
+			else
+				-- Expandir: mostrar body primero, luego animar tamaño completo
+				_body.Visible = true
+				local tw = TweenService2:Create(playerFrame,
+					TweenInfo.new(0.2, Enum.EasingStyle.Quart, Enum.EasingDirection.Out),
+					{Size = UDim2.fromOffset(PW, PH)}
+				)
+				tw:Play()
+				minimizeBtn.Text = "—"
+				minimizeBtn.TextSize = 14
+			end
+		end)
+
+		-- ── BARRA DE PESTAÑAS (dentro del body, en la parte inferior) ───
+		local _tabBar = Instance.new("Frame", _body)
+		_tabBar.Size = UDim2.new(1,0,0,46) _tabBar.Position = UDim2.new(0,0,1,-46)
+		_tabBar.BackgroundColor3 = Color3.fromRGB(14,14,20) _tabBar.BorderSizePixel = 0
+		local _tbCorner = Instance.new("UICorner",_tabBar)
+		_tbCorner.CornerRadius = UDim.new(0,14)
+		local _tbTopFill = Instance.new("Frame",_tabBar)
+		_tbTopFill.Size=UDim2.new(1,0,0,14) _tbTopFill.Position=UDim2.new(0,0,0,0)
+		_tbTopFill.BackgroundColor3=Color3.fromRGB(14,14,20) _tbTopFill.BorderSizePixel=0
+
+		local _tabSep = Instance.new("Frame", _body)
+		_tabSep.Size = UDim2.new(1,0,0,1) _tabSep.Position = UDim2.new(0,0,1,-47)
+		_tabSep.BackgroundColor3 = Color3.fromRGB(44,38,62) _tabSep.BorderSizePixel = 0
+
+		-- ícono pestaña helper
+		local function _makeTab(parent, name, icon, label, xFrac)
+			local btn = Instance.new("TextButton", parent)
+			btn.Name = name btn.Text = ""
+			btn.Size = UDim2.new(1/3,0,1,0) btn.Position = UDim2.new(xFrac,0,0,0)
+			btn.BackgroundTransparency = 1 btn.BorderSizePixel = 0
+			local ic = Instance.new("ImageLabel", btn)
+			ic.Name = "Ic" ic.Size = UDim2.fromOffset(20,20)
+			ic.AnchorPoint = Vector2.new(0.5,0.5) ic.Position = UDim2.new(0.5,0,0.35,0)
+			ic.BackgroundTransparency = 1 ic.Image = icon ic.ImageColor3 = CM
+			ic.ScaleType = Enum.ScaleType.Fit
+			local lbl = Instance.new("TextLabel", btn)
+			lbl.Name = "Lbl" lbl.Size = UDim2.new(1,0,0,11) lbl.Position = UDim2.new(0,0,0.65,0)
+			lbl.BackgroundTransparency = 1 lbl.Text = label lbl.TextColor3 = CM
+			lbl.TextSize = 8 lbl.Font = Enum.Font.Gotham
+			return btn
+		end
+		local _tabPlayer  = _makeTab(_tabBar,"player",  ICON_PLAY,               "Reproductor", 0)
+		local _tabLibrary = _makeTab(_tabBar,"library", "rbxassetid://6031233835","Buscar",     1/3)
+		local _tabFavs    = _makeTab(_tabBar,"favs",    "rbxassetid://6023426974","Favoritos", 2/3)
+
+		-- ── ÁREA DE CONTENIDO (dentro de _body) ─────────────────────────
+		-- _body height = PH-44 = 216px; tabBar = 46px; content = 170px
+		local _content = Instance.new("Frame", _body)
+		_content.Size = UDim2.new(1,0,0, PH - 44 - 46)   -- 170px
+		_content.Position = UDim2.new(0,0,0,0)
+		_content.BackgroundTransparency = 1 _content.ClipsDescendants = true
+
+		-- ═══════════════════════════════════
+		-- PÁGINA 1 : REPRODUCTOR  (layout horizontal compacto)
+		-- ═══════════════════════════════════
+		local _pagePlayer = Instance.new("Frame", _content)
+		_pagePlayer.Size = UDim2.fromScale(1,1)
+		_pagePlayer.BackgroundTransparency = 1
+
+		--  ┌──────────────────────────────────────────┐
+		--  │ Título              [↺] [♡]              │  y=10 h=24
+		--  │ Género                                   │  y=34 h=14
+		--  │ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━  │  y=56 h=4
+		--  │ 00:00                           01:42    │  y=64 h=12
+		--  │ [waveform left 45%] << [II] >>  [right]  │  y=82 h=54
+		-- volume row
+		--  │ 🔈 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 🔊  │  y=154 h=20
+		--  └──────────────────────────────────────────┘
+
+		-- Título
+		local _bigTitle = Instance.new("TextLabel", _pagePlayer)
+		_bigTitle.Size = UDim2.new(1,-74,0,26) _bigTitle.Position = UDim2.new(0,16,0,10)
+		_bigTitle.BackgroundTransparency = 1
+		_bigTitle.Text = "SIN REPRODUCCIÓN"
+		_bigTitle.TextColor3 = CT _bigTitle.TextSize = 18 _bigTitle.Font = Enum.Font.GothamBold
+		_bigTitle.TextXAlignment = Enum.TextXAlignment.Left _bigTitle.ClipsDescendants = true
+
+		-- Género
+		local _bigGenre = Instance.new("TextLabel", _pagePlayer)
+		_bigGenre.Size = UDim2.new(1,-74,0,13) _bigGenre.Position = UDim2.new(0,16,0,36)
+		_bigGenre.BackgroundTransparency = 1
+		_bigGenre.Text = "Género"
+		_bigGenre.TextColor3 = CM _bigGenre.TextSize = 10 _bigGenre.Font = Enum.Font.Gotham
+		_bigGenre.TextXAlignment = Enum.TextXAlignment.Left
+
+		-- Loop button (arriba derecha)
+		local _loopIco = Instance.new("ImageButton", _pagePlayer)
+		_loopIco.Size = UDim2.fromOffset(24,24) _loopIco.Position = UDim2.new(1,-52,0,20)
+		_loopIco.BackgroundTransparency = 1 _loopIco.Image = ICON_LOOP
+		_loopIco.ImageColor3 = CA _loopIco.ScaleType = Enum.ScaleType.Fit _loopIco.BorderSizePixel = 0
+
+		-- Heart button (arriba derecha)
+		local _heartTop = Instance.new("ImageButton", _pagePlayer)
+		_heartTop.Size = UDim2.fromOffset(24,24) _heartTop.Position = UDim2.new(1,-24,0,20)
+		_heartTop.BackgroundTransparency = 1 _heartTop.Image = "rbxassetid://6023426974"
+		_heartTop.ImageColor3 = CM _heartTop.ScaleType = Enum.ScaleType.Fit _heartTop.BorderSizePixel = 0
+		-- (La lógica de favoritos se conecta más abajo, tras definir toggleFavorite)
+
+		-- Barra de progreso (delgada, blanca con fill morado)
+		local _progBg = Instance.new("Frame", _pagePlayer)
+		_progBg.Size = UDim2.new(1,-32,0,3) _progBg.Position = UDim2.new(0,16,0,56)
+		_progBg.BackgroundColor3 = Color3.fromRGB(50,40,75) _progBg.BorderSizePixel = 0
+		Instance.new("UICorner",_progBg).CornerRadius = UDim.new(1,0)
+
+		local progressFill = Instance.new("Frame", _progBg)
+		progressFill.Size = UDim2.fromScale(0,1) progressFill.BorderSizePixel = 0
+		Instance.new("UICorner",progressFill).CornerRadius = UDim.new(1,0)
+		local _pfGrad = Instance.new("UIGradient",progressFill)
+		_pfGrad.Color = ColorSequence.new{
+			ColorSequenceKeypoint.new(0, Color3.fromRGB(120,30,195)),
+			ColorSequenceKeypoint.new(1, Color3.fromRGB(215,75,255)),
+		}
+
+		local progDot = Instance.new("Frame", _progBg)
+		progDot.Size = UDim2.fromOffset(10,10)
+		progDot.AnchorPoint = Vector2.new(0.5,0.5) progDot.Position = UDim2.new(0,0,0.5,0)
+		progDot.BackgroundColor3 = CT progDot.BorderSizePixel = 0 progDot.ZIndex = 3
+		Instance.new("UICorner",progDot).CornerRadius = UDim.new(1,0)
+
+		-- Tiempos
+		local timeLeft = Instance.new("TextLabel", _pagePlayer)
+		timeLeft.Size = UDim2.fromOffset(44,12) timeLeft.Position = UDim2.new(0,16,0,63)
+		timeLeft.BackgroundTransparency = 1 timeLeft.Text = "00:00"
+		timeLeft.TextColor3 = CM timeLeft.TextSize = 9 timeLeft.Font = Enum.Font.GothamBold
+		timeLeft.TextXAlignment = Enum.TextXAlignment.Left
+		local timeLabel = timeLeft
+
+		local timeRight = Instance.new("TextLabel", _pagePlayer)
+		timeRight.Size = UDim2.fromOffset(44,12) timeRight.Position = UDim2.new(1,-60,0,63)
+		timeRight.BackgroundTransparency = 1 timeRight.Text = "00:00"
+		timeRight.TextColor3 = CM timeRight.TextSize = 9 timeRight.Font = Enum.Font.GothamBold
+		timeRight.TextXAlignment = Enum.TextXAlignment.Right
+
+		-- ── WAVEFORM (izquierda ~42% del ancho, pequeño, azul) ─────────
+		local _waveW = math.floor(PW * 0.40) - 16   -- ~152px
+		local _wave = Instance.new("Frame", _pagePlayer)
+		_wave.Size = UDim2.fromOffset(_waveW, 42) _wave.Position = UDim2.new(0,16,0,82)
+		_wave.BackgroundTransparency = 1 _wave.ClipsDescendants = true
+		local _wGrad = Instance.new("UIGradient", _wave)
+		_wGrad.Color = ColorSequence.new{
+			ColorSequenceKeypoint.new(0, Color3.fromRGB(60,20,220)),
+			ColorSequenceKeypoint.new(0.6, Color3.fromRGB(130,40,255)),
+			ColorSequenceKeypoint.new(1, Color3.fromRGB(35,8,120)),
+		}
+		_wGrad.Rotation = 90
+
+		local _waveBars = {}
+		local _wCount = 22
+		local _wBW = math.floor(_waveW / _wCount) - 1
+		math.randomseed(777)
+		local _wH = {}
+		for wi=1,_wCount do _wH[wi]=math.random(3,32) end
+		for wi=1,_wCount do
+			local bar = Instance.new("Frame",_wave)
+			bar.Size = UDim2.fromOffset(_wBW, _wH[wi])
+			bar.AnchorPoint = Vector2.new(0,1)
+			bar.Position = UDim2.new(0,(wi-1)*(_wBW+1),1,0)
+			bar.BackgroundColor3 = Color3.fromRGB(255,255,255)
+			bar.BackgroundTransparency = 0.28 bar.BorderSizePixel = 0
+			Instance.new("UICorner",bar).CornerRadius = UDim.new(0,2)
+			_waveBars[wi] = bar
+		end
+
+		-- ── CONTROLES (derecha) ────────────────────────────────────────
+		local _ctrlW = PW - _waveW - 32 - 16
+		local _ctrlRow = Instance.new("Frame", _pagePlayer)
+		_ctrlRow.Size = UDim2.fromOffset(_ctrlW, 58)
+		_ctrlRow.Position = UDim2.new(0, 16 + _waveW + 10, 0, 80)
+		_ctrlRow.BackgroundTransparency = 1
+
+		local ctrlBtns = {}
+
+		-- PlayPause
+		local _ppBtn = Instance.new("ImageButton", _ctrlRow)
+		_ppBtn.Name = "PlayPause"
+		_ppBtn.Size = UDim2.fromOffset(52,52)
+		_ppBtn.AnchorPoint = Vector2.new(0.5,0.5)
+		_ppBtn.Position = UDim2.new(0.5,0,0.5,0)
+		_ppBtn.BackgroundColor3 = Color3.fromRGB(38,34,56)
+		_ppBtn.Image = ICON_PAUSE _ppBtn.ImageColor3 = CT
+		_ppBtn.ScaleType = Enum.ScaleType.Fit _ppBtn.BorderSizePixel = 0 _ppBtn.AutoButtonColor = false
+		Instance.new("UICorner",_ppBtn).CornerRadius = UDim.new(1,0)
+		local _ppStroke = Instance.new("UIStroke",_ppBtn)
+		_ppStroke.Color=Color3.fromRGB(95,60,140) _ppStroke.Thickness=1.8
+		local _ppPad = Instance.new("UIPadding",_ppBtn)
+		_ppPad.PaddingTop=UDim.new(0,12) _ppPad.PaddingBottom=UDim.new(0,12)
+		_ppPad.PaddingLeft=UDim.new(0,12) _ppPad.PaddingRight=UDim.new(0,12)
+		ctrlBtns["PlayPause"] = _ppBtn
+
+		-- Prev <<
+		local _prevBtn = Instance.new("ImageButton", _ctrlRow)
+		_prevBtn.Name = "Prev"
+		_prevBtn.Size = UDim2.fromOffset(40,40)
+		_prevBtn.AnchorPoint = Vector2.new(0.5,0.5)
+		_prevBtn.Position = UDim2.new(0.5,-58,0.5,0)
+		_prevBtn.BackgroundTransparency = 1
+		_prevBtn.Image = ICON_PREV _prevBtn.ImageColor3 = CT
+		_prevBtn.ScaleType = Enum.ScaleType.Fit _prevBtn.BorderSizePixel = 0
+		local _prPad = Instance.new("UIPadding",_prevBtn)
+		_prPad.PaddingTop=UDim.new(0,4) _prPad.PaddingBottom=UDim.new(0,4)
+		_prPad.PaddingLeft=UDim.new(0,4) _prPad.PaddingRight=UDim.new(0,4)
+		ctrlBtns["Prev"] = _prevBtn
+
+		-- Next >>
+		local _nextBtn = Instance.new("ImageButton", _ctrlRow)
+		_nextBtn.Name = "Next"
+		_nextBtn.Size = UDim2.fromOffset(40,40)
+		_nextBtn.AnchorPoint = Vector2.new(0.5,0.5)
+		_nextBtn.Position = UDim2.new(0.5,58,0.5,0)
+		_nextBtn.BackgroundTransparency = 1
+		_nextBtn.Image = ICON_NEXT _nextBtn.ImageColor3 = CT
+		_nextBtn.ScaleType = Enum.ScaleType.Fit _nextBtn.BorderSizePixel = 0
+		local _nxPad = Instance.new("UIPadding",_nextBtn)
+		_nxPad.PaddingTop=UDim.new(0,4) _nxPad.PaddingBottom=UDim.new(0,4)
+		_nxPad.PaddingLeft=UDim.new(0,4) _nxPad.PaddingRight=UDim.new(0,4)
+		ctrlBtns["Next"] = _nextBtn
+
+		-- Shuffle (pequeño, extremo izq)
+		local _shufBtn = Instance.new("ImageButton", _ctrlRow)
+		_shufBtn.Name = "Shuffle"
+		_shufBtn.Size = UDim2.fromOffset(20,20)
+		_shufBtn.AnchorPoint = Vector2.new(0.5,0.5)
+		_shufBtn.Position = UDim2.new(0,14,0.5,0)
+		_shufBtn.BackgroundTransparency = 1
+		_shufBtn.Image = ICON_SHUFFLE _shufBtn.ImageColor3 = CM
+		_shufBtn.ScaleType = Enum.ScaleType.Fit _shufBtn.BorderSizePixel = 0
+		ctrlBtns["Shuffle"] = _shufBtn
+
+		-- Loop (pequeño, extremo der)
+		local _loopBtn = Instance.new("ImageButton", _ctrlRow)
+		_loopBtn.Name = "Loop"
+		_loopBtn.Size = UDim2.fromOffset(20,20)
+		_loopBtn.AnchorPoint = Vector2.new(0.5,0.5)
+		_loopBtn.Position = UDim2.new(1,-14,0.5,0)
+		_loopBtn.BackgroundTransparency = 1
+		_loopBtn.Image = ICON_LOOP _loopBtn.ImageColor3 = CA
+		_loopBtn.ScaleType = Enum.ScaleType.Fit _loopBtn.BorderSizePixel = 0
+		ctrlBtns["Loop"] = _loopBtn
+
+		-- texto "play for others"
+		local _playForOthers = Instance.new("TextLabel", _pagePlayer)
+		_playForOthers.Size = UDim2.fromOffset(_ctrlW, 12)
+		_playForOthers.Position = UDim2.new(0, 16 + _waveW + 10, 0, 141)
+		_playForOthers.BackgroundTransparency = 1
+		_playForOthers.Text = ""
+		_playForOthers.TextColor3 = CM _playForOthers.TextSize = 9
+		_playForOthers.Font = Enum.Font.Gotham
+		_playForOthers.TextXAlignment = Enum.TextXAlignment.Center
+
+		-- ── SLIDER DE VOLUMEN (ancho completo, al fondo) ─────────────────
+		local _volRow = Instance.new("Frame", _pagePlayer)
+		_volRow.Size = UDim2.new(1,-32,0,18) _volRow.Position = UDim2.new(0,16,0,156)
+		_volRow.BackgroundTransparency = 1
+
+		local _volIcoL = Instance.new("ImageLabel",_volRow)
+		_volIcoL.Size = UDim2.fromOffset(14,14) _volIcoL.Position = UDim2.new(0,0,0.5,-7)
+		_volIcoL.BackgroundTransparency=1 _volIcoL.Image="rbxassetid://6026568242"
+		_volIcoL.ImageColor3=CM _volIcoL.ScaleType=Enum.ScaleType.Fit
+
+		local _volTrack = Instance.new("Frame",_volRow)
+		_volTrack.Size = UDim2.new(1,-38,0,5) _volTrack.Position = UDim2.new(0,20,0.5,-2)
+		_volTrack.BackgroundColor3 = Color3.fromRGB(48,38,72) _volTrack.BorderSizePixel=0
+		Instance.new("UICorner",_volTrack).CornerRadius = UDim.new(1,0)
+
+		local _volFill = Instance.new("Frame",_volTrack)
+		_volFill.Size = UDim2.fromScale(0.5,1) _volFill.BackgroundColor3 = CA _volFill.BorderSizePixel=0
+		Instance.new("UICorner",_volFill).CornerRadius = UDim.new(1,0)
+		local _vGrad = Instance.new("UIGradient",_volFill)
+		_vGrad.Color = ColorSequence.new{
+			ColorSequenceKeypoint.new(0,Color3.fromRGB(110,30,190)),
+			ColorSequenceKeypoint.new(1,Color3.fromRGB(220,80,255)),
+		}
+
+		local _volIcoR = Instance.new("ImageLabel",_volRow)
+		_volIcoR.Size = UDim2.fromOffset(18,18) _volIcoR.Position = UDim2.new(1,-18,0.5,-9)
+		_volIcoR.BackgroundTransparency=1 _volIcoR.Image="rbxassetid://6026568242"
+		_volIcoR.ImageColor3=CT _volIcoR.ScaleType=Enum.ScaleType.Fit
+
+		-- badge VALID
+		local statusBadge = Instance.new("TextLabel", _pagePlayer)
+		statusBadge.Size = UDim2.fromOffset(58,15) statusBadge.Position = UDim2.new(0,16,0,156)
+		statusBadge.BackgroundColor3 = Color3.fromRGB(22,148,70)
+		statusBadge.TextColor3 = CT statusBadge.Text = "● VALID"
+		statusBadge.TextSize = 8 statusBadge.Font = Enum.Font.GothamBold
+		statusBadge.BorderSizePixel = 0 statusBadge.Visible = false
+		Instance.new("UICorner",statusBadge).CornerRadius = UDim.new(0,5)
+
+		local volLabel = Instance.new("TextLabel", _pagePlayer)
+		volLabel.Size = UDim2.fromOffset(55,12) volLabel.Position = UDim2.new(1,-71,0,156)
+		volLabel.BackgroundTransparency=1 volLabel.Text="Vol: 50"
+		volLabel.TextColor3=CA volLabel.TextSize=9 volLabel.Font=Enum.Font.Gotham
+		volLabel.ZIndex=5 volLabel.Visible=false
+
+		-- ═══════════════════════════════════
+		-- PÁGINA 2 : BIBLIOTECA (Lista + búsqueda)
+		-- ═══════════════════════════════════
+		local _pageLibrary = Instance.new("Frame", _content)
+		_pageLibrary.Size = UDim2.fromScale(1,1)
+		_pageLibrary.BackgroundTransparency = 1
+		_pageLibrary.Visible = false
+
+		-- Barra de búsqueda blanca (igual que referencia)
+		local _searchWrap = Instance.new("Frame", _pageLibrary)
+		_searchWrap.Size = UDim2.new(1,-24,0,38) _searchWrap.Position = UDim2.new(0,12,0,6)
+		_searchWrap.BackgroundColor3 = CT _searchWrap.BorderSizePixel = 0
+		Instance.new("UICorner",_searchWrap).CornerRadius = UDim.new(0,10)
+		local searchBar = _searchWrap
+
+		local _srchIco = Instance.new("ImageLabel",_searchWrap)
+		_srchIco.Size=UDim2.fromOffset(16,16) _srchIco.Position=UDim2.new(0,10,0.5,-8)
+		_srchIco.BackgroundTransparency=1 _srchIco.Image="rbxassetid://6031154871"
+		_srchIco.ImageColor3=Color3.fromRGB(80,80,100) _srchIco.ScaleType=Enum.ScaleType.Fit
+
+		local searchBox = Instance.new("TextBox", _searchWrap)
+		searchBox.Size = UDim2.new(1,-32,1,0) searchBox.Position = UDim2.new(0,28,0,0)
+		searchBox.BackgroundTransparency = 1 searchBox.Text = ""
+		searchBox.PlaceholderText = "Buscar canción..."
+		searchBox.PlaceholderColor3 = Color3.fromRGB(140,140,170)
+		searchBox.TextColor3 = Color3.fromRGB(20,20,30)
+		searchBox.TextSize = 13 searchBox.Font = Enum.Font.Gotham
+		searchBox.TextXAlignment = Enum.TextXAlignment.Left
+		searchBox.ClearTextOnFocus = false
+
+		-- Lista de canciones (compacta, sin mini-bar ya que es horizontal)
+		local songListFrame = Instance.new("ScrollingFrame", _pageLibrary)
+		songListFrame.Size = UDim2.new(1,0,1,-100)
+		songListFrame.Position = UDim2.new(0,0,0,50)
+		songListFrame.BackgroundTransparency = 1 songListFrame.BorderSizePixel = 0
+		songListFrame.ScrollBarThickness = 2
+		songListFrame.ScrollBarImageColor3 = CA songListFrame.ScrollBarImageTransparency = 0.5
+		songListFrame.CanvasSize = UDim2.new(0,0,0,0)
+		songListFrame.AutomaticCanvasSize = Enum.AutomaticSize.Y
+		songListFrame.ClipsDescendants = true
+		local _llayout = Instance.new("UIListLayout",songListFrame)
+		_llayout.SortOrder = Enum.SortOrder.LayoutOrder _llayout.Padding = UDim.new(0,1)
+		local _lpad = Instance.new("UIPadding",songListFrame)
+		_lpad.PaddingLeft=UDim.new(0,0) _lpad.PaddingRight=UDim.new(0,4)
+
+		-- Mini-bar (horizontal compacto en parte inferior)
+		local _miniBar = Instance.new("Frame", _pageLibrary)
+		_miniBar.Size = UDim2.new(1,-24,0,42) _miniBar.Position = UDim2.new(0,12,1,-48)
+		_miniBar.BackgroundColor3 = Color3.fromRGB(36,32,52) _miniBar.BorderSizePixel = 0
+		Instance.new("UICorner",_miniBar).CornerRadius = UDim.new(0,10)
+		local _mbStroke = Instance.new("UIStroke",_miniBar)
+		_mbStroke.Color = Color3.fromRGB(100,60,180) _mbStroke.Thickness = 1 _mbStroke.Transparency = 0.5
+
+		local _mProgBg = Instance.new("Frame",_miniBar)
+		_mProgBg.Size=UDim2.new(1,0,0,3) _mProgBg.Position=UDim2.new(0,0,1,-3)
+		_mProgBg.BackgroundColor3=Color3.fromRGB(50,36,80) _mProgBg.BorderSizePixel=0
+		Instance.new("UICorner",_mProgBg).CornerRadius=UDim.new(0,10)
+		local _mProgFill = Instance.new("Frame",_mProgBg)
+		_mProgFill.Size=UDim2.fromScale(0,1) _mProgFill.BackgroundColor3=CA
+		_mProgFill.BorderSizePixel=0 Instance.new("UICorner",_mProgFill).CornerRadius=UDim.new(1,0)
+		local _mProgGrad=Instance.new("UIGradient",_mProgFill)
+		_mProgGrad.Color=ColorSequence.new{ColorSequenceKeypoint.new(0,Color3.fromRGB(120,30,195)),ColorSequenceKeypoint.new(1,Color3.fromRGB(220,80,255))}
+
+		local _miniTitle = Instance.new("TextLabel",_miniBar)
+		_miniTitle.Size=UDim2.new(1,-108,0,16) _miniTitle.Position=UDim2.new(0,10,0,6)
+		_miniTitle.BackgroundTransparency=1 _miniTitle.Text="SIN REPRODUCCIÓN"
+		_miniTitle.TextColor3=CT _miniTitle.TextSize=11 _miniTitle.Font=Enum.Font.GothamBold
+		_miniTitle.TextXAlignment=Enum.TextXAlignment.Left _miniTitle.ClipsDescendants=true
+
+		local _miniGenre = Instance.new("TextLabel",_miniBar)
+		_miniGenre.Size=UDim2.new(1,-108,0,11) _miniGenre.Position=UDim2.new(0,10,0,23)
+		_miniGenre.BackgroundTransparency=1 _miniGenre.Text="Género"
+		_miniGenre.TextColor3=CM
+		_miniGenre.TextSize=9 _miniGenre.Font=Enum.Font.Gotham
+		_miniGenre.TextXAlignment=Enum.TextXAlignment.Left
+
+		-- mini texto "play for others"
+		local _miniPFO = Instance.new("TextLabel",_miniBar)
+		_miniPFO.Size=UDim2.fromOffset(120,10) _miniPFO.Position=UDim2.new(0,10,0,32)
+		_miniPFO.BackgroundTransparency=1 _miniPFO.Text=""
+		_miniPFO.TextColor3=CM _miniPFO.TextSize=8 _miniPFO.Font=Enum.Font.Gotham
+		_miniPFO.TextXAlignment=Enum.TextXAlignment.Left _miniPFO.Visible=false
+
+		local _miniHeart = Instance.new("ImageButton",_miniBar)
+		_miniHeart.Size=UDim2.fromOffset(20,20) _miniHeart.Position=UDim2.new(1,-80,0.5,-10)
+		_miniHeart.BackgroundTransparency=1 _miniHeart.Image="rbxassetid://6023426974"
+		_miniHeart.ImageColor3=CM _miniHeart.ScaleType=Enum.ScaleType.Fit _miniHeart.BorderSizePixel=0
+
+		local _miniPause = Instance.new("ImageButton",_miniBar)
+		_miniPause.Name="MiniPause"
+		_miniPause.Size=UDim2.fromOffset(30,30) _miniPause.Position=UDim2.new(1,-52,0.5,-15)
+		_miniPause.BackgroundColor3=Color3.fromRGB(48,36,75)
+		_miniPause.Image=ICON_PAUSE _miniPause.ImageColor3=CT
+		_miniPause.ScaleType=Enum.ScaleType.Fit _miniPause.BorderSizePixel=0
+		_miniPause.AutoButtonColor=false
+		Instance.new("UICorner",_miniPause).CornerRadius=UDim.new(1,0)
+		local _mpPad=Instance.new("UIPadding",_miniPause)
+		_mpPad.PaddingTop=UDim.new(0,6) _mpPad.PaddingBottom=UDim.new(0,6)
+		_mpPad.PaddingLeft=UDim.new(0,6) _mpPad.PaddingRight=UDim.new(0,6)
+
+		local _miniNext = Instance.new("ImageButton",_miniBar)
+		_miniNext.Size=UDim2.fromOffset(20,20) _miniNext.Position=UDim2.new(1,-18,0.5,-10)
+		_miniNext.BackgroundTransparency=1 _miniNext.Image=ICON_NEXT
+		_miniNext.ImageColor3=CT _miniNext.ScaleType=Enum.ScaleType.Fit _miniNext.BorderSizePixel=0
+
+		-- ── LÓGICA DE PESTAÑAS – forward declaration (body se define más abajo) ──
+		local _switchTab
+		-- ── playSongPlayer – forward declaration (definida más abajo, usada en rebuildFavList) ──
+		local playSongPlayer
+
+		-- ═══════════════════════════════════
+		-- PÁGINA 3 : FAVORITOS (lista funcional)
+		-- ═══════════════════════════════════
+		local _pageFavs = Instance.new("Frame", _content)
+		_pageFavs.Size = UDim2.fromScale(1,1)
+		_pageFavs.BackgroundTransparency = 1 _pageFavs.Visible = false
+
+		local _favHdr = Instance.new("TextLabel",_pageFavs)
+		_favHdr.Size=UDim2.new(1,-24,0,26) _favHdr.Position=UDim2.new(0,12,0,6)
+		_favHdr.BackgroundTransparency=1 _favHdr.Text="♥  Favoritos"
+		_favHdr.TextColor3=CT _favHdr.TextSize=14 _favHdr.Font=Enum.Font.GothamBold
+		_favHdr.TextXAlignment=Enum.TextXAlignment.Left
+
+		local _favEmpty = Instance.new("TextLabel",_pageFavs)
+		_favEmpty.Size=UDim2.new(1,-24,0,28) _favEmpty.Position=UDim2.new(0,12,0.35,-14)
+		_favEmpty.BackgroundTransparency=1 _favEmpty.Text="Toca el ♥ en una canción para añadirla"
+		_favEmpty.TextColor3=CM _favEmpty.TextSize=10 _favEmpty.Font=Enum.Font.Gotham
+
+		local _favListFrame = Instance.new("ScrollingFrame",_pageFavs)
+		_favListFrame.Size=UDim2.new(1,0,1,-40) _favListFrame.Position=UDim2.new(0,0,0,36)
+		_favListFrame.BackgroundTransparency=1 _favListFrame.BorderSizePixel=0
+		_favListFrame.ScrollBarThickness=2
+		_favListFrame.ScrollBarImageColor3=CA _favListFrame.ScrollBarImageTransparency=0.5
+		_favListFrame.CanvasSize=UDim2.new(0,0,0,0)
+		_favListFrame.AutomaticCanvasSize=Enum.AutomaticSize.Y
+		_favListFrame.ClipsDescendants=true
+		local _favLayout=Instance.new("UIListLayout",_favListFrame)
+		_favLayout.SortOrder=Enum.SortOrder.LayoutOrder _favLayout.Padding=UDim.new(0,1)
+		local _favPad=Instance.new("UIPadding",_favListFrame)
+		_favPad.PaddingRight=UDim.new(0,4)
+
+		-- ── SISTEMA DE FAVORITOS ──────────────────────────────────────────
+		local _favorites = {}    -- tabla {[songId]=true}
+		local _favRows   = {}    -- filas en la página favoritos
+		local _favFile   = "BladeX/favorites.json"
+
+		-- Cargar favoritos guardados
+		pcall(function()
+			if isfile(_favFile) then
+				local ok, data = pcall(function()
+					return game:GetService("HttpService"):JSONDecode(readfile(_favFile))
+				end)
+				if ok and type(data) == "table" then
+					for _, id in ipairs(data) do _favorites[id] = true end
+				end
+			end
+		end)
+
+		local function saveFavorites()
+			pcall(function()
+				local list = {}
+				for id in pairs(_favorites) do table.insert(list, id) end
+				writefile(_favFile, game:GetService("HttpService"):JSONEncode(list))
+			end)
+		end
+
+		local function rebuildFavList()
+			-- Limpiar filas anteriores
+			for _, r in ipairs(_favRows) do if r and r.Parent then r:Destroy() end end
+			_favRows = {}
+			-- Buscar canciones favoritas
+			local count = 0
+			for i, s in ipairs(allSongs) do
+				if _favorites[s.id] then
+					count = count + 1
+					local row = Instance.new("TextButton", _favListFrame)
+					row.Size=UDim2.new(1,-10,0,26) row.BackgroundColor3=Color3.fromRGB(26,24,36)
+					row.BackgroundTransparency=0 row.BorderSizePixel=0
+					row.Text="" row.LayoutOrder=count
+					Instance.new("UICorner",row).CornerRadius=UDim.new(0,7)
+
+					local numLbl=Instance.new("TextLabel",row)
+					numLbl.Size=UDim2.fromOffset(22,26) numLbl.Position=UDim2.new(0,5,0,0)
+					numLbl.BackgroundTransparency=1 numLbl.Text=tostring(count).."."
+					numLbl.TextColor3=Color3.fromRGB(120,116,150) numLbl.TextSize=10
+					numLbl.Font=Enum.Font.GothamBold
+
+					local nameLbl=Instance.new("TextLabel",row)
+					nameLbl.Size=UDim2.new(0.62,-28,1,0) nameLbl.Position=UDim2.new(0,28,0,0)
+					nameLbl.BackgroundTransparency=1 nameLbl.Text=s.name
+					nameLbl.TextColor3=Color3.fromRGB(225,225,242) nameLbl.TextSize=11
+					nameLbl.Font=Enum.Font.GothamBold nameLbl.TextXAlignment=Enum.TextXAlignment.Left
+					nameLbl.ClipsDescendants=true
+
+					local genreLbl=Instance.new("TextLabel",row)
+					genreLbl.Size=UDim2.new(0.32,-22,1,0) genreLbl.Position=UDim2.new(0.63,0,0,0)
+					genreLbl.BackgroundTransparency=1 genreLbl.Text=s.genre
+					genreLbl.TextColor3=Color3.fromRGB(110,106,140) genreLbl.TextSize=9
+					genreLbl.Font=Enum.Font.Gotham genreLbl.TextXAlignment=Enum.TextXAlignment.Left
+					genreLbl.ClipsDescendants=true
+
+					-- Botón quitar de favoritos
+					local removeBtn=Instance.new("ImageButton",row)
+					removeBtn.Size=UDim2.fromOffset(16,16) removeBtn.Position=UDim2.new(1,-20,0.5,-8)
+					removeBtn.BackgroundTransparency=1 removeBtn.Image="rbxassetid://6023426974"
+					removeBtn.ImageColor3=CA removeBtn.ScaleType=Enum.ScaleType.Fit removeBtn.BorderSizePixel=0
+					removeBtn.MouseButton1Click:Connect(function()
+						_favorites[s.id] = nil
+						saveFavorites()
+						rebuildFavList()
+						-- Actualizar corazón en lista principal
+						if songRows[i] then
+							local hb = songRows[i]:FindFirstChildOfClass("ImageButton")
+							if hb then hb.ImageColor3=Color3.fromRGB(100,96,135) end
+						end
+						-- Actualizar corazón principal
+						if _currentList[_currentIdx] and _currentList[_currentIdx].id == s.id then
+							_heartTop.ImageColor3 = CM
+						end
+					end)
+
+					local favSongId = s.id
+					row.MouseButton1Click:Connect(function()
+						-- Construir lista SOLO de favoritos en el momento del clic
+						local favList = {}
+						local favIdx  = 1
+						for _, song in ipairs(allSongs) do
+							if _favorites[song.id] then
+								table.insert(favList, song)
+								if song.id == favSongId then favIdx = #favList end
+							end
+						end
+						_currentList = favList
+						playSongPlayer(favIdx)
+						playerFrame.Visible = true
+						_switchTab("player")
+					end)
+					table.insert(_favRows, row)
+				end
+			end
+			_favEmpty.Visible = (count == 0)
+		end
+
+		-- Función global para toggle favorito desde cualquier corazón
+		local function toggleFavorite(songId, songIdx, heartBtn)
+			if _favorites[songId] then
+				_favorites[songId] = nil
+				if heartBtn then heartBtn.ImageColor3 = Color3.fromRGB(100,96,135) end
+			else
+				_favorites[songId] = true
+				if heartBtn then heartBtn.ImageColor3 = CA end
+			end
+			saveFavorites()
+			rebuildFavList()
+		end
+
+		-- Conectar corazón principal (arriba derecha en _pagePlayer)
+		_heartTop.MouseButton1Click:Connect(function()
+			local s = _currentList[_currentIdx]
+			if not s then return end
+			toggleFavorite(s.id, _currentIdx, _heartTop)
+		end)
+
+		rebuildFavList()
+
+		-- Definir cuerpo de _switchTab ahora que todas las páginas existen
+		_switchTab = function(name)
+			_pagePlayer.Visible  = (name == "player")
+			_pageLibrary.Visible = (name == "library")
+			_pageFavs.Visible    = (name == "favs")
+			local tabs = {player=_tabPlayer, library=_tabLibrary, favs=_tabFavs}
+			for k,tb in pairs(tabs) do
+				local on = (k == name)
+				tb.Ic.ImageColor3  = on and CA or CM
+				tb.Lbl.TextColor3  = on and CA or CM
+			end
+		end
+		-- Conectar los botones de pestañas (aquí _switchTab ya tiene su cuerpo)
+		_tabPlayer.MouseButton1Click:Connect(function() _switchTab("player") end)
+		_tabLibrary.MouseButton1Click:Connect(function() _switchTab("library") end)
+		_tabFavs.MouseButton1Click:Connect(function() _switchTab("favs") end)
+		_switchTab("player")
+
+		-- ── BARRA DE PROGRESO DESLIZABLE (seek) ─────────────────────────
+		local _seeking = false
+		local function _applySeek(pct)
+			if _musicSound.TimeLength > 0 then
+				_musicSound.TimePosition = pct * _musicSound.TimeLength
+				progressFill.Size = UDim2.fromScale(pct, 1)
+				updateProgDot(pct)
+				timeLeft.Text = formatTime(_musicSound.TimePosition)
+			end
+		end
+		-- Botón invisible encima de la barra para capturar clics y arrastre
+		local _seekBtn = Instance.new("TextButton", _progBg)
+		_seekBtn.Size = UDim2.new(1, 16, 0, 26)
+		_seekBtn.Position = UDim2.new(0, -8, 0.5, -13)
+		_seekBtn.BackgroundTransparency = 1
+		_seekBtn.Text = "" _seekBtn.ZIndex = 5
+		_seekBtn.BorderSizePixel = 0 _seekBtn.AutoButtonColor = false
+
+		local function _calcPct(x)
+			local ap = _progBg.AbsolutePosition
+			local as = _progBg.AbsoluteSize
+			return math.clamp((x - ap.X) / as.X, 0, 1)
+		end
+		_seekBtn.MouseButton1Down:Connect(function(x, _y)
+			_seeking = true
+			_applySeek(_calcPct(x))
+		end)
+		_seekBtn.MouseButton1Up:Connect(function() _seeking = false end)
+		_seekBtn.MouseMoved:Connect(function(x, _y)
+			if _seeking then _applySeek(_calcPct(x)) end
+		end)
+		-- Touch (mobile)
+		_seekBtn.InputBegan:Connect(function(inp)
+			if inp.UserInputType == Enum.UserInputType.Touch then
+				_seeking = true
+				_applySeek(_calcPct(inp.Position.X))
+			end
+		end)
+		_seekBtn.InputChanged:Connect(function(inp)
+			if _seeking and inp.UserInputType == Enum.UserInputType.Touch then
+				_applySeek(_calcPct(inp.Position.X))
+			end
+		end)
+		_seekBtn.InputEnded:Connect(function(inp)
+			if inp.UserInputType == Enum.UserInputType.Touch then
+				_seeking = false
+			end
+		end)
+
+		-- Mini-bar controls
+		_miniPause.MouseButton1Click:Connect(function()
+			if _isPlaying then
+				_musicSound:Pause() _isPlaying=false
+				ctrlBtns["PlayPause"].Image=ICON_PLAY _miniPause.Image=ICON_PLAY
+			else
+				_musicSound:Resume() _isPlaying=true
+				ctrlBtns["PlayPause"].Image=ICON_PAUSE _miniPause.Image=ICON_PAUSE
+			end
+		end)
+		_miniNext.MouseButton1Click:Connect(function()
+			local n=_currentIdx+1 if n>#_currentList then n=1 end
+			playSongPlayer(n)
+		end)
+
+		-- Waveform animation
+		local _wAngle = 0
+		RunService.Heartbeat:Connect(function(dt)
+			_wAngle = _wAngle + dt * 3.2
+			for wi, bar in ipairs(_waveBars) do
+				local base = _wH[wi]
+				local anim = _isPlaying and math.abs(math.sin(_wAngle + wi*0.44))*12 or 0
+				bar.Size = UDim2.fromOffset(_wBW, math.max(3, base + anim))
+			end
+		end)
+
+		-- Aliases para que la lógica existente funcione sin cambios
+		local songTitle  = _bigTitle
+		local genreLabel = _bigGenre
+
+		local function updateProgDot(pct)
+			progDot.Position = UDim2.new(math.clamp(pct,0,1),0,0.5,0)
+			_mProgFill.Size  = UDim2.fromScale(pct,1)
+			_miniTitle.Text  = songTitle.Text
+			_miniGenre.Text  = genreLabel.Text
+		end
+
+		local function formatTime(secs)
+			if not secs or secs ~= secs or secs == math.huge then return "0:00" end
+			secs = math.floor(secs)
+			return string.format("%d:%02d", math.floor(secs/60), secs%60)
+		end
+
+		local function stopProgress()
+			if _progressConn then _progressConn:Disconnect() _progressConn = nil end
+		end
+
+		local function startProgress()
+			stopProgress()
+			_progressConn = RunService.Heartbeat:Connect(function()
+				if _musicSound.IsPlaying and _musicSound.TimeLength > 0 then
+					local pct = math.clamp(_musicSound.TimePosition / _musicSound.TimeLength, 0, 1)
+					progressFill.Size = UDim2.fromScale(pct, 1)
+					updateProgDot(pct)
+					local tPos = formatTime(_musicSound.TimePosition)
+					local tLen = formatTime(_musicSound.TimeLength)
+					timeLeft.Text  = tPos
+					timeRight.Text = tLen
+				end
+			end)
+			_G.BladeXProgressConn = _progressConn
+		end
+
+		local songRows = {}
+
+		local function highlightRow(idx)
+			for i, row in ipairs(songRows) do
+				if row and row.Parent then
+					local isActive = (i == idx)
+					row.BackgroundColor3 = isActive and CA or Color3.fromRGB(26,24,36)
+					row.BackgroundTransparency = isActive and 0.25 or 0
+					local numLbl = row:FindFirstChild("Num")
+					local nameLbl = row:FindFirstChild("SongName")
+					if numLbl then numLbl.TextColor3 = isActive and Color3.fromRGB(255,255,255) or Color3.fromRGB(120,116,150) end
+					if nameLbl then nameLbl.TextColor3 = isActive and Color3.fromRGB(255,255,255) or Color3.fromRGB(225,225,242) end
+				end
+			end
+		end
+
+		-- Fix 2.4: checkSoundValid mejorado — usa temporizador y verifica TimeLength tras breve espera
+		local function checkSoundValid(soundId, callback)
+			task.spawn(function()
+				local testSound = Instance.new("Sound")
+				testSound.SoundId = soundId
+				testSound.Volume = 0
+				testSound.Parent = game:GetService("SoundService")
+				local ok = false
+				local loaded = false
+				local conn
+				conn = testSound.Loaded:Connect(function()
+					loaded = true
+					ok = testSound.TimeLength > 0
+					conn:Disconnect()
+				end)
+				testSound:Play()
+				-- Esperar hasta 4s para que cargue; verificar TimeLength también por si Loaded no dispara
+				local t = 0
+				repeat
+					task.wait(0.1)
+					t = t + 0.1
+					if not loaded and testSound.TimeLength > 0 then
+						ok = true
+						loaded = true
+					end
+				until t >= 2 or loaded
+				pcall(function() conn:Disconnect() end)
+				testSound:Stop()
+				testSound:Destroy()
+				callback(ok)
+			end)
+		end
+
+		playSongPlayer = function(index)
+			if #_currentList == 0 then return end
+			index = math.clamp(index, 1, #_currentList)
+			_currentIdx = index
+			local s = _currentList[index]
+			-- Fix 2.4: Sound.Looped siempre false — el loop se gestiona en el evento Ended
+			_musicSound.Looped = false
+			_musicSound.SoundId = s.id
+			_musicSound:Stop()
+			_musicSound:Play()
+			_isPlaying = true
+			ctrlBtns["PlayPause"].Image = ICON_PAUSE  -- era .Text = "II" (bug: ImageButton no tiene .Text)
+			ctrlBtns["PlayPause"].BackgroundColor3 = Color3.fromRGB(35,35,50)
+			songTitle.Text  = s.name
+			genreLabel.Text = s.genre
+			_miniTitle.Text = s.name
+			_miniGenre.Text = s.genre
+			_miniPause.Image = ICON_PAUSE
+			-- Actualizar corazón principal según favoritos
+			if _favorites then
+				_heartTop.ImageColor3 = _favorites[s.id] and CA or CM
+			end
+			highlightRow(index)
+			statusBadge.Text = "● CHECK"
+			statusBadge.BackgroundColor3 = Color3.fromRGB(180,140,20)
+			checkSoundValid(s.id, function(valid)
+				if valid then
+					statusBadge.Text = "● VALID"
+					statusBadge.BackgroundColor3 = Color3.fromRGB(50,180,80)
+				else
+					statusBadge.Text = "● INVALID"
+					statusBadge.BackgroundColor3 = Color3.fromRGB(200,50,50)
+					task.wait(1.5)
+					local nxt = _currentIdx + 1
+					if nxt > #_currentList then nxt = 1 end
+					playSongPlayer(nxt)
+				end
+			end)
+			startProgress()
+			Luna:Notification({ Title="BladeX Music", Content=s.name, Icon="perm_media", ImageSource="Material", Duration=1 })
+		end
+
+		-- Fix 2.4: Ended siempre dispara (Looped=false). Si _isLoop=true, repetir la misma canción.
+		_musicSound.Ended:Connect(function()
+			if not _isPlaying then return end
+			if _isLoop then
+				-- Repetir la misma canción
+				playSongPlayer(_currentIdx)
+			elseif _isShuffle then
+				playSongPlayer(math.random(1, #_currentList))
+			else
+				local n = _currentIdx + 1
+				if n > #_currentList then
+					_isPlaying = false
+					ctrlBtns["PlayPause"].Image = ICON_PLAY
+					stopProgress()
+					return
+				end
+				playSongPlayer(n)
+			end
+		end)
+
+		ctrlBtns["PlayPause"].MouseButton1Click:Connect(function()
+			if _isPlaying then _musicSound:Pause() _isPlaying=false ctrlBtns["PlayPause"].Image = ICON_PLAY stopProgress()
+			else _musicSound:Resume() _isPlaying=true ctrlBtns["PlayPause"].Image = ICON_PAUSE startProgress() end
+		end)
+		ctrlBtns["Prev"].MouseButton1Click:Connect(function()
+			local p=_currentIdx-1 if p<1 then p=#_currentList end playSongPlayer(p)
+		end)
+		ctrlBtns["Next"].MouseButton1Click:Connect(function()
+			local n=_currentIdx+1 if n>#_currentList then n=1 end playSongPlayer(n)
+		end)
+		ctrlBtns["Shuffle"].MouseButton1Click:Connect(function()
+			_isShuffle = not _isShuffle
+			ctrlBtns["Shuffle"].ImageColor3 = _isShuffle and CA or CM
+		end)
+		ctrlBtns["Loop"].MouseButton1Click:Connect(function()
+			_isLoop = not _isLoop
+			-- Fix 2.4: Sound.Looped permanece false; _isLoop controla la lógica en Ended
+			ctrlBtns["Loop"].ImageColor3 = _isLoop and CA or CM
+		end)
+		closeBtn.MouseButton1Click:Connect(function()
+			playerFrame.Visible = false
+			if _toggleMostrarReproductor and _toggleMostrarReproductor.Set then
+				pcall(function() _toggleMostrarReproductor:Set(false) end)
+			end
+			if _isPlaying then
+				_musicSound:Pause()
+				_isPlaying = false
+				ctrlBtns["PlayPause"].Image = ICON_PLAY
+				_miniPause.Image = ICON_PLAY
+				stopProgress()
+			end
+		end)
+
+		local function buildSongList(list)
+			for _, r in ipairs(songRows) do if r and r.Parent then r:Destroy() end end
+			songRows = {}
+			for i, s in ipairs(list) do
+				local row = Instance.new("TextButton", songListFrame)
+				row.Name              = "Row"..i
+				row.Size              = UDim2.new(1, -10, 0, 26)
+				row.BackgroundColor3  = Color3.fromRGB(26, 24, 36)
+				row.BackgroundTransparency = 0
+				row.BorderSizePixel   = 0
+				row.Text              = ""
+				row.LayoutOrder       = i
+				Instance.new("UICorner", row).CornerRadius = UDim.new(0, 7)
+
+				local numLbl = Instance.new("TextLabel", row)
+				numLbl.Name = "Num"
+				numLbl.Size = UDim2.fromOffset(24, 26)
+				numLbl.Position = UDim2.new(0, 5, 0, 0)
+				numLbl.BackgroundTransparency = 1
+				numLbl.Text = tostring(i) .. "."
+				numLbl.TextColor3 = Color3.fromRGB(120, 116, 150)
+				numLbl.TextSize = 10
+				numLbl.Font = Enum.Font.GothamBold
+
+				local nameLbl = Instance.new("TextLabel", row)
+				nameLbl.Name = "SongName"
+				nameLbl.Size = UDim2.new(0.55, -30, 1, 0)
+				nameLbl.Position = UDim2.new(0, 30, 0, 0)
+				nameLbl.BackgroundTransparency = 1
+				nameLbl.Text = s.name
+				nameLbl.TextColor3 = Color3.fromRGB(225, 225, 242)
+				nameLbl.TextSize = 11
+				nameLbl.Font = Enum.Font.GothamBold
+				nameLbl.TextXAlignment = Enum.TextXAlignment.Left
+				nameLbl.ClipsDescendants = true
+
+				-- Genre inline (right side)
+				local genreLbl = Instance.new("TextLabel", row)
+				genreLbl.Size = UDim2.new(0.4, -22, 1, 0)
+				genreLbl.Position = UDim2.new(0.56, 0, 0, 0)
+				genreLbl.BackgroundTransparency = 1
+				genreLbl.Text = s.genre
+				genreLbl.TextColor3 = Color3.fromRGB(110, 106, 140)
+				genreLbl.TextSize = 9
+				genreLbl.Font = Enum.Font.Gotham
+				genreLbl.TextXAlignment = Enum.TextXAlignment.Left
+				genreLbl.ClipsDescendants = true
+
+				local heartBtn = Instance.new("ImageButton", row)
+				heartBtn.Size = UDim2.fromOffset(16, 16)
+				heartBtn.Position = UDim2.new(1, -20, 0.5, -8)
+				heartBtn.BackgroundTransparency = 1
+				heartBtn.Image = "rbxassetid://6023426974"
+				heartBtn.ImageColor3 = (_favorites and _favorites[s.id]) and CA or Color3.fromRGB(100, 96, 135)
+				heartBtn.ScaleType = Enum.ScaleType.Fit
+				heartBtn.BorderSizePixel = 0
+				heartBtn.MouseButton1Click:Connect(function()
+					toggleFavorite(s.id, i, heartBtn)
+					-- actualizar corazón principal si es la canción actual
+					if _currentList[_currentIdx] and _currentList[_currentIdx].id == s.id then
+						_heartTop.ImageColor3 = _favorites[s.id] and CA or CM
+					end
+				end)
+
+				local ci = i
+				row.MouseButton1Click:Connect(function()
+					_currentList = allSongs
+					playSongPlayer(ci)
+					playerFrame.Visible = true
+					_switchTab("player")
+				end)
+				songRows[i] = row
+			end
+		end
+		buildSongList(allSongs)
+
+		searchBox:GetPropertyChangedSignal("Text"):Connect(function()
+			local q = searchBox.Text:lower()
+			for i, row in ipairs(songRows) do
+				if row and row.Parent then
+					row.Visible = (q=="" or allSongs[i].name:lower():find(q,1,true)~=nil)
+				end
+			end
+		end)
+
+		Tabs.Music:CreateSection("Reproductor Visual")
+		local _toggleMostrarReproductor = Tabs.Music:CreateToggle({
+			Name    = "Mostrar Reproductor",
+			Description = "Muestra u oculta el mini-reproductor en pantalla",
+			CurrentValue = false,
+			Callback = function(v)
+				playerFrame.Visible = v
+			end
+		})
+
+		Tabs.Music:CreateSlider({
+			Name = "Volumen", Description = "Ajusta el volumen (0 - 100)",
+			Range = {0,100}, Increment = 5, CurrentValue = 50,
+			Callback = function(v)
+				_musicSound.Volume = v/100
+				volLabel.Text = "Vol: "..v
+			end
+		})
+
+		-- ── Canción personalizada por ID ──────────────────────────────────────
+		Tabs.Music:CreateSection("🎵 Canción Personalizada")
+
+		local _lastCustomID = ""
+
+		local function _playCustomID(Value)
+			if not Value or Value == "" then
+				Luna:Notification({Title="Música", Content="No hay ningún ID. Copia el ID primero.", Icon="info", ImageSource="Material", Duration=3})
+				return
+			end
+			local numID = tostring(Value):match("%d+")
+			if not numID then
+				Luna:Notification({Title="Música", Content="ID inválido. Solo números.", Icon="dangerous", ImageSource="Material", Duration=3})
+				return
+			end
+			local newSong = { name = "Custom - "..numID, id = "rbxassetid://"..numID, genre = "Custom" }
+			table.insert(allSongs, newSong)
+			buildSongList(allSongs)
+			_currentList = allSongs
+			_currentIdx  = #allSongs
+			playSongPlayer(_currentIdx)
+			playerFrame.Visible = true
+			Luna:Notification({Title="Música", Content="Reproduciendo ID "..numID.."...", Icon="music_note", ImageSource="Material", Duration=3})
+		end
+
+		-- Botón 1: Pegar desde portapapeles (ideal para móvil)
+		Tabs.Music:CreateButton({
+			Name = "📋  Pegar ID del portapapeles",
+			Description = "Copia el ID numérico y toca aquí para pegarlo",
+			Callback = function()
+				local ok, clipboard = pcall(getclipboard)
+				if not ok or not clipboard or clipboard == "" then
+					Luna:Notification({Title="Música", Content="Portapapeles vacío. Copia un ID primero.", Icon="info", ImageSource="Material", Duration=3})
+					return
+				end
+				_lastCustomID = clipboard
+				local numID = tostring(clipboard):match("%d+")
+				if numID then
+					Luna:Notification({Title="Música", Content="ID pegado: "..numID..". Toca Reproducir.", Icon="content_paste", ImageSource="Material", Duration=3})
+				else
+					Luna:Notification({Title="Música", Content="El portapapeles no tiene un ID válido.", Icon="dangerous", ImageSource="Material", Duration=3})
+				end
+			end
+		})
+
+		-- Botón 2: Reproducir el ID pegado
+		Tabs.Music:CreateButton({
+			Name = "▶  Reproducir ID pegado",
+			Description = "Toca después de pegar el ID",
+			Callback = function()
+				-- Intentar leer portapapeles directo por si no pegaron antes
+				local val = _lastCustomID
+				if val == "" then
+					local ok, cb = pcall(getclipboard)
+					if ok and cb and cb ~= "" then val = cb end
+				end
+				_playCustomID(val)
+			end
+		})
+
+		task.defer(function() _loaded = true end)
+	end
+
+
+
+
+	-- ================================================================
+	--   AIMBOT (RIVALS / KOVARI STYLE)
+	-- ================================================================
+
+	-- Variables
+	local _aimbotEnabled    = _cfg.aimbotEnabled    or false
+	local _aimbotFOV        = _cfg.aimbotFOV        or 100
+	local _aimbotSmooth     = _cfg.aimbotSmooth     or 14
+	local _aimbotPredMS     = _cfg.aimbotPredMS     or 120
+	local _aimbotWallCheck  = _cfg.aimbotWallCheck  ~= false
+	local _aimbotPrediction = _cfg.aimbotPrediction ~= false
+	local _aimbotTarget     = _cfg.aimbotTarget     or "UpperTorso"
+	local _aimbotShowFOV    = _cfg.aimbotShowFOV    ~= false
+	local _aimbotTeamCheck  = _cfg.aimbotTeamCheck  ~= false  -- SIEMPRE ignora compañeros por defecto
+	local _aimbotConn       = nil
+
+	-- Auto-Fire
+	local _autoFireEnabled  = _cfg.autoFireEnabled  or false
+	local _autoFireRate     = _cfg.autoFireRate     or 0.12   -- segundos entre disparos (0.08~0.20 = legit)
+	local _autoFireConn     = nil
+	local _autoLastFire     = 0
+
+	local _silentEnabled    = _cfg.silentEnabled    or false
+	local _silentFOV        = _cfg.silentFOV        or 120
+	local _silentPredMS     = _cfg.silentPredMS     or 120
+	local _silentHitChance  = _cfg.silentHitChance  or 100
+	local _silentWallCheck  = _cfg.silentWallCheck  ~= false
+	local _silentPrediction = _cfg.silentPrediction ~= false
+	local _silentShowTarget = _cfg.silentShowTarget ~= false
+	local _silentTarget     = _cfg.silentTarget     or "Head"
+	local _silentConn       = nil
+	local _origIndexMouse   = nil
+
+	local _humanizerStr  = _cfg.humanizerStr  or 50
+	local _randomDelay   = _cfg.randomDelay   ~= false
+	local _delayMS       = _cfg.delayMS       or 12
+	local _curveAim      = _cfg.curveAim      ~= false
+	local _curveStrength = _cfg.curveStrength or 12
+	local _maxSpeed      = _cfg.maxSpeed      or 320
+	local _jitter        = _cfg.jitter        or 2
+	local _distScaling   = _cfg.distScaling   ~= false
+	local _velSmoothing  = _cfg.velSmoothing  ~= false
+	local _adaptivePred  = _cfg.adaptivePred  ~= false
+	local _angleComp     = _cfg.angleComp     ~= false
+	local _smoothEntry   = _cfg.smoothEntry   ~= false
+	local _entrySmooth   = _cfg.entrySmooth   or 40
+
+	local _espBoxEnabled  = _cfg.espBoxEnabled  or false
+	local _espBoxes       = _cfg.espBoxes       ~= false
+	local _espTracers     = _cfg.espTracers     ~= false
+	local _espNames       = _cfg.espNames       ~= false
+	local _espHealth      = _cfg.espHealth      ~= false
+	local _espDistV       = _cfg.espDistV       ~= false
+	local _espMaxDistV    = _cfg.espMaxDistV    or 1500
+	local _espBoxDrawings = {}
+	local _espBoxConn     = nil
+
+	-- FOV Circle
+	local _fovCircle = nil
+	pcall(function()
+		_fovCircle = Drawing.new("Circle")
+		_fovCircle.Visible   = false
+		_fovCircle.Thickness = 1.5
+		_fovCircle.Color     = Color3.fromRGB(180, 80, 255)
+		_fovCircle.Filled    = false
+		_fovCircle.NumSides  = 64
+		_fovCircle.Radius    = _aimbotFOV
+		local vp = game:GetService("Workspace").CurrentCamera.ViewportSize
+		_fovCircle.Position = Vector2.new(vp.X/2, vp.Y/2)
+	end)
+
+	game:GetService("RunService").RenderStepped:Connect(function()
+		if not _fovCircle then return end
+		if (_aimbotEnabled or _silentEnabled) and _aimbotShowFOV then
+			_fovCircle.Visible  = true
+			_fovCircle.Radius   = _aimbotEnabled and _aimbotFOV or _silentFOV
+			local vp = game:GetService("Workspace").CurrentCamera.ViewportSize
+			_fovCircle.Position = Vector2.new(vp.X/2, vp.Y/2)
+		else
+			_fovCircle.Visible = false
+		end
+	end)
+
+	-- ── Helper: detectar si un jugador es compañero ──────────────────
+	-- Rivals usa equipos nativos de Roblox (Teams). También detecta
+	-- sistemas custom buscando valores "Team" en el personaje.
+	local function _isTeammate(p)
+		-- 1. Equipo nativo de Roblox
+		pcall(function()
+			if Player.Team and p.Team and Player.Team == p.Team then
+				return true
+			end
+		end)
+		if Player.Team and p.Team and Player.Team == p.Team then return true end
+		-- 2. Búsqueda por valores "Team" / "TeamColor" en el personaje (juegos custom)
+		if p.Character then
+			local tv = p.Character:FindFirstChild("Team") or p.Character:FindFirstChild("TeamColor")
+			local lv = Player.Character and (Player.Character:FindFirstChild("Team") or Player.Character:FindFirstChild("TeamColor"))
+			if tv and lv and tostring(tv.Value) == tostring(lv.Value) then return true end
+		end
+		-- 3. Fallback: mismo color de equipo nativo
+		if Player.TeamColor and p.TeamColor and Player.TeamColor == p.TeamColor then return true end
+		return false
+	end
+
+	-- Helper: mejor objetivo (con team check)
+	local function _getBestTarget(fov, target, wallCheck, teamCheck)
+		local cam    = game:GetService("Workspace").CurrentCamera
+		local center = cam.ViewportSize / 2
+		local best, bestDist = nil, math.huge
+		for _, p in ipairs(Players:GetPlayers()) do
+			if p == Player or not p.Character then continue end
+			-- ── Team Check ── ignora compañeros si está activado
+			if teamCheck and _isTeammate(p) then continue end
+			local hum = p.Character:FindFirstChild("Humanoid")
+			if not hum or hum.Health <= 0 then continue end
+			local part = p.Character:FindFirstChild(target) or p.Character:FindFirstChild("HumanoidRootPart")
+			if not part then continue end
+			if wallCheck then
+				local origin = cam.CFrame.Position
+				local dir    = (part.Position - origin).Unit * 2000
+				local ray    = Ray.new(origin, dir)
+				local hit    = game:GetService("Workspace"):FindPartOnRayWithIgnoreList(
+					ray, {Player.Character, game:GetService("Workspace").Terrain}
+				)
+				-- Si el rayo golpeó algo que NO es parte del personaje enemigo → skip
+				if hit and not hit:IsDescendantOf(p.Character) then continue end
+			end
+			local sp, onScreen = cam:WorldToViewportPoint(part.Position)
+			if not onScreen then continue end
+			local dist = (Vector2.new(sp.X, sp.Y) - center).Magnitude
+			if dist < fov and dist < bestDist then
+				best, bestDist = part, dist
+			end
+		end
+		return best
+	end
+
+	-- Aimbot loop
+	local function _startAimbot()
+		if _aimbotConn then pcall(function() _aimbotConn:Disconnect() end) end
+		_aimbotConn = game:GetService("RunService").RenderStepped:Connect(function()
+			if not _aimbotEnabled then return end
+			local target = _getBestTarget(_aimbotFOV, _aimbotTarget, _aimbotWallCheck, _aimbotTeamCheck)
+			if not target then return end
+			local predOffset = Vector3.new()
+			if _aimbotPrediction then
+				local vel = target.Velocity or Vector3.new()
+				local hum = _humanizerStr / 100
+				local spd = math.min(vel.Magnitude, _maxSpeed)
+				predOffset = vel.Unit * spd * (_aimbotPredMS / 1000) * (1 - hum * 0.5)
+				if _distScaling then
+					local d = (target.Position - game:GetService("Workspace").CurrentCamera.CFrame.Position).Magnitude
+					predOffset = predOffset * math.clamp(d / 500, 0.5, 2)
+				end
+			end
+			local aimPos = target.Position + predOffset
+			if _curveAim then
+				local cs = _curveStrength / 100
+				aimPos = aimPos + Vector3.new(math.sin(tick()*3)*cs, math.cos(tick()*2)*cs*0.5, 0)
+			end
+			local cam = game:GetService("Workspace").CurrentCamera
+			local smooth = math.clamp((_aimbotSmooth / 100) + (_humanizerStr / 200), 0.05, 0.98)
+			if _smoothEntry then smooth = smooth + (_entrySmooth / 1000) end
+			local delay = _randomDelay and (_delayMS + math.random(-3,3)) or _delayMS
+			if delay > 0 then task.wait(delay/1000) end
+			local targetCF = CFrame.new(cam.CFrame.Position, aimPos)
+			cam.CFrame = cam.CFrame:Lerp(targetCF, 1 - smooth)
+			if _jitter > 0 then
+				local j = _jitter / 10
+				cam.CFrame = cam.CFrame * CFrame.Angles(
+					math.rad(math.random(-j*10, j*10)/10),
+					math.rad(math.random(-j*10, j*10)/10), 0)
+			end
+		end)
+	end
+
+	-- ── AutoFire (Rivals / FPS Roblox) ───────────────────────────────
+	-- Simula clics del mouse automáticamente mientras haya un enemigo
+	-- dentro del FOV. Compatible con Rivals, Arsenal, Phantom Forces, etc.
+	-- Usa mouse1click (método nativo de executors) para máxima compatibilidad.
+	local function _startAutoFire()
+		if _autoFireConn then pcall(function() _autoFireConn:Disconnect() end) end
+		_autoLastFire = 0
+		_autoFireConn = game:GetService("RunService").Heartbeat:Connect(function()
+			if not _autoFireEnabled then return end
+			local now = tick()
+			if now - _autoLastFire < _autoFireRate then return end
+			-- Solo dispara si hay un objetivo válido dentro del FOV
+			local t = _getBestTarget(_aimbotFOV, _aimbotTarget, _aimbotWallCheck, _aimbotTeamCheck)
+			if not t then return end
+			_autoLastFire = now
+			-- Intentar múltiples métodos de click (compatibilidad entre executors)
+			pcall(function() mouse1click() end)
+			if not pcall(function() mouse1click() end) then
+				pcall(function()
+					local VIM = game:GetService("VirtualInputManager")
+					VIM:SendMouseButtonEvent(0, 0, 0, true,  game, 1)
+					task.wait(0.015)
+					VIM:SendMouseButtonEvent(0, 0, 0, false, game, 1)
+				end)
+			end
+		end)
+	end
+
+	local function _stopAutoFire()
+		if _autoFireConn then
+			pcall(function() _autoFireConn:Disconnect() end)
+			_autoFireConn = nil
+		end
+	end
+
+	-- Silent Aim
+	local function _enableSilentAim()
+		if _silentConn then pcall(function() _silentConn:Disconnect() end) _silentConn=nil end
+		_origIndexMouse = _origIndexMouse or nil
+		pcall(function()
+			local mt = getrawmetatable(game)
+			local oldIndex = mt.__index
+			_origIndexMouse = oldIndex
+			local chance = _silentHitChance / 100
+			setreadonly(mt, false)
+			mt.__index = newcclosure(function(self, k)
+				if k == "Hit" and tostring(self):find("Mouse") then
+					if math.random() <= chance then
+						local t2 = _getBestTarget(_silentFOV, _silentTarget, _silentWallCheck, _aimbotTeamCheck)
+						if t2 then
+							local predOff = Vector3.new()
+							if _silentPrediction then
+								predOff = (t2.Velocity or Vector3.new()) * (_silentPredMS / 1000)
+							end
+							return CFrame.new(t2.Position + predOff)
+						end
+					end
+				end
+				return oldIndex(self, k)
+			end)
+			setreadonly(mt, true)
+		end)
+	end
+
+	local function _disableSilentAim()
+		if not _origIndexMouse then return end
+		pcall(function()
+			local mt = getrawmetatable(game)
+			setreadonly(mt, false)
+			mt.__index = _origIndexMouse
+			setreadonly(mt, true)
+		end)
+		_origIndexMouse = nil
+	end
+
+	-- ESP Box Drawing
+	local function _clearEspBoxDrawings()
+		for _, d in pairs(_espBoxDrawings) do
+			for _, obj in pairs(d) do pcall(function() obj:Remove() end) end
+		end
+		_espBoxDrawings = {}
+	end
+
+	local function _startEspBox()
+		if _espBoxConn then pcall(function() _espBoxConn:Disconnect() end) end
+		_clearEspBoxDrawings()
+		_espBoxConn = game:GetService("RunService").RenderStepped:Connect(function()
+			if not _espBoxEnabled then _clearEspBoxDrawings() return end
+			local cam = game:GetService("Workspace").CurrentCamera
+			local alive = {}
+			for _, p in ipairs(Players:GetPlayers()) do
+				if p == Player or not p.Character then continue end
+				local hum = p.Character:FindFirstChild("Humanoid")
+				if not hum or hum.Health <= 0 then continue end
+				local root = p.Character:FindFirstChild("HumanoidRootPart")
+				if not root then continue end
+				local dist = (root.Position - cam.CFrame.Position).Magnitude
+				if dist > _espMaxDistV then continue end
+				alive[p.UserId] = true
+				if not _espBoxDrawings[p.UserId] then
+					local d = {}
+					if _espBoxes   then d.box=Drawing.new("Square"); d.box.Color=Color3.fromRGB(255,50,50); d.box.Thickness=1.5; d.box.Filled=false; d.box.Visible=true end
+					if _espTracers then d.tracer=Drawing.new("Line"); d.tracer.Color=Color3.fromRGB(255,50,50); d.tracer.Thickness=1; d.tracer.Visible=true end
+					if _espNames   then d.name=Drawing.new("Text"); d.name.Color=Color3.new(1,1,1); d.name.Size=13; d.name.Center=true; d.name.Outline=true; d.name.Visible=true end
+					if _espHealth  then d.health=Drawing.new("Text"); d.health.Color=Color3.fromRGB(80,255,80); d.health.Size=11; d.health.Center=true; d.health.Outline=true; d.health.Visible=true end
+					if _espDistV   then d.distLbl=Drawing.new("Text"); d.distLbl.Color=Color3.fromRGB(255,220,50); d.distLbl.Size=11; d.distLbl.Center=true; d.distLbl.Outline=true; d.distLbl.Visible=true end
+					_espBoxDrawings[p.UserId] = d
+				end
+				local head = p.Character:FindFirstChild("Head")
+				local feet = p.Character:FindFirstChild("HumanoidRootPart")
+				if not head or not feet then continue end
+				local topSP, topOn   = cam:WorldToViewportPoint(head.Position + Vector3.new(0,0.7,0))
+				local botSP          = cam:WorldToViewportPoint(feet.Position - Vector3.new(0,2.5,0))
+				local rootSP         = cam:WorldToViewportPoint(root.Position)
+				if not topOn then continue end
+				local h2 = math.abs(topSP.Y - botSP.Y); local w2 = h2 * 0.55
+				local d = _espBoxDrawings[p.UserId]
+				if d.box    then d.box.Size=Vector2.new(w2,h2); d.box.Position=Vector2.new(rootSP.X-w2/2,topSP.Y) end
+				if d.tracer then local vp=cam.ViewportSize; d.tracer.From=Vector2.new(vp.X/2,vp.Y); d.tracer.To=Vector2.new(rootSP.X,rootSP.Y) end
+				if d.name   then d.name.Text=p.Name; d.name.Position=Vector2.new(rootSP.X,topSP.Y-15) end
+				if d.health then d.health.Text=math.floor(hum.Health).."HP"; d.health.Position=Vector2.new(rootSP.X,botSP.Y+2) end
+				if d.distLbl then d.distLbl.Text=math.floor(dist).."m"; d.distLbl.Position=Vector2.new(rootSP.X,botSP.Y+14) end
+			end
+			for uid in pairs(_espBoxDrawings) do
+				if not alive[uid] then
+					for _, obj in pairs(_espBoxDrawings[uid]) do pcall(function() obj:Remove() end) end
+					_espBoxDrawings[uid] = nil
+				end
+			end
+		end)
+	end
+
+	-- Preset helper
+	local function _applyPreset(p)
+		_aimbotEnabled=p.ae; _aimbotFOV=p.af; _aimbotSmooth=p.as; _aimbotPredMS=p.ap
+		_aimbotWallCheck=p.aw; _aimbotPrediction=p.apr; _aimbotTarget=p.at; _aimbotShowFOV=true
+		_silentEnabled=p.se; _silentFOV=p.sf; _silentPredMS=p.sp; _silentHitChance=p.sh
+		_silentWallCheck=p.sw; _silentPrediction=p.spr; _silentTarget=p.st
+		_humanizerStr=p.hum; _randomDelay=p.rd; _delayMS=p.dm; _curveAim=p.ca
+		_curveStrength=p.cs; _maxSpeed=p.ms; _jitter=p.ji
+		_distScaling=p.ds; _velSmoothing=p.vs; _adaptivePred=p.adp; _angleComp=p.ac
+		_smoothEntry=p.sme; _entrySmooth=p.es
+		_cfg.aimbotEnabled=p.ae; _cfg.aimbotFOV=p.af; _cfg.aimbotSmooth=p.as; _cfg.aimbotPredMS=p.ap
+		_cfg.aimbotWallCheck=p.aw; _cfg.aimbotTarget=p.at
+		_cfg.silentEnabled=p.se; _cfg.silentFOV=p.sf; _cfg.silentPredMS=p.sp
+		_cfg.silentHitChance=p.sh; _cfg.silentTarget=p.st
+		_cfg.humanizerStr=p.hum; _cfg.randomDelay=p.rd; _cfg.delayMS=p.dm
+		_cfg.curveAim=p.ca; _cfg.curveStrength=p.cs; _cfg.maxSpeed=p.ms
+		_cfg.jitter=p.ji; _cfg.distScaling=p.ds; _cfg.velSmoothing=p.vs
+		_cfg.adaptivePred=p.adp; _cfg.angleComp=p.ac; _cfg.smoothEntry=p.sme; _cfg.entrySmooth=p.es
+		_saveCfg()
+		if p.ae then _startAimbot() elseif _aimbotConn then pcall(function() _aimbotConn:Disconnect() end) _aimbotConn=nil end
+		if p.se then _enableSilentAim() else _disableSilentAim() end
+	end
+
+	-- ================================================================
+	--   UI — AIMBOT TAB
+	-- ================================================================
+	Tabs.Aimbot:CreateSection("Aimbot")
+	Tabs.Aimbot:CreateToggle({ Name="Enabled", CurrentValue=_aimbotEnabled,
+		Callback=function(v) _aimbotEnabled=v; _cfg.aimbotEnabled=v; _saveCfg()
+			if v then _startAimbot() elseif _aimbotConn then pcall(function() _aimbotConn:Disconnect() end) _aimbotConn=nil end
+		end })
+	Tabs.Aimbot:CreateToggle({ Name="Show FOV", CurrentValue=_aimbotShowFOV,
+		Callback=function(v) _aimbotShowFOV=v; _cfg.aimbotShowFOV=v; _saveCfg() end })
+	Tabs.Aimbot:CreateToggle({ Name="Wall Check", CurrentValue=_aimbotWallCheck,
+		Callback=function(v) _aimbotWallCheck=v; _cfg.aimbotWallCheck=v; _saveCfg() end })
+	Tabs.Aimbot:CreateToggle({ Name="Team Check", CurrentValue=_aimbotTeamCheck,
+		Callback=function(v) _aimbotTeamCheck=v; _cfg.aimbotTeamCheck=v; _saveCfg() end })
+	Tabs.Aimbot:CreateToggle({ Name="Prediction", CurrentValue=_aimbotPrediction,
+		Callback=function(v) _aimbotPrediction=v; _cfg.aimbotPrediction=v; _saveCfg() end })
+	Tabs.Aimbot:CreateSlider({ Name="FOV", Range={10,400}, Increment=5, CurrentValue=_aimbotFOV,
+		Callback=function(v) _aimbotFOV=v; _cfg.aimbotFOV=v; _saveCfg()
+			if _fovCircle then _fovCircle.Radius=v end end })
+	Tabs.Aimbot:CreateSlider({ Name="Smoothness", Range={1,100}, Increment=1, CurrentValue=_aimbotSmooth,
+		Callback=function(v) _aimbotSmooth=v; _cfg.aimbotSmooth=v; _saveCfg() end })
+	Tabs.Aimbot:CreateSlider({ Name="Prediction (ms)", Range={0,300}, Increment=5, CurrentValue=_aimbotPredMS,
+		Callback=function(v) _aimbotPredMS=v; _cfg.aimbotPredMS=v; _saveCfg() end })
+	Tabs.Aimbot:CreateDropdown({ Name="Target", Options={"Head","UpperTorso","HumanoidRootPart"}, CurrentOption={_aimbotTarget},
+		Callback=function(v) _aimbotTarget=v[1] or v; _cfg.aimbotTarget=_aimbotTarget; _saveCfg() end })
+
+	-- ── AutoFire ──────────────────────────────────────────────────────
+	Tabs.Aimbot:CreateSection("Auto Fire")
+	Tabs.Aimbot:CreateToggle({
+		Name="Enabled",
+		Description="Dispara automáticamente cuando hay un enemigo en el FOV. Compatible con Rivals, Arsenal, etc.",
+		CurrentValue=_autoFireEnabled,
+		Callback=function(v)
+			_autoFireEnabled=v; _cfg.autoFireEnabled=v; _saveCfg()
+			if v then _startAutoFire() else _stopAutoFire() end
+		end
+	})
+	Tabs.Aimbot:CreateSlider({
+		Name="Fire Rate (seg)", Description="Tiempo entre disparos. 0.08 = muy rápido / 0.20 = más legit.",
+		Range={0.05, 0.50}, Increment=0.01, CurrentValue=_autoFireRate,
+		Callback=function(v) _autoFireRate=v; _cfg.autoFireRate=v; _saveCfg() end
+	})
+
+	Tabs.Aimbot:CreateSection("Silent Aim")
+	Tabs.Aimbot:CreateToggle({ Name="Enabled", CurrentValue=_silentEnabled,
+		Callback=function(v) _silentEnabled=v; _cfg.silentEnabled=v; _saveCfg()
+			if v then _enableSilentAim() else _disableSilentAim() end end })
+	Tabs.Aimbot:CreateToggle({ Name="Show FOV", CurrentValue=_aimbotShowFOV,
+		Callback=function(v) _aimbotShowFOV=v; _cfg.aimbotShowFOV=v; _saveCfg() end })
+	Tabs.Aimbot:CreateToggle({ Name="Wall Check", CurrentValue=_silentWallCheck,
+		Callback=function(v) _silentWallCheck=v; _cfg.silentWallCheck=v; _saveCfg() end })
+	Tabs.Aimbot:CreateToggle({ Name="Prediction", CurrentValue=_silentPrediction,
+		Callback=function(v) _silentPrediction=v; _cfg.silentPrediction=v; _saveCfg() end })
+	Tabs.Aimbot:CreateToggle({ Name="Show Target", CurrentValue=_silentShowTarget,
+		Callback=function(v) _silentShowTarget=v; _cfg.silentShowTarget=v; _saveCfg() end })
+	Tabs.Aimbot:CreateSlider({ Name="FOV", Range={10,400}, Increment=5, CurrentValue=_silentFOV,
+		Callback=function(v) _silentFOV=v; _cfg.silentFOV=v; _saveCfg() end })
+	Tabs.Aimbot:CreateSlider({ Name="Prediction (ms)", Range={0,300}, Increment=5, CurrentValue=_silentPredMS,
+		Callback=function(v) _silentPredMS=v; _cfg.silentPredMS=v; _saveCfg() end })
+	Tabs.Aimbot:CreateSlider({ Name="Hit Chance", Range={1,100}, Increment=1, CurrentValue=_silentHitChance,
+		Callback=function(v) _silentHitChance=v; _cfg.silentHitChance=v; _saveCfg() end })
+	Tabs.Aimbot:CreateDropdown({ Name="Target", Options={"Head","UpperTorso","HumanoidRootPart"}, CurrentOption={_silentTarget},
+		Callback=function(v) _silentTarget=v[1] or v; _cfg.silentTarget=_silentTarget; _saveCfg() end })
+
+	Tabs.Aimbot:CreateSection("ESP")
+	Tabs.Aimbot:CreateToggle({ Name="Enabled", CurrentValue=_espBoxEnabled,
+		Callback=function(v) _espBoxEnabled=v; _cfg.espBoxEnabled=v; _saveCfg()
+			if v then _startEspBox() else _clearEspBoxDrawings()
+				if _espBoxConn then pcall(function() _espBoxConn:Disconnect() end) _espBoxConn=nil end end end })
+	Tabs.Aimbot:CreateToggle({ Name="Boxes", CurrentValue=_espBoxes,
+		Callback=function(v) _espBoxes=v; _cfg.espBoxes=v; _saveCfg(); if _espBoxEnabled then _startEspBox() end end })
+	Tabs.Aimbot:CreateToggle({ Name="Tracers", CurrentValue=_espTracers,
+		Callback=function(v) _espTracers=v; _cfg.espTracers=v; _saveCfg(); if _espBoxEnabled then _startEspBox() end end })
+	Tabs.Aimbot:CreateToggle({ Name="Names", CurrentValue=_espNames,
+		Callback=function(v) _espNames=v; _cfg.espNames=v; _saveCfg(); if _espBoxEnabled then _startEspBox() end end })
+	Tabs.Aimbot:CreateToggle({ Name="Health", CurrentValue=_espHealth,
+		Callback=function(v) _espHealth=v; _cfg.espHealth=v; _saveCfg(); if _espBoxEnabled then _startEspBox() end end })
+	Tabs.Aimbot:CreateToggle({ Name="Distance", CurrentValue=_espDistV,
+		Callback=function(v) _espDistV=v; _cfg.espDistV=v; _saveCfg(); if _espBoxEnabled then _startEspBox() end end })
+	Tabs.Aimbot:CreateSlider({ Name="Max Distance (studs)", Range={100,5000}, Increment=100, CurrentValue=_espMaxDistV,
+		Callback=function(v) _espMaxDistV=v; _cfg.espMaxDistV=v; _saveCfg() end })
+
+	Tabs.Aimbot:CreateSection("Detection")
+	Tabs.Aimbot:CreateSlider({ Name="Humanizer Strength", Range={0,100}, Increment=1, CurrentValue=_humanizerStr,
+		Callback=function(v) _humanizerStr=v; _cfg.humanizerStr=v; _saveCfg() end })
+	Tabs.Aimbot:CreateToggle({ Name="Random Delay", CurrentValue=_randomDelay,
+		Callback=function(v) _randomDelay=v; _cfg.randomDelay=v; _saveCfg() end })
+	Tabs.Aimbot:CreateSlider({ Name="Delay (ms)", Range={0,100}, Increment=1, CurrentValue=_delayMS,
+		Callback=function(v) _delayMS=v; _cfg.delayMS=v; _saveCfg() end })
+	Tabs.Aimbot:CreateToggle({ Name="Curve Aim", CurrentValue=_curveAim,
+		Callback=function(v) _curveAim=v; _cfg.curveAim=v; _saveCfg() end })
+	Tabs.Aimbot:CreateSlider({ Name="Curve Strength", Range={0,100}, Increment=1, CurrentValue=_curveStrength,
+		Callback=function(v) _curveStrength=v; _cfg.curveStrength=v; _saveCfg() end })
+	Tabs.Aimbot:CreateSlider({ Name="Max Speed (px)", Range={50,1200}, Increment=10, CurrentValue=_maxSpeed,
+		Callback=function(v) _maxSpeed=v; _cfg.maxSpeed=v; _saveCfg() end })
+	Tabs.Aimbot:CreateSlider({ Name="Jitter (px)", Range={0,20}, Increment=1, CurrentValue=_jitter,
+		Callback=function(v) _jitter=v; _cfg.jitter=v; _saveCfg() end })
+	Tabs.Aimbot:CreateToggle({ Name="Distance Scaling", CurrentValue=_distScaling,
+		Callback=function(v) _distScaling=v; _cfg.distScaling=v; _saveCfg() end })
+	Tabs.Aimbot:CreateToggle({ Name="Velocity Smoothing", CurrentValue=_velSmoothing,
+		Callback=function(v) _velSmoothing=v; _cfg.velSmoothing=v; _saveCfg() end })
+	Tabs.Aimbot:CreateToggle({ Name="Adaptive Prediction", CurrentValue=_adaptivePred,
+		Callback=function(v) _adaptivePred=v; _cfg.adaptivePred=v; _saveCfg() end })
+	Tabs.Aimbot:CreateToggle({ Name="Angle Compensation", CurrentValue=_angleComp,
+		Callback=function(v) _angleComp=v; _cfg.angleComp=v; _saveCfg() end })
+	Tabs.Aimbot:CreateToggle({ Name="Smooth Entry", CurrentValue=_smoothEntry,
+		Callback=function(v) _smoothEntry=v; _cfg.smoothEntry=v; _saveCfg() end })
+	Tabs.Aimbot:CreateSlider({ Name="Entry Smoothing", Range={0,100}, Increment=1, CurrentValue=_entrySmooth,
+		Callback=function(v) _entrySmooth=v; _cfg.entrySmooth=v; _saveCfg() end })
+
+	Tabs.Aimbot:CreateSection("Presets")
+	Tabs.Aimbot:CreateButton({ Name="Light", Description="FOV 60 - Smooth 30 - Hum 80% - Silent OFF. Anti-ban.",
+		Callback=function()
+			_applyPreset({ae=true,af=60,as=30,ap=100,aw=true,apr=true,at="UpperTorso",
+				se=false,sf=60,sp=100,sh=70,sw=true,spr=true,st="Head",
+				hum=80,rd=true,dm=25,ca=true,cs=18,ms=180,ji=3,ds=true,vs=true,adp=true,ac=true,sme=true,es=60})
+			Luna:Notification({Title="Light",Content="FOV 60 - Hum 80% - Anti-ban activo",Icon="shield",ImageSource="Material",Duration=4})
+		end })
+	Tabs.Aimbot:CreateButton({ Name="Medium", Description="FOV 100 - Smooth 14 - Hum 50% - Silent HEAD 100%. Config KOVARI.",
+		Callback=function()
+			_applyPreset({ae=true,af=100,as=14,ap=120,aw=true,apr=true,at="UpperTorso",
+				se=true,sf=120,sp=120,sh=100,sw=true,spr=true,st="Head",
+				hum=50,rd=true,dm=12,ca=true,cs=12,ms=320,ji=2,ds=true,vs=true,adp=true,ac=true,sme=true,es=40})
+			Luna:Notification({Title="Medium",Content="FOV 100/120 - Smooth 14 - Silent HEAD ON",Icon="tune",ImageSource="Material",Duration=4})
+		end })
+	Tabs.Aimbot:CreateButton({ Name="Hard", Description="FOV 280 - Smooth 6 - Hum 10% - HEAD 100%. Alto riesgo.",
+		Callback=function()
+			_applyPreset({ae=true,af=280,as=6,ap=130,aw=false,apr=true,at="Head",
+				se=true,sf=280,sp=130,sh=100,sw=false,spr=true,st="Head",
+				hum=10,rd=false,dm=0,ca=false,cs=0,ms=800,ji=0,ds=true,vs=true,adp=true,ac=true,sme=false,es=10})
+			Luna:Notification({Title="Hard",Content="FOV 280 - Sin humanizer - HEAD 100%",Icon="warning",ImageSource="Material",Duration=5})
+		end })
+
+	-- Iniciar sistemas si estaban activos al cargar
+	if _aimbotEnabled  then _startAimbot() end
+	if _silentEnabled  then _enableSilentAim() end
+	if _espBoxEnabled  then _startEspBox() end
+	if _autoFireEnabled then _startAutoFire() end
+
+	-- ================================================================
+	--   ESP BÁSICO (Highlight)
+	-- ================================================================
+	Tabs.Scripts2:CreateSection("🔍 ESP")
+	local _espEnabled = _cfg.espEnabled or false
+	local _espHighlights = {}
+	local _espTeamColor = _cfg.espTeamColor or false
+	local _espConn = nil
+	local _espRemoveConn = nil
+
+	local function removeESP()
+		for _, h in pairs(_espHighlights) do
+			pcall(function() h:Destroy() end)
+		end
+		_espHighlights = {}
+	end
+
+	local function addESPToPlayer(p)
+		if p == Player or not p.Character then return end
+		-- Quitar highlight viejo si existe
+		if _espHighlights[p.UserId] then
+			pcall(function() _espHighlights[p.UserId]:Destroy() end)
+		end
+		local h = Instance.new("Highlight")
+		h.FillColor        = (_espTeamColor and p.TeamColor) and p.TeamColor.Color or Color3.fromRGB(255, 50, 50)
+		h.OutlineColor     = Color3.fromRGB(255, 255, 255)
+		h.FillTransparency = 0.5
+		h.OutlineTransparency = 0
+		h.Parent           = p.Character
+		_espHighlights[p.UserId] = h
+
+		-- Fix 2.5: Actualizar color del highlight cuando el jugador cambia de equipo
+		pcall(function()
+			p:GetPropertyChangedSignal("Team"):Connect(function()
+				if _espEnabled and _espTeamColor and _espHighlights[p.UserId] then
+					_espHighlights[p.UserId].FillColor = p.TeamColor and p.TeamColor.Color or Color3.fromRGB(255, 50, 50)
+				end
+			end)
+		end)
+	end
+
+	local function applyESP()
+		removeESP()
+		for _, p in pairs(Players:GetPlayers()) do
+			addESPToPlayer(p)
+		end
+	end
+
+	Tabs.Scripts2:CreateToggle({
+		Name = "ESP Jugadores",
+		Description = "Muestra a todos los jugadores a través de las paredes",
+		CurrentValue = _espEnabled,
+		Callback = function(v)
+			_espEnabled = v
+			_cfg.espEnabled = v
+			_saveCfg()
+			if v then
+				applyESP()
+				-- Nuevo jugador entra
+				_espConn = Players.PlayerAdded:Connect(function(p)
+					p.CharacterAdded:Connect(function()
+						if _espEnabled then
+							task.wait(0.5)
+							addESPToPlayer(p)
+						end
+					end)
+				end)
+				-- Jugador sale → limpiar highlight
+				_espRemoveConn = Players.PlayerRemoving:Connect(function(p)
+					if _espHighlights[p.UserId] then
+						pcall(function() _espHighlights[p.UserId]:Destroy() end)
+						_espHighlights[p.UserId] = nil
+					end
+				end)
+			else
+				removeESP()
+				if _espConn       then _espConn:Disconnect()       _espConn=nil       end
+				if _espRemoveConn then _espRemoveConn:Disconnect() _espRemoveConn=nil end
+			end
+		end
+	})
+	-- Aplicar ESP guardado al cargar
+	-- Aplicar ESP guardado al cargar (solo si el toggle no lo activó ya)
+	if _espEnabled and not _espConn then
+		applyESP()
+		_espConn = Players.PlayerAdded:Connect(function(p)
+			p.CharacterAdded:Connect(function()
+				if _espEnabled then task.wait(0.5) addESPToPlayer(p) end
+			end)
+		end)
+		_espRemoveConn = Players.PlayerRemoving:Connect(function(p)
+			if _espHighlights[p.UserId] then
+				pcall(function() _espHighlights[p.UserId]:Destroy() end)
+				_espHighlights[p.UserId] = nil
+			end
+		end)
+	end
+
+	Tabs.Scripts2:CreateToggle({
+		Name = "ESP Equipos (Color)",
+		Description = "Colorea el ESP según el equipo de cada jugador",
+		CurrentValue = _cfg.espTeamColor,
+		Callback = function(v)
+			_espTeamColor = v
+			_cfg.espTeamColor = v
+			_saveCfg()
+			for _, p in pairs(Players:GetPlayers()) do
+				if p ~= Player and _espHighlights[p.UserId] then
+					_espHighlights[p.UserId].FillColor = v and (p.TeamColor and p.TeamColor.Color or Color3.fromRGB(255,50,50)) or Color3.fromRGB(255,50,50)
+				end
+			end
+		end
+	})
+
+	Tabs.Scripts2:CreateSlider({
+		Name = "ESP Transparencia",
+		Description = "Ajusta la transparencia del relleno del ESP",
+		Range = {0, 100}, Increment = 5, CurrentValue = 50,
+		Callback = function(v)
+			local t = v / 100
+			for _, h in pairs(_espHighlights) do
+				h.FillTransparency = t
+			end
+		end
+	})
+
 	Tabs.Info:CreateSection("Redes Sociales")
+
+	local function InjectSocialIcon(btnName, bgColor, iconImage, iconColor)
+		task.defer(function()
+			-- Dar tiempo a que el tab cargue sus elementos
+			local page = nil
+			for _ = 1, 10 do
+				local ok, result = pcall(function() return Tabs.Info.Page end)
+				if ok and result then page = result break end
+				task.wait(0.1)
+			end
+			if not page then return end
+			local frame = page:FindFirstChild(btnName, true)
+			if not frame then return end
+			-- Verificar que no ya se inyectó antes
+			if frame:FindFirstChild("_SocialCircle") then return end
+			local title = frame:FindFirstChild("Title")
+			local desc  = frame:FindFirstChild("Desc")
+			if title then
+				title.Position = UDim2.new(0, 58, title.Position.Y.Scale, title.Position.Y.Offset)
+				title.Size     = UDim2.new(1, -72, title.Size.Y.Scale, title.Size.Y.Offset)
+			end
+			if desc then
+				desc.Position = UDim2.new(0, 58, desc.Position.Y.Scale, desc.Position.Y.Offset)
+				desc.Size     = UDim2.new(1, -72, desc.Size.Y.Scale, desc.Size.Y.Offset)
+			end
+			local circle = Instance.new("Frame", frame)
+			circle.Name             = "_SocialCircle"
+			circle.Size             = UDim2.fromOffset(38, 38)
+			circle.Position         = UDim2.new(0, 8, 0.5, -19)
+			circle.BackgroundColor3 = bgColor
+			circle.BorderSizePixel  = 0
+			circle.ZIndex           = 5
+			Instance.new("UICorner", circle).CornerRadius = UDim.new(1, 0)
+			local cStroke = Instance.new("UIStroke", circle)
+			cStroke.Color       = bgColor
+			cStroke.Thickness   = 1.5
+			cStroke.Transparency = 0.5
+			local img = Instance.new("ImageLabel", circle)
+			img.Size                = UDim2.new(0.75, 0, 0.75, 0)
+			img.Position            = UDim2.new(0.125, 0, 0.125, 0)
+			img.BackgroundTransparency = 1
+			img.Image               = iconImage
+			img.ImageColor3         = iconColor
+			img.ScaleType           = Enum.ScaleType.Fit
+			img.ZIndex              = 6
+		end)
+	end
+
 	Tabs.Info:CreateButton({
 		Name = "Discord",
 		Callback = function()
-			-- Pon aquí el link de tu Discord
+			local discordURL = "https://discord.gg/GB5C5CKDk"
+			local opened = false
+			pcall(function() openurl(discordURL) opened = true end)
+			if not opened then pcall(function() syn.open_url(discordURL) opened = true end) end
+			if not opened then pcall(function() open_url(discordURL) opened = true end) end
+			pcall(setclipboard, discordURL)
+			Luna:Notification({
+				Title = "Discord",
+				Content = opened and "Abriendo Discord..." or "Link copiado!  discord.gg/GB5C5CKDk",
+				Icon = "18505728201",
+				ImageSource = "Custom",
+				Duration = 4
+			})
 		end
 	})
+	InjectSocialIcon(
+		"Discord",
+		Color3.fromRGB(88, 101, 242),
+		"rbxassetid://18505728201",
+		Color3.fromRGB(255, 255, 255)
+	)
+
 	Tabs.Info:CreateButton({
 		Name = "TikTok",
 		Callback = function()
-			-- Pon aquí el link de tu TikTok
+			local tiktokURL = "https://www.tiktok.com/@_m.a.r.t.i.n_2"
+			local opened = false
+			pcall(function() openurl(tiktokURL) opened = true end)
+			if not opened then pcall(function() syn.open_url(tiktokURL) opened = true end) end
+			if not opened then pcall(function() open_url(tiktokURL) opened = true end) end
+			pcall(setclipboard, tiktokURL)
+			Luna:Notification({
+				Title = "TikTok",
+				Content = opened and "Abriendo TikTok..." or "Link copiado!  @_m.a.r.t.i.n_2",
+				Icon = "84157643184125",
+				ImageSource = "Custom",
+				Duration = 4
+			})
 		end
 	})
+	InjectSocialIcon(
+		"TikTok",
+		Color3.fromRGB(18, 18, 18),
+		"rbxassetid://84157643184125",
+		Color3.fromRGB(255, 255, 255)
+	)
+
+	Tabs.Info:CreateSection("BladeX")
+	Tabs.Info:CreateParagraph({
+		Title = "BladeX",
+		Text = "Obtén la key en el discord:"
+	})
+
+	-- ═══ REGISTRAR ITEMS PARA FAVORITOS ═══
+	_registerFavItem({ name = "Auto Farm",      description = "Ataca automáticamente al enemigo más cercano",         type = "toggle",
+		rebuildFn = function(count)
+			Tabs.Extra:CreateToggle({ Name = "Auto Farm", Description = "Farm · Usado "..count.." veces", CurrentValue = false,
+				Callback = function(v) if v then _trackUse("Auto Farm") end _farmEnabled = v end })
+		end })
+	_registerFavItem({ name = "Auto Collect",   description = "Recoge items del suelo automáticamente",              type = "toggle",
+		rebuildFn = function(count)
+			Tabs.Extra:CreateToggle({ Name = "Auto Collect", Description = "Farm · Usado "..count.." veces", CurrentValue = false,
+				Callback = function(v) if v then _trackUse("Auto Collect") end _collectEnabled = v end })
+		end })
+	_registerFavItem({ name = "FPS Boost",      description = "Activa todas las optimizaciones al mismo tiempo",     type = "toggle",
+		rebuildFn = function(count)
+			Tabs.Extra:CreateToggle({ Name = "FPS Boost", Description = "FPS · Usado "..count.." veces", CurrentValue = false,
+				Callback = function(v) if v then _trackUse("FPS Boost") end
+					pcall(function() settings().Rendering.QualityLevel = v and 1 or 10 end)
+					Lighting.GlobalShadows = v and false or _origLighting.GlobalShadows end })
+		end })
+	_registerFavItem({ name = "Fullbright",     description = "Máximo brillo, sin oscuridad ni niebla",             type = "toggle",
+		rebuildFn = function(count)
+			Tabs.Extra:CreateToggle({ Name = "Fullbright", Description = "FPS · Usado "..count.." veces", CurrentValue = false,
+				Callback = function(v) if v then _trackUse("Fullbright") end
+					Lighting.Brightness = v and 2 or _origLighting.Brightness
+					Lighting.GlobalShadows = v and false or _origLighting.GlobalShadows
+					Lighting.ClockTime = v and 14 or _origLighting.ClockTime end })
+		end })
+	_registerFavItem({ name = "Nuke Effects",   description = "Elimina permanentemente partículas y efectos",        type = "button",
+		rebuildFn = function(count)
+			Tabs.Extra:CreateButton({ Name = "Nuke Effects", Description = "FPS · Usado "..count.." veces",
+				Callback = function() _trackUse("Nuke Effects")
+					pcall(function() settings().Rendering.QualityLevel = 1 end)
+					for _, obj in pairs(workspace:GetDescendants()) do
+						if obj:IsA("ParticleEmitter") or obj:IsA("Smoke") or obj:IsA("Fire") or obj:IsA("Sparkles") then
+							pcall(function() obj:Destroy() end) end end end })
+		end })
+	_registerFavItem({ name = "Anti AFK",       description = "Evita que Roblox te expulse por inactividad",        type = "toggle",
+		rebuildFn = function(count)
+			Tabs.Extra:CreateToggle({ Name = "Anti AFK", Description = "Scripts · Usado "..count.." veces", CurrentValue = _cfg.antiAFK,
+				Callback = function(v) if v then _trackUse("Anti AFK") end _cfg.antiAFK = v _saveCfg()
+					if v then _startAntiAFK() elseif _G.AntiAFK then pcall(function() _G.AntiAFK:Disconnect() end) _G.AntiAFK = nil end end })
+		end })
+	_registerFavItem({ name = "No Clip",        description = "Atraviesa paredes y objetos del mapa",               type = "toggle",
+		rebuildFn = function(count)
+			Tabs.Extra:CreateToggle({ Name = "No Clip", Description = "Scripts · Usado "..count.." veces", CurrentValue = _cfg.noClip,
+				Callback = function(v) if v then _trackUse("No Clip") end _noClipActive = v _G.NoClip = v _cfg.noClip = v _saveCfg()
+					if v then _G.NoClipConn = RunService.Stepped:Connect(function() if _noClipActive then
+						for _, p in pairs(Player.Character and Player.Character:GetDescendants() or {}) do
+							if p:IsA("BasePart") then p.CanCollide = false end end end end)
+					elseif _G.NoClipConn then _G.NoClipConn:Disconnect() _G.NoClipConn = nil end end })
+		end })
+	_registerFavItem({ name = "Walk Speed",     description = "Velocidad de movimiento del personaje",              type = "slider",
+		rebuildFn = function(count)
+			Tabs.Extra:CreateSlider({ Name = "Walk Speed", Description = "Scripts · Usado "..count.." veces",
+				Range = {5,300}, Increment = 1, CurrentValue = _cfg.walkSpeed,
+				Callback = function(v) _trackUse("Walk Speed") _savedWalkSpeed = v _cfg.walkSpeed = v _saveCfg()
+					local hum = Player.Character and Player.Character:FindFirstChildOfClass("Humanoid")
+					if hum then hum.WalkSpeed = v end end })
+		end })
+	_registerFavItem({ name = "Jump Power",     description = "Potencia de salto",                                  type = "slider",
+		rebuildFn = function(count)
+			Tabs.Extra:CreateSlider({ Name = "Jump Power", Description = "Scripts · Usado "..count.." veces",
+				Range = {0,500}, Increment = 5, CurrentValue = _cfg.jumpPower,
+				Callback = function(v) _trackUse("Jump Power") _savedJumpPower = v _cfg.jumpPower = v _saveCfg()
+					local hum = Player.Character and Player.Character:FindFirstChildOfClass("Humanoid")
+					if hum then hum.JumpPower = v end end })
+		end })
+	_registerFavItem({ name = "Remove Textures", description = "Elimina texturas, decals y partículas del mapa",   type = "toggle",
+		rebuildFn = function(count)
+			Tabs.Extra:CreateToggle({ Name = "Remove Textures", Description = "FPS · Usado "..count.." veces", CurrentValue = false,
+				Callback = function(v) if v then _trackUse("Remove Textures") end
+					for _, obj in pairs(workspace:GetDescendants()) do
+						if obj:IsA("Decal") or obj:IsA("Texture") then obj.Transparency = v and 1 or 0 end
+						if obj:IsA("ParticleEmitter") or obj:IsA("Fire") or obj:IsA("Smoke") then obj.Enabled = not v end end end })
+		end })
+
+	-- Construir Favoritos con los datos de uso guardados
+	_buildFavoritos()
+
 end)()
--- THIS IS THE DEBUG DEMO, ONLY USED WHEN TESTING NEW ELEMENTS AND CODE
---[[if isStudio then
-    window = Luna:CreateWindow({LoadingEnabled = false})
-    t1 = window:CreateTab()
-    t2 = window:CreateTab({ Name = "Tab 2", Icon = "location_searching"})
-    Luna:Notification({ 
-        Title = "Welcome to Luna",
-        Icon = "sparkle",
-        ImageSource = "Material",
-        Content = "Welcome to the Luna Interface Suite. This Is an Amazing Quality Freemium UI Library For Roblox Exploiting Made By Nebula Softworks. Luna was Created in hopes of improving the standard of UI Library designs by being the golden standard for it. Luna Has Amazing Features like a key system, notification and perfection in aesthetics and design. So, What Are You Waiting For? Start Using Luna Today at " .. website
-    })
-    t1:CreateSection()
-    local btn = t1:CreateButton({Callback = "", Description = "This Is A Description"})
-    local l = t1:CreateLabel({ Style = 2})
-    local l2 = t1:CreateLabel({ Text = "Another Label" })
-    t2:CreateButton({ Callback = function() 
-        l:Destroy()
-        l2:Set("New Text")
-    end})
-    t2:CreateLabel({Style = 3})
-    t1:CreateParagraph({Text = "Single String"})
-    t1:CreateParagraph({Text = "Welcome to the Luna Interface Suite. This Is an Amazing Quality Freemium UI Library For Roblox Exploiting Made By Nebula Softworks. Luna was Created in hopes of improving the standard of UI Library designs by being the golden standard for it. Luna Has Amazing Features like a key system, notification and perfection in aesthetics and design. So, What Are You Waiting For? Start Using Luna Today at " .. website})
-    s = t2:CreateSlider({ Callback = function(v) print(v) end })	
-    t1:CreateButton({ Callback = function()
-        s:Set({Name = "new name", Callback = ""})
-        wait(5)
-        s:Destroy()
-    end})
-    t1:CreateColorPicker()
-    local toggle = t1:CreateToggle({Name = "test", Description = "test", CurrentValue = true, Callback = ""}, "toggle2")
-    t1:CreateToggle({Callback = function(Value) toggle:Destroy() print(Value) end})
-    local bind = t2:CreateBind({Name = "test", Description = "test", CurrentBind = "E", HoldToInteract = false, Callback = ""})
-    t2:CreateKeybind({HoldToInteract = true, Callback = function(v)
-        if v then
-            Players.LocalPlayer.Character.Humanoid.WalkSpeed = 100
-        else
-            Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
-        end
-    end,})
-    local input = t2:CreateInput({Name = "test",ClearTextAfterFocusLost = false, Description = "Numbers only, 8 max characters and enter required.",MaxCharacters = 8 ,Numeric = true, Enter = true, Callback = ""})
-    t2:CreateInput({Callback = function(text) print(text) end})
-    local d = t1:CreateDropdown({Name = "test", Options = {"Apples", "Bananas", "Strawberries", "Elixir"}, Description = "MultiOptions", MultipleOptions = true, Callback = function(t) print(t) end, CurrentOption = {"Apples", "Elixir"}})
-    t1:CreateDropdown({Callback = function(t) print(unpack(t)) end})
-    t1:CreateDropdown({Description = "Special Type - Player", Callback = "", SpecialType = "Player"})
-end]]--
 return Luna
