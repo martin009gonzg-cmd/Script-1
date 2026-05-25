@@ -10635,11 +10635,15 @@ end;
 
 Compkiller.NilFolder.Name = "Nil-Instances";
 
+Compkiller.RainbowEnabled = false
+
 function Compkiller:RainbowHighlight(element, speed)
+	if not Compkiller.RainbowEnabled then return end
+	if typeof(element) ~= "Instance" then return end
 	speed = speed or 0.04
 	task.spawn(function()
 		local h = 0
-		while element and element.Parent do
+		while element and element.Parent and Compkiller.RainbowEnabled do
 			h = (h + speed) % 1
 			local rainbow = Color3.fromHSV(h, 0.85, 1)
 			if element.BackgroundTransparency < 1 then
