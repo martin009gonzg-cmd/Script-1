@@ -1,0 +1,231 @@
+local UserInputService = game:GetService("UserInputService")
+
+local AutocompleteEngine = {
+    Dictionary = {},
+    Commands = {},
+    Cache = {},
+    Learned = {},
+}
+
+local CATEGORIES = {
+    Keyword     = { icon = "code",         relevance = 10 },
+    LuauAPI     = { icon = "cpu",          relevance = 9 },
+    Service     = { icon = "server",       relevance = 8 },
+    Class       = { icon = "box",          relevance = 7 },
+    Method      = { icon = "zap",          relevance = 6 },
+    Property    = { icon = "sliders",      relevance = 5 },
+    Executor    = { icon = "terminal",     relevance = 9 },
+    Variable    = { icon = "user",         relevance = 8 },
+    Function    = { icon = "braces",       relevance = 8 },
+    Workspace   = { icon = "globe",        relevance = 4 },
+    Command     = { icon = "chevron-right",relevance = 11 }
+}
+
+local function createNode()
+    return { children = {}, isEnd = false, data = nil }
+end
+
+local rootNode = createNode()
+
+function AutocompleteEngine:InsertWord(word, category, desc)
+    if not word or word == "" then return end
+    
+    local lowerWord = string.lower(word)
+    local node = rootNode
+    
+    for i = 1, #lowerWord do
+        local char = string.sub(lowerWord, i, i)
+        if not node.children[char] then
+            node.children[char] = createNode()
+        end
+        node = node.children[char]
+    end
+    
+    node.isEnd = true
+    node.data = {
+        word = word,
+        category = category,
+        icon = CATEGORIES[category] and CATEGORIES[category].icon or "circle",
+        relevance = CATEGORIES[category] and CATEGORIES[category].relevance or 0,
+        desc = desc or category
+    }
+    
+    self.Cache = {}
+end
+
+function AutocompleteEngine:Search(prefix)
+    if not prefix or prefix == "" then return {} end
+    
+    local lowerPrefix = string.lower(prefix)
+    if self.Cache[lowerPrefix] then return self.Cache[lowerPrefix] end
+
+    local node = rootNode
+    for i = 1, #lowerPrefix do
+        local char = string.sub(lowerPrefix, i, i)
+        if not node.children[char] then
+            return {}
+        end
+        node = node.children[char]
+    end
+    
+    local results = {}
+    local function traverse(currentNode)
+        if currentNode.isEnd then
+            table.insert(results, currentNode.data)
+        end
+        for _, childNode in pairs(currentNode.children) do
+            traverse(childNode)
+        end
+    end
+    
+    traverse(node)
+    
+    table.sort(results, function(a, b)
+        if a.relevance == b.relevance then
+            return #a.word < #b.word
+        end
+        return a.relevance > b.relevance
+    end)
+    
+    self.Cache[lowerPrefix] = results
+    return results
+end
+
+function AutocompleteEngine:LearnFromContext(sourceText)
+    for word, _ in pairs(self.Learned) do
+    end
+    self.Learned = {}
+
+    for varName in string.gmatch(sourceText, "local%s+([%w_]+)%s*=") do
+        if not self.Learned[varName] then
+            self.Learned[varName] = true
+            self:InsertWord(varName, "Variable", "User variable")
+        end
+    end
+    
+    for funcName in string.gmatch(sourceText, "function%s+([%w_]+)%s*%(") do
+        if not self.Learned[funcName] then
+            self.Learned[funcName] = true
+            self:InsertWord(funcName, "Function", "User function")
+        end
+    end
+end
+
+function AutocompleteEngine:LearnWorkspace()
+    task.spawn(function()
+        for _, child in ipairs(workspace:GetChildren()) do
+            self:InsertWord(child.Name, "Workspace", child.ClassName)
+        end
+    end)
+end
+
+function AutocompleteEngine:RegisterCommand(name, aliases, desc, params, example)
+    local cmdData = {
+        name = name,
+        aliases = aliases,
+        desc = desc,
+        params = params,
+        example = example
+    }
+    self.Commands[name] = cmdData
+    self:InsertWord("/" .. name, "Command", desc)
+    
+    for _, alias in ipairs(aliases) do
+        self.Commands[alias] = cmdData
+        self:InsertWord("/" .. alias, "Command", "Alias de " .. name)
+    end
+end
+
+function AutocompleteEngine:InitializeDefaults()
+    local defaultData = {
+        Keyword = {"function", "local", "if", "then", "else", "elseif", "end", "for", "while", "repeat", "until", "return", "break", "continue", "do", "not", "and", "or", "true", "false", "nil", "in"},
+        LuauAPI = {"math", "string", "table", "utf8", "task", "coroutine", "debug", "os", "buffer"},
+        Service = {"Players", "Workspace", "Lighting", "CoreGui", "GuiService", "RunService", "TweenService", "UserInputService", "HttpService"},
+        Class = {"Part", "Model", "Humanoid", "ScreenGui", "Frame", "TextLabel", "Folder", "RemoteEvent"},
+        Method = {"FindFirstChild", "WaitForChild", "GetChildren", "GetDescendants", "Destroy", "Clone", "IsA"},
+        Property = {"Name", "Parent", "Position", "Size", "Visible", "Transparency", "Color", "CFrame"},
+        Executor = {"getgenv", "getrenv", "getsenv", "getgc", "hookfunction", "newcclosure", "setclipboard", "identifyexecutor", "isfile", "writefile", "loadstring"}
+    }
+    
+    for category, words in pairs(defaultData) do
+        for _, word in ipairs(words) do
+            self:InsertWord(word, category, "Built-in " .. category)
+        end
+    end
+
+    self:RegisterCommand("fly", {"vuelo"}, "Permite volar al personaje", "[speed]", "/fly 50")
+    self:RegisterCommand("noclip", {"nc"}, "Atraviesa paredes", "", "/noclip")
+    self:RegisterCommand("speed", {"ws", "walkspeed"}, "Cambia la velocidad", "<number>", "/speed 100")
+    self:RegisterCommand("kill", {"die"}, "Mata al jugador", "[target]", "/kill all")
+    
+    self:LearnWorkspace()
+end
+
+local Engine = AutocompleteEngine
+Engine:InitializeDefaults()
+
+local TextBox = script.Parent:WaitForChild("TextBox")
+local MenuFrame = script.Parent:WaitForChild("MenuFrame")
+local SelectedIndex = 1
+local CurrentMatches = {}
+local MenuIsOpen = false
+
+local function RenderMenu()
+    MenuFrame:ClearAllChildren()
+    if #CurrentMatches == 0 then
+        MenuFrame.Visible = false
+        MenuIsOpen = false
+        return
+    end
+    
+    MenuFrame.Visible = true
+    MenuIsOpen = true
+    
+    for i, matchData in ipairs(CurrentMatches) do
+        if i > 10 then break end
+    end
+end
+
+TextBox:GetPropertyChangedSignal("Text"):Connect(function()
+    local text = TextBox.Text
+    Engine:LearnFromContext(text)
+    local prefix = text:match("[%w_/:%.]+$") or ""
+    
+    if #prefix >= 1 then
+        if prefix:sub(1,1) == "/" then
+            CurrentMatches = Engine:Search(prefix)
+        else
+            local lastWord = prefix:match("[%w_]+$") or ""
+            CurrentMatches = Engine:Search(lastWord)
+        end
+        SelectedIndex = 1
+        RenderMenu()
+    else
+        CurrentMatches = {}
+        RenderMenu()
+    end
+end)
+
+UserInputService.InputBegan:Connect(function(input, processed)
+    if not MenuIsOpen then return end
+    
+    if input.KeyCode == Enum.KeyCode.Down then
+        SelectedIndex = math.min(SelectedIndex + 1, #CurrentMatches)
+        RenderMenu()
+    elseif input.KeyCode == Enum.KeyCode.Up then
+        SelectedIndex = math.max(SelectedIndex - 1, 1)
+        RenderMenu()
+    elseif input.KeyCode == Enum.KeyCode.Tab or input.KeyCode == Enum.KeyCode.Return then
+        local selectedWord = CurrentMatches[SelectedIndex].word
+        local text = TextBox.Text
+        local prefix = text:match("[%w_/:%.]+$") or ""
+        TextBox.Text = string.sub(text, 1, #text - #prefix) .. selectedWord
+        
+        TextBox:CaptureFocus()
+        CurrentMatches = {}
+        RenderMenu()
+    elseif input.KeyCode == Enum.KeyCode.Escape then
+        CurrentMatches = {}
+        RenderMenu()
+    end
+end)
